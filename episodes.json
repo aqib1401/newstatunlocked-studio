@@ -23,12 +23,20 @@
   "ep": 2,
   "title": "What If You Were 10x Stronger?",
   "ability": "strength",
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep02.mp4",
   "rendered_at": "2026-11-09T17:58:31Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-09T22:31:15Z",
+    "zernio_post": "6af2498f13f6e38b8a46ea4b",
+    "first_comment": "UgxVcaOEna1i8ZU9x8N4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-09T22:31:15Z",
+    "zernio_post": "6af24998549a4f09e4ca96fe",
+    "first_comment": null
+   }
   }
  },
  {
