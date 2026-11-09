@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NSU engine</title>
+<style>
+/*FONTS*/
+html,body{margin:0;background:#000}
+#stage{position:relative;width:540px;height:960px;overflow:hidden;background:#13112A;font-family:InterNSU,Inter,system-ui,sans-serif;color:#fff}
+#scene{position:absolute;inset:0;transform-origin:270px 600px}
+#scene svg{position:absolute;left:0;top:0}
+#vig{position:absolute;inset:0;pointer-events:none}
+#hud,#caps,#chips,#flash{position:absolute;inset:0;pointer-events:none}
+.chip{position:absolute;top:34px;font-family:'Chakra Petch',sans-serif;font-size:13px;letter-spacing:.22em;background:rgba(10,9,22,.6);border-radius:8px;padding:6px 10px}
+.card{position:absolute;left:48px;top:88px;width:444px;box-sizing:border-box;background:rgba(10,9,22,.88);border-radius:16px;padding:14px 18px;display:flex;flex-direction:column;gap:8px;transform-origin:50% 0}
+.lbl{font-family:'Chakra Petch',sans-serif;font-size:12px;letter-spacing:.22em}
+.row{display:flex;justify-content:space-between;align-items:baseline}
+.seg{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px}
+.seg i{height:8px;border-radius:3px;background:#4A4570}
+.cap{position:absolute;left:24px;right:24px;text-align:center;font-weight:900;font-size:46px;line-height:1.08;text-shadow:0 4px 0 #141218,0 0 18px rgba(0,0,0,.7)}
+.opt{border:1.5px solid rgba(255,255,255,.3);border-radius:12px;padding:12px 14px;font-weight:800;font-size:19px}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="scene"><svg id="bg" width="540" height="960" viewBox="0 0 540 960"></svg><svg id="fg" width="540" height="960" viewBox="0 0 540 960"></svg></div>
+  <div id="vig"></div>
+  <div id="flash"></div>
+  <div id="hud"></div>
+  <div id="caps"></div>
+  <div id="chips"></div>
+</div>
+<script>
+(function(){
+const RIM='#F2C48D', INK='#141218';
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const lerp=(a,b,p)=>a+(b-a)*p;
+const EASE={
+  inout:p=>p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2,
+  linear:p=>p,
+  out:p=>1-Math.pow(1-p,3),
+  in:p=>p*p*p,
+  back:p=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(p-1,3)+c1*Math.pow(p-1,2);}
+};
+function hash(s){let h=0;for(const c of String(s))h=(h*31+c.charCodeAt(0))|0;return Math.abs(h);}
+
+// ------------------------------------------------------------------ poses
+// angles in degrees, 0 = straight down, + = toward facing direction.
+// ub/fb = back arm upper/fore, uf/ff = front arm, tb/sb back thigh/shin, tf/sf front thigh/shin
+const P={
+  idle:      {ub:-22,fb:12, uf:22,ff:-12, tb:-7,sb:2,  tf:7,sf:-2,  lean:0, tilt:0},
+  stand:     {ub:-8,fb:4, uf:8,ff:-4, tb:-4,sb:1, tf:4,sf:-1, lean:0, tilt:0},
+  catch:     {ub:-35,fb:18, uf:92,ff:-8, tb:-26,sb:4, tf:30,sf:-6, lean:10, tilt:0},
+  reach_up:  {ub:-30,fb:10, uf:165,ff:5, tb:-6,sb:0, tf:8,sf:0, lean:-4, tilt:-10},
+  point:     {ub:-15,fb:10, uf:88,ff:0, tb:-7,sb:2, tf:7,sf:-2, lean:2, tilt:0},
+  wave:      {ub:-15,fb:10, uf:140,ff:35, tb:-7,sb:2, tf:7,sf:-2, lean:0, tilt:-4},
+  cheer:     {ub:-155,fb:-10, uf:155,ff:10, tb:-10,sb:2, tf:10,sf:-2, lean:0, tilt:-8},
+  shrug:     {ub:-38,fb:-92, uf:38,ff:92, tb:-6,sb:1, tf:6,sf:-1, lean:0, tilt:8},
+  think:     {ub:-12,fb:70, uf:25,ff:140, tb:-6,sb:1, tf:6,sf:-1, lean:0, tilt:10},
+  facepalm:  {ub:-12,fb:10, uf:30,ff:148, tb:-6,sb:1, tf:6,sf:-1, lean:6, tilt:14},
+  hold:      {ub:40,fb:55, uf:42,ff:58, tb:-6,sb:1, tf:6,sf:-1, lean:2, tilt:6},
+  throw_back:{ub:55,fb:30, uf:-125,ff:-30, tb:-22,sb:4, tf:28,sf:-4, lean:-10, tilt:0},
+  throw:     {ub:-40,fb:20, uf:100,ff:15, tb:-34,sb:10, tf:34,sf:-6, lean:16, tilt:0},
+  swing_ready:{ub:120,fb:40, uf:130,ff:40, tb:-16,sb:2, tf:18,sf:-2, lean:-6, tilt:0},
+  swing:     {ub:80,fb:10, uf:85,ff:5, tb:-24,sb:4, tf:26,sf:-6, lean:10, tilt:0},
+  crouch:    {ub:20,fb:40, uf:35,ff:40, tb:70,sb:-115, tf:80,sf:-120, lean:20, tilt:-6},
+  sit:       {ub:25,fb:45, uf:30,ff:50, tb:88,sb:-88, tf:92,sf:-92, lean:0, tilt:0},
+  slump:     {ub:60,fb:35, uf:65,ff:30, tb:88,sb:-88, tf:92,sf:-92, lean:28, tilt:30},
+  lie:       {ub:-90,fb:0, uf:90,ff:0, tb:-3,sb:0, tf:3,sf:0, lean:-90, tilt:0},
+  fall:      {ub:-150,fb:-30, uf:150,ff:40, tb:-30,sb:-20, tf:40,sf:-60, lean:-30, tilt:-15},
+  jump:      {ub:-150,fb:-10, uf:150,ff:10, tb:-30,sb:-50, tf:30,sf:-60, lean:0, tilt:-8},
+  dive:      {ub:-10,fb:0, uf:100,ff:-5, tb:-60,sb:-20, tf:-40,sf:-30, lean:55, tilt:-20},
+  run_a:     {ub:50,fb:75, uf:-50,ff:65, tb:-38,sb:-55, tf:42,sf:-25, lean:12, tilt:0},
+  run_b:     {ub:-50,fb:65, uf:50,ff:75, tb:42,sb:-25, tf:-38,sf:-55, lean:12, tilt:0},
+  walk_a:    {ub:22,fb:12, uf:-22,ff:12, tb:-18,sb:-12, tf:20,sf:-2, lean:3, tilt:0},
+  walk_b:    {ub:-22,fb:12, uf:22,ff:12, tb:20,sb:-2, tf:-18,sf:-12, lean:3, tilt:0},
+  tired:     {ub:-6,fb:2, uf:6,ff:-2, tb:-5,sb:3, tf:5,sf:-3, lean:14, tilt:22},
+  hug:       {ub:75,fb:70, uf:80,ff:75, tb:-8,sb:2, tf:10,sf:-2, lean:8, tilt:6},
+  carry:     {ub:70,fb:80, uf:75,ff:80, tb:-8,sb:2, tf:8,sf:-2, lean:-6, tilt:0},
+};
+const KEYS=['ub','fb','uf','ff','tb','sb','tf','sf','lean','tilt'];
+const CYCLES={run:['run_a','run_b',0.32], walk:['walk_a','walk_b',0.55]};
+
+// ------------------------------------------------------------------ characters
+const CHARS={
+  hero:{shirt:'#3D7BF0', scale:1, head:1},
+  mia:{shirt:'#9B7BF0', scale:.92, head:1, acc:'bun'},
+  leo:{shirt:'#F28A3D', scale:.94, head:1, acc:'cap'},
+  drlee:{shirt:'#E9F4EF', scale:.96, head:1, acc:'glasses', coat:true},
+  sam:{shirt:'#F2C94C', scale:.68, head:1.2},
+  mom:{shirt:'#E46F8E', scale:.95, head:1, acc:'long'},
+  extra:{shirt:'#6E6A86', scale:.9, head:1},
+};
+
+function pt(x,y,a,len,f){const r=a*Math.PI/180;return [x+Math.sin(r)*len*f, y+Math.cos(r)*len];}
+function rot(p,deg,f){const r=deg*Math.PI/180*f;const c=Math.cos(r),s=Math.sin(r);return [p[0]*c-p[1]*s, p[0]*s+p[1]*c];}
+
+function face(name,look,blink,ch){
+  const lx=look*4;
+  let eyes, mouth='', extra='';
+  const dot=(x,y,r)=>`<circle cx="${x+lx}" cy="${y}" r="${r}" fill="#fff"/>`;
+  if(blink && !['shocked'].includes(name)){
+    eyes=`<path d="M${-14+lx} -4 L${-6+lx} -4 M${6+lx} -4 L${14+lx} -4" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>`;
+  }
+  switch(name){
+    case 'happy': eyes=eyes||dot(-10,-5,4)+dot(10,-5,4); mouth=`<path d="M${-12+lx} 8 Q${lx} 20 ${12+lx} 8" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>`; break;
+    case 'shocked': eyes=dot(-10,-7,5.5)+dot(10,-7,5.5)+`<circle cx="${-10+lx*1.4}" cy="-6" r="2" fill="${INK}"/><circle cx="${10+lx*1.4}" cy="-6" r="2" fill="${INK}"/>`; mouth=`<ellipse cx="${lx}" cy="13" rx="5" ry="7" fill="#fff"/>`; break;
+    case 'smug': eyes=eyes||`<path d="M${-15+lx} -4 L${-6+lx} -4 M${5+lx} -5 L${14+lx} -8" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>`; mouth=`<path d="M${-8+lx} 10 Q${4+lx} 14 ${12+lx} 4" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>`; break;
+    case 'worried': eyes=(eyes||dot(-9,-2,3.5)+dot(9,-2,3.5))+`<path d="M${-16+lx} -12 L${-6+lx} -9 M${16+lx} -12 L${6+lx} -9" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>`; mouth=`<path d="M${-10+lx} 14 Q${-5+lx} 10 ${lx} 14 Q${5+lx} 18 ${10+lx} 14" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>`; extra=`<path d="M26 -22 Q31 -12 26 -9 Q21 -12 26 -22 Z" fill="#8FD3FF"/>`; break;
+    case 'determined': eyes=(eyes||dot(-10,-3,3.5)+dot(10,-3,3.5))+`<path d="M${-16+lx} -13 L${-5+lx} -9 M${16+lx} -13 L${5+lx} -9" stroke="#fff" stroke-width="3" stroke-linecap="round"/>`; mouth=`<path d="M${-8+lx} 12 L${8+lx} 12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>`; break;
+    case 'bored': eyes=`<path d="M${-14+lx} -3 L${-5+lx} -3 M${5+lx} -3 L${14+lx} -3" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>`; mouth=`<path d="M${-7+lx} 12 L${7+lx} 12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>`; break;
+    case 'sad': eyes=eyes||dot(-10,-3,3.5)+dot(10,-3,3.5); mouth=`<path d="M${-10+lx} 15 Q${lx} 7 ${10+lx} 15" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>`; break;
+    case 'focused': eyes=eyes||dot(-8,-4,4)+dot(10,-4,4); mouth=`<path d="M${-6+lx} 12 L${10+lx} 12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>`; break;
+    default: eyes=eyes||dot(-10,-4,4)+dot(10,-4,4); mouth=`<path d="M${-10+lx} 10 Q${lx} 18 ${10+lx} 10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>`;
+  }
+  return eyes+mouth+extra;
+}
+
+function accessory(ch){
+  switch(ch.acc){
+    case 'bun': return `<circle cx="14" cy="-34" r="12" fill="${INK}" stroke="${RIM}" stroke-width="3"/>`;
+    case 'cap': return `<path d="M-30 -10 Q0 -48 30 -10 L44 -8 L-30 -8 Z" fill="${ch.shirt}"/>`;
+    case 'long': return `<path d="M-30 -4 Q-34 30 -22 36 L-18 0 Z M30 -4 Q34 30 22 36 L18 0 Z" fill="${INK}" stroke="${RIM}" stroke-width="2"/>`;
+    default: return '';
+  }
+}
+function glasses(look){const lx=look*4;return `<circle cx="${-10+lx}" cy="-4" r="9" fill="none" stroke="#fff" stroke-width="2.4"/><circle cx="${10+lx}" cy="-4" r="9" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M${-1+lx} -4 L${1+lx} -4" stroke="#fff" stroke-width="2.4"/>`;}
+
+// draws a figure; returns {svg, handF, handB, head}
+function figure(st, chName, t, id){
+  const ch=Object.assign({},CHARS[chName]||CHARS.extra, st.shirt?{shirt:st.shirt}:{});
+  const f=st.flip?-1:1, s=(st.scale||1)*ch.scale, A=st.ang;
+  const lean=A.lean, tilt=A.tilt;
+  // legs (hip-local)
+  const hb=[-10*f,0], hf=[10*f,0];
+  const kb=pt(hb[0],hb[1],A.tb,38,f), ab=pt(kb[0],kb[1],A.tb+A.sb,36,f);
+  const kf=pt(hf[0],hf[1],A.tf,38,f), af=pt(kf[0],kf[1],A.tf+A.sf,36,f);
+  const groundOff=Math.max(ab[1],af[1])+3;
+  const breathe=st.still?0:Math.sin((t+hash(id)%10)*5.2)*1.2;
+  const lift=st.lift||0;
+  // torso
+  const R=p=>rot(p,lean,f);
+  const shirtPts=ch.coat?[[-26,-64],[0,-74],[26,-64],[26,22],[-26,22]]:[[-26,-64],[0,-74],[26,-64],[22,4],[-22,4]];
+  const sp=shirtPts.map(p=>R([p[0]*f,p[1]+breathe*0.5]));
+  const shirt=`M${sp[0][0]} ${sp[0][1]} Q${sp[1][0]} ${sp[1][1]} ${sp[2][0]} ${sp[2][1]} L${sp[3][0]} ${sp[3][1]} L${sp[4][0]} ${sp[4][1]} Z`;
+  const sb_=R([-22*f,-58+breathe*0.5]), sf_=R([22*f,-58+breathe*0.5]);
+  const eb=pt(sb_[0],sb_[1],A.ub+lean,34,f), wb=pt(eb[0],eb[1],A.ub+A.fb+lean,30,f);
+  const ef=pt(sf_[0],sf_[1],A.uf+lean,34,f), wf=pt(ef[0],ef[1],A.uf+A.ff+lean,30,f);
+  const hc=R([0,-102+breathe]);
+  const toe=(a)=>[a[0]+12*f,a[1]+2];
+  const tb2=toe(ab), tf2=toe(af);
+  const limb=(d)=>`<path d="${d}" stroke="${RIM}" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="${d}" stroke="${INK}" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+  const legB=`M${hb[0]} ${hb[1]} L${kb[0]} ${kb[1]} L${ab[0]} ${ab[1]} L${tb2[0]} ${tb2[1]}`;
+  const legF=`M${hf[0]} ${hf[1]} L${kf[0]} ${kf[1]} L${af[0]} ${af[1]} L${tf2[0]} ${tf2[1]}`;
+  const armB=`M${sb_[0]} ${sb_[1]} L${eb[0]} ${eb[1]} L${wb[0]} ${wb[1]}`;
+  const armF=`M${sf_[0]} ${sf_[1]} L${ef[0]} ${ef[1]} L${wf[0]} ${wf[1]}`;
+  // blink
+  const bp=3.1+(hash(id)%13)/10; const blink=!st.noblink && ((t+(hash(id)%7)*.37)%bp)<0.11;
+  const hs=ch.head;
+  const headG=`<g transform="translate(${hc[0]} ${hc[1]}) rotate(${(lean+tilt)*f}) scale(${f*hs} ${hs})">`+
+    (ch.acc==='bun'?accessory(ch):'')+
+    `<circle cx="0" cy="0" r="32" fill="${INK}" stroke="${RIM}" stroke-width="3"/>`+
+    face(st.face||'neutral',st.look||0,blink,ch)+(ch.acc==='glasses'?glasses(st.look||0):'')+
+    (ch.acc&&ch.acc!=='bun'&&ch.acc!=='glasses'?accessory(ch):'')+`</g>`;
+  const tie=ch.coat?(()=>{const a=R([-7*f,-66]),b=R([0,-40]),c=R([7*f,-66]);return `<path d="M${a[0]} ${a[1]} L${b[0]} ${b[1]} L${c[0]} ${c[1]} Z" fill="#3FBF8A"/>`;})():'';
+  const shadowW=44*Math.max(.4,1-lift/200);
+  const inner=`<g transform="translate(0 ${-groundOff-lift})">`+limb(armB)+limb(legB)+limb(legF)+`<path d="${shirt}" fill="${ch.shirt}"/>`+tie+limb(armF)+headG+`</g>`;
+  const svg=`<g transform="translate(${st.x} ${st.y}) scale(${s}) rotate(${st.rot||0})" opacity="${st.opacity??1}"><ellipse cx="0" cy="0" rx="${shadowW}" ry="7" fill="rgba(0,0,0,.4)"/>${inner}</g>`;
+  const toWorld=p=>[st.x+(p[0])*s, st.y+(p[1]-groundOff-lift)*s];
+  return {svg, handF:toWorld(wf), handB:toWorld(wb), head:toWorld(hc)};
+}
+
+// ------------------------------------------------------------------ tweens
+const NUM=['x','y','scale','opacity','rot','lift'];
+function poseAngles(name){return Object.assign({},P[name]||P.idle);}
+function actorState(a,t){
+  let cur={x:a.x??270,y:a.y??800,scale:a.scale??1,opacity:a.opacity??1,rot:0,lift:0,ang:poseAngles(a.pose||'idle'),face:a.face||'neutral',look:a.look||0,flip:!!a.flip,cycle:a.cycle||null,shirt:a.shirt,still:a.still};
+  let from=JSON.parse(JSON.stringify(cur)), to=cur, t0=-1e9, dur=0.001, ease=EASE.inout, arc=0;
+  const evalAt=(tt)=>{const p=clamp((tt-t0)/dur,0,1),e=ease(p);const o=Object.assign({},to);
+    for(const k of NUM){if(from[k]!==undefined&&to[k]!==undefined)o[k]=lerp(from[k],to[k],e);}
+    o.ang={};for(const k of KEYS)o.ang[k]=lerp(from.ang[k],to.ang[k],e);
+    if(arc){o.lift=(o.lift||0)+4*arc*p*(1-p);}
+    return o;};
+  for(const k of a.keys||[]){
+    if(k.t>t)break;
+    const snap=evalAt(k.t);
+    from=snap; to=Object.assign({},snap);
+    for(const n of NUM)if(k[n]!==undefined)to[n]=k[n];
+    if(k.pose)to.ang=poseAngles(k.pose);
+    if(k.face)to.face=k.face;
+    if(k.look!==undefined)to.look=k.look;
+    if(k.flip!==undefined)to.flip=k.flip;
+    if(k.cycle!==undefined)to.cycle=k.cycle;
+    if(k.shirt)to.shirt=k.shirt;
+    from.face=to.face;from.look=to.look;from.flip=to.flip;from.cycle=to.cycle;
+    t0=k.t; dur=Math.max(0.001,k.dur??0.25); ease=EASE[k.ease||(k.cycle?'linear':'inout')]||EASE.inout; arc=k.arc||0;
+  }
+  const o=evalAt(t);
+  if(o.cycle&&CYCLES[o.cycle]){
+    const [pa,pb,per]=CYCLES[o.cycle];const ph=(Math.sin(t*2*Math.PI/per)+1)/2;
+    const A1=P[pa],B1=P[pb];o.ang={};for(const k of KEYS)o.ang[k]=lerp(A1[k],B1[k],ph);
+    o.lift=(o.lift||0)+Math.abs(Math.sin(t*2*Math.PI/per))*(o.cycle==='run'?7:3);
+  }
+  return o;
+}
+function objState(ob,t,hands){
+  let cur={x:ob.x??270,y:ob.y??500,scale:ob.scale??1,opacity:ob.opacity??1,rot:ob.rot??0,lift:0,attach:ob.attach||null,dx:0,dy:0};
+  let from=Object.assign({},cur),to=cur,t0=-1e9,dur=0.001,ease=EASE.inout,arc=0;
+  const evalAt=(tt)=>{const p=clamp((tt-t0)/dur,0,1),e=ease(p);const o=Object.assign({},to);
+    for(const k of NUM.concat(['dx','dy']))if(from[k]!==undefined&&to[k]!==undefined)o[k]=lerp(from[k],to[k],e);
+    if(arc)o.y-=4*arc*p*(1-p);
+    if(o.attach&&hands[o.attach]){o.x=hands[o.attach][0]+(o.dx||0);o.y=hands[o.attach][1]+(o.dy||0);}
+    return o;};
+  for(const k of ob.keys||[]){
+    if(k.t>t)break;
+    const snap=evalAt(k.t);from=Object.assign({},snap,{attach:null});to=Object.assign({},snap);
+    for(const n of NUM.concat(['dx','dy']))if(k[n]!==undefined)to[n]=k[n];
+    if(k.attach!==undefined){to.attach=k.attach;}
+    if(to.attach){from.attach=to.attach;}
+    t0=k.t;dur=Math.max(0.001,k.dur??0.3);ease=EASE[k.ease||'inout']||EASE.inout;arc=k.arc||0;
+  }
+  return evalAt(t);
+}
+
+// ------------------------------------------------------------------ backgrounds
+const BG={
+dusk:`<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22194A"/><stop offset=".45" stop-color="#5A3F86"/><stop offset=".75" stop-color="#C77790"/><stop offset="1" stop-color="#F0A57A"/></linearGradient><radialGradient id="g2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE7B8" stop-opacity=".9"/><stop offset="1" stop-color="#FFE7B8" stop-opacity="0"/></radialGradient></defs><rect width="540" height="960" fill="url(#g1)"/><circle cx="150" cy="640" r="160" fill="url(#g2)"/><circle cx="150" cy="640" r="52" fill="#FFE2B0"/><circle cx="70" cy="420" r="1.8" fill="#fff" opacity=".7"/><circle cx="430" cy="450" r="1.5" fill="#fff" opacity=".6"/><circle cx="300" cy="400" r="1.2" fill="#fff" opacity=".6"/><path d="M0 690 Q120 650 240 680 T540 660 L540 960 L0 960 Z" fill="#3A2A5C"/><path d="M380 690 L392 640 L404 690 Z M410 688 L424 625 L438 688 Z M60 700 L70 660 L80 700 Z" fill="#2A1F45"/><path d="M0 790 Q270 760 540 790 L540 960 L0 960 Z" fill="#1E1631"/><path d="M0 790 Q270 760 540 790" fill="none" stroke="${RIM}" stroke-opacity=".35" stroke-width="2"/>`,
+warm_interior:`<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241A3A"/><stop offset="1" stop-color="#4E3350"/></linearGradient><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A3577"/><stop offset=".6" stop-color="#C9708A"/><stop offset="1" stop-color="#F2A877"/></linearGradient><radialGradient id="g2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFD9A0" stop-opacity=".5"/><stop offset="1" stop-color="#FFD9A0" stop-opacity="0"/></radialGradient></defs><rect width="540" height="960" fill="url(#g1)"/><rect x="60" y="390" width="420" height="190" rx="10" fill="url(#g3)"/><circle cx="370" cy="560" r="44" fill="#FFE2B0"/><path d="M60 545 L120 520 L170 540 L240 505 L300 535 L360 515 L420 538 L480 520 L480 580 L60 580 Z" fill="#3B2850" opacity=".8"/><rect x="60" y="390" width="420" height="190" rx="10" fill="none" stroke="#1A1328" stroke-width="10"/><path d="M270 390 L270 580" stroke="#1A1328" stroke-width="8"/><circle cx="370" cy="560" r="180" fill="url(#g2)"/><rect x="0" y="790" width="540" height="170" fill="#1C1427"/><path d="M0 790 L540 790" stroke="${RIM}" stroke-opacity=".25" stroke-width="2"/>`,
+cool_interior:`<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E2640"/><stop offset="1" stop-color="#3A4566"/></linearGradient><linearGradient id="g2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD39A" stop-opacity=".35"/><stop offset="1" stop-color="#FFD39A" stop-opacity="0"/></linearGradient></defs><rect width="540" height="960" fill="url(#g1)"/><path d="M540 380 L540 520 L200 900 L60 900 Z" fill="url(#g2)"/><rect x="0" y="800" width="540" height="160" fill="#1A2033"/><path d="M0 800 L540 800" stroke="${RIM}" stroke-opacity=".25" stroke-width="2"/>`,
+stadium:`<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22194A"/><stop offset=".6" stop-color="#6A4A86"/><stop offset="1" stop-color="#E39A7E"/></linearGradient></defs><rect width="540" height="960" fill="url(#g1)"/><circle cx="420" cy="470" r="40" fill="#FFE2B0" opacity=".9"/><path d="M0 540 L540 520 L540 600 L0 610 Z" fill="#23202C"/><g fill="#23202C">${Array.from({length:17},(_,i)=>`<circle cx="${i*33+10}" cy="${532-i}" r="9"/>`).join('')}</g><g>${Array.from({length:6},(_,i)=>`<rect x="${i*90+30}" y="${512-i}" width="6" height="16" fill="${['#C8FF4D','#5BE7FF','#FFB547'][i%3]}" opacity=".7"/>`).join('')}</g><rect x="0" y="600" width="540" height="64" fill="#2C5A3A"/><path d="M0 664 L540 664 L540 960 L0 960 Z" fill="#7A4A44"/><path d="M0 720 L540 700 M0 800 L540 772 M0 890 L540 852" stroke="#E8E2EA" stroke-opacity=".55" stroke-width="3"/>`,
+night_city:`<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E0C22"/><stop offset="1" stop-color="#2B2457"/></linearGradient></defs><rect width="540" height="960" fill="url(#g1)"/>${Array.from({length:30},(_,i)=>`<circle cx="${(i*97)%540}" cy="${(i*53)%380+40}" r="${1+(i%3)*.4}" fill="#fff" opacity="${.3+(i%4)*.15}"/>`).join('')}<circle cx="430" cy="140" r="30" fill="#F4F1FF" opacity=".9"/><g fill="#1A1638">${[[0,560,90],[90,500,70],[160,590,80],[240,470,90],[330,540,70],[400,490,80],[480,580,60]].map(b=>`<rect x="${b[0]}" y="${b[1]}" width="${b[2]}" height="${800-b[1]}"/>`).join('')}</g><g fill="#FFD27A" opacity=".75">${Array.from({length:40},(_,i)=>`<rect x="${(i*61)%520+10}" y="${(i*37)%220+560}" width="8" height="10"/>`).join('')}</g><rect x="0" y="800" width="540" height="160" fill="#14112A"/><path d="M0 800 L540 800" stroke="${RIM}" stroke-opacity=".3" stroke-width="2"/>`,
+day_park:`<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5B7FD0"/><stop offset=".7" stop-color="#E9A9A0"/><stop offset="1" stop-color="#F6D3A0"/></linearGradient></defs><rect width="540" height="960" fill="url(#g1)"/><circle cx="410" cy="560" r="50" fill="#FFF0C8"/><ellipse cx="120" cy="470" rx="70" ry="18" fill="#fff" opacity=".35"/><ellipse cx="380" cy="420" rx="90" ry="20" fill="#fff" opacity=".3"/><path d="M0 700 Q140 650 300 690 T540 670 L540 960 L0 960 Z" fill="#3E6B4E"/><g fill="#2D5240"><circle cx="70" cy="660" r="40"/><circle cx="110" cy="640" r="34"/><circle cx="470" cy="650" r="44"/></g><path d="M0 790 Q270 768 540 790 L540 960 L0 960 Z" fill="#2B4A38"/><path d="M0 790 Q270 768 540 790" fill="none" stroke="${RIM}" stroke-opacity=".35" stroke-width="2"/>`,
+lab:`<rect width="540" height="960" fill="#13112A"/><g stroke="#C8FF4D" stroke-opacity=".07">${Array.from({length:14},(_,i)=>`<path d="M${i*40} 0 L${i*40} 960"/>`).join('')}${Array.from({length:25},(_,i)=>`<path d="M0 ${i*40} L540 ${i*40}"/>`).join('')}</g><radialGradient id="g9" cx=".5" cy=".6" r=".6"><stop offset="0" stop-color="#5A3F86" stop-opacity=".5"/><stop offset="1" stop-color="#5A3F86" stop-opacity="0"/></radialGradient><rect width="540" height="960" fill="url(#g9)"/><rect x="0" y="800" width="540" height="160" fill="#0E0C20"/><path d="M0 800 L540 800" stroke="#C8FF4D" stroke-opacity=".3" stroke-width="2"/>`,
+};
+
+// ------------------------------------------------------------------ HUD
+function segs(n,on,color){let s='';for(let i=0;i<10;i++)s+=`<i style="${i<on?`background:${color}`:''}"></i>`;return s;}
+function hudHTML(h,t,acc){
+  const age=t-h.t0, left=h.t1-t;
+  const inP=clamp(age/0.35,0,1), outP=clamp(left/0.2,0,1);
+  let sc=EASE.back(inP)*0.4+0.6, op=Math.min(clamp(age/0.12,0,1),outP);
+  const tr=`transform:translateY(${(1-EASE.out(inP))*-24}px) scale(${h.type==='stat'?sc:1});opacity:${op}`;
+  if(h.type==='stat'){
+    const on=clamp(Math.floor((age-0.28)/0.04)+1,0,10);
+    const glow=on>=10?(0.25+0.35*Math.exp(-(age-0.7)*4)):0.2;
+    return `<div class="card" style="${tr};border:2px solid ${acc};box-shadow:0 0 40px rgba(200,255,77,${glow})"><div class="row lbl" style="color:${acc}"><span>${h.label||'NEW STAT UNLOCKED'}</span><span style="color:#A9A3C9">${h.tag||''}</span></div><div class="row"><div style="font-family:'Chakra Petch';font-weight:700;font-size:30px">${h.name}</div><div style="font-family:'Chakra Petch';font-weight:700;font-size:38px;color:${acc}">${h.mult||''}</div></div><div class="seg">${segs(10,on,acc)}</div></div>`;
+  }
+  if(h.type==='compare'){
+    const pa=EASE.out(clamp((age-0.1)/0.6,0,1)), pb=EASE.out(clamp((age-0.55)/0.6,0,1));
+    const a=h.a||['Average human','',1], b=h.b||['You','',0.1];
+    return `<div class="card" style="${tr};border:1px solid rgba(255,255,255,.18);padding:18px 20px;gap:10px"><div class="lbl" style="color:#A9A3C9">${h.label||'COMPARE'}</div><div class="row" style="font-size:17px"><span style="color:#CFCAE8">${a[0]}</span><span style="font-family:'Chakra Petch';font-weight:600">${a[1]}</span></div><div style="height:14px;border-radius:7px;background:#4A4570;width:${a[2]*100*pa}%"></div><div class="row" style="font-size:17px;margin-top:4px"><span style="font-weight:800">${b[0]}</span><span style="font-family:'Chakra Petch';font-weight:700;color:${acc}">${b[1]}</span></div><div style="height:14px;border-radius:7px;background:${acc};width:${Math.max(2,b[2]*100)*pb}%;box-shadow:0 0 16px rgba(200,255,77,.6)"></div></div>`;
+  }
+  if(h.type==='warn'){
+    const shake=age<0.12?Math.sin(age*160)*4:0;
+    return `<div class="card" style="${tr};margin-left:${shake}px;border:2px solid #FFB547;flex-direction:row;align-items:center;gap:14px;padding:16px 18px;box-shadow:0 0 40px rgba(255,181,71,.22)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFB547" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L22 20 L2 20 Z"/><path d="M12 10 L12 14"/><path d="M12 17 L12 17.01"/></svg><div style="display:flex;flex-direction:column;gap:4px"><div class="lbl" style="color:#FFB547">${h.label||'SIDE EFFECT DETECTED'}</div><div style="font-size:20px;font-weight:800;line-height:1.2">${h.text}</div></div></div>`;
+  }
+  if(h.type==='choice'){
+    const tp=h.tp??h.t1; const total=Math.max(0.1,tp-h.t0); const rem=clamp(1-(t-h.t0)/total,0,1);
+    const picked=t>=tp; const secs=(rem*(h.seconds??0.61)).toFixed(2);
+    const pk=h.pick||'b';
+    const opt=(k,txt)=>{const sel=picked&&pk===k, dim=picked&&pk!==k;
+      return `<div class="opt" style="${sel?`border:2px solid ${acc};background:rgba(200,255,77,.12);box-shadow:0 0 24px rgba(200,255,77,.3);transform:scale(${1+0.05*EASE.out(clamp((t-tp)/0.2,0,1))})`:''};opacity:${dim?0.4:1}"><span style="font-family:'Chakra Petch';color:${sel?acc:'#A9A3C9'}">${k.toUpperCase()}</span>&nbsp; ${txt}</div>`;};
+    return `<div class="card" style="${tr};border:1px solid rgba(255,255,255,.2);padding:16px 18px;gap:12px"><div class="row lbl"><span style="color:#A9A3C9">${h.label||'CHOOSE'}</span><span style="color:#FF8A8A">${picked?'CHOSEN':secs+' s LEFT'}</span></div><div style="height:6px;border-radius:3px;background:#3A3550"><div style="height:6px;border-radius:3px;background:#FF8A8A;width:${rem*100}%"></div></div><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">${opt('a',h.a)}${opt('b',h.b)}</div></div>`;
+  }
+  if(h.type==='level'){ // e.g. "STAT LEVEL: MAXED" or "STAT REMOVED"
+    return `<div class="card" style="${tr};border:2px solid ${h.color||acc};align-items:center"><div class="lbl" style="color:${h.color||acc}">${h.label||'STATUS'}</div><div style="font-family:'Chakra Petch';font-weight:700;font-size:30px">${h.text}</div></div>`;
+  }
+  if(h.type==='note'){ // small Dr. Lee style fact card
+    return `<div class="card" style="${tr};border:1px solid rgba(255,255,255,.2)"><div class="lbl" style="color:#5BE7FF">${h.label||'REAL SCIENCE'}</div><div style="font-size:19px;font-weight:700;line-height:1.3">${h.text}</div></div>`;
+  }
+  return '';
+}
+
+// ------------------------------------------------------------------ main
+let PLAN=null, lastScene=-1;
+function sceneAt(t){const S=PLAN.scenes;for(let i=S.length-1;i>=0;i--)if(t>=S[i].t0)return i;return 0;}
+window.NSU={
+  load(p){PLAN=p;lastScene=-1;},
+  render(t){
+    const acc=PLAN.accent||'#C8FF4D';
+    const si=sceneAt(t), sc=PLAN.scenes[si];
+    const bgEl=document.getElementById('bg'), fg=document.getElementById('fg');
+    if(si!==lastScene){bgEl.innerHTML=(BG[sc.bg]||BG.lab)+(sc.backdrop||'');lastScene=si;}
+    // actors and objects
+    const hands={}; let actors='';
+    const acts=(sc.actors||[]).map(a=>({a,st:actorState(a,t)}));
+    const objs=(sc.objects||[]);
+    const pre=[], post=[];
+    for(const {a,st} of acts){const r=figure(st,a.char||'hero',t,a.id||a.char);hands[(a.id||a.char)+'.hand']=r.handF;hands[(a.id||a.char)+'.hand_back']=r.handB;hands[(a.id||a.char)+'.head']=r.head;actors+=r.svg;}
+    for(const ob of objs){const st=objState(ob,t,hands);const g=`<g transform="translate(${st.x} ${st.y}) rotate(${st.rot}) scale(${st.scale})" opacity="${st.opacity}">${ob.svg}</g>`;(ob.front?post:pre).push(g);}
+    fg.innerHTML=(sc.props||'')+pre.join('')+actors+post.join('')+(sc.front_props||'');
+    // camera
+    const age=t-sc.t0, span=Math.max(0.1,sc.t1-sc.t0), pr=clamp(age/span,0,1);
+    let s=1,tx=0,ty=0;
+    const cam=sc.camera||'push';
+    if(cam==='push')s=1+0.05*pr; else if(cam==='pull')s=1.06-0.05*pr; else if(cam==='pan_left')tx=-30*pr+15; else if(cam==='pan_right')tx=30*pr-15;
+    if(sc.slowmo)s=1+0.04*pr;
+    if(si>0&&(sc.transition||'cut')!=='none'){const k=clamp(age/0.25,0,1);s*=1+0.04*(1-EASE.out(k));}
+    const scEl=document.getElementById('scene');
+    scEl.style.transform=`translate(${tx}px,${ty}px) scale(${s})`;
+    scEl.style.filter=sc.slowmo?'saturate(.45) brightness(.92)':'none';
+    document.getElementById('vig').style.background=sc.slowmo?'radial-gradient(ellipse at 50% 55%, rgba(0,0,0,0) 45%, rgba(0,0,0,.6) 100%)':'radial-gradient(ellipse at 50% 55%, rgba(0,0,0,0) 60%, rgba(0,0,0,.28) 100%)';
+    // warn flash
+    const fl=document.getElementById('flash'); let flash='';
+    for(const h of PLAN.hud){if(h.type==='warn'){const a2=t-h.t0;if(a2>=0&&a2<0.25)flash=`box-shadow:inset 0 0 0 ${10*(1-a2/0.25)}px rgba(255,181,71,${0.8*(1-a2/0.25)})`;}}
+    fl.setAttribute('style',flash);
+    // HUD
+    let hud='';for(const h of PLAN.hud){if(t>=h.t0&&t<h.t1)hud+=hudHTML(h,t,acc);}
+    document.getElementById('hud').innerHTML=hud;
+    // captions
+    let cap='';const top=hud?(sc.caption_top??300):(sc.caption_top_nohud??180);
+    for(const c of PLAN.captions){if(t>=c.s&&t<c.e){const a3=t-c.s;const k=EASE.back(clamp(a3/0.12,0,1));
+      const txt=c.w.map(w=>w.c?`<span style="color:${w.c==='green'?acc:w.c==='amber'?'#FFB547':w.c}">${w.t}</span>`:w.t).join(' ');
+      cap=`<div class="cap" style="top:${top}px;transform:scale(${0.9+0.1*k});opacity:${clamp(a3/0.06,0,1)}">${txt}</div>`;}}
+    document.getElementById('caps').innerHTML=cap;
+    // chips
+    let chips=`<div class="chip" style="left:28px;color:#CFCAE8;border:1px solid rgba(255,255,255,.15)">EP. ${String(PLAN.ep).padStart(2,'0')}</div>`;
+    if(sc.slowmo)chips+=`<div class="chip" style="right:28px;color:#FF8A8A;border:1px solid rgba(255,138,138,.4)">SLOW-MO ×0.1</div>`;
+    document.getElementById('chips').innerHTML=chips;
+  }
+};
+})();
+</script>
+</body>
+</html>
