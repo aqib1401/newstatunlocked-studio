@@ -29,14 +29,14 @@ Read `episodes.json` (it replaces WRITING.md's ALREADY MADE list). It's a list o
 
 ## 1. Pick today's idea
 
-- Next episode number = highest `ep` + 1.
-- Following WRITING.md MODE 1, think of 10 candidate titles. Throw out anything whose ability is already used in `episodes.json` (same ability at a different number counts as used for the next 10 episodes), and anything too close to an existing title.
-- Pick the single strongest: clearest picture, biggest cost, most drawable as stick-figure animation, best climax choice.
-- Vary the ability category from the last 3 episodes (don't do three brain abilities in a row).
+- Next episode number = highest `ep` in `episodes.json` + 1.
+- Open `ideas.json`. Take the **first idea with `"status": "planned"`** (they're in a deliberate order that mixes body, senses and brain abilities). Mark it `"status": "used"` and add `"ep": NN`.
+- The idea gives you the hook, the rule (the limit that makes the ability backfire), escalation beats, the climax choice, the ending and the loop, plus real facts. Treat it as a strong first draft: keep its core, improve anything that's weak, and only state facts you're confident are true. Drop any fact you're not sure of.
+- If there are no planned ideas left, invent one following WRITING.md MODE 1, using an ability not already in `episodes.json`. Then add 10 new planned ideas to `ideas.json` in the same format, so tomorrow's run has a queue again.
 
 ## 2. Write the script
 
-- Follow WRITING.md MODE 2 exactly. Length 60 s (155–170 words).
+- Follow WRITING.md MODE 2 and the VIRAL & RETENTION RULES exactly. Length 60 s (155–170 words).
 - Run the silent self-check, especially: **standalone** (a stranger understands everything), **flows like one story told out loud**, no catchphrases, every side character introduced by relationship, at least 3 real facts, nothing invented.
 - Rewrite it once more with fresh eyes before moving on. The script is what decides whether people keep watching.
 - Save `$R/episodes/epNN/script.md` with the full MODE 2 output block (title, script, HUD plan, facts, loop check).
@@ -50,7 +50,9 @@ mkdir -p $E
 
 1. Write `$E/episode.json` following `engine/ENGINE_GUIDE.md` and `engine/example_ep01_episode.json`:
    - `"ep": NN`, `"script"`: the exact script, `"voiceover": "voiceover.wav"`, `"tts_voice": "af_heart"`, `"tts_speed": 1.05`.
-   - `hud` and `highlights` from the HUD PLAN. A new scene every 3–6 s, `lab` for the ability/number beats, real places for the story, `slowmo` for the choice, and the last scene setting up the loop.
+   - `hud` and `highlights` from the HUD PLAN. A new scene every 3–6 s, `lab` for the ability/number beats, real places for the story, `slowmo` for the choice.
+   - **Visual loop:** the last scene uses the same background, characters and positions as the first scene, so when the Short replays, the cut from last frame to first frame is invisible.
+   - The first scene must have movement inside the first second (an object falling, a character reacting). No static opening frame.
    - Build clear, funny SVG props and objects for every beat. This is what makes the video watchable.
 2. Voice: `python3 $R/engine/nsu_voice.py $E`. Target 52–64 s. If it's longer, raise `tts_speed` (max 1.2) and rerun; if it's under 50 s, lower it (min 0.95).
 3. Preview: `python3 $R/engine/nsu_render.py $E --preview`, then open `$E/out/preview_sheet.jpg` and look at it. Fix faces hidden by the HUD or captions, faces in the bottom 20% or at the right edge, floating characters and unreadable props, then preview again.

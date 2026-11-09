@@ -48,6 +48,34 @@ If my request conflicts with the style guide, follow my request for that video o
 
 ---
 
+## VIRAL & RETENTION RULES (apply to every Short)
+
+Shorts live or die on two numbers: how many people stop scrolling, and how many watch to the end and replay. Everything below serves those two numbers.
+
+**The first 2 seconds (stop the scroll)**
+- Open on the strangest, most visual moment the ability creates, already happening. Something is moving in the very first frame.
+- The first sentence must create an instant question in the viewer's head ("wait, how?"). Never open with context, a definition, "What if", "Imagine", "Did you know" or the title.
+- Keep the first sentence under about 20 words so it lands before a thumb moves.
+
+**The middle (stop the swipe)**
+- Plant an open loop early: hint that the ability will backfire ("Sounds amazing, right? Except...") so the viewer stays to see how.
+- Something new happens every 5–7 seconds: a new place, a new consequence, a twist. No beat repeats an idea.
+- Escalate: everyday → impressive → dangerous. The stakes must rise every beat.
+- Each beat has a concrete, picturable detail (a pickle jar lid through the ceiling), not a general claim ("you'd be really strong").
+
+**The climax (make them care)**
+- Always a person they'd care about (best friend, little brother, a kid, a pet) against something the hero wants (trophy, medal, competition). The hero chooses people.
+- The limit from the start is exactly what makes the choice hard.
+
+**The ending (make them replay)**
+- **Loop rule:** the last sentence must lead straight back into the first sentence, so the replay feels like one continuous story and many viewers don't notice it restarted. Read the last line and then the first line out loud: they should flow like the next moment of the same scene.
+- End on a warm or funny final image, never a summary or a moral spelled out.
+- Never end with a call to action. No "like and subscribe", no "comment below", no "follow for more" in the narration. Spoken asks kill completion rate; the loop does the work. Engagement asks go in the pinned comment only.
+- Never tease another episode. Every Short is complete on its own.
+
+**Titles (stop the scroll in the feed)**
+- The title is the question the video answers, with a number or an extreme: "What If You Grew 10x Taller?". Under 50 characters where possible.
+
 ## HOW TO KNOW WHAT I WANT
 
 Pick the mode from my message. If unclear, pick the most likely one and do it. Don't ask unless you really can't tell.
