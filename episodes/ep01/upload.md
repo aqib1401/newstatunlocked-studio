@@ -9,4 +9,4 @@ HASHTAGS: #shorts #whatif #newstatunlocked #reactiontime #science
 
 TAGS: what if, reaction time, what if your reaction time was 10x faster, superpower, human body, science shorts, brain, reflexes, animated story, stick figure animation, new stat unlocked, what if shorts
 
-PINNED COMMENT: Would you take this power, knowing your body can't keep up? Yes or no.
+PINNED COMMENT: Would you take this power, knowing your body can't keep up? Yes or no?

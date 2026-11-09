@@ -2,33 +2,36 @@
  "ep": 1,
  "title": "What If Your Reaction Time Was 10x Faster?",
  "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
  "music": "auto",
  "thumbnail": "your hand is already",
- "script": "Your friend knocks his coffee off the table, and your hand is already under it before it even starts to fall. Because today, your reaction time is ten times faster. A normal person needs about a quarter of a second to react. You need two and a half hundredths. Sounds amazing, right? Except only your brain got faster. Your body didn't. So when your best friend Leo pitches to you, the ball floats in like a balloon... and you still swing too late. Then comes the school race final. You're crouched at the start, holding yourself back, because if you react in under a tenth of a second, they'll say you guessed and disqualify you. And that's when you see your little brother Sam slipping off the railing. Your brain sees it instantly. Your legs are as slow as ever. The gold medal... or Sam. You run. You catch him. You finish dead last. And Sam just grins at you... right before he knocks his cup off the table.",
+ "script": "What if your reaction time was ten times faster? Not quick. Ten times. Your friend knocks his coffee off the table, and your hand is already under the cup before it even starts to fall. A fly buzzes past, and you just pinch it out of the air. Most people need about a quarter of a second to react to anything. You need two and a half hundredths. But then something weird starts happening. Your best friend Leo throws you a fastball, and it floats toward you like a balloon. You swing anyway. And you miss. Because here's the catch: only your brain got faster. Your arms are as slow as ever. You see everything coming, and you still can't get there in time. At races, you have to hold yourself back, because if you react in under a tenth of a second off the gun, they decide you must have guessed. Then, at the school final, you see your little brother slip off the railing. Your brain sees it instantly. Your legs don't. The gold medal, or your brother? You run. You catch him. You finish dead last. Would you still want this power? Yes or no?",
  "highlights": {
   "ten times faster": "green",
+  "already under the cup": "green",
+  "pinch it": "green",
   "two and a half hundredths": "green",
-  "Your body didn't": "amber",
-  "too late": "amber",
-  "guessed": "amber",
-  "instantly": "green",
-  "slow as ever": "amber",
-  "Sam": "green",
-  "dead last": "amber"
+  "you miss": "amber",
+  "only your brain": "amber",
+  "must have guessed": "amber",
+  "Your legs don't": "amber",
+  "dead last": "amber",
+  "Yes or no": "green"
  },
  "hud": [
   {
    "type": "stat",
-   "at": "Because today",
-   "until": "A normal person",
+   "at": "What if your reaction",
+   "until": "Your friend knocks",
    "name": "REACTION TIME",
    "mult": "×10",
    "tag": "+900%"
   },
   {
    "type": "compare",
-   "at": "A normal person",
-   "until": "Sounds amazing",
+   "at": "Most people need",
+   "until": "But then",
    "label": "REACTION TIME · COMPARE",
    "a": [
     "Average human",
@@ -43,16 +46,17 @@
   },
   {
    "type": "warn",
-   "at": "Except only your brain",
-   "until": "So when your best friend",
+   "at": "only your brain",
+   "until": "At races",
+   "label": "SIDE EFFECT DETECTED",
    "text": "Brain ×10. Body ×1."
   },
   {
    "type": "note",
    "at": "because if you react",
-   "until": "And that's when",
+   "until": "Then, at the school final",
    "label": "REAL SCIENCE",
-   "text": "React in under 0.1 s and it counts as a false start."
+   "text": "React in under 0.1 s after the gun and it counts as a false start."
   },
   {
    "type": "choice",
@@ -60,22 +64,28 @@
    "pick_at": "You run",
    "until": "You catch him",
    "a": "The gold medal",
-   "b": "Sam",
+   "b": "Your brother",
    "pick": "b"
   },
   {
    "type": "level",
    "at": "You finish dead last",
-   "until": "And Sam just grins",
+   "until": "Would you still",
    "label": "RACE RESULT",
    "text": "LAST PLACE · WORTH IT",
    "color": "#FFB547"
+  },
+  {
+   "type": "level",
+   "at": "Would you still",
+   "label": "WOULD YOU TAKE IT?",
+   "text": "COMMENT: YES OR NO"
   }
  ],
  "sfx": [
   {
    "name": "crowd",
-   "at": "Then comes the school race"
+   "at": "Then, at the school final"
   },
   {
    "name": "crowd",
@@ -85,6 +95,36 @@
  ],
  "scenes": [
   {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 270,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "Not quick",
+       "pose": "shrug",
+       "face": "neutral",
+       "dur": 0.2
+      },
+      {
+       "at": "Ten times.",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your friend knocks",
    "bg": "warm_interior",
    "camera": "push",
    "props": "<rect x='70' y='652' width='400' height='16' rx='6' fill='#6B4A3A'/><rect x='110' y='668' width='12' height='122' fill='#4A3329'/><rect x='418' y='668' width='12' height='122' fill='#4A3329'/><ellipse cx='170' cy='648' rx='30' ry='6' fill='#E9E2F5'/>",
@@ -99,7 +139,7 @@
      "face": "neutral",
      "keys": [
       {
-       "at": "Your friend knocks+0.5",
+       "at": "off the table",
        "pose": "catch",
        "face": "focused",
        "dur": 0.12,
@@ -135,11 +175,10 @@
      "id": "cup",
      "x": 370,
      "y": 628,
-     "rot": 0,
      "svg": "<path d='M-18 -20 L18 -20 L14 20 Q0 26 -14 20 Z' fill='#F4F1FF'/><path d='M18 -12 Q32 -8 28 6 Q24 12 16 10' fill='none' stroke='#F4F1FF' stroke-width='5'/><path d='M-18 -20 L18 -20' stroke='#7A4A2E' stroke-width='5'/>",
      "keys": [
       {
-       "at": "Your friend knocks+0.3",
+       "at": "knocks his coffee+0.2",
        "x": 300,
        "y": 640,
        "rot": -50,
@@ -161,7 +200,56 @@
    ]
   },
   {
-   "start": "Because today",
+   "start": "A fly buzzes past",
+   "bg": "day_park",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 830,
+     "scale": 1.35,
+     "pose": "idle",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "pinch it",
+       "pose": "catch",
+       "face": "smug",
+       "dur": 0.08,
+       "sfx": "click"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fly",
+     "x": 520,
+     "y": 520,
+     "svg": "<ellipse cx='0' cy='0' rx='6' ry='4' fill='#141218'/><ellipse cx='-3' cy='-6' rx='5' ry='3' fill='#BFE3F2' opacity='.8'/><ellipse cx='3' cy='-6' rx='5' ry='3' fill='#BFE3F2' opacity='.8'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "A fly buzzes",
+       "x": 360,
+       "y": 600,
+       "dur": 0.8,
+       "ease": "linear"
+      },
+      {
+       "at": "pinch it",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Most people need",
    "bg": "lab",
    "camera": "push",
    "actors": [
@@ -172,22 +260,10 @@
      "y": 840,
      "scale": 1.45,
      "pose": "idle",
-     "face": "shocked",
-     "look": 0,
+     "face": "neutral",
      "keys": [
       {
-       "at": "ten times faster",
-       "pose": "cheer",
-       "face": "happy",
-       "dur": 0.25
-      },
-      {
-       "at": "A normal person",
-       "pose": "idle",
-       "face": "neutral"
-      },
-      {
-       "at": "You need",
+       "at": "You need two",
        "pose": "point",
        "face": "smug",
        "dur": 0.2
@@ -197,61 +273,7 @@
    ]
   },
   {
-   "start": "Sounds amazing",
-   "bg": "dusk",
-   "camera": "push",
-   "actors": [
-    {
-     "id": "hero",
-     "char": "hero",
-     "x": 270,
-     "y": 820,
-     "scale": 1.35,
-     "pose": "think",
-     "face": "neutral",
-     "keys": [
-      {
-       "at": "only your brain",
-       "face": "smug",
-       "pose": "point"
-      },
-      {
-       "at": "Your body didn't",
-       "cycle": "walk",
-       "face": "worried",
-       "x": 300,
-       "dur": 1.2
-      }
-     ]
-    }
-   ],
-   "objects": [
-    {
-     "id": "spark",
-     "x": 330,
-     "y": 470,
-     "opacity": 0,
-     "front": true,
-     "svg": "<path d='M0 -26 L-12 4 L0 4 L-6 26 L14 -6 L2 -6 L8 -26 Z' fill='#C8FF4D'/>",
-     "keys": [
-      {
-       "at": "only your brain",
-       "opacity": 1,
-       "scale": 1.4,
-       "dur": 0.2,
-       "sfx": "glitch"
-      },
-      {
-       "at": "Your body didn't",
-       "opacity": 0,
-       "dur": 0.3
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "start": "So when your best friend Leo",
+   "start": "But then something weird",
    "bg": "day_park",
    "camera": "static",
    "props": "<path d='M380 830 L420 812 L460 830 Z' fill='#F4F1FF' opacity='.85'/>",
@@ -266,13 +288,13 @@
      "face": "determined",
      "keys": [
       {
-       "at": "pitches to you",
+       "at": "throws you a fastball",
        "pose": "throw",
        "dur": 0.15,
        "sfx": "swish"
       },
       {
-       "at": "too late",
+       "at": "And you miss",
        "pose": "shrug",
        "face": "bored",
        "dur": 0.25
@@ -294,13 +316,13 @@
        "face": "smug"
       },
       {
-       "at": "and you still swing",
+       "at": "You swing anyway",
        "pose": "swing",
        "dur": 0.12,
        "sfx": "swish"
       },
       {
-       "at": "too late",
+       "at": "And you miss",
        "face": "shocked"
       }
      ]
@@ -323,12 +345,12 @@
      "svg": "<circle r='9' fill='#F4F1FF' stroke='#141218' stroke-width='2'/><path d='M-5 -6 Q0 0 -5 6 M5 -6 Q0 0 5 6' stroke='#E46F6F' stroke-width='1.5' fill='none'/>",
      "keys": [
       {
-       "at": "pitches to you+0.05",
+       "at": "throws you a fastball+0.05",
        "opacity": 1,
        "dur": 0.05
       },
       {
-       "at": "pitches to you+0.1",
+       "at": "throws you a fastball+0.1",
        "x": 300,
        "y": 670,
        "dur": 0.6,
@@ -338,11 +360,11 @@
        "at": "like a balloon",
        "x": 330,
        "y": 672,
-       "dur": 1.0,
+       "dur": 1.2,
        "ease": "linear"
       },
       {
-       "at": "too late",
+       "at": "And you miss",
        "x": 560,
        "y": 690,
        "dur": 0.25,
@@ -353,7 +375,78 @@
    ]
   },
   {
-   "start": "Then comes the school race",
+   "start": "Because here's the catch",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "think",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "Your arms",
+       "pose": "shrug",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "spark",
+     "x": 330,
+     "y": 480,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M0 -26 L-12 4 L0 4 L-6 26 L14 -6 L2 -6 L8 -26 Z' fill='#C8FF4D'/>",
+     "keys": [
+      {
+       "at": "only your brain",
+       "opacity": 1,
+       "scale": 1.4,
+       "dur": 0.2,
+       "sfx": "glitch"
+      },
+      {
+       "at": "Your arms",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "At races",
+   "bg": "stadium",
+   "camera": "push",
+   "props": "<rect x='120' y='800' width='60' height='10' fill='#E8E2EA'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 190,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "crouch",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "must have guessed",
+       "face": "worried"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then, at the school final",
    "bg": "stadium",
    "camera": "push",
    "props": "<rect x='470' y='560' width='70' height='8' fill='#D9D3DD'/><rect x='490' y='568' width='6' height='40' fill='#D9D3DD'/>",
@@ -367,14 +460,6 @@
      "pose": "crouch",
      "face": "focused",
      "keys": [
-      {
-       "at": "holding yourself back",
-       "face": "determined"
-      },
-      {
-       "at": "guessed",
-       "face": "worried"
-      },
       {
        "at": "you see your little brother",
        "look": 1,
@@ -393,7 +478,7 @@
      "face": "happy",
      "keys": [
       {
-       "at": "slipping off",
+       "at": "slip off",
        "pose": "fall",
        "face": "shocked",
        "rot": -20,
@@ -422,7 +507,7 @@
      "look": 1,
      "keys": [
       {
-       "at": "Your legs",
+       "at": "Your legs don't",
        "face": "worried"
       },
       {
@@ -443,7 +528,7 @@
      "rot": -25,
      "keys": [
       {
-       "at": "Your brain sees",
+       "at": "Your brain sees it instantly",
        "y": 640,
        "rot": -40,
        "dur": 4,
@@ -509,67 +594,30 @@
    ]
   },
   {
-   "start": "And Sam just grins",
-   "bg": "warm_interior",
+   "start": "Would you still",
+   "bg": "lab",
    "camera": "push",
-   "props": "<rect x='70' y='652' width='400' height='16' rx='6' fill='#6B4A3A'/><rect x='110' y='668' width='12' height='122' fill='#4A3329'/><rect x='418' y='668' width='12' height='122' fill='#4A3329'/>",
    "actors": [
     {
      "id": "hero",
      "char": "hero",
-     "x": 165,
-     "y": 812,
-     "scale": 1.3,
-     "pose": "idle",
-     "face": "happy",
-     "keys": [
-      {
-       "at": "knocks his cup",
-       "face": "shocked",
-       "look": 1
-      }
-     ]
+     "x": 220,
+     "y": 840,
+     "scale": 1.35,
+     "pose": "hug",
+     "face": "happy"
     },
     {
      "id": "sam",
      "char": "sam",
-     "x": 430,
-     "y": 812,
-     "scale": 1.05,
+     "x": 330,
+     "y": 840,
+     "scale": 1.1,
      "flip": true,
-     "pose": "idle",
-     "face": "happy",
-     "keys": [
-      {
-       "at": "knocks his cup",
-       "pose": "point",
-       "face": "shocked",
-       "dur": 0.15
-      }
-     ]
-    }
-   ],
-   "objects": [
-    {
-     "id": "cup",
-     "x": 370,
-     "y": 628,
-     "svg": "<path d='M-18 -20 L18 -20 L14 20 Q0 26 -14 20 Z' fill='#F4F1FF'/><path d='M18 -12 Q32 -8 28 6 Q24 12 16 10' fill='none' stroke='#F4F1FF' stroke-width='5'/><path d='M-18 -20 L18 -20' stroke='#7A4A2E' stroke-width='5'/>",
-     "keys": [
-      {
-       "at": "knocks his cup+0.15",
-       "x": 330,
-       "y": 640,
-       "rot": -50,
-       "dur": 0.35,
-       "ease": "in",
-       "arc": 25
-      }
-     ]
+     "pose": "hug",
+     "face": "happy"
     }
    ]
   }
- ],
- "tts_voice": "af_heart",
- "tts_speed": 1.05
+ ]
 }

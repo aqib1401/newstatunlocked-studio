@@ -3,14 +3,13 @@
   "ep": 1,
   "title": "What If Your Reaction Time Was 10x Faster?",
   "ability": "reaction time",
-  "status": "shelved",
+  "status": "rendered",
   "video": "videos/ep01.mp4",
-  "rendered_at": "2026-11-09T10:00:47Z",
+  "rendered_at": "2026-11-09T17:58:31Z",
   "posted": {
    "youtube": null,
    "facebook": null
-  },
-  "note": "Old script style; replaced by the new style. Do not post."
+  }
  },
  {
   "ep": 2,
@@ -18,7 +17,7 @@
   "ability": "strength",
   "status": "rendered",
   "video": "videos/ep02.mp4",
-  "rendered_at": "2026-11-09T17:45:53Z",
+  "rendered_at": "2026-11-09T17:58:31Z",
   "posted": {
    "youtube": null,
    "facebook": null
