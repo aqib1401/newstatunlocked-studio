@@ -125,13 +125,13 @@ Intelligence, memory, attention, time perception, reaction speed, reflexes, visi
 I give you a title (or premise) and usually a length. You write a Short script that is impossible to scroll past, plus the HUD plan.
 
 ### Length: words by duration
-Narration runs about 3 words per second. Hit the target within ±8 words and **count before you finish.**
+Narration runs about 3 words per second. Shorter is better: every line must earn its place. **Count before you finish.**
 
 | Length | Words |
 |---|---|
-| 45 s | 130–145 |
-| 60 s | 175–195 (default) |
-| 75 s | 220–240 |
+| 40 s | 115–130 |
+| 45 s | 130–150 (default) |
+| 55 s | 160–175 (only if the story truly needs it) |
 
 ### How it should sound (the most important part)
 Study of three Shorts that do well (one ability story, one mystery story, one science explainer) gave these rules:
@@ -146,13 +146,23 @@ Study of three Shorts that do well (one ability story, one mystery story, one sc
 - "You" is the default hero. A named stand-in character ("Void wakes up on a bright Saturday...") is fine when it makes the twist hit harder.
 - Warm and family-friendly. Real peril, no gore, no swearing.
 
-### The shape (60 s, about 175–195 words)
+### The shape (45 s, about 130–150 words; a guide, not a cage)
 1. **0–3 s:** the title question, plus 2–4 words that raise it.
-2. **3–15 s:** two or three fast, funny, picturable wins.
-3. **15–25 s:** "But then..." Something goes wrong that we can't explain yet.
-4. **25–40 s:** the reveal (real science, everyday comparison) and why it gets worse.
-5. **40–55 s:** the climax choice (a person they love vs. what they want), told in short, heavy lines.
-6. **55–60 s:** the debate question.
+2. **3–12 s:** two fast, funny, picturable wins.
+3. **12–20 s:** "But then..." Something goes wrong that we can't explain yet.
+4. **20–32 s:** the reveal (real science, everyday comparison).
+5. **32–42 s:** the climax, in short, heavy lines.
+6. **42–45 s:** the debate question.
+
+Break the shape whenever a different order tells the story better (start mid-disaster, end on a twist fact). What matters is the hook, the clarity and the payoff, not the template.
+
+### Clarity guards (the Zack D. Films test)
+- **One picture per sentence.** If a sentence can't be drawn as one clear image, rewrite it.
+- **Words a 12-year-old uses.** No jargon unless you explain it in the same breath.
+- **Sentences you can follow by ear:** mostly under 20 words. One idea each.
+- **No jumps without a bridge.** A new person is introduced by who they are ("your little brother"), a new place or time gets a few words ("At the school race..."), and nothing contradicts an earlier line (no getting disqualified and then racing in the final).
+- **Cause and effect, not lists.** Each line happens *because of* the one before.
+- **Cut ruthlessly.** If a line can go without losing the story, it goes.
 
 ### The loop check (do this every time)
 Read the last line, then the first line, out loud as if they were one moment. They must flow with **no change of person, object or place**. If the ending reuses an action from the opening, it must be **the same person doing it with the same object** (a friend in the opening means the same friend in the ending, not a brother). Ending on the debate question and opening on the title question is the simplest loop that always works.

@@ -2,7 +2,7 @@
 
 This file is the complete instruction for the daily scheduled run. Nobody is watching: don't ask questions, don't wait for approval. Make the most reasonable call, keep going, and report at the end.
 
-Each run does two things:
+Two runs happen every day at different times (see the scheduled tasks). Each run does two things:
 1. **Makes one new Short** (idea → script → voice → video) and commits it to this repo.
 2. **Publishes one Short per platform**: the oldest episode not yet posted there, to the New Stat Unlocked YouTube channel and Facebook page through Zernio.
 
@@ -31,15 +31,16 @@ Read `episodes.json` (it replaces WRITING.md's ALREADY MADE list). It's a list o
 
 - Next episode number = highest `ep` in `episodes.json` + 1.
 - Open `ideas.json`. Take the **first idea with `"status": "planned"`** (they're in a deliberate order that mixes body, senses and brain abilities). Mark it `"status": "used"` and add `"ep": NN`.
-- The idea gives you the hook, the rule (the limit that makes the ability backfire), escalation beats, the climax choice, the ending and the loop, plus real facts. Treat it as a strong first draft: keep its core, improve anything that's weak, and only state facts you're confident are true. Drop any fact you're not sure of.
+- Ideas come in two formats (older ones list hook/rule/beats/climax; newer ones list opening/early_wins/mystery_and_reveal/climax). Either way, it gives you the hook, the rule (the limit that makes the ability backfire), escalation beats, the climax choice, the ending and the loop, plus real facts. Treat it as a strong first draft: keep its core, improve anything that's weak, and only state facts you're confident are true. Drop any fact you're not sure of.
 - If there are no planned ideas left, invent one following WRITING.md MODE 1, using an ability not already in `episodes.json`. Then add 10 new planned ideas to `ideas.json` in the same format, so tomorrow's run has a queue again.
 
-## 2. Write the script
+## 2. Write the script (writer + one critic)
 
-- Follow WRITING.md MODE 2 and the VIRAL & RETENTION RULES exactly. Length 60 s (175–195 words). Do the loop check out loud.
-- Run the silent self-check, especially: **standalone** (a stranger understands everything), **flows like one story told out loud**, no catchphrases, every side character introduced by relationship, at least 3 real facts, nothing invented.
-- Rewrite it once more with fresh eyes before moving on. The script is what decides whether people keep watching.
-- Save `$R/episodes/epNN/script.md` with the full MODE 2 output block (title, script, HUD plan, facts, loop check).
+1. **Write it.** Follow WRITING.md MODE 2, the clarity guards and the VIRAL & RETENTION RULES. Default 45 s (130–150 words). The idea from `ideas.json` is a starting point, not a cage: keep what's strong, change what isn't.
+2. **One critic pass.** Launch exactly **one** subagent with the Agent tool, `model: "sonnet"`, and a prompt containing the full text of `CRITIC.md` plus the script (and nothing about how you wrote it). This keeps usage low: never more than one critic per episode.
+3. **If the verdict is REVISE:** fix every TOP FIX yourself in one rewrite, then do the loop check and word count again. Don't call the critic a second time; move on.
+4. **If PASS:** keep the script as is (apply any small fixes that are obviously right).
+5. Save `$R/episodes/epNN/script.md` with the final script, the HUD plan, the facts and the critic's verdict and scores (so we can learn later which scores predict views).
 
 ## 3. Build and render the video
 
@@ -57,7 +58,7 @@ mkdir -p $E
 2. **Voice.** Read `$R/studio.json`.
    - If `"voice": "elevenlabs"`: write `$E/voice_request.json` = `{"text": <the script with 3–6 Eleven v4 audio tags like [excited] [whispers] [deadpan], words unchanged>, "voice_id": <elevenlabs_voice_id>, "model_id": <elevenlabs_model>}`. Commit and push just that file. A GitHub workflow voices it and commits `voiceover.mp3` + `voiceover_alignment.json` into `$E`. Poll every 20 s for up to 10 minutes (`git fetch origin main` then `git show FETCH_HEAD:episodes/epNN/voiceover.mp3` or `voice_error.txt`), then `git pull --rebase origin main`. Set `"voiceover": "voiceover.mp3"`. If you get `voice_error.txt` or a timeout, fall back to Kokoro below and report the error.
    - If `"voice": "kokoro"` (or as a fallback): set `"voiceover": "voiceover.wav"`, `"tts_voice"`/`"tts_speed"` from studio.json, and run `python3 $R/engine/nsu_voice.py $E`.
-   - Target 55–66 s. If Kokoro comes out longer, raise `tts_speed` (max 1.2); if it's under 52 s, lower it.
+   - Target 40–52 s. If Kokoro comes out longer, raise `tts_speed` (max 1.2) or trim a line; if it's under 38 s, lower it.
 3. Preview: `python3 $R/engine/nsu_render.py $E --preview`, then open `$E/out/preview_sheet.jpg` and look at it. Fix faces hidden by the HUD or captions, faces in the bottom 20% or at the right edge, floating characters and unreadable props, then preview again.
 4. Render: `python3 $R/engine/nsu_render.py $E`. On an error, read it, fix `episode.json` and rerun (up to 3 attempts). "phrase not found" means an anchor isn't in the script.
 5. Check: pull 4 frames from `$E/out/epNN.mp4` with ffmpeg (around the stat card, the warning card, the choice, and the last second) and look at them. Re-render if something is clearly broken.
