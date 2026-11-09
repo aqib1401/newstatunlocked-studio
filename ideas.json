@@ -24,7 +24,7 @@
  },
  {
   "id": 31,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Never Blinked Again?",
   "ability": "blinking",
   "category": "senses",
@@ -36,7 +36,8 @@
   "facts": [
    "Most people blink around 15 to 20 times a minute",
    "The brain hides blinks so the world doesn't seem to flicker"
-  ]
+  ],
+  "ep": 3
  },
  {
   "id": 2,

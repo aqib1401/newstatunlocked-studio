@@ -1,0 +1,789 @@
+{
+ "ep": 3,
+ "title": "What If You Never Blinked Again?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "music": "auto",
+ "thumbnail": "You win every staring contest",
+ "script": "What if you never blinked again? Not once. Not ever. You win every staring contest, and your friend Leo gives up in four seconds. You even stare down the class goldfish, and it's a tie. But soon, everything goes blurry, and your eyes feel full of sand. Because every blink was doing a secret job. Each one wipes fresh tears across your eyes, like a windshield wiper. The clear front of your eye has no blood vessels. It gets its oxygen from the air, through that thin layer of tears. Without blinking, that layer dries up, and it stings. So every few minutes, you hold your eyelids shut with your fingers, just to see again. That night is your little brother Sam's school play. Your eyes are burning, but if you close them now, you'll miss his one line. You keep them open. Would you give up blinking forever? Yes or no?",
+ "highlights": {
+  "never blinked": "green",
+  "it's a tie": "green",
+  "blurry": "amber",
+  "full of sand": "amber",
+  "secret job": "green",
+  "windshield wiper": "green",
+  "no blood vessels": "green",
+  "it stings": "amber",
+  "one line": "green",
+  "keep them open": "green",
+  "Yes or no": "green"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if you never",
+   "until": "You win every",
+   "name": "BLINKING",
+   "mult": "×0",
+   "tag": "0 / MIN"
+  },
+  {
+   "type": "warn",
+   "at": "But soon",
+   "until": "Because every blink",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Eyes drying out."
+  },
+  {
+   "type": "note",
+   "at": "The clear front",
+   "until": "So every few",
+   "label": "REAL SCIENCE",
+   "text": "The front of your eye has no blood vessels. It gets oxygen from the air."
+  },
+  {
+   "type": "choice",
+   "at": "Your eyes are burning",
+   "pick_at": "You keep them open",
+   "until": "Would you give up",
+   "a": "Rest your eyes",
+   "b": "Sam's one line",
+   "pick": "b"
+  },
+  {
+   "type": "level",
+   "at": "Would you give up",
+   "label": "WOULD YOU TAKE IT?",
+   "text": "COMMENT: YES OR NO"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": 0.15,
+       "pose": "point",
+       "face": "focused",
+       "dur": 0.15
+      },
+      {
+       "at": "Not once",
+       "pose": "shrug",
+       "face": "smug",
+       "dur": 0.2
+      },
+      {
+       "at": "Not ever",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "eye",
+     "x": 390,
+     "y": 560,
+     "scale": 0.2,
+     "opacity": 0,
+     "front": true,
+     "svg": "<ellipse cx='0' cy='0' rx='62' ry='38' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='0' cy='0' r='24' fill='#4DA3FF' stroke='#141218' stroke-width='3'/><circle cx='0' cy='0' r='11' fill='#141218'/><circle cx='-7' cy='-8' r='5' fill='#FFFFFF'/>",
+     "keys": [
+      {
+       "at": 0.05,
+       "scale": 1.5,
+       "opacity": 1,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      },
+      {
+       "at": "Not ever",
+       "rot": 8,
+       "dur": 0.2
+      },
+      {
+       "at": "Not ever+0.3",
+       "rot": 0,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You win every",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='130' y='700' width='280' height='14' rx='5' fill='#6B4A3A'/><rect x='146' y='714' width='10' height='88' fill='#4A3329'/><rect x='384' y='714' width='10' height='88' fill='#4A3329'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "focused",
+     "look": 1
+    },
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 380,
+     "y": 812,
+     "scale": 1.15,
+     "flip": true,
+     "pose": "idle",
+     "face": "determined",
+     "look": 1,
+     "keys": [
+      {
+       "at": "gives up",
+       "pose": "facepalm",
+       "face": "bored",
+       "dur": 0.15,
+       "sfx": "boing"
+      },
+      {
+       "at": "four seconds",
+       "pose": "slump",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "You even stare",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='240' y='696' width='260' height='14' rx='5' fill='#6B4A3A'/><rect x='256' y='710' width='10' height='92' fill='#4A3329'/><rect x='474' y='710' width='10' height='92' fill='#4A3329'/><ellipse cx='370' cy='640' rx='62' ry='56' fill='#BFE3F2' opacity='.55' stroke='#141218' stroke-width='3'/><rect x='330' y='584' width='80' height='10' rx='4' fill='#BFE3F2' stroke='#141218' stroke-width='3'/><path d='M312 672 Q370 700 428 672 L420 688 Q370 704 320 688 Z' fill='#E8C48A'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 190,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "focused",
+     "look": 1,
+     "keys": [
+      {
+       "at": "stare down",
+       "x": 220,
+       "pose": "point",
+       "dur": 0.4
+      },
+      {
+       "at": "it's a tie",
+       "pose": "shrug",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fish",
+     "x": 350,
+     "y": 640,
+     "front": true,
+     "svg": "<path d='M-16 0 Q-4 -12 12 -2 Q16 0 12 2 Q-4 12 -16 0 Z' fill='#FF9A3C' stroke='#141218' stroke-width='2'/><path d='M-16 0 L-26 -9 L-24 0 L-26 9 Z' fill='#FF9A3C' stroke='#141218' stroke-width='2'/><circle cx='6' cy='-2' r='3' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "stare down",
+       "x": 395,
+       "dur": 0.8
+      },
+      {
+       "at": "class goldfish",
+       "x": 372,
+       "dur": 0.5,
+       "rot": 0
+      },
+      {
+       "at": "it's a tie",
+       "scale": 1.25,
+       "dur": 0.2,
+       "ease": "back",
+       "sfx": "ding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But soon",
+   "bg": "cool_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "goes blurry",
+       "face": "worried",
+       "pose": "think",
+       "dur": 0.25
+      },
+      {
+       "at": "full of sand",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.15,
+       "sfx": "glitch"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sand1",
+     "x": 300,
+     "y": 560,
+     "opacity": 0,
+     "front": true,
+     "svg": "<circle cx='-10' cy='0' r='4' fill='#E8C48A'/><circle cx='6' cy='-6' r='3' fill='#E8C48A'/><circle cx='12' cy='8' r='4' fill='#D9A866'/><circle cx='-2' cy='10' r='3' fill='#D9A866'/>",
+     "keys": [
+      {
+       "at": "full of sand",
+       "opacity": 1,
+       "scale": 1.6,
+       "dur": 0.2
+      },
+      {
+       "at": "full of sand+0.6",
+       "y": 600,
+       "rot": 40,
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "sand2",
+     "x": 170,
+     "y": 570,
+     "opacity": 0,
+     "front": true,
+     "svg": "<circle cx='-10' cy='0' r='4' fill='#E8C48A'/><circle cx='6' cy='-6' r='3' fill='#E8C48A'/><circle cx='12' cy='8' r='4' fill='#D9A866'/><circle cx='-2' cy='10' r='3' fill='#D9A866'/>",
+     "keys": [
+      {
+       "at": "full of sand+0.1",
+       "opacity": 1,
+       "scale": 1.4,
+       "dur": 0.2
+      },
+      {
+       "at": "full of sand+0.7",
+       "y": 610,
+       "rot": -30,
+       "dur": 0.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Because every blink",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "think",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "windshield wiper",
+       "pose": "point",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bigeye",
+     "x": 340,
+     "y": 560,
+     "scale": 1.7,
+     "opacity": 1,
+     "front": true,
+     "svg": "<ellipse cx='0' cy='0' rx='62' ry='38' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='0' cy='0' r='24' fill='#4DA3FF' stroke='#141218' stroke-width='3'/><circle cx='0' cy='0' r='11' fill='#141218'/><circle cx='-7' cy='-8' r='5' fill='#FFFFFF'/>",
+     "keys": []
+    },
+    {
+     "id": "wiper",
+     "x": 340,
+     "y": 625,
+     "rot": -60,
+     "front": true,
+     "scale": 1.6,
+     "svg": "<rect x='-4' y='-70' width='8' height='70' rx='4' fill='#2A2733' stroke='#C8FF4D' stroke-width='2'/><rect x='-7' y='-70' width='14' height='26' rx='4' fill='#4DA3FF' opacity='.8'/>",
+     "keys": [
+      {
+       "at": "Each one wipes",
+       "rot": 60,
+       "dur": 0.45,
+       "sfx": "swish"
+      },
+      {
+       "at": "Each one wipes+0.5",
+       "rot": -60,
+       "dur": 0.45
+      },
+      {
+       "at": "windshield wiper",
+       "rot": 60,
+       "dur": 0.45,
+       "sfx": "swish"
+      },
+      {
+       "at": "windshield wiper+0.5",
+       "rot": -60,
+       "dur": 0.45
+      }
+     ]
+    },
+    {
+     "id": "drop",
+     "x": 300,
+     "y": 470,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M0 -14 Q10 0 8 6 Q6 14 0 14 Q-6 14 -8 6 Q-10 0 0 -14 Z' fill='#7FD4FF' stroke='#141218' stroke-width='2'/>",
+     "keys": [
+      {
+       "at": "fresh tears",
+       "opacity": 1,
+       "y": 520,
+       "dur": 0.4,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The clear front",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "no blood vessels",
+       "face": "shocked",
+       "pose": "shrug",
+       "dur": 0.15
+      },
+      {
+       "at": "gets its oxygen",
+       "face": "focused",
+       "pose": "think",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bigeye2",
+     "x": 340,
+     "y": 560,
+     "scale": 1.7,
+     "opacity": 1,
+     "front": true,
+     "svg": "<ellipse cx='0' cy='0' rx='62' ry='38' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='0' cy='0' r='24' fill='#4DA3FF' stroke='#141218' stroke-width='3'/><circle cx='0' cy='0' r='11' fill='#141218'/><circle cx='-7' cy='-8' r='5' fill='#FFFFFF'/>",
+     "keys": []
+    },
+    {
+     "id": "o2a",
+     "x": 300,
+     "y": 470,
+     "opacity": 0,
+     "front": true,
+     "svg": "<circle cx='0' cy='0' r='16' fill='#BFE3F2' stroke='#141218' stroke-width='2'/><text x='0' y='6' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='15' fill='#141218'>O₂</text>",
+     "keys": [
+      {
+       "at": "gets its oxygen",
+       "opacity": 1,
+       "dur": 0.2
+      },
+      {
+       "at": "from the air",
+       "x": 320,
+       "y": 530,
+       "opacity": 0.2,
+       "dur": 1.0
+      }
+     ]
+    },
+    {
+     "id": "o2b",
+     "x": 400,
+     "y": 460,
+     "opacity": 0,
+     "front": true,
+     "svg": "<circle cx='0' cy='0' r='16' fill='#BFE3F2' stroke='#141218' stroke-width='2'/><text x='0' y='6' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='15' fill='#141218'>O₂</text>",
+     "keys": [
+      {
+       "at": "gets its oxygen+0.3",
+       "opacity": 1,
+       "dur": 0.2
+      },
+      {
+       "at": "from the air+0.3",
+       "x": 370,
+       "y": 535,
+       "opacity": 0.2,
+       "dur": 1.0
+      }
+     ]
+    },
+    {
+     "id": "o2c",
+     "x": 450,
+     "y": 520,
+     "opacity": 0,
+     "front": true,
+     "svg": "<circle cx='0' cy='0' r='16' fill='#BFE3F2' stroke='#141218' stroke-width='2'/><text x='0' y='6' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='15' fill='#141218'>O₂</text>",
+     "keys": [
+      {
+       "at": "thin layer",
+       "opacity": 1,
+       "dur": 0.2
+      },
+      {
+       "at": "thin layer+0.3",
+       "x": 395,
+       "y": 555,
+       "opacity": 0.2,
+       "dur": 0.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Without blinking",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "it stings",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.15,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "eyeok",
+     "x": 340,
+     "y": 560,
+     "scale": 1.7,
+     "opacity": 1,
+     "front": true,
+     "svg": "<ellipse cx='0' cy='0' rx='62' ry='38' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='0' cy='0' r='24' fill='#4DA3FF' stroke='#141218' stroke-width='3'/><circle cx='0' cy='0' r='11' fill='#141218'/><circle cx='-7' cy='-8' r='5' fill='#FFFFFF'/>",
+     "keys": [
+      {
+       "at": "dries up",
+       "opacity": 0,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "eyered",
+     "x": 340,
+     "y": 560,
+     "scale": 1.7,
+     "opacity": 0,
+     "front": true,
+     "svg": "<ellipse cx='0' cy='0' rx='62' ry='38' fill='#FFD9D9' stroke='#141218' stroke-width='4'/><path d='M-55 -6 L-34 -2 L-26 6 M52 -8 L36 0 L30 10 M-40 20 L-28 12' stroke='#E0524F' stroke-width='3' fill='none'/><circle cx='0' cy='0' r='24' fill='#4DA3FF' stroke='#141218' stroke-width='3'/><circle cx='0' cy='0' r='11' fill='#141218'/><circle cx='-7' cy='-8' r='5' fill='#FFFFFF'/>",
+     "keys": [
+      {
+       "at": "dries up",
+       "opacity": 1,
+       "dur": 0.4
+      },
+      {
+       "at": "it stings",
+       "rot": -5,
+       "dur": 0.08
+      },
+      {
+       "at": "it stings+0.1",
+       "rot": 5,
+       "dur": 0.08
+      },
+      {
+       "at": "it stings+0.2",
+       "rot": 0,
+       "dur": 0.08
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So every few",
+   "bg": "warm_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "tired",
+     "face": "sad",
+     "look": 0,
+     "keys": [
+      {
+       "at": "you hold your eyelids",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.2
+      },
+      {
+       "at": "just to see again",
+       "pose": "idle",
+       "face": "happy",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "That night",
+   "bg": "warm_interior",
+   "camera": "pan_right",
+   "props": "<rect x='0' y='440' width='70' height='300' fill='#9E2F3A' stroke='#141218' stroke-width='3'/><rect x='470' y='440' width='70' height='300' fill='#9E2F3A' stroke='#141218' stroke-width='3'/><rect x='0' y='430' width='540' height='26' fill='#7A1F2B' stroke='#141218' stroke-width='3'/><rect x='170' y='690' width='370' height='26' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><path d='M300 450 L250 690 L470 690 L420 450 Z' fill='#FFE9A8' opacity='.18'/><rect x='70' y='740' width='90' height='10' rx='3' fill='#4A3329'/><rect x='74' y='750' width='8' height='60' fill='#4A3329'/><rect x='148' y='750' width='8' height='60' fill='#4A3329'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 340,
+     "y": 690,
+     "scale": 0.95,
+     "flip": true,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "school play",
+       "pose": "wave",
+       "dur": 0.25
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 115,
+     "y": 812,
+     "scale": 1.05,
+     "pose": "sit",
+     "face": "happy",
+     "look": 1,
+     "keys": [
+      {
+       "at": "school play",
+       "pose": "wave",
+       "face": "happy",
+       "dur": 0.25
+      },
+      {
+       "at": "school play+0.8",
+       "pose": "sit",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Your eyes are burning",
+   "bg": "warm_interior",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='0' y='440' width='70' height='300' fill='#9E2F3A' stroke='#141218' stroke-width='3'/><rect x='470' y='440' width='70' height='300' fill='#9E2F3A' stroke='#141218' stroke-width='3'/><rect x='0' y='430' width='540' height='26' fill='#7A1F2B' stroke='#141218' stroke-width='3'/><rect x='170' y='690' width='370' height='26' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><path d='M300 450 L250 690 L470 690 L420 450 Z' fill='#FFE9A8' opacity='.18'/><rect x='70' y='740' width='90' height='10' rx='3' fill='#4A3329'/><rect x='74' y='750' width='8' height='60' fill='#4A3329'/><rect x='148' y='750' width='8' height='60' fill='#4A3329'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 340,
+     "y": 690,
+     "scale": 0.95,
+     "flip": true,
+     "pose": "idle",
+     "face": "worried"
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 115,
+     "y": 812,
+     "scale": 1.05,
+     "pose": "sit",
+     "face": "sad",
+     "look": 1,
+     "keys": [
+      {
+       "at": "if you close them",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "his one line",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "You keep them open",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='0' y='440' width='70' height='300' fill='#9E2F3A' stroke='#141218' stroke-width='3'/><rect x='470' y='440' width='70' height='300' fill='#9E2F3A' stroke='#141218' stroke-width='3'/><rect x='0' y='430' width='540' height='26' fill='#7A1F2B' stroke='#141218' stroke-width='3'/><rect x='170' y='690' width='370' height='26' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><path d='M300 450 L250 690 L470 690 L420 450 Z' fill='#FFE9A8' opacity='.18'/><rect x='70' y='740' width='90' height='10' rx='3' fill='#4A3329'/><rect x='74' y='750' width='8' height='60' fill='#4A3329'/><rect x='148' y='750' width='8' height='60' fill='#4A3329'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 340,
+     "y": 690,
+     "scale": 0.95,
+     "flip": true,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "You keep them+0.2",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2,
+       "sfx": "crowd"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 115,
+     "y": 812,
+     "scale": 1.05,
+     "pose": "sit",
+     "face": "determined",
+     "look": 1,
+     "keys": [
+      {
+       "at": "keep them open",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.25
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Would you give up",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": "Yes or no",
+       "pose": "point",
+       "face": "smug",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "eyeend",
+     "x": 390,
+     "y": 560,
+     "scale": 1.5,
+     "opacity": 1,
+     "front": true,
+     "svg": "<ellipse cx='0' cy='0' rx='62' ry='38' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='0' cy='0' r='24' fill='#4DA3FF' stroke='#141218' stroke-width='3'/><circle cx='0' cy='0' r='11' fill='#141218'/><circle cx='-7' cy='-8' r='5' fill='#FFFFFF'/>",
+     "keys": []
+    }
+   ]
+  }
+ ]
+}
