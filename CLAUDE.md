@@ -7,4 +7,4 @@ This repo produces and publishes the YouTube Shorts channel New Stat Unlocked (@
 - Render engine and how to direct a video: `engine/ENGINE_GUIDE.md`.
 - State of every episode: `episodes.json`.
 
-Never post to any YouTube account other than New Stat Unlocked.
+Never post to any YouTube channel or Facebook page other than New Stat Unlocked.

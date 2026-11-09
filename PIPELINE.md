@@ -4,7 +4,7 @@ This file is the complete instruction for the daily scheduled run. Nobody is wat
 
 Each run does two things:
 1. **Makes one new Short** (idea → script → voice → video) and commits it to this repo.
-2. **Publishes exactly one Short**: the oldest episode that's rendered but not yet posted, to the New Stat Unlocked YouTube channel through Zernio.
+2. **Publishes one Short per platform**: the oldest episode not yet posted there, to the New Stat Unlocked YouTube channel and Facebook page through Zernio.
 
 There's normally a one-video buffer: today's run publishes yesterday's video and renders tomorrow's. If a render fails, the channel still posts that day.
 
@@ -24,7 +24,7 @@ Read these before doing anything else: `WRITING.md` (channel rules, MODE 1, MODE
 
 Read `episodes.json` (it replaces WRITING.md's ALREADY MADE list). It's a list of every episode:
 ```json
-{"ep": 1, "title": "...", "ability": "reaction time", "status": "rendered" | "posted", "video": "videos/ep01.mp4", "rendered_at": "...", "posted_at": null, "zernio_post": null}
+{"ep": 1, "title": "...", "ability": "reaction time", "status": "rendered" | "posted", "video": "videos/ep01.mp4", "rendered_at": "...", "posted": {"youtube": null, "facebook": null}}
 ```
 
 ## 1. Pick today's idea
@@ -67,7 +67,7 @@ mkdir -p $E
    ```
    If `videos/epNN.mp4` is over 40 MB, re-encode it with `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset veryfast -c:a copy out.mp4`.
 7. Write `$E/upload.md` with the MODE 5 upload pack (title, description, hashtags, tags, pinned comment).
-8. Add the episode to `episodes.json` with `"status": "rendered"`.
+8. Add the episode to `episodes.json` with `"status": "rendered"` and `"posted": {"youtube": null, "facebook": null}`.
 9. Commit and push:
    ```bash
    cd $R && git add -A && git commit -m "EP NN: <title>" && git push origin HEAD:main || (git fetch origin main && git rebase origin/main && git push origin HEAD:main)
@@ -75,29 +75,33 @@ mkdir -p $E
 
 If the episode can't be rendered after 3 attempts, don't commit a broken episode. Skip to step 4 (publishing still happens) and report the failure.
 
-## 4. Publish one Short
+## 4. Publish (YouTube + Facebook)
 
-1. Find the target account: call Zernio `accounts_list` with `platform: "youtube"`. The target is the account whose username or display name, lowercased with spaces removed, contains `newstatunlocked`.
-   - **If no such account exists, do NOT post anything.** Never post to any other account (for example `dailystickchaos`), even if it's the only YouTube account. Report "New Stat Unlocked isn't connected in Zernio yet" and finish.
-2. Pick the episode to post: the lowest `ep` in `episodes.json` with `"status": "rendered"`. If there isn't one, finish.
+Each run publishes at most **one video per platform**. The platforms are independent: if one isn't connected or fails, still do the other.
+
+1. **Find the target accounts.** Call Zernio `accounts_list` with `platform: "youtube"`, then again with `platform: "facebook"`. On each platform the target is the account whose username or display name, lowercased with spaces removed, contains `newstatunlocked`.
+   - **If a platform has no such account, skip that platform.** Never post to any other account or page (for example `dailystickchaos`), even if it's the only one on that platform.
+2. **Pick the episode for each platform:** the lowest `ep` in `episodes.json` that has a rendered video and isn't yet posted on that platform (`posted.youtube` / `posted.facebook` is null).
 3. Its public video URL is `https://raw.githubusercontent.com/aqib1401/newstatunlocked-studio/main/videos/epNN.mp4`. Check it with `curl -sI <url>` (expect 200). Right after a push it can take a minute; retry every 20 s for up to 5 minutes.
-4. Post it with Zernio `posts_create`:
-   - `platform: "youtube"`, `account_id`: the id from step 1
-   - `title`: the episode's title from its `upload.md`
-   - `content`: the description + a blank line + the hashtags from its `upload.md`
-   - `media_urls`: the raw URL
-   - `publish_now: true`
-5. If Zernio rejects the media or the post fails, retry once with the jsDelivr link instead (it serves the file as `video/mp4`): `https://cdn.jsdelivr.net/gh/aqib1401/newstatunlocked-studio@<commit sha that added the video>/videos/epNN.mp4` (get the sha with `git log -1 --format=%H -- videos/epNN.mp4`). If that fails too, leave the status as `rendered` (tomorrow's run tries again) and report Zernio's exact error.
-6. On success: set that episode's `"status": "posted"`, `"posted_at"` (ISO time) and `"zernio_post"` (the post id from the response), then commit and push (same command as above).
+4. **Post it** with Zernio `posts_create`, `publish_now: true`, the platform's `account_id`, and `media_urls`: the video URL.
+   - **YouTube:** `platform: "youtube"`, `title`: the title from the episode's `upload.md`, `content`: the description + a blank line + the hashtags.
+   - **Facebook:** `platform: "facebook"`, `content`: the title on the first line, a blank line, the description, then 3 hashtags at most (#whatif #newstatunlocked + one topic tag). Facebook posts vertical videos under 90 seconds as Reels.
+5. If Zernio rejects the media or the post fails, retry once with the jsDelivr link instead (it serves the file as `video/mp4`): `https://cdn.jsdelivr.net/gh/aqib1401/newstatunlocked-studio@<commit sha that added the video>/videos/epNN.mp4` (get the sha with `git log -1 --format=%H -- videos/epNN.mp4`). If that fails too, leave that platform unposted (tomorrow's run tries again) and report Zernio's exact error.
+6. **Record it:** in `episodes.json` set `posted.<platform>` to `{"at": "<ISO time>", "zernio_post": "<post id>"}`. Set `"status": "posted"` once every connected platform has it. Commit and push (same command as above).
+
+`episodes.json` entries look like this:
+```json
+{"ep": 1, "title": "...", "ability": "...", "status": "rendered", "video": "videos/ep01.mp4", "rendered_at": "...", "posted": {"youtube": null, "facebook": null}}
+```
 
 ## 5. Housekeeping
 
-- Delete `videos/epNN.mp4` files for episodes posted more than 7 days ago (`git rm`), commit and push. Keep `episodes/` folders forever.
+- Delete `videos/epNN.mp4` files for episodes posted on every connected platform more than 7 days ago (`git rm`), commit and push. Keep `episodes/` folders forever.
 - Never edit the `engine/` files during a daily run.
 
 ## 6. Report
 
 Finish with a short summary sent to the user (use SendUserMessage if it's available):
 - Rendered: EP NN, "<title>" (length), or the failure reason.
-- Published: EP NN, "<title>" → posted / not posted (why).
+- Published: per platform (YouTube, Facebook): EP NN, "<title>" → posted / skipped / failed (why).
 - Anything that needs the user's attention.
