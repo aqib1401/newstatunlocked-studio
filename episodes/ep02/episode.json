@@ -1,0 +1,605 @@
+{
+ "ep": 2,
+ "title": "What If You Were 10x Stronger?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_fenrir",
+ "tts_speed": 1.08,
+ "music": "auto",
+ "thumbnail": "the lid goes straight",
+ "script": "What if you were ten times stronger? Not gym strong. Ten times. On Monday morning you twist open a pickle jar, and the lid goes straight through the ceiling. By lunch you've carried your neighbor's piano up four flights of stairs, with one hand, while texting. Everyone at school wants to arm wrestle you, and nobody even comes close. But then something weird starts happening. Every time you go all out, something cracks. Not the table. You. First a finger, then a rib. Because here's what nobody tells you: your muscles were never the weak part. Your brain is quietly holding them back, right now, because at full power they're strong enough to break your own bones. That's why people can break bones during a seizure. And your muscles just got ten times stronger, while your bones stayed exactly the same. So you learn to live at ten percent. Soft handshakes. Careful hugs. Until the day a car rolls back onto your little brother's leg, and the only way to lift it is one hundred percent. You know exactly what it'll cost you. You lift it anyway. Would you still want this power? Yes or no?",
+ "highlights": {
+  "ten times stronger": "green",
+  "straight through the ceiling": "green",
+  "something cracks": "amber",
+  "Not the table": "amber",
+  "break your own bones": "amber",
+  "ten percent": "amber",
+  "one hundred percent": "green",
+  "lift it anyway": "green",
+  "Yes or no": "green"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if you were",
+   "until": "On Monday morning",
+   "name": "STRENGTH",
+   "mult": "×10",
+   "tag": "+900%"
+  },
+  {
+   "type": "warn",
+   "at": "Every time you go all out",
+   "until": "Because here's",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Muscles ×10. Bones ×1."
+  },
+  {
+   "type": "note",
+   "at": "That's why people",
+   "until": "So you learn",
+   "label": "REAL SCIENCE",
+   "text": "Muscle contractions during a seizure can be strong enough to break bones."
+  },
+  {
+   "type": "level",
+   "at": "So you learn",
+   "until": "Until the day",
+   "label": "POWER LIMITER",
+   "text": "SET TO 10%",
+   "color": "#FFB547"
+  },
+  {
+   "type": "choice",
+   "at": "You know exactly",
+   "pick_at": "You lift it anyway",
+   "until": "Would you still",
+   "a": "Your bones",
+   "b": "Your brother",
+   "pick": "b"
+  },
+  {
+   "type": "level",
+   "at": "Would you still",
+   "label": "WOULD YOU TAKE IT?",
+   "text": "COMMENT: YES OR NO"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 270,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "Not gym strong",
+       "pose": "shrug",
+       "face": "neutral",
+       "dur": 0.2
+      },
+      {
+       "at": "Ten times.",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "On Monday morning",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='70' y='652' width='400' height='16' rx='6' fill='#6B4A3A'/><rect x='110' y='668' width='12' height='122' fill='#4A3329'/><rect x='418' y='668' width='12' height='122' fill='#4A3329'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "the lid goes",
+       "face": "shocked",
+       "pose": "reach_up",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "jar",
+     "x": 300,
+     "y": 628,
+     "svg": "<rect x='-16' y='-22' width='32' height='40' rx='6' fill='#9BC46A' opacity='.9' stroke='#141218' stroke-width='2'/><ellipse cx='-6' cy='-2' rx='4' ry='9' fill='#6E9A43'/><ellipse cx='6' cy='4' rx='4' ry='8' fill='#6E9A43'/>"
+    },
+    {
+     "id": "lid",
+     "x": 300,
+     "y": 602,
+     "svg": "<rect x='-18' y='-6' width='36' height='10' rx='3' fill='#D9D3DD' stroke='#141218' stroke-width='2'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "twist open",
+       "rot": 40,
+       "dur": 0.4
+      },
+      {
+       "at": "the lid goes",
+       "y": -60,
+       "rot": 720,
+       "dur": 0.35,
+       "ease": "in",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "By lunch",
+   "bg": "day_park",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 830,
+     "scale": 1.25,
+     "pose": "reach_up",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "up four flights",
+       "x": 330,
+       "dur": 2.2,
+       "cycle": "walk"
+      },
+      {
+       "at": "while texting",
+       "cycle": null,
+       "pose": "reach_up",
+       "face": "bored"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "piano",
+     "attach": "hero.hand",
+     "x": 0,
+     "y": 0,
+     "dx": -20,
+     "dy": 10,
+     "svg": "<rect x='-55' y='-60' width='110' height='60' rx='4' fill='#1A1626' stroke='#F2C48D' stroke-width='2'/><rect x='-50' y='-14' width='100' height='12' fill='#F4F1FF'/><g stroke='#141218' stroke-width='1.5'><path d='M-40 -14 L-40 -2 M-30 -14 L-30 -2 M-20 -14 L-20 -2 M-10 -14 L-10 -2 M0 -14 L0 -2 M10 -14 L10 -2 M20 -14 L20 -2 M30 -14 L30 -2 M40 -14 L40 -2'/></g>",
+     "front": true
+    }
+   ]
+  },
+  {
+   "start": "Everyone at school",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='150' y='716' width='240' height='14' rx='5' fill='#6B4A3A'/><rect x='166' y='730' width='10' height='70' fill='#4A3329'/><rect x='364' y='730' width='10' height='70' fill='#4A3329'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 175,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "point",
+     "face": "bored"
+    },
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 370,
+     "y": 812,
+     "scale": 1.1,
+     "flip": true,
+     "pose": "point",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "nobody even comes close",
+       "pose": "fall",
+       "face": "shocked",
+       "rot": -25,
+       "x": 420,
+       "dur": 0.2,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "But then something weird",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "hold",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "something cracks",
+       "face": "worried"
+      },
+      {
+       "at": "Not the table",
+       "face": "shocked",
+       "pose": "shrug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "crack",
+     "x": 330,
+     "y": 610,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M0 -22 L-6 -6 L4 0 L-4 16 L6 26' stroke='#FFB547' stroke-width='4' fill='none' stroke-linecap='round'/><path d='M4 0 L16 -6' stroke='#FFB547' stroke-width='3' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "something cracks",
+       "opacity": 1,
+       "scale": 1.6,
+       "dur": 0.1,
+       "sfx": "glitch"
+      },
+      {
+       "at": "First a finger",
+       "x": 290,
+       "y": 560,
+       "dur": 0.2,
+       "sfx": "click"
+      },
+      {
+       "at": "then a rib",
+       "x": 270,
+       "y": 640,
+       "dur": 0.2,
+       "sfx": "click"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Because here's what nobody",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "think",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "break your own bones",
+       "face": "worried"
+      },
+      {
+       "at": "And your muscles",
+       "pose": "shrug",
+       "face": "worried"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "brain",
+     "x": 360,
+     "y": 560,
+     "scale": 1.6,
+     "front": true,
+     "svg": "<path d='M-22 6 Q-30 -12 -14 -20 Q-6 -32 8 -24 Q26 -26 26 -8 Q34 8 18 16 Q6 26 -8 18 Q-24 22 -22 6 Z' fill='#FF9EC4' stroke='#141218' stroke-width='3'/><path d='M-10 -16 Q-2 -4 -12 6 M6 -18 Q14 -4 4 10' stroke='#141218' stroke-width='2' fill='none'/>",
+     "keys": [
+      {
+       "at": "holding them back",
+       "scale": 1.9,
+       "dur": 0.3,
+       "ease": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So you learn",
+   "bg": "warm_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "Soft handshakes",
+       "pose": "point",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Careful hugs",
+       "pose": "hug",
+       "face": "happy",
+       "x": 240,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 360,
+     "y": 812,
+     "scale": 1.15,
+     "flip": true,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "Soft handshakes",
+       "pose": "point",
+       "dur": 0.3
+      },
+      {
+       "at": "Careful hugs",
+       "pose": "hug",
+       "x": 320,
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Until the day",
+   "bg": "night_city",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 360,
+     "y": 812,
+     "scale": 1.0,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "rolls back",
+       "pose": "fall",
+       "face": "shocked",
+       "rot": -60,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 90,
+     "y": 815,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "rolls back",
+       "face": "shocked",
+       "look": 1
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "car",
+     "x": 520,
+     "y": 770,
+     "svg": "<path d='M-80 10 L-80 -12 Q-74 -22 -60 -24 L-40 -24 L-24 -46 L28 -46 L46 -24 L72 -22 Q82 -18 82 -6 L82 10 Z' fill='#C9584F' stroke='#141218' stroke-width='3'/><path d='M-18 -40 L-6 -40 L-6 -26 L-32 -26 Z M2 -40 L24 -40 L36 -26 L2 -26 Z' fill='#BFE3F2'/><circle cx='-48' cy='12' r='15' fill='#141218'/><circle cx='-48' cy='12' r='6' fill='#8C8A99'/><circle cx='50' cy='12' r='15' fill='#141218'/><circle cx='50' cy='12' r='6' fill='#8C8A99'/>",
+     "keys": [
+      {
+       "at": "rolls back",
+       "x": 400,
+       "dur": 1.0,
+       "ease": "out",
+       "sfx": "thud"
+      }
+     ],
+     "scale": 1.7
+    }
+   ]
+  },
+  {
+   "start": "and the only way",
+   "bg": "night_city",
+   "camera": "push",
+   "slowmo": true,
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 360,
+     "y": 812,
+     "scale": 1.0,
+     "pose": "lie",
+     "face": "worried",
+     "rot": -5
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 815,
+     "scale": 1.2,
+     "pose": "crouch",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "You know exactly",
+       "face": "determined"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "car",
+     "x": 400,
+     "y": 770,
+     "svg": "<path d='M-80 10 L-80 -12 Q-74 -22 -60 -24 L-40 -24 L-24 -46 L28 -46 L46 -24 L72 -22 Q82 -18 82 -6 L82 10 Z' fill='#C9584F' stroke='#141218' stroke-width='3'/><path d='M-18 -40 L-6 -40 L-6 -26 L-32 -26 Z M2 -40 L24 -40 L36 -26 L2 -26 Z' fill='#BFE3F2'/><circle cx='-48' cy='12' r='15' fill='#141218'/><circle cx='-48' cy='12' r='6' fill='#8C8A99'/><circle cx='50' cy='12' r='15' fill='#141218'/><circle cx='50' cy='12' r='6' fill='#8C8A99'/>",
+     "front": true,
+     "scale": 1.7
+    }
+   ]
+  },
+  {
+   "start": "You lift it anyway",
+   "bg": "night_city",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 360,
+     "y": 812,
+     "scale": 1.0,
+     "pose": "lie",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "lift it anyway+0.6",
+       "x": 200,
+       "dur": 0.6,
+       "pose": "idle",
+       "face": "happy",
+       "rot": 0
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 300,
+     "y": 815,
+     "scale": 1.2,
+     "pose": "crouch",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "lift it anyway",
+       "pose": "reach_up",
+       "dur": 0.25,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "car",
+     "x": 400,
+     "y": 770,
+     "svg": "<path d='M-80 10 L-80 -12 Q-74 -22 -60 -24 L-40 -24 L-24 -46 L28 -46 L46 -24 L72 -22 Q82 -18 82 -6 L82 10 Z' fill='#C9584F' stroke='#141218' stroke-width='3'/><path d='M-18 -40 L-6 -40 L-6 -26 L-32 -26 Z M2 -40 L24 -40 L36 -26 L2 -26 Z' fill='#BFE3F2'/><circle cx='-48' cy='12' r='15' fill='#141218'/><circle cx='-48' cy='12' r='6' fill='#8C8A99'/><circle cx='50' cy='12' r='15' fill='#141218'/><circle cx='50' cy='12' r='6' fill='#8C8A99'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "lift it anyway",
+       "y": 660,
+       "rot": -10,
+       "dur": 0.35,
+       "ease": "out"
+      }
+     ],
+     "scale": 1.7
+    },
+    {
+     "id": "crack2",
+     "x": 330,
+     "y": 660,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M0 -22 L-6 -6 L4 0 L-4 16 L6 26' stroke='#FFB547' stroke-width='4' fill='none' stroke-linecap='round'/><path d='M4 0 L16 -6' stroke='#FFB547' stroke-width='3' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "lift it anyway+0.25",
+       "opacity": 1,
+       "dur": 0.05,
+       "sfx": "click"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Would you still",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 840,
+     "scale": 1.35,
+     "pose": "hug",
+     "face": "happy"
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 330,
+     "y": 840,
+     "scale": 1.1,
+     "flip": true,
+     "pose": "hug",
+     "face": "happy"
+    }
+   ],
+   "objects": []
+  }
+ ]
+}

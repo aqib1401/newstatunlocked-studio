@@ -36,7 +36,7 @@ Read `episodes.json` (it replaces WRITING.md's ALREADY MADE list). It's a list o
 
 ## 2. Write the script
 
-- Follow WRITING.md MODE 2 and the VIRAL & RETENTION RULES exactly. Length 60 s (155–170 words).
+- Follow WRITING.md MODE 2 and the VIRAL & RETENTION RULES exactly. Length 60 s (175–195 words). Do the loop check out loud.
 - Run the silent self-check, especially: **standalone** (a stranger understands everything), **flows like one story told out loud**, no catchphrases, every side character introduced by relationship, at least 3 real facts, nothing invented.
 - Rewrite it once more with fresh eyes before moving on. The script is what decides whether people keep watching.
 - Save `$R/episodes/epNN/script.md` with the full MODE 2 output block (title, script, HUD plan, facts, loop check).
@@ -50,11 +50,14 @@ mkdir -p $E
 
 1. Write `$E/episode.json` following `engine/ENGINE_GUIDE.md` and `engine/example_ep01_episode.json`:
    - `"ep": NN`, `"script"`: the exact script, `"voiceover": "voiceover.wav"`, `"tts_voice": "af_heart"`, `"tts_speed": 1.05`.
-   - `hud` and `highlights` from the HUD PLAN. A new scene every 3–6 s, `lab` for the ability/number beats, real places for the story, `slowmo` for the choice.
+   - HUD, kept light: the stat card on the opening title question, optionally one `note` (REAL SCIENCE) at the reveal, the `choice` card at the climax, and a final `level` card on the debate question (label "WOULD YOU TAKE IT?", text "COMMENT: YES OR NO"). Use `warn`/`compare` only when they make a beat clearer. `highlights` from the HUD PLAN. A new scene every 3–6 s, `lab` for the ability/number beats, real places for the story, `slowmo` for the choice.
    - **Visual loop:** the last scene uses the same background, characters and positions as the first scene, so when the Short replays, the cut from last frame to first frame is invisible.
    - The first scene must have movement inside the first second (an object falling, a character reacting). No static opening frame.
    - Build clear, funny SVG props and objects for every beat. This is what makes the video watchable.
-2. Voice: `python3 $R/engine/nsu_voice.py $E`. Target 52–64 s. If it's longer, raise `tts_speed` (max 1.2) and rerun; if it's under 50 s, lower it (min 0.95).
+2. **Voice.** Read `$R/studio.json`.
+   - If `"voice": "elevenlabs"`: write `$E/voice_request.json` = `{"text": <the script with 3–6 Eleven v4 audio tags like [excited] [whispers] [deadpan], words unchanged>, "voice_id": <elevenlabs_voice_id>, "model_id": <elevenlabs_model>}`. Commit and push just that file. A GitHub workflow voices it and commits `voiceover.mp3` + `voiceover_alignment.json` into `$E`. Poll every 20 s for up to 10 minutes (`git fetch origin main` then `git show FETCH_HEAD:episodes/epNN/voiceover.mp3` or `voice_error.txt`), then `git pull --rebase origin main`. Set `"voiceover": "voiceover.mp3"`. If you get `voice_error.txt` or a timeout, fall back to Kokoro below and report the error.
+   - If `"voice": "kokoro"` (or as a fallback): set `"voiceover": "voiceover.wav"`, `"tts_voice"`/`"tts_speed"` from studio.json, and run `python3 $R/engine/nsu_voice.py $E`.
+   - Target 55–66 s. If Kokoro comes out longer, raise `tts_speed` (max 1.2); if it's under 52 s, lower it.
 3. Preview: `python3 $R/engine/nsu_render.py $E --preview`, then open `$E/out/preview_sheet.jpg` and look at it. Fix faces hidden by the HUD or captions, faces in the bottom 20% or at the right edge, floating characters and unreadable props, then preview again.
 4. Render: `python3 $R/engine/nsu_render.py $E`. On an error, read it, fix `episode.json` and rerun (up to 3 attempts). "phrase not found" means an anchor isn't in the script.
 5. Check: pull 4 frames from `$E/out/epNN.mp4` with ffmpeg (around the stat card, the warning card, the choice, and the last second) and look at them. Re-render if something is clearly broken.
@@ -63,7 +66,7 @@ mkdir -p $E
    mkdir -p $R/videos
    cp $E/out/epNN.mp4 $R/videos/epNN.mp4
    cp $E/out/epNN_thumb.jpg $E/thumb.jpg
-   rm -rf $E/out $E/voiceover.wav $E/voiceover_chunks.json
+   rm -rf $E/out $E/voiceover.wav $E/voiceover_groups.json $E/voiceover_chunks.json
    ```
    If `videos/epNN.mp4` is over 40 MB, re-encode it with `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset veryfast -c:a copy out.mp4`.
 7. Write `$E/upload.md` with the MODE 5 upload pack (title, description, hashtags, tags, pinned comment).
@@ -81,7 +84,7 @@ Each run publishes at most **one video per platform**. The platforms are indepen
 
 1. **Find the target accounts.** Call Zernio `accounts_list` with `platform: "youtube"`, then again with `platform: "facebook"`. On each platform the target is the account whose username or display name, lowercased with spaces removed, contains `newstatunlocked`.
    - **If a platform has no such account, skip that platform.** Never post to any other account or page (for example `dailystickchaos`), even if it's the only one on that platform.
-2. **Pick the episode for each platform:** the lowest `ep` in `episodes.json` that has a rendered video and isn't yet posted on that platform (`posted.youtube` / `posted.facebook` is null).
+2. **Pick the episode for each platform:** the lowest `ep` in `episodes.json` with `"status"` other than `"shelved"` that has a rendered video and isn't yet posted on that platform (`posted.youtube` / `posted.facebook` is null).
 3. Its public video URL is `https://raw.githubusercontent.com/aqib1401/newstatunlocked-studio/main/videos/epNN.mp4`. Check it with `curl -sI <url>` (expect 200). Right after a push it can take a minute; retry every 20 s for up to 5 minutes.
 4. **Post it** with Zernio `posts_create`, `publish_now: true`, the platform's `account_id`, and `media_urls`: the video URL.
    - **YouTube:** `platform: "youtube"`, `title`: the title from the episode's `upload.md`, `content`: the description + a blank line + the hashtags.

@@ -53,9 +53,8 @@ If my request conflicts with the style guide, follow my request for that video o
 Shorts live or die on two numbers: how many people stop scrolling, and how many watch to the end and replay. Everything below serves those two numbers.
 
 **The first 2 seconds (stop the scroll)**
-- Open on the strangest, most visual moment the ability creates, already happening. Something is moving in the very first frame.
-- The first sentence must create an instant question in the viewer's head ("wait, how?"). Never open with context, a definition, "What if", "Imagine", "Did you know" or the title.
-- Keep the first sentence under about 20 words so it lands before a thumb moves.
+- The first line is the title question, spoken, plus 2–4 words that raise it. Something is moving on screen in the very first frame.
+- The premise is clear in under 3 seconds. No context, no definitions, no "in this video".
 
 **The middle (stop the swipe)**
 - Plant an open loop early: hint that the ability will backfire ("Sounds amazing, right? Except...") so the viewer stays to see how.
@@ -68,9 +67,8 @@ Shorts live or die on two numbers: how many people stop scrolling, and how many 
 - The limit from the start is exactly what makes the choice hard.
 
 **The ending (make them replay)**
-- **Loop rule:** the last sentence must lead straight back into the first sentence, so the replay feels like one continuous story and many viewers don't notice it restarted. Read the last line and then the first line out loud: they should flow like the next moment of the same scene.
-- End on a warm or funny final image, never a summary or a moral spelled out.
-- Never end with a call to action. No "like and subscribe", no "comment below", no "follow for more" in the narration. Spoken asks kill completion rate; the loop does the work. Engagement asks go in the pinned comment only.
+- **Loop rule:** the last line must flow straight back into the first line (see The loop check: same person, same object, same place).
+- End on one short debate question tied to the story ("Would you take it? Yes or no?"). That's the only ask allowed: never "like and subscribe" or "follow for more".
 - Never tease another episode. Every Short is complete on its own.
 
 **Titles (stop the scroll in the feed)**
@@ -127,39 +125,41 @@ Intelligence, memory, attention, time perception, reaction speed, reflexes, visi
 I give you a title (or premise) and usually a length. You write a Short script that is impossible to scroll past, plus the HUD plan.
 
 ### Length: words by duration
-Scripts are read in a natural, conversational voice (ElevenLabs, voice Liam) at about 2.7 words per second. Hit the target within ±8 words and **count before you finish.**
+Narration runs about 3 words per second. Hit the target within ±8 words and **count before you finish.**
 
 | Length | Words |
 |---|---|
-| 45 s | 115–125 |
-| 60 s | 155–170 (default) |
-| 75 s | 195–210 |
-| 90 s | 235–250 |
+| 45 s | 130–145 |
+| 60 s | 175–195 (default) |
+| 75 s | 220–240 |
 
 ### How it should sound (the most important part)
-Write it like **a friend telling you a wild story**, out loud, in one breath. Not a list of facts. Not a trailer. Not a poem.
+Study of three Shorts that do well (one ability story, one mystery story, one science explainer) gave these rules:
 
-- **It flows.** Every sentence leads into the next with real connective tissue: "because", "so", "except", "which means", "and that's when", "but here's the thing". If you can shuffle two sentences without anyone noticing, the script is broken.
-- **Normal sentence lengths.** Mix them: some long and rolling (15–25 words), some short for punch (2–6 words). Never a run of fragments. No telegraph style ("Gun up. Then... Sam.").
-- **Talk to the viewer.** Second person, present tense, like you're in the room with them: "Sounds amazing, right?", "Here's where it gets weird."
-- **Use "..." sparingly.** At most 3 per script, only before the biggest payoffs.
-- **Science goes inside the story, not on top of it.** A fact earns its place by changing what happens next: "react in under a tenth of a second and they'll say you guessed", not "Fact: false starts are under 0.1 seconds."
-- **No catchphrases, slogans or game jargon in the narration.** Never say "new stat unlocked", "stat", "level up", "side effect detected". The game look lives in the visuals only; the voice sounds like a real person.
-- **One small joke or human moment** that feels natural (a friend's reaction, an ironic detail), never a forced pun.
-- **Open loops keep people watching:** hint early at the cost ("Except...") so the viewer stays to see how it backfires.
-- Warm, family-friendly. Real peril, no gore, no swearing.
+- **Say the question first.** The very first line is the title question, spoken: "What if you were ten times stronger?" Then 2–4 words that raise it: "Not gym strong. Ten times." / "Not a little. Not at all." The viewer knows the premise in under 3 seconds.
+- **One continuous story, told fast.** One voice telling one story from start to finish, about 3 words per second. Sentences run into each other with real links: "so", "but", "because", "until", "and that's when". Short punches ("Nothing.", "Not the table. You.") only land between longer sentences. Never a run of fragments.
+- **Concrete and a bit funny in the first 15 seconds:** fast, picturable wins ("the lid goes straight through the ceiling", "carried the piano upstairs with one hand, while texting").
+- **Then a mystery:** "But then something weird starts happening." Something goes wrong that the viewer can't explain yet. That gap keeps them watching.
+- **The reveal is real science, explained through something everyday:** "Think about the last time your phone slid off a table. You caught it before you even decided to." A fact earns its place by explaining the mystery, not by being listed.
+- **A gut-punch climax in very few words:** "You know exactly what it'll cost you. You lift it anyway."
+- **End on a question people will argue about:** "Would you still want this power? Yes or no?" One short question tied to the story. It drives comments, and because it's a question it flows back into the opening question when the video loops. Never "like and subscribe", never "follow for more".
+- "You" is the default hero. A named stand-in character ("Void wakes up on a bright Saturday...") is fine when it makes the twist hit harder.
+- Warm and family-friendly. Real peril, no gore, no swearing.
 
-### The shape (for 60 s, scale it for other lengths)
-1. **Hook (first 1–2 sentences):** drop us into the strangest moment the ability creates, mid-action. Never start with "What if", "Imagine", "Did you know" or "In this video".
-2. **The ability, plainly:** "Because today, your reaction time is ten times faster." Then the real human number vs yours, in one or two natural sentences.
-3. **The turn:** the one limit that makes it backfire ("Except only your brain got faster. Your body didn't.").
-4. **Two or three escalating moments** where the ability helps and hurts, each one bigger than the last, flowing into each other.
-5. **The climax:** something goes wrong, the limit matters, and it comes down to one choice (people vs glory). The hero picks people.
-6. **The ending:** one warm or funny final beat that flows back into the opening line, so the replay loops.
+### The shape (60 s, about 175–195 words)
+1. **0–3 s:** the title question, plus 2–4 words that raise it.
+2. **3–15 s:** two or three fast, funny, picturable wins.
+3. **15–25 s:** "But then..." Something goes wrong that we can't explain yet.
+4. **25–40 s:** the reveal (real science, everyday comparison) and why it gets worse.
+5. **40–55 s:** the climax choice (a person they love vs. what they want), told in short, heavy lines.
+6. **55–60 s:** the debate question.
 
-Here is the tone to match (EP01, approved). Don't copy it; match how it moves:
+### The loop check (do this every time)
+Read the last line, then the first line, out loud as if they were one moment. They must flow with **no change of person, object or place**. If the ending reuses an action from the opening, it must be **the same person doing it with the same object** (a friend in the opening means the same friend in the ending, not a brother). Ending on the debate question and opening on the title question is the simplest loop that always works.
 
-> Your friend knocks his coffee off the table, and your hand is already under it before it even starts to fall. Because today, your reaction time is ten times faster. A normal person needs about a quarter of a second to react. You need two and a half hundredths. Sounds amazing, right? Except only your brain got faster. Your body didn't. So when your best friend Leo pitches to you, the ball floats in like a balloon... and you still swing too late. Then comes the school race final. You're crouched at the start, holding yourself back, because if you react in under a tenth of a second, they'll say you guessed and disqualify you. And that's when you see your little brother Sam slipping off the railing. Your brain sees it instantly. Your legs are as slow as ever. The gold medal... or Sam. You run. You catch him. You finish dead last. And Sam just grins at you... right before he knocks his cup off the table.
+### Tone reference (EP02, approved style). Match how it moves; don't copy it.
+
+> What if you were ten times stronger? Not gym strong. Ten times. On Monday morning you twist open a pickle jar, and the lid goes straight through the ceiling. By lunch you've carried your neighbor's piano up four flights of stairs, with one hand, while texting. Everyone at school wants to arm wrestle you, and nobody even comes close. But then something weird starts happening. Every time you go all out, something cracks. Not the table. You. First a finger, then a rib. Because here's what nobody tells you: your muscles were never the weak part. Your brain is quietly holding them back, right now, because at full power they're strong enough to break your own bones. That's why people can break bones during a seizure. And your muscles just got ten times stronger, while your bones stayed exactly the same. So you learn to live at ten percent. Soft handshakes. Careful hugs. Until the day a car rolls back onto your little brother's leg, and the only way to lift it is one hundred percent. You know exactly what it'll cost you. You lift it anyway. Would you still want this power? Yes or no?
 
 ### Science and accuracy
 - At least three real, checkable facts for 60 s (four for 90 s).
@@ -203,7 +203,7 @@ LOOP CHECK: <last line> → <first line> (flows? yes/no)
 
 ### Silent self-check before output
 1. Would a stranger stop scrolling at the first line?
-2. Does it flow like one story told out loud, with no fragment runs, no catchphrases and at most 3 "..."?
+2. Does it open with the title question, flow like one fast story told out loud, and pass the loop check (same person, object, place)?
 2b. Standalone? Would a stranger who has never seen the channel understand every line, every character and the ending?
 3. Word count in range?
 4. One rule, and it decides the choice?

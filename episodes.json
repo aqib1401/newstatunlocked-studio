@@ -3,9 +3,22 @@
   "ep": 1,
   "title": "What If Your Reaction Time Was 10x Faster?",
   "ability": "reaction time",
-  "status": "rendered",
+  "status": "shelved",
   "video": "videos/ep01.mp4",
   "rendered_at": "2026-11-09T10:00:47Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  },
+  "note": "Old script style; replaced by the new style. Do not post."
+ },
+ {
+  "ep": 2,
+  "title": "What If You Were 10x Stronger?",
+  "ability": "strength",
+  "status": "rendered",
+  "video": "videos/ep02.mp4",
+  "rendered_at": "2026-11-09T17:45:53Z",
   "posted": {
    "youtube": null,
    "facebook": null

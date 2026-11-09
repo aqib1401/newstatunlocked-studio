@@ -165,18 +165,10 @@ Extra sounds go on actor or object keys (`"sfx": "thud"`) or in the top-level `s
 2. Check that nobody's face is hidden by the HUD or captions, nothing important is in the bottom 20% or at the right edge, characters stand on the floor, and props make sense.
 3. Fix `episode.json`, preview again if anything changed, then run the full render.
 
-## Free narrator voice (nsu_voice.py)
+## Voice
 
-If the user didn't upload a voiceover, generate one:
+Read `studio.json`. `"voice"` decides the narrator:
 
-```
-"voiceover": "voiceover.wav", "tts_voice": "af_heart", "tts_speed": 1.05     (in episode.json)
-python3 /home/claude/newstatunlocked-studio/engine/nsu_voice.py /home/claude/nsu/epNN
-```
+**`"kokoro"` (free, runs here):** set `"voiceover": "voiceover.wav"`, `"tts_voice"` and `"tts_speed"` from studio.json, then run `python3 /home/claude/newstatunlocked-studio/engine/nsu_voice.py EPISODE_DIR`. It voices whole sentences (natural intonation) and writes `voiceover_groups.json`, which the renderer uses for exact caption sync. Too long? Raise `tts_speed` (max 1.2).
 
-- Kokoro, open source (Apache-2.0), commercial use allowed. The model downloads once from GitHub (~350 MB).
-- It writes `voiceover.wav` and `voiceover_chunks.json` (exact phrase timings, which the renderer uses automatically for perfect caption sync).
-- Pauses come from punctuation: "..." = long beat, "." "?" "!" = sentence pause, "," = short pause. Write the script with that in mind.
-- Voices: `af_heart` (channel default, warm and clear), `am_michael` (male alternative). Keep the channel on one voice.
-- Too long? Raise `tts_speed` (1.05 → 1.15). Too rushed? Lower it to 1.0.
-- If the user uploads their own audio (e.g. ElevenLabs), skip this step. The renderer matches phrases to the audio's pauses on its own.
+**`"elevenlabs"` (paid, via GitHub Actions):** see PIPELINE.md step 3. The workflow writes `voiceover.mp3` plus `voiceover_alignment.json` (per-character timing) and the renderer uses it automatically for exact caption sync. The ElevenLabs text may contain v4 audio tags like `[excited]`; keep `"script"` in episode.json identical to the spoken words without the tags.

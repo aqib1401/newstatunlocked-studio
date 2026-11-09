@@ -140,13 +140,50 @@ def _spread(words, idxs, segs):
         words[i]["start"] = real(cum[k] + 1e-4)
         words[i]["end"] = real(cum[k + 1] - 1e-4)
 
-def align(script, voice, sr=SR, chunk_times=None):
+def align_from_chars(script, al):
+    """Word timings from ElevenLabs character alignment (with-timestamps endpoint)."""
+    words = tokenize(script)
+    chars = al.get("characters") or []
+    st = al.get("character_start_times_seconds") or []
+    en = al.get("character_end_times_seconds") or []
+    spoken, cur = [], None
+    for c, a, b in zip(chars, st, en):
+        if c.isspace():
+            if cur: spoken.append(cur); cur = None
+            continue
+        if cur is None: cur = {"raw": "", "start": a, "end": b}
+        cur["raw"] += c; cur["end"] = b
+    if cur: spoken.append(cur)
+    spoken = [w for w in spoken if re.sub(r"\[[^\]]*\]", "", w["raw"]).strip("[] ") and re.sub(r"[^a-z0-9']", "", w["raw"].lower())]
+    spoken = [w for w in spoken if not (w["raw"].startswith("[") or w["raw"].endswith("]"))]
+    if len(spoken) != len(words):
+        return None
+    for w, s_ in zip(words, spoken):
+        w["start"], w["end"] = s_["start"], s_["end"]
+    return words
+
+def align(script, voice, sr=SR, chunk_times=None, groups=None, char_alignment=None):
     """Word timings. Each punctuation-delimited phrase of the script is matched to a
     run of speech segments (dynamic programming on durations and pauses); words are
     then spread inside their phrase. If exact phrase times are known (free voice),
     they are used directly."""
-    words = tokenize(script)
     segs = speech_segments(voice, sr)
+    if char_alignment:
+        w = align_from_chars(script, char_alignment)
+        if w:
+            return w, segs
+        print("! character alignment did not match the script; falling back to audio matching")
+    words = tokenize(script)
+    if groups:
+        counts = [len(tokenize(g["text"])) for g in groups]
+        if sum(counts) == len(words):
+            i = 0
+            for g, n in zip(groups, counts):
+                inside = [(max(a, g["start"]), min(b, g["end"])) for a, b in segs if b > g["start"] and a < g["end"]]
+                _spread(words, list(range(i, i + n)), inside or [(g["start"], g["end"])])
+                i += n
+            return words, segs
+        print("! voice groups did not match the script; falling back to audio matching")
     chunks = _chunk_words(words)
     if chunk_times and len(chunk_times) == len(chunks):
         for idxs, (a, b) in zip(chunks, chunk_times):
@@ -603,11 +640,17 @@ def main():
     print(f"voiceover: {vpath.name}")
     voice = load_audio(vpath)
     dur = len(voice) / SR + float(ep.get("tail", 0.4))
-    ct = None
+    ct = gr = ca = None
     tfile = vpath.with_name(vpath.stem + "_chunks.json")
     if tfile.exists():
         ct = [tuple(x) for x in json.loads(tfile.read_text())]
-    words, segs = align(ep["script"], voice, chunk_times=ct)
+    gfile = vpath.with_name(vpath.stem + "_groups.json")
+    if gfile.exists():
+        gr = json.loads(gfile.read_text())
+    afile = vpath.with_name(vpath.stem + "_alignment.json")
+    if afile.exists():
+        ca = json.loads(afile.read_text())
+    words, segs = align(ep["script"], voice, chunk_times=ct, groups=gr, char_alignment=ca)
     plan = build_plan(ep, words, dur)
     caps = build_captions(words, ep.get("highlights"))
     (out / "timing.json").write_text(json.dumps([{"w": w["raw"], "s": round(w["start"], 2), "e": round(w["end"], 2)} for w in words], indent=0))
