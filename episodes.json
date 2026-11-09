@@ -3,12 +3,18 @@
   "ep": 1,
   "title": "What If Your Reaction Time Was 10x Faster?",
   "ability": "reaction time",
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep01.mp4",
   "rendered_at": "2026-11-09T17:58:31Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-09T17:58:53Z",
+    "zernio_post": "6af209ddedb04da1c3b4dfa0"
+   },
+   "facebook": {
+    "at": "2026-11-09T17:59:11Z",
+    "zernio_post": "6af209eff946c088cc189ae0"
+   }
   }
  },
  {
