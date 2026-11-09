@@ -22,7 +22,7 @@ git fetch origin main && git reset --hard origin/main
 
 Read these before doing anything else: `WRITING.md` (channel rules, MODE 1, MODE 2 and MODE 5) and `engine/ENGINE_GUIDE.md` (how to build `episode.json`). Ignore WRITING.md's MODE 4: this file replaces it.
 
-Read `episodes.json`. It's a list of every episode:
+Read `episodes.json` (it replaces WRITING.md's ALREADY MADE list). It's a list of every episode:
 ```json
 {"ep": 1, "title": "...", "ability": "reaction time", "status": "rendered" | "posted", "video": "videos/ep01.mp4", "rendered_at": "...", "posted_at": null, "zernio_post": null}
 ```
@@ -85,7 +85,7 @@ If the episode can't be rendered after 3 attempts, don't commit a broken episode
    - `content`: the description + a blank line + the hashtags from its `upload.md`
    - `media_urls`: the raw URL
    - `publish_now: true`
-5. If Zernio reports an error, retry once. If it still fails, leave the status as `rendered` (tomorrow's run will try again) and report the error.
+5. If Zernio rejects the media or the post fails, retry once with the jsDelivr link instead (it serves the file as `video/mp4`): `https://cdn.jsdelivr.net/gh/aqib1401/newstatunlocked-studio@<commit sha that added the video>/videos/epNN.mp4` (get the sha with `git log -1 --format=%H -- videos/epNN.mp4`). If that fails too, leave the status as `rendered` (tomorrow's run tries again) and report Zernio's exact error.
 6. On success: set that episode's `"status": "posted"`, `"posted_at"` (ISO time) and `"zernio_post"` (the post id from the response), then commit and push (same command as above).
 
 ## 5. Housekeeping
