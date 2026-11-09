@@ -9,4 +9,4 @@ HASHTAGS: #shorts #whatif #newstatunlocked #strength #science
 
 TAGS: what if, what if you were 10x stronger, super strength, human body, muscles, bones, science shorts, animated story, stick figure animation, new stat unlocked
 
-PINNED COMMENT: Would you take super strength if it could break your own bones? Yes or no?
+FIRST COMMENT: Would you take super strength if it could break your own bones? Yes or no?

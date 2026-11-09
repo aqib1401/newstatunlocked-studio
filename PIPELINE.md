@@ -91,7 +91,8 @@ Each run publishes at most **one video per platform**. The platforms are indepen
    - **YouTube:** `platform: "youtube"`, `title`: the title from the episode's `upload.md`, `content`: the description + a blank line + the hashtags.
    - **Facebook:** `platform: "facebook"`, `content`: the title on the first line, a blank line, the description, then 3 hashtags at most (#whatif #newstatunlocked + one topic tag). Facebook posts vertical videos under 90 seconds as Reels.
 5. If Zernio rejects the media or the post fails, retry once with the jsDelivr link instead (it serves the file as `video/mp4`): `https://cdn.jsdelivr.net/gh/aqib1401/newstatunlocked-studio@<commit sha that added the video>/videos/epNN.mp4` (get the sha with `git log -1 --format=%H -- videos/epNN.mp4`). If that fails too, leave that platform unposted (tomorrow's run tries again) and report Zernio's exact error.
-6. **Record it:** in `episodes.json` set `posted.<platform>` to `{"at": "<ISO time>", "zernio_post": "<post id>"}`. Set `"status": "posted"` once every connected platform has it. Commit and push (same command as above).
+6. **Start the conversation:** right after each successful post, add the first comment with Zernio `comments_reply_to_inbox_post` (`post_id`: the Zernio post id from step 4, `account_id`: that platform's account, no `comment_id`). Use the FIRST COMMENT line from the episode's `upload.md`. If it fails, retry once; never block the run on it. (YouTube's API can't pin comments; that stays manual.)
+7. **Record it:** in `episodes.json` set `posted.<platform>` to `{"at": "<ISO time>", "zernio_post": "<post id>", "first_comment": "<comment id or null>"}`. Set `"status": "posted"` once every connected platform has it. Commit and push (same command as above).
 
 `episodes.json` entries look like this:
 ```json

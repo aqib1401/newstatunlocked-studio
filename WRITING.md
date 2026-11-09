@@ -262,7 +262,7 @@ TITLE: <the What If title, under 60 characters>
 DESCRIPTION: <line 1: the question. line 2: one surprising real fact from the video. line 3: "Some parts are fiction. The science around them is real.">
 HASHTAGS: #shorts #whatif #newstatunlocked + 2 topic tags
 TAGS: <10–15 comma-separated YouTube tags>
-PINNED COMMENT: <a fun question, e.g. "Would you take this stat? Yes or no.">
+FIRST COMMENT: <posted automatically as the first comment on YouTube and Facebook. One short, easy-to-answer question that starts an argument or invites a story, e.g. "Would you take this power if it could break your own bones? Yes or no 👇" or "What would you do first with this power? 👇". One emoji at most.>
 ```
 
 ---
