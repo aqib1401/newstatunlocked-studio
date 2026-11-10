@@ -34,7 +34,9 @@ The layout is 540 × 960 (rendered at 2×). x goes right, y goes down.
   "ep": 1,
   "script": "exact script text, identical to what was voiced (ElevenLabs [tags] are ignored)",
   "voiceover": "voiceover.mp3",
-  "music": "auto",               // "auto" = generated bed | "none" | "music.mp3"
+  "music": [ {"track": "music/daybreak.mp3", "at": 0},
+             {"track": "music/ominosity.mp3", "at": "But then"} ],   // see Music below
+  "music_db_below_voice": 20,
   "music_volume": 1.0, "sfx_volume": 1.0,
   "thumbnail": "your hand is already",    // anchor for the thumbnail frame
   "accent": "#C8FF4D",
@@ -172,3 +174,15 @@ Read `studio.json`. `"voice"` decides the narrator:
 **`"kokoro"` (free, runs here):** set `"voiceover": "voiceover.wav"`, `"tts_voice"` and `"tts_speed"` from studio.json, then run `python3 /home/claude/newstatunlocked-studio/engine/nsu_voice.py EPISODE_DIR`. It voices whole sentences (natural intonation) and writes `voiceover_groups.json`, which the renderer uses for exact caption sync. Too long? Raise `tts_speed` (max 1.2).
 
 **`"elevenlabs"` (paid, via GitHub Actions):** see PIPELINE.md step 3. The workflow writes `voiceover.mp3` plus `voiceover_alignment.json` (per-character timing) and the renderer uses it automatically for exact caption sync. The ElevenLabs text may contain v4 audio tags like `[excited]`; keep `"script"` in episode.json identical to the spoken words without the tags.
+
+
+## Music
+
+Real tracks live in `music/` (19 originals by Tanner Helland, CC BY 4.0). `music/library.json` lists each file's title and mood: **wonder**, **tension**, **emotional** or **epic**.
+
+- `"music"` is a list of segments. Each starts at its anchor and crossfades (1.5 s) from the previous one. Optional `"offset"` (seconds) skips into the track.
+- Typical shape: a **wonder** or **epic** track from 0, then switch to **tension** at the turn ("But then..."). Optionally switch to **emotional** for a sad climax, or to **epic** for a heroic one.
+- Use at most 3 segments. Don't reuse the exact same pair of tracks as the previous 2 episodes (check their episode.json).
+- The engine levels the music about 20 dB under the voice and dips it a little under words. Leave `music_db_below_voice` at 20 unless the music is clearly too loud or too quiet.
+- `"auto"` still gives the old generated bed, and `"none"` gives silence.
+- **Credit is required:** every track used must be credited in the description (see PIPELINE.md step 3).

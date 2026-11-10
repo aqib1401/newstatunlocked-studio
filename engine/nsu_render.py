@@ -479,6 +479,71 @@ def place(buf, x, t, gain=1.0):
     buf[s:e] += gain * x[: e - s]
 
 # --------------------------------------------------------------------------- plan
+def _find_track(name, ep_dir):
+    for base in (ep_dir, ep_dir.parent, ep_dir.parent.parent, HERE, HERE.parent):
+        f = (base / name)
+        if f.exists():
+            return f
+    return None
+
+def _rms(x):
+    return float(np.sqrt(np.mean(x ** 2)) + 1e-9)
+
+def make_music(ep, plan, v, dur, ep_dir, slow_ranges):
+    """Background music. 'auto' = generated bed; a file name; or a list of
+    {"track": "music/x.mp3", "at": <anchor>, "offset": seconds} segments that crossfade.
+    The bed is levelled against the voice: about `music_db_below_voice` (default 20) dB under
+    the voice's loud parts, dipping a few dB more while words are spoken."""
+    total = int(dur * SR)
+    spec = plan.get("music", ep.get("music", "auto"))
+    if spec == "none":
+        return np.zeros(total)
+    if isinstance(spec, str) and spec != "auto":
+        spec = [{"track": spec, "t": 0.0}]
+    if spec == "auto" or not spec:
+        bed = music_bed(dur, slow_ranges)
+    else:
+        bed = np.zeros(total)
+        xf = int(1.5 * SR)
+        for i, sg in enumerate(spec):
+            f = _find_track(sg["track"], ep_dir)
+            if f is None:
+                print(f"! music track not found: {sg['track']}")
+                continue
+            a = load_audio(f)
+            # skip leading near-silence, then apply the requested offset
+            env = np.abs(a)
+            thr = env.max() * 0.05
+            start = int(np.argmax(env > thr)) if (env > thr).any() else 0
+            a = a[start + int(float(sg.get("offset", 0)) * SR):]
+            t0 = int(sg["t"] * SR)
+            t1 = int(spec[i + 1]["t"] * SR) if i + 1 < len(spec) else total
+            need = (t1 - t0) + xf
+            if len(a) < need:
+                a = np.tile(a, need // max(1, len(a)) + 1)
+            a = a[:need] / _rms(a[:need])
+            fade_in = np.minimum(1, np.arange(need) / (xf if i > 0 else int(0.6 * SR)))
+            fade_out = np.ones(need)
+            if i + 1 < len(spec):
+                fade_out[-xf:] = np.linspace(1, 0, xf)
+            seg = a * fade_in * fade_out
+            e = min(total, t0 + need)
+            bed[t0:e] += seg[: e - t0]
+        fade = np.minimum(1, (total - np.arange(total)) / (1.2 * SR))
+        bed *= fade
+    # level against the voice
+    hop = int(0.1 * SR)
+    n = len(v) // hop
+    vr = np.sqrt((v[: n * hop].reshape(n, hop) ** 2).mean(1)) if n else np.array([1e-3])
+    voice_loud = np.percentile(vr, 90)
+    below = float(ep.get("music_db_below_voice", 20))
+    bed = bed / _rms(bed[: total]) * voice_loud * 10 ** (-below / 20)
+    from scipy.ndimage import uniform_filter1d
+    venv = uniform_filter1d(np.abs(v), int(0.2 * SR))
+    speaking = np.clip(venv / (np.percentile(venv, 90) + 1e-9), 0, 1)
+    duck = 10 ** (-4 * speaking / 20)      # up to 4 dB extra dip under words
+    return bed * duck
+
 def build_plan(ep, words, dur):
     R = lambda a, d=None: resolve_time(a, words, d)
     scenes = ep["scenes"]
@@ -515,10 +580,19 @@ def build_plan(ep, words, dur):
             h["t1"] = huds[i + 1]["t0"] if i + 1 < len(huds) else min(dur, h["t0"] + 4)
         if i + 1 < len(huds):
             h["t1"] = min(h["t1"], huds[i + 1]["t0"])
+    music = ep.get("music", "auto")
+    if isinstance(music, list):
+        segs_ = []
+        for m in music:
+            m = dict(m)
+            m["t"] = 0.0 if m.get("at") in (None, 0, "0") else R(m.get("at"))
+            segs_.append(m)
+        segs_.sort(key=lambda m: m["t"])
+        music = segs_
     extra_sfx = []
     for s in ep.get("sfx", []):
         extra_sfx.append({"name": s["name"], "t": R(s["at"]), "gain": s.get("gain", 1.0)})
-    return {"scenes": plan_scenes, "hud": huds, "sfx": extra_sfx}
+    return {"scenes": plan_scenes, "hud": huds, "sfx": extra_sfx, "music": music}
 
 def build_audio(ep, plan, voice, dur, ep_dir):
     total = int((dur) * SR)
@@ -560,25 +634,8 @@ def build_audio(ep, plan, voice, dur, ep_dir):
             place(fx, sfx("ding"), h["t0"])
     for s in plan["sfx"]:
         place(fx, sfx(s["name"]), s["t"], s["gain"])
-    mpath = ep.get("music", "auto")
-    if mpath == "none":
-        m = np.zeros(total)
-    elif mpath and mpath != "auto" and (ep_dir / mpath).exists():
-        m = load_audio(ep_dir / mpath)
-        if len(m) < total:
-            m = np.tile(m, total // max(1, len(m)) + 1)
-        m = m[:total]
-        m = m / (np.max(np.abs(m)) + 1e-9) * 0.12
-        fade = np.minimum(1, np.arange(total) / (0.8 * SR)) * np.minimum(1, (total - np.arange(total)) / (1.0 * SR))
-        m *= fade
-    else:
-        m = music_bed(dur, slow_ranges)
-        m = m / (np.max(np.abs(m)) + 1e-9) * 0.16
-    # duck music under the voice
-    from scipy.ndimage import uniform_filter1d
-    venv = uniform_filter1d(np.abs(v), int(0.15 * SR))
-    duck = 1 - 0.45 * np.clip(venv / (venv.max() + 1e-9) * 3, 0, 1)
-    mix = v + fx * float(ep.get("sfx_volume", 1.0)) + m * duck * float(ep.get("music_volume", 1.0))
+    m = make_music(ep, plan, v, dur, ep_dir, slow_ranges)
+    mix = v + fx * float(ep.get("sfx_volume", 1.0)) + m * float(ep.get("music_volume", 1.0))
     mix = mix / (np.max(np.abs(mix)) + 1e-9) * 0.95
     return mix
 

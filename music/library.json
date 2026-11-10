@@ -1,0 +1,101 @@
+{
+ "credit_template": "Music: \"{title}\" by Tanner Helland, CC BY 4.0, https://tannerhelland.com/music",
+ "license": "CC BY 4.0, credit required in the description",
+ "tracks": [
+  {
+   "file": "music/daybreak.mp3",
+   "title": "Daybreak",
+   "mood": "wonder"
+  },
+  {
+   "file": "music/the-forest-awakes.mp3",
+   "title": "The Forest Awakes",
+   "mood": "wonder"
+  },
+  {
+   "file": "music/lost-islands.mp3",
+   "title": "Lost Islands",
+   "mood": "wonder"
+  },
+  {
+   "file": "music/syntheticity.mp3",
+   "title": "Syntheticity",
+   "mood": "wonder"
+  },
+  {
+   "file": "music/surreptitious.mp3",
+   "title": "Surreptitious",
+   "mood": "tension"
+  },
+  {
+   "file": "music/ominosity.mp3",
+   "title": "Ominosity",
+   "mood": "tension"
+  },
+  {
+   "file": "music/unknown.mp3",
+   "title": "Unknown",
+   "mood": "tension"
+  },
+  {
+   "file": "music/deeper.mp3",
+   "title": "Deeper",
+   "mood": "tension"
+  },
+  {
+   "file": "music/now-or-never.mp3",
+   "title": "Now or Never",
+   "mood": "tension"
+  },
+  {
+   "file": "music/a-memory-away.mp3",
+   "title": "A Memory Away",
+   "mood": "emotional"
+  },
+  {
+   "file": "music/hidden-tears.mp3",
+   "title": "Hidden Tears",
+   "mood": "emotional"
+  },
+  {
+   "file": "music/home.mp3",
+   "title": "Home",
+   "mood": "emotional"
+  },
+  {
+   "file": "music/leaving-millie-live-piano.mp3",
+   "title": "Leaving Millie (live piano)",
+   "mood": "emotional"
+  },
+  {
+   "file": "music/remember.mp3",
+   "title": "Remember",
+   "mood": "emotional"
+  },
+  {
+   "file": "music/destiny.mp3",
+   "title": "Destiny",
+   "mood": "epic"
+  },
+  {
+   "file": "music/fate.mp3",
+   "title": "Fate",
+   "mood": "epic"
+  },
+  {
+   "file": "music/find-you.mp3",
+   "title": "Find You",
+   "mood": "epic"
+  },
+  {
+   "file": "music/crossroads.mp3",
+   "title": "Crossroads",
+   "mood": "epic"
+  },
+  {
+   "file": "music/from-here.mp3",
+   "title": "From Here",
+   "mood": "epic"
+  }
+ ]
+}

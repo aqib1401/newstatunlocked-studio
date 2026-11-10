@@ -51,6 +51,7 @@ mkdir -p $E
 
 1. Write `$E/episode.json` following `engine/ENGINE_GUIDE.md` and `engine/example_ep01_episode.json`:
    - `"ep": NN`, `"script"`: the exact script, `"voiceover": "voiceover.wav"`, `"tts_voice": "af_heart"`, `"tts_speed": 1.05`.
+   - Music: pick tracks from `music/library.json` by mood and set `"music"` as described in ENGINE_GUIDE.md's Music section.
    - HUD, kept light: the stat card on the opening title question, optionally one `note` (REAL SCIENCE) at the reveal, the `choice` card at the climax, and a final `level` card on the debate question (label "WOULD YOU TAKE IT?", text "COMMENT: YES OR NO"). Use `warn`/`compare` only when they make a beat clearer. `highlights` from the HUD PLAN. A new scene every 3–6 s, `lab` for the ability/number beats, real places for the story, `slowmo` for the choice.
    - **Visual loop:** the last scene uses the same background, characters and positions as the first scene, so when the Short replays, the cut from last frame to first frame is invisible.
    - The first scene must have movement inside the first second (an object falling, a character reacting). No static opening frame.
@@ -70,7 +71,7 @@ mkdir -p $E
    rm -rf $E/out $E/voiceover.wav $E/voiceover_groups.json $E/voiceover_chunks.json
    ```
    If `videos/epNN.mp4` is over 40 MB, re-encode it with `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset veryfast -c:a copy out.mp4`.
-7. Write `$E/upload.md` with the MODE 5 upload pack (title, description, hashtags, tags, pinned comment).
+7. Write `$E/upload.md` with the MODE 5 upload pack (title, description, hashtags, tags, first comment). **The description must end with one credit line per music track used**, from `music/library.json`'s `credit_template`, e.g. `Music: "Daybreak" by Tanner Helland, CC BY 4.0, https://tannerhelland.com/music`. Include the credit lines in the YouTube and Facebook post text.
 8. Add the episode to `episodes.json` with `"status": "rendered"` and `"posted": {"youtube": null, "facebook": null}`.
 9. Commit and push:
    ```bash
