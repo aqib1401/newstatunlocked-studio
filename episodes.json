@@ -63,12 +63,20 @@
   "ep": 4,
   "title": "What If You Could Smell 10,000x Better?",
   "ability": "smell",
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep04.mp4",
   "rendered_at": "2026-11-10T17:56:00Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-10T22:25:39Z",
+    "zernio_post": "6af399b702828340a85a16f2",
+    "first_comment": "UgwKBo2JXg-Dqtr2aIB4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-10T22:25:39Z",
+    "zernio_post": "6af399be703f12bde261fc82",
+    "first_comment": "122108440947534040_2604757026618582"
+   }
   }
  }
 ]
