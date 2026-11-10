@@ -129,9 +129,8 @@ Narration runs about 3 words per second. Shorter is better: every line must earn
 
 | Length | Words |
 |---|---|
-| 40 s | 115–130 |
-| 45 s | 130–150 (default) |
-| 55 s | 160–175 (only if the story truly needs it) |
+| SHORT format (odd EPs) | 130–150 words, about 45 s |
+| LONG format (even EPs) | 220–250 words, about 85–95 s |
 
 ### How it should sound (the most important part)
 Study of three Shorts that do well (one ability story, one mystery story, one science explainer) gave these rules:
@@ -142,19 +141,23 @@ Study of three Shorts that do well (one ability story, one mystery story, one sc
 - **Then a mystery:** "But then something weird starts happening." Something goes wrong that the viewer can't explain yet. That gap keeps them watching.
 - **The reveal is real science, explained through something everyday:** "Think about the last time your phone slid off a table. You caught it before you even decided to." A fact earns its place by explaining the mystery, not by being listed.
 - **A gut-punch climax in very few words:** "You know exactly what it'll cost you. You lift it anyway."
-- **End on a question people will argue about:** "Would you still want this power? Yes or no?" One short question tied to the story. It drives comments, and because it's a question it flows back into the opening question when the video loops. Never "like and subscribe", never "follow for more".
+- **End on the impossible choice, unanswered:** "Your brother, or twenty-seven strangers. Who do you save?" The viewer decides, and the comments become the argument. Because it's a question, it also flows back into the opening question when the video loops. Never "like and subscribe" or "follow for more" in the narration (the end card shows the subscribe button).
 - "You" is the default hero. A named stand-in character ("Void wakes up on a bright Saturday...") is fine when it makes the twist hit harder.
 - Warm and family-friendly. Real peril, no gore, no swearing.
 
-### The shape (45 s, about 130–150 words; a guide, not a cage)
-1. **0–3 s:** the title question, plus 2–4 words that raise it.
-2. **3–12 s:** two fast, funny, picturable wins.
-3. **12–20 s:** "But then..." Something goes wrong that we can't explain yet.
-4. **20–32 s:** the reveal (real science, everyday comparison).
-5. **32–42 s:** the climax, in short, heavy lines.
-6. **42–45 s:** the debate question.
+### The story engine (what the best "What if" channels do)
+1. **Escalating opening question.** "What if you had an IQ of 1,000? Not 150. Not 200. One thousand." The negations raise the stakes in two seconds.
+2. **A credibility line when there's real science behind it.** "According to Einstein, this is actually possible." One line. It turns a daydream into "wait, really?".
+3. **Time markers move the story.** "Day one... Day three... Day thirty." or "Six hours pass. Twelve hours." Each marker is a new scene and a jump forward, so the viewer always knows where they are.
+4. **A heroic win before the turn.** Show the power doing something great ("Everyone, get out!" ... "You just saved twenty people."). We need to love the power before it costs something.
+5. **One or two short lines of dialogue** from a person who matters ("Promise you'll come back."). It makes the story human.
+6. **The turn is an impossible choice with no right answer.** Two things the viewer cares about, and they can only have one: the power or the person, your brother or a bus full of strangers, the future or the mother you left behind. Both options must feel right.
+7. **A spoken countdown** at the choice: "Ten seconds. Nine. Eight." Then two or three short lines between numbers that make each side hurt more.
+8. **Don't answer it.** By default, end on the choice itself: "Your little brother, or twenty-seven strangers. Who do you save?" The viewer decides in the comments. (Occasionally, for variety, resolve it with a twist, but no more than 1 in 4 episodes.)
 
-Break the shape whenever a different order tells the story better (start mid-disaster, end on a twist fact). What matters is the hook, the clarity and the payoff, not the template.
+### Two formats, alternating (we're testing which works better)
+- **SHORT (odd episode numbers): about 45 s, 130–150 words.** Fast. Opening question, two wins, the turn, a short countdown (five to three), the question.
+- **LONG (even episode numbers): about 85–95 s, 220–250 words, voiced slightly slower (`tts_speed` 1.0).** The full story engine above: time markers, a heroic win, a line of dialogue, a ten-second countdown, the question. Leave room for pauses so the music carries the mood.
 
 ### Clarity guards (the Zack D. Films test)
 - **One picture per sentence.** If a sentence can't be drawn as one clear image, rewrite it.

@@ -413,10 +413,17 @@ def sfx(name):
         d = 0.6
         t = np.arange(n(d)) / SR
         return 0.1 * tone(lambda t: 300 + 700 * (t / d), d, kind="tri") * np.sin(np.pi * t / d)
+    if name == "buzzer":
+        d = 0.9
+        x = tone(110, d, kind="square") + 0.7 * tone(116, d, kind="square")
+        return 0.3 * lowpass(x, 1800) * np.minimum(1, (d - np.arange(n(d)) / SR) / 0.15)
+    if name == "tick2":
+        d = 0.08
+        return 0.4 * bandpass(RNG.standard_normal(n(d)), 1800, 5000) * env(n(d), 0.0005, 0.015)
     raise ValueError(f"unknown sfx {name!r}")
 
 SFX_NAMES = ["pop", "tick", "whoosh", "swish", "buzz", "clock", "heartbeat", "chime", "boom",
-             "thud", "ding", "boing", "click", "riser", "crowd", "glitch", "fill"]
+             "thud", "ding", "boing", "click", "riser", "crowd", "glitch", "fill", "buzzer", "tick2"]
 
 def music_bed(dur, slow_ranges):
     """Soft synth bed: Am-F-C-G pads with a gentle pluck arpeggio, 84 bpm."""
@@ -629,9 +636,21 @@ def build_audio(ep, plan, voice, dur, ep_dir):
                 if k % 2 == 0:
                     place(fx, sfx("heartbeat"), t, 0.8)
                 t += 0.5; k += 1
-            place(fx, sfx("chime"), tp)
+            if h.get("pick", "b") not in (None, "none"):
+                place(fx, sfx("chime"), tp)
         elif h["type"] == "level":
             place(fx, sfx("ding"), h["t0"])
+        elif h["type"] == "marker":
+            place(fx, sfx("pop"), h["t0"], 0.6)
+        elif h["type"] == "countdown":
+            n_ = int(h.get("from", 10)); step = (h["t1"] - h["t0"]) / max(1, n_)
+            for j in range(n_):
+                place(fx, sfx("tick2"), h["t0"] + j * step)
+                if j % 2 == 0:
+                    place(fx, sfx("heartbeat"), h["t0"] + j * step, 0.7)
+            place(fx, sfx("buzzer"), h["t1"] - 0.05)
+        elif h["type"] == "endcard":
+            place(fx, sfx("chime"), h["t0"], 0.6)
     for s in plan["sfx"]:
         place(fx, sfx(s["name"]), s["t"], s["gain"])
     m = make_music(ep, plan, v, dur, ep_dir, slow_ranges)

@@ -36,7 +36,7 @@ Read `episodes.json` (it replaces WRITING.md's ALREADY MADE list). It's a list o
 
 ## 2. Write the script (writer + one critic)
 
-1. **Write it.** Follow WRITING.md MODE 2, the clarity guards and the VIRAL & RETENTION RULES. Default 45 s (130–150 words). The idea from `ideas.json` is a starting point, not a cage: keep what's strong, change what isn't.
+1. **Write it.** Follow WRITING.md MODE 2, the story engine, the clarity guards and the VIRAL & RETENTION RULES. **Format: odd episode number = SHORT (130–150 words), even = LONG (220–250 words).** Tell the critic which format it is. The idea from `ideas.json` is a starting point, not a cage: keep what's strong, change what isn't.
 2. **One critic pass.** Launch exactly **one** subagent with the Agent tool, `model: "sonnet"`, and a prompt containing the full text of `CRITIC.md` plus the script (and nothing about how you wrote it). This keeps usage low: never more than one critic per episode.
 3. **If the verdict is REVISE:** fix every TOP FIX yourself in one rewrite, then do the loop check and word count again. Don't call the critic a second time; move on.
 4. **If PASS:** keep the script as is (apply any small fixes that are obviously right).
@@ -52,6 +52,7 @@ mkdir -p $E
 1. Write `$E/episode.json` following `engine/ENGINE_GUIDE.md` and `engine/example_ep01_episode.json`:
    - `"ep": NN`, `"script"`: the exact script, `"voiceover": "voiceover.wav"`, `"tts_voice": "af_heart"`, `"tts_speed": 1.05`.
    - Music: pick tracks from `music/library.json` by mood and set `"music"` as described in ENGINE_GUIDE.md's Music section.
+   - Use the new visual tools where the story has them: `marker` cards for time jumps and big numbers ("DAY 3", "20 LIVES SAVED"), `"camera": "closeup"` scenes on emotional beats (at least one per episode), a `countdown` card over the spoken countdown, the `choice` card with `"pick": null` when the choice is left open, and an `endcard` over the final question (see ENGINE_GUIDE.md).
    - HUD, kept light: the stat card on the opening title question, optionally one `note` (REAL SCIENCE) at the reveal, the `choice` card at the climax, and a final `level` card on the debate question (label "WOULD YOU TAKE IT?", text "COMMENT: YES OR NO"). Use `warn`/`compare` only when they make a beat clearer. `highlights` from the HUD PLAN. A new scene every 3–6 s, `lab` for the ability/number beats, real places for the story, `slowmo` for the choice.
    - **Visual loop:** the last scene uses the same background, characters and positions as the first scene, so when the Short replays, the cut from last frame to first frame is invisible.
    - The first scene must have movement inside the first second (an object falling, a character reacting). No static opening frame.
@@ -59,7 +60,7 @@ mkdir -p $E
 2. **Voice.** Read `$R/studio.json`.
    - If `"voice": "elevenlabs"`: write `$E/voice_request.json` = `{"text": <the script with 3–6 Eleven v4 audio tags like [excited] [whispers] [deadpan], words unchanged>, "voice_id": <elevenlabs_voice_id>, "model_id": <elevenlabs_model>}`. Commit and push just that file. A GitHub workflow voices it and commits `voiceover.mp3` + `voiceover_alignment.json` into `$E`. Poll every 20 s for up to 10 minutes (`git fetch origin main` then `git show FETCH_HEAD:episodes/epNN/voiceover.mp3` or `voice_error.txt`), then `git pull --rebase origin main`. Set `"voiceover": "voiceover.mp3"`. If you get `voice_error.txt` or a timeout, fall back to Kokoro below and report the error.
    - If `"voice": "kokoro"` (or as a fallback): set `"voiceover": "voiceover.wav"`, `"tts_voice"`/`"tts_speed"` from studio.json, and run `python3 $R/engine/nsu_voice.py $E`.
-   - Target 40–52 s. If Kokoro comes out longer, raise `tts_speed` (max 1.2) or trim a line; if it's under 38 s, lower it.
+   - Targets: SHORT 40–52 s (`tts_speed` 1.1), LONG 82–98 s (`tts_speed` 1.0). If it comes out too long, raise `tts_speed` (max 1.2) or trim a line; if too short, lower it (min 0.95).
 3. Preview: `python3 $R/engine/nsu_render.py $E --preview`, then open `$E/out/preview_sheet.jpg` and look at it. Fix faces hidden by the HUD or captions, faces in the bottom 20% or at the right edge, floating characters and unreadable props, then preview again.
 4. Render: `python3 $R/engine/nsu_render.py $E`. On an error, read it, fix `episode.json` and rerun (up to 3 attempts). "phrase not found" means an anchor isn't in the script.
 5. Check: pull 4 frames from `$E/out/epNN.mp4` with ffmpeg (around the stat card, the warning card, the choice, and the last second) and look at them. Re-render if something is clearly broken.
@@ -72,7 +73,7 @@ mkdir -p $E
    ```
    If `videos/epNN.mp4` is over 40 MB, re-encode it with `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset veryfast -c:a copy out.mp4`.
 7. Write `$E/upload.md` with the MODE 5 upload pack (title, description, hashtags, tags, first comment). **The description must end with one credit line per music track used**, from `music/library.json`'s `credit_template`, e.g. `Music: "Daybreak" by Tanner Helland, CC BY 4.0, https://tannerhelland.com/music`. Include the credit lines in the YouTube and Facebook post text.
-8. Add the episode to `episodes.json` with `"status": "rendered"` and `"posted": {"youtube": null, "facebook": null}`.
+8. Add the episode to `episodes.json` with `"format": "SHORT"|"LONG"`, `"duration_s"`, `"status": "rendered"` and `"posted": {"youtube": null, "facebook": null}`.
 9. Commit and push:
    ```bash
    cd $R && git add -A && git commit -m "EP NN: <title>" && git push origin HEAD:main || (git fetch origin main && git rebase origin/main && git push origin HEAD:main)

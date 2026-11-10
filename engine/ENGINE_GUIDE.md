@@ -67,7 +67,8 @@ A scene runs from its `start` anchor to the next scene's start. The first scene 
 {
   "start": "Leo pitches",
   "bg": "day_park",
-  "camera": "push",            // push | pull | static | pan_left | pan_right
+  "camera": "push",            // push | pull | static | pan_left | pan_right | closeup
+  "focus": "hero", "zoom": 2.4, // closeup only: whose face, how close (2.0-3.0)
   "slowmo": false,              // true = desaturated, vignette, SLOW-MO chip, boom sfx, music dips
   "transition": "cut",          // "none" = no whoosh or cut-punch
   "props": "<svg markup>",      // static set dressing, drawn behind actors
@@ -141,6 +142,17 @@ Props are plain SVG in the 540×960 space. Keep them flat: solid fills, palette 
 {"type": "level",   "at": "Last place", "until": "Sam grins", "label": "RACE RESULT", "text": "LAST PLACE · WORTH IT", "color": "#FFB547"}
 ```
 
+```json
+{"type": "marker",    "at": "Day three", "until": "Day seven", "label": "DAY", "text": "3", "sub": "LANGUAGES LEARNED: 3"}
+{"type": "countdown", "at": "Ten seconds", "until": "Who do you save", "from": 10}
+{"type": "choice",    "at": "You look at the bus", "until": "Who do you save", "a": "Your brother", "b": "27 strangers", "pick": null}
+{"type": "endcard",   "at": "Who do you save", "text": "Your brother or 27 strangers?", "a": "BROTHER", "b": "STRANGERS"}
+```
+
+- `marker`: big centered label/number for time jumps and big results ("DAY 30", "20 LIVES SAVED"). Optional `label` (small, above), `sub` (small, below), `color`, `size` (default 84).
+- `countdown`: huge red digits counting from `from` to 0 evenly between `at` and `until`, with ticks, heartbeats and a buzzer at zero. Put `at` on the spoken "Ten seconds" and `until` just after the last spoken number.
+- `choice` with `"pick": null`: the timer drains and the card shows "YOUR CALL" with both options pulsing (no chime). Use this when the video leaves the choice to the viewer.
+- `endcard`: the closing question with optional two answer pills, plus comment and subscribe badges. Captions hide while it's up, since it shows the question itself. Put it on the final question.
 - `compare` bar lengths are 0–1. Use real proportions.
 - `note` uses a cyan "REAL SCIENCE" style label. Use it for the rule or one key fact.
 - Every Short has exactly one `stat` card, landing on the phrase that names the ability (the HUD PLAN's STAT CARD LANDS ON). The narration never says "stat"; the card is visual only. `warn` and `choice` follow the HUD plan from the script.
@@ -153,6 +165,7 @@ Extra sounds go on actor or object keys (`"sfx": "thud"`) or in the top-level `s
 
 ## Directing rules
 
+- At least one `closeup` scene per episode on the most emotional beat (shock, heartbreak, the choice).
 - A new scene every 3–6 seconds. Cut on the "..." pauses and sentence ends.
 - Something moves at least every 1.5 s: a pose change, a face change, an object, a cycle. The camera push alone isn't enough.
 - Faces change on the emotional word, not after it.

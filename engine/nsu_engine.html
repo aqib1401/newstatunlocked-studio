@@ -256,11 +256,25 @@ function hudHTML(h,t,acc){
   }
   if(h.type==='choice'){
     const tp=h.tp??h.t1; const total=Math.max(0.1,tp-h.t0); const rem=clamp(1-(t-h.t0)/total,0,1);
-    const picked=t>=tp; const secs=(rem*(h.seconds??0.61)).toFixed(2);
-    const pk=h.pick||'b';
+    const unresolved=(h.pick===null||h.pick==='none'); const picked=!unresolved&&t>=tp; const secs=(rem*(h.seconds??0.61)).toFixed(2);
+    const pk=h.pick||'b'; const glow=unresolved&&t>=tp?(0.5+0.5*Math.sin(age*8)):0;
     const opt=(k,txt)=>{const sel=picked&&pk===k, dim=picked&&pk!==k;
-      return `<div class="opt" style="${sel?`border:2px solid ${acc};background:rgba(200,255,77,.12);box-shadow:0 0 24px rgba(200,255,77,.3);transform:scale(${1+0.05*EASE.out(clamp((t-tp)/0.2,0,1))})`:''};opacity:${dim?0.4:1}"><span style="font-family:'Chakra Petch';color:${sel?acc:'#A9A3C9'}">${k.toUpperCase()}</span>&nbsp; ${txt}</div>`;};
-    return `<div class="card" style="${tr};border:1px solid rgba(255,255,255,.2);padding:16px 18px;gap:12px"><div class="row lbl"><span style="color:#A9A3C9">${h.label||'CHOOSE'}</span><span style="color:#FF8A8A">${picked?'CHOSEN':secs+' s LEFT'}</span></div><div style="height:6px;border-radius:3px;background:#3A3550"><div style="height:6px;border-radius:3px;background:#FF8A8A;width:${rem*100}%"></div></div><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">${opt('a',h.a)}${opt('b',h.b)}</div></div>`;
+      return `<div class="opt" style="${glow?`box-shadow:0 0 ${18*glow}px rgba(255,255,255,.5);border-color:rgba(255,255,255,${0.4+0.5*glow});`:''}${sel?`border:2px solid ${acc};background:rgba(200,255,77,.12);box-shadow:0 0 24px rgba(200,255,77,.3);transform:scale(${1+0.05*EASE.out(clamp((t-tp)/0.2,0,1))})`:''};opacity:${dim?0.4:1}"><span style="font-family:'Chakra Petch';color:${sel?acc:'#A9A3C9'}">${k.toUpperCase()}</span>&nbsp; ${txt}</div>`;};
+    return `<div class="card" style="${tr};border:1px solid rgba(255,255,255,.2);padding:16px 18px;gap:12px"><div class="row lbl"><span style="color:#A9A3C9">${h.label||'CHOOSE'}</span><span style="color:#FF8A8A">${picked?'CHOSEN':(unresolved&&t>=tp?'YOUR CALL':secs+' s LEFT')}</span></div><div style="height:6px;border-radius:3px;background:#3A3550"><div style="height:6px;border-radius:3px;background:#FF8A8A;width:${rem*100}%"></div></div><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">${opt('a',h.a)}${opt('b',h.b)}</div></div>`;
+  }
+  if(h.type==='marker'){ // big centered scene marker: "DAY 3", "20 LIVES SAVED", "6 HOURS"
+    const k=EASE.back(clamp(age/0.3,0,1)), fo=clamp(left/0.25,0,1);
+    return `<div style="position:absolute;left:0;right:0;top:${h.top??150}px;text-align:center;opacity:${Math.min(clamp(age/0.12,0,1),fo)};transform:scale(${0.7+0.3*k})">${h.label?`<div class="lbl" style="color:${h.color||acc};font-size:14px">${h.label}</div>`:''}<div style="font-family:'Chakra Petch';font-weight:700;font-size:${h.size||84}px;line-height:1;color:${h.color||acc};text-shadow:0 0 30px rgba(0,0,0,.6),0 4px 0 #141218">${h.text}</div>${h.sub?`<div style="font-family:'Chakra Petch';font-weight:600;font-size:22px;letter-spacing:.18em;margin-top:6px">${h.sub}</div>`:''}</div>`;
+  }
+  if(h.type==='countdown'){ // big red digits counting down to 0 between at and until
+    const total=Math.max(0.1,h.t1-h.t0), from=h.from??10, rem=clamp(1-age/total,0,1);
+    const n=Math.ceil(rem*from-1e-6); const frac=(rem*from)-Math.floor(rem*from);
+    const pulse=1+0.12*Math.max(0,frac-0.7)/0.3;
+    return `<div style="position:absolute;left:0;right:0;top:${h.top??110}px;text-align:center"><div class="lbl" style="color:#FF8A8A;font-size:14px">${h.label||'TIME LEFT'}</div><div style="font-family:'Chakra Petch';font-weight:700;font-size:150px;line-height:1;color:#FF6B6B;transform:scale(${pulse});text-shadow:0 0 40px rgba(255,80,80,.55),0 5px 0 #141218">${n}</div></div>`;
+  }
+  if(h.type==='endcard'){ // closing question with comment + subscribe
+    const k=EASE.out(clamp(age/0.4,0,1));
+    return `<div style="position:absolute;left:36px;right:36px;top:${h.top??170}px;opacity:${k};transform:translateY(${(1-k)*20}px);display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center"><div style="font-family:InterNSU,Inter;font-weight:900;font-size:40px;line-height:1.1;text-shadow:0 4px 0 #141218">${h.text}</div>${h.a?`<div style="display:flex;gap:10px"><div class="opt" style="border:2px solid ${acc};background:rgba(200,255,77,.1)">${h.a}</div><div class="opt" style="border:2px solid #FF8A8A;background:rgba(255,138,138,.1)">${h.b}</div></div>`:''}<div style="display:flex;gap:10px;align-items:center"><div style="display:flex;align-items:center;gap:8px;background:rgba(10,9,22,.85);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 14px;font-weight:800;font-size:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg>Comment</div><div style="background:#FF3B30;border-radius:999px;padding:8px 16px;font-weight:800;font-size:16px;transform:scale(${1+0.06*Math.sin(age*6)})">Subscribe</div></div></div>`;
   }
   if(h.type==='level'){ // e.g. "STAT LEVEL: MAXED" or "STAT REMOVED"
     return `<div class="card" style="${tr};border:2px solid ${h.color||acc};align-items:center"><div class="lbl" style="color:${h.color||acc}">${h.label||'STATUS'}</div><div style="font-family:'Chakra Petch';font-weight:700;font-size:30px">${h.text}</div></div>`;
@@ -293,11 +307,18 @@ window.NSU={
     const age=t-sc.t0, span=Math.max(0.1,sc.t1-sc.t0), pr=clamp(age/span,0,1);
     let s=1,tx=0,ty=0;
     const cam=sc.camera||'push';
+    const scEl0=document.getElementById('scene');
+    if(cam==='closeup'&&hands[(sc.focus||'hero')+'.head']){
+      const hd=hands[(sc.focus||'hero')+'.head'], z=(sc.zoom||2.4)*(1+0.04*pr);
+      scEl0.style.transformOrigin='0 0';
+      scEl0.style.transform=`translate(${270-hd[0]*z}px,${(sc.focus_y||560)-hd[1]*z}px) scale(${z})`;
+      scEl0.style.filter=sc.slowmo?'saturate(.45) brightness(.92)':'none';
+    } else { scEl0.style.transformOrigin='270px 600px'; }
     if(cam==='push')s=1+0.05*pr; else if(cam==='pull')s=1.06-0.05*pr; else if(cam==='pan_left')tx=-30*pr+15; else if(cam==='pan_right')tx=30*pr-15;
     if(sc.slowmo)s=1+0.04*pr;
     if(si>0&&(sc.transition||'cut')!=='none'){const k=clamp(age/0.25,0,1);s*=1+0.04*(1-EASE.out(k));}
     const scEl=document.getElementById('scene');
-    scEl.style.transform=`translate(${tx}px,${ty}px) scale(${s})`;
+    if(cam!=='closeup')scEl.style.transform=`translate(${tx}px,${ty}px) scale(${s})`;
     scEl.style.filter=sc.slowmo?'saturate(.45) brightness(.92)':'none';
     document.getElementById('vig').style.background=sc.slowmo?'radial-gradient(ellipse at 50% 55%, rgba(0,0,0,0) 45%, rgba(0,0,0,.6) 100%)':'radial-gradient(ellipse at 50% 55%, rgba(0,0,0,0) 60%, rgba(0,0,0,.28) 100%)';
     // warn flash
@@ -309,7 +330,8 @@ window.NSU={
     document.getElementById('hud').innerHTML=hud;
     // captions
     let cap='';const top=hud?(sc.caption_top??300):(sc.caption_top_nohud??180);
-    for(const c of PLAN.captions){if(t>=c.s&&t<c.e){const a3=t-c.s;const k=EASE.back(clamp(a3/0.12,0,1));
+    const endOn=PLAN.hud.some(h=>h.type==='endcard'&&t>=h.t0&&t<h.t1);
+    for(const c of PLAN.captions){if(!endOn&&t>=c.s&&t<c.e){const a3=t-c.s;const k=EASE.back(clamp(a3/0.12,0,1));
       const txt=c.w.map(w=>w.c?`<span style="color:${w.c==='green'?acc:w.c==='amber'?'#FFB547':w.c}">${w.t}</span>`:w.t).join(' ');
       cap=`<div class="cap" style="top:${top}px;transform:scale(${0.9+0.1*k});opacity:${clamp(a3/0.06,0,1)}">${txt}</div>`;}}
     document.getElementById('caps').innerHTML=cap;
