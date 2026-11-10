@@ -1,0 +1,770 @@
+{
+ "ep": 5,
+ "script": "What if your heart beat only six times a minute? Not sixty. Six. Your doctor checks your pulse, then checks again. But underwater, you're a legend. You hold your breath for five minutes, while your friend Leo taps out at forty seconds. Diving seals and whales slow their hearts down to save oxygen. A blue whale's heart can drop to two beats a minute. But yours never speeds back up. So when you stand up too fast, the room goes black. Run for the bus, and your knees fold, because your muscles beg for blood and your brain gets none. Then, at the lake, your little brother Sam slips under, past the rope. The lifeguard is a minute away. Sam has seconds. Five. Four. Three. Swim hard, and you might black out underwater too. Wait, and he might never come up. With a heart this slow, would you dive in?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "title": "What If Your Heart Beat Only Six Times a Minute?",
+ "thumbnail": "the room goes black",
+ "music": [
+  {
+   "track": "music/lost-islands.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/deeper.mp3",
+   "at": "But yours never"
+  },
+  {
+   "track": "music/now-or-never.mp3",
+   "at": "Then, at the lake"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "highlights": {
+  "six times a minute": "green",
+  "legend": "green",
+  "five minutes": "green",
+  "two beats a minute": "green",
+  "never speeds back up": "amber",
+  "goes black": "amber",
+  "knees fold": "amber",
+  "Sam has seconds": "amber",
+  "dive in": "green"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if your heart",
+   "until": "Your doctor",
+   "name": "HEART RATE",
+   "mult": "÷10",
+   "tag": "6 BPM"
+  },
+  {
+   "type": "marker",
+   "at": "five minutes",
+   "until": "Diving seals",
+   "label": "BREATH HELD",
+   "text": "5:00",
+   "sub": "LEO: 0:40"
+  },
+  {
+   "type": "note",
+   "at": "Diving seals",
+   "until": "But yours never",
+   "label": "REAL SCIENCE",
+   "text": "Diving whales slow their hearts to save oxygen. Blue whale: about 2 beats a minute."
+  },
+  {
+   "type": "warn",
+   "at": "But yours never",
+   "until": "Then, at the lake",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Your heart can't speed up."
+  },
+  {
+   "type": "choice",
+   "at": "The lifeguard is",
+   "until": "Five#2",
+   "a": "Dive in",
+   "b": "Wait for the lifeguard",
+   "pick": null
+  },
+  {
+   "type": "countdown",
+   "at": "Five#2",
+   "until": "Swim hard",
+   "from": 5
+  },
+  {
+   "type": "choice",
+   "at": "Swim hard",
+   "until": "With a heart this slow",
+   "a": "Dive in",
+   "b": "Wait for the lifeguard",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "With a heart this slow",
+   "text": "Would you dive in?",
+   "a": "DIVE",
+   "b": "WAIT"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": 0.1,
+       "pose": "think",
+       "face": "focused",
+       "dur": 0.12
+      },
+      {
+       "at": "Not sixty",
+       "pose": "shrug",
+       "face": "shocked",
+       "dur": 0.15
+      },
+      {
+       "at": "Six#2",
+       "pose": "point",
+       "face": "smug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "heart",
+     "x": 370,
+     "y": 560,
+     "scale": 0.2,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M0 34 C-50 0 -46 -38 -22 -40 C-8 -41 0 -30 0 -22 C0 -30 8 -41 22 -40 C46 -38 50 0 0 34 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/><path d='M-24 -24 Q-30 -12 -24 -4' fill='none' stroke='#FF9EA1' stroke-width='5' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": 0.05,
+       "scale": 1.4,
+       "opacity": 1,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      },
+      {
+       "at": "Six#2",
+       "scale": 1.65,
+       "dur": 0.12,
+       "sfx": "thud"
+      },
+      {
+       "at": "Six#2+0.15",
+       "scale": 1.4,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "ecg",
+     "x": 370,
+     "y": 680,
+     "opacity": 0,
+     "svg": "<path d='M-120 0 L-40 0 L-28 -40 L-14 36 L0 0 L120 0' fill='none' stroke='#C8FF4D' stroke-width='6' stroke-linejoin='round'/>",
+     "keys": [
+      {
+       "at": 0.3,
+       "opacity": 0.9,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "sixty",
+     "x": 380,
+     "y": 420,
+     "opacity": 0,
+     "scale": 1,
+     "front": true,
+     "svg": "<text x='0' y='20' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='70' fill='#F4F1FF' stroke='#141218' stroke-width='3'>60</text><path d='M-60 30 L60 -30' stroke='#E5484D' stroke-width='10' stroke-linecap='round' opacity='0' />",
+     "keys": [
+      {
+       "at": "Not sixty",
+       "opacity": 1,
+       "y": 460,
+       "dur": 0.2,
+       "sfx": "pop"
+      },
+      {
+       "at": "Six#2",
+       "y": 880,
+       "rot": 40,
+       "opacity": 0,
+       "dur": 0.5,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your doctor checks",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='300' y='560' width='150' height='110' rx='8' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M310 615 L350 615 L360 595 L372 635 L382 615 L440 615' fill='none' stroke='#E5484D' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "sit",
+     "face": "neutral",
+     "look": 1,
+     "keys": [
+      {
+       "at": "then checks again",
+       "face": "worried",
+       "look": 1,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 300,
+     "y": 812,
+     "scale": 1.2,
+     "flip": true,
+     "pose": "hold",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "your pulse",
+       "pose": "think",
+       "face": "worried",
+       "dur": 0.2
+      },
+      {
+       "at": "then checks again",
+       "pose": "facepalm",
+       "face": "shocked",
+       "dur": 0.15,
+       "sfx": "boing"
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "But underwater",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='0' y='520' width='540' height='440' fill='#1E5F86'/><path d='M0 600 L540 600 M0 700 L540 700' stroke='#2C78A4' stroke-width='3'/>",
+   "front_props": "<rect x='0' y='520' width='540' height='440' fill='#3FA7D6' opacity='.38'/><path d='M0 520 Q45 508 90 520 T180 520 T270 520 T360 520 T450 520 T540 520' fill='none' stroke='#BFEAFF' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 820,
+     "scale": 1.15,
+     "pose": "crouch",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "legend",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      },
+      {
+       "at": "five minutes",
+       "pose": "crouch",
+       "face": "smug",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 340,
+     "y": 820,
+     "scale": 1.1,
+     "flip": true,
+     "pose": "crouch",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "taps out",
+       "pose": "jump",
+       "face": "shocked",
+       "lift": 300,
+       "dur": 0.6,
+       "ease": "out",
+       "sfx": "swish"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bub1",
+     "x": 200,
+     "y": 600,
+     "opacity": 0.8,
+     "svg": "<circle r='10' fill='none' stroke='#BFEAFF' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "But underwater+0.2",
+       "y": 520,
+       "opacity": 0,
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "id": "bub2",
+     "x": 360,
+     "y": 620,
+     "opacity": 0.8,
+     "svg": "<circle r='14' fill='none' stroke='#BFEAFF' stroke-width='4'/><circle cx='18' cy='-26' r='8' fill='none' stroke='#BFEAFF' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "your friend Leo",
+       "y": 520,
+       "opacity": 0,
+       "dur": 1.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Diving seals",
+   "bg": "lab",
+   "camera": "pan_left",
+   "actors": [],
+   "objects": [
+    {
+     "id": "whale",
+     "x": 270,
+     "y": 620,
+     "scale": 1.3,
+     "svg": "<path d='M-150 0 Q-120 -60 0 -56 Q110 -52 140 -10 Q150 6 130 14 Q60 40 -60 36 Q-130 34 -150 0 Z' fill='#4F6DB8' stroke='#141218' stroke-width='4'/><path d='M140 -10 L190 -50 L180 0 L196 40 Z' fill='#4F6DB8' stroke='#141218' stroke-width='4'/><circle cx='-100' cy='-14' r='6' fill='#141218'/><path d='M-140 12 Q-60 28 40 22' fill='none' stroke='#9FB4E8' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Diving seals+0.1",
+       "y": 660,
+       "rot": 6,
+       "dur": 1.6
+      },
+      {
+       "at": "A blue",
+       "y": 640,
+       "rot": -3,
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "id": "wheart",
+     "x": 250,
+     "y": 760,
+     "scale": 0.6,
+     "svg": "<path d='M0 34 C-50 0 -46 -38 -22 -40 C-8 -41 0 -30 0 -22 C0 -30 8 -41 22 -40 C46 -38 50 0 0 34 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/><path d='M-24 -24 Q-30 -12 -24 -4' fill='none' stroke='#FF9EA1' stroke-width='5' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "two beats",
+       "scale": 0.8,
+       "dur": 0.12,
+       "sfx": "thud"
+      },
+      {
+       "at": "two beats+0.2",
+       "scale": 0.6,
+       "dur": 0.6
+      },
+      {
+       "at": "a minute#2",
+       "scale": 0.8,
+       "dur": 0.12,
+       "sfx": "thud"
+      },
+      {
+       "at": "a minute#2+0.2",
+       "scale": 0.6,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But yours never",
+   "bg": "lab",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "never speeds",
+       "face": "worried",
+       "pose": "think",
+       "dur": 0.25
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "So when you stand",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='60' y='700' width='230' height='60' rx='16' fill='#5B6CC9' stroke='#141218' stroke-width='3'/><rect x='50' y='650' width='250' height='60' rx='16' fill='#4A5AB0' stroke='#141218' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "sit",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "stand up",
+       "pose": "stand",
+       "x": 250,
+       "face": "happy",
+       "dur": 0.2
+      },
+      {
+       "at": "room goes black",
+       "pose": "fall",
+       "face": "shocked",
+       "rot": 70,
+       "x": 300,
+       "dur": 0.35,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "black",
+     "x": 270,
+     "y": 480,
+     "opacity": 0,
+     "front": true,
+     "svg": "<rect x='-300' y='-500' width='600' height='1000' fill='#000'/>",
+     "keys": [
+      {
+       "at": "too fast",
+       "opacity": 0.4,
+       "dur": 0.3
+      },
+      {
+       "at": "goes black",
+       "opacity": 0.92,
+       "dur": 0.3
+      },
+      {
+       "at": "Run for the bus-0.2",
+       "opacity": 0,
+       "dur": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Run for the bus",
+   "bg": "day_park",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 90,
+     "y": 815,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "Run for",
+       "x": 240,
+       "cycle": "run",
+       "dur": 0.9
+      },
+      {
+       "at": "knees fold",
+       "cycle": null,
+       "pose": "crouch",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "thud"
+      },
+      {
+       "at": "your brain gets",
+       "pose": "lie",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bus",
+     "x": 420,
+     "y": 740,
+     "svg": "<rect x='-110' y='-80' width='220' height='120' rx='16' fill='#FFD45C' stroke='#141218' stroke-width='4'/><rect x='-96' y='-64' width='50' height='40' rx='4' fill='#BFEAFF' stroke='#141218' stroke-width='3'/><rect x='-36' y='-64' width='50' height='40' rx='4' fill='#BFEAFF' stroke='#141218' stroke-width='3'/><rect x='24' y='-64' width='50' height='40' rx='4' fill='#BFEAFF' stroke='#141218' stroke-width='3'/><circle cx='-60' cy='42' r='18' fill='#141218'/><circle cx='60' cy='42' r='18' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "knees fold",
+       "x": 700,
+       "dur": 1.6,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then, at the lake",
+   "bg": "day_park",
+   "camera": "push",
+   "props": "<rect x='0' y='640' width='540' height='320' fill='#2F7FB3'/><path d='M0 640 Q60 628 120 640 T240 640 T360 640 T480 640 T600 640' fill='none' stroke='#BFEAFF' stroke-width='5'/><path d='M0 790 Q140 760 260 800 L260 960 L0 960 Z' fill='#C9B37E' stroke='#141218' stroke-width='3'/><path d='M250 660 L540 660' stroke='#F4F1FF' stroke-width='3' stroke-dasharray='10 8'/><circle cx='290' cy='660' r='8' fill='#E5484D' stroke='#141218' stroke-width='2'/><circle cx='370' cy='660' r='8' fill='#FFD45C' stroke='#141218' stroke-width='2'/><circle cx='450' cy='660' r='8' fill='#E5484D' stroke='#141218' stroke-width='2'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 830,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "slips under",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "swish"
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 400,
+     "y": 700,
+     "scale": 0.75,
+     "pose": "wave",
+     "face": "happy",
+     "flip": true,
+     "keys": [
+      {
+       "at": "slips under",
+       "pose": "reach_up",
+       "face": "shocked",
+       "lift": 0,
+       "dur": 0.15
+      },
+      {
+       "at": "past the rope",
+       "y": 760,
+       "dur": 0.8,
+       "ease": "in"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "splash",
+     "x": 400,
+     "y": 660,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M-30 0 Q-20 -30 -10 0 M-5 0 Q5 -40 15 0 M20 0 Q30 -28 38 0' fill='none' stroke='#BFEAFF' stroke-width='5' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "slips under",
+       "opacity": 1,
+       "dur": 0.15,
+       "sfx": "boing"
+      },
+      {
+       "at": "The lifeguard-0.3",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "front_props": "<rect x='300' y='700' width='240' height='260' fill='#2F7FB3' opacity='.85'/>"
+  },
+  {
+   "start": "The lifeguard is",
+   "bg": "day_park",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "props": "<rect x='0' y='640' width='540' height='320' fill='#2F7FB3'/><path d='M0 640 Q60 628 120 640 T240 640 T360 640 T480 640 T600 640' fill='none' stroke='#BFEAFF' stroke-width='5'/><path d='M0 790 Q140 760 260 800 L260 960 L0 960 Z' fill='#C9B37E' stroke='#141218' stroke-width='3'/><path d='M250 660 L540 660' stroke='#F4F1FF' stroke-width='3' stroke-dasharray='10 8'/><circle cx='290' cy='660' r='8' fill='#E5484D' stroke='#141218' stroke-width='2'/><circle cx='370' cy='660' r='8' fill='#FFD45C' stroke='#141218' stroke-width='2'/><circle cx='450' cy='660' r='8' fill='#E5484D' stroke='#141218' stroke-width='2'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 180,
+     "y": 830,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": 1,
+     "keys": [
+      {
+       "at": "Sam has seconds",
+       "face": "shocked",
+       "pose": "crouch",
+       "dur": 0.15
+      },
+      {
+       "at": "Four",
+       "face": "determined",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Swim hard",
+   "bg": "day_park",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='0' y='640' width='540' height='320' fill='#2F7FB3'/><path d='M0 640 Q60 628 120 640 T240 640 T360 640 T480 640 T600 640' fill='none' stroke='#BFEAFF' stroke-width='5'/><path d='M0 790 Q140 760 260 800 L260 960 L0 960 Z' fill='#C9B37E' stroke='#141218' stroke-width='3'/><path d='M250 660 L540 660' stroke='#F4F1FF' stroke-width='3' stroke-dasharray='10 8'/><circle cx='290' cy='660' r='8' fill='#E5484D' stroke='#141218' stroke-width='2'/><circle cx='370' cy='660' r='8' fill='#FFD45C' stroke='#141218' stroke-width='2'/><circle cx='450' cy='660' r='8' fill='#E5484D' stroke='#141218' stroke-width='2'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 815,
+     "scale": 1.15,
+     "pose": "crouch",
+     "face": "determined",
+     "look": 1,
+     "keys": [
+      {
+       "at": "black out",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Wait",
+       "pose": "reach_up",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "samhand",
+     "x": 420,
+     "y": 650,
+     "front": true,
+     "svg": "<path d='M0 40 L0 -10' stroke='#141218' stroke-width='8' stroke-linecap='round'/><circle cx='0' cy='-16' r='9' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "never come up",
+       "y": 690,
+       "opacity": 0.2,
+       "dur": 1.0,
+       "ease": "in"
+      }
+     ]
+    }
+   ],
+   "front_props": "<rect x='300' y='660' width='240' height='300' fill='#2F7FB3' opacity='.7'/>"
+  },
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "With a heart this slow",
+       "pose": "think",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "would you dive",
+       "pose": "point",
+       "face": "determined",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "hearte",
+     "x": 370,
+     "y": 560,
+     "scale": 1.4,
+     "opacity": 1,
+     "front": true,
+     "svg": "<path d='M0 34 C-50 0 -46 -38 -22 -40 C-8 -41 0 -30 0 -22 C0 -30 8 -41 22 -40 C46 -38 50 0 0 34 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/><path d='M-24 -24 Q-30 -12 -24 -4' fill='none' stroke='#FF9EA1' stroke-width='5' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "heart this slow",
+       "scale": 1.65,
+       "dur": 0.12,
+       "sfx": "thud"
+      },
+      {
+       "at": "heart this slow+0.15",
+       "scale": 1.4,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "ecge",
+     "x": 370,
+     "y": 680,
+     "opacity": 0.9,
+     "svg": "<path d='M-120 0 L-40 0 L-28 -40 L-14 36 L0 0 L120 0' fill='none' stroke='#C8FF4D' stroke-width='6' stroke-linejoin='round'/>",
+     "keys": []
+    }
+   ],
+   "start": "With a heart this slow"
+  }
+ ]
+}
