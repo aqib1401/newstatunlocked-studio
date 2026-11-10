@@ -43,12 +43,20 @@
   "ep": 3,
   "title": "What If You Never Blinked Again?",
   "ability": "blinking",
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep03.mp4",
   "rendered_at": "2026-11-09T22:45:00Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-10T18:02:00Z",
+    "zernio_post": "6af35adf2bf8d2622a39bdfa",
+    "first_comment": "Ugx6zAjatqPOQ5c6Mq14AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-10T18:02:00Z",
+    "zernio_post": "6af35ae32c27260fbf33e335",
+    "first_comment": null
+   }
   }
  },
  {
