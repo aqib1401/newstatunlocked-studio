@@ -50,5 +50,17 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 4,
+  "title": "What If You Could Smell 10,000x Better?",
+  "ability": "smell",
+  "status": "rendered",
+  "video": "videos/ep04.mp4",
+  "rendered_at": "2026-11-10T17:56:00Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

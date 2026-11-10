@@ -41,7 +41,7 @@
  },
  {
   "id": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Smell 10,000x Better?",
   "ability": "smell",
   "category": "senses",
@@ -59,7 +59,8 @@
    "A dog's nose is estimated to be 10,000 to 100,000 times more sensitive than ours",
    "Natural gas has no smell; companies add a rotten-egg smell so people notice leaks"
   ],
-  "visuals": "diner, smell trails drawn as colored wisps, rain cloud, garbage truck, night street, gas wisps"
+  "visuals": "diner, smell trails drawn as colored wisps, rain cloud, garbage truck, night street, gas wisps",
+  "ep": 4
  },
  {
   "id": 32,
