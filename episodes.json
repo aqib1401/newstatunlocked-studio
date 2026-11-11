@@ -85,12 +85,20 @@
   "ability": "heart rate",
   "format": "SHORT",
   "duration_s": 50.0,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep05.mp4",
   "rendered_at": "2026-11-10T22:32:02Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-11T18:04:29Z",
+    "zernio_post": "6af4ae0b75f8c61580f5468e",
+    "first_comment": "UgyE1GYY92cufWOF__d4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-11T18:04:29Z",
+    "zernio_post": "6af4ae10865354c41710b36b",
+    "first_comment": null
+   }
   }
  },
  {
