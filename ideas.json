@@ -104,7 +104,7 @@
  },
  {
   "id": 33,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Felt Everyone Else's Pain?",
   "ability": "mirror pain",
   "category": "brain",
@@ -115,7 +115,8 @@
   "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
   "facts": [
    "Mirror-touch synesthesia is real: some people feel a touch when they see someone else being touched"
-  ]
+  ],
+  "ep": 7
  },
  {
   "id": 4,

@@ -114,5 +114,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 7,
+  "title": "What If You Felt Everyone Else's Pain?",
+  "ability": "mirror pain",
+  "format": "SHORT",
+  "duration_s": 49.4,
+  "status": "rendered",
+  "video": "videos/ep07.mp4",
+  "rendered_at": "2026-11-11T22:29:40Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

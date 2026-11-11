@@ -1,0 +1,1102 @@
+{
+ "ep": 7,
+ "script": "What if you felt everyone else's pain? Not sympathy. The real thing. Your friend Leo stubs his toe, and you're the one hopping around the kitchen. At first, it's a superpower. Your mom swears she's fine, but you feel a stab low on her right side, so you drag her to the doctor. It's her appendix, and you caught it in time. But then crowds start to hurt. Every scraped knee in the room, all at once. Some people feel a touch just by watching someone else get touched. It's called mirror-touch synesthesia. Yours works for pain. Then your little brother Sam falls off his bike, and at the hospital, the doctor has to push his broken arm back into place. Sam squeezes your hand. The doctor counts. Three. Two. If you flinch, his arm moves. If you let go, he's alone. Feeling all of it, would you hold on?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "title": "What If You Felt Everyone Else's Pain?",
+ "thumbnail": "you're the one hopping",
+ "music": [
+  {
+   "track": "music/syntheticity.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/surreptitious.mp3",
+   "at": "But then crowds"
+  },
+  {
+   "track": "music/hidden-tears.mp3",
+   "at": "Then your little"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "highlights": {
+  "everyone else's pain": "amber",
+  "hopping": "green",
+  "superpower": "green",
+  "appendix": "green",
+  "all at once": "amber",
+  "mirror-touch synesthesia": "green",
+  "broken arm": "amber",
+  "hold on": "green"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if you felt",
+   "until": "Your friend Leo",
+   "name": "PAIN SHARING",
+   "mult": "×ALL",
+   "tag": "100%"
+  },
+  {
+   "type": "marker",
+   "at": "caught it in time",
+   "until": "But then crowds",
+   "label": "MOM'S APPENDIX",
+   "text": "SAVED",
+   "sub": "CAUGHT IN TIME",
+   "size": 70
+  },
+  {
+   "type": "warn",
+   "at": "But then crowds",
+   "until": "Some people",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Every pain nearby is yours."
+  },
+  {
+   "type": "note",
+   "at": "Some people",
+   "until": "Then your little",
+   "label": "REAL SCIENCE",
+   "text": "Mirror-touch synesthesia: seeing a touch makes some people feel it."
+  },
+  {
+   "type": "countdown",
+   "at": "Three",
+   "until": "end:Two+0.5",
+   "from": 3
+  },
+  {
+   "type": "choice",
+   "at": "If you flinch",
+   "until": "Feeling all of it",
+   "a": "Hold his hand",
+   "b": "Let go",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Feeling all of it",
+   "text": "Would you hold on?",
+   "a": "HOLD ON",
+   "b": "LET GO"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": 0.15,
+       "pose": "crouch",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "thud"
+      },
+      {
+       "at": "Not sympathy",
+       "pose": "stand",
+       "face": "worried",
+       "dur": 0.2
+      },
+      {
+       "at": "The real thing",
+       "pose": "slump",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "heartbreak",
+     "x": 375,
+     "y": 560,
+     "scale": 0.2,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M0 34 C-50 0 -46 -38 -22 -40 C-8 -41 0 -30 0 -22 C0 -30 8 -41 22 -40 C46 -38 50 0 0 34 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/><path d='M0 -22 L-8 -4 L6 6 L-4 30' fill='none' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": 0.02,
+       "scale": 1.4,
+       "opacity": 1,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      },
+      {
+       "at": "The real thing",
+       "scale": 1.7,
+       "dur": 0.12,
+       "sfx": "buzz"
+      },
+      {
+       "at": "The real thing+0.15",
+       "scale": 1.4,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "b1",
+     "x": 120,
+     "y": 560,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#FFB547' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "The real thing",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "The real thing+0.25",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "b2",
+     "x": 230,
+     "y": 600,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "The real thing+0.1",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "The real thing+0.35",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your friend Leo",
+   "bg": "warm_interior",
+   "camera": "static",
+   "props": "<rect x='60' y='640' width='420' height='16' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='90' y='656' width='14' height='156' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='436' y='656' width='14' height='156' fill='#6B4A3A' stroke='#141218' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 340,
+     "y": 812,
+     "scale": 1.15,
+     "flip": true,
+     "pose": "walk_a",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "Your friend Leo",
+       "x": 300,
+       "dur": 0.6,
+       "cycle": "walk"
+      },
+      {
+       "at": "stubs",
+       "cycle": null,
+       "pose": "stand",
+       "face": "bored",
+       "sfx": "thud",
+       "dur": 0.1
+      },
+      {
+       "at": "hopping",
+       "pose": "shrug",
+       "face": "bored",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "stubs+0.15",
+       "pose": "jump",
+       "face": "shocked",
+       "lift": 40,
+       "dur": 0.12,
+       "sfx": "boing"
+      },
+      {
+       "at": "you're the one",
+       "lift": 0,
+       "dur": 0.15
+      },
+      {
+       "at": "hopping",
+       "lift": 45,
+       "dur": 0.15,
+       "x": 130
+      },
+      {
+       "at": "around the",
+       "lift": 0,
+       "dur": 0.15
+      },
+      {
+       "at": "kitchen",
+       "lift": 45,
+       "dur": 0.15,
+       "x": 160,
+       "sfx": "boing"
+      },
+      {
+       "at": "kitchen+0.3",
+       "lift": 0,
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "tb",
+     "x": 300,
+     "y": 780,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#FFB547' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "stubs",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "stubs+0.25",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hb",
+     "x": 120,
+     "y": 770,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "stubs+0.15",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "stubs+0.40",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "At first",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='300' y='520' width='170' height='120' rx='14' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M330 640 L320 670 L360 640 Z' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><text x='385' y='572' text-anchor='middle' font-family='Arial Black,Arial' font-size='22' fill='#141218'>MOM:</text><text x='385' y='610' text-anchor='middle' font-family='Arial Black,Arial' font-size='26' fill='#141218'>I'M FINE!</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "cheer",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "Your mom swears",
+       "pose": "think",
+       "face": "focused",
+       "dur": 0.2
+      },
+      {
+       "at": "you feel a stab",
+       "pose": "slump",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "buzz"
+      },
+      {
+       "at": "so you drag",
+       "pose": "point",
+       "face": "determined",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sb",
+     "x": 215,
+     "y": 700,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "you feel a stab",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "you feel a stab+0.25",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "It's her appendix",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='290' y='470' width='160' height='190' rx='6' fill='#1B2433' stroke='#141218' stroke-width='4'/><path d='M370 500 Q330 540 340 600 Q360 640 400 610 Q420 560 370 500 Z' fill='none' stroke='#BFEAFF' stroke-width='4'/><circle cx='395' cy='612' r='12' fill='#E5484D'/>",
+   "actors": [
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 260,
+     "y": 812,
+     "scale": 1.2,
+     "flip": true,
+     "pose": "point",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "caught it",
+       "pose": "point",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "caught it",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "But then crowds",
+   "bg": "stadium",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "id": "e1",
+     "char": "extra",
+     "shirt": "#7A8BA6",
+     "x": 340,
+     "y": 800,
+     "scale": 1.0,
+     "flip": true,
+     "pose": "run_a",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "But then crowds+0.2",
+       "x": 420,
+       "dur": 0.6,
+       "cycle": "run"
+      },
+      {
+       "at": "scraped knee",
+       "cycle": null,
+       "pose": "fall",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "char": "extra",
+     "shirt": "#A67A8B",
+     "x": 440,
+     "y": 800,
+     "scale": 1.0,
+     "pose": "walk_a",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "in the room",
+       "pose": "crouch",
+       "face": "worried",
+       "dur": 0.15,
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "start to hurt",
+       "pose": "slump",
+       "face": "worried",
+       "dur": 0.2
+      },
+      {
+       "at": "scraped knee+0.1",
+       "pose": "crouch",
+       "face": "shocked",
+       "dur": 0.12
+      },
+      {
+       "at": "all at once",
+       "pose": "lie",
+       "face": "shocked",
+       "dur": 0.3,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "c1",
+     "x": 110,
+     "y": 560,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "scraped knee+0.1",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "scraped knee+0.35",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "c2",
+     "x": 200,
+     "y": 520,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#FFB547' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "in the room",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "in the room+0.25",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "c3",
+     "x": 90,
+     "y": 650,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "all at once",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "all at once+0.25",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "c4",
+     "x": 230,
+     "y": 640,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#FFB547' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "all at once+0.1",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "all at once+0.35",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Some people",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "e3",
+     "char": "extra",
+     "shirt": "#7A8BA6",
+     "x": 380,
+     "y": 840,
+     "scale": 1.2,
+     "flip": true,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "get touched",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "focused",
+     "look": 1,
+     "keys": [
+      {
+       "at": "get touched+0.1",
+       "face": "shocked",
+       "pose": "shrug",
+       "dur": 0.15,
+       "sfx": "glitch"
+      },
+      {
+       "at": "Yours works for pain",
+       "pose": "slump",
+       "face": "worried",
+       "dur": 0.2,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "feather",
+     "x": 470,
+     "y": 480,
+     "rot": -30,
+     "front": true,
+     "svg": "<path d='M0 -40 Q22 -10 4 40 Q-20 10 0 -40 Z' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 -36 L2 40' stroke='#141218' stroke-width='2'/>",
+     "keys": [
+      {
+       "at": "Some people+0.2",
+       "x": 400,
+       "y": 620,
+       "rot": 10,
+       "dur": 1.2
+      },
+      {
+       "at": "get touched",
+       "x": 395,
+       "y": 640,
+       "rot": -10,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "glow1",
+     "x": 395,
+     "y": 650,
+     "opacity": 0,
+     "svg": "<circle r='26' fill='#C8FF4D' opacity='.6'/>",
+     "keys": [
+      {
+       "at": "get touched",
+       "opacity": 1,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "glow2",
+     "x": 150,
+     "y": 670,
+     "opacity": 0,
+     "svg": "<circle r='26' fill='#C8FF4D' opacity='.6'/>",
+     "keys": [
+      {
+       "at": "get touched+0.1",
+       "opacity": 1,
+       "dur": 0.2
+      },
+      {
+       "at": "Yours works for pain",
+       "opacity": 0,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "lb",
+     "x": 150,
+     "y": 660,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "Yours works for pain",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "Yours works for pain+0.25",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then your little",
+   "bg": "day_park",
+   "camera": "pan_left",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 420,
+     "y": 815,
+     "scale": 1.0,
+     "flip": true,
+     "pose": "sit",
+     "face": "happy",
+     "lift": 40,
+     "keys": [
+      {
+       "at": "Then your little+0.2",
+       "x": 300,
+       "dur": 0.9
+      },
+      {
+       "at": "falls off",
+       "pose": "fall",
+       "face": "shocked",
+       "lift": 0,
+       "rot": -30,
+       "dur": 0.25,
+       "sfx": "thud"
+      },
+      {
+       "at": "his bike+0.2",
+       "pose": "lie",
+       "face": "sad",
+       "rot": 0,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 815,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "falls off",
+       "pose": "crouch",
+       "face": "shocked",
+       "dur": 0.12
+      },
+      {
+       "at": "falls off+0.15",
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bike",
+     "x": 420,
+     "y": 770,
+     "svg": "<circle cx='-40' cy='20' r='26' fill='none' stroke='#141218' stroke-width='6'/><circle cx='40' cy='20' r='26' fill='none' stroke='#141218' stroke-width='6'/><path d='M-40 20 L-6 -16 L30 -16 L40 20 M-6 -16 L4 20 L-40 20 M30 -16 L26 -30' fill='none' stroke='#E5484D' stroke-width='6' stroke-linejoin='round'/>",
+     "keys": [
+      {
+       "at": "Then your little+0.2",
+       "x": 300,
+       "dur": 0.9
+      },
+      {
+       "at": "falls off",
+       "x": 360,
+       "rot": 70,
+       "y": 790,
+       "dur": 0.35,
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "arm",
+     "x": 110,
+     "y": 640,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "falls off+0.15",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "falls off+0.40",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "and at the hospital",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='250' y='690' width='230' height='22' rx='8' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='262' y='712' width='12' height='100' fill='#9AA3B5'/><rect x='456' y='712' width='12' height='100' fill='#9AA3B5'/><path d='M60 460 L60 520 M30 490 L90 490' stroke='#E5484D' stroke-width='16'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 360,
+     "y": 702,
+     "scale": 1.0,
+     "flip": true,
+     "pose": "sit",
+     "face": "sad",
+     "lift": 0,
+     "keys": [
+      {
+       "at": "Sam squeezes",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 470,
+     "y": 812,
+     "scale": 1.15,
+     "flip": true,
+     "pose": "idle",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "push his broken",
+       "pose": "reach_up",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Sam squeezes",
+       "pose": "hold",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Sam squeezes",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "props": "<rect x='250' y='690' width='230' height='22' rx='8' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='262' y='712' width='12' height='100' fill='#9AA3B5'/><rect x='456' y='712' width='12' height='100' fill='#9AA3B5'/><path d='M60 460 L60 520 M30 490 L90 490' stroke='#E5484D' stroke-width='16'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 340,
+     "y": 702,
+     "scale": 1.0,
+     "flip": true,
+     "pose": "sit",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "The doctor counts",
+       "face": "sad",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "hold",
+     "face": "worried",
+     "look": 1,
+     "keys": [
+      {
+       "at": "The doctor counts",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Three",
+   "bg": "cool_interior",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='250' y='690' width='230' height='22' rx='8' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='262' y='712' width='12' height='100' fill='#9AA3B5'/><rect x='456' y='712' width='12' height='100' fill='#9AA3B5'/><path d='M60 460 L60 520 M30 490 L90 490' stroke='#E5484D' stroke-width='16'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 360,
+     "y": 702,
+     "scale": 1.0,
+     "flip": true,
+     "pose": "sit",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "If you let go",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 470,
+     "y": 812,
+     "scale": 1.15,
+     "flip": true,
+     "pose": "reach_up",
+     "face": "focused",
+     "keys": []
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "hold",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "If you flinch",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "If you let go",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "w1",
+     "x": 200,
+     "y": 560,
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "svg": "<path d='M-6 -34 L14 -34 L2 -6 L18 -6 L-14 34 L-4 4 L-18 4 Z' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "If you flinch",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "If you flinch+0.25",
+       "scale": 0.9,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Feeling all of it",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "would you hold on",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "heartbreak",
+     "x": 375,
+     "y": 560,
+     "scale": 1.4,
+     "front": true,
+     "svg": "<path d='M0 34 C-50 0 -46 -38 -22 -40 C-8 -41 0 -30 0 -22 C0 -30 8 -41 22 -40 C46 -38 50 0 0 34 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/><path d='M0 -22 L-8 -4 L6 6 L-4 30' fill='none' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Feeling all of it+0.3",
+       "scale": 1.55,
+       "dur": 0.4
+      },
+      {
+       "at": "would you",
+       "scale": 1.4,
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
