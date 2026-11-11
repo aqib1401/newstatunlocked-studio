@@ -81,7 +81,7 @@
  },
  {
   "id": 3,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Grew 10x Taller?",
   "ability": "height",
   "category": "body",
@@ -99,7 +99,8 @@
    "Scale an animal up 10x and its weight grows about 1,000x while bone strength only grows about 100x (the square-cube law)",
    "The tallest man ever measured, at about 2.72 meters, needed leg braces to walk"
   ],
-  "visuals": "tiny city, bus at ankle height, streetlight, crane, balcony"
+  "visuals": "tiny city, bus at ankle height, streetlight, crane, balcony",
+  "ep": 6
  },
  {
   "id": 33,

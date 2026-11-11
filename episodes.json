@@ -92,5 +92,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 6,
+  "title": "What If You Grew 10x Taller?",
+  "ability": "height",
+  "format": "LONG",
+  "duration_s": 89.8,
+  "status": "rendered",
+  "video": "videos/ep06.mp4",
+  "rendered_at": "2026-11-11T18:03:30Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

@@ -1,0 +1,1505 @@
+{
+ "ep": 6,
+ "script": "What if you were ten times taller? Not basketball tall. Seventeen meters, taller than a five-story building. Day one, you step over a school bus on your way to class. Not onto it. Over it. Then on day five, an apartment block catches fire. You kneel beside it and lift twelve people out of the windows, one by one. The whole street chants for you. But that night, your knees throb, and every step feels like carrying a truck. Because here's what nobody tells you. Grow ten times taller, and you get about a thousand times heavier, but your bones only get about a hundred times stronger. That's why elephants walk on legs like tree trunks. The tallest man in history wasn't even three meters tall, and he still needed leg braces to walk. You're six times taller than him. Your doctor studies your x-ray and goes pale. One more kneel, and your knees will snap. You limp for four days. On day nine, the old river bridge cracks in half. Two cars slide off opposite ends into the water. To reach either one, you have to kneel. In one car, your best friend Mia, who never laughed at you. In the other, a little girl, alone, banging on the window. Mia yells, Don't leave me! Ten seconds. Nine. Eight. Both cars are filling with water. Seven. Six. Five. Four. Your best friend, or a stranger's little girl. Ten times taller, and one kneel left. Who do you save?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.0,
+ "title": "What If You Grew 10x Taller?",
+ "thumbnail": "Not onto it",
+ "music": [
+  {
+   "track": "music/from-here.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/ominosity.mp3",
+   "at": "But that night"
+  },
+  {
+   "track": "music/unknown.mp3",
+   "at": "On day nine"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "highlights": {
+  "ten times taller": "green",
+  "Seventeen meters": "green",
+  "Over it": "green",
+  "twelve people": "green",
+  "knees throb": "amber",
+  "thousand times heavier": "amber",
+  "hundred times stronger": "amber",
+  "leg braces": "amber",
+  "knees will snap": "amber",
+  "one kneel left": "amber",
+  "Who do you save": "green"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if you were",
+   "until": "Seventeen meters",
+   "name": "HEIGHT",
+   "mult": "×10",
+   "tag": "17 M"
+  },
+  {
+   "type": "marker",
+   "at": "Day one",
+   "until": "Not onto it",
+   "label": "DAY",
+   "text": "1"
+  },
+  {
+   "type": "marker",
+   "at": "Then on day five",
+   "until": "You kneel beside",
+   "label": "DAY",
+   "text": "5"
+  },
+  {
+   "type": "marker",
+   "at": "The whole street",
+   "until": "But that night",
+   "label": "RESCUED",
+   "text": "12",
+   "sub": "LIVES SAVED",
+   "color": "#C8FF4D"
+  },
+  {
+   "type": "warn",
+   "at": "But that night",
+   "until": "Because",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Your knees can't carry you."
+  },
+  {
+   "type": "compare",
+   "at": "Grow ten times",
+   "until": "why elephants",
+   "label": "10× TALLER · WHAT GROWS",
+   "a": [
+    "Your weight",
+    "×1000",
+    1.0
+   ],
+   "b": [
+    "Bone strength",
+    "×100",
+    0.1
+   ]
+  },
+  {
+   "type": "note",
+   "at": "The tallest man",
+   "until": "Your doctor",
+   "label": "REAL SCIENCE",
+   "text": "Tallest man ever: 2.72 m. Even he needed leg braces to walk."
+  },
+  {
+   "type": "warn",
+   "at": "One more kneel",
+   "until": "You limp",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "One more kneel. Knees snap."
+  },
+  {
+   "type": "marker",
+   "at": "On day nine",
+   "until": "Two cars slide",
+   "label": "DAY",
+   "text": "9"
+  },
+  {
+   "type": "choice",
+   "at": "To reach either",
+   "until": "Ten seconds",
+   "a": "Mia",
+   "b": "The little girl",
+   "pick": null
+  },
+  {
+   "type": "countdown",
+   "at": "Ten seconds",
+   "until": "Your best friend#2",
+   "from": 10
+  },
+  {
+   "type": "choice",
+   "at": "Your best friend#2",
+   "until": "Ten times taller#3",
+   "a": "Mia",
+   "b": "The little girl",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Ten times taller#3",
+   "text": "Mia or the little girl?",
+   "a": "MIA",
+   "b": "THE GIRL"
+  }
+ ],
+ "sfx": [
+  {
+   "name": "crowd",
+   "at": "The whole street",
+   "gain": 0.8
+  }
+ ],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "props": "<rect x='395' y='690' width='10' height='150' fill='#A9A3C9' stroke='#141218' stroke-width='3'/><rect x='350' y='660' width='70' height='46' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='370' cy='712' rx='24' ry='6' fill='none' stroke='#F28A3D' stroke-width='5'/><path d='M350 714 L358 740 L382 740 L390 714' fill='none' stroke='#F4F1FF' stroke-width='2'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": 0.35,
+       "face": "shocked",
+       "look": -0.5,
+       "dur": 0.1
+      },
+      {
+       "at": 0.75,
+       "pose": "facepalm",
+       "face": "bored",
+       "dur": 0.15
+      },
+      {
+       "at": "Not basketball",
+       "pose": "shrug",
+       "face": "smug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ball",
+     "x": 175,
+     "y": -40,
+     "svg": "<circle r='16' fill='#F28A3D' stroke='#141218' stroke-width='3'/><path d='M-16 0 L16 0 M0 -16 L0 16' stroke='#141218' stroke-width='2'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": 0.0,
+       "y": 520,
+       "dur": 0.45,
+       "ease": "in",
+       "sfx": "boing"
+      },
+      {
+       "at": 0.45,
+       "x": 370,
+       "y": 700,
+       "arc": 140,
+       "dur": 0.8,
+       "ease": "linear"
+      },
+      {
+       "at": 1.25,
+       "x": 395,
+       "y": 820,
+       "dur": 0.35,
+       "ease": "in",
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "x10",
+     "x": 330,
+     "y": 470,
+     "opacity": 0,
+     "svg": "<text x='0' y='20' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='90' fill='#C8FF4D' stroke='#141218' stroke-width='3'>×10</text>",
+     "front": true,
+     "keys": [
+      {
+       "at": "ten times taller",
+       "opacity": 1,
+       "y": 500,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      },
+      {
+       "at": "Not basketball",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Seventeen meters",
+   "bg": "day_park",
+   "camera": "pull",
+   "props": "<rect x='290' y='640' width='140' height='185' fill='#6B5E8F' stroke='#141218' stroke-width='4'/><rect x='304' y='652.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='304' y='685.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='304' y='718.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='304' y='751.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='304' y='784.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='338' y='652.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='338' y='685.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='338' y='718.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='338' y='751.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='338' y='784.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='372' y='652.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='372' y='685.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='372' y='718.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='372' y='751.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='372' y='784.0' width='16' height='20' rx='2' fill='#FFE2B0'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 825,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "look": 1,
+     "keys": [
+      {
+       "at": "taller than a",
+       "pose": "point",
+       "face": "smug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ruler",
+     "x": 470,
+     "y": 690,
+     "opacity": 0,
+     "svg": "<path d='M0 -130 L0 130 M-14 -116 L0 -130 L14 -116 M-14 116 L0 130 L14 116' stroke='#C8FF4D' stroke-width='6' fill='none'/><g transform='translate(-50,0)'><text x='0' y='20' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='34' fill='#C8FF4D' stroke='#141218' stroke-width='3'>17 M</text></g>",
+     "keys": [
+      {
+       "at": "Seventeen meters+0.1",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Day one",
+   "bg": "day_park",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 90,
+     "y": 825,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "look": 1,
+     "keys": [
+      {
+       "at": "Day one+0.3",
+       "x": 170,
+       "dur": 1.6,
+       "cycle": "walk"
+      },
+      {
+       "at": "Not onto it",
+       "cycle": null,
+       "pose": "stand",
+       "face": "focused",
+       "dur": 0.12
+      },
+      {
+       "at": "Over it",
+       "x": 390,
+       "arc": 90,
+       "pose": "jump",
+       "dur": 0.6,
+       "sfx": "swish"
+      },
+      {
+       "at": "Over it+0.6",
+       "pose": "idle",
+       "face": "smug",
+       "dur": 0.15,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bus",
+     "x": 290,
+     "y": 795,
+     "svg": "<rect x='-70' y='-30' width='140' height='50' rx='8' fill='#F2C94C' stroke='#141218' stroke-width='4'/><rect x='-60' y='-22' width='18' height='16' rx='2' fill='#BFEAFF' stroke='#141218' stroke-width='2'/><rect x='-34' y='-22' width='18' height='16' rx='2' fill='#BFEAFF' stroke='#141218' stroke-width='2'/><rect x='-8' y='-22' width='18' height='16' rx='2' fill='#BFEAFF' stroke='#141218' stroke-width='2'/><rect x='18' y='-22' width='18' height='16' rx='2' fill='#BFEAFF' stroke='#141218' stroke-width='2'/><rect x='44' y='-22' width='18' height='16' rx='2' fill='#BFEAFF' stroke='#141218' stroke-width='2'/><circle cx='-40' cy='22' r='11' fill='#141218'/><circle cx='42' cy='22' r='11' fill='#141218'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "Over it+0.6",
+       "rot": -4,
+       "dur": 0.1
+      },
+      {
+       "at": "Over it+0.7",
+       "rot": 0,
+       "dur": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then on day five",
+   "bg": "night_city",
+   "camera": "push",
+   "props": "<rect x='270' y='600' width='170' height='215' fill='#4A3F66' stroke='#141218' stroke-width='4'/><rect x='284' y='612.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='284' y='651.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='284' y='690.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='284' y='729.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='284' y='768.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='612.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='651.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='690.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='729.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='768.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='612.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='651.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='690.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='729.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='768.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='612.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='651.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='690.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='729.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='768.0' width='16' height='20' rx='2' fill='#FFE2B0'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 1,
+     "keys": [
+      {
+       "at": "catches fire",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fl0",
+     "x": 310,
+     "y": 660,
+     "scale": 0.7,
+     "front": true,
+     "svg": "<path d='M0 0 C-30 -10 -24 -50 -6 -70 C-8 -50 8 -46 6 -66 C30 -40 26 -6 0 0 Z' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><path d='M0 -6 C-12 -12 -10 -32 0 -42 C10 -30 12 -12 0 -6 Z' fill='#FFE2B0'/>",
+     "keys": [
+      {
+       "at": "day five",
+       "scale": 0.875,
+       "dur": 0.5
+      },
+      {
+       "at": "catches fire",
+       "scale": 1.0499999999999998,
+       "dur": 0.4,
+       "sfx": "whoosh"
+      }
+     ]
+    },
+    {
+     "id": "fl1",
+     "x": 400,
+     "y": 700,
+     "scale": 0.8,
+     "front": true,
+     "svg": "<path d='M0 0 C-30 -10 -24 -50 -6 -70 C-8 -50 8 -46 6 -66 C30 -40 26 -6 0 0 Z' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><path d='M0 -6 C-12 -12 -10 -32 0 -42 C10 -30 12 -12 0 -6 Z' fill='#FFE2B0'/>",
+     "keys": [
+      {
+       "at": "day five",
+       "scale": 1.0,
+       "dur": 0.5
+      },
+      {
+       "at": "catches fire",
+       "scale": 1.2000000000000002,
+       "dur": 0.4,
+       "sfx": "whoosh"
+      }
+     ]
+    },
+    {
+     "id": "fl2",
+     "x": 350,
+     "y": 610,
+     "scale": 0.6,
+     "front": true,
+     "svg": "<path d='M0 0 C-30 -10 -24 -50 -6 -70 C-8 -50 8 -46 6 -66 C30 -40 26 -6 0 0 Z' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><path d='M0 -6 C-12 -12 -10 -32 0 -42 C10 -30 12 -12 0 -6 Z' fill='#FFE2B0'/>",
+     "keys": [
+      {
+       "at": "day five",
+       "scale": 0.75,
+       "dur": 0.5
+      },
+      {
+       "at": "catches fire",
+       "scale": 0.8999999999999999,
+       "dur": 0.4,
+       "sfx": "whoosh"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You kneel beside",
+   "bg": "night_city",
+   "camera": "static",
+   "props": "<rect x='270' y='600' width='170' height='215' fill='#4A3F66' stroke='#141218' stroke-width='4'/><rect x='284' y='612.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='284' y='651.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='284' y='690.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='284' y='729.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='284' y='768.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='612.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='651.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='690.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='729.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='318' y='768.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='612.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='651.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='690.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='729.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='352' y='768.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='612.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='651.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='690.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='729.0' width='16' height='20' rx='2' fill='#FFE2B0'/><rect x='386' y='768.0' width='16' height='20' rx='2' fill='#FFE2B0'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 210,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "determined",
+     "look": 1,
+     "keys": [
+      {
+       "at": "You kneel",
+       "pose": "crouch",
+       "dur": 0.3,
+       "sfx": "thud"
+      },
+      {
+       "at": "lift twelve",
+       "pose": "reach_up",
+       "dur": 0.25
+      },
+      {
+       "at": "one by one",
+       "pose": "crouch",
+       "dur": 0.25
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fl0",
+     "x": 310,
+     "y": 660,
+     "scale": 0.7,
+     "front": true,
+     "svg": "<path d='M0 0 C-30 -10 -24 -50 -6 -70 C-8 -50 8 -46 6 -66 C30 -40 26 -6 0 0 Z' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><path d='M0 -6 C-12 -12 -10 -32 0 -42 C10 -30 12 -12 0 -6 Z' fill='#FFE2B0'/>",
+     "keys": []
+    },
+    {
+     "id": "fl1",
+     "x": 400,
+     "y": 700,
+     "scale": 0.8,
+     "front": true,
+     "svg": "<path d='M0 0 C-30 -10 -24 -50 -6 -70 C-8 -50 8 -46 6 -66 C30 -40 26 -6 0 0 Z' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><path d='M0 -6 C-12 -12 -10 -32 0 -42 C10 -30 12 -12 0 -6 Z' fill='#FFE2B0'/>",
+     "keys": []
+    },
+    {
+     "id": "fl2",
+     "x": 350,
+     "y": 610,
+     "scale": 0.6,
+     "front": true,
+     "svg": "<path d='M0 0 C-30 -10 -24 -50 -6 -70 C-8 -50 8 -46 6 -66 C30 -40 26 -6 0 0 Z' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><path d='M0 -6 C-12 -12 -10 -32 0 -42 C10 -30 12 -12 0 -6 Z' fill='#FFE2B0'/>",
+     "keys": []
+    },
+    {
+     "id": "p0",
+     "x": 300,
+     "y": 690,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#F28A3D'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "You kneel+0.2",
+       "x": 70,
+       "y": 812,
+       "arc": 60,
+       "dur": 0.7,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "p1",
+     "x": 370,
+     "y": 740,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#9B7BF0'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "lift twelve+0.2",
+       "x": 100,
+       "y": 812,
+       "arc": 60,
+       "dur": 0.7,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "x": 410,
+     "y": 650,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#3FBF8A'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "out of the windows+0.2",
+       "x": 130,
+       "y": 812,
+       "arc": 60,
+       "dur": 0.7,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "x": 330,
+     "y": 770,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#F2C94C'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "one by one+0.2",
+       "x": 160,
+       "y": 812,
+       "arc": 60,
+       "dur": 0.7,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The whole street",
+   "bg": "night_city",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "The whole street",
+       "pose": "cheer",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "c0",
+     "x": 300,
+     "y": 812,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#F28A3D'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "The whole street+0.0",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "The whole street+0.3",
+       "y": 812,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.0",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.3",
+       "y": 812,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "c1",
+     "x": 335,
+     "y": 812,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#9B7BF0'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "The whole street+0.1",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "The whole street+0.4",
+       "y": 812,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.1",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.4",
+       "y": 812,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "c2",
+     "x": 370,
+     "y": 812,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#3FBF8A'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "The whole street+0.2",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "The whole street+0.5",
+       "y": 812,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.2",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.5",
+       "y": 812,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "c3",
+     "x": 405,
+     "y": 812,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#F2C94C'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "The whole street+0.3",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "The whole street+0.6",
+       "y": 812,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.3",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.6",
+       "y": 812,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "c4",
+     "x": 440,
+     "y": 812,
+     "svg": "<circle cx='0' cy='-30' r='7' fill='#141218'/><path d='M0 -23 L0 -6 M0 -6 L-6 6 M0 -6 L6 6 M-8 -16 L8 -16' stroke='#141218' stroke-width='4' stroke-linecap='round'/><rect x='-5' y='-22' width='10' height='12' fill='#E5484D'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "The whole street+0.4",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "The whole street+0.7",
+       "y": 812,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.4",
+       "y": 790,
+       "dur": 0.2
+      },
+      {
+       "at": "chants for you+0.7",
+       "y": 812,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But that night",
+   "bg": "dusk",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 820,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": 1,
+     "keys": [
+      {
+       "at": "But that night+0.2",
+       "x": 200,
+       "dur": 1.8,
+       "cycle": "walk"
+      },
+      {
+       "at": "your knees throb",
+       "cycle": null,
+       "pose": "tired",
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "every step",
+       "x": 260,
+       "dur": 1.4,
+       "cycle": "walk"
+      },
+      {
+       "at": "carrying a truck",
+       "cycle": null,
+       "pose": "carry",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "truck",
+     "x": 270,
+     "y": -80,
+     "svg": "<rect x='-60' y='-34' width='86' height='52' rx='4' fill='#E5484D' stroke='#141218' stroke-width='4'/><rect x='26' y='-18' width='36' height='36' rx='4' fill='#E5484D' stroke='#141218' stroke-width='4'/><rect x='34' y='-12' width='20' height='14' fill='#BFEAFF'/><circle cx='-38' cy='22' r='11' fill='#141218'/><circle cx='42' cy='22' r='11' fill='#141218'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "carrying a truck",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -50,
+       "dur": 0.35,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Because",
+   "bg": "lab",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.3,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": "nobody tells you",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Grow ten times",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 840,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "worried",
+     "look": 1,
+     "keys": [
+      {
+       "at": "thousand times heavier",
+       "face": "shocked",
+       "dur": 0.15
+      },
+      {
+       "at": "but your bones",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "blk",
+     "x": 350,
+     "y": 520,
+     "scale": 0.3,
+     "opacity": 0,
+     "svg": "<rect x='-60' y='-60' width='120' height='120' fill='#E5484D' stroke='#141218' stroke-width='5'/><g transform='translate(0,-4) scale(.45)'><text x='0' y='20' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='60' fill='#F4F1FF' stroke='#141218' stroke-width='3'>×1000</text></g>",
+     "front": true,
+     "keys": [
+      {
+       "at": "thousand times heavier",
+       "scale": 1.0,
+       "opacity": 1,
+       "y": 560,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "bn",
+     "x": 350,
+     "y": 760,
+     "scale": 0.4,
+     "opacity": 0,
+     "svg": "<path d='M-60 0 L60 0' stroke='#E9F4EF' stroke-width='22' stroke-linecap='round'/><circle cx='-64' cy='-10' r='14' fill='#E9F4EF'/><circle cx='-64' cy='10' r='14' fill='#E9F4EF'/><circle cx='64' cy='-10' r='14' fill='#E9F4EF'/><circle cx='64' cy='10' r='14' fill='#E9F4EF'/><path d='M-6 -12 L6 0 L-4 12' stroke='#FF8A8A' stroke-width='4' fill='none'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "bones only",
+       "scale": 0.9,
+       "opacity": 1,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      },
+      {
+       "at": "hundred times stronger+0.4",
+       "rot": 8,
+       "dur": 0.1,
+       "sfx": "glitch"
+      },
+      {
+       "at": "hundred times stronger+0.5",
+       "rot": -8,
+       "dur": 0.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "why elephants",
+   "bg": "day_park",
+   "camera": "pan_left",
+   "actors": [],
+   "objects": [
+    {
+     "id": "ele",
+     "x": 230,
+     "y": 720,
+     "scale": 1.15,
+     "svg": "<path d='M-110 -20 Q-110 -90 -10 -92 Q80 -92 90 -30 L90 10 L-110 10 Z' fill='#8C8FA8' stroke='#141218' stroke-width='4'/><rect x='-100' y='0' width='38' height='90' rx='6' fill='#8C8FA8' stroke='#141218' stroke-width='4'/><rect x='-50' y='0' width='38' height='90' rx='6' fill='#8C8FA8' stroke='#141218' stroke-width='4'/><rect x='10' y='0' width='38' height='90' rx='6' fill='#8C8FA8' stroke='#141218' stroke-width='4'/><rect x='52' y='0' width='38' height='90' rx='6' fill='#8C8FA8' stroke='#141218' stroke-width='4'/><circle cx='110' cy='-50' r='42' fill='#8C8FA8' stroke='#141218' stroke-width='4'/><path d='M138 -30 Q160 20 140 70' fill='none' stroke='#141218' stroke-width='16' stroke-linecap='round'/><path d='M138 -30 Q160 20 140 70' fill='none' stroke='#8C8FA8' stroke-width='10' stroke-linecap='round'/><path d='M84 -76 Q60 -40 88 -14' fill='#7A7D96' stroke='#141218' stroke-width='3'/><circle cx='122' cy='-60' r='5' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "why elephants+0.1",
+       "x": 260,
+       "rot": 2,
+       "dur": 0.8
+      },
+      {
+       "at": "legs like",
+       "x": 290,
+       "rot": -2,
+       "dur": 0.8,
+       "sfx": "thud"
+      },
+      {
+       "at": "tree trunks",
+       "rot": 0,
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The tallest man",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "man",
+     "char": "extra",
+     "shirt": "#7A8CA8",
+     "x": 380,
+     "y": 840,
+     "scale": 1.15,
+     "flip": true,
+     "pose": "tired",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "leg braces",
+       "face": "sad",
+       "dur": 0.2
+      },
+      {
+       "at": "six times taller",
+       "look": 1,
+       "face": "shocked",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "six times taller",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "pop"
+      },
+      {
+       "at": "six times taller+0.3",
+       "pose": "shrug",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "brace",
+     "x": 384,
+     "y": 805,
+     "opacity": 0,
+     "svg": "<path d='M-14 -60 L-14 0 M14 -60 L14 0 M-20 -50 L20 -50 M-20 -10 L20 -10' stroke='#A9A3C9' stroke-width='5' stroke-linecap='round'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "leg braces",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "click"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your doctor",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='50' y='500' width='190' height='240' rx='10' fill='#0E1A2A' stroke='#141218' stroke-width='5'/><rect x='62' y='512' width='166' height='216' fill='#1C3A55'/><path d='M120 520 L118 610 M170 520 L172 610' stroke='#E9F4EF' stroke-width='14' stroke-linecap='round'/><ellipse cx='120' cy='620' rx='16' ry='12' fill='#E9F4EF'/><ellipse cx='172' cy='620' rx='16' ry='12' fill='#E9F4EF'/><path d='M118 632 L118 720 M172 632 L174 720' stroke='#E9F4EF' stroke-width='14' stroke-linecap='round'/><path d='M108 616 L126 626 L112 632 L130 640' fill='none' stroke='#FF8A8A' stroke-width='4'/><path d='M162 612 L182 622 L166 630' fill='none' stroke='#FF8A8A' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 360,
+     "y": 812,
+     "scale": 1.25,
+     "flip": true,
+     "pose": "think",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "goes pale",
+       "pose": "facepalm",
+       "face": "shocked",
+       "dur": 0.15,
+       "sfx": "boing"
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "One more kneel",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "drlee",
+   "zoom": 2.2,
+   "props": "<rect x='50' y='500' width='190' height='240' rx='10' fill='#0E1A2A' stroke='#141218' stroke-width='5'/><rect x='62' y='512' width='166' height='216' fill='#1C3A55'/><path d='M120 520 L118 610 M170 520 L172 610' stroke='#E9F4EF' stroke-width='14' stroke-linecap='round'/><ellipse cx='120' cy='620' rx='16' ry='12' fill='#E9F4EF'/><ellipse cx='172' cy='620' rx='16' ry='12' fill='#E9F4EF'/><path d='M118 632 L118 720 M172 632 L174 720' stroke='#E9F4EF' stroke-width='14' stroke-linecap='round'/><path d='M108 616 L126 626 L112 632 L130 640' fill='none' stroke='#FF8A8A' stroke-width='4'/><path d='M162 612 L182 622 L166 630' fill='none' stroke='#FF8A8A' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 360,
+     "y": 812,
+     "scale": 1.25,
+     "flip": true,
+     "pose": "point",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "knees will snap",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "You limp",
+   "bg": "dusk",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 100,
+     "y": 820,
+     "scale": 1.3,
+     "pose": "tired",
+     "face": "sad",
+     "look": 1,
+     "keys": [
+      {
+       "at": "You limp+0.1",
+       "x": 300,
+       "dur": 2.6,
+       "cycle": "walk"
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "On day nine",
+   "bg": "day_park",
+   "camera": "push",
+   "props": "<rect x='0' y='690' width='540' height='270' fill='#2C78A4'/><path d='M0 700 Q60 690 120 700 T240 700 T360 700 T480 700 T600 700' fill='none' stroke='#BFEAFF' stroke-width='4'/>",
+   "actors": [],
+   "objects": [
+    {
+     "id": "bl",
+     "x": 160,
+     "y": 640,
+     "svg": "<rect x='-110' y='-12' width='220' height='24' fill='#8A6A55' stroke='#141218' stroke-width='4'/><path d='M110 -12 L96 0 L110 12' fill='none' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "cracks in half",
+       "rot": 18,
+       "x": 150,
+       "y": 660,
+       "dur": 0.4,
+       "ease": "in",
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "br",
+     "x": 380,
+     "y": 640,
+     "svg": "<rect x='-110' y='-12' width='220' height='24' fill='#8A6A55' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "cracks in half",
+       "rot": -18,
+       "x": 390,
+       "y": 660,
+       "dur": 0.4,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "id": "pier",
+     "x": 270,
+     "y": 720,
+     "svg": "<rect x='-16' y='-70' width='32' height='120' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>"
+    }
+   ]
+  },
+  {
+   "start": "Two cars slide",
+   "bg": "day_park",
+   "camera": "push",
+   "props": "<rect x='0' y='690' width='540' height='270' fill='#2C78A4'/><path d='M0 700 Q60 690 120 700 T240 700 T360 700 T480 700 T600 700' fill='none' stroke='#BFEAFF' stroke-width='4'/>",
+   "front_props": "<rect x='0' y='740' width='540' height='220' fill='#3FA7D6' opacity='.55'/><path d='M0 740 Q45 728 90 740 T180 740 T270 740 T360 740 T450 740 T540 740' fill='none' stroke='#BFEAFF' stroke-width='5'/>",
+   "actors": [],
+   "objects": [
+    {
+     "id": "bl",
+     "x": 150,
+     "y": 660,
+     "svg": "<rect x='-110' y='-12' width='220' height='24' fill='#8A6A55' stroke='#141218' stroke-width='4'/><path d='M110 -12 L96 0 L110 12' fill='none' stroke='#141218' stroke-width='3'/>",
+     "rot": 18
+    },
+    {
+     "id": "br",
+     "x": 390,
+     "y": 660,
+     "svg": "<rect x='-110' y='-12' width='220' height='24' fill='#8A6A55' stroke='#141218' stroke-width='4'/>",
+     "rot": -18
+    },
+    {
+     "id": "carA",
+     "x": 60,
+     "y": 610,
+     "svg": "<rect x='-58' y='-22' width='116' height='40' rx='10' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><path d='M-36 -22 L-24 -48 L26 -48 L38 -22 Z' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><path d='M-28 -24 L-20 -42 L-2 -42 L-2 -24 Z M4 -24 L4 -42 L22 -42 L30 -24 Z' fill='#BFEAFF'/><circle cx='-32' cy='20' r='10' fill='#141218'/><circle cx='34' cy='20' r='10' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "Two cars slide+0.2",
+       "x": 80,
+       "y": 745,
+       "rot": -25,
+       "dur": 0.9,
+       "ease": "in",
+       "sfx": "whoosh"
+      }
+     ]
+    },
+    {
+     "id": "carB",
+     "x": 470,
+     "y": 610,
+     "svg": "<rect x='-58' y='-22' width='116' height='40' rx='10' fill='#F2C94C' stroke='#141218' stroke-width='4'/><path d='M-36 -22 L-24 -48 L26 -48 L38 -22 Z' fill='#F2C94C' stroke='#141218' stroke-width='4'/><path d='M-28 -24 L-20 -42 L-2 -42 L-2 -24 Z M4 -24 L4 -42 L22 -42 L30 -24 Z' fill='#BFEAFF'/><circle cx='-32' cy='20' r='10' fill='#141218'/><circle cx='34' cy='20' r='10' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "opposite ends",
+       "x": 440,
+       "y": 745,
+       "rot": 25,
+       "dur": 0.9,
+       "ease": "in",
+       "sfx": "whoosh"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "To reach either",
+   "bg": "day_park",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 825,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": -0.6,
+     "keys": [
+      {
+       "at": "you have to kneel",
+       "face": "sad",
+       "look": 0.6,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "In one car",
+   "bg": "day_park",
+   "camera": "push",
+   "front_props": "<rect x='155' y='640' width='190' height='120' rx='18' fill='#9B7BF0' stroke='#141218' stroke-width='5'/><rect x='155' y='520' width='14' height='125' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><rect x='331' y='520' width='14' height='125' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><rect x='155' y='508' width='190' height='16' rx='6' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><path d='M169 524 L331 524 L331 640 L169 640 Z' fill='#BFEAFF' opacity='.25'/><rect x='0' y='740' width='540' height='220' fill='#3FA7D6' opacity='.55'/><path d='M0 740 Q45 728 90 740 T180 740 T270 740 T360 740 T450 740 T540 740' fill='none' stroke='#BFEAFF' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 250,
+     "y": 800,
+     "scale": 1.15,
+     "pose": "hold",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "best friend Mia",
+       "pose": "wave",
+       "dur": 0.2
+      },
+      {
+       "at": "never laughed",
+       "face": "sad",
+       "pose": "hold",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "In the other",
+   "bg": "day_park",
+   "camera": "push",
+   "front_props": "<rect x='165' y='640' width='190' height='120' rx='18' fill='#F2C94C' stroke='#141218' stroke-width='5'/><rect x='165' y='520' width='14' height='125' fill='#F2C94C' stroke='#141218' stroke-width='4'/><rect x='341' y='520' width='14' height='125' fill='#F2C94C' stroke='#141218' stroke-width='4'/><rect x='165' y='508' width='190' height='16' rx='6' fill='#F2C94C' stroke='#141218' stroke-width='4'/><path d='M179 524 L341 524 L341 640 L179 640 Z' fill='#BFEAFF' opacity='.25'/><rect x='0' y='740' width='540' height='220' fill='#3FA7D6' opacity='.55'/><path d='M0 740 Q45 728 90 740 T180 740 T270 740 T360 740 T450 740 T540 740' fill='none' stroke='#BFEAFF' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "girl",
+     "char": "extra",
+     "shirt": "#FF7BB5",
+     "x": 260,
+     "y": 735,
+     "scale": 0.9,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "a little girl",
+       "face": "sad",
+       "dur": 0.2
+      },
+      {
+       "at": "banging",
+       "pose": "reach_up",
+       "face": "shocked",
+       "dur": 0.1,
+       "sfx": "thud"
+      },
+      {
+       "at": "banging+0.25",
+       "pose": "hold",
+       "dur": 0.1
+      },
+      {
+       "at": "the window",
+       "pose": "reach_up",
+       "dur": 0.1,
+       "sfx": "thud"
+      },
+      {
+       "at": "the window+0.25",
+       "pose": "hold",
+       "dur": 0.1
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Mia yells",
+   "bg": "day_park",
+   "camera": "closeup",
+   "focus": "mia",
+   "zoom": 2.3,
+   "front_props": "<rect x='155' y='640' width='190' height='120' rx='18' fill='#9B7BF0' stroke='#141218' stroke-width='5'/><rect x='155' y='520' width='14' height='125' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><rect x='331' y='520' width='14' height='125' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><rect x='155' y='508' width='190' height='16' rx='6' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><path d='M169 524 L331 524 L331 640 L169 640 Z' fill='#BFEAFF' opacity='.25'/><rect x='0' y='740' width='540' height='220' fill='#3FA7D6' opacity='.55'/><path d='M0 740 Q45 728 90 740 T180 740 T270 740 T360 740 T450 740 T540 740' fill='none' stroke='#BFEAFF' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 250,
+     "y": 800,
+     "scale": 1.15,
+     "pose": "reach_up",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "leave me",
+       "face": "sad",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Ten seconds",
+   "bg": "day_park",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='0' y='690' width='540' height='270' fill='#2C78A4'/><path d='M0 700 Q60 690 120 700 T240 700 T360 700 T480 700 T600 700' fill='none' stroke='#BFEAFF' stroke-width='4'/>",
+   "front_props": "<rect x='0' y='740' width='540' height='220' fill='#3FA7D6' opacity='.55'/><path d='M0 740 Q45 728 90 740 T180 740 T270 740 T360 740 T450 740 T540 740' fill='none' stroke='#BFEAFF' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 270,
+     "y": 830,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": -1,
+     "keys": [
+      {
+       "at": "Nine",
+       "flip": true,
+       "look": 1,
+       "dur": 0.2
+      },
+      {
+       "at": "Eight",
+       "flip": false,
+       "dur": 0.2
+      },
+      {
+       "at": "filling with water",
+       "pose": "think",
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "Seven",
+       "flip": true,
+       "dur": 0.2
+      },
+      {
+       "at": "Six",
+       "flip": false,
+       "dur": 0.2
+      },
+      {
+       "at": "Five",
+       "flip": true,
+       "dur": 0.2
+      },
+      {
+       "at": "Four",
+       "flip": false,
+       "pose": "facepalm",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "carA2",
+     "x": 80,
+     "y": 745,
+     "rot": -25,
+     "svg": "<rect x='-58' y='-22' width='116' height='40' rx='10' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><path d='M-36 -22 L-24 -48 L26 -48 L38 -22 Z' fill='#9B7BF0' stroke='#141218' stroke-width='4'/><path d='M-28 -24 L-20 -42 L-2 -42 L-2 -24 Z M4 -24 L4 -42 L22 -42 L30 -24 Z' fill='#BFEAFF'/><circle cx='-32' cy='20' r='10' fill='#141218'/><circle cx='34' cy='20' r='10' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "filling with water",
+       "y": 770,
+       "dur": 2.5
+      }
+     ]
+    },
+    {
+     "id": "carB2",
+     "x": 440,
+     "y": 745,
+     "rot": 25,
+     "svg": "<rect x='-58' y='-22' width='116' height='40' rx='10' fill='#F2C94C' stroke='#141218' stroke-width='4'/><path d='M-36 -22 L-24 -48 L26 -48 L38 -22 Z' fill='#F2C94C' stroke='#141218' stroke-width='4'/><path d='M-28 -24 L-20 -42 L-2 -42 L-2 -24 Z M4 -24 L4 -42 L22 -42 L30 -24 Z' fill='#BFEAFF'/><circle cx='-32' cy='20' r='10' fill='#141218'/><circle cx='34' cy='20' r='10' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "filling with water",
+       "y": 770,
+       "dur": 2.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your best friend#2",
+   "bg": "day_park",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.5,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 825,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "sad",
+     "look": -1,
+     "keys": [
+      {
+       "at": "little girl#2",
+       "look": 1,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "bg": "lab",
+   "camera": "push",
+   "props": "<rect x='395' y='690' width='10' height='150' fill='#A9A3C9' stroke='#141218' stroke-width='3'/><rect x='350' y='660' width='70' height='46' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='370' cy='712' rx='24' ry='6' fill='none' stroke='#F28A3D' stroke-width='5'/><path d='M350 714 L358 740 L382 740 L390 714' fill='none' stroke='#F4F1FF' stroke-width='2'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "one kneel left",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Who do you save",
+       "pose": "shrug",
+       "face": "focused",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [],
+   "start": "Ten times taller#3"
+  }
+ ]
+}
