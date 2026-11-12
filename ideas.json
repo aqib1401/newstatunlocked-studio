@@ -143,7 +143,7 @@
  },
  {
   "id": 34,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could See Sounds as Colors?",
   "ability": "synesthesia",
   "category": "senses",
@@ -154,7 +154,8 @@
   "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
   "facts": [
    "Chromesthesia, seeing colors when hearing sounds, is a real form of synesthesia"
-  ]
+  ],
+  "ep": 9
  },
  {
   "id": 6,

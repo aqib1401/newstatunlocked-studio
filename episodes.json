@@ -158,5 +158,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 9,
+  "title": "What If You Could See Sounds as Colors?",
+  "ability": "synesthesia",
+  "format": "SHORT",
+  "duration_s": 51.1,
+  "status": "rendered",
+  "video": "videos/ep09.mp4",
+  "rendered_at": "2026-11-12T22:31:21Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
