@@ -151,12 +151,20 @@
   "ability": "memory",
   "format": "LONG",
   "duration_s": 89.2,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep08.mp4",
   "rendered_at": "2026-11-12T17:58:23Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-12T22:30:00Z",
+    "zernio_post": "6af63e5151411727a518be05",
+    "first_comment": "Ugy9yRNxHAiMeFxVC8R4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-12T22:30:00Z",
+    "zernio_post": "6af63e55459f3fe727179189",
+    "first_comment": null
+   }
   }
  },
  {
