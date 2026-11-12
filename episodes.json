@@ -129,12 +129,20 @@
   "ability": "mirror pain",
   "format": "SHORT",
   "duration_s": 49.4,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep07.mp4",
   "rendered_at": "2026-11-11T22:29:40Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-12T17:59:43Z",
+    "zernio_post": "6af5fe6bb69fb2f89837f0bb",
+    "first_comment": "UgzWMiho6UgtrgZeJWd4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-12T17:59:43Z",
+    "zernio_post": "6af5fe6f06248d5d41a66d24",
+    "first_comment": null
+   }
   }
  },
  {
