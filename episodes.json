@@ -136,5 +136,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 8,
+  "title": "What If You Could Never Forget Anything?",
+  "ability": "memory",
+  "format": "LONG",
+  "duration_s": 89.2,
+  "status": "rendered",
+  "video": "videos/ep08.mp4",
+  "rendered_at": "2026-11-12T17:58:23Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

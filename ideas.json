@@ -120,7 +120,7 @@
  },
  {
   "id": 4,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Never Forget Anything?",
   "ability": "memory",
   "category": "brain",
@@ -138,7 +138,8 @@
    "A rare condition called hyperthymesia lets a few people recall almost every day of their lives",
    "Forgetting is useful: the brain actively prunes memories so the important ones stand out"
   ],
-  "visuals": "classroom, floating memory 'photos', quiz show stage, backstage"
+  "visuals": "classroom, floating memory 'photos', quiz show stage, backstage",
+  "ep": 8
  },
  {
   "id": 34,
