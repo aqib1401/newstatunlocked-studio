@@ -188,5 +188,19 @@
     "first_comment": null
    }
   }
+ },
+ {
+  "ep": 10,
+  "title": "What If You Never Needed Sleep Again?",
+  "ability": "sleep (none needed)",
+  "format": "LONG",
+  "duration_s": 89.5,
+  "status": "rendered",
+  "video": "videos/ep10.mp4",
+  "rendered_at": "2026-11-13T18:05:00Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
