@@ -195,12 +195,20 @@
   "ability": "sleep (none needed)",
   "format": "LONG",
   "duration_s": 89.5,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep10.mp4",
   "rendered_at": "2026-11-13T18:05:00Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-13T22:36:00Z",
+    "zernio_post": "6af78fa757b31bb490d42689",
+    "first_comment": "Ugx_rkugBwfWX3zVBuh4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-13T22:36:00Z",
+    "zernio_post": "6af78fad57b31bb490d426c2",
+    "first_comment": null
+   }
   }
  },
  {
