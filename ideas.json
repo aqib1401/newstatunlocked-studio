@@ -182,7 +182,7 @@
  },
  {
   "id": 35,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could See Heat?",
   "ability": "infrared vision",
   "category": "senses",
@@ -193,7 +193,8 @@
   "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
   "facts": [
    "Pit vipers detect infrared heat with pit organs on their faces"
-  ]
+  ],
+  "ep": 11
  },
  {
   "id": 7,

@@ -202,5 +202,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 11,
+  "title": "What If You Could See Heat?",
+  "ability": "infrared vision",
+  "format": "SHORT",
+  "duration_s": 49.2,
+  "status": "rendered",
+  "video": "videos/ep11.mp4",
+  "rendered_at": "2026-11-13T22:30:38Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

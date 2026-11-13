@@ -1,0 +1,920 @@
+{
+ "ep": 11,
+ "script": "What if you could see heat? Not feel it. See it. On the bus, you can see which seat someone just left. Your cat goes missing, and you find her in one second, a little orange blob in the dark garage. Pit vipers really do this, sensing heat to hunt in total darkness, and firefighters use heat cameras to see through smoke. But anything really hot glares at you like the sun. Then one night, your apartment building catches fire. Smoke fills the hallway. Nobody can see, except you. Through the gray you spot your best friend Mia, who was sleeping over, passed out by the stairs. And at the other end, under his bed, your little brother Sam, curled up and hiding. The flames are getting brighter, and in three seconds you'll be blind. Three. Two. One. You only reach one. Mia, or Sam. Who do you save?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "title": "What If You Could See Heat?",
+ "thumbnail": "Through the gray",
+ "music": [
+  {
+   "track": "music/lost-islands.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/now-or-never.mp3",
+   "at": "But anything"
+  },
+  {
+   "track": "music/remember.mp3",
+   "at": "Through the gray"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "highlights": {
+  "see heat": "green",
+  "orange blob": "amber",
+  "Pit vipers": "green",
+  "heat cameras": "green",
+  "like the sun": "amber",
+  "except you": "green",
+  "blind": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if you could",
+   "until": "On the bus",
+   "name": "HEAT VISION",
+   "mult": "×INFRARED",
+   "tag": "MAX"
+  },
+  {
+   "type": "marker",
+   "at": "you find her",
+   "until": "Pit vipers",
+   "label": "CAT FOUND IN",
+   "text": "1 SEC",
+   "sub": "PITCH BLACK GARAGE",
+   "size": 76
+  },
+  {
+   "type": "note",
+   "at": "Pit vipers",
+   "until": "But anything",
+   "label": "REAL SCIENCE",
+   "text": "Pit vipers sense heat to hunt in the dark."
+  },
+  {
+   "type": "warn",
+   "at": "But anything",
+   "until": "Then one night",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Hot things glare like the sun."
+  },
+  {
+   "type": "countdown",
+   "at": "Three#2",
+   "until": "You only reach",
+   "from": 3
+  },
+  {
+   "type": "choice",
+   "at": "You only reach",
+   "until": "Who do you save",
+   "a": "Mia (best friend)",
+   "b": "Sam (little brother)",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Who do you save",
+   "text": "Mia or Sam?",
+   "a": "MIA",
+   "b": "SAM"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": 0.15,
+       "pose": "catch",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "swish"
+      },
+      {
+       "at": "Not feel",
+       "pose": "hold",
+       "face": "focused",
+       "dur": 0.2
+      },
+      {
+       "at": "See it",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15
+      }
+     ],
+     "look": 0.6
+    }
+   ],
+   "objects": [
+    {
+     "id": "mug",
+     "x": 380,
+     "y": 250,
+     "svg": "<path d='M-20 -24 L20 -24 L17 22 Q0 28 -17 22 Z' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M20 -12 Q36 -8 20 10' fill='none' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": 0.0,
+       "x": 330,
+       "y": 600,
+       "rot": -40,
+       "dur": 0.4,
+       "ease": "in",
+       "sfx": "whoosh"
+      },
+      {
+       "at": 0.45,
+       "x": 335,
+       "y": 640,
+       "rot": 0,
+       "dur": 0.2,
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "heat",
+     "x": 335,
+     "y": 640,
+     "svg": "<path d='M-12 -40 Q-2 -52 -12 -64 Q-22 -76 -12 -88' fill='none' stroke='#FF8A3D' stroke-width='6' stroke-linecap='round'/><path d='M10 -40 Q20 -52 10 -64 Q0 -76 10 -88' fill='none' stroke='#FFB547' stroke-width='6' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "heat",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.3,
+       "ease": "back"
+      },
+      {
+       "at": "See it",
+       "scale": 1.5,
+       "dur": 0.3
+      }
+     ],
+     "opacity": 0,
+     "front": true
+    },
+    {
+     "id": "glow",
+     "x": 335,
+     "y": 640,
+     "svg": "<ellipse rx='46' ry='40' fill='#FF8A3D' opacity='0.75'/><ellipse rx='27' ry='24' fill='#FFD84D' opacity='0.75'/>",
+     "keys": [
+      {
+       "at": "See it",
+       "opacity": 1,
+       "scale": 1.1,
+       "dur": 0.25,
+       "ease": "back"
+      }
+     ],
+     "opacity": 0
+    }
+   ]
+  },
+  {
+   "start": "On the bus",
+   "bg": "cool_interior",
+   "camera": "pan_right",
+   "props": "<rect x='20' y='560' width='500' height='14' fill='#3B5BA8'/><rect x='300' y='640' width='130' height='70' rx='14' fill='#3B5BA8' stroke='#141218' stroke-width='4'/><rect x='300' y='560' width='26' height='150' rx='8' fill='#3B5BA8' stroke='#141218' stroke-width='4'/><rect x='300' y='700' width='12' height='105' fill='#2A2733'/><rect x='418' y='700' width='12' height='105' fill='#2A2733'/><rect x='40' y='420' width='460' height='110' rx='14' fill='#BFE3FF' stroke='#141218' stroke-width='4' opacity='.8'/>",
+   "actors": [
+    {
+     "id": "x1",
+     "char": "extra",
+     "shirt": "#E5484D",
+     "x": 360,
+     "y": 810,
+     "scale": 1.15,
+     "pose": "walk_a",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "On the bus+0.1",
+       "x": 560,
+       "dur": 1.6,
+       "cycle": "walk"
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "which seat",
+       "pose": "point",
+       "face": "smug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "seat",
+     "x": 365,
+     "y": 655,
+     "svg": "<ellipse rx='60' ry='30' fill='#FF8A3D' opacity='0.75'/><ellipse rx='36' ry='18' fill='#FFD84D' opacity='0.75'/>",
+     "keys": [
+      {
+       "at": "which seat",
+       "opacity": 1,
+       "scale": 1.15,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ],
+     "opacity": 0.3,
+     "front": true
+    }
+   ]
+  },
+  {
+   "start": "Your cat goes missing",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#0B0A10' opacity='.72'/><rect x='300' y='640' width='90' height='70' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='330' y='585' width='80' height='58' fill='#7E5A46' stroke='#141218' stroke-width='4'/><rect x='390' y='660' width='80' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='300' y='710' width='90' height='100' fill='#5A3E30' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "think",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "you find her",
+       "pose": "point",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "ding"
+      },
+      {
+       "at": "orange blob",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "cat",
+     "x": 350,
+     "y": 575,
+     "svg": "<ellipse cx='0' cy='6' rx='34' ry='20' fill='#FF8A3D'/><circle cx='-28' cy='-12' r='15' fill='#FFB547'/><path d='M-38 -22 L-36 -36 L-28 -26 Z M-24 -26 L-18 -38 L-16 -24 Z' fill='#FFB547'/><path d='M32 4 Q52 -10 46 -28' fill='none' stroke='#FF8A3D' stroke-width='8' stroke-linecap='round'/><circle cx='-32' cy='-13' r='2.5' fill='#141218'/><circle cx='-23' cy='-13' r='2.5' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "you find her",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.25,
+       "ease": "back"
+      },
+      {
+       "at": "orange blob",
+       "y": 565,
+       "dur": 0.2
+      },
+      {
+       "at": "orange blob+0.25",
+       "y": 575,
+       "dur": 0.2
+      }
+     ],
+     "opacity": 0.15
+    }
+   ]
+  },
+  {
+   "start": "Pit vipers",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "think",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "firefighters",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "snake",
+     "x": 300,
+     "y": 700,
+     "svg": "<path d='M-120 40 Q-70 -10 -20 40 Q30 90 70 30 Q90 0 110 -20' fill='none' stroke='#4DBF6A' stroke-width='26' stroke-linecap='round'/><path d='M-120 40 Q-70 -10 -20 40 Q30 90 70 30 Q90 0 110 -20' fill='none' stroke='#141218' stroke-width='4' stroke-dasharray='4 18'/><ellipse cx='118' cy='-30' rx='30' ry='20' fill='#4DBF6A' stroke='#141218' stroke-width='4'/><circle cx='126' cy='-38' r='4' fill='#141218'/><circle cx='138' cy='-26' r='6' fill='#FF8A3D' stroke='#141218' stroke-width='2'/><path d='M148 -26 L164 -26 L170 -32 M164 -26 L170 -20' stroke='#E5484D' stroke-width='3' fill='none'/>",
+     "keys": [
+      {
+       "at": "Pit vipers",
+       "opacity": 1,
+       "x": 290,
+       "dur": 0.4
+      },
+      {
+       "at": "to hunt",
+       "x": 320,
+       "dur": 0.6
+      },
+      {
+       "at": "firefighters",
+       "opacity": 0,
+       "dur": 0.25
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.9
+    },
+    {
+     "id": "mouse",
+     "x": 470,
+     "y": 680,
+     "svg": "<ellipse rx='20' ry='12' fill='#FF8A3D'/><circle cx='-18' cy='-6' r='8' fill='#FFB547'/><path d='M20 0 Q34 4 38 -6' stroke='#FF8A3D' stroke-width='4' fill='none'/>",
+     "keys": [
+      {
+       "at": "to hunt+0.4",
+       "x": 520,
+       "dur": 0.6,
+       "ease": "in"
+      }
+     ],
+     "front": true
+    },
+    {
+     "id": "cam",
+     "x": 340,
+     "y": 580,
+     "svg": "<rect x='-44' y='-30' width='88' height='60' rx='10' fill='#FFD84D' stroke='#141218' stroke-width='5'/><rect x='-30' y='-18' width='60' height='36' rx='4' fill='#141218'/><ellipse cx='-6' cy='0' rx='12' ry='14' fill='#FF8A3D'/><ellipse cx='-6' cy='-2' rx='6' ry='7' fill='#FFD84D'/><rect x='-12' y='30' width='24' height='34' fill='#2A2733' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "firefighters",
+       "opacity": 1,
+       "scale": 1.6,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "click"
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.5
+    }
+   ]
+  },
+  {
+   "start": "But anything",
+   "bg": "night_city",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "glares",
+       "pose": "facepalm",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "buzz"
+      },
+      {
+       "at": "like the sun",
+       "x": 120,
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "lamp",
+     "x": 380,
+     "y": 560,
+     "svg": "<rect x='-6' y='0' width='12' height='250' fill='#2A2733' stroke='#141218' stroke-width='3'/><rect x='-26' y='-16' width='52' height='20' rx='6' fill='#4A4658' stroke='#141218' stroke-width='4'/>",
+     "keys": []
+    },
+    {
+     "id": "sun",
+     "x": 380,
+     "y": 555,
+     "svg": "<circle r='120' fill='#FFF6C8' opacity='.55'/><circle r='80' fill='#FFF6C8' opacity='.8'/><circle r='46' fill='#FFFFFF'/>",
+     "keys": [
+      {
+       "at": "glares",
+       "opacity": 1,
+       "scale": 1.3,
+       "dur": 0.3,
+       "ease": "back"
+      },
+      {
+       "at": "like the sun",
+       "scale": 1.7,
+       "dur": 0.6
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true
+    }
+   ]
+  },
+  {
+   "start": "Then one night",
+   "bg": "night_city",
+   "camera": "push",
+   "props": "<rect x='150' y='420' width='240' height='400' fill='#2A2733' stroke='#141218' stroke-width='5'/><rect x='175' y='450' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='175' y='530' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='175' y='610' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='248' y='450' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='248' y='530' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='248' y='610' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='321' y='450' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='321' y='530' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='321' y='610' width='44' height='50' fill='#FFD84D' stroke='#141218' stroke-width='3'/><rect x='240' y='730' width='60' height='90' fill='#141218'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 90,
+     "y": 815,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "catches fire",
+       "pose": "shrug",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "f0",
+     "x": 197,
+     "y": 470,
+     "svg": "<path d='M0 40 Q-34 10 -14 -30 Q-8 -6 0 -46 Q10 -8 16 -28 Q36 12 0 40 Z' fill='#FF8A3D' stroke='#141218' stroke-width='4'/><path d='M0 34 Q-14 14 -4 -6 Q2 8 8 -4 Q16 16 0 34 Z' fill='#FFD84D'/>",
+     "keys": [
+      {
+       "at": "catches fire+0.00",
+       "opacity": 1,
+       "scale": 1.1,
+       "dur": 0.25,
+       "ease": "back"
+      },
+      {
+       "at": "catches fire+0.60",
+       "scale": 0.9,
+       "dur": 0.3
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true
+    },
+    {
+     "id": "f1",
+     "x": 343,
+     "y": 550,
+     "svg": "<path d='M0 40 Q-34 10 -14 -30 Q-8 -6 0 -46 Q10 -8 16 -28 Q36 12 0 40 Z' fill='#FF8A3D' stroke='#141218' stroke-width='4'/><path d='M0 34 Q-14 14 -4 -6 Q2 8 8 -4 Q16 16 0 34 Z' fill='#FFD84D'/>",
+     "keys": [
+      {
+       "at": "catches fire+0.15",
+       "opacity": 1,
+       "scale": 1.1,
+       "dur": 0.25,
+       "ease": "back"
+      },
+      {
+       "at": "catches fire+0.75",
+       "scale": 0.9,
+       "dur": 0.3
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true
+    },
+    {
+     "id": "f2",
+     "x": 270,
+     "y": 630,
+     "svg": "<path d='M0 40 Q-34 10 -14 -30 Q-8 -6 0 -46 Q10 -8 16 -28 Q36 12 0 40 Z' fill='#FF8A3D' stroke='#141218' stroke-width='4'/><path d='M0 34 Q-14 14 -4 -6 Q2 8 8 -4 Q16 16 0 34 Z' fill='#FFD84D'/>",
+     "keys": [
+      {
+       "at": "catches fire+0.30",
+       "opacity": 1,
+       "scale": 1.1,
+       "dur": 0.25,
+       "ease": "back"
+      },
+      {
+       "at": "catches fire+0.90",
+       "scale": 0.9,
+       "dur": 0.3
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true
+    },
+    {
+     "id": "f3",
+     "x": 197,
+     "y": 630,
+     "svg": "<path d='M0 40 Q-34 10 -14 -30 Q-8 -6 0 -46 Q10 -8 16 -28 Q36 12 0 40 Z' fill='#FF8A3D' stroke='#141218' stroke-width='4'/><path d='M0 34 Q-14 14 -4 -6 Q2 8 8 -4 Q16 16 0 34 Z' fill='#FFD84D'/>",
+     "keys": [
+      {
+       "at": "catches fire+0.45",
+       "opacity": 1,
+       "scale": 1.1,
+       "dur": 0.25,
+       "ease": "back"
+      },
+      {
+       "at": "catches fire+1.05",
+       "scale": 0.9,
+       "dur": 0.3
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true
+    }
+   ]
+  },
+  {
+   "start": "Smoke fills",
+   "bg": "cool_interior",
+   "camera": "pan_right",
+   "front_props": "<g opacity='.55'><circle cx='60' cy='520' r='90' fill='#8A8794'/><circle cx='200' cy='470' r='110' fill='#9A97A4'/><circle cx='360' cy='520' r='100' fill='#8A8794'/><circle cx='490' cy='470' r='100' fill='#9A97A4'/><circle cx='120' cy='640' r='80' fill='#7A7784'/><circle cx='430' cy='650' r='90' fill='#7A7784'/></g>",
+   "actors": [
+    {
+     "id": "x2",
+     "char": "extra",
+     "shirt": "#7A7784",
+     "x": 360,
+     "y": 810,
+     "scale": 1.2,
+     "pose": "tired",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "Nobody can see",
+       "pose": "facepalm",
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "walk_a",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Smoke fills+0.2",
+       "x": 200,
+       "dur": 1.4,
+       "cycle": "walk"
+      },
+      {
+       "at": "except you",
+       "cycle": null,
+       "pose": "point",
+       "face": "determined",
+       "dur": 0.15,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Through the gray",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.3,
+   "props": "<path d='M330 810 L330 760 L380 760 L380 710 L430 710 L430 660 L480 660 L480 610 L540 610 L540 810 Z' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "front_props": "<g opacity='.55'><circle cx='60' cy='520' r='90' fill='#8A8794'/><circle cx='200' cy='470' r='110' fill='#9A97A4'/><circle cx='360' cy='520' r='100' fill='#8A8794'/><circle cx='490' cy='470' r='100' fill='#9A97A4'/><circle cx='120' cy='640' r='80' fill='#7A7784'/><circle cx='430' cy='650' r='90' fill='#7A7784'/></g>",
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 340,
+     "y": 810,
+     "scale": 1.2,
+     "pose": "lie",
+     "face": "sad"
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "your best friend Mia",
+       "face": "shocked",
+       "pose": "reach_up",
+       "dur": 0.12
+      },
+      {
+       "at": "passed out",
+       "face": "sad",
+       "pose": "point",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "mg",
+     "x": 360,
+     "y": 780,
+     "svg": "<ellipse rx='90' ry='26' fill='#FF8A3D' opacity='0.75'/><ellipse rx='54' ry='15' fill='#FFD84D' opacity='0.75'/>",
+     "keys": [
+      {
+       "at": "your best friend Mia",
+       "opacity": 0.8,
+       "dur": 0.3
+      }
+     ],
+     "opacity": 0,
+     "front": true
+    }
+   ]
+  },
+  {
+   "start": "And at the other end",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='250' y='690' width='230' height='36' rx='8' fill='#3B5BA8' stroke='#141218' stroke-width='4'/><rect x='250' y='640' width='26' height='170' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='456' y='672' width='22' height='138' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='282' y='668' width='60' height='24' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='3'/>",
+   "front_props": "<g opacity='.55'><circle cx='60' cy='520' r='90' fill='#8A8794'/><circle cx='200' cy='470' r='110' fill='#9A97A4'/><circle cx='360' cy='520' r='100' fill='#8A8794'/><circle cx='490' cy='470' r='100' fill='#9A97A4'/><circle cx='120' cy='640' r='80' fill='#7A7784'/><circle cx='430' cy='650' r='90' fill='#7A7784'/></g>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 360,
+     "y": 800,
+     "scale": 0.8,
+     "pose": "lie",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "curled up",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 808,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "your little brother Sam",
+       "pose": "reach_up",
+       "face": "worried",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sg",
+     "x": 365,
+     "y": 785,
+     "svg": "<ellipse rx='80' ry='24' fill='#FF8A3D' opacity='0.75'/><ellipse rx='48' ry='14' fill='#FFD84D' opacity='0.75'/>",
+     "keys": [
+      {
+       "at": "your little brother",
+       "opacity": 0.8,
+       "dur": 0.3,
+       "sfx": "heartbeat"
+      }
+     ],
+     "opacity": 0,
+     "front": true
+    }
+   ]
+  },
+  {
+   "start": "The flames are getting",
+   "bg": "cool_interior",
+   "camera": "push",
+   "slowmo": true,
+   "front_props": "<g opacity='.55'><circle cx='60' cy='520' r='90' fill='#8A8794'/><circle cx='200' cy='470' r='110' fill='#9A97A4'/><circle cx='360' cy='520' r='100' fill='#8A8794'/><circle cx='490' cy='470' r='100' fill='#9A97A4'/><circle cx='120' cy='640' r='80' fill='#7A7784'/><circle cx='430' cy='650' r='90' fill='#7A7784'/></g>",
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 135,
+     "y": 810,
+     "scale": 1.0,
+     "pose": "lie",
+     "face": "sad"
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 400,
+     "y": 810,
+     "scale": 0.75,
+     "pose": "lie",
+     "face": "worried"
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Three#2",
+       "look": -1,
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Two",
+       "look": 1,
+       "dur": 0.3
+      },
+      {
+       "at": "You only reach",
+       "pose": "think",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fl",
+     "x": 470,
+     "y": 700,
+     "svg": "<path d='M0 40 Q-34 10 -14 -30 Q-8 -6 0 -46 Q10 -8 16 -28 Q36 12 0 40 Z' fill='#FF8A3D' stroke='#141218' stroke-width='4'/><path d='M0 34 Q-14 14 -4 -6 Q2 8 8 -4 Q16 16 0 34 Z' fill='#FFD84D'/>",
+     "keys": [
+      {
+       "at": "The flames are getting",
+       "scale": 2.2,
+       "dur": 1.0
+      }
+     ],
+     "scale": 1.4
+    },
+    {
+     "id": "bigsun",
+     "x": 470,
+     "y": 600,
+     "svg": "<circle r='120' fill='#FFF6C8' opacity='.55'/><circle r='80' fill='#FFF6C8' opacity='.8'/><circle r='46' fill='#FFFFFF'/>",
+     "keys": [
+      {
+       "at": "The flames are getting",
+       "opacity": 0.6,
+       "scale": 0.8,
+       "dur": 0.6
+      },
+      {
+       "at": "Three#2",
+       "scale": 1.2,
+       "opacity": 0.8,
+       "dur": 1.5,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.4
+    }
+   ]
+  },
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "Who do you save",
+       "pose": "think",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Who do you save+1.0",
+       "pose": "idle",
+       "face": "neutral",
+       "dur": 0.3
+      }
+     ],
+     "look": 0.6
+    }
+   ],
+   "objects": [
+    {
+     "id": "mug",
+     "x": 335,
+     "y": 640,
+     "svg": "<path d='M-20 -24 L20 -24 L17 22 Q0 28 -17 22 Z' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M20 -12 Q36 -8 20 10' fill='none' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Who do you save+0.9",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "heat",
+     "x": 335,
+     "y": 640,
+     "svg": "<path d='M-12 -40 Q-2 -52 -12 -64 Q-22 -76 -12 -88' fill='none' stroke='#FF8A3D' stroke-width='6' stroke-linecap='round'/><path d='M10 -40 Q20 -52 10 -64 Q0 -76 10 -88' fill='none' stroke='#FFB547' stroke-width='6' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "Who do you save+0.9",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ],
+     "scale": 1.2
+    },
+    {
+     "id": "glow",
+     "x": 335,
+     "y": 640,
+     "svg": "<ellipse rx='46' ry='40' fill='#FF8A3D' opacity='0.75'/><ellipse rx='27' ry='24' fill='#FFD84D' opacity='0.75'/>",
+     "keys": [
+      {
+       "at": "Who do you save+0.9",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "start": "Who do you save"
+  }
+ ]
+}
