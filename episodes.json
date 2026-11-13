@@ -173,12 +173,20 @@
   "ability": "synesthesia",
   "format": "SHORT",
   "duration_s": 51.1,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep09.mp4",
   "rendered_at": "2026-11-12T22:31:21Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-13T17:57:08Z",
+    "zernio_post": "6af74f583d4e0e408bec508a",
+    "first_comment": "UgxOqNB389E0bOALQlZ4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-13T17:57:08Z",
+    "zernio_post": "6af74f5c38c24f935f2c7c17",
+    "first_comment": null
+   }
   }
  }
 ]
