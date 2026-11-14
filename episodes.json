@@ -261,12 +261,20 @@
   "ability": "infant memory",
   "format": "SHORT",
   "duration_s": 51.0,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep13.mp4",
   "rendered_at": "2026-11-14T17:06:43Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-14T18:00:11Z",
+    "zernio_post": "6af8a18d9811aa667d586c1d",
+    "first_comment": "Ugy_SVI_23_n0SOtbax4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-14T18:00:11Z",
+    "zernio_post": "6af8a1929811aa667d586c30",
+    "first_comment": null
+   }
   }
  },
  {
