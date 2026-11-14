@@ -239,12 +239,20 @@
   "ability": "size (ant)",
   "format": "LONG",
   "duration_s": 87.6,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep12.mp4",
   "rendered_at": "2026-11-14T16:57:00Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-14T17:07:37Z",
+    "zernio_post": "6af895382d42320a35f94fb4",
+    "first_comment": "UgzfuU0O5zLBNRSMdOF4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-14T17:07:37Z",
+    "zernio_post": "6af8953d36770c3dccc624f8",
+    "first_comment": null
+   }
   }
  },
  {
