@@ -198,7 +198,7 @@
  },
  {
   "id": 7,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Shrank to the Size of an Ant?",
   "ability": "size (tiny)",
   "category": "body",
@@ -216,7 +216,8 @@
    "Insects can survive falls from almost any height because air resistance slows small bodies so much",
    "Small animals lose body heat much faster, which is why shrews have to eat almost constantly"
   ],
-  "visuals": "giant kitchen, floating fall, raindrop splash, dog's huge face"
+  "visuals": "giant kitchen, floating fall, raindrop splash, dog's huge face",
+  "ep": 12
  },
  {
   "id": 36,

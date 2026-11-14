@@ -217,9 +217,31 @@
   "ability": "infrared vision",
   "format": "SHORT",
   "duration_s": 49.2,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep11.mp4",
   "rendered_at": "2026-11-13T22:30:38Z",
+  "posted": {
+   "youtube": {
+    "at": "2026-11-14T16:54:00Z",
+    "zernio_post": "6af892606f67f47704739712",
+    "first_comment": "UgxvlduVRG-7PM7dTkh4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-14T16:54:00Z",
+    "zernio_post": "6af892658f868688123ee513",
+    "first_comment": null
+   }
+  }
+ },
+ {
+  "ep": 12,
+  "title": "What If You Shrank to the Size of an Ant?",
+  "ability": "size (ant)",
+  "format": "LONG",
+  "duration_s": 87.6,
+  "status": "rendered",
+  "video": "videos/ep12.mp4",
+  "rendered_at": "2026-11-14T16:57:00Z",
   "posted": {
    "youtube": null,
    "facebook": null
