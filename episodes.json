@@ -290,5 +290,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 15,
+  "title": "What If You Could Control Every Dream?",
+  "ability": "lucid dreaming",
+  "format": "SHORT",
+  "duration_s": 49.5,
+  "status": "rendered",
+  "video": "videos/ep15.mp4",
+  "rendered_at": "2026-11-14T18:10:34Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

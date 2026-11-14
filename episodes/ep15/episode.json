@@ -1,0 +1,970 @@
+{
+ "ep": 15,
+ "title": "What If You Could Control Every Dream?",
+ "script": "What if you could control every dream? Every single night. The second you fall asleep, you know it's a dream, so you fly to the moon in your pyjamas. It's called lucid dreaming, and about half of people have had at least one. Small studies suggest practising in one can help a little, so you practise piano all night, and by Friday your teacher notices. There's just one rule. If anything wakes you up, that dream is gone forever. Tonight, your grandpa is in it. He passed away last spring, and he's finally about to tell you what he never got to say. Then, back in your bedroom, your phone rings. It's your best friend Mia, and she never calls this late. The dream starts to shake. Five. Four. Three. Wake up, and Grandpa is gone. Hold on, and Mia gets no answer. Grandpa, or Mia? Who do you choose?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "thumbnail": "your grandpa is in it",
+ "music": [
+  {
+   "track": "music/the-forest-awakes.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/surreptitious.mp3",
+   "at": "There's just one rule"
+  },
+  {
+   "track": "music/a-memory-away.mp3",
+   "at": "Tonight"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "accent": "#C8FF4D",
+ "highlights": {
+  "every dream": "green",
+  "lucid dreaming": "green",
+  "half of people": "green",
+  "gone forever": "amber",
+  "never calls this late": "amber",
+  "Mia": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "The second you",
+   "name": "DREAM CONTROL",
+   "mult": "EVERY NIGHT",
+   "tag": "MAX"
+  },
+  {
+   "type": "note",
+   "at": "It's called lucid",
+   "until": "Small studies",
+   "label": "REAL SCIENCE",
+   "text": "About half of people have had a lucid dream."
+  },
+  {
+   "type": "marker",
+   "at": "by Friday",
+   "until": "There's just one",
+   "label": "FRIDAY",
+   "text": "PIANO +1",
+   "color": "#C8FF4D",
+   "size": 64
+  },
+  {
+   "type": "warn",
+   "at": "If anything wakes",
+   "until": "Tonight",
+   "label": "THE RULE",
+   "text": "Wake up = dream gone forever."
+  },
+  {
+   "type": "countdown",
+   "at": "Five",
+   "until": "Wake up, and",
+   "from": 5
+  },
+  {
+   "type": "choice",
+   "at": "Wake up, and",
+   "until": "Grandpa, or Mia",
+   "a": "Wake up for Mia",
+   "b": "Stay with Grandpa",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Grandpa, or Mia",
+   "text": "Grandpa or Mia?",
+   "a": "GRANDPA",
+   "b": "MIA"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": 0.3,
+       "pose": "catch",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "swish"
+      },
+      {
+       "at": "every dream",
+       "pose": "point",
+       "face": "happy",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "pillow",
+     "x": 320,
+     "y": 300,
+     "rot": -30,
+     "svg": "<rect x='-40' y='-22' width='80' height='44' rx='18' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><path d='M-20 -4 Q0 6 20 -4' fill='none' stroke='#BDB7CF' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": 0.0,
+       "x": 320,
+       "y": 640,
+       "rot": 10,
+       "dur": 0.45,
+       "ease": "in",
+       "sfx": "whoosh"
+      },
+      {
+       "at": 0.5,
+       "y": 660,
+       "rot": 0,
+       "dur": 0.15,
+       "sfx": "boing"
+      }
+     ]
+    },
+    {
+     "id": "zzz",
+     "x": 330,
+     "y": 560,
+     "svg": "<text x='0' y='0' font-size='54' font-weight='900' fill='#C8FF4D' stroke='#141218' stroke-width='3' font-family='Arial'>Z</text><text x='34' y='-34' font-size='40' font-weight='900' fill='#C8FF4D' stroke='#141218' stroke-width='3' font-family='Arial'>z</text><text x='60' y='-62' font-size='30' font-weight='900' fill='#C8FF4D' stroke='#141218' stroke-width='3' font-family='Arial'>z</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "keys": [
+      {
+       "at": "every dream",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Every single night",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.35,
+     "pose": "think",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "single night",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "m1",
+     "x": 330,
+     "y": 560,
+     "svg": "<circle r='62' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-20' cy='-14' r='12' fill='#D9D4E8'/><circle cx='22' cy='18' r='16' fill='#D9D4E8'/><circle cx='18' cy='-28' r='7' fill='#D9D4E8'/>",
+     "scale": 0.4,
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "Every single",
+       "opacity": 1,
+       "scale": 0.9,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      },
+      {
+       "at": "single night",
+       "rot": 20,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The second you",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='330' y='450' width='130' height='120' fill='#1D2747' stroke='#141218' stroke-width='5'/><circle cx='420' cy='485' r='16' fill='#FFF3C4'/><path d='M395 450 L395 570 M330 510 L460 510' stroke='#141218' stroke-width='4'/><rect x='20' y='735' width='250' height='60' rx='10' fill='#5B6CB0' stroke='#141218' stroke-width='4'/><rect x='20' y='695' width='24' height='110' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='40' y='712' width='80' height='26' rx='12' fill='#F4F1FF' stroke='#141218' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 215,
+     "y": 745,
+     "scale": 1.05,
+     "pose": "lie",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "you know",
+       "face": "smug",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "z2",
+     "x": 200,
+     "y": 640,
+     "svg": "<text x='0' y='0' font-size='54' font-weight='900' fill='#C8FF4D' stroke='#141218' stroke-width='3' font-family='Arial'>Z</text><text x='34' y='-34' font-size='40' font-weight='900' fill='#C8FF4D' stroke='#141218' stroke-width='3' font-family='Arial'>z</text><text x='60' y='-62' font-size='30' font-weight='900' fill='#C8FF4D' stroke='#141218' stroke-width='3' font-family='Arial'>z</text>",
+     "scale": 0.6,
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "fall asleep",
+       "opacity": 1,
+       "y": 600,
+       "dur": 0.6,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "so you fly",
+   "bg": "night_city",
+   "camera": "pan_right",
+   "props": "<circle cx='60' cy='470' r='3' fill='#FFF6C8'/><circle cx='140' cy='520' r='3' fill='#FFF6C8'/><circle cx='250' cy='460' r='3' fill='#FFF6C8'/><circle cx='470' cy='530' r='3' fill='#FFF6C8'/><circle cx='90' cy='610' r='3' fill='#FFF6C8'/><circle cx='420' cy='640' r='3' fill='#FFF6C8'/><circle cx='300' cy='560' r='3' fill='#FFF6C8'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 90,
+     "y": 800,
+     "scale": 1.1,
+     "pose": "jump",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "so you fly",
+       "lift": 180,
+       "x": 200,
+       "pose": "dive",
+       "dur": 0.7,
+       "sfx": "whoosh"
+      },
+      {
+       "at": "to the moon",
+       "x": 260,
+       "lift": 220,
+       "dur": 0.8
+      },
+      {
+       "at": "pyjamas",
+       "pose": "cheer",
+       "dur": 0.2,
+       "sfx": "boing"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "moon",
+     "x": 390,
+     "y": 500,
+     "svg": "<circle r='62' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-20' cy='-14' r='12' fill='#D9D4E8'/><circle cx='22' cy='18' r='16' fill='#D9D4E8'/><circle cx='18' cy='-28' r='7' fill='#D9D4E8'/>",
+     "scale": 1.0
+    }
+   ]
+  },
+  {
+   "start": "It's called lucid",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 840,
+     "scale": 1.25,
+     "pose": "point",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "half of people",
+       "pose": "shrug",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bub",
+     "x": 350,
+     "y": 560,
+     "svg": "<circle r='78' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-64' cy='76' r='12' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><g transform='scale(0.75)'><circle r='62' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-20' cy='-14' r='12' fill='#D9D4E8'/><circle cx='22' cy='18' r='16' fill='#D9D4E8'/><circle cx='18' cy='-28' r='7' fill='#D9D4E8'/></g>",
+     "opacity": 0,
+     "scale": 0.4,
+     "keys": [
+      {
+       "at": "lucid dreaming",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "half",
+     "x": 350,
+     "y": 720,
+     "svg": "<text x='0' y='0' font-size='56' font-weight='900' text-anchor='middle' fill='#C8FF4D' stroke='#141218' stroke-width='3' font-family='Arial'>1 IN 2</text>",
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "half of people",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Small studies",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "sit",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "so you practise",
+       "face": "happy",
+       "look": 0.5,
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "piano",
+     "x": 350,
+     "y": 740,
+     "svg": "<rect x='-110' y='-60' width='220' height='70' rx='6' fill='#141218' stroke='#141218' stroke-width='4'/><rect x='-104' y='10' width='208' height='34' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-96' y='10' width='12' height='20' fill='#141218'/><rect x='-70' y='10' width='12' height='20' fill='#141218'/><rect x='-44' y='10' width='12' height='20' fill='#141218'/><rect x='-18' y='10' width='12' height='20' fill='#141218'/><rect x='8' y='10' width='12' height='20' fill='#141218'/><rect x='34' y='10' width='12' height='20' fill='#141218'/><rect x='60' y='10' width='12' height='20' fill='#141218'/><rect x='86' y='10' width='12' height='20' fill='#141218'/><rect x='-100' y='44' width='12' height='60' fill='#141218'/><rect x='88' y='44' width='12' height='60' fill='#141218'/>",
+     "front": false,
+     "scale": 0.9
+    },
+    {
+     "id": "n1",
+     "x": 300,
+     "y": 600,
+     "svg": "<path d='M0 0 L0 -40 L22 -46 L22 -8' fill='none' stroke='#C8FF4D' stroke-width='5'/><ellipse cx='-6' cy='2' rx='9' ry='7' fill='#C8FF4D' stroke='#141218' stroke-width='2'/><ellipse cx='16' cy='-6' rx='9' ry='7' fill='#C8FF4D' stroke='#141218' stroke-width='2'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "piano all night",
+       "opacity": 1,
+       "y": 500,
+       "x": 280,
+       "dur": 0.9,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "n2",
+     "x": 400,
+     "y": 600,
+     "svg": "<path d='M0 0 L0 -40 L22 -46 L22 -8' fill='none' stroke='#C8FF4D' stroke-width='5'/><ellipse cx='-6' cy='2' rx='9' ry='7' fill='#C8FF4D' stroke='#141218' stroke-width='2'/><ellipse cx='16' cy='-6' rx='9' ry='7' fill='#C8FF4D' stroke='#141218' stroke-width='2'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "all night",
+       "opacity": 1,
+       "y": 480,
+       "x": 420,
+       "dur": 0.9,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "and by Friday",
+   "bg": "cool_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.25,
+     "pose": "sit",
+     "face": "smug"
+    },
+    {
+     "id": "teach",
+     "char": "extra",
+     "shirt": "#C25B8E",
+     "x": 390,
+     "y": 810,
+     "scale": 1.3,
+     "flip": true,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "teacher notices",
+       "pose": "cheer",
+       "face": "shocked",
+       "dur": 0.15,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "piano2",
+     "x": 170,
+     "y": 700,
+     "svg": "<rect x='-110' y='-60' width='220' height='70' rx='6' fill='#141218' stroke='#141218' stroke-width='4'/><rect x='-104' y='10' width='208' height='34' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-96' y='10' width='12' height='20' fill='#141218'/><rect x='-70' y='10' width='12' height='20' fill='#141218'/><rect x='-44' y='10' width='12' height='20' fill='#141218'/><rect x='-18' y='10' width='12' height='20' fill='#141218'/><rect x='8' y='10' width='12' height='20' fill='#141218'/><rect x='34' y='10' width='12' height='20' fill='#141218'/><rect x='60' y='10' width='12' height='20' fill='#141218'/><rect x='86' y='10' width='12' height='20' fill='#141218'/><rect x='-100' y='44' width='12' height='60' fill='#141218'/><rect x='88' y='44' width='12' height='60' fill='#141218'/>",
+     "scale": 0.8,
+     "front": true
+    }
+   ]
+  },
+  {
+   "start": "There's just one rule",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "If anything wakes",
+       "pose": "catch",
+       "face": "worried",
+       "dur": 0.15
+      },
+      {
+       "at": "gone forever",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "clock",
+     "x": 350,
+     "y": 600,
+     "svg": "<circle r='40' fill='#FF5A5A' stroke='#141218' stroke-width='5'/><circle r='30' fill='#F4F1FF'/><path d='M0 0 L0 -20 M0 0 L14 6' stroke='#141218' stroke-width='4'/><circle cx='-28' cy='-38' r='12' fill='#FFD84D' stroke='#141218' stroke-width='4'/><circle cx='28' cy='-38' r='12' fill='#FFD84D' stroke='#141218' stroke-width='4'/>",
+     "opacity": 0,
+     "scale": 0.5,
+     "keys": [
+      {
+       "at": "wakes you up",
+       "opacity": 1,
+       "scale": 1.1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "buzz"
+      },
+      {
+       "at": "wakes you up+0.3",
+       "rot": -12,
+       "dur": 0.1
+      },
+      {
+       "at": "wakes you up+0.4",
+       "rot": 12,
+       "dur": 0.1
+      },
+      {
+       "at": "wakes you up+0.5",
+       "rot": 0,
+       "dur": 0.1
+      },
+      {
+       "at": "gone forever",
+       "opacity": 0,
+       "scale": 0.2,
+       "dur": 0.4,
+       "sfx": "glitch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Tonight",
+   "bg": "dusk",
+   "camera": "push",
+   "props": "<circle cx='60' cy='470' r='3' fill='#FFF6C8'/><circle cx='140' cy='520' r='3' fill='#FFF6C8'/><circle cx='250' cy='460' r='3' fill='#FFF6C8'/><circle cx='470' cy='530' r='3' fill='#FFF6C8'/><circle cx='90' cy='610' r='3' fill='#FFF6C8'/><circle cx='420' cy='640' r='3' fill='#FFF6C8'/><circle cx='300' cy='560' r='3' fill='#FFF6C8'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "grandpa is in it",
+       "pose": "wave",
+       "face": "happy",
+       "dur": 0.25
+      }
+     ]
+    },
+    {
+     "id": "gpa",
+     "char": "extra",
+     "shirt": "#9C8B7A",
+     "x": 360,
+     "y": 815,
+     "scale": 1.35,
+     "flip": true,
+     "pose": "idle",
+     "face": "happy",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "your grandpa",
+       "opacity": 1,
+       "dur": 0.6,
+       "sfx": "chime"
+      },
+      {
+       "at": "grandpa is in it",
+       "pose": "wave",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "cane",
+     "x": 320,
+     "y": 755,
+     "svg": "<path d='M0 -60 Q0 -76 14 -76 Q26 -76 26 -64' fill='none' stroke='#6B4A3A' stroke-width='7'/><rect x='-3.5' y='-62' width='7' height='120' fill='#6B4A3A'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "your grandpa",
+       "opacity": 1,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "He passed away",
+   "bg": "dusk",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.3,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 815,
+     "scale": 1.35,
+     "pose": "idle",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "he's finally",
+       "face": "happy",
+       "pose": "hug",
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "gpa",
+     "char": "extra",
+     "shirt": "#9C8B7A",
+     "x": 340,
+     "y": 815,
+     "scale": 1.35,
+     "flip": true,
+     "pose": "hug",
+     "face": "happy"
+    }
+   ]
+  },
+  {
+   "start": "what he never",
+   "bg": "dusk",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "focused",
+     "look": 1
+    },
+    {
+     "id": "gpa",
+     "char": "extra",
+     "shirt": "#9C8B7A",
+     "x": 330,
+     "y": 815,
+     "scale": 1.35,
+     "flip": true,
+     "pose": "point",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "got to say",
+       "pose": "think",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "cane2",
+     "x": 290,
+     "y": 755,
+     "svg": "<path d='M0 -60 Q0 -76 14 -76 Q26 -76 26 -64' fill='none' stroke='#6B4A3A' stroke-width='7'/><rect x='-3.5' y='-62' width='7' height='120' fill='#6B4A3A'/>"
+    }
+   ]
+  },
+  {
+   "start": "Then, back in",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='330' y='450' width='130' height='120' fill='#1D2747' stroke='#141218' stroke-width='5'/><circle cx='420' cy='485' r='16' fill='#FFF3C4'/><path d='M395 450 L395 570 M330 510 L460 510' stroke='#141218' stroke-width='4'/><rect x='20' y='735' width='250' height='60' rx='10' fill='#5B6CB0' stroke='#141218' stroke-width='4'/><rect x='20' y='695' width='24' height='110' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='40' y='712' width='80' height='26' rx='12' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='300' y='700' width='110' height='14' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='315' y='714' width='80' height='96' fill='#7E5A46' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 215,
+     "y": 745,
+     "scale": 1.05,
+     "pose": "lie",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "phone rings",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "phone",
+     "x": 355,
+     "y": 665,
+     "svg": "<rect x='-24' y='-42' width='48' height='84' rx='8' fill='#141218' stroke='#141218' stroke-width='3'/><rect x='-19' y='-34' width='38' height='62' rx='4' fill='#7FE0FF'/><text x='0' y='-6' font-size='14' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>MIA</text><circle cx='0' cy='14' r='7' fill='#2EC46B'/>",
+     "keys": [
+      {
+       "at": "phone rings",
+       "rot": -14,
+       "dur": 0.08,
+       "sfx": "buzz"
+      },
+      {
+       "at": "phone rings+0.1",
+       "rot": 14,
+       "dur": 0.08
+      },
+      {
+       "at": "phone rings+0.2",
+       "rot": -14,
+       "dur": 0.08
+      },
+      {
+       "at": "phone rings+0.3",
+       "rot": 14,
+       "dur": 0.08,
+       "sfx": "buzz"
+      },
+      {
+       "at": "phone rings+0.4",
+       "rot": 0,
+       "dur": 0.08
+      },
+      {
+       "at": "It's your best+0.2",
+       "rot": -10,
+       "dur": 0.08,
+       "sfx": "buzz"
+      },
+      {
+       "at": "It's your best+0.3",
+       "rot": 10,
+       "dur": 0.08
+      },
+      {
+       "at": "It's your best+0.4",
+       "rot": 0,
+       "dur": 0.08
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "and she never",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "mia",
+   "zoom": 2.2,
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 260,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "this late",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "phone2",
+     "x": 0,
+     "y": 0,
+     "svg": "<rect x='-10' y='-18' width='20' height='36' rx='4' fill='#141218'/><rect x='-7' y='-14' width='14' height='26' fill='#7FE0FF'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": 0,
+       "attach": "mia.hand",
+       "dx": 0,
+       "dy": -10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The dream starts",
+   "bg": "dusk",
+   "camera": "push",
+   "slowmo": true,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "to shake",
+       "x": 160,
+       "dur": 0.08
+      },
+      {
+       "at": "to shake+0.1",
+       "x": 180,
+       "dur": 0.08
+      },
+      {
+       "at": "to shake+0.2",
+       "x": 170,
+       "dur": 0.08
+      },
+      {
+       "at": "Four",
+       "look": 1,
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Three",
+       "look": -1,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "gpa",
+     "char": "extra",
+     "shirt": "#9C8B7A",
+     "x": 340,
+     "y": 815,
+     "scale": 1.35,
+     "flip": true,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "to shake",
+       "opacity": 0.6,
+       "dur": 0.5
+      },
+      {
+       "at": "Four",
+       "opacity": 0.35,
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Hold on",
+   "bg": "dusk",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "slowmo": true,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 815,
+     "scale": 1.35,
+     "pose": "think",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "no answer",
+       "pose": "slump",
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "gpa",
+     "char": "extra",
+     "shirt": "#9C8B7A",
+     "x": 370,
+     "y": 815,
+     "scale": 1.35,
+     "flip": true,
+     "pose": "hug",
+     "face": "happy",
+     "opacity": 0.4
+    }
+   ]
+  },
+  {
+   "start": "Grandpa, or Mia",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": "Grandpa, or Mia",
+       "pose": "think",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Who do you+0.6",
+       "pose": "idle",
+       "face": "neutral",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "pillow",
+     "x": 320,
+     "y": 660,
+     "svg": "<rect x='-40' y='-22' width='80' height='44' rx='18' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><path d='M-20 -4 Q0 6 20 -4' fill='none' stroke='#BDB7CF' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "Who do you+0.5",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

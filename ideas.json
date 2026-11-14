@@ -260,7 +260,7 @@
  },
  {
   "id": 37,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Control Every Dream?",
   "ability": "lucid dreaming",
   "category": "brain",
@@ -271,7 +271,8 @@
   "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
   "facts": [
    "About half of people report having had at least one lucid dream"
-  ]
+  ],
+  "ep": 15
  },
  {
   "id": 9,
