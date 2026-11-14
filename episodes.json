@@ -305,12 +305,20 @@
   "ability": "lucid dreaming",
   "format": "SHORT",
   "duration_s": 49.5,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep15.mp4",
   "rendered_at": "2026-11-14T18:10:34Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-14T22:41:00Z",
+    "zernio_post": "6af8e1bcfac986dd022fcd33",
+    "first_comment": "UgxK-MkhjirnN1hh4j94AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-14T22:41:00Z",
+    "zernio_post": "6af8e1bffac986dd022fcd66",
+    "first_comment": null
+   }
   }
  },
  {
