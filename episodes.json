@@ -283,12 +283,20 @@
   "ability": "aging",
   "format": "LONG",
   "duration_s": 86.0,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep14.mp4",
   "rendered_at": "2026-11-14T17:59:16Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-14T18:11:28Z",
+    "zernio_post": "6af8a42e3724345382a02416",
+    "first_comment": "Ugzy1UzK--UxguFyzSJ4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-14T18:11:28Z",
+    "zernio_post": "6af8a4330f5e9ef3e40b55c7",
+    "first_comment": null
+   }
   }
  },
  {
