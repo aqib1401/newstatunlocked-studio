@@ -237,7 +237,7 @@
  },
  {
   "id": 8,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Aged 10x Slower?",
   "ability": "aging",
   "category": "body",
@@ -255,7 +255,8 @@
    "Greenland sharks can live for centuries, possibly over 400 years",
    "Different animals age at very different speeds: a mouse lives about 2 years, a bowhead whale over 200"
   ],
-  "visuals": "cinema desk, dog aging, sister growing, graduation stage, grandma"
+  "visuals": "cinema desk, dog aging, sister growing, graduation stage, grandma",
+  "ep": 14
  },
  {
   "id": 37,

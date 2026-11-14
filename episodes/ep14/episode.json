@@ -1,0 +1,1620 @@
+{
+ "ep": 14,
+ "title": "What If You Aged 10x Slower?",
+ "script": "What if you aged ten times slower? Not a little. Ten years for every one. It starts on your fifteenth birthday. Ten years pass. You're twenty-five on paper, but you look sixteen, so the cinema still won't sell you a ticket to a scary movie. Your little brother Sam is suddenly taller than you, and loves calling you kiddo. Sounds amazing, right? Except you're the only one who slowed down. Fifteen years in, Biscuit, your birthday puppy, is old and grey. You've barely aged a year and a half. Because every animal runs on its own clock. A mouse is old at two. A Greenland shark may live four hundred years. Your clock is even slower. You could reach eight hundred. So you use the time. You study medicine for forty years straight. Now you're the only surgeon who can fix a newborn baby's heart, because nobody else lives long enough to learn it. Hundreds of tiny hearts, still beating because of you. Sixty years in, Sam is an old man with a few months left, and he hands you a cure. Take one pill, and you grow old with him, but the babies lose you. And it only works before midnight. Ten seconds. Nine. Eight. Sam squeezes your hand. Don't stay young alone, kiddo. Seven. Six. Stay, and you'll save babies for six hundred more years. Five. Four. Would you stay young, or grow old with Sam?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.0,
+ "music": [
+  {
+   "track": "music/lost-islands.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/deeper.mp3",
+   "at": "Except you're"
+  },
+  {
+   "track": "music/home.mp3",
+   "at": "Sixty years in"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "thumbnail": "look sixteen",
+ "accent": "#C8FF4D",
+ "highlights": {
+  "ten times slower": "green",
+  "sixteen": "green",
+  "taller than you": "green",
+  "old and grey": "amber",
+  "four hundred years": "green",
+  "eight hundred": "green",
+  "newborn baby's heart": "green",
+  "a few months left": "amber",
+  "babies lose you": "amber",
+  "midnight": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "It starts",
+   "name": "AGING SPEED",
+   "mult": "×1/10",
+   "tag": "SLOW MODE"
+  },
+  {
+   "type": "marker",
+   "at": "Ten years pass",
+   "until": "so the cinema",
+   "label": "YEAR",
+   "text": "10",
+   "sub": "BODY AGE: 16"
+  },
+  {
+   "type": "warn",
+   "at": "Except you're",
+   "until": "Fifteen years in",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Everyone else ages normally."
+  },
+  {
+   "type": "marker",
+   "at": "Fifteen years in",
+   "until": "You've barely",
+   "label": "YEAR",
+   "text": "15",
+   "sub": "BISCUIT: OLD · YOU: 16"
+  },
+  {
+   "type": "note",
+   "at": "A Greenland shark",
+   "until": "Your clock is",
+   "label": "REAL SCIENCE",
+   "text": "A Greenland shark may live 400 years."
+  },
+  {
+   "type": "marker",
+   "at": "You could reach",
+   "until": "So you use",
+   "label": "YOUR LIFESPAN",
+   "text": "800",
+   "sub": "YEARS",
+   "color": "#C8FF4D"
+  },
+  {
+   "type": "marker",
+   "at": "Hundreds of tiny",
+   "until": "Sixty years in",
+   "label": "TINY HEARTS SAVED",
+   "text": "HUNDREDS",
+   "size": 60,
+   "color": "#C8FF4D"
+  },
+  {
+   "type": "marker",
+   "at": "Sixty years in",
+   "until": "and he hands",
+   "label": "YEAR",
+   "text": "60",
+   "sub": "SAM: 65 · YOU: 21"
+  },
+  {
+   "type": "warn",
+   "at": "Take one pill",
+   "until": "Ten seconds",
+   "label": "THE CURE",
+   "text": "Grow old with Sam. Babies lose you."
+  },
+  {
+   "type": "countdown",
+   "at": "Ten seconds",
+   "until": "Five",
+   "from": 10
+  },
+  {
+   "type": "choice",
+   "at": "Five",
+   "until": "Would you stay",
+   "a": "Grow old with Sam",
+   "b": "Stay young, save babies",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Would you stay",
+   "text": "Stay young, or grow old with Sam?",
+   "a": "STAY YOUNG",
+   "b": "GROW OLD"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "keys": [
+      {
+       "at": 0.2,
+       "face": "shocked",
+       "look": 1,
+       "dur": 0.1
+      },
+      {
+       "at": 0.9,
+       "pose": "shrug",
+       "dur": 0.2
+      },
+      {
+       "at": "slower",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ],
+     "look": 0.5
+    }
+   ],
+   "objects": [
+    {
+     "id": "clk",
+     "x": 380,
+     "y": 560,
+     "svg": "<circle r='70' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle r='6' fill='#141218'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(0)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(30)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(60)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(90)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(120)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(150)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(180)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(210)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(240)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(270)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(300)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(330)'/>"
+    },
+    {
+     "id": "hnd",
+     "x": 380,
+     "y": 560,
+     "rot": 0,
+     "svg": "<rect x='-4' y='-56' width='8' height='60' rx='4' fill='#E5484D' stroke='#141218' stroke-width='2'/>",
+     "keys": [
+      {
+       "at": 0.0,
+       "rot": 0,
+       "dur": 0.01
+      },
+      {
+       "at": 0.1,
+       "rot": 720,
+       "dur": 1.0,
+       "ease": "out",
+       "sfx": "tick"
+      },
+      {
+       "at": "slower",
+       "rot": 750,
+       "dur": 1.2,
+       "ease": "out"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Not a little",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "think",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Ten years for",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "t10",
+     "x": 360,
+     "y": 520,
+     "svg": "<text x='0' y='26' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='52' fill='#C8FF4D' stroke='#141218' stroke-width='3'>10 YEARS</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "Ten years for",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "t1",
+     "x": 360,
+     "y": 620,
+     "svg": "<text x='0' y='35' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='70' fill='#FFB547' stroke='#141218' stroke-width='3'>= 1</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "every one",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "It starts",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='250' y='690' width='260' height='20' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='270' y='710' width='18' height='100' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='470' y='710' width='18' height='100' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "fifteenth",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "ding"
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 250,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "jump",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "your fifteenth",
+       "pose": "cheer",
+       "lift": 20,
+       "dur": 0.2
+      },
+      {
+       "at": "birthday",
+       "lift": 0,
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "cake",
+     "x": 400,
+     "y": 650,
+     "svg": "<rect x='-70' y='-40' width='140' height='70' rx='10' fill='#F2A7C3' stroke='#141218' stroke-width='4'/><rect x='-70' y='-40' width='140' height='16' rx='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='-30' y='-78' width='8' height='38' fill='#BFEAFF' stroke='#141218' stroke-width='2'/><rect x='22' y='-78' width='8' height='38' fill='#BFEAFF' stroke='#141218' stroke-width='2'/><path d='M-26 -92 Q-20 -84 -26 -78 Q-32 -84 -26 -92 Z M26 -92 Q32 -84 26 -78 Q20 -84 26 -92 Z' fill='#FFB547'/><text x='0' y='12' text-anchor='middle' font-family='Arial Black,Arial' font-size='34' fill='#141218'>15</text>"
+    },
+    {
+     "id": "pup",
+     "x": 560,
+     "y": 790,
+     "scale": 0.8,
+     "svg": "<g><rect x='-34' y='-4' width='8' height='26' fill='#D9A066' stroke='#141218' stroke-width='4'/><rect x='24' y='-4' width='8' height='26' fill='#D9A066' stroke='#141218' stroke-width='4'/><ellipse cx='0' cy='-6' rx='42' ry='22' fill='#D9A066' stroke='#141218' stroke-width='4'/><circle cx='44' cy='-28' r='20' fill='#D9A066' stroke='#141218' stroke-width='4'/><ellipse cx='38' cy='-40' rx='8' ry='16' fill='#8B5A2B' stroke='#141218' stroke-width='4' transform='rotate(-20 38 -40)'/><circle cx='52' cy='-30' r='3' fill='#141218'/><circle cx='63' cy='-24' r='4' fill='#141218'/><path d='M-40 -12 Q-58 -26 -54 -38' stroke='#D9A066' stroke-width='8' fill='none' stroke-linecap='round'/></g>",
+     "keys": [
+      {
+       "at": "your fifteenth",
+       "x": 360,
+       "dur": 0.8,
+       "ease": "out",
+       "sfx": "boing"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Ten years pass",
+   "bg": "warm_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "but you look",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "id",
+     "x": 330,
+     "y": 590,
+     "scale": 0.3,
+     "opacity": 0,
+     "front": true,
+     "svg": "<rect x='-60' y='-38' width='120' height='76' rx='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='-50' y='-26' width='34' height='44' fill='#3D7BF0'/><text x='22' y='-6' text-anchor='middle' font-family='Arial Black,Arial' font-size='14' fill='#141218'>AGE</text><text x='22' y='22' text-anchor='middle' font-family='Arial Black,Arial' font-size='28' fill='#E5484D'>25</text>",
+     "keys": [
+      {
+       "at": "twenty-five",
+       "scale": 1.2,
+       "opacity": 1,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "t16",
+     "x": 330,
+     "y": 720,
+     "svg": "<text x='0' y='22' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='44' fill='#E5484D' stroke='#141218' stroke-width='3'>LOOKS 16</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "look sixteen",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "so the cinema",
+   "bg": "night_city",
+   "camera": "static",
+   "props": "<rect x='290' y='470' width='230' height='340' fill='#7A2E3A' stroke='#141218' stroke-width='5'/><rect x='310' y='520' width='190' height='120' fill='#BFEAFF' stroke='#141218' stroke-width='4'/><rect x='290' y='430' width='230' height='50' fill='#FFB547' stroke='#141218' stroke-width='5'/><text x='405' y='466' text-anchor='middle' font-family='Arial Black,Arial' font-size='30' fill='#141218'>TICKETS</text><rect x='290' y='640' width='230' height='16' fill='#4A2028' stroke='#141218' stroke-width='3'/><rect x='40' y='450' width='130' height='180' fill='#1E1B2E' stroke='#141218' stroke-width='5'/><text x='105' y='520' text-anchor='middle' font-family='Arial Black,Arial' font-size='22' fill='#E5484D'>SCARY</text><text x='105' y='550' text-anchor='middle' font-family='Arial Black,Arial' font-size='22' fill='#E5484D'>MOVIE</text><text x='105' y='600' text-anchor='middle' font-family='Arial Black,Arial' font-size='30' fill='#FFB547'>18+</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "point",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "won't sell",
+       "pose": "facepalm",
+       "face": "bored",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "clerk",
+     "char": "extra",
+     "shirt": "#E5484D",
+     "x": 405,
+     "y": 640,
+     "scale": 0.9,
+     "flip": true,
+     "pose": "idle",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "won't sell",
+       "pose": "shrug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "no",
+     "x": 405,
+     "y": 560,
+     "svg": "<text x='0' y='24' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='48' fill='#E5484D' stroke='#141218' stroke-width='3'>NOPE</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "a scary movie",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your little brother",
+   "bg": "day_park",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "taller than you",
+       "face": "shocked",
+       "look": 1,
+       "dur": 0.15
+      },
+      {
+       "at": "kiddo",
+       "face": "bored",
+       "pose": "facepalm",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "char": "extra",
+     "shirt": "#F2C94C",
+     "id": "bigsam",
+     "x": 330,
+     "y": 815,
+     "scale": 1.5,
+     "flip": true,
+     "pose": "idle",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "taller than",
+       "pose": "point",
+       "dur": 0.2
+      },
+      {
+       "at": "calling you",
+       "pose": "wave",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "kid",
+     "x": 250,
+     "y": 470,
+     "svg": "<text x='0' y='30' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='60' fill='#F2C94C' stroke='#141218' stroke-width='3'>KIDDO</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "kiddo",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Sounds amazing",
+   "bg": "day_park",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "cheer",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "Except",
+       "pose": "idle",
+       "face": "worried",
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Except you're",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 180,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "slowed down",
+       "pose": "shrug",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "c1",
+     "x": 400,
+     "y": 520,
+     "scale": 0.6,
+     "svg": "<circle r='70' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle r='6' fill='#141218'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(0)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(30)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(60)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(90)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(120)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(150)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(180)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(210)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(240)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(270)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(300)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(330)'/>"
+    },
+    {
+     "id": "h1",
+     "x": 400,
+     "y": 520,
+     "scale": 0.6,
+     "svg": "<rect x='-4' y='-56' width='8' height='60' rx='4' fill='#E5484D' stroke='#141218' stroke-width='2'/>",
+     "keys": [
+      {
+       "at": "Except",
+       "rot": 1080,
+       "dur": 2.5,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "id": "c2",
+     "x": 180,
+     "y": 470,
+     "scale": 0.4,
+     "svg": "<circle r='70' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle r='6' fill='#141218'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(0)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(30)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(60)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(90)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(120)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(150)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(180)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(210)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(240)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(270)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(300)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(330)'/>"
+    },
+    {
+     "id": "h2",
+     "x": 180,
+     "y": 470,
+     "scale": 0.4,
+     "svg": "<rect x='-4' y='-56' width='8' height='60' rx='4' fill='#E5484D' stroke='#141218' stroke-width='2'/>",
+     "keys": [
+      {
+       "at": "Except",
+       "rot": 60,
+       "dur": 2.5,
+       "ease": "linear"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Fifteen years in",
+   "bg": "warm_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "old and grey",
+       "pose": "crouch",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dog",
+     "x": 560,
+     "y": 790,
+     "scale": 1.0,
+     "svg": "<g><rect x='-34' y='-4' width='8' height='26' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><rect x='24' y='-4' width='8' height='26' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><ellipse cx='0' cy='-6' rx='42' ry='22' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><circle cx='44' cy='-28' r='20' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><ellipse cx='38' cy='-40' rx='8' ry='16' fill='#7C7A8A' stroke='#141218' stroke-width='4' transform='rotate(-20 38 -40)'/><circle cx='52' cy='-30' r='3' fill='#141218'/><circle cx='63' cy='-24' r='4' fill='#141218'/><path d='M-40 -12 Q-58 -26 -54 -38' stroke='#B9B4C4' stroke-width='8' fill='none' stroke-linecap='round'/></g>",
+     "keys": [
+      {
+       "at": "Biscuit",
+       "x": 320,
+       "dur": 1.8,
+       "ease": "inout"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You've barely",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.6,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "crouch",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "a year and a half",
+       "look": 1,
+       "face": "worried",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dog2",
+     "x": 330,
+     "y": 790,
+     "svg": "<g><rect x='-34' y='-4' width='8' height='26' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><rect x='24' y='-4' width='8' height='26' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><ellipse cx='0' cy='-6' rx='42' ry='22' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><circle cx='44' cy='-28' r='20' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><ellipse cx='38' cy='-40' rx='8' ry='16' fill='#7C7A8A' stroke='#141218' stroke-width='4' transform='rotate(-20 38 -40)'/><circle cx='52' cy='-30' r='3' fill='#141218'/><circle cx='63' cy='-24' r='4' fill='#141218'/><path d='M-40 -12 Q-58 -26 -54 -38' stroke='#B9B4C4' stroke-width='8' fill='none' stroke-linecap='round'/></g>"
+    }
+   ]
+  },
+  {
+   "start": "Because every animal",
+   "bg": "lab",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "think",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "A mouse",
+       "pose": "point",
+       "dur": 0.15
+      },
+      {
+       "at": "Greenland",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "mouse",
+     "x": 600,
+     "y": 820,
+     "svg": "<g><ellipse cx='0' cy='0' rx='34' ry='20' fill='#B9B4C4' stroke='#141218' stroke-width='4'/><circle cx='28' cy='-14' r='12' fill='#F2A7C3' stroke='#141218' stroke-width='4'/><circle cx='34' cy='-4' r='3' fill='#141218'/><path d='M-34 4 Q-60 10 -66 -10' stroke='#F2A7C3' stroke-width='4' fill='none'/></g>",
+     "keys": [
+      {
+       "at": "A mouse",
+       "x": 330,
+       "dur": 0.5,
+       "ease": "out",
+       "sfx": "swish"
+      },
+      {
+       "at": "old at two",
+       "rot": 180,
+       "y": 815,
+       "dur": 0.4
+      },
+      {
+       "at": "A Greenland",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "m2",
+     "x": 330,
+     "y": 720,
+     "svg": "<text x='0' y='20' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='40' fill='#B9B4C4' stroke='#141218' stroke-width='3'>2 YEARS</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "old at two",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "shark",
+     "x": 720,
+     "y": 580,
+     "svg": "<g><path d='M-110 0 Q-40 -46 60 -18 Q100 -8 116 6 Q90 24 40 26 Q-40 34 -110 0 Z' fill='#7C8AA0' stroke='#141218' stroke-width='4'/><path d='M-10 -32 L10 -76 L30 -26 Z' fill='#7C8AA0' stroke='#141218' stroke-width='4'/><path d='M-110 0 L-150 -36 L-140 0 L-150 36 Z' fill='#7C8AA0' stroke='#141218' stroke-width='4'/><circle cx='78' cy='-6' r='4' fill='#141218'/><path d='M70 14 Q86 18 100 10' stroke='#141218' stroke-width='3' fill='none'/></g>",
+     "keys": [
+      {
+       "at": "A Greenland",
+       "x": 340,
+       "dur": 1.2,
+       "ease": "out",
+       "sfx": "whoosh"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your clock is",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "eight hundred",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sh2",
+     "x": 380,
+     "y": 520,
+     "scale": 0.6,
+     "svg": "<g><path d='M-110 0 Q-40 -46 60 -18 Q100 -8 116 6 Q90 24 40 26 Q-40 34 -110 0 Z' fill='#7C8AA0' stroke='#141218' stroke-width='4'/><path d='M-10 -32 L10 -76 L30 -26 Z' fill='#7C8AA0' stroke='#141218' stroke-width='4'/><path d='M-110 0 L-150 -36 L-140 0 L-150 36 Z' fill='#7C8AA0' stroke='#141218' stroke-width='4'/><circle cx='78' cy='-6' r='4' fill='#141218'/><path d='M70 14 Q86 18 100 10' stroke='#141218' stroke-width='3' fill='none'/></g>",
+     "keys": [
+      {
+       "at": "even slower",
+       "x": 600,
+       "dur": 0.8,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So you use",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='240' y='690' width='260' height='18' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='260' y='708' width='16' height='102' fill='#6B4A3A'/><rect x='464' y='708' width='16' height='102' fill='#6B4A3A'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "think",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "medicine",
+       "pose": "hold",
+       "dur": 0.2
+      },
+      {
+       "at": "straight",
+       "face": "bored",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bk",
+     "x": 380,
+     "y": 690,
+     "scale": 0.4,
+     "svg": "<rect x='-50' y='-24' width='100' height='22' rx='4' fill='#E5484D' stroke='#141218' stroke-width='3'/><rect x='-50' y='-48' width='100' height='22' rx='4' fill='#3D7BF0' stroke='#141218' stroke-width='3'/><rect x='-50' y='-72' width='100' height='22' rx='4' fill='#C8FF4D' stroke='#141218' stroke-width='3'/><rect x='-50' y='-96' width='100' height='22' rx='4' fill='#FFB547' stroke='#141218' stroke-width='3'/><rect x='-50' y='-120' width='100' height='22' rx='4' fill='#9B7BF0' stroke='#141218' stroke-width='3'/><rect x='-50' y='-144' width='100' height='22' rx='4' fill='#BFEAFF' stroke='#141218' stroke-width='3'/><rect x='-50' y='-168' width='100' height='22' rx='4' fill='#F2A7C3' stroke='#141218' stroke-width='3'/><rect x='-50' y='-192' width='100' height='22' rx='4' fill='#E5484D' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "study medicine",
+       "scale": 1.0,
+       "dur": 2.0,
+       "ease": "out",
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Now you're the only",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='300' y='640' width='180' height='70' rx='14' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='320' y='710' width='14' height='100' fill='#7C7A8A'/><rect x='446' y='710' width='14' height='100' fill='#7C7A8A'/><circle cx='360' cy='636' r='18' fill='#F2D3B3' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 190,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "baby's heart",
+       "face": "focused",
+       "dur": 0.15
+      },
+      {
+       "at": "nobody else",
+       "face": "smug",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "hrt",
+     "x": 300,
+     "y": 560,
+     "scale": 0.0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "baby's heart",
+       "scale": 1.3,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "heartbeat"
+      },
+      {
+       "at": "because nobody",
+       "scale": 1.0,
+       "dur": 0.3
+      },
+      {
+       "at": "learn it",
+       "scale": 1.3,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Hundreds of tiny",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "cheer",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "because of you",
+       "pose": "idle",
+       "face": "smug",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "h0",
+     "x": 280,
+     "y": 470,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+0.0",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "h1",
+     "x": 360,
+     "y": 470,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+0.2",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "h2",
+     "x": 440,
+     "y": 470,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+0.4",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "x": 280,
+     "y": 560,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+0.6",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "h4",
+     "x": 360,
+     "y": 560,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+0.8",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "h5",
+     "x": 440,
+     "y": 560,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+1.0",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "h6",
+     "x": 280,
+     "y": 650,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+1.2",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "h7",
+     "x": 360,
+     "y": 650,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+1.4",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "h8",
+     "x": 440,
+     "y": 650,
+     "scale": 0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "Hundreds+1.6",
+       "scale": 0.8,
+       "dur": 0.25,
+       "ease": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Sixty years in",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='240' y='640' width='290' height='60' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='240' y='700' width='290' height='26' fill='#BFEAFF' stroke='#141218' stroke-width='4'/><rect x='500' y='560' width='24' height='240' fill='#7C7A8A' stroke='#141218' stroke-width='4'/><rect x='250' y='726' width='16' height='84' fill='#7C7A8A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "a few months",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "char": "extra",
+     "shirt": "#F2C94C",
+     "id": "oldsam",
+     "x": 380,
+     "y": 650,
+     "scale": 1.1,
+     "flip": true,
+     "pose": "sit",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "an old man",
+       "face": "happy",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "hair",
+     "x": 378,
+     "y": 509,
+     "front": true,
+     "svg": "<path d='M-36 -2 Q-36 -42 0 -42 Q36 -42 36 -2' stroke='#D8D4E4' stroke-width='12' fill='none' stroke-linecap='round'/><path d='M-14 22 Q0 14 14 22' stroke='#D8D4E4' stroke-width='7' fill='none' stroke-linecap='round'/>"
+    }
+   ]
+  },
+  {
+   "start": "and he hands",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "props": "<rect x='240' y='640' width='290' height='60' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='240' y='700' width='290' height='26' fill='#BFEAFF' stroke='#141218' stroke-width='4'/><rect x='500' y='560' width='24' height='240' fill='#7C7A8A' stroke='#141218' stroke-width='4'/><rect x='250' y='726' width='16' height='84' fill='#7C7A8A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "a cure",
+       "pose": "hold",
+       "face": "shocked",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "char": "extra",
+     "shirt": "#F2C94C",
+     "id": "oldsam",
+     "x": 380,
+     "y": 650,
+     "scale": 1.1,
+     "flip": true,
+     "pose": "sit",
+     "face": "happy",
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "pill",
+     "x": 340,
+     "y": 600,
+     "scale": 1.2,
+     "svg": "<g transform='rotate(-30)'><rect x='-26' y='-12' width='52' height='24' rx='12' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M0 -12 L0 12 L-14 12 Q-26 12 -26 0 Q-26 -12 -14 -12 Z' fill='#C8FF4D' stroke='#141218' stroke-width='4'/></g>",
+     "front": true,
+     "keys": [
+      {
+       "at": "hands you",
+       "attach": "oldsam.hand",
+       "dur": 0.01
+      },
+      {
+       "at": "a cure",
+       "attach": "hero.hand",
+       "dur": 0.4,
+       "sfx": "chime"
+      }
+     ]
+    },
+    {
+     "id": "hair",
+     "x": 378,
+     "y": 509,
+     "front": true,
+     "svg": "<path d='M-36 -2 Q-36 -42 0 -42 Q36 -42 36 -2' stroke='#D8D4E4' stroke-width='12' fill='none' stroke-linecap='round'/><path d='M-14 22 Q0 14 14 22' stroke='#D8D4E4' stroke-width='7' fill='none' stroke-linecap='round'/>"
+    }
+   ]
+  },
+  {
+   "start": "Take one pill",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "grow old",
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "babies lose",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "pill2",
+     "x": 0,
+     "y": 0,
+     "scale": 1.3,
+     "svg": "<g transform='rotate(-30)'><rect x='-26' y='-12' width='52' height='24' rx='12' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M0 -12 L0 12 L-14 12 Q-26 12 -26 0 Q-26 -12 -14 -12 Z' fill='#C8FF4D' stroke='#141218' stroke-width='4'/></g>",
+     "front": true,
+     "keys": [
+      {
+       "at": "Take one pill",
+       "attach": "hero.hand",
+       "dur": 0.01
+      }
+     ]
+    },
+    {
+     "id": "hb",
+     "x": 390,
+     "y": 560,
+     "scale": 0.0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "the babies",
+       "scale": 1.4,
+       "dur": 0.3,
+       "ease": "back"
+      },
+      {
+       "at": "lose you",
+       "opacity": 0.25,
+       "rot": 20,
+       "dur": 0.5,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "And it only works",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='240' y='640' width='290' height='60' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='240' y='700' width='290' height='26' fill='#BFEAFF' stroke='#141218' stroke-width='4'/><rect x='500' y='560' width='24' height='240' fill='#7C7A8A' stroke='#141218' stroke-width='4'/><rect x='250' y='726' width='16' height='84' fill='#7C7A8A' stroke='#141218' stroke-width='4'/><g transform='translate(80 450)'><circle r='44' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='-3' y='-36' width='6' height='38' fill='#141218' transform='rotate(-6)'/><rect x='-3' y='-26' width='6' height='28' fill='#141218' transform='rotate(-2)'/><text x='0' y='70' text-anchor='middle' font-family='Arial Black,Arial' font-size='20' fill='#FFB547' stroke='#141218' stroke-width='1'>11:59</text></g>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "midnight",
+       "look": -1,
+       "face": "shocked",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "char": "extra",
+     "shirt": "#F2C94C",
+     "id": "oldsam",
+     "x": 380,
+     "y": 650,
+     "scale": 1.1,
+     "flip": true,
+     "pose": "sit",
+     "face": "sad",
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "hair",
+     "x": 378,
+     "y": 509,
+     "front": true,
+     "svg": "<path d='M-36 -2 Q-36 -42 0 -42 Q36 -42 36 -2' stroke='#D8D4E4' stroke-width='12' fill='none' stroke-linecap='round'/><path d='M-14 22 Q0 14 14 22' stroke='#D8D4E4' stroke-width='7' fill='none' stroke-linecap='round'/>"
+    }
+   ]
+  },
+  {
+   "start": "Ten seconds",
+   "bg": "warm_interior",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='240' y='640' width='290' height='60' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='240' y='700' width='290' height='26' fill='#BFEAFF' stroke='#141218' stroke-width='4'/><rect x='500' y='560' width='24' height='240' fill='#7C7A8A' stroke='#141218' stroke-width='4'/><rect x='250' y='726' width='16' height='84' fill='#7C7A8A' stroke='#141218' stroke-width='4'/><g transform='translate(80 450)'><circle r='44' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='-3' y='-36' width='6' height='38' fill='#141218' transform='rotate(-6)'/><rect x='-3' y='-26' width='6' height='28' fill='#141218' transform='rotate(-2)'/><text x='0' y='70' text-anchor='middle' font-family='Arial Black,Arial' font-size='20' fill='#FFB547' stroke='#141218' stroke-width='1'>11:59</text></g>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Nine",
+       "look": 1,
+       "dur": 0.3
+      },
+      {
+       "at": "Eight",
+       "look": -1,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "char": "extra",
+     "shirt": "#F2C94C",
+     "id": "oldsam",
+     "x": 380,
+     "y": 650,
+     "scale": 1.1,
+     "flip": true,
+     "pose": "sit",
+     "face": "sad",
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "hair",
+     "x": 378,
+     "y": 509,
+     "front": true,
+     "svg": "<path d='M-36 -2 Q-36 -42 0 -42 Q36 -42 36 -2' stroke='#D8D4E4' stroke-width='12' fill='none' stroke-linecap='round'/><path d='M-14 22 Q0 14 14 22' stroke='#D8D4E4' stroke-width='7' fill='none' stroke-linecap='round'/>"
+    }
+   ]
+  },
+  {
+   "start": "Sam squeezes",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "oldsam",
+   "zoom": 2.4,
+   "slowmo": true,
+   "props": "<rect x='240' y='640' width='290' height='60' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='240' y='700' width='290' height='26' fill='#BFEAFF' stroke='#141218' stroke-width='4'/><rect x='500' y='560' width='24' height='240' fill='#7C7A8A' stroke='#141218' stroke-width='4'/><rect x='250' y='726' width='16' height='84' fill='#7C7A8A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "reach_up",
+     "face": "sad",
+     "keys": []
+    },
+    {
+     "char": "extra",
+     "shirt": "#F2C94C",
+     "id": "oldsam",
+     "x": 380,
+     "y": 650,
+     "scale": 1.1,
+     "flip": true,
+     "pose": "sit",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "Don't stay",
+       "face": "happy",
+       "dur": 0.4
+      },
+      {
+       "at": "kiddo#2",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "hair",
+     "x": 378,
+     "y": 509,
+     "front": true,
+     "svg": "<path d='M-36 -2 Q-36 -42 0 -42 Q36 -42 36 -2' stroke='#D8D4E4' stroke-width='12' fill='none' stroke-linecap='round'/><path d='M-14 22 Q0 14 14 22' stroke='#D8D4E4' stroke-width='7' fill='none' stroke-linecap='round'/>"
+    }
+   ]
+  },
+  {
+   "start": "Seven",
+   "bg": "cool_interior",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='300' y='640' width='180' height='70' rx='14' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='320' y='710' width='14' height='100' fill='#7C7A8A'/><rect x='446' y='710' width='14' height='100' fill='#7C7A8A'/><circle cx='360' cy='636' r='18' fill='#F2D3B3' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 180,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "save babies",
+       "face": "determined",
+       "look": 1,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "hb2",
+     "x": 390,
+     "y": 560,
+     "scale": 0.0,
+     "svg": "<path d='M0 22 C-40 -6 -30 -38 -10 -34 C-2 -32 0 -24 0 -20 C0 -24 2 -32 10 -34 C30 -38 40 -6 0 22 Z' fill='#E5484D' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "Stay, and",
+       "scale": 1.2,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "heartbeat"
+      },
+      {
+       "at": "six hundred",
+       "scale": 1.0,
+       "dur": 0.3
+      },
+      {
+       "at": "more years",
+       "scale": 1.2,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "y600",
+     "x": 390,
+     "y": 700,
+     "svg": "<text x='0' y='20' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='40' fill='#C8FF4D' stroke='#141218' stroke-width='3'>600 YEARS</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "six hundred",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Five",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.7,
+   "slowmo": true,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Four#2",
+       "face": "determined",
+       "look": -1,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "pill3",
+     "x": 0,
+     "y": 0,
+     "scale": 1.2,
+     "svg": "<g transform='rotate(-30)'><rect x='-26' y='-12' width='52' height='24' rx='12' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M0 -12 L0 12 L-14 12 Q-26 12 -26 0 Q-26 -12 -14 -12 Z' fill='#C8FF4D' stroke='#141218' stroke-width='4'/></g>",
+     "front": true,
+     "keys": [
+      {
+       "at": "Five",
+       "attach": "hero.hand",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "stay young#2",
+       "face": "worried",
+       "look": 0.5,
+       "dur": 0.3
+      },
+      {
+       "at": "grow old with Sam",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ],
+     "look": 0.5
+    }
+   ],
+   "objects": [
+    {
+     "id": "clk",
+     "x": 380,
+     "y": 560,
+     "svg": "<circle r='70' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle r='6' fill='#141218'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(0)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(30)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(60)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(90)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(120)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(150)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(180)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(210)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(240)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(270)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(300)'/><rect x='-3' y='-64' width='6' height='12' fill='#141218' transform='rotate(330)'/>"
+    },
+    {
+     "id": "hnd",
+     "x": 380,
+     "y": 560,
+     "rot": 0,
+     "svg": "<rect x='-4' y='-56' width='8' height='60' rx='4' fill='#E5484D' stroke='#141218' stroke-width='2'/>",
+     "keys": [
+      {
+       "at": "Would you",
+       "rot": 20,
+       "dur": 2.0,
+       "ease": "linear"
+      }
+     ]
+    }
+   ],
+   "start": "Would you stay"
+  }
+ ]
+}
