@@ -276,7 +276,7 @@
  },
  {
   "id": 9,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Hear 100x Better?",
   "ability": "hearing",
   "category": "senses",
@@ -294,7 +294,8 @@
    "Humans hear roughly 20 to 20,000 hertz; dogs hear far higher pitches",
    "Sounds around 120 decibels start to cause pain"
   ],
-  "visuals": "exam hall, heartbeat icons, sound waves, siren, rubble"
+  "visuals": "exam hall, heartbeat icons, sound waves, siren, rubble",
+  "ep": 16
  },
  {
   "id": 38,

@@ -1,0 +1,1941 @@
+{
+ "ep": 16,
+ "title": "What If You Could Hear 100x Better?",
+ "script": "What if you could hear a hundred times better? Not a little sharper. A hundred times. Day one, in a silent exam, you hear a pencil scratching three rooms away. Day two, your best friend Leo whispers from the back of the bus. Bet you can't hear this. You laugh at his joke before anyone else even hears it. Then, in the school kitchen, you hear a hiss nobody else can. A gas leak. Everyone, get out! Thirty kids walk out safe, because of you. Sounds amazing, right? Except quiet sounds aren't the only ones that got louder. Day five, a fire truck screams past, and your ears ring for hours. Sirens up close are loud enough to damage normal ears. Because deep inside each ear are thousands of tiny hair cells that turn sound into signals. Too much noise kills them, and once they die, they never grow back. So now you wear earplugs everywhere. Day nine, Leo's apartment block collapses. Rescuers stop the drills and beg for silence, but fire trucks keep screaming past. Somewhere under the rubble, Leo is tapping, so faintly that only you could find him, but only with your earplugs out. Next to those sirens, you could lose your hearing forever. No music. No voices. Not even your own. The tapping gets weaker. Ten seconds. Nine. Eight. Your fingers touch the earplugs. Seven. Six. Leo is still knocking. Five. Four. Your best friend, or your hearing forever. Would you pull them out?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.0,
+ "music": [
+  {
+   "track": "music/syntheticity.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/ominosity.mp3",
+   "at": "Except quiet"
+  },
+  {
+   "track": "music/remember.mp3",
+   "at": "Day nine"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "thumbnail": "a hiss nobody",
+ "accent": "#C8FF4D",
+ "highlights": {
+  "hundred times": "green",
+  "three rooms away": "green",
+  "gas leak": "amber",
+  "Thirty kids": "green",
+  "louder": "amber",
+  "never grow back": "amber",
+  "earplugs out": "amber",
+  "hearing forever": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "Day one",
+   "name": "HEARING",
+   "mult": "×100",
+   "tag": "+9,900%"
+  },
+  {
+   "type": "marker",
+   "at": "Day one",
+   "until": "you hear a pencil",
+   "label": "DAY",
+   "text": "1",
+   "sub": "SILENT EXAM"
+  },
+  {
+   "type": "marker",
+   "at": "Day two",
+   "until": "whispers",
+   "label": "DAY",
+   "text": "2"
+  },
+  {
+   "type": "marker",
+   "at": "Thirty kids",
+   "until": "Sounds amazing",
+   "label": "KIDS SAVED",
+   "text": "30",
+   "color": "#C8FF4D"
+  },
+  {
+   "type": "warn",
+   "at": "Except quiet",
+   "until": "Day five",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Loud sounds got louder too."
+  },
+  {
+   "type": "marker",
+   "at": "Day five",
+   "until": "and your ears",
+   "label": "DAY",
+   "text": "5"
+  },
+  {
+   "type": "note",
+   "at": "Sirens up close",
+   "until": "Because deep",
+   "label": "REAL SCIENCE",
+   "text": "Sirens up close can damage hearing."
+  },
+  {
+   "type": "note",
+   "at": "once they die",
+   "until": "So now",
+   "label": "REAL SCIENCE",
+   "text": "Ear hair cells don't grow back."
+  },
+  {
+   "type": "marker",
+   "at": "Day nine",
+   "until": "Rescuers stop",
+   "label": "DAY",
+   "text": "9"
+  },
+  {
+   "type": "warn",
+   "at": "Next to those",
+   "until": "The tapping gets",
+   "label": "THE COST",
+   "text": "Find Leo. Lose your hearing forever."
+  },
+  {
+   "type": "countdown",
+   "at": "Ten seconds",
+   "until": "Five. Four",
+   "from": 10
+  },
+  {
+   "type": "choice",
+   "at": "Five. Four",
+   "until": "Your best friend, or",
+   "a": "Save Leo",
+   "b": "Keep your hearing",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Your best friend, or",
+   "text": "Your best friend, or your hearing?",
+   "a": "LEO",
+   "b": "MY HEARING"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": 0.15,
+       "face": "shocked",
+       "pose": "catch",
+       "dur": 0.1,
+       "sfx": "swish"
+      },
+      {
+       "at": 1.4,
+       "pose": "point",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ear",
+     "x": 370,
+     "y": 580,
+     "scale": 0.3,
+     "svg": "<path d='M-34 -70 Q46 -104 58 -14 Q64 44 14 70 Q-4 80 -10 58 Q-14 36 6 24 Q30 2 14 -28 Q-6 -52 -28 -30 Z' fill='#F2D3B3' stroke='#141218' stroke-width='6'/><path d='M-6 -40 Q24 -40 24 -6' stroke='#141218' stroke-width='5' fill='none'/>",
+     "keys": [
+      {
+       "at": 0.05,
+       "scale": 1.3,
+       "dur": 0.6,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "w1",
+     "x": 450,
+     "y": 580,
+     "opacity": 0,
+     "scale": 0.6,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#C8FF4D' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": 0.55,
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": 1.15,
+       "opacity": 0.2,
+       "scale": 1.5,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "w2",
+     "x": 470,
+     "y": 580,
+     "opacity": 0,
+     "scale": 0.84,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#C8FF4D' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": 0.9500000000000001,
+       "opacity": 1,
+       "scale": 1.68,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": 1.55,
+       "opacity": 0.2,
+       "scale": 2.0999999999999996,
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Not a little",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "shrug",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "A hundred times#2",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ],
+   "props": "<rect x='330' y='420' width='70' height='360' rx='14' fill='#2B2838' stroke='#141218' stroke-width='5'/>",
+   "objects": [
+    {
+     "id": "bar",
+     "x": 365,
+     "y": 770,
+     "svg": "<rect x='-26' y='-340' width='52' height='340' rx='10' fill='#C8FF4D' stroke='#141218' stroke-width='4'/>",
+     "scale": 0.15,
+     "keys": [
+      {
+       "at": "A hundred times#2",
+       "scale": 1,
+       "dur": 0.6,
+       "ease": "out",
+       "sfx": "riser"
+      }
+     ]
+    },
+    {
+     "id": "x100",
+     "x": 365,
+     "y": 390,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='64' fill='#C8FF4D' stroke='#141218' stroke-width='3'>×100</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "A hundred times#2",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Day one",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='40' y='690' width='170' height='16' rx='5' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='60' y='706' width='12' height='105' fill='#6B4A3A'/><rect x='180' y='706' width='12' height='105' fill='#6B4A3A'/><rect x='280' y='690' width='170' height='16' rx='5' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='300' y='706' width='12' height='105' fill='#6B4A3A'/><rect x='420' y='706' width='12' height='105' fill='#6B4A3A'/><rect x='500' y='420' width='40' height='400' fill='#9AA0B5' stroke='#141218' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "sit",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "you hear a pencil",
+       "face": "shocked",
+       "look": 1,
+       "dur": 0.12
+      },
+      {
+       "at": "three rooms",
+       "pose": "point",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "k1",
+     "char": "extra",
+     "shirt": "#7FB77E",
+     "x": 360,
+     "y": 812,
+     "scale": 1.1,
+     "pose": "sit",
+     "face": "focused",
+     "flip": true
+    }
+   ],
+   "objects": [
+    {
+     "id": "pen",
+     "x": 470,
+     "y": 560,
+     "svg": "<rect x='-6' y='-40' width='12' height='70' rx='3' fill='#FFB547' stroke='#141218' stroke-width='3'/><path d='M-6 30 L0 46 L6 30 Z' fill='#141218'/>",
+     "rot": 20,
+     "keys": [
+      {
+       "at": "pencil",
+       "rot": -20,
+       "dur": 0.2
+      },
+      {
+       "at": "scratching",
+       "rot": 20,
+       "dur": 0.2,
+       "sfx": "click"
+      },
+      {
+       "at": "three rooms",
+       "rot": -20,
+       "dur": 0.2,
+       "sfx": "click"
+      },
+      {
+       "at": "away",
+       "rot": 20,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "scr",
+     "x": 380,
+     "y": 470,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='40' fill='#FFB547' stroke='#141218' stroke-width='3'>SCRATCH</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "scratching",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Day two",
+   "bg": "cool_interior",
+   "camera": "static",
+   "props": "<rect x='0' y='440' width='540' height='120' fill='#BFEAFF' stroke='#141218' stroke-width='5'/><rect x='0' y='430' width='540' height='14' fill='#FFB547'/><rect x='170' y='440' width='14' height='120' fill='#FFB547'/><rect x='360' y='440' width='14' height='120' fill='#FFB547'/><rect x='40' y='620' width='30' height='190' rx='10' fill='#3D6FB6' stroke='#141218' stroke-width='5'/><rect x='470' y='620' width='30' height='190' rx='10' fill='#3D6FB6' stroke='#141218' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "sit",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "whispers",
+       "face": "focused",
+       "look": 1,
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 400,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "sit",
+     "face": "smug",
+     "flip": true,
+     "keys": [
+      {
+       "at": "whispers",
+       "pose": "point",
+       "dur": 0.2
+      },
+      {
+       "at": "Bet you",
+       "pose": "shrug",
+       "face": "smug",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bw1",
+     "x": 330,
+     "y": 600,
+     "opacity": 0,
+     "scale": 0.36,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "whispers",
+       "opacity": 1,
+       "scale": 0.72,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": "whispers+0.6",
+       "opacity": 0.2,
+       "scale": 0.8999999999999999,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "bw2",
+     "x": 280,
+     "y": 600,
+     "opacity": 0,
+     "scale": 0.36,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "from the back",
+       "opacity": 1,
+       "scale": 0.72,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": "from the back+0.6",
+       "opacity": 0.2,
+       "scale": 0.8999999999999999,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "bw3",
+     "x": 230,
+     "y": 600,
+     "opacity": 0,
+     "scale": 0.36,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "Bet you",
+       "opacity": 1,
+       "scale": 0.72,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": "Bet you+0.6",
+       "opacity": 0.2,
+       "scale": 0.8999999999999999,
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You laugh",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "props": "<rect x='0' y='440' width='540' height='120' fill='#BFEAFF' stroke='#141218' stroke-width='5'/><rect x='0' y='430' width='540' height='14' fill='#FFB547'/><rect x='170' y='440' width='14' height='120' fill='#FFB547'/><rect x='360' y='440' width='14' height='120' fill='#FFB547'/><rect x='40' y='620' width='30' height='190' rx='10' fill='#3D6FB6' stroke='#141218' stroke-width='5'/><rect x='470' y='620' width='30' height='190' rx='10' fill='#3D6FB6' stroke='#141218' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "sit",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "his joke",
+       "pose": "cheer",
+       "dur": 0.15,
+       "sfx": "boing"
+      },
+      {
+       "at": "anyone else",
+       "face": "smug",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Then, in the school",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='300' y='640' width='180' height='175' rx='8' fill='#C9C6D6' stroke='#141218' stroke-width='5'/><rect x='300' y='626' width='180' height='18' fill='#7C7A8A' stroke='#141218' stroke-width='4'/><circle cx='340' cy='672' r='10' fill='#2B2838'/><circle cx='380' cy='672' r='10' fill='#2B2838'/><rect x='320' y='700' width='140' height='90' rx='6' fill='#2B2838' stroke='#141218' stroke-width='4'/><rect x='470' y='560' width='14' height='80' fill='#7C7A8A' stroke='#141218' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "walk_a",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "you hear a hiss",
+       "pose": "idle",
+       "face": "focused",
+       "look": 1,
+       "dur": 0.12
+      },
+      {
+       "at": "A gas leak",
+       "face": "shocked",
+       "pose": "catch",
+       "dur": 0.12,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "gas",
+     "x": 440,
+     "y": 580,
+     "opacity": 0,
+     "svg": "<path d='M0 0 Q-20 -20 0 -40 Q20 -60 0 -80 M-24 -10 Q-44 -30 -24 -50 M24 -10 Q44 -30 24 -50' stroke='#9FE8A0' stroke-width='6' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "a hiss",
+       "opacity": 0.9,
+       "y": 560,
+       "dur": 0.6
+      },
+      {
+       "at": "A gas leak",
+       "scale": 1.5,
+       "y": 530,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "hiss",
+     "x": 400,
+     "y": 470,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='40' fill='#9FE8A0' stroke='#141218' stroke-width='3'>HISSS</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "a hiss",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Everyone, get out",
+   "bg": "day_park",
+   "camera": "pan_left",
+   "props": "<rect x='330' y='480' width='210' height='335' fill='#C9A27A' stroke='#141218' stroke-width='5'/><rect x='380' y='640' width='80' height='175' fill='#6B4A3A' stroke='#141218' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "point",
+     "face": "determined",
+     "flip": false,
+     "keys": [
+      {
+       "at": "Thirty kids",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2,
+       "sfx": "crowd"
+      }
+     ]
+    },
+    {
+     "id": "k1",
+     "char": "extra",
+     "shirt": "#7FB77E",
+     "x": 420,
+     "y": 815,
+     "scale": 0.95,
+     "flip": true,
+     "cycle": "run",
+     "keys": [
+      {
+       "at": "get out+0.2",
+       "x": -60,
+       "dur": 2.4,
+       "cycle": "run"
+      }
+     ]
+    },
+    {
+     "id": "k2",
+     "char": "extra",
+     "shirt": "#FFB547",
+     "x": 440,
+     "y": 815,
+     "scale": 0.95,
+     "flip": true,
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "Thirty",
+       "opacity": 1,
+       "dur": 0.05
+      },
+      {
+       "at": "Thirty+0.05",
+       "x": -60,
+       "dur": 2.4,
+       "cycle": "run"
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Sounds amazing",
+   "bg": "day_park",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "cheer",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "right",
+       "pose": "shrug",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Except quiet",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "got louder",
+       "face": "shocked",
+       "pose": "catch",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ear",
+     "x": 370,
+     "y": 600,
+     "scale": 1.0,
+     "svg": "<path d='M-34 -70 Q46 -104 58 -14 Q64 44 14 70 Q-4 80 -10 58 Q-14 36 6 24 Q30 2 14 -28 Q-6 -52 -28 -30 Z' fill='#F2D3B3' stroke='#141218' stroke-width='6'/><path d='M-6 -40 Q24 -40 24 -6' stroke='#141218' stroke-width='5' fill='none'/>"
+    },
+    {
+     "id": "lw1",
+     "x": 440,
+     "y": 600,
+     "opacity": 0,
+     "scale": 0.6,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#FFB547' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "the only ones",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": "the only ones+0.6",
+       "opacity": 0.2,
+       "scale": 1.5,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "lw2",
+     "x": 460,
+     "y": 600,
+     "opacity": 0,
+     "scale": 0.96,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#E5484D' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "got louder",
+       "opacity": 1,
+       "scale": 1.92,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": "got louder+0.6",
+       "opacity": 0.2,
+       "scale": 2.4000000000000004,
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Day five",
+   "bg": "night_city",
+   "camera": "static",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "walk_a",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "screams past",
+       "pose": "facepalm",
+       "face": "shocked",
+       "dur": 0.1,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "truck",
+     "x": 760,
+     "y": 800,
+     "svg": "<rect x='-120' y='-70' width='170' height='70' rx='8' fill='#E5484D' stroke='#141218' stroke-width='5'/><rect x='50' y='-60' width='70' height='60' rx='10' fill='#E5484D' stroke='#141218' stroke-width='5'/><rect x='70' y='-50' width='36' height='24' fill='#BFEAFF' stroke='#141218' stroke-width='3'/><rect x='-110' y='-58' width='140' height='8' fill='#F4F1FF'/><rect x='-110' y='-36' width='140' height='8' fill='#F4F1FF'/><circle cx='-80' cy='4' r='20' fill='#2B2838' stroke='#141218' stroke-width='5'/><circle cx='80' cy='4' r='20' fill='#2B2838' stroke='#141218' stroke-width='5'/><rect x='70' y='-80' width='30' height='16' rx='6' fill='#5AB0FF' stroke='#141218' stroke-width='3'/>",
+     "flip": false,
+     "keys": [
+      {
+       "at": "a fire truck",
+       "x": -260,
+       "dur": 1.6,
+       "ease": "linear",
+       "sfx": "whoosh"
+      }
+     ]
+    },
+    {
+     "id": "wee",
+     "x": 300,
+     "y": 470,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='52' fill='#E5484D' stroke='#141218' stroke-width='3'>WEE-OOO</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "screams",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "and your ears ring",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "facepalm",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "for hours",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "r1",
+     "x": 255,
+     "y": 560,
+     "opacity": 0,
+     "scale": 0.3,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "ring",
+       "opacity": 1,
+       "scale": 0.6,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": "ring+0.6",
+       "opacity": 0.2,
+       "scale": 0.75,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "r2",
+     "x": 255,
+     "y": 560,
+     "opacity": 0,
+     "scale": 0.3,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "for hours",
+       "opacity": 1,
+       "scale": 0.6,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": "for hours+0.6",
+       "opacity": 0.2,
+       "scale": 0.75,
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Sirens up close",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "think",
+     "face": "worried"
+    }
+   ],
+   "objects": [
+    {
+     "id": "sir",
+     "x": 370,
+     "y": 620,
+     "svg": "<rect x='-50' y='-20' width='100' height='60' rx='10' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><path d='M-36 -20 Q-36 -80 0 -80 Q36 -80 36 -20 Z' fill='#E5484D' stroke='#141218' stroke-width='5'/>",
+     "keys": [
+      {
+       "at": "Sirens",
+       "scale": 1.2,
+       "dur": 0.2,
+       "ease": "back",
+       "sfx": "buzz"
+      },
+      {
+       "at": "damage",
+       "scale": 1.0,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "sw",
+     "x": 450,
+     "y": 580,
+     "opacity": 0,
+     "scale": 0.72,
+     "svg": "<path d='M0 -50 Q34 0 0 50' stroke='#E5484D' stroke-width='7' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "loud enough",
+       "opacity": 1,
+       "scale": 1.44,
+       "dur": 0.4,
+       "ease": "out"
+      },
+      {
+       "at": "loud enough+0.6",
+       "opacity": 0.2,
+       "scale": 1.7999999999999998,
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Because deep inside",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 840,
+     "scale": 1.0,
+     "pose": "point",
+     "face": "focused"
+    }
+   ],
+   "props": "<rect x='220' y='640' width='290' height='26' rx='8' fill='#C98A6A' stroke='#141218' stroke-width='5'/>",
+   "objects": [
+    {
+     "id": "c0",
+     "x": 250,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c1",
+     "x": 288,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c2",
+     "x": 326,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c3",
+     "x": 364,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c4",
+     "x": 402,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c5",
+     "x": 440,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c6",
+     "x": 478,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Too much noise",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 840,
+     "scale": 1.0,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "never grow back",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "props": "<rect x='220' y='640' width='290' height='26' rx='8' fill='#C98A6A' stroke='#141218' stroke-width='5'/>",
+   "objects": [
+    {
+     "id": "c0",
+     "x": 250,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      },
+      {
+       "at": "kills them+0.00",
+       "rot": -80,
+       "opacity": 0.5,
+       "dur": 0.3,
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "c1",
+     "x": 288,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c2",
+     "x": 326,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      },
+      {
+       "at": "kills them+0.30",
+       "rot": -80,
+       "opacity": 0.5,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "c3",
+     "x": 364,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      },
+      {
+       "at": "kills them+0.45",
+       "rot": 80,
+       "opacity": 0.5,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "c4",
+     "x": 402,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c5",
+     "x": 440,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      },
+      {
+       "at": "kills them+0.75",
+       "rot": 80,
+       "opacity": 0.5,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "c6",
+     "x": 478,
+     "y": 640,
+     "svg": "<rect x='-8' y='-90' width='16' height='90' rx='8' fill='#FF9EC7' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "tiny hair cells",
+       "rot": 12,
+       "dur": 0.4
+      },
+      {
+       "at": "into signals",
+       "rot": -12,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "nogrow",
+     "x": 365,
+     "y": 470,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='36' fill='#E5484D' stroke='#141218' stroke-width='3'>NEVER GROW BACK</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "never grow back",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So now you wear",
+   "bg": "warm_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "earplugs",
+       "pose": "facepalm",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "plug",
+     "x": 330,
+     "y": 560,
+     "scale": 2.2,
+     "svg": "<rect x='-9' y='-15' width='18' height='30' rx='9' fill='#FFB547' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "wear",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -10,
+       "scale": 1.4,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "ep",
+     "x": 370,
+     "y": 470,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='34' fill='#FFB547' stroke='#141218' stroke-width='3'>EARPLUGS: ALWAYS</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "everywhere",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Day nine",
+   "bg": "night_city",
+   "camera": "static",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 815,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "collapses",
+       "face": "shocked",
+       "pose": "catch",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bld",
+     "x": 380,
+     "y": 815,
+     "svg": "<rect x='-80' y='-300' width='160' height='300' fill='#9AA0B5' stroke='#141218' stroke-width='5'/><rect x='-60' y='-280' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-15' y='-280' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='30' y='-280' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-60' y='-225' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-15' y='-225' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='30' y='-225' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-60' y='-170' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-15' y='-170' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='30' y='-170' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-60' y='-115' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-15' y='-115' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='30' y='-115' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-60' y='-60' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='-15' y='-60' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/><rect x='30' y='-60' width='30' height='34' fill='#FFE08A' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "collapses",
+       "y": 1150,
+       "rot": 6,
+       "dur": 0.7,
+       "ease": "in",
+       "sfx": "boom"
+      }
+     ]
+    },
+    {
+     "id": "rub",
+     "x": 0,
+     "y": 0,
+     "opacity": 0,
+     "svg": "<path d='M10 820 L60 700 L130 720 L170 640 L260 660 L300 600 L380 640 L430 610 L520 700 L540 820 Z' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='120' y='690' width='120' height='26' rx='4' transform='rotate(-12 180 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='300' y='650' width='130' height='24' rx='4' transform='rotate(10 365 662)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><path d='M200 760 L230 740 M330 740 L360 760' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "collapses+0.5",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Rescuers stop",
+   "bg": "night_city",
+   "camera": "pan_right",
+   "props": "<path d='M10 820 L60 700 L130 720 L170 640 L260 660 L300 600 L380 640 L430 610 L520 700 L540 820 Z' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='120' y='690' width='120' height='26' rx='4' transform='rotate(-12 180 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='300' y='650' width='130' height='24' rx='4' transform='rotate(10 365 662)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><path d='M200 760 L230 740 M330 740 L360 760' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "r1",
+     "char": "extra",
+     "shirt": "#FF8A3D",
+     "x": 120,
+     "y": 815,
+     "scale": 1.15,
+     "pose": "hold",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "beg for silence",
+       "pose": "reach_up",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 815,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "keep screaming",
+       "pose": "facepalm",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "truck2",
+     "x": 440,
+     "y": 810,
+     "svg": "<rect x='-120' y='-70' width='170' height='70' rx='8' fill='#E5484D' stroke='#141218' stroke-width='5'/><rect x='50' y='-60' width='70' height='60' rx='10' fill='#E5484D' stroke='#141218' stroke-width='5'/><rect x='70' y='-50' width='36' height='24' fill='#BFEAFF' stroke='#141218' stroke-width='3'/><rect x='-110' y='-58' width='140' height='8' fill='#F4F1FF'/><rect x='-110' y='-36' width='140' height='8' fill='#F4F1FF'/><circle cx='-80' cy='4' r='20' fill='#2B2838' stroke='#141218' stroke-width='5'/><circle cx='80' cy='4' r='20' fill='#2B2838' stroke='#141218' stroke-width='5'/><rect x='70' y='-80' width='30' height='16' rx='6' fill='#5AB0FF' stroke='#141218' stroke-width='3'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "fire trucks",
+       "x": 430,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "wee2",
+     "x": 380,
+     "y": 470,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='48' fill='#E5484D' stroke='#141218' stroke-width='3'>WEE-OOO</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "keep screaming",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "shh",
+     "x": 140,
+     "y": 470,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='44' fill='#F4F1FF' stroke='#141218' stroke-width='3'>SHHH!</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "silence",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Somewhere under",
+   "bg": "lab",
+   "camera": "push",
+   "props": "<rect x='0' y='540' width='540' height='160' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='60' y='690' width='260' height='26' rx='4' transform='rotate(-6 190 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='0' y='800' width='540' height='160' fill='#5A5866'/>",
+   "actors": [
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 250,
+     "y": 800,
+     "scale": 1.0,
+     "pose": "lie",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "tapping",
+       "face": "determined",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "tap1",
+     "x": 380,
+     "y": 740,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='#F4F1FF' stroke='#141218' stroke-width='3'>tap</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "tapping",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "click"
+      }
+     ]
+    },
+    {
+     "id": "tap2",
+     "x": 420,
+     "y": 710,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='#F4F1FF' stroke='#141218' stroke-width='3'>tap</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "so faintly",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "click"
+      }
+     ]
+    },
+    {
+     "id": "tap3",
+     "x": 450,
+     "y": 680,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='22' fill='#F4F1FF' stroke='#141218' stroke-width='3'>tap</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "only you",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "click"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Next to those",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "props": "<path d='M10 820 L60 700 L130 720 L170 640 L260 660 L300 600 L380 640 L430 610 L520 700 L540 820 Z' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='120' y='690' width='120' height='26' rx='4' transform='rotate(-12 180 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='300' y='650' width='130' height='24' rx='4' transform='rotate(10 365 662)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><path d='M200 760 L230 740 M330 740 L360 760' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "forever",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "No music",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 840,
+     "scale": 1.1,
+     "pose": "slump",
+     "face": "sad"
+    }
+   ],
+   "objects": [
+    {
+     "id": "n1",
+     "x": 360,
+     "y": 520,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='90' fill='#F4F1FF' stroke='#141218' stroke-width='3'>♪</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "No music",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "x1",
+     "x": 360,
+     "y": 500,
+     "opacity": 0,
+     "scale": 2,
+     "front": true,
+     "svg": "<path d='M-40 -40 L40 40 M40 -40 L-40 40' stroke='#E5484D' stroke-width='12' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "No music+0.3",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.15,
+       "sfx": "buzz"
+      }
+     ]
+    },
+    {
+     "id": "n2",
+     "x": 360,
+     "y": 660,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='44' fill='#F4F1FF' stroke='#141218' stroke-width='3'>HELLO?</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "No voices",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "x2",
+     "x": 360,
+     "y": 650,
+     "opacity": 0,
+     "scale": 2,
+     "front": true,
+     "svg": "<path d='M-70 -30 L70 30 M70 -30 L-70 30' stroke='#E5484D' stroke-width='12' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "No voices+0.3",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.15,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The tapping gets",
+   "bg": "night_city",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<path d='M10 820 L60 700 L130 720 L170 640 L260 660 L300 600 L380 640 L430 610 L520 700 L540 820 Z' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='120' y='690' width='120' height='26' rx='4' transform='rotate(-12 180 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='300' y='650' width='130' height='24' rx='4' transform='rotate(10 365 662)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><path d='M200 760 L230 740 M330 740 L360 760' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "crouch",
+     "face": "worried",
+     "look": 1
+    }
+   ],
+   "objects": [
+    {
+     "id": "tw",
+     "x": 380,
+     "y": 560,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='#9AA0B5' stroke='#141218' stroke-width='3'>tap...</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "weaker",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Ten seconds",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.6,
+   "slowmo": true,
+   "props": "<path d='M10 820 L60 700 L130 720 L170 640 L260 660 L300 600 L380 640 L430 610 L520 700 L540 820 Z' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='120' y='690' width='120' height='26' rx='4' transform='rotate(-12 180 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='300' y='650' width='130' height='24' rx='4' transform='rotate(10 365 662)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><path d='M200 760 L230 740 M330 740 L360 760' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "crouch",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Eight",
+       "face": "determined",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Your fingers",
+   "bg": "night_city",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<path d='M10 820 L60 700 L130 720 L170 640 L260 660 L300 600 L380 640 L430 610 L520 700 L540 820 Z' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='120' y='690' width='120' height='26' rx='4' transform='rotate(-12 180 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='300' y='650' width='130' height='24' rx='4' transform='rotate(10 365 662)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><path d='M200 760 L230 740 M330 740 L360 760' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "crouch",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "touch",
+       "pose": "facepalm",
+       "dur": 0.5
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "plug2",
+     "x": 0,
+     "y": 0,
+     "svg": "<rect x='-9' y='-15' width='18' height='30' rx='9' fill='#FFB547' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "Your fingers",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -6,
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Leo is still",
+   "bg": "lab",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='0' y='540' width='540' height='160' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='60' y='690' width='260' height='26' rx='4' transform='rotate(-6 190 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='0' y='800' width='540' height='160' fill='#5A5866'/>",
+   "actors": [
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 250,
+     "y": 800,
+     "scale": 1.0,
+     "pose": "lie",
+     "face": "sad"
+    }
+   ],
+   "objects": [
+    {
+     "id": "tap4",
+     "x": 380,
+     "y": 740,
+     "svg": "<text x='0' y='16' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='#F4F1FF' stroke='#141218' stroke-width='3'>tap</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "knocking",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Five. Four",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "slowmo": true,
+   "props": "<path d='M10 820 L60 700 L130 720 L170 640 L260 660 L300 600 L380 640 L430 610 L520 700 L540 820 Z' fill='#7C7A8A' stroke='#141218' stroke-width='5'/><rect x='120' y='690' width='120' height='26' rx='4' transform='rotate(-12 180 703)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><rect x='300' y='650' width='130' height='24' rx='4' transform='rotate(10 365 662)' fill='#9AA0B5' stroke='#141218' stroke-width='4'/><path d='M200 760 L230 740 M330 740 L360 760' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "facepalm",
+     "face": "determined",
+     "look": 1
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Your best friend, or",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "would you pull",
+       "face": "worried",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ear",
+     "x": 370,
+     "y": 580,
+     "scale": 1.3,
+     "svg": "<path d='M-34 -70 Q46 -104 58 -14 Q64 44 14 70 Q-4 80 -10 58 Q-14 36 6 24 Q30 2 14 -28 Q-6 -52 -28 -30 Z' fill='#F2D3B3' stroke='#141218' stroke-width='6'/><path d='M-6 -40 Q24 -40 24 -6' stroke='#141218' stroke-width='5' fill='none'/>"
+    }
+   ]
+  }
+ ]
+}
