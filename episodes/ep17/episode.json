@@ -1,0 +1,1121 @@
+{
+ "ep": 17,
+ "title": "What If You Weighed 10x Less?",
+ "script": "What if you weighed ten times less? Same muscles, a tenth of the weight. You jump for a frisbee and float over everyone. A kid's balloon slips away, so you leap up, grab the string, and the park cheers. Even an astronaut on the Moon weighs more than you. But then the wind starts winning. Grip comes from weight. Less weight, less grip, but wind shoves as hard as ever. So you live by one rule: one hand always holds something. Until you walk a windy cliff path with your little brother Sam and your best friend Mia, and the edge crumbles. Now both hang off the rocks. Let go of the railing, and the wind throws you off. Your free hand can pull up only one. Five. Four. Three. Sam is eight and screaming your name. Mia never once let you fall. Sam, or Mia? Who do you grab?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "thumbnail": "Now both hang",
+ "music": [
+  {
+   "track": "music/daybreak.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/unknown.mp3",
+   "at": "But then the wind"
+  },
+  {
+   "track": "music/now-or-never.mp3",
+   "at": "Until you walk"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "accent": "#C8FF4D",
+ "highlights": {
+  "ten times less": "green",
+  "a tenth": "green",
+  "Moon": "green",
+  "less grip": "amber",
+  "only one": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "You jump for",
+   "name": "BODY WEIGHT",
+   "mult": "×0.1",
+   "tag": "-90%"
+  },
+  {
+   "type": "compare",
+   "at": "Even an astronaut",
+   "until": "But then the wind",
+   "label": "WEIGHT · VS EARTH",
+   "a": [
+    "Astronaut on the Moon",
+    "17%",
+    0.17
+   ],
+   "b": [
+    "You",
+    "10%",
+    0.1
+   ]
+  },
+  {
+   "type": "note",
+   "at": "Grip comes from",
+   "until": "So you live",
+   "label": "REAL SCIENCE",
+   "text": "Less weight = less grip. Wind pushes just as hard."
+  },
+  {
+   "type": "warn",
+   "at": "So you live",
+   "until": "Until you walk",
+   "label": "THE RULE",
+   "text": "One hand always holds something."
+  },
+  {
+   "type": "countdown",
+   "at": "Five",
+   "until": "Sam is eight",
+   "from": 5
+  },
+  {
+   "type": "choice",
+   "at": "Sam is eight",
+   "until": "Sam, or Mia",
+   "a": "Sam",
+   "b": "Mia",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Sam, or Mia",
+   "text": "Sam or Mia?",
+   "a": "SAM",
+   "b": "MIA"
+  }
+ ],
+ "sfx": [
+  {
+   "name": "crowd",
+   "at": "the park cheers",
+   "gain": 0.8
+  }
+ ],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": 0.25,
+       "lift": 60,
+       "pose": "jump",
+       "face": "shocked",
+       "dur": 0.35,
+       "ease": "out",
+       "sfx": "boing"
+      },
+      {
+       "at": 0.9,
+       "lift": 0,
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.6,
+       "ease": "inout"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "feather",
+     "x": 330,
+     "y": 420,
+     "rot": -20,
+     "svg": "<path d='M0 -40 Q22 -10 0 40 Q-22 -10 0 -40 Z' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M0 -36 L0 46' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": 0.0,
+       "x": 360,
+       "y": 560,
+       "rot": 20,
+       "dur": 1.2,
+       "ease": "inout"
+      },
+      {
+       "at": 1.2,
+       "x": 320,
+       "y": 660,
+       "rot": -15,
+       "dur": 1.4,
+       "ease": "inout"
+      }
+     ]
+    },
+    {
+     "id": "scale",
+     "x": 330,
+     "y": 815,
+     "svg": "<rect x='-70' y='-18' width='140' height='36' rx='10' fill='#7FE0FF' stroke='#141218' stroke-width='5'/><rect x='-34' y='-12' width='68' height='22' rx='4' fill='#141218'/><text x='0' y='6' font-size='18' font-weight='900' text-anchor='middle' fill='#C8FF4D' font-family='Arial'>÷10</text>",
+     "opacity": 0,
+     "scale": 0.5,
+     "keys": [
+      {
+       "at": "ten times less",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Same muscles",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.35,
+     "pose": "idle",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "Same muscles",
+       "pose": "cheer",
+       "face": "smug",
+       "dur": 0.15,
+       "sfx": "swish"
+      },
+      {
+       "at": "a tenth",
+       "pose": "jump",
+       "lift": 40,
+       "face": "happy",
+       "dur": 0.3,
+       "ease": "out"
+      },
+      {
+       "at": "a tenth+0.4",
+       "lift": 0,
+       "pose": "idle",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "feather2",
+     "x": 360,
+     "y": 520,
+     "svg": "<path d='M0 -40 Q22 -10 0 40 Q-22 -10 0 -40 Z' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M0 -36 L0 46' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "Same muscles",
+       "y": 600,
+       "rot": 25,
+       "dur": 1.6,
+       "ease": "inout"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You jump for",
+   "bg": "day_park",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 815,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "focused",
+     "look": 0.8,
+     "keys": [
+      {
+       "at": "jump for",
+       "pose": "jump",
+       "face": "determined",
+       "dur": 0.15
+      },
+      {
+       "at": "and float",
+       "lift": 300,
+       "x": 300,
+       "pose": "reach_up",
+       "face": "happy",
+       "dur": 0.9,
+       "ease": "out",
+       "sfx": "whoosh"
+      },
+      {
+       "at": "over everyone+0.3",
+       "lift": 0,
+       "x": 330,
+       "pose": "cheer",
+       "dur": 0.9,
+       "ease": "inout"
+      }
+     ]
+    },
+    {
+     "id": "e1",
+     "char": "extra",
+     "shirt": "#4E8A3C",
+     "x": 230,
+     "y": 815,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "float over",
+       "face": "shocked",
+       "pose": "reach_up",
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "char": "extra",
+     "shirt": "#C25B8E",
+     "x": 400,
+     "y": 815,
+     "scale": 1.2,
+     "flip": true,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "over everyone",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fr",
+     "x": -40,
+     "y": 520,
+     "svg": "<ellipse rx='34' ry='10' fill='#FF5A5A' stroke='#141218' stroke-width='4'/><ellipse rx='16' ry='4' fill='#FF8A8A'/>",
+     "keys": [
+      {
+       "at": "jump for",
+       "x": 300,
+       "y": 470,
+       "rot": 360,
+       "dur": 1.0,
+       "ease": "out"
+      },
+      {
+       "at": "over everyone",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -10,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "A kid's balloon",
+   "bg": "day_park",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 815,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "slips away",
+       "face": "focused",
+       "look": 1,
+       "dur": 0.15
+      },
+      {
+       "at": "you leap",
+       "lift": 330,
+       "x": 300,
+       "pose": "reach_up",
+       "face": "determined",
+       "dur": 0.7,
+       "ease": "out",
+       "sfx": "whoosh"
+      },
+      {
+       "at": "the park cheers",
+       "lift": 0,
+       "x": 290,
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.8,
+       "ease": "inout"
+      }
+     ]
+    },
+    {
+     "id": "kid",
+     "char": "extra",
+     "shirt": "#FFD84D",
+     "x": 380,
+     "y": 815,
+     "scale": 0.85,
+     "flip": true,
+     "pose": "reach_up",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "the park cheers",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bal",
+     "x": 370,
+     "y": 560,
+     "svg": "<ellipse cx='0' cy='-40' rx='26' ry='32' fill='#FF5A5A' stroke='#141218' stroke-width='4'/><path d='M-4 -8 L4 -8 L0 -2 Z' fill='#FF5A5A' stroke='#141218' stroke-width='3'/><path d='M0 -2 Q8 20 0 40 Q-8 60 0 80' fill='none' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "slips away",
+       "x": 320,
+       "y": 420,
+       "dur": 1.2,
+       "ease": "out"
+      },
+      {
+       "at": "grab the string",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -70,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Even an astronaut",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "point",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "weighs more",
+       "pose": "shrug",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "moon",
+     "x": 360,
+     "y": 560,
+     "svg": "<circle r='62' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-20' cy='-14' r='12' fill='#D9D4E8'/><circle cx='22' cy='18' r='16' fill='#D9D4E8'/><circle cx='18' cy='-28' r='7' fill='#D9D4E8'/>",
+     "opacity": 0,
+     "scale": 0.4,
+     "keys": [
+      {
+       "at": "Even an astronaut",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "helm",
+     "x": 360,
+     "y": 680,
+     "svg": "<circle r='34' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='-22' y='-14' width='44' height='26' rx='12' fill='#FFB547' stroke='#141218' stroke-width='4'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "on the Moon",
+       "opacity": 1,
+       "y": 660,
+       "dur": 0.3,
+       "sfx": "ding"
+      },
+      {
+       "at": "weighs more",
+       "y": 640,
+       "lift": 0,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But then the wind",
+   "bg": "dusk",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "wind starts",
+       "face": "shocked",
+       "pose": "catch",
+       "dur": 0.12
+      },
+      {
+       "at": "winning",
+       "x": 330,
+       "rot": -10,
+       "pose": "fall",
+       "face": "worried",
+       "dur": 0.7,
+       "ease": "out",
+       "sfx": "swish"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "w1",
+     "x": 80,
+     "y": 640,
+     "svg": "<g fill='none' stroke='#F4F1FF' stroke-width='6' stroke-linecap='round' opacity='0.85'><path d='M-120 -40 Q-40 -60 40 -40 Q80 -30 70 -10'/><path d='M-140 10 L60 10'/><path d='M-110 60 Q-20 40 70 60 Q100 70 90 90'/></g>",
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "wind starts",
+       "opacity": 1,
+       "x": 200,
+       "dur": 0.5,
+       "sfx": "whoosh"
+      },
+      {
+       "at": "wind starts+0.9",
+       "x": 360,
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Grip comes from",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "think",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "wind shoves",
+       "x": 190,
+       "pose": "fall",
+       "face": "shocked",
+       "dur": 0.4,
+       "sfx": "swish"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "shoe",
+     "x": 350,
+     "y": 760,
+     "svg": "<path d='M-60 0 L-60 -40 Q-60 -50 -48 -50 L-10 -50 Q0 -30 40 -24 Q64 -20 64 0 Z' fill='#5B6CB0' stroke='#141218' stroke-width='5'/><rect x='-64' y='0' width='132' height='12' rx='5' fill='#F4F1FF' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "wind shoves",
+       "x": 420,
+       "rot": 8,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "arrow",
+     "x": 350,
+     "y": 640,
+     "svg": "<path d='M0 -50 L0 20 M-18 2 L0 22 L18 2' fill='none' stroke='#C8FF4D' stroke-width='9' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "Less weight",
+       "scale": 0.35,
+       "dur": 0.4,
+       "sfx": "glitch"
+      },
+      {
+       "at": "wind shoves",
+       "x": 420,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "w2",
+     "x": 140,
+     "y": 600,
+     "svg": "<g fill='none' stroke='#F4F1FF' stroke-width='6' stroke-linecap='round' opacity='0.85'><path d='M-120 -40 Q-40 -60 40 -40 Q80 -30 70 -10'/><path d='M-140 10 L60 10'/><path d='M-110 60 Q-20 40 70 60 Q100 70 90 90'/></g>",
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "wind shoves",
+       "opacity": 1,
+       "x": 260,
+       "dur": 0.5,
+       "sfx": "whoosh"
+      },
+      {
+       "at": "wind shoves+0.9",
+       "x": 420,
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So you live",
+   "bg": "day_park",
+   "camera": "push",
+   "props": "<rect x='92' y='470' width='16' height='340' fill='#3A3550' stroke='#141218' stroke-width='4'/><rect x='72' y='450' width='56' height='26' rx='8' fill='#FFD84D' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "one hand always",
+       "pose": "hold",
+       "face": "determined",
+       "rot": -8,
+       "dur": 0.3
+      },
+      {
+       "at": "holds something",
+       "rot": -14,
+       "face": "smug",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "w3",
+     "x": 110,
+     "y": 620,
+     "svg": "<g fill='none' stroke='#F4F1FF' stroke-width='6' stroke-linecap='round' opacity='0.85'><path d='M-120 -40 Q-40 -60 40 -40 Q80 -30 70 -10'/><path d='M-140 10 L60 10'/><path d='M-110 60 Q-20 40 70 60 Q100 70 90 90'/></g>",
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "one hand",
+       "opacity": 1,
+       "x": 230,
+       "dur": 0.5,
+       "sfx": "whoosh"
+      },
+      {
+       "at": "one hand+0.9",
+       "x": 390,
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Until you walk",
+   "bg": "dusk",
+   "camera": "pan_right",
+   "props": "<path d='M0 640 L330 640 L318 700 L300 960 L0 960 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M0 640 L330 640' stroke='#4E8A3C' stroke-width='10'/><rect x='30' y='520' width='10' height='122' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='110' y='520' width='10' height='122' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='20' y='516' width='112' height='12' rx='5' fill='#8A6248' stroke='#141218' stroke-width='4'/><path d='M370 700 L520 700' stroke='#1D2747' stroke-width='0'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 80,
+     "y": 640,
+     "scale": 1.05,
+     "pose": "walk_a",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "Until you walk",
+       "x": 110,
+       "cycle": "walk",
+       "dur": 1.8
+      },
+      {
+       "at": "edge crumbles",
+       "cycle": null,
+       "pose": "catch",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 220,
+     "y": 640,
+     "scale": 0.95,
+     "pose": "walk_a",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "little brother",
+       "cycle": "walk",
+       "x": 260,
+       "dur": 1.6
+      },
+      {
+       "at": "edge crumbles",
+       "cycle": null,
+       "pose": "fall",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 290,
+     "y": 640,
+     "scale": 1.05,
+     "pose": "walk_a",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "best friend Mia",
+       "cycle": "walk",
+       "x": 305,
+       "dur": 1.0
+      },
+      {
+       "at": "edge crumbles",
+       "cycle": null,
+       "pose": "fall",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "r1",
+     "x": 320,
+     "y": 650,
+     "svg": "<path d='M-18 -10 L10 -16 L20 4 L-4 16 L-20 6 Z' fill='#6E5A4E' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "edge crumbles",
+       "y": 900,
+       "x": 350,
+       "rot": 120,
+       "dur": 0.8,
+       "ease": "in",
+       "sfx": "thud"
+      }
+     ]
+    },
+    {
+     "id": "r2",
+     "x": 300,
+     "y": 660,
+     "svg": "<path d='M-18 -10 L10 -16 L20 4 L-4 16 L-20 6 Z' fill='#6E5A4E' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "scale": 0.7,
+     "keys": [
+      {
+       "at": "edge crumbles+0.1",
+       "y": 920,
+       "x": 380,
+       "rot": -90,
+       "dur": 0.9,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Now both hang",
+   "bg": "dusk",
+   "camera": "push",
+   "props": "<rect x='30' y='520' width='10' height='122' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='110' y='520' width='10' height='122' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='20' y='516' width='112' height='12' rx='5' fill='#8A6248' stroke='#141218' stroke-width='4'/>",
+   "front_props": "<defs><linearGradient id='abyss' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#141218' stop-opacity='0'/><stop offset='0.18' stop-color='#141218' stop-opacity='0.97'/><stop offset='1' stop-color='#141218' stop-opacity='1'/></linearGradient></defs><rect x='290' y='725' width='260' height='235' fill='url(#abyss)'/><path d='M0 640 L330 640 L318 700 L300 960 L0 960 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M300 640 L470 640 L462 662 L300 668 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M0 640 L470 640' stroke='#4E8A3C' stroke-width='10'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 640,
+     "scale": 1.05,
+     "pose": "catch",
+     "face": "shocked",
+     "flip": false,
+     "keys": [
+      {
+       "at": "hang off",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 350,
+     "y": 822,
+     "scale": 0.95,
+     "pose": "reach_up",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "hang off the rocks",
+       "rot": -4,
+       "dur": 0.3
+      },
+      {
+       "at": "the rocks+0.3",
+       "rot": 4,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 425,
+     "y": 888,
+     "scale": 1.0,
+     "pose": "reach_up",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "hang off the rocks",
+       "rot": -4,
+       "dur": 0.3
+      },
+      {
+       "at": "the rocks+0.3",
+       "rot": 4,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Let go of",
+   "bg": "dusk",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.3,
+   "slowmo": true,
+   "props": "<rect x='30' y='520' width='10' height='122' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='110' y='520' width='10' height='122' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='20' y='516' width='112' height='12' rx='5' fill='#8A6248' stroke='#141218' stroke-width='4'/>",
+   "front_props": "<defs><linearGradient id='abyss' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#141218' stop-opacity='0'/><stop offset='0.18' stop-color='#141218' stop-opacity='0.97'/><stop offset='1' stop-color='#141218' stop-opacity='1'/></linearGradient></defs><rect x='290' y='725' width='260' height='235' fill='url(#abyss)'/><path d='M0 640 L330 640 L318 700 L300 960 L0 960 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M300 640 L470 640 L462 662 L300 668 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M0 640 L470 640' stroke='#4E8A3C' stroke-width='10'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 180,
+     "y": 640,
+     "scale": 1.15,
+     "pose": "hold",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "throws you off",
+       "rot": -10,
+       "face": "shocked",
+       "dur": 0.3
+      },
+      {
+       "at": "throws you off+0.6",
+       "rot": 0,
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "w4",
+     "x": 100,
+     "y": 520,
+     "svg": "<g fill='none' stroke='#F4F1FF' stroke-width='6' stroke-linecap='round' opacity='0.85'><path d='M-120 -40 Q-40 -60 40 -40 Q80 -30 70 -10'/><path d='M-140 10 L60 10'/><path d='M-110 60 Q-20 40 70 60 Q100 70 90 90'/></g>",
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "the wind",
+       "opacity": 1,
+       "x": 220,
+       "dur": 0.5,
+       "sfx": "whoosh"
+      },
+      {
+       "at": "the wind+0.9",
+       "x": 380,
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your free hand",
+   "bg": "dusk",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='30' y='520' width='10' height='122' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='110' y='520' width='10' height='122' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><rect x='20' y='516' width='112' height='12' rx='5' fill='#8A6248' stroke='#141218' stroke-width='4'/>",
+   "front_props": "<defs><linearGradient id='abyss' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#141218' stop-opacity='0'/><stop offset='0.18' stop-color='#141218' stop-opacity='0.97'/><stop offset='1' stop-color='#141218' stop-opacity='1'/></linearGradient></defs><rect x='290' y='725' width='260' height='235' fill='url(#abyss)'/><path d='M0 640 L330 640 L318 700 L300 960 L0 960 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M300 640 L470 640 L462 662 L300 668 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M0 640 L470 640' stroke='#4E8A3C' stroke-width='10'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 640,
+     "scale": 1.05,
+     "pose": "catch",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "Four",
+       "look": 1,
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Three",
+       "look": -0.5,
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 350,
+     "y": 822,
+     "scale": 0.95,
+     "pose": "reach_up",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "Five",
+       "rot": -4,
+       "dur": 0.4
+      },
+      {
+       "at": "Four",
+       "rot": 4,
+       "dur": 0.4
+      },
+      {
+       "at": "Three",
+       "rot": 0,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 425,
+     "y": 888,
+     "scale": 1.0,
+     "pose": "reach_up",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Five",
+       "rot": -4,
+       "dur": 0.4
+      },
+      {
+       "at": "Four",
+       "rot": 4,
+       "dur": 0.4
+      },
+      {
+       "at": "Three",
+       "rot": 0,
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Sam is eight",
+   "bg": "dusk",
+   "camera": "closeup",
+   "focus": "sam",
+   "zoom": 2.3,
+   "slowmo": true,
+   "front_props": "<defs><linearGradient id='abyss' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#141218' stop-opacity='0'/><stop offset='0.18' stop-color='#141218' stop-opacity='0.97'/><stop offset='1' stop-color='#141218' stop-opacity='1'/></linearGradient></defs><rect x='290' y='725' width='260' height='235' fill='url(#abyss)'/><path d='M0 640 L330 640 L318 700 L300 960 L0 960 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M300 640 L470 640 L462 662 L300 668 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M0 640 L470 640' stroke='#4E8A3C' stroke-width='10'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 350,
+     "y": 822,
+     "scale": 0.95,
+     "pose": "reach_up",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "screaming",
+       "face": "sad",
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Mia never once",
+   "bg": "dusk",
+   "camera": "closeup",
+   "focus": "mia",
+   "zoom": 2.3,
+   "slowmo": true,
+   "front_props": "<defs><linearGradient id='abyss' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#141218' stop-opacity='0'/><stop offset='0.18' stop-color='#141218' stop-opacity='0.97'/><stop offset='1' stop-color='#141218' stop-opacity='1'/></linearGradient></defs><rect x='290' y='725' width='260' height='235' fill='url(#abyss)'/><path d='M0 640 L330 640 L318 700 L300 960 L0 960 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M300 640 L470 640 L462 662 L300 668 Z' fill='#6E5A4E' stroke='#141218' stroke-width='5'/><path d='M0 640 L470 640' stroke='#4E8A3C' stroke-width='10'/>",
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 425,
+     "y": 888,
+     "scale": 1.0,
+     "pose": "reach_up",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "let you fall",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Sam, or Mia",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "think",
+     "face": "worried",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": "Who do you+0.6",
+       "pose": "idle",
+       "face": "neutral",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "feather",
+     "x": 330,
+     "y": 420,
+     "rot": -20,
+     "svg": "<path d='M0 -40 Q22 -10 0 40 Q-22 -10 0 -40 Z' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M0 -36 L0 46' stroke='#141218' stroke-width='3'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "Who do you",
+       "opacity": 1,
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
