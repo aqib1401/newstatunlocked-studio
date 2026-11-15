@@ -349,9 +349,31 @@
   "ability": "body weight",
   "format": "SHORT",
   "duration_s": 48.1,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep17.mp4",
   "rendered_at": "2026-11-15T17:56:14Z",
+  "posted": {
+   "youtube": {
+    "at": "2026-11-15T22:34:18Z",
+    "zernio_post": "6afa3351f9e46e472f650cb6",
+    "first_comment": "UgwFJj5Pgr60iCaBwyl4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-15T22:34:18Z",
+    "zernio_post": "6afa3355f98cbf0726b473e4",
+    "first_comment": null
+   }
+  }
+ },
+ {
+  "ep": 18,
+  "title": "What If You Healed 1,000,000x Faster?",
+  "ability": "healing",
+  "format": "LONG",
+  "duration_s": 88.6,
+  "status": "rendered",
+  "video": "videos/ep18.mp4",
+  "rendered_at": "2026-11-15T22:36:30Z",
   "posted": {
    "youtube": null,
    "facebook": null

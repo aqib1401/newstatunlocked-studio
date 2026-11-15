@@ -315,7 +315,7 @@
  },
  {
   "id": 10,
-  "status": "planned",
+  "status": "used",
   "title": "What If Your Body Healed 100x Faster?",
   "ability": "healing",
   "category": "body",
@@ -333,7 +333,8 @@
    "Healing burns extra energy and protein, which is why recovering patients need more food",
    "A broken bone that heals in the wrong position stays that way unless it's broken and reset"
   ],
-  "visuals": "paper cut, plates of food, finger splint, hospital, sandwich"
+  "visuals": "paper cut, plates of food, finger splint, hospital, sandwich",
+  "ep": 18
  },
  {
   "id": 39,
