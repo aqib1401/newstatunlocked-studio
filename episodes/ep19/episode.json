@@ -1,0 +1,1035 @@
+{
+ "ep": 19,
+ "title": "What If You Never Felt Hungry Again?",
+ "script": "What if you never felt hungry again? Not even a little. You skip lunch to finish your robot, and your team wins the science fair. You skip dinner and beat the game in one night. But then your hands start shaking, and the room tilts. Because hunger isn't a weakness. It's an alarm. A hormone called ghrelin, made mostly in your stomach, tells your brain it's time to eat. Your brain runs on sugar from food, and when that drops too low, you can pass out. And your alarm is gone. Then a snowstorm traps you and your little brother Sam in a mountain cabin. You haven't eaten in two days, and you never noticed. One small granola bar. Your vision blurs. Five. Four. Three. If you pass out, the fire dies, and you both freeze. But Sam is eight, and he's begging. Eat it, or give it to Sam?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "thumbnail": "One small granola",
+ "music": [
+  {
+   "track": "music/the-forest-awakes.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/ominosity.mp3",
+   "at": "But then your hands"
+  },
+  {
+   "track": "music/remember.mp3",
+   "at": "Then a snowstorm"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "accent": "#C8FF4D",
+ "highlights": {
+  "never felt hungry": "green",
+  "science fair": "green",
+  "ghrelin": "green",
+  "pass out": "amber",
+  "two days": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "You skip lunch",
+   "name": "HUNGER",
+   "mult": "×0",
+   "tag": "OFF"
+  },
+  {
+   "type": "note",
+   "at": "A hormone called",
+   "until": "Your brain runs",
+   "label": "REAL SCIENCE",
+   "text": "Ghrelin, made mostly in your stomach = your hunger alarm."
+  },
+  {
+   "type": "warn",
+   "at": "And your alarm",
+   "until": "Then a snowstorm",
+   "label": "THE CATCH",
+   "text": "No hunger alarm. Ever."
+  },
+  {
+   "type": "marker",
+   "at": "You haven't eaten",
+   "until": "One small granola",
+   "label": "LAST MEAL",
+   "text": "2 DAYS",
+   "sub": "AND YOU NEVER NOTICED"
+  },
+  {
+   "type": "countdown",
+   "at": "Five",
+   "until": "If you pass out",
+   "from": 5
+  },
+  {
+   "type": "choice",
+   "at": "If you pass out",
+   "until": "Eat it, or",
+   "a": "Eat it",
+   "b": "Give it to Sam",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Eat it, or",
+   "text": "Eat it, or give it to Sam?",
+   "a": "EAT IT",
+   "b": "GIVE IT"
+  }
+ ],
+ "sfx": [
+  {
+   "name": "crowd",
+   "at": "team wins",
+   "gain": 0.7
+  }
+ ],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": 0.3,
+       "face": "bored",
+       "look": 1,
+       "dur": 0.2
+      },
+      {
+       "at": "Not even",
+       "pose": "shrug",
+       "face": "smug",
+       "dur": 0.2,
+       "sfx": "swish"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "plate",
+     "x": 350,
+     "y": 800,
+     "svg": "<ellipse rx='80' ry='16' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><ellipse rx='50' ry='8' fill='#D9D4E8'/>"
+    },
+    {
+     "id": "sand",
+     "x": 350,
+     "y": 420,
+     "svg": "<path d='M-50 6 Q0 -40 50 6 Z' fill='#E8B26A' stroke='#141218' stroke-width='5'/><rect x='-52' y='4' width='104' height='10' rx='4' fill='#4E8A3C' stroke='#141218' stroke-width='3'/><rect x='-50' y='14' width='100' height='8' rx='3' fill='#FF5A5A' stroke='#141218' stroke-width='3'/><rect x='-52' y='22' width='104' height='14' rx='6' fill='#E8B26A' stroke='#141218' stroke-width='5'/>",
+     "keys": [
+      {
+       "at": 0.0,
+       "y": 772,
+       "rot": 8,
+       "dur": 0.6,
+       "ease": "in",
+       "sfx": "thud"
+      },
+      {
+       "at": "Not even",
+       "x": 470,
+       "opacity": 0,
+       "dur": 0.6,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You skip lunch",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='230' y='690' width='260' height='16' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='250' y='704' width='14' height='108' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='456' y='704' width='14' height='108' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "focused",
+     "look": 1,
+     "keys": [
+      {
+       "at": "finish your robot",
+       "pose": "point",
+       "face": "determined",
+       "dur": 0.15,
+       "sfx": "click"
+      },
+      {
+       "at": "team wins",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "robot",
+     "x": 340,
+     "y": 656,
+     "svg": "<rect x='-34' y='-70' width='68' height='54' rx='10' fill='#7FE0FF' stroke='#141218' stroke-width='5'/><circle cx='-14' cy='-44' r='8' fill='#141218'/><circle cx='14' cy='-44' r='8' fill='#141218'/><rect x='-6' y='-90' width='12' height='20' fill='#141218'/><circle cx='0' cy='-94' r='8' fill='#FF5A5A' stroke='#141218' stroke-width='3'/><rect x='-40' y='-16' width='80' height='50' rx='8' fill='#5B6CB0' stroke='#141218' stroke-width='5'/>",
+     "keys": [
+      {
+       "at": "finish your robot",
+       "rot": -6,
+       "dur": 0.2
+      },
+      {
+       "at": "finish your robot+0.3",
+       "rot": 6,
+       "dur": 0.2
+      },
+      {
+       "at": "team wins",
+       "rot": 0,
+       "y": 640,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "tro",
+     "x": 430,
+     "y": 650,
+     "svg": "<path d='M-30 -50 L30 -50 L24 -10 Q0 10 -24 -10 Z' fill='#FFD84D' stroke='#141218' stroke-width='5'/><rect x='-6' y='-4' width='12' height='22' fill='#FFD84D' stroke='#141218' stroke-width='4'/><rect x='-26' y='16' width='52' height='14' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><text x='0' y='-24' font-size='16' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>1ST</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "keys": [
+      {
+       "at": "team wins",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You skip dinner",
+   "bg": "warm_interior",
+   "camera": "pan_right",
+   "props": "<rect x='40' y='720' width='220' height='70' rx='18' fill='#8A4E6B' stroke='#141218' stroke-width='5'/><rect x='30' y='690' width='40' height='100' rx='14' fill='#8A4E6B' stroke='#141218' stroke-width='5'/><rect x='230' y='690' width='40' height='100' rx='14' fill='#8A4E6B' stroke='#141218' stroke-width='5'/><rect x='300' y='520' width='170' height='110' rx='10' fill='#1D2747' stroke='#141218' stroke-width='6'/><rect x='374' y='630' width='22' height='40' fill='#3A3550'/><rect x='330' y='668' width='110' height='14' rx='5' fill='#3A3550' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 790,
+     "scale": 1.2,
+     "pose": "sit",
+     "face": "focused",
+     "look": 1,
+     "keys": [
+      {
+       "at": "beat the game",
+       "pose": "hold",
+       "face": "determined",
+       "dur": 0.15
+      },
+      {
+       "at": "in one night",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "chime"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "win",
+     "x": 385,
+     "y": 578,
+     "svg": "<text x='0' y='0' font-size='28' font-weight='900' text-anchor='middle' fill='#C8FF4D' stroke='#141218' stroke-width='3' font-family='Arial'>YOU WIN!</text>",
+     "opacity": 0,
+     "scale": 0.4,
+     "keys": [
+      {
+       "at": "in one night",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.3,
+       "ease": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But then your hands",
+   "bg": "cool_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.35,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "hands start",
+       "pose": "hold",
+       "face": "worried",
+       "dur": 0.12,
+       "sfx": "buzz"
+      },
+      {
+       "at": "shaking",
+       "rot": -4,
+       "dur": 0.1
+      },
+      {
+       "at": "shaking+0.12",
+       "rot": 4,
+       "dur": 0.1
+      },
+      {
+       "at": "shaking+0.24",
+       "rot": -4,
+       "dur": 0.1
+      },
+      {
+       "at": "shaking+0.36",
+       "rot": 3,
+       "dur": 0.1
+      },
+      {
+       "at": "room tilts",
+       "rot": -12,
+       "pose": "tired",
+       "face": "shocked",
+       "dur": 0.6,
+       "ease": "inout"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "frame",
+     "x": 390,
+     "y": 560,
+     "svg": "<rect x='-40' y='-32' width='80' height='64' rx='4' fill='#FFD84D' stroke='#141218' stroke-width='5'/><rect x='-28' y='-20' width='56' height='40' fill='#7FE0FF'/><circle cx='-8' cy='0' r='8' fill='#FFB547'/>",
+     "keys": [
+      {
+       "at": "room tilts",
+       "rot": 25,
+       "x": 400,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Because hunger",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "think",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "It's an alarm",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "clk",
+     "x": 360,
+     "y": 590,
+     "svg": "<circle r='54' fill='#F4F1FF' stroke='#141218' stroke-width='6'/><circle cx='-40' cy='-50' r='16' fill='#FF5A5A' stroke='#141218' stroke-width='5'/><circle cx='40' cy='-50' r='16' fill='#FF5A5A' stroke='#141218' stroke-width='5'/><path d='M0 0 L0 -34 M0 0 L22 10' stroke='#141218' stroke-width='6' stroke-linecap='round'/><rect x='-36' y='50' width='10' height='16' fill='#141218'/><rect x='26' y='50' width='10' height='16' fill='#141218'/>",
+     "opacity": 0,
+     "scale": 0.4,
+     "keys": [
+      {
+       "at": "It's an alarm",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "ding"
+      },
+      {
+       "at": "end:alarm",
+       "rot": -12,
+       "dur": 0.08
+      },
+      {
+       "at": "end:alarm+0.1",
+       "rot": 12,
+       "dur": 0.08
+      },
+      {
+       "at": "end:alarm+0.2",
+       "rot": -12,
+       "dur": 0.08
+      },
+      {
+       "at": "end:alarm+0.3",
+       "rot": 0,
+       "dur": 0.08
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "A hormone called",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "point",
+     "face": "focused",
+     "look": 1,
+     "keys": [
+      {
+       "at": "time to eat",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "stom",
+     "x": 360,
+     "y": 720,
+     "svg": "<path d='M-30 -50 Q-40 -10 -10 10 Q30 40 50 10 Q70 -30 30 -40 Q10 -44 0 -60' fill='#FF8A8A' stroke='#141218' stroke-width='6'/><text x='14' y='4' font-size='14' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>STOMACH</text>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "made mostly",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "brn",
+     "x": 360,
+     "y": 500,
+     "svg": "<path d='M-50 10 Q-60 -30 -30 -44 Q-10 -64 14 -50 Q46 -60 54 -26 Q66 4 40 20 Q0 34 -50 10 Z' fill='#F0A8D0' stroke='#141218' stroke-width='6'/><path d='M-20 -36 Q-8 -20 -24 -4 M10 -44 Q20 -24 6 -10 M34 -30 Q30 -10 44 4' fill='none' stroke='#141218' stroke-width='4'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "tells your brain",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "sig",
+     "x": 360,
+     "y": 690,
+     "svg": "<circle r='12' fill='#C8FF4D' stroke='#141218' stroke-width='4'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "tells your brain",
+       "opacity": 1,
+       "dur": 0.1
+      },
+      {
+       "at": "tells your brain+0.1",
+       "y": 520,
+       "dur": 0.8,
+       "ease": "inout",
+       "sfx": "swish"
+      },
+      {
+       "at": "time to eat",
+       "scale": 2,
+       "opacity": 0,
+       "dur": 0.3,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your brain runs",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "drops too low",
+       "face": "worried",
+       "pose": "tired",
+       "dur": 0.3
+      },
+      {
+       "at": "you can pass out",
+       "pose": "fall",
+       "face": "shocked",
+       "rot": -20,
+       "dur": 0.5,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "gauge",
+     "x": 380,
+     "y": 620,
+     "svg": "<rect x='-30' y='-110' width='60' height='220' rx='12' fill='#1D2747' stroke='#141218' stroke-width='6'/><text x='0' y='140' font-size='18' font-weight='900' text-anchor='middle' fill='#F4F1FF' font-family='Arial'>SUGAR</text>"
+    },
+    {
+     "id": "fill",
+     "x": 380,
+     "y": 620,
+     "svg": "<rect x='-22' y='-100' width='44' height='200' rx='8' fill='#C8FF4D'/>",
+     "keys": [
+      {
+       "at": "drops too low",
+       "scale": 0.2,
+       "y": 700,
+       "dur": 0.8,
+       "ease": "in",
+       "sfx": "glitch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "And your alarm is gone",
+   "bg": "lab",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 180,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "is gone",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "clk2",
+     "x": 360,
+     "y": 600,
+     "svg": "<circle r='54' fill='#F4F1FF' stroke='#141218' stroke-width='6'/><circle cx='-40' cy='-50' r='16' fill='#FF5A5A' stroke='#141218' stroke-width='5'/><circle cx='40' cy='-50' r='16' fill='#FF5A5A' stroke='#141218' stroke-width='5'/><path d='M0 0 L0 -34 M0 0 L22 10' stroke='#141218' stroke-width='6' stroke-linecap='round'/><rect x='-36' y='50' width='10' height='16' fill='#141218'/><rect x='26' y='50' width='10' height='16' fill='#141218'/>"
+    },
+    {
+     "id": "x",
+     "x": 360,
+     "y": 600,
+     "svg": "<path d='M-60 -60 L60 60 M60 -60 L-60 60' stroke='#FF5A5A' stroke-width='16' stroke-linecap='round'/>",
+     "opacity": 0,
+     "scale": 1.6,
+     "front": true,
+     "keys": [
+      {
+       "at": "is gone",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then a snowstorm",
+   "bg": "warm_interior",
+   "camera": "pan_right",
+   "props": "<rect x='20' y='600' width='150' height='212' fill='#8A8494' stroke='#141218' stroke-width='5'/><rect x='48' y='680' width='94' height='132' rx='6' fill='#2A2430' stroke='#141218' stroke-width='5'/><rect x='10' y='590' width='170' height='18' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='300' y='470' width='150' height='130' rx='6' fill='#BFD6F2' stroke='#141218' stroke-width='6'/><path d='M375 470 L375 600 M300 535 L450 535' stroke='#141218' stroke-width='5'/><circle cx='330' cy='500' r='5' fill='#fff'/><circle cx='410' cy='560' r='6' fill='#fff'/><circle cx='350' cy='575' r='4' fill='#fff'/><circle cx='430' cy='495' r='5' fill='#fff'/><path d='M300 590 Q340 570 375 588 Q410 572 450 590 L450 600 L300 600 Z' fill='#fff'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "traps you",
+       "pose": "hug",
+       "face": "worried",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 340,
+     "y": 812,
+     "scale": 0.9,
+     "flip": true,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "little brother Sam",
+       "pose": "wave",
+       "face": "sad",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fire",
+     "x": 95,
+     "y": 780,
+     "svg": "<path d='M-30 30 Q-36 -10 -10 -30 Q-12 -6 0 -14 Q4 -40 20 -50 Q14 -20 30 -6 Q40 14 30 30 Z' fill='#FFB547' stroke='#141218' stroke-width='4'/><path d='M-14 30 Q-16 6 0 -6 Q14 8 14 30 Z' fill='#FFD84D'/>",
+     "opacity": 1,
+     "keys": [
+      {
+       "at": "snowstorm",
+       "scale": 1.1,
+       "dur": 0.4
+      },
+      {
+       "at": "mountain cabin",
+       "scale": 0.9,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "snow",
+     "x": 375,
+     "y": 478,
+     "svg": "<g fill='#fff' stroke='#141218' stroke-width='2'><circle cx='-120' cy='0' r='6'/><circle cx='-40' cy='60' r='5'/><circle cx='50' cy='-20' r='7'/><circle cx='130' cy='40' r='5'/><circle cx='-90' cy='120' r='6'/><circle cx='90' cy='130' r='6'/><circle cx='0' cy='190' r='5'/></g>",
+     "opacity": 0.9,
+     "keys": [
+      {
+       "at": "Then a snowstorm",
+       "y": 505,
+       "dur": 3.0,
+       "ease": "linear"
+      }
+     ],
+     "scale": 0.5
+    }
+   ]
+  },
+  {
+   "start": "You haven't eaten",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.3,
+   "props": "<rect x='20' y='600' width='150' height='212' fill='#8A8494' stroke='#141218' stroke-width='5'/><rect x='48' y='680' width='94' height='132' rx='6' fill='#2A2430' stroke='#141218' stroke-width='5'/><rect x='10' y='590' width='170' height='18' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='300' y='470' width='150' height='130' rx='6' fill='#BFD6F2' stroke='#141218' stroke-width='6'/><path d='M375 470 L375 600 M300 535 L450 535' stroke='#141218' stroke-width='5'/><circle cx='330' cy='500' r='5' fill='#fff'/><circle cx='410' cy='560' r='6' fill='#fff'/><circle cx='350' cy='575' r='4' fill='#fff'/><circle cx='430' cy='495' r='5' fill='#fff'/><path d='M300 590 Q340 570 375 588 Q410 572 450 590 L450 600 L300 600 Z' fill='#fff'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "tired",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "never noticed",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fire",
+     "x": 95,
+     "y": 780,
+     "svg": "<path d='M-30 30 Q-36 -10 -10 -30 Q-12 -6 0 -14 Q4 -40 20 -50 Q14 -20 30 -6 Q40 14 30 30 Z' fill='#FFB547' stroke='#141218' stroke-width='4'/><path d='M-14 30 Q-16 6 0 -6 Q14 8 14 30 Z' fill='#FFD84D'/>",
+     "opacity": 1,
+     "keys": []
+    }
+   ]
+  },
+  {
+   "start": "One small granola",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='20' y='600' width='150' height='212' fill='#8A8494' stroke='#141218' stroke-width='5'/><rect x='48' y='680' width='94' height='132' rx='6' fill='#2A2430' stroke='#141218' stroke-width='5'/><rect x='10' y='590' width='170' height='18' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='300' y='470' width='150' height='130' rx='6' fill='#BFD6F2' stroke='#141218' stroke-width='6'/><path d='M375 470 L375 600 M300 535 L450 535' stroke='#141218' stroke-width='5'/><circle cx='330' cy='500' r='5' fill='#fff'/><circle cx='410' cy='560' r='6' fill='#fff'/><circle cx='350' cy='575' r='4' fill='#fff'/><circle cx='430' cy='495' r='5' fill='#fff'/><path d='M300 590 Q340 570 375 588 Q410 572 450 590 L450 600 L300 600 Z' fill='#fff'/><rect x='250' y='700' width='200' height='14' rx='5' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='266' y='712' width='12' height='100' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='422' y='712' width='12' height='100' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "tired",
+     "face": "worried",
+     "look": 1,
+     "keys": [
+      {
+       "at": "granola bar",
+       "pose": "point",
+       "face": "focused",
+       "dur": 0.2
+      },
+      {
+       "at": "vision blurs",
+       "rot": -8,
+       "face": "worried",
+       "pose": "tired",
+       "dur": 0.5
+      },
+      {
+       "at": "vision blurs+0.6",
+       "rot": 5,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 400,
+     "y": 812,
+     "scale": 0.9,
+     "flip": true,
+     "pose": "idle",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "granola bar",
+       "look": -1,
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fire",
+     "x": 95,
+     "y": 780,
+     "svg": "<path d='M-30 30 Q-36 -10 -10 -30 Q-12 -6 0 -14 Q4 -40 20 -50 Q14 -20 30 -6 Q40 14 30 30 Z' fill='#FFB547' stroke='#141218' stroke-width='4'/><path d='M-14 30 Q-16 6 0 -6 Q14 8 14 30 Z' fill='#FFD84D'/>",
+     "opacity": 1,
+     "keys": []
+    },
+    {
+     "id": "bar",
+     "x": 350,
+     "y": 682,
+     "svg": "<rect x='-46' y='-16' width='92' height='32' rx='8' fill='#FFB547' stroke='#141218' stroke-width='5'/><rect x='-20' y='-16' width='40' height='32' fill='#C8FF4D' stroke='#141218' stroke-width='4'/><text x='0' y='7' font-size='15' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>BAR</text>",
+     "opacity": 0,
+     "scale": 0.5,
+     "keys": [
+      {
+       "at": "granola bar",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Five",
+   "bg": "warm_interior",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='20' y='600' width='150' height='212' fill='#8A8494' stroke='#141218' stroke-width='5'/><rect x='48' y='680' width='94' height='132' rx='6' fill='#2A2430' stroke='#141218' stroke-width='5'/><rect x='10' y='590' width='170' height='18' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='300' y='470' width='150' height='130' rx='6' fill='#BFD6F2' stroke='#141218' stroke-width='6'/><path d='M375 470 L375 600 M300 535 L450 535' stroke='#141218' stroke-width='5'/><circle cx='330' cy='500' r='5' fill='#fff'/><circle cx='410' cy='560' r='6' fill='#fff'/><circle cx='350' cy='575' r='4' fill='#fff'/><circle cx='430' cy='495' r='5' fill='#fff'/><path d='M300 590 Q340 570 375 588 Q410 572 450 590 L450 600 L300 600 Z' fill='#fff'/><rect x='250' y='700' width='200' height='14' rx='5' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='266' y='712' width='12' height='100' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='422' y='712' width='12' height='100' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "tired",
+     "face": "worried",
+     "look": 1,
+     "keys": [
+      {
+       "at": "Four",
+       "look": -1,
+       "dur": 0.3
+      },
+      {
+       "at": "Three",
+       "look": 1,
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 400,
+     "y": 812,
+     "scale": 0.9,
+     "flip": true,
+     "pose": "idle",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "Four",
+       "pose": "reach_up",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fire",
+     "x": 95,
+     "y": 780,
+     "svg": "<path d='M-30 30 Q-36 -10 -10 -30 Q-12 -6 0 -14 Q4 -40 20 -50 Q14 -20 30 -6 Q40 14 30 30 Z' fill='#FFB547' stroke='#141218' stroke-width='4'/><path d='M-14 30 Q-16 6 0 -6 Q14 8 14 30 Z' fill='#FFD84D'/>",
+     "opacity": 1,
+     "keys": [
+      {
+       "at": "Five",
+       "scale": 0.75,
+       "dur": 0.8
+      },
+      {
+       "at": "Three",
+       "scale": 0.55,
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "bar",
+     "x": 350,
+     "y": 682,
+     "svg": "<rect x='-46' y='-16' width='92' height='32' rx='8' fill='#FFB547' stroke='#141218' stroke-width='5'/><rect x='-20' y='-16' width='40' height='32' fill='#C8FF4D' stroke='#141218' stroke-width='4'/><text x='0' y='7' font-size='15' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>BAR</text>"
+    }
+   ]
+  },
+  {
+   "start": "If you pass out",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "slowmo": true,
+   "props": "<rect x='20' y='600' width='150' height='212' fill='#8A8494' stroke='#141218' stroke-width='5'/><rect x='48' y='680' width='94' height='132' rx='6' fill='#2A2430' stroke='#141218' stroke-width='5'/><rect x='10' y='590' width='170' height='18' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='300' y='470' width='150' height='130' rx='6' fill='#BFD6F2' stroke='#141218' stroke-width='6'/><path d='M375 470 L375 600 M300 535 L450 535' stroke='#141218' stroke-width='5'/><circle cx='330' cy='500' r='5' fill='#fff'/><circle cx='410' cy='560' r='6' fill='#fff'/><circle cx='350' cy='575' r='4' fill='#fff'/><circle cx='430' cy='495' r='5' fill='#fff'/><path d='M300 590 Q340 570 375 588 Q410 572 450 590 L450 600 L300 600 Z' fill='#fff'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "tired",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "the fire dies",
+       "face": "shocked",
+       "dur": 0.2
+      },
+      {
+       "at": "you both freeze",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fire",
+     "x": 95,
+     "y": 780,
+     "svg": "<path d='M-30 30 Q-36 -10 -10 -30 Q-12 -6 0 -14 Q4 -40 20 -50 Q14 -20 30 -6 Q40 14 30 30 Z' fill='#FFB547' stroke='#141218' stroke-width='4'/><path d='M-14 30 Q-16 6 0 -6 Q14 8 14 30 Z' fill='#FFD84D'/>",
+     "opacity": 1,
+     "keys": [
+      {
+       "at": "the fire dies",
+       "scale": 0.25,
+       "opacity": 0.4,
+       "dur": 0.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But Sam is eight",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "sam",
+   "zoom": 2.4,
+   "slowmo": true,
+   "props": "<rect x='20' y='600' width='150' height='212' fill='#8A8494' stroke='#141218' stroke-width='5'/><rect x='48' y='680' width='94' height='132' rx='6' fill='#2A2430' stroke='#141218' stroke-width='5'/><rect x='10' y='590' width='170' height='18' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='300' y='470' width='150' height='130' rx='6' fill='#BFD6F2' stroke='#141218' stroke-width='6'/><path d='M375 470 L375 600 M300 535 L450 535' stroke='#141218' stroke-width='5'/><circle cx='330' cy='500' r='5' fill='#fff'/><circle cx='410' cy='560' r='6' fill='#fff'/><circle cx='350' cy='575' r='4' fill='#fff'/><circle cx='430' cy='495' r='5' fill='#fff'/><path d='M300 590 Q340 570 375 588 Q410 572 450 590 L450 600 L300 600 Z' fill='#fff'/><rect x='250' y='700' width='200' height='14' rx='5' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='266' y='712' width='12' height='100' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='422' y='712' width='12' height='100' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 360,
+     "y": 812,
+     "scale": 0.95,
+     "flip": true,
+     "pose": "reach_up",
+     "face": "sad",
+     "keys": [
+      {
+       "at": "he's begging",
+       "rot": -4,
+       "dur": 0.3
+      },
+      {
+       "at": "he's begging+0.35",
+       "rot": 3,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fire",
+     "x": 95,
+     "y": 780,
+     "svg": "<path d='M-30 30 Q-36 -10 -10 -30 Q-12 -6 0 -14 Q4 -40 20 -50 Q14 -20 30 -6 Q40 14 30 30 Z' fill='#FFB547' stroke='#141218' stroke-width='4'/><path d='M-14 30 Q-16 6 0 -6 Q14 8 14 30 Z' fill='#FFD84D'/>",
+     "opacity": 1,
+     "keys": []
+    }
+   ]
+  },
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.45,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": "give it to Sam",
+       "pose": "think",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "end:give it to Sam+0.6",
+       "pose": "idle",
+       "face": "neutral",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "plate",
+     "x": 350,
+     "y": 800,
+     "svg": "<ellipse rx='80' ry='16' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><ellipse rx='50' ry='8' fill='#D9D4E8'/>"
+    },
+    {
+     "id": "sand",
+     "x": 350,
+     "y": 420,
+     "svg": "<path d='M-50 6 Q0 -40 50 6 Z' fill='#E8B26A' stroke='#141218' stroke-width='5'/><rect x='-52' y='4' width='104' height='10' rx='4' fill='#4E8A3C' stroke='#141218' stroke-width='3'/><rect x='-50' y='14' width='100' height='8' rx='3' fill='#FF5A5A' stroke='#141218' stroke-width='3'/><rect x='-52' y='22' width='104' height='14' rx='6' fill='#E8B26A' stroke='#141218' stroke-width='5'/>",
+     "keys": [
+      {
+       "at": "Eat it, or",
+       "opacity": 1,
+       "dur": 0.5
+      }
+     ],
+     "opacity": 0
+    }
+   ],
+   "start": "Eat it, or"
+  }
+ ]
+}
