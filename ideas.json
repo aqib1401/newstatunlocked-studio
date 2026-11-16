@@ -354,7 +354,7 @@
  },
  {
   "id": 11,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Never Felt Fear?",
   "ability": "fear (switched off)",
   "category": "brain",
@@ -372,7 +372,8 @@
    "Fear is driven largely by a small brain region called the amygdala",
    "A real patient with a damaged amygdala walked up to snakes and spiders without fear"
   ],
-  "visuals": "aquarium, roller coaster, stage, dog, storm, roof, ladder"
+  "visuals": "aquarium, roller coaster, stage, dog, storm, roof, ladder",
+  "ep": 20
  },
  {
   "id": 40,
