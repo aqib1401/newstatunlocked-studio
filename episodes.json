@@ -371,12 +371,20 @@
   "ability": "healing",
   "format": "LONG",
   "duration_s": 88.6,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep18.mp4",
   "rendered_at": "2026-11-15T22:36:30Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-16T17:59:58Z",
+    "zernio_post": "6afb44785003145ff942e88e",
+    "first_comment": "Ugy0yj0mL0b8-mM9IMl4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-16T17:59:58Z",
+    "zernio_post": "6afb44815003145ff942e8a1",
+    "first_comment": null
+   }
   }
  },
  {
