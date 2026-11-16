@@ -393,12 +393,20 @@
   "ability": "hunger",
   "format": "SHORT",
   "duration_s": 48.9,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep19.mp4",
   "rendered_at": "2026-11-16T17:58:59Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-16T22:34:04Z",
+    "zernio_post": "6afb84bca06b1a16658a056e",
+    "first_comment": "UgyTbBl7dzWQ8-FbndF4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-16T22:34:04Z",
+    "zernio_post": "6afb84c1284b133a4c4a8883",
+    "first_comment": null
+   }
   }
  },
  {
