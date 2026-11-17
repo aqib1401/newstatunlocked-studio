@@ -1,0 +1,2166 @@
+{
+ "ep": 22,
+ "script": "What if you could see in the dark? Not a little better. Perfectly. Night one, the power cuts out at a sleepover. Everyone screams, but you calmly walk to the kitchen and bring your best friend Mia a snack. Night two, a blackout hits your whole building, and you lead your neighbors down twelve floors of pitch black stairs. Nobody trips once. But then the daytime starts to hurt. Day three, you squint at the sun with tears running down your face. Day four, a camera flash in class leaves you blind for an hour. Here's why. Cats can see in much less light than we can. They have a mirror at the back of their eyes. It bounces the light back for a second look, and that's why their eyes glow in photos. Now your eyes have that mirror too, so every bright light feels twice as bright. Night five, your little brother Sam wanders into the woods behind your house. The searchers' torches miss him, but you spot him, stumbling toward the river. Then a rescue helicopter roars in, and its searchlight sweeps toward you. Your sunglasses are back at home. Mia, searching beside you, grabs your arm. That light could blind you for good! Ten seconds. Nine. Eight. Sam slips on the muddy bank. Seven. Six. The light sweeps closer. Five. Four. Shut your eyes and lose him in the dark, or keep looking and maybe never see again. Would you keep your eyes open?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.0,
+ "title": "What If You Could See in the Dark?",
+ "music": [
+  {
+   "track": "music/the-forest-awakes.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/unknown.mp3",
+   "at": "But then the daytime"
+  },
+  {
+   "track": "music/fate.mp3",
+   "at": "Night five"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "thumbnail": "Not a little better+0.4",
+ "accent": "#C8FF4D",
+ "highlights": {
+  "see in the dark": "green",
+  "Nobody trips once": "green",
+  "blind for an hour": "amber",
+  "mirror": "green",
+  "twice as bright": "amber",
+  "blind you for good": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "Night one",
+   "name": "NIGHT VISION",
+   "mult": "×6",
+   "tag": "CAT MODE"
+  },
+  {
+   "type": "marker",
+   "at": "Night one",
+   "until": "the power cuts+0.3",
+   "label": "NIGHT",
+   "text": "1"
+  },
+  {
+   "type": "marker",
+   "at": "Night two",
+   "until": "a blackout+0.4",
+   "label": "NIGHT",
+   "text": "2"
+  },
+  {
+   "type": "level",
+   "at": "Nobody trips",
+   "until": "But then the daytime",
+   "label": "BLACKOUT",
+   "text": "12 FLOORS · 0 FALLS"
+  },
+  {
+   "type": "warn",
+   "at": "But then the daytime",
+   "until": "Day three",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Bright light hurts."
+  },
+  {
+   "type": "marker",
+   "at": "Day three",
+   "until": "you squint+0.4",
+   "label": "DAY",
+   "text": "3"
+  },
+  {
+   "type": "marker",
+   "at": "Day four",
+   "until": "a camera+0.4",
+   "label": "DAY",
+   "text": "4"
+  },
+  {
+   "type": "note",
+   "at": "They have a mirror",
+   "until": "Now your eyes",
+   "label": "REAL SCIENCE",
+   "text": "A mirror behind cats' eyes makes them glow."
+  },
+  {
+   "type": "marker",
+   "at": "Night five",
+   "until": "your little brother+0.3",
+   "label": "NIGHT",
+   "text": "5"
+  },
+  {
+   "type": "warn",
+   "at": "That light could",
+   "until": "Ten seconds",
+   "label": "THE COST",
+   "text": "One beam. Maybe forever."
+  },
+  {
+   "type": "countdown",
+   "at": "Ten seconds",
+   "until": "Shut your eyes",
+   "from": 10
+  },
+  {
+   "type": "choice",
+   "at": "Shut your eyes",
+   "until": "Would you keep",
+   "a": "Shut your eyes",
+   "b": "Keep looking",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Would you keep",
+   "text": "Keep your eyes open?",
+   "a": "KEEP LOOKING",
+   "b": "SHUT THEM"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='40' y='730' width='300' height='70' rx='10' fill='#5B4A8A' stroke='#141218' stroke-width='5'/><rect x='40' y='700' width='70' height='40' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='392' y='700' width='70' height='100' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='422' y='610' width='10' height='90' fill='#3A3448'/><path d='M392 615 L462 615 L448 565 L406 565 Z' fill='#FFE27A' stroke='#141218' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 808,
+     "scale": 1.35,
+     "pose": "idle",
+     "face": "neutral",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": 0.15,
+       "pose": "catch",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "swish"
+      },
+      {
+       "at": "in the dark",
+       "pose": "point",
+       "face": "smug",
+       "look": 1,
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "lampglow",
+     "x": 427,
+     "y": 600,
+     "svg": "<circle cx='0' cy='0' r='120' fill='#FFE9A8' opacity='0.35'/><circle cx='0' cy='0' r='60' fill='#FFF3C4' opacity='0.45'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "What if+0.35",
+       "opacity": 0,
+       "dur": 0.08,
+       "sfx": "click"
+      }
+     ],
+     "opacity": 1
+    },
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "What if+0.35",
+       "opacity": 0.72,
+       "dur": 0.08
+      }
+     ],
+     "opacity": 0
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.35,
+     "front": true,
+     "opacity": 0,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": 0.0,
+       "attach": "hero.head",
+       "dur": 0.01
+      },
+      {
+       "at": "you could see+0.1",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Not a little better",
+   "bg": "lab",
+   "camera": "pull",
+   "props": "<rect x='330' y='440' width='80' height='340' rx='16' fill='#2B2838' stroke='#141218' stroke-width='5'/><text x='370' y='822' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='#F4F1FF' stroke='#141218' stroke-width='3'>SIGHT</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "shrug",
+     "face": "smug",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "Perfectly",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bar",
+     "x": 370,
+     "y": 770,
+     "svg": "<rect x='-30' y='-320' width='60' height='320' rx='10' fill='#C8FF4D' stroke='#141218' stroke-width='4'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "Not a little+0.2",
+       "scale": 0.5,
+       "dur": 0.5,
+       "sfx": "fill"
+      },
+      {
+       "at": "Perfectly",
+       "scale": 1.0,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "fill"
+      }
+     ],
+     "scale": 0.1
+    },
+    {
+     "id": "pct",
+     "x": 370,
+     "y": 410,
+     "svg": "<text x='0' y='18' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='56' fill='#C8FF4D' stroke='#141218' stroke-width='3'>100%</text>",
+     "front": true,
+     "keys": [
+      {
+       "at": "Perfectly",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.4
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.4,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Not a little",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Night one",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='40' y='730' width='300' height='70' rx='10' fill='#5B4A8A' stroke='#141218' stroke-width='5'/><rect x='40' y='700' width='70' height='40' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='392' y='700' width='70' height='100' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='422' y='610' width='10' height='90' fill='#3A3448'/><path d='M392 615 L462 615 L448 565 L406 565 Z' fill='#FFE27A' stroke='#141218' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 300,
+     "y": 808,
+     "scale": 1.25,
+     "pose": "sit",
+     "face": "happy",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "Everyone screams",
+       "pose": "idle",
+       "face": "smug",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 120,
+     "y": 808,
+     "scale": 1.2,
+     "pose": "sit",
+     "face": "happy",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "Everyone screams",
+       "pose": "catch",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "boing"
+      }
+     ]
+    },
+    {
+     "id": "x1",
+     "char": "extra",
+     "x": 200,
+     "y": 808,
+     "scale": 1.1,
+     "pose": "sit",
+     "face": "happy",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "Everyone screams",
+       "pose": "cheer",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ],
+     "shirt": "#3FBF8A"
+    }
+   ],
+   "objects": [
+    {
+     "id": "lampglow",
+     "x": 427,
+     "y": 600,
+     "svg": "<circle cx='0' cy='0' r='120' fill='#FFE9A8' opacity='0.35'/><circle cx='0' cy='0' r='60' fill='#FFF3C4' opacity='0.45'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "the power cuts",
+       "opacity": 0,
+       "dur": 0.08,
+       "sfx": "click"
+      }
+     ]
+    },
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "the power cuts",
+       "opacity": 0.72,
+       "dur": 0.08
+      }
+     ],
+     "opacity": 0
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.25,
+     "front": true,
+     "opacity": 0,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Night one",
+       "attach": "hero.head",
+       "dur": 0.01
+      },
+      {
+       "at": "the power cuts+0.4",
+       "opacity": 1,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "but you calmly",
+   "bg": "warm_interior",
+   "camera": "pan_right",
+   "props": "<rect x='40' y='730' width='300' height='70' rx='10' fill='#5B4A8A' stroke='#141218' stroke-width='5'/><rect x='40' y='700' width='70' height='40' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 110,
+     "y": 808,
+     "scale": 1.2,
+     "pose": "crouch",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "Mia a snack",
+       "pose": "reach_up",
+       "face": "happy",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 808,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "smug",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "you calmly+0.1",
+       "x": 420,
+       "dur": 1.2,
+       "cycle": "walk"
+      },
+      {
+       "at": "to the kitchen+0.5",
+       "cycle": null,
+       "pose": "hold",
+       "flip": true,
+       "dur": 0.15
+      },
+      {
+       "at": "and bring",
+       "x": 200,
+       "dur": 1.0,
+       "cycle": "walk"
+      },
+      {
+       "at": "Mia a snack",
+       "cycle": null,
+       "pose": "hold",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.72
+    },
+    {
+     "id": "snack",
+     "x": 450,
+     "y": 700,
+     "svg": "<rect x='-16' y='-20' width='32' height='40' rx='6' fill='#FF8A3D' stroke='#141218' stroke-width='4'/><path d='M-16 -8 L16 -8' stroke='#FFE27A' stroke-width='5'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "to the kitchen+0.5",
+       "attach": "hero.hand",
+       "dy": -10,
+       "sfx": "pop"
+      },
+      {
+       "at": "a snack+0.3",
+       "attach": "mia.hand",
+       "dy": -10,
+       "sfx": "ding"
+      }
+     ]
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.25,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "but you calmly",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Night two",
+   "bg": "night_city",
+   "camera": "push",
+   "props": "<rect x='40' y='420' width='460' height='390' fill='#1A1638' stroke='#141218' stroke-width='6'/><rect x='40' y='612' width='90' height='200' fill='#3A3448' stroke='#5BE7FF' stroke-opacity='0.5' stroke-width='3'/><rect x='120' y='652' width='90' height='160' fill='#3A3448' stroke='#5BE7FF' stroke-opacity='0.5' stroke-width='3'/><rect x='200' y='692' width='90' height='120' fill='#3A3448' stroke='#5BE7FF' stroke-opacity='0.5' stroke-width='3'/><rect x='280' y='732' width='90' height='80' fill='#3A3448' stroke='#5BE7FF' stroke-opacity='0.5' stroke-width='3'/><rect x='360' y='772' width='90' height='40' fill='#3A3448' stroke='#5BE7FF' stroke-opacity='0.5' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 612,
+     "scale": 0.9,
+     "pose": "point",
+     "face": "determined",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "and you lead",
+       "x": 420,
+       "y": 805,
+       "dur": 3.0,
+       "cycle": "walk",
+       "ease": "linear"
+      },
+      {
+       "at": "pitch black+0.4",
+       "cycle": null,
+       "pose": "wave",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "x1",
+     "char": "extra",
+     "x": 95,
+     "y": 612,
+     "scale": 0.85,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "and you lead+0.4",
+       "x": 330,
+       "y": 805,
+       "dur": 3.0,
+       "cycle": "walk",
+       "ease": "linear"
+      },
+      {
+       "at": "pitch black+0.6",
+       "cycle": null,
+       "pose": "idle",
+       "dur": 0.2
+      }
+     ],
+     "shirt": "#E46F8E"
+    },
+    {
+     "id": "x2",
+     "char": "extra",
+     "x": 45,
+     "y": 612,
+     "scale": 0.85,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "and you lead+0.8",
+       "x": 240,
+       "y": 805,
+       "dur": 3.0,
+       "cycle": "walk",
+       "ease": "linear"
+      },
+      {
+       "at": "pitch black+1.0",
+       "cycle": null,
+       "pose": "idle",
+       "dur": 0.2
+      }
+     ],
+     "shirt": "#F2C94C"
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.6
+    },
+    {
+     "id": "floor",
+     "x": 450,
+     "y": 470,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='40' fill='#5BE7FF' stroke='#141218' stroke-width='3'>12F</text>",
+     "front": false,
+     "keys": [
+      {
+       "at": "twelve floors",
+       "scale": 1.3,
+       "dur": 0.2,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.0,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Night two",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Nobody trips once",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "x1",
+   "zoom": 2.0,
+   "actors": [
+    {
+     "id": "x1",
+     "char": "extra",
+     "x": 160,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "Nobody trips+0.2",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2,
+       "sfx": "crowd"
+      }
+     ],
+     "shirt": "#E46F8E"
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 330,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "wave",
+     "face": "smug",
+     "flip": true,
+     "look": 0,
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.55
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.25,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Nobody trips",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But then the daytime",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "starts to hurt",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.12,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sun",
+     "x": 390,
+     "y": 520,
+     "svg": "<circle cx='0' cy='0' r='60' fill='#FFE27A' stroke='#141218' stroke-width='5'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(0)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(45)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(90)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(135)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(180)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(225)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(270)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(315)'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "the daytime",
+       "scale": 1.3,
+       "rot": 30,
+       "dur": 1.2,
+       "sfx": "riser"
+      }
+     ],
+     "scale": 0.6
+    }
+   ]
+  },
+  {
+   "start": "Day three",
+   "bg": "day_park",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 180,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "you squint",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.15
+      },
+      {
+       "at": "with tears",
+       "pose": "slump",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sun2",
+     "x": 400,
+     "y": 470,
+     "svg": "<circle cx='0' cy='0' r='60' fill='#FFE27A' stroke='#141218' stroke-width='5'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(0)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(45)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(90)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(135)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(180)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(225)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(270)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(315)'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "at the sun",
+       "scale": 1.15,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "buzz"
+      }
+     ]
+    },
+    {
+     "id": "t1",
+     "x": 160,
+     "y": 600,
+     "svg": "<path d='M0 -10 Q8 2 0 10 Q-8 2 0 -10 Z' fill='#5BE7FF' stroke='#141218' stroke-width='2'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "with tears",
+       "y": 700,
+       "opacity": 1,
+       "dur": 0.8,
+       "ease": "in"
+      },
+      {
+       "at": "down your face",
+       "y": 790,
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ],
+     "opacity": 0
+    },
+    {
+     "id": "t2",
+     "x": 200,
+     "y": 600,
+     "svg": "<path d='M0 -10 Q8 2 0 10 Q-8 2 0 -10 Z' fill='#5BE7FF' stroke='#141218' stroke-width='2'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "with tears+0.3",
+       "y": 710,
+       "opacity": 1,
+       "dur": 0.8,
+       "ease": "in"
+      },
+      {
+       "at": "down your face+0.3",
+       "y": 790,
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ],
+     "opacity": 0
+    }
+   ]
+  },
+  {
+   "start": "Day four",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='60' y='430' width='300' height='160' rx='8' fill='#1F3A2E' stroke='#6B4A3A' stroke-width='10'/><text x='210' y='525' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='#F4F1FF' stroke='#141218' stroke-width='3'>PHOTO DAY</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "a camera flash+0.2",
+       "pose": "catch",
+       "face": "shocked",
+       "dur": 0.1
+      },
+      {
+       "at": "leaves you blind",
+       "pose": "reach_up",
+       "face": "worried",
+       "x": 220,
+       "dur": 1.2,
+       "cycle": "walk"
+      },
+      {
+       "at": "for an hour",
+       "cycle": null,
+       "pose": "slump",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "x1",
+     "char": "extra",
+     "x": 400,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "hold",
+     "face": "happy",
+     "flip": true,
+     "look": 0,
+     "keys": [],
+     "shirt": "#E46F8E"
+    }
+   ],
+   "objects": [
+    {
+     "id": "cam",
+     "x": 0,
+     "y": 0,
+     "svg": "<rect x='-40' y='-26' width='80' height='52' rx='8' fill='#3A3448' stroke='#141218' stroke-width='5'/><circle cx='0' cy='2' r='16' fill='#141218' stroke='#8E9AAF' stroke-width='4'/><rect x='14' y='-38' width='20' height='12' fill='#F4F1FF' stroke='#141218' stroke-width='3'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "Day four",
+       "attach": "x1.hand",
+       "dy": -30,
+       "dur": 0.01
+      }
+     ]
+    },
+    {
+     "id": "flash",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#FFFFFF'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "a camera flash+0.2",
+       "opacity": 1,
+       "dur": 0.05,
+       "sfx": "boom"
+      },
+      {
+       "at": "in class",
+       "opacity": 0.6,
+       "dur": 0.3
+      },
+      {
+       "at": "for an hour",
+       "opacity": 0.25,
+       "dur": 0.6
+      }
+     ],
+     "opacity": 0
+    }
+   ]
+  },
+  {
+   "start": "Here's why",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 840,
+     "scale": 1.35,
+     "pose": "think",
+     "face": "focused",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "much less light",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "cat",
+     "x": 370,
+     "y": 700,
+     "svg": "<path d='M-60 40 Q-70 -10 -40 -30 L-50 -70 L-20 -45 Q0 -52 20 -45 L50 -70 L40 -30 Q70 -10 60 40 Z' fill='#2B2838' stroke='#141218' stroke-width='5'/><path d='M60 30 Q110 20 100 -30' stroke='#2B2838' stroke-width='12' fill='none' stroke-linecap='round'/><circle cx='-20' cy='-10' r='18' fill='#C8FF4D' opacity='0.35'/><circle cx='20' cy='-10' r='18' fill='#C8FF4D' opacity='0.35'/><ellipse cx='-20' cy='-10' rx='10' ry='8' fill='#E8FF9A'/><ellipse cx='20' cy='-10' rx='10' ry='8' fill='#E8FF9A'/><ellipse cx='-20' cy='-10' rx='3' ry='7' fill='#141218'/><ellipse cx='20' cy='-10' rx='3' ry='7' fill='#141218'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "Cats can see",
+       "scale": 1.3,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ],
+     "scale": 0.2
+    },
+    {
+     "id": "darkx",
+     "x": 370,
+     "y": 480,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='34' fill='#5BE7FF' stroke='#141218' stroke-width='3'>LESS LIGHT</text>",
+     "front": false,
+     "keys": [
+      {
+       "at": "much less light",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "pop"
+      }
+     ],
+     "opacity": 0
+    }
+   ]
+  },
+  {
+   "start": "They have a mirror",
+   "bg": "lab",
+   "camera": "push",
+   "objects": [
+    {
+     "id": "eye",
+     "x": 300,
+     "y": 620,
+     "svg": "<circle cx='0' cy='0' r='120' fill='#F4F1FF' stroke='#141218' stroke-width='7'/><path d='M60 -95 A120 120 0 0 1 60 95' stroke='#BFE6FF' stroke-width='18' fill='none'/><ellipse cx='-118' cy='0' rx='14' ry='46' fill='#5BE7FF' stroke='#141218' stroke-width='5'/><circle cx='-80' cy='0' r='10' fill='#141218'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "They have",
+       "scale": 1,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ],
+     "scale": 0.3
+    },
+    {
+     "id": "mirrorlbl",
+     "x": 210,
+     "y": 470,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='28' fill='#5BE7FF' stroke='#141218' stroke-width='3'>MIRROR</text>",
+     "front": true,
+     "keys": [
+      {
+       "at": "a mirror",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "ding"
+      }
+     ],
+     "opacity": 0
+    },
+    {
+     "id": "rin",
+     "x": 300,
+     "y": 600,
+     "svg": "<path d='M-260 -20 L50 -20' stroke='#FFE27A' stroke-width='10' stroke-linecap='round'/><path d='M40 -34 L62 -20 L40 -6 Z' fill='#FFE27A'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "It bounces",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "swish"
+      }
+     ],
+     "opacity": 0
+    },
+    {
+     "id": "rout",
+     "x": 300,
+     "y": 640,
+     "svg": "<path d='M60 10 L-250 10' stroke='#C8FF4D' stroke-width='10' stroke-linecap='round' stroke-dasharray='20 12'/><path d='M-240 -4 L-262 10 L-240 24 Z' fill='#C8FF4D'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "back for a second",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "swish"
+      }
+     ],
+     "opacity": 0
+    }
+   ]
+  },
+  {
+   "start": "and that's why their eyes",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 1.6,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "hold",
+     "face": "focused",
+     "flip": false,
+     "look": 1,
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "cat2",
+     "x": 360,
+     "y": 760,
+     "svg": "<path d='M-60 40 Q-70 -10 -40 -30 L-50 -70 L-20 -45 Q0 -52 20 -45 L50 -70 L40 -30 Q70 -10 60 40 Z' fill='#2B2838' stroke='#141218' stroke-width='5'/><path d='M60 30 Q110 20 100 -30' stroke='#2B2838' stroke-width='12' fill='none' stroke-linecap='round'/>",
+     "front": false,
+     "keys": [],
+     "scale": 1.0
+    },
+    {
+     "id": "cateyes",
+     "x": 360,
+     "y": 760,
+     "svg": "<circle cx='-20' cy='-10' r='18' fill='#C8FF4D' opacity='0.35'/><circle cx='20' cy='-10' r='18' fill='#C8FF4D' opacity='0.35'/><ellipse cx='-20' cy='-10' rx='10' ry='8' fill='#E8FF9A'/><ellipse cx='20' cy='-10' rx='10' ry='8' fill='#E8FF9A'/><ellipse cx='-20' cy='-10' rx='3' ry='7' fill='#141218'/><ellipse cx='20' cy='-10' rx='3' ry='7' fill='#141218'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "eyes glow",
+       "opacity": 1,
+       "dur": 0.1,
+       "sfx": "ding"
+      }
+     ],
+     "opacity": 0.15
+    },
+    {
+     "id": "phone",
+     "x": 0,
+     "y": 0,
+     "svg": "<rect x='-16' y='-26' width='32' height='52' rx='6' fill='#3A3448' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "and that's why",
+       "attach": "hero.hand",
+       "dy": -20,
+       "dur": 0.01
+      }
+     ]
+    },
+    {
+     "id": "flash2",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#FFFFFF'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "in photos",
+       "opacity": 0.8,
+       "dur": 0.05,
+       "sfx": "click"
+      },
+      {
+       "at": "in photos+0.25",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ],
+     "opacity": 0
+    }
+   ]
+  },
+  {
+   "start": "Now your eyes",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "every bright light",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.12,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.4,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Now your eyes",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    },
+    {
+     "id": "x2",
+     "x": 390,
+     "y": 520,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='90' fill='#FF5A6E' stroke='#141218' stroke-width='3'>×2</text>",
+     "front": true,
+     "keys": [
+      {
+       "at": "twice as bright",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.3
+    },
+    {
+     "id": "sun3",
+     "x": 400,
+     "y": 700,
+     "svg": "<circle cx='0' cy='0' r='60' fill='#FFE27A' stroke='#141218' stroke-width='5'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(0)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(45)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(90)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(135)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(180)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(225)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(270)'/><path d='M0 -78 L0 -104' stroke='#FFE27A' stroke-width='9' stroke-linecap='round' transform='rotate(315)'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "every bright light",
+       "scale": 0.8,
+       "dur": 0.4,
+       "ease": "back"
+      }
+     ],
+     "scale": 0.3
+    }
+   ]
+  },
+  {
+   "start": "Night five",
+   "bg": "night_city",
+   "camera": "push",
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 200,
+     "y": 790,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "happy",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "wanders into",
+       "x": 420,
+       "dur": 2.5,
+       "cycle": "walk"
+      },
+      {
+       "at": "behind your house",
+       "cycle": null,
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.55
+    },
+    {
+     "id": "sam_lbl",
+     "x": 200,
+     "y": 470,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='#F2C94C' stroke='#141218' stroke-width='3'>SAM, 8</text>",
+     "front": false,
+     "keys": [
+      {
+       "at": "your little brother",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "pop"
+      },
+      {
+       "at": "wanders into",
+       "opacity": 0,
+       "dur": 0.4
+      }
+     ],
+     "opacity": 0
+    }
+   ]
+  },
+  {
+   "start": "The searchers' torches",
+   "bg": "night_city",
+   "camera": "pan_left",
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "x1",
+     "char": "extra",
+     "x": 90,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "hold",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [],
+     "shirt": "#E46F8E"
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "but you spot him",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "ding"
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 430,
+     "y": 760,
+     "scale": 0.8,
+     "pose": "walk_a",
+     "face": "sad",
+     "flip": true,
+     "look": 0,
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.78
+    },
+    {
+     "id": "beam",
+     "x": 0,
+     "y": 0,
+     "svg": "<path d='M0 0 L180 -60 L180 60 Z' fill='#FFE9A8' opacity='0.45'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "The searchers'",
+       "attach": "x1.hand",
+       "dur": 0.01
+      },
+      {
+       "at": "torches miss",
+       "rot": -20,
+       "dur": 0.8
+      },
+      {
+       "at": "miss him",
+       "rot": 15,
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.25,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "The searchers'",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "stumbling toward the river",
+   "bg": "night_city",
+   "camera": "push",
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><path d='M0 800 L540 800 L540 960 L0 960 Z' fill='#14112A'/><path d='M330 790 Q420 770 560 785 L560 830 L320 830 Z' fill='#1E4E7A' stroke='#141218' stroke-width='4'/><path d='M360 805 Q390 800 420 806 M450 812 Q480 806 510 812' stroke='#5BE7FF' stroke-width='3' fill='none'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 200,
+     "y": 805,
+     "scale": 1.2,
+     "pose": "walk_a",
+     "face": "sad",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "stumbling+0.1",
+       "x": 290,
+       "dur": 1.8,
+       "cycle": "walk"
+      },
+      {
+       "at": "the river+0.3",
+       "cycle": null,
+       "pose": "tired",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.6
+    }
+   ]
+  },
+  {
+   "start": "Then a rescue helicopter",
+   "bg": "night_city",
+   "camera": "pan_right",
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "its searchlight",
+       "pose": "facepalm",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.75
+    },
+    {
+     "id": "beam2",
+     "x": 600,
+     "y": 140,
+     "svg": "<path d='M-14 0 L14 0 L130 520 L-130 520 Z' fill='#FFF6D0' opacity='0.5'/><ellipse cx='0' cy='520' rx='130' ry='26' fill='#FFF6D0' opacity='0.65'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "roars in",
+       "x": 430,
+       "dur": 1.2
+      },
+      {
+       "at": "sweeps toward",
+       "x": 260,
+       "rot": 10,
+       "dur": 1.4
+      }
+     ],
+     "opacity": 1
+    },
+    {
+     "id": "heli",
+     "x": 640,
+     "y": 140,
+     "svg": "<ellipse cx='0' cy='0' rx='60' ry='28' fill='#3A3448' stroke='#141218' stroke-width='5'/><path d='M55 -6 L140 -14 L140 0 L55 8 Z' fill='#3A3448' stroke='#141218' stroke-width='4'/><path d='M-90 -40 L90 -40' stroke='#8E9AAF' stroke-width='6' stroke-linecap='round'/><rect x='-4' y='-40' width='8' height='14' fill='#141218'/><circle cx='-30' cy='-4' r='14' fill='#5BE7FF' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "roars in",
+       "x": 430,
+       "dur": 1.2,
+       "sfx": "riser"
+      },
+      {
+       "at": "sweeps toward",
+       "x": 280,
+       "dur": 1.4
+      }
+     ]
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.25,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Then a rescue",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your sunglasses are",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "back at home",
+       "pose": "shrug",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.7
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.3,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Your sunglasses",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    },
+    {
+     "id": "sg",
+     "x": 300,
+     "y": 520,
+     "svg": "<path d='M-50 0 Q-50 22 -26 22 Q-4 22 -4 0 Z M4 0 Q4 22 26 22 Q50 22 50 0 Z' fill='#141218' stroke='#3A3448' stroke-width='3'/><path d='M-4 2 L4 2' stroke='#141218' stroke-width='5'/><path d='M-60 -30 L60 40 M60 -30 L-60 40' stroke='#FF5A6E' stroke-width='10' stroke-linecap='round'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "Your sunglasses",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "buzz"
+      }
+     ],
+     "opacity": 0,
+     "scale": 0.4
+    }
+   ]
+  },
+  {
+   "start": "Mia, searching beside",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "mia",
+   "zoom": 2.0,
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 290,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "flip": true,
+     "look": 0,
+     "keys": []
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 140,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "grabs your arm",
+       "x": 200,
+       "pose": "reach_up",
+       "face": "shocked",
+       "dur": 0.2,
+       "sfx": "swish"
+      },
+      {
+       "at": "That light",
+       "pose": "point",
+       "face": "worried",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.6
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.3,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Mia, searching",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Ten seconds",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "slowmo": true,
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "determined",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "Nine",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Eight",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.7
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.3,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Ten seconds",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Sam slips",
+   "bg": "night_city",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><path d='M0 800 L540 800 L540 960 L0 960 Z' fill='#14112A'/><path d='M330 790 Q420 770 560 785 L560 830 L320 830 Z' fill='#1E4E7A' stroke='#141218' stroke-width='4'/><path d='M360 805 Q390 800 420 806 M450 812 Q480 806 510 812' stroke='#5BE7FF' stroke-width='3' fill='none'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 290,
+     "y": 805,
+     "scale": 1.2,
+     "pose": "tired",
+     "face": "sad",
+     "flip": false,
+     "look": 0,
+     "keys": [
+      {
+       "at": "Sam slips+0.1",
+       "pose": "fall",
+       "face": "shocked",
+       "rot": -15,
+       "x": 320,
+       "dur": 0.5,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.6
+    }
+   ]
+  },
+  {
+   "start": "The light sweeps closer",
+   "bg": "night_city",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "sweeps closer",
+       "face": "shocked",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.7
+    },
+    {
+     "id": "beam3",
+     "x": 400,
+     "y": 140,
+     "svg": "<path d='M-14 0 L14 0 L130 520 L-130 520 Z' fill='#FFF6D0' opacity='0.5'/><ellipse cx='0' cy='520' rx='130' ry='26' fill='#FFF6D0' opacity='0.65'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "sweeps closer",
+       "x": 230,
+       "rot": 8,
+       "dur": 2.0
+      }
+     ]
+    },
+    {
+     "id": "heli3",
+     "x": 400,
+     "y": 140,
+     "svg": "<ellipse cx='0' cy='0' rx='60' ry='28' fill='#3A3448' stroke='#141218' stroke-width='5'/><path d='M55 -6 L140 -14 L140 0 L55 8 Z' fill='#3A3448' stroke='#141218' stroke-width='4'/><path d='M-90 -40 L90 -40' stroke='#8E9AAF' stroke-width='6' stroke-linecap='round'/><rect x='-4' y='-40' width='8' height='14' fill='#141218'/><circle cx='-30' cy='-4' r='14' fill='#5BE7FF' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "sweeps closer",
+       "x": 250,
+       "dur": 2.0
+      }
+     ]
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.25,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "The light sweeps",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Five. Four",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.6,
+   "slowmo": true,
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "Four",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.5
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.3,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Five. Four",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    },
+    {
+     "id": "glare",
+     "x": 420,
+     "y": 200,
+     "svg": "<circle cx='0' cy='0' r='160' fill='#FFF6D0' opacity='0.35'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "Four",
+       "scale": 1.4,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Shut your eyes",
+   "bg": "night_city",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='22' y='667.0' width='16' height='133.0' fill='#2A1E1A'/><path d='M30 420 L85 686.0 L-25 686.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='112' y='688.0' width='16' height='112.0' fill='#2A1E1A'/><path d='M120 480 L175 704.0 L65 704.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='292' y='674.0' width='16' height='125.99999999999999' fill='#2A1E1A'/><path d='M300 440 L355 692.0 L245 692.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='462' y='660.0' width='16' height='140.0' fill='#2A1E1A'/><path d='M470 400 L525 680.0 L415 680.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><rect x='512' y='695.0' width='16' height='105.0' fill='#2A1E1A'/><path d='M520 500 L575 710.0 L465 710.0 Z' fill='#0F2A26' stroke='#141218' stroke-width='4'/><path d='M0 800 L540 800 L540 960 L0 960 Z' fill='#14112A'/><path d='M330 790 Q420 770 560 785 L560 830 L320 830 Z' fill='#1E4E7A' stroke='#141218' stroke-width='4'/><path d='M360 805 Q390 800 420 806 M450 812 Q480 806 510 812' stroke='#5BE7FF' stroke-width='3' fill='none'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "worried",
+     "flip": false,
+     "look": 1,
+     "keys": [
+      {
+       "at": "Shut your eyes",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "or keep looking",
+       "pose": "point",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 380,
+     "y": 805,
+     "scale": 1.0,
+     "pose": "fall",
+     "face": "shocked",
+     "flip": true,
+     "look": 0,
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [],
+     "opacity": 0.65
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.25,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Shut your eyes",
+       "attach": "hero.head",
+       "dur": 0.01
+      }
+     ]
+    },
+    {
+     "id": "beam4",
+     "x": 240,
+     "y": 140,
+     "svg": "<path d='M-14 0 L14 0 L130 520 L-130 520 Z' fill='#FFF6D0' opacity='0.5'/><ellipse cx='0' cy='520' rx='130' ry='26' fill='#FFF6D0' opacity='0.65'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "or keep looking",
+       "x": 180,
+       "dur": 2.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='40' y='730' width='300' height='70' rx='10' fill='#5B4A8A' stroke='#141218' stroke-width='5'/><rect x='40' y='700' width='70' height='40' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='392' y='700' width='70' height='100' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='422' y='610' width='10' height='90' fill='#3A3448'/><path d='M392 615 L462 615 L448 565 L406 565 Z' fill='#FFE27A' stroke='#141218' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 808,
+     "scale": 1.35,
+     "pose": "think",
+     "face": "worried",
+     "flip": false,
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "your eyes open",
+       "pose": "idle",
+       "face": "neutral",
+       "look": 0,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "lampglow",
+     "x": 427,
+     "y": 600,
+     "svg": "<circle cx='0' cy='0' r='120' fill='#FFE9A8' opacity='0.35'/><circle cx='0' cy='0' r='60' fill='#FFF3C4' opacity='0.45'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "end:your eyes open+0.25",
+       "opacity": 1,
+       "dur": 0.08,
+       "sfx": "click"
+      }
+     ],
+     "opacity": 0
+    },
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#070A1E'/>",
+     "front": false,
+     "keys": [
+      {
+       "at": "end:your eyes open+0.25",
+       "opacity": 0,
+       "dur": 0.08
+      }
+     ],
+     "opacity": 0.72
+    },
+    {
+     "id": "glow_hero",
+     "x": 0,
+     "y": 0,
+     "scale": 1.35,
+     "front": true,
+     "opacity": 1,
+     "svg": "<circle cx='-10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='10' cy='-5' r='11' fill='#C8FF4D' opacity='0.35'/><circle cx='-10' cy='-5' r='5' fill='#E8FF9A'/><circle cx='10' cy='-5' r='5' fill='#E8FF9A'/>",
+     "keys": [
+      {
+       "at": "Would you keep",
+       "attach": "hero.head",
+       "dur": 0.01
+      },
+      {
+       "at": "end:your eyes open+0.2",
+       "opacity": 0,
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "start": "Would you keep"
+  }
+ ]
+}

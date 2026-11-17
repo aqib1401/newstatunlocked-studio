@@ -393,7 +393,7 @@
  },
  {
   "id": 12,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could See in the Dark?",
   "ability": "night vision",
   "category": "senses",
@@ -411,7 +411,8 @@
    "Cats can see in about one-sixth of the light humans need",
    "Your eyes take around 20 to 30 minutes to fully adjust to darkness"
   ],
-  "visuals": "dark bedroom drawn in blue tones, glowing eyes, stadium, floodlights"
+  "visuals": "dark bedroom drawn in blue tones, glowing eyes, stadium, floodlights",
+  "ep": 22
  },
  {
   "id": 41,
