@@ -437,12 +437,20 @@
   "ability": "bioluminescence",
   "format": "SHORT",
   "duration_s": 49.4,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep21.mp4",
   "rendered_at": "2026-11-17T17:55:01Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-17T22:35:06Z",
+    "zernio_post": "6afcd679199f6b991a16c4c6",
+    "first_comment": "Ugy3eGAOygbYLGIGp3J4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-17T22:35:06Z",
+    "zernio_post": "6afcd67d45b686cadcb8157c",
+    "first_comment": null
+   }
   }
  },
  {
