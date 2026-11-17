@@ -415,12 +415,20 @@
   "ability": "fear (switched off)",
   "format": "LONG",
   "duration_s": 86.3,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep20.mp4",
   "rendered_at": "2026-11-16T22:33:05Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-17T17:59:00Z",
+    "zernio_post": "6afc951ba077329c251399bf",
+    "first_comment": "UgyF1v0DeiSGKBdqK_R4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-17T17:59:00Z",
+    "zernio_post": "6afc952039e11398e13afa5a",
+    "first_comment": null
+   }
   }
  },
  {
