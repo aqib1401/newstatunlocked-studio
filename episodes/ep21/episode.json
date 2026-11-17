@@ -1,0 +1,939 @@
+{
+ "ep": 21,
+ "title": "What If Your Body Glowed in the Dark?",
+ "script": "What if your body glowed in the dark? Here's the weird part: it already does. Scientists in Japan filmed it, about a thousand times too faint for your eyes to see. Now turn it up. Lights off, and you shine like a candle. When the school loses power, you lead your whole class down the dark stairs, and everyone cheers. But there's a catch. Like a candle, you only light a few steps around you. Then, on a night hike with your little brother Sam and your best friend Leo, a storm hits and every phone dies. Sam is eight, lost in the trees, crying. Leo slipped into a ditch by the river, ankle twisted, and the water is rising. Both are shouting your name from opposite sides, and you can only light one path. Five. Four. Three. Your little brother, or your best friend. Who do you glow for?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "thumbnail": "you can only light one path",
+ "music": [
+  {
+   "track": "music/lost-islands.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/surreptitious.mp3",
+   "at": "But there's a catch"
+  },
+  {
+   "track": "music/hidden-tears.mp3",
+   "at": "Sam is eight"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "accent": "#C8FF4D",
+ "highlights": {
+  "glowed in the dark": "green",
+  "a thousand times": "green",
+  "everyone cheers": "green",
+  "a few steps": "amber",
+  "one path": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "Here's the weird part",
+   "name": "BODY GLOW",
+   "mult": "×1000",
+   "tag": "VISIBLE"
+  },
+  {
+   "type": "note",
+   "at": "Scientists in Japan",
+   "until": "Now turn it up",
+   "label": "REAL SCIENCE",
+   "text": "Your body gives off light, 1,000× too faint to see."
+  },
+  {
+   "type": "marker",
+   "at": "Now turn it up",
+   "until": "Lights off",
+   "label": "GLOW",
+   "text": "×1000",
+   "sub": "NOW EVERYONE CAN SEE IT"
+  },
+  {
+   "type": "warn",
+   "at": "But there's a catch",
+   "until": "Then, on a night hike",
+   "label": "THE CATCH",
+   "text": "You only light a few steps."
+  },
+  {
+   "type": "choice",
+   "at": "Both are shouting",
+   "until": "Five",
+   "a": "Sam (8, lost)",
+   "b": "Leo (in the river)",
+   "pick": null
+  },
+  {
+   "type": "countdown",
+   "at": "Five",
+   "until": "Your little brother, or",
+   "from": 5
+  },
+  {
+   "type": "endcard",
+   "at": "Your little brother, or",
+   "text": "Your brother or your best friend?",
+   "a": "SAM",
+   "b": "LEO"
+  }
+ ],
+ "sfx": [
+  {
+   "name": "crowd",
+   "at": "everyone cheers",
+   "gain": 0.7
+  }
+ ],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": 0.15,
+       "pose": "hold",
+       "face": "shocked",
+       "dur": 0.15,
+       "sfx": "pop"
+      },
+      {
+       "at": "in the dark",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "g",
+     "x": 170,
+     "y": 700,
+     "svg": "<circle r='170' fill='#7DF9C8' opacity='0.10'/><circle r='120' fill='#7DF9C8' opacity='0.16'/><circle r='75' fill='#B8FFE4' opacity='0.24'/>",
+     "opacity": 0.35,
+     "keys": [
+      {
+       "at": 0.15,
+       "opacity": 1,
+       "scale": 1.15,
+       "dur": 0.3
+      },
+      {
+       "at": 0.6,
+       "scale": 1.0,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "bulb",
+     "x": 380,
+     "y": 430,
+     "svg": "<circle r='30' fill='#FFF6B0' stroke='#141218' stroke-width='5'/><rect x='-14' y='26' width='28' height='18' rx='3' fill='#8A8494' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": 0.05,
+       "y": 800,
+       "rot": 40,
+       "dur": 0.7,
+       "ease": "in",
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Here's the weird part",
+   "bg": "lab",
+   "camera": "pull",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "think",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "it already does",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.15,
+       "sfx": "swish"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "q",
+     "x": 370,
+     "y": 560,
+     "svg": "<text x='0' y='30' font-size='120' font-weight='900' text-anchor='middle' fill='#C8FF4D' font-family='Arial' stroke='#141218' stroke-width='5'>?</text>",
+     "scale": 0.2,
+     "keys": [
+      {
+       "at": "it already does",
+       "scale": 1,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Scientists in Japan",
+   "bg": "lab",
+   "camera": "push",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "stand",
+     "face": "neutral",
+     "flip": false,
+     "keys": [
+      {
+       "at": "filmed it",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15
+      },
+      {
+       "at": "too faint",
+       "pose": "shrug",
+       "face": "bored",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "cam",
+     "x": 380,
+     "y": 640,
+     "svg": "<rect x='-60' y='-36' width='120' height='72' rx='10' fill='#3A3550' stroke='#141218' stroke-width='6'/><circle r='26' fill='#1D2747' stroke='#141218' stroke-width='6'/><circle r='12' fill='#7DF9C8'/><path d='M-30 36 L-50 160 M30 36 L50 160 M0 36 L0 160' stroke='#141218' stroke-width='6'/>",
+     "flip": true,
+     "keys": [
+      {
+       "at": "filmed it",
+       "rot": -6,
+       "dur": 0.15,
+       "sfx": "click"
+      }
+     ]
+    },
+    {
+     "id": "dots",
+     "x": 140,
+     "y": 690,
+     "svg": "<circle cx='-30' cy='-60' r='3' fill='#7DF9C8' opacity='0.6'/><circle cx='10' cy='-80' r='3' fill='#7DF9C8' opacity='0.6'/><circle cx='30' cy='-40' r='3' fill='#7DF9C8' opacity='0.6'/><circle cx='-10' cy='-20' r='3' fill='#7DF9C8' opacity='0.6'/><circle cx='25' cy='10' r='3' fill='#7DF9C8' opacity='0.6'/><circle cx='-35' cy='20' r='3' fill='#7DF9C8' opacity='0.6'/><circle cx='0' cy='50' r='3' fill='#7DF9C8' opacity='0.6'/><circle cx='-20' cy='-90' r='3' fill='#7DF9C8' opacity='0.6'/><circle cx='35' cy='-95' r='3' fill='#7DF9C8' opacity='0.6'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "filmed it",
+       "opacity": 1,
+       "dur": 0.3
+      },
+      {
+       "at": "too faint",
+       "opacity": 0.25,
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Now turn it up",
+   "bg": "lab",
+   "camera": "push",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "turn it up",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "g",
+     "x": 160,
+     "y": 700,
+     "svg": "<circle r='170' fill='#7DF9C8' opacity='0.10'/><circle r='120' fill='#7DF9C8' opacity='0.16'/><circle r='75' fill='#B8FFE4' opacity='0.24'/>",
+     "opacity": 0.1,
+     "keys": [
+      {
+       "at": "turn it up+0.2",
+       "opacity": 1,
+       "dur": 0.6,
+       "sfx": "riser"
+      }
+     ]
+    },
+    {
+     "id": "dial",
+     "x": 390,
+     "y": 560,
+     "svg": "<circle r='60' fill='#1D2747' stroke='#141218' stroke-width='6'/><path d='M0 0 L0 -46' stroke='#C8FF4D' stroke-width='10' stroke-linecap='round'/><text x='0' y='92' font-size='22' font-weight='900' text-anchor='middle' fill='#F4F1FF' font-family='Arial'>GLOW</text>",
+     "rot": -120,
+     "keys": [
+      {
+       "at": "turn it up",
+       "rot": 120,
+       "dur": 0.7,
+       "ease": "out",
+       "sfx": "click"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Lights off",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='280' y='700' width='220' height='60' rx='12' fill='#5A6FB8' stroke='#141218' stroke-width='5'/><rect x='280' y='680' width='60' height='40' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='290' y='758' width='14' height='50' fill='#6B4A3A'/><rect x='476' y='758' width='14' height='50' fill='#6B4A3A'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "reach_up",
+     "face": "focused",
+     "flip": true,
+     "keys": [
+      {
+       "at": "Lights off+0.3",
+       "pose": "cheer",
+       "face": "happy",
+       "flip": false,
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sw",
+     "x": 80,
+     "y": 600,
+     "svg": "<rect x='-16' y='-26' width='32' height='52' rx='6' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='-6' y='-14' width='12' height='16' rx='3' fill='#8A8494'/>",
+     "keys": [
+      {
+       "at": "Lights off+0.2",
+       "rot": 180,
+       "dur": 0.1,
+       "sfx": "click"
+      }
+     ]
+    },
+    {
+     "id": "dark",
+     "x": 270,
+     "y": 480,
+     "svg": "<rect x='-270' y='-480' width='540' height='960' fill='#05060F'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "Lights off+0.2",
+       "opacity": 0.6,
+       "dur": 0.1
+      }
+     ]
+    },
+    {
+     "id": "g",
+     "x": 170,
+     "y": 690,
+     "svg": "<circle r='170' fill='#7DF9C8' opacity='0.10'/><circle r='120' fill='#7DF9C8' opacity='0.16'/><circle r='75' fill='#B8FFE4' opacity='0.24'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "Lights off+0.25",
+       "opacity": 1,
+       "scale": 1.3,
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "When the school loses power",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "point",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "you lead",
+       "x": 230,
+       "dur": 1.6,
+       "cycle": "walk"
+      },
+      {
+       "at": "everyone cheers",
+       "cycle": null,
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "e1",
+     "char": "extra",
+     "shirt": "#E07A5F",
+     "x": 330,
+     "y": 812,
+     "scale": 1.1,
+     "pose": "tired",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "you lead",
+       "pose": "walk_a",
+       "dur": 0.2
+      },
+      {
+       "at": "everyone cheers",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "char": "extra",
+     "shirt": "#3D9970",
+     "x": 420,
+     "y": 812,
+     "scale": 1.05,
+     "pose": "tired",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "dark stairs",
+       "pose": "walk_b",
+       "dur": 0.2
+      },
+      {
+       "at": "everyone cheers",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "g",
+     "x": 110,
+     "y": 700,
+     "svg": "<circle r='170' fill='#7DF9C8' opacity='0.10'/><circle r='120' fill='#7DF9C8' opacity='0.16'/><circle r='75' fill='#B8FFE4' opacity='0.24'/>",
+     "opacity": 1,
+     "keys": [
+      {
+       "at": "you lead",
+       "x": 230,
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "id": "bulbx",
+     "x": 270,
+     "y": 470,
+     "svg": "<path d='M-40 0 L40 0' stroke='#141218' stroke-width='5'/><circle r='30' fill='#3A3550' stroke='#141218' stroke-width='5'/><rect x='-14' y='26' width='28' height='18' rx='3' fill='#8A8494' stroke='#141218' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "loses power",
+       "rot": 15,
+       "dur": 0.2,
+       "sfx": "click"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But there's a catch",
+   "bg": "lab",
+   "camera": "pull",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#020208' opacity='0.8'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 260,
+     "y": 840,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "a few steps",
+       "pose": "point",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "g",
+     "x": 260,
+     "y": 720,
+     "svg": "<circle r='170' fill='#7DF9C8' opacity='0.10'/><circle r='120' fill='#7DF9C8' opacity='0.16'/><circle r='75' fill='#B8FFE4' opacity='0.24'/>",
+     "opacity": 1,
+     "keys": [
+      {
+       "at": "a candle, you only",
+       "scale": 0.7,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "ring",
+     "x": 260,
+     "y": 830,
+     "svg": "<ellipse rx='120' ry='22' fill='none' stroke='#FFB547' stroke-width='5' stroke-dasharray='14 10'/><text x='0' y='-30' font-size='0'></text>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "a few steps",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then, on a night hike",
+   "bg": "dusk",
+   "camera": "pan_right",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/><rect x='33' y='560' width='14' height='260' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M-8 650 L40 520 L88 650 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='123' y='600' width='14' height='220' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M82 690 L130 560 L178 690 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='413' y='570' width='14' height='250' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M372 660 L420 530 L468 660 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='493' y='610' width='14' height='210' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M452 700 L500 570 L548 700 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><path d='M60 420 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M150 480 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M240 440 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M330 500 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M420 450 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M500 520 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M100 600 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M280 620 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M460 640 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M200 700 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 815,
+     "scale": 1.2,
+     "pose": "walk_a",
+     "face": "happy",
+     "cycle": "walk",
+     "keys": [
+      {
+       "at": "a storm hits",
+       "cycle": null,
+       "pose": "hold",
+       "face": "shocked",
+       "dur": 0.15
+      },
+      {
+       "at": "every phone dies",
+       "pose": "hold",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 250,
+     "y": 815,
+     "scale": 0.95,
+     "pose": "walk_b",
+     "face": "happy",
+     "cycle": "walk",
+     "keys": [
+      {
+       "at": "a storm hits",
+       "cycle": null,
+       "pose": "tired",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 360,
+     "y": 815,
+     "scale": 1.15,
+     "pose": "walk_a",
+     "face": "bored",
+     "cycle": "walk",
+     "keys": [
+      {
+       "at": "a storm hits",
+       "cycle": null,
+       "pose": "shrug",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "g",
+     "x": 120,
+     "y": 710,
+     "svg": "<circle r='105' fill='#7DF9C8' opacity='0.16'/><circle r='65' fill='#B8FFE4' opacity='0.26'/>",
+     "opacity": 1
+    },
+    {
+     "id": "bolt",
+     "x": 300,
+     "y": 470,
+     "svg": "<path d='M10 -80 L-20 0 L5 0 L-15 80 L30 -15 L5 -15 L25 -80 Z' fill='#FFD84D' stroke='#141218' stroke-width='4'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "a storm hits",
+       "opacity": 1,
+       "dur": 0.05,
+       "sfx": "boom"
+      },
+      {
+       "at": "a storm hits+0.5",
+       "opacity": 0,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "ph",
+     "x": 165,
+     "y": 650,
+     "svg": "<rect x='-20' y='-34' width='40' height='68' rx='8' fill='#3A3550' stroke='#141218' stroke-width='5'/><rect x='-14' y='-26' width='28' height='48' rx='3' fill='#7DD3FC'/>",
+     "front": true
+    },
+    {
+     "id": "phd",
+     "x": 165,
+     "y": 648,
+     "front": true,
+     "svg": "<rect x='-14' y='-26' width='28' height='48' rx='3' fill='#141218'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "every phone dies",
+       "opacity": 1,
+       "dur": 0.05,
+       "sfx": "glitch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Sam is eight",
+   "bg": "dusk",
+   "camera": "closeup",
+   "focus": "sam",
+   "zoom": 2.3,
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/><rect x='33' y='560' width='14' height='260' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M-8 650 L40 520 L88 650 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='123' y='600' width='14' height='220' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M82 690 L130 560 L178 690 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='413' y='570' width='14' height='250' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M372 660 L420 530 L468 660 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='493' y='610' width='14' height='210' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M452 700 L500 570 L548 700 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><path d='M60 420 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M150 480 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M240 440 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M330 500 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M420 450 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M500 520 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M100 600 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M280 620 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M460 640 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M200 700 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 260,
+     "y": 815,
+     "scale": 1.0,
+     "pose": "tired",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "crying",
+       "face": "sad",
+       "pose": "slump",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": []
+  },
+  {
+   "start": "Leo slipped",
+   "bg": "dusk",
+   "camera": "push",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/><path d='M60 420 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M150 480 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M240 440 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M330 500 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M420 450 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M500 520 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M100 600 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M280 620 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M460 640 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M200 700 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><rect x='0' y='700' width='540' height='30' fill='#3E6FB0' opacity='0.8'/>",
+   "front_props": "<path d='M240 760 Q330 730 470 760 L470 830 L240 830 Z' fill='#4A3A2E' stroke='#141218' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 340,
+     "y": 790,
+     "scale": 1.1,
+     "pose": "reach_up",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "ankle twisted",
+       "pose": "sit",
+       "face": "sad",
+       "dur": 0.3,
+       "sfx": "thud"
+      },
+      {
+       "at": "water is rising",
+       "pose": "reach_up",
+       "face": "shocked",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "water",
+     "x": 355,
+     "y": 840,
+     "front": true,
+     "svg": "<rect x='-120' y='-20' width='240' height='60' fill='#3E6FB0' opacity='0.85'/><path d='M-120 -20 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0' fill='none' stroke='#9FB8FF' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "water is rising",
+       "y": 790,
+       "dur": 1.5,
+       "ease": "linear"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Both are shouting",
+   "bg": "dusk",
+   "camera": "push",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/><rect x='33' y='560' width='14' height='260' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M-8 650 L40 520 L88 650 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='123' y='600' width='14' height='220' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M82 690 L130 560 L178 690 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='413' y='570' width='14' height='250' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M372 660 L420 530 L468 660 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='493' y='610' width='14' height='210' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M452 700 L500 570 L548 700 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><path d='M60 420 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M150 480 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M240 440 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M330 500 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M420 450 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M500 520 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M100 600 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M280 620 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M460 640 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M200 700 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 260,
+     "y": 815,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "opposite sides",
+       "look": -1,
+       "flip": true,
+       "dur": 0.2
+      },
+      {
+       "at": "opposite sides+0.6",
+       "look": 1,
+       "flip": false,
+       "dur": 0.2
+      },
+      {
+       "at": "only light one path",
+       "pose": "think",
+       "face": "worried",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "g",
+     "x": 260,
+     "y": 710,
+     "svg": "<circle r='105' fill='#7DF9C8' opacity='0.16'/><circle r='65' fill='#B8FFE4' opacity='0.26'/>",
+     "opacity": 1
+    },
+    {
+     "id": "a1",
+     "x": 110,
+     "y": 560,
+     "svg": "<rect x='-60' y='-22' width='120' height='44' rx='10' fill='#FFD84D' stroke='#141218' stroke-width='5'/><text x='0' y='10' font-size='26' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>◀ SAM</text>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "your name",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "a2",
+     "x": 410,
+     "y": 560,
+     "svg": "<rect x='-60' y='-22' width='120' height='44' rx='10' fill='#FFB547' stroke='#141218' stroke-width='5'/><text x='0' y='10' font-size='26' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>LEO ▶</text>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "opposite sides",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Five",
+   "bg": "dusk",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.3,
+   "slowmo": true,
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/><rect x='33' y='560' width='14' height='260' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M-8 650 L40 520 L88 650 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='123' y='600' width='14' height='220' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M82 690 L130 560 L178 690 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='413' y='570' width='14' height='250' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M372 660 L420 530 L468 660 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><rect x='493' y='610' width='14' height='210' fill='#2A2430' stroke='#141218' stroke-width='4'/><path d='M452 700 L500 570 L548 700 Z' fill='#1F3B2C' stroke='#141218' stroke-width='5'/><path d='M60 420 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M150 480 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M240 440 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M330 500 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M420 450 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M500 520 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M100 600 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M280 620 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M460 640 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/><path d='M200 700 l-10 30' stroke='#9FB8FF' stroke-width='3' opacity='0.55'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 260,
+     "y": 815,
+     "scale": 1.25,
+     "pose": "think",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Four",
+       "look": -1,
+       "dur": 0.2
+      },
+      {
+       "at": "Three",
+       "look": 1,
+       "face": "sad",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "g",
+     "x": 260,
+     "y": 710,
+     "svg": "<circle r='105' fill='#7DF9C8' opacity='0.16'/><circle r='65' fill='#B8FFE4' opacity='0.26'/>",
+     "opacity": 1
+    }
+   ]
+  },
+  {
+   "start": "Your little brother, or",
+   "bg": "lab",
+   "camera": "push",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#05060F' opacity='0.62'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "think",
+     "face": "worried",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "end:glow for+0.5",
+       "pose": "idle",
+       "face": "neutral",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "g",
+     "x": 170,
+     "y": 700,
+     "svg": "<circle r='170' fill='#7DF9C8' opacity='0.10'/><circle r='120' fill='#7DF9C8' opacity='0.16'/><circle r='75' fill='#B8FFE4' opacity='0.24'/>",
+     "opacity": 1,
+     "keys": [
+      {
+       "at": "end:glow for+0.4",
+       "opacity": 0.35,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "bulb",
+     "x": 380,
+     "y": 430,
+     "svg": "<circle r='30' fill='#FFF6B0' stroke='#141218' stroke-width='5'/><rect x='-14' y='26' width='28' height='18' rx='3' fill='#8A8494' stroke='#141218' stroke-width='4'/>"
+    }
+   ]
+  }
+ ]
+}

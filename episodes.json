@@ -422,5 +422,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 21,
+  "title": "What If Your Body Glowed in the Dark?",
+  "ability": "bioluminescence",
+  "format": "SHORT",
+  "duration_s": 49.4,
+  "status": "rendered",
+  "video": "videos/ep21.mp4",
+  "rendered_at": "2026-11-17T17:55:01Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
