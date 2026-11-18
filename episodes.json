@@ -481,9 +481,31 @@
   "ability": "unbreakable skin",
   "format": "SHORT",
   "duration_s": 48.4,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep23.mp4",
   "rendered_at": "2026-11-18T17:55:04Z",
+  "posted": {
+   "youtube": {
+    "at": "2026-11-18T22:26:37Z",
+    "zernio_post": "6afe25fd12ee9d3aad7b3529",
+    "first_comment": "UgwjW5lLO0mOeIPnSUZ4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-18T22:26:37Z",
+    "zernio_post": "6afe260198ed2c909c4335c8",
+    "first_comment": null
+   }
+  }
+ },
+ {
+  "ep": 24,
+  "title": "What If Your Memory Reset Every Day?",
+  "ability": "memory (resets daily)",
+  "format": "LONG",
+  "duration_s": 85.7,
+  "status": "rendered",
+  "video": "videos/ep24.mp4",
+  "rendered_at": "2026-11-18T22:34:47Z",
   "posted": {
    "youtube": null,
    "facebook": null

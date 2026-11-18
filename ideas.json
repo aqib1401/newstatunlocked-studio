@@ -432,7 +432,7 @@
  },
  {
   "id": 13,
-  "status": "planned",
+  "status": "used",
   "title": "What If Your Memory Reset Every Day?",
   "ability": "memory (resets daily)",
   "category": "brain",
@@ -450,7 +450,8 @@
    "People who can't form new memories can still learn new skills, like drawing or puzzles, without remembering practising",
    "Memories are formed with help from a brain region called the hippocampus"
   ],
-  "visuals": "hand note, sticky notes wall, piano, gift box, birthday cake"
+  "visuals": "hand note, sticky notes wall, piano, gift box, birthday cake",
+  "ep": 24
  },
  {
   "id": 42,
