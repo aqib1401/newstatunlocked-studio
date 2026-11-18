@@ -466,5 +466,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 23,
+  "title": "What If Your Skin Couldn't Be Cut?",
+  "ability": "unbreakable skin",
+  "format": "SHORT",
+  "duration_s": 48.4,
+  "status": "rendered",
+  "video": "videos/ep23.mp4",
+  "rendered_at": "2026-11-18T17:55:04Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
