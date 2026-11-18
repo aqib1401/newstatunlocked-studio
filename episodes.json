@@ -459,12 +459,20 @@
   "ability": "night vision",
   "format": "LONG",
   "duration_s": 87.6,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep22.mp4",
   "rendered_at": "2026-11-17T22:35:00Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-18T17:55:55Z",
+    "zernio_post": "6afde68db8f6172f220a7e17",
+    "first_comment": "UgztDpl1SONuTjvVZ3l4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-18T17:55:55Z",
+    "zernio_post": "6afde6928279dc05cdd8d024",
+    "first_comment": null
+   }
   }
  },
  {
