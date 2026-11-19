@@ -503,12 +503,20 @@
   "ability": "memory (resets daily)",
   "format": "LONG",
   "duration_s": 85.7,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep24.mp4",
   "rendered_at": "2026-11-18T22:34:47Z",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-19T17:56:16Z",
+    "zernio_post": "6aff3822ef325b8ab48f3bfa",
+    "first_comment": "Ugwx__GxhxJhovnEyGp4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-19T17:56:16Z",
+    "zernio_post": "6aff38282ad3fb244dbdcfa7",
+    "first_comment": null
+   }
   }
  },
  {
