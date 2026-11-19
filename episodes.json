@@ -510,5 +510,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 25,
+  "title": "What If You Had No Fingerprints?",
+  "ability": "fingerprints (none)",
+  "format": "SHORT",
+  "duration_s": 52.0,
+  "status": "rendered",
+  "video": "videos/ep25.mp4",
+  "rendered_at": "2026-11-19T17:55:24Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

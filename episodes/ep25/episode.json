@@ -1,0 +1,959 @@
+{
+ "ep": 25,
+ "title": "What If You Had No Fingerprints?",
+ "script": "What if you had no fingerprints? Not smudged. Gone. You sneak the last cookie, and when your best friend Mia dusts the jar with cocoa powder, she finds nothing. But then your phone stops unlocking, and the airport scanner can't find you, so you wait three hours. A super rare condition does this, and one doctor nicknamed it immigration delay disease. Your prints formed in the womb, and not even identical twins share them. They're how the world knows you're you. Then, right before your space camp trip with Mia, you knock the science trophy off a shelf and it shatters. Your science teacher Dr. Lee dusts it, and the only prints belong to Mia, who handed it to you. Confess, and you lose the trip. Stay quiet, and Mia does. Dr. Lee gives you five seconds. Five. Four. Three. With no fingerprints, who would ever know it was you?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "thumbnail": "she finds nothing",
+ "music": [
+  {
+   "track": "music/syntheticity.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/unknown.mp3",
+   "at": "But then your phone"
+  },
+  {
+   "track": "music/hidden-tears.mp3",
+   "at": "Your science teacher"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "accent": "#C8FF4D",
+ "highlights": {
+  "no fingerprints": "green",
+  "nothing": "green",
+  "three hours": "amber",
+  "identical twins": "green",
+  "Mia": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "You sneak",
+   "name": "FINGERPRINTS",
+   "mult": "×0",
+   "tag": "UNTRACEABLE"
+  },
+  {
+   "type": "marker",
+   "at": "she finds nothing",
+   "until": "But then your phone",
+   "label": "PRINTS FOUND",
+   "text": "0",
+   "color": "#7DF9C8"
+  },
+  {
+   "type": "marker",
+   "at": "so you wait",
+   "until": "A super rare",
+   "label": "AIRPORT",
+   "text": "3 HRS",
+   "sub": "STILL WAITING",
+   "color": "#FFB547"
+  },
+  {
+   "type": "note",
+   "at": "A super rare",
+   "until": "Then, right before",
+   "label": "REAL SCIENCE",
+   "text": "Prints form before birth. Even twins differ."
+  },
+  {
+   "type": "warn",
+   "at": "belong to Mia",
+   "until": "Confess",
+   "label": "THE CATCH",
+   "text": "Only Mia's prints are on it."
+  },
+  {
+   "type": "choice",
+   "at": "Confess",
+   "until": "Five",
+   "a": "Confess",
+   "b": "Stay quiet",
+   "pick": null
+  },
+  {
+   "type": "countdown",
+   "at": "Five",
+   "until": "With no fingerprints",
+   "from": 5
+  },
+  {
+   "type": "endcard",
+   "at": "With no fingerprints",
+   "text": "Confess, or let Mia take the blame?",
+   "a": "CONFESS",
+   "b": "STAY QUIET"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": 0.3,
+       "pose": "hold",
+       "face": "focused",
+       "dur": 0.15
+      },
+      {
+       "at": "Gone",
+       "pose": "shrug",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fp",
+     "x": 320,
+     "y": 560,
+     "svg": "<g fill='none' stroke='#7DF9C8' stroke-width='5' stroke-linecap='round'><path d='M-30 10 Q-30 -36 0 -36 Q30 -36 30 10'/><path d='M-20 22 Q-22 -24 0 -24 Q22 -24 20 14'/><path d='M-10 30 Q-12 -12 0 -12 Q12 -12 10 20'/><path d='M0 0 L0 34'/><path d='M-38 28 Q-42 -48 0 -48 Q42 -48 38 28'/></g>",
+     "scale": 1.7,
+     "keys": [
+      {
+       "at": 0.25,
+       "rot": 8,
+       "dur": 0.2
+      },
+      {
+       "at": "Not smudged",
+       "opacity": 0.5,
+       "scale": 1.5,
+       "dur": 0.3,
+       "sfx": "glitch"
+      },
+      {
+       "at": "Gone",
+       "opacity": 0,
+       "scale": 0.4,
+       "dur": 0.25,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You sneak the last cookie",
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='60' y='660' width='420' height='18' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='80' y='678' width='16' height='130' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='444' y='678' width='16' height='130' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "You sneak",
+       "x": 250,
+       "cycle": "walk",
+       "dur": 0.6
+      },
+      {
+       "at": "the last cookie",
+       "cycle": null,
+       "pose": "reach_up",
+       "face": "smug",
+       "dur": 0.15,
+       "sfx": "swish"
+      },
+      {
+       "at": "end:last cookie+0.3",
+       "x": 120,
+       "pose": "hold",
+       "dur": 0.5
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "jar",
+     "x": 340,
+     "y": 612,
+     "svg": "<g><rect x='-34' y='-44' width='68' height='88' rx='14' fill='#BFEFFF' fill-opacity='0.6' stroke='#141218' stroke-width='5'/><rect x='-38' y='-56' width='76' height='16' rx='5' fill='#E85D75' stroke='#141218' stroke-width='4'/><circle cx='-10' cy='20' r='12' fill='#C68B59' stroke='#141218' stroke-width='3'/></g>",
+     "keys": []
+    },
+    {
+     "id": "ck",
+     "x": 330,
+     "y": 612,
+     "svg": "<circle r='16' fill='#C68B59' stroke='#141218' stroke-width='4'/><circle cx='-5' cy='-4' r='3' fill='#3A2418'/><circle cx='6' cy='5' r='3' fill='#3A2418'/>",
+     "keys": [
+      {
+       "at": "the last cookie+0.15",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -14,
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "and when your best friend",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "mia",
+   "zoom": 1.7,
+   "props": "<rect x='60' y='660' width='420' height='18' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='80' y='678' width='16' height='130' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='444' y='678' width='16' height='130' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 230,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "hold",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "dusts the jar",
+       "pose": "point",
+       "dur": 0.2
+      },
+      {
+       "at": "she finds nothing",
+       "pose": "shrug",
+       "face": "shocked",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 100,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "hold",
+     "face": "smug",
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "jar",
+     "x": 320,
+     "y": 612,
+     "svg": "<g><rect x='-34' y='-44' width='68' height='88' rx='14' fill='#BFEFFF' fill-opacity='0.6' stroke='#141218' stroke-width='5'/><rect x='-38' y='-56' width='76' height='16' rx='5' fill='#E85D75' stroke='#141218' stroke-width='4'/><circle cx='-10' cy='20' r='12' fill='#C68B59' stroke='#141218' stroke-width='3'/></g>",
+     "keys": []
+    },
+    {
+     "id": "dust",
+     "x": 320,
+     "y": 600,
+     "svg": "<g fill='#7A4A2A'><circle cx='-14' cy='-6' r='4'/><circle cx='8' cy='4' r='3'/><circle cx='0' cy='-16' r='3'/><circle cx='16' cy='-10' r='4'/><circle cx='-6' cy='14' r='3'/></g>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "cocoa powder",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "swish"
+      }
+     ]
+    },
+    {
+     "id": "mag",
+     "x": 310,
+     "y": 540,
+     "svg": "<g><circle r='26' fill='#BFEFFF' fill-opacity='0.4' stroke='#141218' stroke-width='6'/><rect x='18' y='18' width='12' height='40' rx='5' transform='rotate(-45 24 24)' fill='#6B4A3A' stroke='#141218' stroke-width='4'/></g>",
+     "front": true,
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "she finds",
+       "opacity": 1,
+       "x": 330,
+       "y": 600,
+       "dur": 0.3
+      },
+      {
+       "at": "nothing",
+       "x": 325,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But then your phone",
+   "bg": "cool_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "stops unlocking",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "buzz"
+      },
+      {
+       "at": "stops unlocking+0.5",
+       "pose": "facepalm",
+       "face": "bored",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ph",
+     "x": 320,
+     "y": 600,
+     "svg": "<rect x='-30' y='-52' width='60' height='104' rx='10' fill='#2A2430' stroke='#141218' stroke-width='5'/><rect x='-22' y='-42' width='44' height='76' rx='4' fill='#E85D75'/><text x='0' y='-6' font-size='26' font-weight='900' text-anchor='middle' fill='#F4F1FF' font-family='Arial'>✕</text><text x='0' y='22' font-size='9' font-weight='900' text-anchor='middle' fill='#F4F1FF' font-family='Arial'>TRY AGAIN</text>",
+     "keys": [
+      {
+       "at": "stops unlocking",
+       "rot": 8,
+       "dur": 0.08
+      },
+      {
+       "at": "stops unlocking+0.1",
+       "rot": -8,
+       "dur": 0.08
+      },
+      {
+       "at": "stops unlocking+0.2",
+       "rot": 0,
+       "dur": 0.08
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "and the airport scanner",
+   "bg": "cool_interior",
+   "camera": "pan_right",
+   "props": "<rect x='330' y='540' width='120' height='270' rx='10' fill='#8A8494' stroke='#141218' stroke-width='6'/><rect x='348' y='560' width='84' height='60' rx='6' fill='#2A2430' stroke='#141218' stroke-width='4'/><rect x='360' y='650' width='60' height='40' rx='6' fill='#9FE8FF' stroke='#141218' stroke-width='4'/><text x='390' y='600' font-size='18' font-weight='900' text-anchor='middle' fill='#FF5A5A' font-family='Arial'>NO ID</text><rect x='40' y='560' width='130' height='46' rx='8' fill='#2A2430' stroke='#141218' stroke-width='4'/><text x='105' y='591' font-size='18' font-weight='900' text-anchor='middle' fill='#FFB547' font-family='Arial'>GATE 7</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "reach_up",
+     "face": "neutral",
+     "flip": false,
+     "keys": [
+      {
+       "at": "can't find you",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "buzz"
+      },
+      {
+       "at": "so you wait",
+       "pose": "sit",
+       "face": "bored",
+       "x": 150,
+       "dur": 0.5
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "clk",
+     "x": 250,
+     "y": 470,
+     "svg": "<circle r='34' fill='#F4F1FF' stroke='#141218' stroke-width='6'/><path d='M0 0 V-22' stroke='#141218' stroke-width='5' stroke-linecap='round'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "so you wait",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "clock"
+      },
+      {
+       "at": "three hours",
+       "rot": 720,
+       "dur": 1.4,
+       "ease": "linear"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "A super rare condition",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 840,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "A super rare",
+       "pose": "point",
+       "face": "focused",
+       "dur": 0.2
+      },
+      {
+       "at": "immigration delay",
+       "pose": "facepalm",
+       "face": "bored",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fp",
+     "x": 340,
+     "y": 600,
+     "svg": "<g fill='none' stroke='#8A8494' stroke-width='5' stroke-linecap='round'><path d='M-30 10 Q-30 -36 0 -36 Q30 -36 30 10'/><path d='M-20 22 Q-22 -24 0 -24 Q22 -24 20 14'/><path d='M-10 30 Q-12 -12 0 -12 Q12 -12 10 20'/><path d='M0 0 L0 34'/><path d='M-38 28 Q-42 -48 0 -48 Q42 -48 38 28'/></g>",
+     "scale": 1.5,
+     "opacity": 0.35,
+     "keys": [
+      {
+       "at": "nicknamed",
+       "rot": -10,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "x",
+     "x": 340,
+     "y": 600,
+     "svg": "<path d='M-50 -50 L50 50 M50 -50 L-50 50' stroke='#FF5A5A' stroke-width='12' stroke-linecap='round'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "does this",
+       "opacity": 1,
+       "dur": 0.15,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your prints formed",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "t1",
+     "char": "extra",
+     "x": 130,
+     "y": 840,
+     "scale": 1.05,
+     "pose": "idle",
+     "face": "neutral",
+     "shirt": "#5A9BD8",
+     "keys": [
+      {
+       "at": "identical twins",
+       "pose": "wave",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "t2",
+     "char": "extra",
+     "x": 410,
+     "y": 840,
+     "scale": 1.05,
+     "pose": "idle",
+     "face": "neutral",
+     "shirt": "#5A9BD8",
+     "flip": true,
+     "keys": [
+      {
+       "at": "identical twins",
+       "pose": "wave",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "f1",
+     "x": 190,
+     "y": 560,
+     "svg": "<g fill='none' stroke='#7DF9C8' stroke-width='5' stroke-linecap='round'><path d='M-30 10 Q-30 -36 0 -36 Q30 -36 30 10'/><path d='M-20 22 Q-22 -24 0 -24 Q22 -24 20 14'/><path d='M-10 30 Q-12 -12 0 -12 Q12 -12 10 20'/><path d='M0 0 L0 34'/><path d='M-38 28 Q-42 -48 0 -48 Q42 -48 38 28'/></g>",
+     "scale": 0.2,
+     "keys": [
+      {
+       "at": "formed in the womb",
+       "scale": 1.1,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "f2",
+     "x": 350,
+     "y": 560,
+     "svg": "<g fill='none' stroke='#FFB547' stroke-width='5' stroke-linecap='round'><circle r='12'/><circle r='24'/><path d='M-36 0 A36 36 0 1 1 0 36'/><path d='M-46 10 A46 46 0 1 1 14 46'/></g>",
+     "scale": 0.2,
+     "keys": [
+      {
+       "at": "share them",
+       "scale": 1.1,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "ne",
+     "x": 270,
+     "y": 560,
+     "svg": "<text x='0' y='18' font-size='60' font-weight='900' text-anchor='middle' fill='#F4F1FF' font-family='Arial'>≠</text>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "share them+0.2",
+       "opacity": 1,
+       "dur": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "They're how the world",
+   "bg": "lab",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 840,
+     "scale": 1.35,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "knows you're you",
+       "pose": "hold",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "id",
+     "x": 330,
+     "y": 600,
+     "svg": "<rect x='-60' y='-38' width='120' height='76' rx='8' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-30' cy='-4' r='16' fill='#141218'/><rect x='0' y='-16' width='44' height='8' fill='#8A8494'/><rect x='0' y='0' width='34' height='8' fill='#8A8494'/><text x='0' y='32' font-size='14' font-weight='900' text-anchor='middle' fill='#FF5A5A' font-family='Arial'>UNKNOWN</text>",
+     "keys": [
+      {
+       "at": "knows",
+       "rot": -6,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then, right before",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='80' y='460' width='120' height='150' rx='8' fill='#2A2430' stroke='#141218' stroke-width='5'/><path d='M140 480 q22 30 14 80 h-28 q-8 -50 14 -80 z' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M130 560 l10 26 l10 -26 z' fill='#FFB547'/><text x='140' y='602' font-size='14' font-weight='900' text-anchor='middle' fill='#FFB547' font-family='Arial'>SPACE CAMP</text><rect x='300' y='540' width='170' height='14' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "space camp",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2,
+       "sfx": "ding"
+      },
+      {
+       "at": "you knock",
+       "pose": "throw",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 110,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "with Mia",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "tr",
+     "x": 400,
+     "y": 500,
+     "svg": "<g><path d='M-24 -40 h48 q0 40 -24 48 q-24 -8 -24 -48 z' fill='#FFC93C' stroke='#141218' stroke-width='5'/><rect x='-6' y='8' width='12' height='16' fill='#FFC93C' stroke='#141218' stroke-width='4'/><rect x='-20' y='24' width='40' height='12' rx='3' fill='#6B4A3A' stroke='#141218' stroke-width='4'/></g>",
+     "keys": [
+      {
+       "at": "you knock+0.1",
+       "x": 430,
+       "y": 770,
+       "rot": 120,
+       "dur": 0.5,
+       "ease": "in",
+       "arc": 30
+      },
+      {
+       "at": "it shatters",
+       "opacity": 0,
+       "dur": 0.05,
+       "sfx": "glitch"
+      }
+     ]
+    },
+    {
+     "id": "sh",
+     "x": 420,
+     "y": 800,
+     "svg": "<g fill='#FFC93C' stroke='#141218' stroke-width='3'><path d='M-40 0 l14 -14 l8 14 z'/><path d='M-6 0 l10 -20 l10 20 z'/><path d='M24 0 l16 -10 l4 10 z'/><rect x='46' y='-8' width='26' height='8' fill='#6B4A3A'/></g>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "it shatters",
+       "opacity": 1,
+       "dur": 0.05,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your science teacher",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='80' y='460' width='120' height='150' rx='8' fill='#2A2430' stroke='#141218' stroke-width='5'/><path d='M140 480 q22 30 14 80 h-28 q-8 -50 14 -80 z' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M130 560 l10 26 l10 -26 z' fill='#FFB547'/><text x='140' y='602' font-size='14' font-weight='900' text-anchor='middle' fill='#FFB547' font-family='Arial'>SPACE CAMP</text>",
+   "actors": [
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 360,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "hold",
+     "face": "focused",
+     "flip": true,
+     "keys": [
+      {
+       "at": "belong to Mia",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 120,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "belong to Mia",
+       "face": "shocked",
+       "pose": "shrug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sh",
+     "x": 260,
+     "y": 800,
+     "svg": "<g fill='#FFC93C' stroke='#141218' stroke-width='3'><path d='M-40 0 l14 -14 l8 14 z'/><path d='M-6 0 l10 -20 l10 20 z'/><path d='M24 0 l16 -10 l4 10 z'/><rect x='46' y='-8' width='26' height='8' fill='#6B4A3A'/></g>",
+     "keys": []
+    },
+    {
+     "id": "dust",
+     "x": 250,
+     "y": 790,
+     "svg": "<g fill='#7A4A2A'><circle cx='-14' cy='-6' r='4'/><circle cx='8' cy='4' r='3'/><circle cx='0' cy='-16' r='3'/><circle cx='16' cy='-10' r='4'/><circle cx='-6' cy='14' r='3'/></g>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "dusts it",
+       "opacity": 1,
+       "dur": 0.3,
+       "sfx": "swish"
+      }
+     ]
+    },
+    {
+     "id": "fpm",
+     "x": 250,
+     "y": 620,
+     "svg": "<g fill='none' stroke='#B48CFF' stroke-width='5' stroke-linecap='round'><path d='M-30 10 Q-30 -36 0 -36 Q30 -36 30 10'/><path d='M-20 22 Q-22 -24 0 -24 Q22 -24 20 14'/><path d='M-10 30 Q-12 -12 0 -12 Q12 -12 10 20'/><path d='M0 0 L0 34'/><path d='M-38 28 Q-42 -48 0 -48 Q42 -48 38 28'/></g>",
+     "scale": 0.2,
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "belong to Mia",
+       "opacity": 1,
+       "scale": 1.0,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "who handed it to you",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "mia",
+   "zoom": 2.3,
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 150,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "handed it",
+       "pose": "point",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 330,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "worried",
+     "flip": true,
+     "keys": []
+    }
+   ]
+  },
+  {
+   "start": "Confess, and you lose",
+   "bg": "cool_interior",
+   "camera": "push",
+   "slowmo": true,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": 0.4,
+     "keys": [
+      {
+       "at": "lose the trip",
+       "pose": "think",
+       "face": "sad",
+       "dur": 0.4
+      },
+      {
+       "at": "Stay quiet",
+       "face": "worried",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 360,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "slump",
+     "face": "sad",
+     "flip": true,
+     "keys": []
+    }
+   ]
+  },
+  {
+   "start": "Dr. Lee gives you",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "slowmo": true,
+   "transition": "none",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 180,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": "Four",
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "Three",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 390,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "hold",
+     "face": "focused",
+     "flip": true,
+     "keys": []
+    }
+   ]
+  },
+  {
+   "start": "With no fingerprints",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "who would ever",
+       "pose": "shrug",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "end:was you+0.3",
+       "pose": "idle",
+       "face": "neutral",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fp",
+     "x": 320,
+     "y": 560,
+     "svg": "<g fill='none' stroke='#7DF9C8' stroke-width='5' stroke-linecap='round'><path d='M-30 10 Q-30 -36 0 -36 Q30 -36 30 10'/><path d='M-20 22 Q-22 -24 0 -24 Q22 -24 20 14'/><path d='M-10 30 Q-12 -12 0 -12 Q12 -12 10 20'/><path d='M0 0 L0 34'/><path d='M-38 28 Q-42 -48 0 -48 Q42 -48 38 28'/></g>",
+     "scale": 1.7,
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "end:was you+0.2",
+       "opacity": 1,
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
