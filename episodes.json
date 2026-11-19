@@ -525,9 +525,31 @@
   "ability": "fingerprints (none)",
   "format": "SHORT",
   "duration_s": 52.0,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep25.mp4",
   "rendered_at": "2026-11-19T17:55:24Z",
+  "posted": {
+   "youtube": {
+    "at": "2026-11-19T22:36:17Z",
+    "zernio_post": "6aff78d3103770ff8244da1e",
+    "first_comment": "Ugz9XNwdDhEN3Ut0n_l4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-19T22:36:17Z",
+    "zernio_post": "6aff78d8103770ff8244da3d",
+    "first_comment": null
+   }
+  }
+ },
+ {
+  "ep": 26,
+  "title": "What If Your Voice Was 100x Louder?",
+  "ability": "voice volume",
+  "format": "LONG",
+  "duration_s": 91.1,
+  "status": "rendered",
+  "video": "videos/ep26.mp4",
+  "rendered_at": "2026-11-19T22:36:17Z",
   "posted": {
    "youtube": null,
    "facebook": null

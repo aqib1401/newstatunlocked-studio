@@ -471,7 +471,7 @@
  },
  {
   "id": 14,
-  "status": "planned",
+  "status": "used",
   "title": "What If Your Voice Was 100x Louder?",
   "ability": "voice volume",
   "category": "body",
@@ -489,7 +489,8 @@
    "Sound can shatter glass when it hits the glass's exact resonant frequency loudly enough",
    "A jet engine up close is about 140 decibels, enough to damage hearing instantly"
   ],
-  "visuals": "library, shattering glass, sound rings, mountain, avalanche"
+  "visuals": "library, shattering glass, sound rings, mountain, avalanche",
+  "ep": 26
  },
  {
   "id": 43,
