@@ -510,7 +510,7 @@
  },
  {
   "id": 15,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Never Feel Cold?",
   "ability": "cold (can't feel it)",
   "category": "senses",
@@ -528,7 +528,8 @@
    "In icy water there's a '1-10-1' rule: about 1 minute to control your breathing, 10 minutes of useful movement, and up to an hour before you pass out",
    "Frostbite can start without pain once the area goes numb"
   ],
-  "visuals": "frozen lake, ice cream, snowball fight, cracked ice, blankets"
+  "visuals": "frozen lake, ice cream, snowball fight, cracked ice, blankets",
+  "ep": 28
  },
  {
   "id": 44,

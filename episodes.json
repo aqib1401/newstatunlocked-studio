@@ -568,5 +568,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 28,
+  "title": "What If You Could Never Feel Cold?",
+  "ability": "cold (can't feel it)",
+  "format": "LONG",
+  "duration_s": 89.9,
+  "status": "rendered",
+  "video": "videos/ep28.mp4",
+  "rendered_at": "2026-11-20T22:35:09Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
