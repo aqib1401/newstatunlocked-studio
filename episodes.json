@@ -554,5 +554,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 27,
+  "title": "What If You Could Hear Your Eyes Move?",
+  "ability": "inner-ear sound",
+  "format": "SHORT",
+  "duration_s": 51.5,
+  "status": "rendered",
+  "video": "videos/ep27.mp4",
+  "rendered_at": "2026-11-20T17:55:14+00:00",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

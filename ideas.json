@@ -494,7 +494,7 @@
  },
  {
   "id": 43,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Hear Your Eyes Move?",
   "ability": "inner-ear sound",
   "category": "senses",
@@ -505,7 +505,8 @@
   "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
   "facts": [
    "Superior canal dehiscence, a thin spot in the inner-ear bone, can make people hear their own eye movements and heartbeat"
-  ]
+  ],
+  "ep": 27
  },
  {
   "id": 15,

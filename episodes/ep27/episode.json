@@ -1,0 +1,1002 @@
+{
+ "ep": 27,
+ "script": "What if you could hear your eyes move? Not a blink. Every glance. You look left, and something inside your skull goes shhk. Your heartbeat booms, and chewing crisps sounds like an avalanche. But rest your head on your desk, and you hear a pencil tapping three rows away, through the wood. It's real: a tiny hole in the bone by your inner ear lets sound travel through your body into your hearing. Some people with it can even hear a tuning fork touching their ankle. Then comes the exam that decides your scholarship. In the silent hall, you hear it through the floor. Two rows back, your best friend Mia's heart is racing. She's panicking. One word, and you're both disqualified. Raise your hand, and nobody believes a sound only you can hear. Five... Four... Three... Your scholarship, or your best friend. Who do you listen to?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "title": "What If You Could Hear Your Eyes Move?",
+ "thumbnail": "goes shhk",
+ "music": [
+  {
+   "track": "music/lost-islands.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/surreptitious.mp3",
+   "at": "Then comes the exam"
+  },
+  {
+   "track": "music/remember.mp3",
+   "at": "One word"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "accent": "#C8FF4D",
+ "highlights": {
+  "hear your eyes": "green",
+  "shhk": "green",
+  "three rows away": "green",
+  "tuning fork": "green",
+  "scholarship": "amber",
+  "Mia": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "You look left",
+   "name": "INNER HEARING",
+   "mult": "×100",
+   "tag": "NO SILENCE"
+  },
+  {
+   "type": "marker",
+   "at": "three rows away",
+   "until": "It's real",
+   "label": "PENCIL HEARD",
+   "text": "3 ROWS",
+   "sub": "THROUGH THE DESK",
+   "color": "#7DF9C8"
+  },
+  {
+   "type": "note",
+   "at": "It's real",
+   "until": "Then comes",
+   "label": "REAL SCIENCE",
+   "text": "A tiny hole by the inner ear lets body sounds in."
+  },
+  {
+   "type": "marker",
+   "at": "decides your scholarship",
+   "until": "In the silent hall",
+   "label": "FINAL EXAM",
+   "text": "SCHOLARSHIP",
+   "sub": "ON THE LINE",
+   "color": "#FFB547",
+   "size": 60
+  },
+  {
+   "type": "warn",
+   "at": "She's panicking",
+   "until": "One word",
+   "label": "THE CATCH",
+   "text": "Only you can hear her heart."
+  },
+  {
+   "type": "choice",
+   "at": "One word",
+   "until": "Five",
+   "a": "Whisper to Mia",
+   "b": "Your scholarship",
+   "pick": null
+  },
+  {
+   "type": "countdown",
+   "at": "Five",
+   "until": "Your scholarship, or",
+   "from": 5
+  },
+  {
+   "type": "endcard",
+   "at": "Your scholarship, or",
+   "text": "Your scholarship, or your best friend?",
+   "a": "SCHOLARSHIP",
+   "b": "MIA"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": 0.2,
+       "look": -1,
+       "face": "focused",
+       "dur": 0.12,
+       "sfx": "swish"
+      },
+      {
+       "at": 0.7,
+       "look": 1,
+       "dur": 0.12,
+       "sfx": "swish"
+      },
+      {
+       "at": "Not a blink",
+       "pose": "shrug",
+       "face": "shocked",
+       "dur": 0.15
+      },
+      {
+       "at": "Every glance",
+       "pose": "point",
+       "face": "smug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "eyew",
+     "x": 350,
+     "y": 560,
+     "svg": "<ellipse rx='50' ry='32' fill='#F4F1FF' stroke='#141218' stroke-width='6'/>",
+     "scale": 1.3,
+     "keys": []
+    },
+    {
+     "id": "pup",
+     "x": 350,
+     "y": 560,
+     "svg": "<circle r='17' fill='#141218'/><circle cx='-5' cy='-5' r='5' fill='#F4F1FF'/>",
+     "scale": 1.3,
+     "keys": [
+      {
+       "at": 0.2,
+       "x": 322,
+       "dur": 0.12,
+       "sfx": "click"
+      },
+      {
+       "at": 0.7,
+       "x": 378,
+       "dur": 0.12,
+       "sfx": "click"
+      },
+      {
+       "at": "Every glance",
+       "x": 330,
+       "dur": 0.12,
+       "sfx": "click"
+      },
+      {
+       "at": "Every glance+0.4",
+       "x": 370,
+       "dur": 0.12,
+       "sfx": "click"
+      }
+     ]
+    },
+    {
+     "id": "w",
+     "x": 420,
+     "y": 560,
+     "svg": "<g fill='none' stroke='#7DF9C8' stroke-width='6' stroke-linecap='round'><path d='M0 -20 Q12 0 0 20'/><path d='M14 -34 Q32 0 14 34'/><path d='M28 -48 Q52 0 28 48'/></g>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 0.2,
+       "opacity": 1,
+       "dur": 0.1
+      },
+      {
+       "at": "Not a blink",
+       "opacity": 0.3,
+       "dur": 0.3
+      },
+      {
+       "at": "Every glance",
+       "opacity": 1,
+       "dur": 0.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "You look left",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": "look left",
+       "look": -1,
+       "flip": true,
+       "dur": 0.12
+      },
+      {
+       "at": "goes shhk",
+       "face": "shocked",
+       "pose": "facepalm",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sh",
+     "x": 360,
+     "y": 470,
+     "svg": "<text x='0' y='18' font-size='54' font-weight='900' text-anchor='middle' fill='#C8FF4D' stroke='#141218' stroke-width='5' paint-order='stroke' font-family='Arial'>SHHK!</text>",
+     "scale": 0.3,
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "goes shhk",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.2,
+       "ease": "back",
+       "sfx": "glitch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your heartbeat booms",
+   "bg": "warm_interior",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "booms",
+       "face": "shocked",
+       "dur": 0.1
+      },
+      {
+       "at": "chewing crisps",
+       "pose": "hold",
+       "face": "focused",
+       "dur": 0.15
+      },
+      {
+       "at": "like an avalanche",
+       "pose": "facepalm",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "thud"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "hrt",
+     "x": 350,
+     "y": 520,
+     "svg": "<path d='M0 30 C-50 -5 -30 -45 0 -20 C30 -45 50 -5 0 30 Z' fill='#FF5A5A' stroke='#141218' stroke-width='5'/>",
+     "scale": 1.0,
+     "keys": [
+      {
+       "at": "booms",
+       "scale": 1.5,
+       "dur": 0.12,
+       "sfx": "heartbeat"
+      },
+      {
+       "at": "booms+0.2",
+       "scale": 1.0,
+       "dur": 0.2
+      },
+      {
+       "at": "booms+0.6",
+       "scale": 1.5,
+       "dur": 0.12
+      },
+      {
+       "at": "booms+0.8",
+       "scale": 1.0,
+       "dur": 0.2
+      },
+      {
+       "at": "chewing",
+       "opacity": 0,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "bag",
+     "x": 360,
+     "y": 640,
+     "svg": "<g><path d='M-34 -50 L34 -50 L40 50 L-40 50 Z' fill='#FFC93C' stroke='#141218' stroke-width='5'/><text x='0' y='8' font-size='16' font-weight='900' text-anchor='middle' fill='#E85D75' font-family='Arial'>CRISPS</text></g>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "chewing",
+       "opacity": 1,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "cr",
+     "x": 360,
+     "y": 600,
+     "svg": "<path d='M-14 -8 Q0 -16 14 -6 Q10 10 -2 12 Q-16 8 -14 -8 Z' fill='#F7D774' stroke='#141218' stroke-width='3'/>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "chewing",
+       "opacity": 1,
+       "dur": 0.1
+      },
+      {
+       "at": "chewing+0.1",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -12,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "av",
+     "x": 320,
+     "y": 500,
+     "svg": "<text x='0' y='18' font-size='50' font-weight='900' text-anchor='middle' fill='#FFB547' stroke='#141218' stroke-width='5' paint-order='stroke' font-family='Arial'>CRUNCH!!</text>",
+     "scale": 0.3,
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "avalanche",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.2,
+       "ease": "back"
+      },
+      {
+       "at": "avalanche+0.3",
+       "rot": -6,
+       "dur": 0.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But rest your head",
+   "bg": "cool_interior",
+   "camera": "pan_right",
+   "props": "<rect x='60' y='700' width='170' height='16' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='70' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='208' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='330' y='700' width='150' height='16' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='340' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='458' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "rest your head",
+       "pose": "crouch",
+       "face": "focused",
+       "look": 1,
+       "dur": 0.4
+      },
+      {
+       "at": "you hear a pencil",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    },
+    {
+     "id": "leo",
+     "char": "leo",
+     "x": 410,
+     "y": 812,
+     "scale": 1.0,
+     "pose": "idle",
+     "face": "bored",
+     "flip": true,
+     "keys": [
+      {
+       "at": "pencil tapping",
+       "pose": "hold",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "pc",
+     "x": 380,
+     "y": 680,
+     "svg": "<g transform='rotate(-30)'><rect x='-6' y='-40' width='12' height='70' fill='#FFC93C' stroke='#141218' stroke-width='4'/><path d='M-6 30 L0 44 L6 30 Z' fill='#F4D3A0' stroke='#141218' stroke-width='3'/></g>",
+     "keys": [
+      {
+       "at": "pencil tapping",
+       "rot": 12,
+       "dur": 0.1,
+       "sfx": "click"
+      },
+      {
+       "at": "pencil tapping+0.2",
+       "rot": 0,
+       "dur": 0.1
+      },
+      {
+       "at": "pencil tapping+0.4",
+       "rot": 12,
+       "dur": 0.1,
+       "sfx": "click"
+      },
+      {
+       "at": "pencil tapping+0.6",
+       "rot": 0,
+       "dur": 0.1
+      },
+      {
+       "at": "through the wood",
+       "rot": 12,
+       "dur": 0.1,
+       "sfx": "click"
+      },
+      {
+       "at": "through the wood+0.2",
+       "rot": 0,
+       "dur": 0.1
+      }
+     ]
+    },
+    {
+     "id": "w",
+     "x": 250,
+     "y": 690,
+     "svg": "<g fill='none' stroke='#7DF9C8' stroke-width='6' stroke-linecap='round'><path d='M0 -20 Q12 0 0 20'/><path d='M14 -34 Q32 0 14 34'/><path d='M28 -48 Q52 0 28 48'/></g>",
+     "flip": true,
+     "rot": 180,
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "pencil tapping",
+       "opacity": 1,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "It's real",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 840,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "a tiny hole",
+       "pose": "point",
+       "face": "focused",
+       "dur": 0.2
+      },
+      {
+       "at": "into your hearing",
+       "pose": "think",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ear",
+     "x": 270,
+     "y": 600,
+     "svg": "<g><path d='M-60 80 Q-110 0 -60 -80 Q-10 -120 30 -70 Q60 -20 20 10 Q-10 35 0 80' fill='#E8B48A' stroke='#141218' stroke-width='7'/><path d='M40 -10 a26 26 0 1 1 10 40 a14 14 0 1 1 -6 -24' fill='none' stroke='#F4F1FF' stroke-width='9' stroke-linecap='round'/><path d='M52 -30 a44 44 0 1 1 70 10' fill='none' stroke='#7DF9C8' stroke-width='9' stroke-linecap='round'/></g>",
+     "scale": 1.0,
+     "keys": [
+      {
+       "at": "It's real",
+       "rot": -4,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "hole",
+     "x": 370,
+     "y": 560,
+     "svg": "<circle r='16' fill='none' stroke='#FF5A5A' stroke-width='6'/><circle r='5' fill='#FF5A5A'/>",
+     "scale": 0.2,
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "a tiny hole",
+       "opacity": 1,
+       "scale": 1.4,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "w2",
+     "x": 360,
+     "y": 680,
+     "svg": "<g fill='none' stroke='#7DF9C8' stroke-width='6' stroke-linecap='round'><path d='M0 -20 Q12 0 0 20'/><path d='M14 -34 Q32 0 14 34'/><path d='M28 -48 Q52 0 28 48'/></g>",
+     "opacity": 0,
+     "rot": -90,
+     "keys": [
+      {
+       "at": "lets sound travel",
+       "opacity": 1,
+       "y": 620,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Some people with it",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 360,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "focused",
+     "flip": true,
+     "keys": [
+      {
+       "at": "tuning fork",
+       "pose": "point",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 840,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "can even hear",
+       "face": "shocked",
+       "pose": "shrug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fk",
+     "x": 270,
+     "y": 640,
+     "svg": "<g><path d='M-12 -70 V0 Q0 16 12 0 V-70' fill='none' stroke='#C9CCD6' stroke-width='9' stroke-linecap='round'/><rect x='-5' y='10' width='10' height='44' rx='3' fill='#C9CCD6' stroke='#141218' stroke-width='3'/></g>",
+     "keys": [
+      {
+       "at": "tuning fork",
+       "x": 200,
+       "y": 790,
+       "rot": -30,
+       "dur": 0.4,
+       "sfx": "ding"
+      },
+      {
+       "at": "their ankle",
+       "rot": -26,
+       "dur": 0.06
+      },
+      {
+       "at": "their ankle+0.08",
+       "rot": -34,
+       "dur": 0.06
+      },
+      {
+       "at": "their ankle+0.16",
+       "rot": -30,
+       "dur": 0.06
+      }
+     ]
+    },
+    {
+     "id": "w3",
+     "x": 170,
+     "y": 480,
+     "svg": "<g fill='none' stroke='#7DF9C8' stroke-width='6' stroke-linecap='round'><path d='M0 -20 Q12 0 0 20'/><path d='M14 -34 Q32 0 14 34'/><path d='M28 -48 Q52 0 28 48'/></g>",
+     "opacity": 0,
+     "flip": true,
+     "rot": 180,
+     "keys": [
+      {
+       "at": "their ankle",
+       "opacity": 1,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then comes the exam",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='150' y='450' width='240' height='70' rx='8' fill='#2A2430' stroke='#141218' stroke-width='5'/><text x='270' y='482' font-size='24' font-weight='900' text-anchor='middle' fill='#F4F1FF' font-family='Arial'>FINAL EXAM</text><text x='270' y='508' font-size='15' font-weight='900' text-anchor='middle' fill='#FF5A5A' font-family='Arial'>SILENCE</text><rect x='80' y='700' width='160' height='16' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='90' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='218' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='310' y='700' width='160' height='16' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='320' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='448' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "decides your scholarship",
+       "pose": "think",
+       "face": "worried",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 400,
+     "y": 812,
+     "scale": 1.05,
+     "pose": "idle",
+     "face": "neutral",
+     "flip": true,
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "p1",
+     "x": 160,
+     "y": 694,
+     "svg": "<rect x='-28' y='-6' width='56' height='12' fill='#F4F1FF' stroke='#141218' stroke-width='3'/>",
+     "keys": []
+    },
+    {
+     "id": "p2",
+     "x": 390,
+     "y": 694,
+     "svg": "<rect x='-28' y='-6' width='56' height='12' fill='#F4F1FF' stroke='#141218' stroke-width='3'/>",
+     "keys": []
+    }
+   ]
+  },
+  {
+   "start": "In the silent hall",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.0,
+   "props": "<rect x='60' y='700' width='200' height='16' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='70' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='238' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "crouch",
+     "face": "focused",
+     "look": 1,
+     "keys": [
+      {
+       "at": "you hear it",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "w",
+     "x": 330,
+     "y": 620,
+     "svg": "<g fill='none' stroke='#7DF9C8' stroke-width='6' stroke-linecap='round'><path d='M0 -20 Q12 0 0 20'/><path d='M14 -34 Q32 0 14 34'/><path d='M28 -48 Q52 0 28 48'/></g>",
+     "opacity": 0,
+     "flip": true,
+     "rot": 180,
+     "keys": [
+      {
+       "at": "you hear it",
+       "opacity": 1,
+       "dur": 0.2,
+       "sfx": "heartbeat"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Two rows back",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "mia",
+   "zoom": 2.1,
+   "props": "<rect x='170' y='700' width='200' height='16' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='180' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='348' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 260,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "heart is racing",
+       "pose": "tired",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "She's panicking",
+       "pose": "facepalm",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "hrt",
+     "x": 300,
+     "y": 620,
+     "svg": "<path d='M0 30 C-50 -5 -30 -45 0 -20 C30 -45 50 -5 0 30 Z' fill='#FF5A5A' stroke='#141218' stroke-width='5'/>",
+     "scale": 0.8,
+     "front": true,
+     "keys": [
+      {
+       "at": "racing",
+       "scale": 1.2,
+       "dur": 0.08,
+       "sfx": "heartbeat"
+      },
+      {
+       "at": "racing+0.15",
+       "scale": 0.8,
+       "dur": 0.1
+      },
+      {
+       "at": "racing+0.3",
+       "scale": 1.2,
+       "dur": 0.08
+      },
+      {
+       "at": "racing+0.45",
+       "scale": 0.8,
+       "dur": 0.1
+      },
+      {
+       "at": "panicking",
+       "scale": 1.2,
+       "dur": 0.08,
+       "sfx": "heartbeat"
+      },
+      {
+       "at": "panicking+0.15",
+       "scale": 0.8,
+       "dur": 0.1
+      },
+      {
+       "at": "panicking+0.3",
+       "scale": 1.2,
+       "dur": 0.08
+      },
+      {
+       "at": "panicking+0.45",
+       "scale": 0.8,
+       "dur": 0.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "One word",
+   "bg": "cool_interior",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='60' y='700' width='170' height='16' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='70' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='208' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='310' y='700' width='170' height='16' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='5'/><rect x='320' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='458' y='716' width='12' height='96' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 150,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "worried",
+     "look": -0.6,
+     "keys": [
+      {
+       "at": "both disqualified",
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "Raise your hand",
+       "pose": "reach_up",
+       "face": "worried",
+       "dur": 0.4
+      },
+      {
+       "at": "nobody believes",
+       "pose": "idle",
+       "face": "sad",
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 400,
+     "y": 812,
+     "scale": 1.1,
+     "pose": "slump",
+     "face": "sad",
+     "flip": true,
+     "keys": []
+    }
+   ]
+  },
+  {
+   "start": "Five",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.4,
+   "slowmo": true,
+   "transition": "none",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 180,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": -0.8,
+     "keys": [
+      {
+       "at": "Four",
+       "look": 0.8,
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "Three",
+       "look": -0.8,
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your scholarship, or",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "Who do you listen",
+       "pose": "shrug",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "end:listen to+0.3",
+       "pose": "idle",
+       "face": "neutral",
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "eyew",
+     "x": 350,
+     "y": 560,
+     "svg": "<ellipse rx='50' ry='32' fill='#F4F1FF' stroke='#141218' stroke-width='6'/>",
+     "scale": 1.3,
+     "keys": []
+    },
+    {
+     "id": "pup",
+     "x": 350,
+     "y": 560,
+     "svg": "<circle r='17' fill='#141218'/><circle cx='-5' cy='-5' r='5' fill='#F4F1FF'/>",
+     "scale": 1.3,
+     "keys": [
+      {
+       "at": "Who do you",
+       "x": 330,
+       "dur": 0.12,
+       "sfx": "click"
+      },
+      {
+       "at": "end:listen to+0.2",
+       "x": 350,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
