@@ -1,0 +1,1284 @@
+{
+ "ep": 30,
+ "script": "What if you only had to eat once a year? Not once a day. Once a year. One giant meal, and your body stores the energy for twelve months. Day one, while everyone queues for lunch, you're alone on the basketball court, shooting free throws. Day ninety, a storm traps your school hiking trip on a mountain, and the food runs out. You're not hungry, so you hand every snack you packed to the other kids. Everyone eats. But by month eleven, your hands are always cold, and you can barely climb the stairs. Your tank is running empty. Back at school, Dr. Lee, your science teacher, does the math. A year of energy is over seven hundred thousand calories. That's about three hundred large pizzas, in one day. But a normal stomach holds about a litre, and stretches to about four, like a balloon. So meal day isn't a feast. It's a race against midnight, because whatever you don't eat, your body goes without for a whole year. Day three hundred sixty-five, you eat from sunrise. By eleven at night, you're only halfway, when your phone rings. It's your little brother Sam. Please come get me. He's alone at the train station, an hour away, Mom's not answering, and his battery is about to die. Ten seconds. Nine. Eight. If you go, you'll never finish before midnight. Seven. Six. Sam starts to cry. Five. Four. Your little brother, or a year on half a tank. Do you stop eating?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.0,
+ "title": "What If You Only Ate Once a Year?",
+ "music": [
+  {
+   "track": "music/find-you.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/surreptitious.mp3",
+   "at": "But by month eleven"
+  },
+  {
+   "track": "music/a-memory-away.mp3",
+   "at": "It's your little brother"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "thumbnail": "That's about three hundred+0.8",
+ "accent": "#C8FF4D",
+ "highlights": {
+  "once a year": "green",
+  "Everyone eats": "green",
+  "running empty": "amber",
+  "three hundred large pizzas": "amber",
+  "about four": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "Day one",
+   "name": "MEALS NEEDED",
+   "mult": "1/YEAR",
+   "tag": "-99.9%"
+  },
+  {
+   "type": "marker",
+   "at": "Day one",
+   "until": "while everyone+0.3",
+   "label": "DAY",
+   "text": "1"
+  },
+  {
+   "type": "marker",
+   "at": "Day ninety",
+   "until": "a storm traps+0.4",
+   "label": "DAY",
+   "text": "90"
+  },
+  {
+   "type": "level",
+   "at": "Everyone eats",
+   "until": "But by month",
+   "label": "STORM RESCUE",
+   "text": "EVERYONE FED"
+  },
+  {
+   "type": "marker",
+   "at": "But by month eleven",
+   "until": "your hands are",
+   "label": "MONTH",
+   "text": "11"
+  },
+  {
+   "type": "warn",
+   "at": "Your tank is running",
+   "until": "Back at school",
+   "label": "SIDE EFFECT DETECTED",
+   "text": "Energy almost gone."
+  },
+  {
+   "type": "compare",
+   "at": "A year of energy",
+   "until": "That's about three",
+   "label": "CALORIES · COMPARE",
+   "a": [
+    "Normal day",
+    "2,000",
+    0.03
+   ],
+   "b": [
+    "Meal day",
+    "730,000",
+    1.0
+   ]
+  },
+  {
+   "type": "note",
+   "at": "But a normal stomach",
+   "until": "So meal day",
+   "label": "REAL SCIENCE",
+   "text": "Stomach: 1 L. Stretches to 4 L."
+  },
+  {
+   "type": "warn",
+   "at": "It's a race",
+   "until": "Day three hundred",
+   "label": "THE RULE",
+   "text": "Stop early = a year without."
+  },
+  {
+   "type": "marker",
+   "at": "Day three hundred sixty-five",
+   "until": "you eat from+0.6",
+   "label": "DAY",
+   "text": "365"
+  },
+  {
+   "type": "countdown",
+   "at": "Ten seconds",
+   "until": "Five Four",
+   "from": 10
+  },
+  {
+   "type": "choice",
+   "at": "Five Four",
+   "until": "Your little brother, or",
+   "a": "Sam",
+   "b": "Your next year",
+   "pick": null
+  },
+  {
+   "type": "endcard",
+   "at": "Your little brother, or",
+   "text": "Your brother or your next year?",
+   "a": "GO GET SAM",
+   "b": "KEEP EATING"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='60' y='640' width='420' height='16' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='80' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='446' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='238' y='624' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 633 L340 633' stroke='#B8894E' stroke-width='3'/><rect x='238' y='606' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 615 L340 615' stroke='#B8894E' stroke-width='3'/><rect x='238' y='588' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 597 L340 597' stroke='#B8894E' stroke-width='3'/><rect x='238' y='570' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 579 L340 579' stroke='#B8894E' stroke-width='3'/><rect x='238' y='552' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 561 L340 561' stroke='#B8894E' stroke-width='3'/><rect x='238' y='534' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 543 L340 543' stroke='#B8894E' stroke-width='3'/><rect x='238' y='516' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 525 L340 525' stroke='#B8894E' stroke-width='3'/><rect x='238' y='498' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 507 L340 507' stroke='#B8894E' stroke-width='3'/><rect x='238' y='480' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 489 L340 489' stroke='#B8894E' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "sit",
+     "face": "happy",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": 0.2,
+       "pose": "hold",
+       "face": "smug",
+       "dur": 0.15,
+       "sfx": "swish"
+      },
+      {
+       "at": 0.9,
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "fall",
+     "x": 300,
+     "y": 260,
+     "front": true,
+     "svg": "<rect x='-62' y='-9' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M-40 0 L40 0' stroke='#B8894E' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": 0.05,
+       "y": 456,
+       "rot": 8,
+       "dur": 0.6,
+       "ease": "in",
+       "sfx": "thud"
+      },
+      {
+       "at": 0.7,
+       "rot": 0,
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "sl",
+     "x": 200,
+     "y": 600,
+     "svg": "<path d='M0 -22 L18 16 Q0 22 -18 16 Z' fill='#F2B84B' stroke='#141218' stroke-width='4'/><circle cx='0' cy='4' r='4' fill='#8E2A1E'/>",
+     "keys": [
+      {
+       "at": 0.2,
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -20
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Not once a day",
+   "bg": "lab",
+   "camera": "push",
+   "props": "<rect x='120' y='470' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='164' y='470' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='208' y='470' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='252' y='470' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='296' y='470' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='340' y='470' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='384' y='470' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='120' y='514' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='164' y='514' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='208' y='514' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='252' y='514' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='296' y='514' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='340' y='514' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='384' y='514' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='120' y='558' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='164' y='558' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='208' y='558' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='252' y='558' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='296' y='558' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='340' y='558' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='384' y='558' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='120' y='602' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='164' y='602' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='208' y='602' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='252' y='602' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='296' y='602' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='340' y='602' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><rect x='384' y='602' width='38' height='38' rx='4' fill='#F4F1FF' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 835,
+     "scale": 1.3,
+     "pose": "shrug",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "Once a year#2",
+       "pose": "point",
+       "face": "happy",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "x",
+     "x": 340,
+     "y": 300,
+     "front": true,
+     "svg": "<circle r='26' fill='none' stroke='#C8FF4D' stroke-width='7'/>",
+     "keys": [
+      {
+       "at": "Once a year#2",
+       "y": 489,
+       "x": 340,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "t",
+     "x": 270,
+     "y": 440,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial' font-weight='900' font-size='44' fill='#C8FF4D' stroke='#141218' stroke-width='3'>1 MEAL / YEAR</text>",
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "Once a year#2",
+       "opacity": 1,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "One giant meal",
+   "bg": "lab",
+   "camera": "pull",
+   "props": "<path d='M150 640 A120 120 0 0 1 390 640' fill='none' stroke='#F4F1FF' stroke-width='14'/><text x='138' y='690' font-family='Arial' font-weight='900' font-size='40' fill='#E0533D'>E</text><text x='372' y='690' font-family='Arial' font-weight='900' font-size='40' fill='#C8FF4D'>F</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 835,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "stores the energy",
+       "pose": "cheer",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "n",
+     "x": 270,
+     "y": 640,
+     "rot": -80,
+     "svg": "<path d='M0 0 L0 -105' stroke='#E0533D' stroke-width='8' stroke-linecap='round'/><circle r='12' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "stores the energy",
+       "rot": 80,
+       "dur": 1.4,
+       "ease": "out",
+       "sfx": "fill"
+      }
+     ]
+    },
+    {
+     "id": "pz",
+     "x": 400,
+     "y": 420,
+     "svg": "<circle r='30' fill='#F2B84B' stroke='#141218' stroke-width='4'/><circle r='22' fill='#E0533D'/><circle cx='-8' cy='-6' r='5' fill='#8E2A1E'/><circle cx='9' cy='4' r='5' fill='#8E2A1E'/><circle cx='-2' cy='10' r='4' fill='#8E2A1E'/>",
+     "keys": [
+      {
+       "at": "One giant meal",
+       "rot": 360,
+       "dur": 1.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Day one",
+   "bg": "day_park",
+   "camera": "pan_right",
+   "props": "<rect x='0' y='700' width='540' height='260' fill='#C98A5A'/><path d='M0 760 L540 740' stroke='#F4F1FF' stroke-width='4'/><rect x='440' y='430' width='10' height='380' fill='#8A8F99' stroke='#141218' stroke-width='4'/><rect x='370' y='420' width='90' height='60' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><ellipse cx='395' cy='488' rx='26' ry='7' fill='none' stroke='#E0533D' stroke-width='5'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "swing_ready",
+     "face": "focused",
+     "keys": [
+      {
+       "at": "shooting free throws",
+       "pose": "throw",
+       "face": "happy",
+       "dur": 0.15,
+       "sfx": "swish"
+      }
+     ]
+    },
+    {
+     "id": "e1",
+     "char": "extra",
+     "x": 40,
+     "y": 815,
+     "scale": 1.0,
+     "shirt": "#7BC47F",
+     "pose": "idle",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "queues for lunch",
+       "pose": "tired",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "b",
+     "x": 200,
+     "y": 600,
+     "front": true,
+     "svg": "<circle r='16' fill='#E8813A' stroke='#141218' stroke-width='4'/><path d='M-16 0 L16 0 M0 -16 L0 16' stroke='#141218' stroke-width='2.5'/>",
+     "keys": [
+      {
+       "at": "Day one",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -18
+      },
+      {
+       "at": "shooting free throws",
+       "attach": null
+      },
+      {
+       "at": "shooting free throws+0.05",
+       "x": 395,
+       "y": 480,
+       "arc": 120,
+       "dur": 0.9,
+       "ease": "linear"
+      },
+      {
+       "at": "shooting free throws+0.95",
+       "y": 760,
+       "dur": 0.4,
+       "ease": "in",
+       "sfx": "ding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Day ninety",
+   "bg": "dusk",
+   "camera": "push",
+   "props": "<path d='M-20 820 L140 520 L250 660 L360 470 L560 820 Z' fill='#5A5F73' stroke='#141218' stroke-width='4'/><path d='M360 470 L330 530 L390 530 Z M140 520 L115 570 L165 570 Z' fill='#F4F8FF'/>",
+   "front_props": "<path d='M40 430 L30 456' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M110 500 L100 526' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M190 450 L180 476' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M260 520 L250 546' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M330 440 L320 466' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M410 500 L400 526' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M480 460 L470 486' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M70 600 L60 626' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M230 620 L220 646' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M380 610 L370 636' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M500 640 L490 666' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 130,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "stand",
+     "face": "determined",
+     "keys": []
+    },
+    {
+     "id": "k1",
+     "char": "extra",
+     "x": 300,
+     "y": 815,
+     "scale": 1.0,
+     "shirt": "#E07AA8",
+     "pose": "slump",
+     "face": "sad",
+     "flip": true,
+     "keys": []
+    },
+    {
+     "id": "k2",
+     "char": "extra",
+     "x": 400,
+     "y": 815,
+     "scale": 1.0,
+     "shirt": "#7BC47F",
+     "pose": "tired",
+     "face": "worried",
+     "flip": true,
+     "keys": []
+    }
+   ]
+  },
+  {
+   "start": "You're not hungry",
+   "bg": "dusk",
+   "camera": "static",
+   "props": "<path d='M-20 820 L140 520 L250 660 L360 470 L560 820 Z' fill='#5A5F73' stroke='#141218' stroke-width='4'/><path d='M360 470 L330 530 L390 530 Z M140 520 L115 570 L165 570 Z' fill='#F4F8FF'/>",
+   "front_props": "<path d='M40 430 L30 456' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M110 500 L100 526' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M190 450 L180 476' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M260 520 L250 546' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M330 440 L320 466' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M410 500 L400 526' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M480 460 L470 486' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M70 600 L60 626' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M230 620 L220 646' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M380 610 L370 636' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/><path d='M500 640 L490 666' stroke='#9FC9E8' stroke-width='3' stroke-linecap='round'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "you hand every",
+       "pose": "throw",
+       "dur": 0.15
+      },
+      {
+       "at": "Everyone eats",
+       "pose": "cheer",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "k1",
+     "char": "extra",
+     "x": 300,
+     "y": 815,
+     "scale": 1.0,
+     "shirt": "#E07AA8",
+     "pose": "slump",
+     "face": "sad",
+     "flip": true,
+     "keys": [
+      {
+       "at": "to the other kids",
+       "pose": "catch",
+       "face": "happy",
+       "dur": 0.15
+      },
+      {
+       "at": "Everyone eats",
+       "pose": "cheer",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "k2",
+     "char": "extra",
+     "x": 400,
+     "y": 815,
+     "scale": 1.0,
+     "shirt": "#7BC47F",
+     "pose": "tired",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "to the other kids+0.3",
+       "pose": "catch",
+       "face": "happy",
+       "dur": 0.15
+      },
+      {
+       "at": "Everyone eats",
+       "pose": "cheer",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "s1",
+     "x": 200,
+     "y": 640,
+     "front": true,
+     "svg": "<rect x='-14' y='-18' width='28' height='36' rx='4' fill='#FFB547' stroke='#141218' stroke-width='4'/><path d='M-14 -10 L14 -10' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "you hand every",
+       "x": 290,
+       "y": 640,
+       "arc": 60,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "x": 200,
+     "y": 640,
+     "front": true,
+     "svg": "<rect x='-14' y='-18' width='28' height='36' rx='4' fill='#FFB547' stroke='#141218' stroke-width='4'/><path d='M-14 -10 L14 -10' stroke='#141218' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "to the other kids",
+       "x": 390,
+       "y": 650,
+       "arc": 70,
+       "dur": 0.55
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But by month eleven",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='260' y='770' width='280' height='55' fill='#8C6A52' stroke='#141218' stroke-width='4'/><rect x='305' y='715' width='235' height='55' fill='#8C6A52' stroke='#141218' stroke-width='4'/><rect x='350' y='660' width='190' height='55' fill='#8C6A52' stroke='#141218' stroke-width='4'/><rect x='395' y='605' width='145' height='55' fill='#8C6A52' stroke='#141218' stroke-width='4'/><rect x='440' y='550' width='100' height='55' fill='#8C6A52' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "tired",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "always cold",
+       "rot": -4,
+       "dur": 0.12
+      },
+      {
+       "at": "always cold+0.15",
+       "rot": 4,
+       "dur": 0.12
+      },
+      {
+       "at": "always cold+0.3",
+       "rot": -4,
+       "dur": 0.12
+      },
+      {
+       "at": "always cold+0.45",
+       "rot": 0,
+       "dur": 0.12
+      },
+      {
+       "at": "barely climb",
+       "pose": "slump",
+       "face": "sad",
+       "x": 230,
+       "dur": 1.2,
+       "cycle": "walk"
+      },
+      {
+       "at": "barely climb+1.2",
+       "cycle": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Your tank is running",
+   "bg": "lab",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.0,
+   "props": "<path d='M150 640 A120 120 0 0 1 390 640' fill='none' stroke='#F4F1FF' stroke-width='14'/><text x='138' y='690' font-family='Arial' font-weight='900' font-size='40' fill='#E0533D'>E</text><text x='372' y='690' font-family='Arial' font-weight='900' font-size='40' fill='#C8FF4D'>F</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 835,
+     "scale": 1.3,
+     "pose": "slump",
+     "face": "sad",
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "n",
+     "x": 270,
+     "y": 640,
+     "rot": 60,
+     "svg": "<path d='M0 0 L0 -105' stroke='#E0533D' stroke-width='8' stroke-linecap='round'/><circle r='12' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "Your tank",
+       "rot": -78,
+       "dur": 1.2,
+       "ease": "inout",
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Back at school",
+   "bg": "cool_interior",
+   "camera": "push",
+   "props": "<rect x='120' y='440' width='320' height='180' rx='8' fill='#2F5B46' stroke='#6B4A3A' stroke-width='8'/><text x='150' y='500' font-family='Arial' font-weight='900' font-size='30' fill='#F4F1FF'>2,000 × 365</text><text x='150' y='570' font-family='Arial' font-weight='900' font-size='34' fill='#FFB547'>= 730,000</text>",
+   "actors": [
+    {
+     "id": "drlee",
+     "char": "drlee",
+     "x": 420,
+     "y": 810,
+     "scale": 1.2,
+     "flip": true,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "does the math",
+       "pose": "point",
+       "face": "focused",
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "worried",
+     "look": 0.5,
+     "keys": []
+    }
+   ]
+  },
+  {
+   "start": "A year of energy",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 835,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "seven hundred thousand",
+       "pose": "facepalm",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "num",
+     "x": 300,
+     "y": 520,
+     "scale": 0.2,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial' font-weight='900' font-size='80' fill='#FFB547' stroke='#141218' stroke-width='3'>730,000</text><g transform='translate(0,60)'><text x='0' y='0' text-anchor='middle' font-family='Arial' font-weight='900' font-size='36' fill='#F4F1FF' stroke='#141218' stroke-width='3'>CALORIES</text></g>",
+     "keys": [
+      {
+       "at": "seven hundred thousand",
+       "scale": 1,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "boom"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "That's about three hundred",
+   "bg": "lab",
+   "camera": "pull",
+   "props": "<rect x='268' y='800' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 809 L370 809' stroke='#B8894E' stroke-width='3'/><rect x='268' y='782' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 791 L370 791' stroke='#B8894E' stroke-width='3'/><rect x='268' y='764' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 773 L370 773' stroke='#B8894E' stroke-width='3'/><rect x='268' y='746' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 755 L370 755' stroke='#B8894E' stroke-width='3'/><rect x='268' y='728' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 737 L370 737' stroke='#B8894E' stroke-width='3'/><rect x='268' y='710' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 719 L370 719' stroke='#B8894E' stroke-width='3'/><rect x='268' y='692' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 701 L370 701' stroke='#B8894E' stroke-width='3'/><rect x='268' y='674' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 683 L370 683' stroke='#B8894E' stroke-width='3'/><rect x='268' y='656' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 665 L370 665' stroke='#B8894E' stroke-width='3'/><rect x='268' y='638' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 647 L370 647' stroke='#B8894E' stroke-width='3'/><rect x='268' y='620' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 629 L370 629' stroke='#B8894E' stroke-width='3'/><rect x='268' y='602' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 611 L370 611' stroke='#B8894E' stroke-width='3'/><rect x='268' y='584' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 593 L370 593' stroke='#B8894E' stroke-width='3'/><rect x='268' y='566' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 575 L370 575' stroke='#B8894E' stroke-width='3'/><rect x='268' y='548' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 557 L370 557' stroke='#B8894E' stroke-width='3'/><rect x='268' y='530' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 539 L370 539' stroke='#B8894E' stroke-width='3'/><rect x='268' y='512' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 521 L370 521' stroke='#B8894E' stroke-width='3'/><rect x='268' y='494' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 503 L370 503' stroke='#B8894E' stroke-width='3'/><rect x='268' y='476' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 485 L370 485' stroke='#B8894E' stroke-width='3'/><rect x='268' y='458' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M290 467 L370 467' stroke='#B8894E' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 120,
+     "y": 835,
+     "scale": 1.3,
+     "pose": "reach_up",
+     "face": "shocked",
+     "look": 0.8,
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "x300",
+     "x": 330,
+     "y": 360,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial' font-weight='900' font-size='70' fill='#C8FF4D' stroke='#141218' stroke-width='3'>×300</text>",
+     "keys": [
+      {
+       "at": "three hundred",
+       "y": 400,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "fb",
+     "x": 330,
+     "y": 200,
+     "svg": "<rect x='-62' y='-9' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M-40 0 L40 0' stroke='#B8894E' stroke-width='3'/>",
+     "keys": [
+      {
+       "at": "in one day",
+       "y": 440,
+       "dur": 0.5,
+       "ease": "in",
+       "sfx": "thud"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But a normal stomach",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 835,
+     "scale": 1.3,
+     "pose": "point",
+     "face": "focused",
+     "keys": []
+    }
+   ],
+   "objects": [
+    {
+     "id": "st",
+     "x": 320,
+     "y": 560,
+     "scale": 0.7,
+     "svg": "<path d='M-40 -50 Q-70 -10 -40 40 Q0 70 50 40 Q80 0 40 -30 Q20 -60 -10 -50 Z' fill='#FF9FC2' stroke='#141218' stroke-width='5'/>",
+     "keys": [
+      {
+       "at": "stretches to about",
+       "scale": 1.6,
+       "dur": 1.0,
+       "ease": "out",
+       "sfx": "fill"
+      },
+      {
+       "at": "like a balloon",
+       "scale": 1.7,
+       "rot": 6,
+       "dur": 0.15
+      },
+      {
+       "at": "like a balloon+0.15",
+       "rot": -6,
+       "dur": 0.15
+      },
+      {
+       "at": "like a balloon+0.3",
+       "rot": 0,
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "l1",
+     "x": 320,
+     "y": 470,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial' font-weight='900' font-size='44' fill='#F4F1FF' stroke='#141218' stroke-width='3'>1 L</text>",
+     "keys": [
+      {
+       "at": "stretches to about",
+       "opacity": 0,
+       "dur": 0.2
+      }
+     ]
+    },
+    {
+     "id": "l4",
+     "x": 320,
+     "y": 440,
+     "opacity": 0,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial' font-weight='900' font-size='56' fill='#FFB547' stroke='#141218' stroke-width='3'>4 L</text>",
+     "keys": [
+      {
+       "at": "stretches to about+0.5",
+       "opacity": 1,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So meal day",
+   "bg": "lab",
+   "camera": "push",
+   "props": "<circle cx='300' cy='540' r='34' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M300 540 L300 516' stroke='#141218' stroke-width='5' stroke-linecap='round'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 835,
+     "scale": 1.3,
+     "pose": "run_a",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "It's a race",
+       "cycle": "run",
+       "dur": 0.1
+      },
+      {
+       "at": "whatever you don't",
+       "cycle": null,
+       "pose": "shrug",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "mid",
+     "x": 300,
+     "y": 640,
+     "svg": "<text x='0' y='0' text-anchor='middle' font-family='Arial' font-weight='900' font-size='48' fill='#E0533D' stroke='#141218' stroke-width='3'>12:00</text>",
+     "keys": [
+      {
+       "at": "against midnight",
+       "scale": 1.3,
+       "dur": 0.2,
+       "ease": "back",
+       "sfx": "tick"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bg": "warm_interior",
+   "camera": "pan_right",
+   "props": "<rect x='60' y='640' width='420' height='16' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='80' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='446' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='238' y='624' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 633 L340 633' stroke='#B8894E' stroke-width='3'/><rect x='238' y='606' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 615 L340 615' stroke='#B8894E' stroke-width='3'/><rect x='238' y='588' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 597 L340 597' stroke='#B8894E' stroke-width='3'/><rect x='238' y='570' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 579 L340 579' stroke='#B8894E' stroke-width='3'/><rect x='238' y='552' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 561 L340 561' stroke='#B8894E' stroke-width='3'/><rect x='238' y='534' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 543 L340 543' stroke='#B8894E' stroke-width='3'/><rect x='238' y='516' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 525 L340 525' stroke='#B8894E' stroke-width='3'/><rect x='238' y='498' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 507 L340 507' stroke='#B8894E' stroke-width='3'/><rect x='238' y='480' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 489 L340 489' stroke='#B8894E' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "sit",
+     "face": "happy",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": "you eat from",
+       "pose": "hold",
+       "face": "happy",
+       "dur": 0.15
+      },
+      {
+       "at": "you eat from+0.8",
+       "pose": "sit",
+       "dur": 0.15
+      },
+      {
+       "at": "you eat from+1.3",
+       "pose": "hold",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sl",
+     "x": 200,
+     "y": 600,
+     "svg": "<path d='M0 -22 L18 16 Q0 22 -18 16 Z' fill='#F2B84B' stroke='#141218' stroke-width='4'/><circle cx='0' cy='4' r='4' fill='#8E2A1E'/>",
+     "keys": [
+      {
+       "at": "you eat from",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -20,
+       "sfx": "swish"
+      }
+     ]
+    }
+   ],
+   "start": "Day three hundred sixty-five"
+  },
+  {
+   "bg": "warm_interior",
+   "camera": "static",
+   "props": "<rect x='60' y='640' width='420' height='16' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='80' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='446' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='238' y='624' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 633 L340 633' stroke='#B8894E' stroke-width='3'/><rect x='238' y='606' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 615 L340 615' stroke='#B8894E' stroke-width='3'/><rect x='238' y='588' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 597 L340 597' stroke='#B8894E' stroke-width='3'/><rect x='238' y='570' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 579 L340 579' stroke='#B8894E' stroke-width='3'/><rect x='238' y='552' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 561 L340 561' stroke='#B8894E' stroke-width='3'/><rect x='238' y='534' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 543 L340 543' stroke='#B8894E' stroke-width='3'/><rect x='238' y='516' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 525 L340 525' stroke='#B8894E' stroke-width='3'/><rect x='238' y='498' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 507 L340 507' stroke='#B8894E' stroke-width='3'/><rect x='238' y='480' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 489 L340 489' stroke='#B8894E' stroke-width='3'/><circle cx='420' cy='470' r='34' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M420 470 L420 446 M420 470 L404 470' stroke='#141218' stroke-width='5' stroke-linecap='round'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "sit",
+     "face": "happy",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": "you're only halfway",
+       "pose": "slump",
+       "face": "sad",
+       "dur": 0.4
+      },
+      {
+       "at": "your phone rings",
+       "pose": "hold",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ph",
+     "x": 230,
+     "y": 630,
+     "svg": "<rect x='-12' y='-20' width='24' height='40' rx='5' fill='#2B2833' stroke='#141218' stroke-width='3'/><rect x='-8' y='-15' width='16' height='26' fill='#4DB8FF'/>",
+     "keys": [
+      {
+       "at": "your phone rings",
+       "rot": -10,
+       "dur": 0.08,
+       "sfx": "ding"
+      },
+      {
+       "at": "your phone rings+0.1",
+       "rot": 10,
+       "dur": 0.08
+      },
+      {
+       "at": "your phone rings+0.2",
+       "rot": -10,
+       "dur": 0.08
+      },
+      {
+       "at": "your phone rings+0.3",
+       "rot": 0,
+       "dur": 0.08
+      },
+      {
+       "at": "your phone rings+0.4",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -22
+      }
+     ]
+    }
+   ],
+   "start": "By eleven at night"
+  },
+  {
+   "start": "It's your little brother",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "sam",
+   "zoom": 2.2,
+   "props": "<rect x='0' y='640' width='540' height='320' fill='#3A3848'/><rect x='0' y='640' width='540' height='14' fill='#FFB547'/><rect x='60' y='420' width='170' height='44' rx='6' fill='#1E2A3A' stroke='#141218' stroke-width='4'/><text x='76' y='450' font-family='Arial' font-weight='900' font-size='22' fill='#FFB547'>PLATFORM 2</text><rect x='250' y='730' width='200' height='14' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='265' y='744' width='10' height='60' fill='#6B4A3A'/><rect x='425' y='744' width='10' height='60' fill='#6B4A3A'/><circle cx='120' cy='560' r='6' fill='#FFF6C8'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 340,
+     "y": 810,
+     "scale": 1.0,
+     "pose": "sit",
+     "face": "worried",
+     "flip": true,
+     "keys": [
+      {
+       "at": "Please come get me",
+       "pose": "hold",
+       "face": "sad",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sph",
+     "x": 330,
+     "y": 700,
+     "front": true,
+     "svg": "<rect x='-12' y='-20' width='24' height='40' rx='5' fill='#2B2833' stroke='#141218' stroke-width='3'/><rect x='-8' y='-15' width='16' height='26' fill='#4DB8FF'/>",
+     "keys": [
+      {
+       "at": "It's your little",
+       "attach": "sam.hand",
+       "dx": 0,
+       "dy": -20
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "He's alone",
+   "bg": "night_city",
+   "camera": "pull",
+   "props": "<rect x='0' y='640' width='540' height='320' fill='#3A3848'/><rect x='0' y='640' width='540' height='14' fill='#FFB547'/><rect x='60' y='420' width='170' height='44' rx='6' fill='#1E2A3A' stroke='#141218' stroke-width='4'/><text x='76' y='450' font-family='Arial' font-weight='900' font-size='22' fill='#FFB547'>PLATFORM 2</text><rect x='250' y='730' width='200' height='14' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='265' y='744' width='10' height='60' fill='#6B4A3A'/><rect x='425' y='744' width='10' height='60' fill='#6B4A3A'/><circle cx='120' cy='560' r='6' fill='#FFF6C8'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 340,
+     "y": 810,
+     "scale": 1.0,
+     "pose": "hold",
+     "face": "sad",
+     "flip": true,
+     "keys": [
+      {
+       "at": "Mom's not answering",
+       "look": -0.8,
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bat",
+     "x": 150,
+     "y": 560,
+     "svg": "<rect x='-40' y='-20' width='80' height='40' rx='6' fill='none' stroke='#F4F1FF' stroke-width='5'/><rect x='40' y='-8' width='8' height='16' fill='#F4F1FF'/>",
+     "keys": []
+    },
+    {
+     "id": "batf",
+     "x": 118,
+     "y": 560,
+     "svg": "<rect x='-6' y='-14' width='12' height='28' fill='#E0533D'/>",
+     "keys": [
+      {
+       "at": "his battery",
+       "opacity": 0,
+       "dur": 0.15
+      },
+      {
+       "at": "his battery+0.3",
+       "opacity": 1,
+       "dur": 0.15
+      },
+      {
+       "at": "his battery+0.6",
+       "opacity": 0,
+       "dur": 0.15
+      },
+      {
+       "at": "his battery+0.9",
+       "opacity": 1,
+       "dur": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='60' y='640' width='420' height='16' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='80' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='446' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='238' y='624' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 633 L340 633' stroke='#B8894E' stroke-width='3'/><rect x='238' y='606' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 615 L340 615' stroke='#B8894E' stroke-width='3'/><rect x='238' y='588' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 597 L340 597' stroke='#B8894E' stroke-width='3'/><rect x='238' y='570' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 579 L340 579' stroke='#B8894E' stroke-width='3'/><rect x='238' y='552' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 561 L340 561' stroke='#B8894E' stroke-width='3'/><rect x='238' y='534' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 543 L340 543' stroke='#B8894E' stroke-width='3'/><rect x='238' y='516' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 525 L340 525' stroke='#B8894E' stroke-width='3'/><rect x='238' y='498' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 507 L340 507' stroke='#B8894E' stroke-width='3'/><rect x='238' y='480' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 489 L340 489' stroke='#B8894E' stroke-width='3'/><circle cx='420' cy='470' r='34' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M420 470 L420 446 M420 470 L404 470' stroke='#141218' stroke-width='5' stroke-linecap='round'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "shocked",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": "Nine",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "If you go",
+       "face": "determined",
+       "look": -0.6,
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ph",
+     "x": 230,
+     "y": 630,
+     "svg": "<rect x='-12' y='-20' width='24' height='40' rx='5' fill='#2B2833' stroke='#141218' stroke-width='3'/><rect x='-8' y='-15' width='16' height='26' fill='#4DB8FF'/>",
+     "keys": [
+      {
+       "at": "Ten seconds",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -22
+      }
+     ]
+    }
+   ],
+   "start": "Ten seconds",
+   "slowmo": true
+  },
+  {
+   "start": "Sam starts to cry",
+   "bg": "night_city",
+   "camera": "closeup",
+   "focus": "sam",
+   "zoom": 2.4,
+   "slowmo": true,
+   "props": "<rect x='0' y='640' width='540' height='320' fill='#3A3848'/><rect x='0' y='640' width='540' height='14' fill='#FFB547'/><rect x='60' y='420' width='170' height='44' rx='6' fill='#1E2A3A' stroke='#141218' stroke-width='4'/><text x='76' y='450' font-family='Arial' font-weight='900' font-size='22' fill='#FFB547'>PLATFORM 2</text><rect x='250' y='730' width='200' height='14' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='265' y='744' width='10' height='60' fill='#6B4A3A'/><rect x='425' y='744' width='10' height='60' fill='#6B4A3A'/><circle cx='120' cy='560' r='6' fill='#FFF6C8'/>",
+   "actors": [
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 340,
+     "y": 810,
+     "scale": 1.0,
+     "pose": "slump",
+     "face": "sad",
+     "flip": true,
+     "keys": []
+    }
+   ],
+   "objects": []
+  },
+  {
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "props": "<rect x='60' y='640' width='420' height='16' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='80' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='446' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='238' y='624' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 633 L340 633' stroke='#B8894E' stroke-width='3'/><rect x='238' y='606' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 615 L340 615' stroke='#B8894E' stroke-width='3'/><rect x='238' y='588' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 597 L340 597' stroke='#B8894E' stroke-width='3'/><rect x='238' y='570' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 579 L340 579' stroke='#B8894E' stroke-width='3'/><rect x='238' y='552' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 561 L340 561' stroke='#B8894E' stroke-width='3'/><rect x='238' y='534' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 543 L340 543' stroke='#B8894E' stroke-width='3'/><rect x='238' y='516' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 525 L340 525' stroke='#B8894E' stroke-width='3'/><rect x='238' y='498' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 507 L340 507' stroke='#B8894E' stroke-width='3'/><rect x='238' y='480' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 489 L340 489' stroke='#B8894E' stroke-width='3'/><circle cx='420' cy='470' r='34' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><path d='M420 470 L420 446 M420 470 L404 470' stroke='#141218' stroke-width='5' stroke-linecap='round'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "worried",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": "Five Four+0.7",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "ph",
+     "x": 230,
+     "y": 630,
+     "svg": "<rect x='-12' y='-20' width='24' height='40' rx='5' fill='#2B2833' stroke='#141218' stroke-width='3'/><rect x='-8' y='-15' width='16' height='26' fill='#4DB8FF'/>",
+     "keys": [
+      {
+       "at": "Five Four",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -22
+      }
+     ]
+    }
+   ],
+   "start": "Five Four",
+   "slowmo": true,
+   "focus": "hero",
+   "zoom": 2.3
+  },
+  {
+   "bg": "warm_interior",
+   "camera": "push",
+   "props": "<rect x='60' y='640' width='420' height='16' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='80' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='446' y='654' width='14' height='150' fill='#6B4A3A' stroke='#141218' stroke-width='4'/><rect x='238' y='624' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 633 L340 633' stroke='#B8894E' stroke-width='3'/><rect x='238' y='606' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 615 L340 615' stroke='#B8894E' stroke-width='3'/><rect x='238' y='588' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 597 L340 597' stroke='#B8894E' stroke-width='3'/><rect x='238' y='570' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 579 L340 579' stroke='#B8894E' stroke-width='3'/><rect x='238' y='552' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 561 L340 561' stroke='#B8894E' stroke-width='3'/><rect x='238' y='534' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 543 L340 543' stroke='#B8894E' stroke-width='3'/><rect x='238' y='516' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 525 L340 525' stroke='#B8894E' stroke-width='3'/><rect x='238' y='498' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 507 L340 507' stroke='#B8894E' stroke-width='3'/><rect x='238' y='480' width='124' height='18' rx='3' fill='#E9C48B' stroke='#141218' stroke-width='4'/><path d='M260 489 L340 489' stroke='#B8894E' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 810,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "neutral",
+     "look": 0.3,
+     "keys": [
+      {
+       "at": "Do you stop",
+       "face": "worried",
+       "look": 0.3,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sl",
+     "x": 200,
+     "y": 600,
+     "svg": "<path d='M0 -22 L18 16 Q0 22 -18 16 Z' fill='#F2B84B' stroke='#141218' stroke-width='4'/><circle cx='0' cy='4' r='4' fill='#8E2A1E'/>",
+     "keys": [
+      {
+       "at": "Your little brother, or",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -20
+      }
+     ]
+    }
+   ],
+   "start": "Your little brother, or"
+  }
+ ]
+}
