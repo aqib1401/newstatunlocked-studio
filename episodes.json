@@ -582,5 +582,19 @@
    "youtube": null,
    "facebook": null
   }
+ },
+ {
+  "ep": 29,
+  "title": "What If You Had Perfect Pitch?",
+  "ability": "perfect pitch",
+  "format": "SHORT",
+  "duration_s": 48.4,
+  "status": "rendered",
+  "video": "videos/ep29.mp4",
+  "rendered_at": "2026-11-21T17:54:00Z",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

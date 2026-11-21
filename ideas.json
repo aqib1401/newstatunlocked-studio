@@ -533,7 +533,7 @@
  },
  {
   "id": 44,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Had Perfect Pitch?",
   "ability": "perfect pitch",
   "category": "senses",
@@ -544,7 +544,8 @@
   "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
   "facts": [
    "Perfect pitch is estimated to occur in about 1 in 10,000 people"
-  ]
+  ],
+  "ep": 29
  },
  {
   "id": 16,
