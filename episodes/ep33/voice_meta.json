@@ -1,0 +1,20 @@
+{
+ "engine": "qwen3_clone",
+ "model": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+ "ref": "voice/ref_liam.wav",
+ "mode": "full (passages were worse)",
+ "gen_s": 658.8,
+ "full_take_check": {
+  "recall": 0.988,
+  "last_ok": true,
+  "missing": [
+   "midair an"
+  ],
+  "heard": "What if you could freeze time, one snap of your fingers, and the whole world stops dead, except you. But every second you steal gets paid for, and the bill goes to you. Here's the catch the movie's skip. If time truly stopped, light would stop too, and the world would go pitch black. So your power cheats a little. Light still reaches your eyes and anything within an arm's length of you keeps moving. Everything else turns into a statue. Snap your phone hangs in mid-air and inch above the floor. So you just pluck it out of the air. You throw a ball and the moment it leaves your reach, it freezes in place. Outside it's pouring and every rain drop hangs in the air like a glass bead. Each drop you pass falls to the ground. So behind you, a dry tunnel cuts straight through the rain. A hummingbird floats beside a flower. It's wings, which beat dozens of times a second, stuck mid-flap. Then you find a lightning bolt frozen across the sky. It's about five times hotter than the surface of the Sun, so you don't get too close. And you get bolder. You freeze time for a whole week and read every book in the library. You freeze it for a month and walk across an entire country, past cars stuck on the highway and planes parked in the clouds. But your bubble keeps one clock running yours. Your heart beats about 100,000 times a day. frozen world or not. Your hair grows, your shoes stop fitting. Your best friend Mia is still 11 and you're 15. Then 20, you've lived whole secret years that nobody else ever saw. And you can't tell anyone where they went. And here's the strangest part. If someone else had this power and froze the world right now, you'd never know. You'd be a statue too. And every clock on earth would agree that nothing happened. So maybe someone just did. Snap.",
+  "ok": false
+ },
+ "passages_gen_s": 647.9,
+ "audio_s": 88.8,
+ "total_s": 1306.7,
+ "ok": false
+}
