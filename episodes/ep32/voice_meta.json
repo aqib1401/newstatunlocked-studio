@@ -1,0 +1,10 @@
+{
+ "engine": "qwen3_clone",
+ "model": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+ "ref": "voice/ref_liam.wav",
+ "mode": "full",
+ "gen_s": 425.5,
+ "audio_s": 63.7,
+ "total_s": 425.5,
+ "ok": true
+}
