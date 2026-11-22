@@ -547,12 +547,20 @@
     "ability": "voice volume",
     "format": "LONG",
     "duration_s": 91.1,
-    "status": "rendered",
+    "status": "posted",
     "video": "videos/ep26.mp4",
     "rendered_at": "2026-11-19T22:36:17Z",
     "posted": {
-      "youtube": null,
-      "facebook": null
+      "youtube": {
+        "at": "2026-11-22T18:23:57Z",
+        "zernio_post": "6b0332f33426865d8dc76f21",
+        "first_comment": "Ugyz2MUpk_pkjHGnHKh4AaABAg"
+      },
+      "facebook": {
+        "at": "2026-11-22T18:23:57Z",
+        "zernio_post": "6b0332f7b65377309d2d0ad7",
+        "first_comment": "122113374783534040_1849217492940311"
+      }
     }
   },
   {
