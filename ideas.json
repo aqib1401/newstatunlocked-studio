@@ -1,1146 +1,1497 @@
 [
-  {
-    "id": 5,
-    "status": "used",
-    "title": "What If You Were 10x Stronger?",
-    "ability": "strength",
-    "category": "body",
-    "hook": "You open a pickle jar and the lid goes through the ceiling.",
-    "rule": "Only your muscles got stronger. Your bones and tendons didn't. Pull too hard, and you break yourself.",
-    "beats": [
-      "Moving day: you carry the sofa, the fridge, and your cousin",
-      "Handshakes become dangerous, so you practice holding eggs",
-      "You lift a weight and feel your own tendon start to give"
-    ],
-    "climax": "A car rolls back onto your friend Leo's leg in a parking lot. Lifting it could snap your arm. Your arm... or Leo.",
-    "ending": "You lift it, Leo slides out, and you both end up with matching casts. He signs yours: 'Strongest idiot I know.'",
-    "loop": "Ends in the kitchen with a new pickle jar.",
-    "facts": [
-      "Your nervous system holds your muscles back from their maximum force, partly to protect your tendons and bones",
-      "There are real reports of people lifting cars in emergencies, a burst of adrenaline-fueled strength"
-    ],
-    "visuals": "kitchen ceiling hole, moving truck, eggs, gym, parking lot",
-    "ep": 2
-  },
-  {
-    "id": 31,
-    "status": "used",
-    "title": "What If You Never Blinked Again?",
-    "ability": "blinking",
-    "category": "senses",
-    "opening": "What If You Never Blinked Again? Then: You win every staring contest before it starts.",
-    "early_wins": "You start seeing things nobody else notices: a card trick's secret move, a bird landing.",
-    "mystery_and_reveal": "You blink about fifteen times a minute, so your eyes are shut for roughly a tenth of your waking day, and your brain hides those gaps so the world never goes dark. Except now your eyes dry out and sting all day.",
-    "climax": "Your little brother's school play: you can sit there with burning eyes and see every second of it, or look away and rest.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Most people blink around 15 to 20 times a minute",
-      "The brain hides blinks so the world doesn't seem to flicker"
-    ],
-    "ep": 3
-  },
-  {
-    "id": 2,
-    "status": "used",
-    "title": "What If You Could Smell 10,000x Better?",
-    "ability": "smell",
-    "category": "senses",
-    "hook": "Your friend swears he didn't eat your fries. You lean in, sniff once... and you can smell ketchup on his breath, his lie, and the dog he petted three hours ago.",
-    "rule": "You can't turn it off. Every smell, all the time, at full volume.",
-    "beats": [
-      "You smell rain coming twenty minutes before it hits",
-      "You find your lost phone by smelling your own hand cream on it",
-      "Garbage day becomes a horror movie; the school bus is a war crime"
-    ],
-    "climax": "On the night of your big interview you smell rotten eggs drifting from your neighbor's house: a gas leak, and they're asleep. Make the interview... or bang on their door.",
-    "ending": "You wake them up, the gas company finds the leak, and the next day the neighbor brings fries to say thank you. Your friend eats them.",
-    "loop": "Ends on the friend eating your fries again, which opens the video.",
-    "facts": [
-      "A dog's nose is estimated to be 10,000 to 100,000 times more sensitive than ours",
-      "Natural gas has no smell; companies add a rotten-egg smell so people notice leaks"
-    ],
-    "visuals": "diner, smell trails drawn as colored wisps, rain cloud, garbage truck, night street, gas wisps",
-    "ep": 4
-  },
-  {
-    "id": 32,
-    "status": "used",
-    "title": "What If Your Heart Beat Only Six Times a Minute?",
-    "ability": "heart rate",
-    "category": "body",
-    "opening": "What If Your Heart Beat Only Six Times a Minute? Then: Your doctor checks your pulse, frowns, and checks again.",
-    "early_wins": "You can hold your breath forever, but standing up too fast makes you black out.",
-    "mystery_and_reveal": "A blue whale's heart can drop to about two beats a minute on a dive, but its blood is built for it. Yours isn't, so your brain keeps running short of blood.",
-    "climax": "Your friend collapses at a party and needs CPR. Rushing in could make you faint too.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "A blue whale's heart can slow to around 2 beats per minute during a dive",
-      "Standing up quickly can make you dizzy because blood briefly drains from the brain"
-    ],
-    "ep": 5
-  },
-  {
-    "id": 3,
-    "status": "used",
-    "title": "What If You Grew 10x Taller?",
-    "ability": "height",
-    "category": "body",
-    "hook": "You step over a bus to get to school. Not onto it. Over it.",
-    "rule": "Ten times taller means about a thousand times heavier, but your bones only get a hundred times stronger. Every step is a fight against your own weight.",
-    "beats": [
-      "You change a streetlight bulb for the whole street",
-      "Your legs ache constantly, every step like carrying ten people",
-      "Clothes need a tailor and a crane; lunch needs a truck"
-    ],
-    "climax": "A kid's kite tangles a little girl on a balcony ledge, high up. Reaching her means kneeling on your knee in a way your bones may not survive. Protect your legs... or reach.",
-    "ending": "You reach, she's safe, and your knee holds. Barely. She ties the kite to your finger like a balloon.",
-    "loop": "Ends with you stepping carefully over the bus on the way home.",
-    "facts": [
-      "Scale an animal up 10x and its weight grows about 1,000x while bone strength only grows about 100x (the square-cube law)",
-      "The tallest man ever measured, at about 2.72 meters, needed leg braces to walk"
-    ],
-    "visuals": "tiny city, bus at ankle height, streetlight, crane, balcony",
-    "ep": 6
-  },
-  {
-    "id": 33,
-    "status": "used",
-    "title": "What If You Felt Everyone Else's Pain?",
-    "ability": "mirror pain",
-    "category": "brain",
-    "opening": "What If You Felt Everyone Else's Pain? Then: Your friend stubs his toe, and you're the one hopping around the kitchen.",
-    "early_wins": "You always know who's hurting, even when they're hiding it, and nobody can lie to you about being fine.",
-    "mystery_and_reveal": "A small number of people really feel touches they only see happening to others. It's called mirror-touch synesthesia. Now crowds, sports and hospitals are unbearable.",
-    "climax": "Your mom needs someone with her during a painful procedure. Going means feeling all of it.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Mirror-touch synesthesia is real: some people feel a touch when they see someone else being touched"
-    ],
-    "ep": 7
-  },
-  {
-    "id": 4,
-    "status": "used",
-    "title": "What If You Could Never Forget Anything?",
-    "ability": "memory",
-    "category": "brain",
-    "hook": "Your teacher asks what she wore on the first day of school three years ago. You tell her. And the color of her socks.",
-    "rule": "You remember everything. Including everything you'd love to forget.",
-    "beats": [
-      "Every test is easy, you remember every word of every page",
-      "You remember every embarrassing moment in full HD, forever",
-      "Arguments are impossible to win against you, and nobody wants to argue with you anymore"
-    ],
-    "climax": "At the national quiz final, your best friend Mia is having a panic attack backstage. Win the trophy you've trained for... or walk off stage to sit with her.",
-    "ending": "You sit with her, she calms down, and years later she still thanks you. You remember exactly what she said. That one, you'd never want to forget.",
-    "loop": "Ends back in class with the teacher asking another impossible question.",
-    "facts": [
-      "A rare condition called hyperthymesia lets a few people recall almost every day of their lives",
-      "Forgetting is useful: the brain actively prunes memories so the important ones stand out"
-    ],
-    "visuals": "classroom, floating memory 'photos', quiz show stage, backstage",
-    "ep": 8
-  },
-  {
-    "id": 34,
-    "status": "used",
-    "title": "What If You Could See Sounds as Colors?",
-    "ability": "synesthesia",
-    "category": "senses",
-    "opening": "What If You Could See Sounds as Colors? Then: Your alarm goes off and your whole room turns orange.",
-    "early_wins": "Music becomes a light show. You can 'see' who's calling by the color of their ringtone.",
-    "mystery_and_reveal": "Some people really do see colors when they hear sounds. It's a form of synesthesia, and several famous musicians have described it. But loud places become blinding.",
-    "climax": "At a fireworks festival your little brother gets lost in the crowd. The noise is a wall of color, but his voice is a color you'd know anywhere.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Chromesthesia, seeing colors when hearing sounds, is a real form of synesthesia"
-    ],
-    "ep": 9
-  },
-  {
-    "id": 6,
-    "status": "used",
-    "title": "What If You Never Needed Sleep Again?",
-    "ability": "sleep (none needed)",
-    "category": "brain",
-    "hook": "It's three in the morning and you've already finished your homework, learned guitar, and reorganised the fridge.",
-    "rule": "You never get tired, but everyone you love still does. Your extra eight hours are spent alone.",
-    "beats": [
-      "You get a whole extra day every week",
-      "The record for staying awake is about eleven days, and you passed it a month ago",
-      "Three a.m. gets lonely: no one to text, empty streets"
-    ],
-    "climax": "At 3 a.m. you smell smoke from the apartment below. Finish the competition entry due at 6... or wake up the whole building.",
-    "ending": "You bang on every door, everyone gets out, and the firefighter says the building was lucky someone was awake. For once, being the only one awake was the point.",
-    "loop": "Ends at 3 a.m. again, you wide awake, everyone asleep.",
-    "facts": [
-      "The record for staying awake, set in 1964, is about 11 days",
-      "Scientists found the brain clears out waste while we sleep"
-    ],
-    "visuals": "night bedroom, clock, guitar, empty street, apartment hallway, smoke",
-    "ep": 10
-  },
-  {
-    "id": 35,
-    "status": "used",
-    "title": "What If You Could See Heat?",
-    "ability": "infrared vision",
-    "category": "senses",
-    "opening": "What If You Could See Heat? Then: You can tell which seat on the bus someone just got up from.",
-    "early_wins": "You see who's nervous (warm face), which coffee is still hot, and footprints glowing on the floor.",
-    "mystery_and_reveal": "Pit vipers really sense heat through little pits on their faces, which is how they hunt in total darkness. But for you, every lamp and car engine glares like the sun.",
-    "climax": "In a smoke-filled building, everyone is blind except you, and you can see a small warm shape behind a door.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Pit vipers detect infrared heat with pit organs on their faces"
-    ],
-    "ep": 11
-  },
-  {
-    "id": 7,
-    "status": "used",
-    "title": "What If You Shrank to the Size of an Ant?",
-    "ability": "size (tiny)",
-    "category": "body",
-    "hook": "You fall off the kitchen table... and float down to the floor like a leaf, completely fine.",
-    "rule": "Small bodies lose heat fast. You're always freezing, and always hungry.",
-    "beats": [
-      "Falls can't hurt you; you jump off the bookshelf for fun",
-      "A raindrop hits you like a bucket of water",
-      "You need to eat constantly just to stay warm"
-    ],
-    "climax": "Your dog is choking on a tiny piece of plastic stuck where no hand can reach. You can climb in and pull it out, but it's dark, wet and terrifying. Stay safe... or save the dog.",
-    "ending": "You pull it free and the dog sneezes you across the room onto a pillow. Best ride of your life.",
-    "loop": "Ends falling off the table again, floating down.",
-    "facts": [
-      "Insects can survive falls from almost any height because air resistance slows small bodies so much",
-      "Small animals lose body heat much faster, which is why shrews have to eat almost constantly"
-    ],
-    "visuals": "giant kitchen, floating fall, raindrop splash, dog's huge face",
-    "ep": 12
-  },
-  {
-    "id": 36,
-    "status": "used",
-    "title": "What If You Remembered Being a Baby?",
-    "ability": "infant memory",
-    "category": "brain",
-    "opening": "What If You Remembered Being a Baby? Then: You remember your own first birthday party. The cake. Who cried. Who didn't come.",
-    "early_wins": "At family dinners you correct everyone's stories, and you remember things your parents hoped you'd forget.",
-    "mystery_and_reveal": "Almost nobody remembers anything before about age three. Scientists call it infantile amnesia, and part of it is that the baby brain is still building the system that stores memories.",
-    "climax": "Your dad has always felt guilty about something from when you were one. You remember what really happened, and it wasn't his fault.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Most adults remember almost nothing from before about age 3 or 4"
-    ],
-    "ep": 13
-  },
-  {
-    "id": 8,
-    "status": "used",
-    "title": "What If You Aged 10x Slower?",
-    "ability": "aging",
-    "category": "body",
-    "hook": "You're forty years old and the cinema still won't sell you a ticket to a scary movie.",
-    "rule": "You age slowly. Everyone you love doesn't.",
-    "beats": [
-      "Your childhood dog grows old while you're still a kid",
-      "Your little sister becomes your older sister",
-      "You'd have centuries to learn everything, but no one to share them with"
-    ],
-    "climax": "Your grandma's last wish is to see you graduate, but at your speed that's decades away. Keep the rule of your life... or do a crash course, cramming years of learning into months, for her.",
-    "ending": "You graduate in record time. She's in the front row, cheering louder than anyone, and the photo stays on your wall for the next three hundred years.",
-    "loop": "Ends at the cinema ticket desk again.",
-    "facts": [
-      "Greenland sharks can live for centuries, possibly over 400 years",
-      "Different animals age at very different speeds: a mouse lives about 2 years, a bowhead whale over 200"
-    ],
-    "visuals": "cinema desk, dog aging, sister growing, graduation stage, grandma",
-    "ep": 14
-  },
-  {
-    "id": 37,
-    "status": "used",
-    "title": "What If You Could Control Every Dream?",
-    "ability": "lucid dreaming",
-    "category": "brain",
-    "opening": "What If You Could Control Every Dream? Then: Every night, you fly. Every single night.",
-    "early_wins": "You practise piano in your dreams and wake up better at it. But real life starts feeling dull.",
-    "mystery_and_reveal": "Lucid dreaming is real: about half of people have had at least one dream where they knew they were dreaming. But your dreams get so good you stop wanting to wake up.",
-    "climax": "Your best friend needs you awake at 3 a.m. for an emergency, in the middle of the best dream you've ever had.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "About half of people report having had at least one lucid dream"
-    ],
-    "ep": 15
-  },
-  {
-    "id": 9,
-    "status": "used",
-    "title": "What If You Could Hear 100x Better?",
-    "ability": "hearing",
-    "category": "senses",
-    "hook": "In a silent exam hall, you can hear every heartbeat. The kid next to you is panicking, and his heart is racing.",
-    "rule": "Quiet sounds get loud, and loud sounds get unbearable.",
-    "beats": [
-      "You hear whispers three classrooms away",
-      "You hear your microwave ding from across town",
-      "A fire truck siren feels like being punched in the ears"
-    ],
-    "climax": "After a building collapses on TV, rescuers ask for total silence. You can hear faint tapping under the rubble, but standing that close to the sirens and machines could permanently damage your hearing. Your hearing... or a stranger.",
-    "ending": "You find the tapping, they're rescued, and the first thing they say is 'thank you'. You hear it perfectly.",
-    "loop": "Ends back in the silent exam hall with heartbeats.",
-    "facts": [
-      "Humans hear roughly 20 to 20,000 hertz; dogs hear far higher pitches",
-      "Sounds around 120 decibels start to cause pain"
-    ],
-    "visuals": "exam hall, heartbeat icons, sound waves, siren, rubble",
-    "ep": 16
-  },
-  {
-    "id": 38,
-    "status": "used",
-    "title": "What If You Weighed 10x Less?",
-    "ability": "body weight",
-    "category": "body",
-    "opening": "What If You Weighed 10x Less? Then: You jump to catch a frisbee and come down three seconds later.",
-    "early_wins": "You can stand on a branch, bounce over fences, carry friends on your back.",
-    "mystery_and_reveal": "On the Moon you'd weigh about a sixth of what you weigh here. Ten times lighter than that, and a strong gust of wind becomes the most dangerous thing in your life.",
-    "climax": "On a windy cliff walk, your little brother slips toward the edge. Grabbing him means letting go of the railing you're holding onto.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "On the Moon you weigh about one-sixth of your Earth weight"
-    ],
-    "ep": 17
-  },
-  {
-    "id": 10,
-    "status": "used",
-    "title": "What If Your Body Healed 100x Faster?",
-    "ability": "healing",
-    "category": "body",
-    "hook": "You get a paper cut, and it closes before the blood even reaches your fingertip.",
-    "rule": "Healing takes energy. Healing 100x faster means you're hungry all the time.",
-    "beats": [
-      "Scraped knees heal before you stand up",
-      "You eat six meals before lunch",
-      "You break a finger and it heals before anyone can straighten it, so it's crooked forever"
-    ],
-    "climax": "Your friend Mia needs blood after an accident and you're a match. Giving blood will leave you weak and starving before the big race. The race... or Mia.",
-    "ending": "You give it, she recovers, and she brings you the biggest sandwich in the world. You finish it in four bites.",
-    "loop": "Ends with another paper cut.",
-    "facts": [
-      "Healing burns extra energy and protein, which is why recovering patients need more food",
-      "A broken bone that heals in the wrong position stays that way unless it's broken and reset"
-    ],
-    "visuals": "paper cut, plates of food, finger splint, hospital, sandwich",
-    "ep": 18
-  },
-  {
-    "id": 39,
-    "status": "used",
-    "title": "What If You Never Felt Hungry Again?",
-    "ability": "hunger",
-    "category": "body",
-    "opening": "What If You Never Felt Hungry Again? Then: You forget lunch. Then dinner. Then breakfast.",
-    "early_wins": "You save so much time and money, and you never get grumpy.",
-    "mystery_and_reveal": "Hunger is a signal: a hormone called ghrelin, made mostly in your stomach, tells your brain it's time to eat. Without that alarm, your body runs out of fuel and nothing warns you.",
-    "climax": "On the day of your big final, you faint, and your friend Mia has to choose between finishing her own exam and helping you.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Ghrelin, a hormone mostly made in the stomach, is often called the hunger hormone"
-    ],
-    "ep": 19
-  },
-  {
-    "id": 11,
-    "status": "used",
-    "title": "What If You Never Felt Fear?",
-    "ability": "fear (switched off)",
-    "category": "brain",
-    "hook": "You pet a shark. On purpose. And you smile while doing it.",
-    "rule": "Fear is what keeps you alive. Without it, you have no brakes.",
-    "beats": [
-      "Roller coasters are boring; public speaking is easy",
-      "You walk up to a growling dog to say hi, and get bitten",
-      "Your friends stop letting you drive"
-    ],
-    "climax": "Your little brother Sam is stuck on a roof during a storm. You'd climb without a second thought, but no fear also means no caution. Rush in... or slow down and do it right.",
-    "ending": "For the first time, you choose to be careful. You use the ladder, tie the rope and bring Sam down safe. Turns out bravery isn't having no fear; it's choosing how to act.",
-    "loop": "Ends at the aquarium, a shark swimming past.",
-    "facts": [
-      "Fear is driven largely by a small brain region called the amygdala",
-      "A real patient with a damaged amygdala walked up to snakes and spiders without fear"
-    ],
-    "visuals": "aquarium, roller coaster, stage, dog, storm, roof, ladder",
-    "ep": 20
-  },
-  {
-    "id": 40,
-    "status": "used",
-    "title": "What If Your Body Glowed in the Dark?",
-    "ability": "bioluminescence",
-    "category": "body",
-    "opening": "What If Your Body Glowed in the Dark? Then: Lights off, and you're the night light.",
-    "early_wins": "You never need a torch, and your sleepovers are legendary.",
-    "mystery_and_reveal": "Here's the weird part: your body already glows. Scientists in Japan photographed it, about a thousand times too faint for your eyes to see. Turn that up, and you can never hide in the dark.",
-    "climax": "During hide and seek at night, a little kid gets lost in the woods. You're the only one he can follow.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "The human body emits visible light about 1,000 times too weak for our eyes to see (measured in a 2009 study in Japan)"
-    ],
-    "ep": 21
-  },
-  {
-    "id": 12,
-    "status": "used",
-    "title": "What If You Could See in the Dark?",
-    "ability": "night vision",
-    "category": "senses",
-    "hook": "The power goes out at a sleepover. Everyone screams. You calmly walk over and hand everyone a snack.",
-    "rule": "Eyes built for darkness are crushed by bright light. Sunlight is blinding.",
-    "beats": [
-      "You read comics under the blanket with no torch",
-      "Daylight hurts, so you wear sunglasses even indoors",
-      "In photos your eyes glow like a cat's"
-    ],
-    "climax": "A stadium loses power during a match, and thousands panic in the dark. Guiding people out means facing the emergency floodlights when they come back on. Your eyes... or the crowd.",
-    "ending": "You guide a whole section out safely, then the lights snap on and everything goes white. When your eyes recover, the first thing you see is a crowd clapping.",
-    "loop": "Ends at the sleepover when the lights go out again.",
-    "facts": [
-      "Cats can see in about one-sixth of the light humans need",
-      "Your eyes take around 20 to 30 minutes to fully adjust to darkness"
-    ],
-    "visuals": "dark bedroom drawn in blue tones, glowing eyes, stadium, floodlights",
-    "ep": 22
-  },
-  {
-    "id": 41,
-    "status": "used",
-    "title": "What If Your Skin Couldn't Be Cut?",
-    "ability": "unbreakable skin",
-    "category": "body",
-    "opening": "What If Your Skin Couldn't Be Cut? Then: You trip onto broken glass and stand up without a scratch.",
-    "early_wins": "Bike crashes, kitchen knives, cactus hugs: nothing gets through.",
-    "mystery_and_reveal": "But doctors can't get through either. No injections, no stitches, no surgery. Skin is your body's largest organ and its main shield, and yours now shields you from help too.",
-    "climax": "Your appendix is about to burst, and the only way in is... there isn't one. Or is there?",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Skin is the body's largest organ"
-    ],
-    "ep": 23
-  },
-  {
-    "id": 13,
-    "status": "used",
-    "title": "What If Your Memory Reset Every Day?",
-    "ability": "memory (resets daily)",
-    "category": "brain",
-    "hook": "You wake up and there's a note on your hand in your own handwriting: 'Read this first. Don't panic.'",
-    "rule": "Every morning, yesterday is gone. But skills stay, even when the memories don't.",
-    "beats": [
-      "Your room is covered in sticky notes you wrote to yourself",
-      "You play piano perfectly but can't remember learning",
-      "Every day, you meet your best friend for the first time"
-    ],
-    "climax": "Today is Mom's birthday. You find a half-finished gift you've been building in secret for weeks, with no memory of it. Finish it from your notes... or give up and buy something.",
-    "ending": "You follow your own notes, finish it, and Mom cries. You won't remember tonight, so you write one more note: 'She loved it.'",
-    "loop": "Ends with you writing on your hand, the note from the opening.",
-    "facts": [
-      "People who can't form new memories can still learn new skills, like drawing or puzzles, without remembering practising",
-      "Memories are formed with help from a brain region called the hippocampus"
-    ],
-    "visuals": "hand note, sticky notes wall, piano, gift box, birthday cake",
-    "ep": 24
-  },
-  {
-    "id": 42,
-    "status": "used",
-    "title": "What If You Had No Fingerprints?",
-    "ability": "fingerprints",
-    "category": "body",
-    "opening": "What If You Had No Fingerprints? Then: Your phone refuses to recognize you. So does the airport.",
-    "early_wins": "Mystery novels hate you. Every border crossing takes three hours.",
-    "mystery_and_reveal": "A tiny number of families really are born without fingerprints. Doctors nicknamed it 'immigration delay disease'. Fingerprints also help your fingers grip.",
-    "climax": "Your friend is wrongly blamed for something based on fingerprints at the scene, and you're the only one who can prove how fingerprints actually work.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "A very rare condition called adermatoglyphia means people are born without fingerprints"
-    ],
-    "ep": 25
-  },
-  {
-    "id": 14,
-    "status": "used",
-    "title": "What If Your Voice Was 100x Louder?",
-    "ability": "voice volume",
-    "category": "body",
-    "hook": "You sneeze in the library. Every window in the building shatters.",
-    "rule": "You can't turn it down. Whispering is your new full volume.",
-    "beats": [
-      "You call your friend from across the city without a phone",
-      "Singing in the shower sets off car alarms",
-      "Nobody invites you to the movies anymore"
-    ],
-    "climax": "On a ski trip you spot a group of hikers walking toward an avalanche zone, too far away to reach. Shouting could save them, but it could also shake loose the snow above you. Stay quiet... or shout.",
-    "ending": "You aim the shout carefully, they turn around, and the snow holds. They wave. You wave back, quietly.",
-    "loop": "Ends in the library, feeling a sneeze coming.",
-    "facts": [
-      "Sound can shatter glass when it hits the glass's exact resonant frequency loudly enough",
-      "A jet engine up close is about 140 decibels, enough to damage hearing instantly"
-    ],
-    "visuals": "library, shattering glass, sound rings, mountain, avalanche",
-    "ep": 26
-  },
-  {
-    "id": 43,
-    "status": "used",
-    "title": "What If You Could Hear Your Eyes Move?",
-    "ability": "inner-ear sound",
-    "category": "senses",
-    "opening": "What If You Could Hear Your Eyes Move? Then: You look left. Something in your head goes 'shhk'.",
-    "early_wins": "You hear your own heartbeat, your footsteps echo inside your skull, and chewing sounds like an avalanche.",
-    "mystery_and_reveal": "This is real: a tiny hole in the bone of the inner ear can let people hear their own eyeballs moving. Now silence doesn't exist for you.",
-    "climax": "In a silent exam hall you can hear a classmate's quiet, panicked breathing. Say something, or stay focused on your own test.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Superior canal dehiscence, a thin spot in the inner-ear bone, can make people hear their own eye movements and heartbeat"
-    ],
-    "ep": 27
-  },
-  {
-    "id": 15,
-    "status": "used",
-    "title": "What If You Could Never Feel Cold?",
-    "ability": "cold (can't feel it)",
-    "category": "senses",
-    "hook": "Everyone's shivering at the frozen lake. You're swimming in shorts, eating ice cream.",
-    "rule": "You can't feel cold, but your body still freezes. Nothing warns you.",
-    "beats": [
-      "Snowball fights are your sport now",
-      "You save a fortune on jackets",
-      "Your fingers turn white and you don't notice until a friend grabs your hand"
-    ],
-    "climax": "A dog falls through the ice. You're the only one who doesn't hesitate, but cold water can make you lose control of your arms within minutes. Stay on shore... or go in, knowing your clock is running.",
-    "ending": "You go in, grab the dog and get out with seconds to spare. Then everyone wraps you in every blanket they own, and the dog won't leave your side.",
-    "loop": "Ends back in the frozen lake with ice cream.",
-    "facts": [
-      "In icy water there's a '1-10-1' rule: about 1 minute to control your breathing, 10 minutes of useful movement, and up to an hour before you pass out",
-      "Frostbite can start without pain once the area goes numb"
-    ],
-    "visuals": "frozen lake, ice cream, snowball fight, cracked ice, blankets",
-    "ep": 28
-  },
-  {
-    "id": 44,
-    "status": "used",
-    "title": "What If You Had Perfect Pitch?",
-    "ability": "perfect pitch",
-    "category": "senses",
-    "opening": "What If You Had Perfect Pitch? Then: The microwave beeps and you say, 'That's a B flat.'",
-    "early_wins": "You can sing any note, tune any guitar, and name every car horn.",
-    "mystery_and_reveal": "Only about one person in ten thousand has perfect pitch. But it means every slightly out-of-tune song is physically painful to listen to.",
-    "climax": "Your best friend asks you to judge her first live performance, and she's a little off key. Honest, or kind?",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Perfect pitch is estimated to occur in about 1 in 10,000 people"
-    ],
-    "ep": 29
-  },
-  {
-    "id": 16,
-    "status": "used",
-    "title": "What If You Only Ate Once a Year?",
-    "ability": "metabolism (one meal a year)",
-    "category": "body",
-    "hook": "It's your one meal day. You start with forty pizzas. That's the appetizer.",
-    "rule": "A whole year of energy has to fit in one day. That's around seven hundred thousand calories.",
-    "beats": [
-      "You save hours every day, no breakfast, no lunch",
-      "Every dinner party is awkward because you just sit there",
-      "Your meal day costs as much as a car"
-    ],
-    "climax": "Your best friend's wedding lands on your one meal day. Eat your year's food... or give the toast you promised.",
-    "ending": "You give the toast, people cry, and the chef sends a whole buffet to your table afterwards. Everyone watches you eat it like a sport.",
-    "loop": "Ends with the next meal day starting, pizza boxes stacked to the ceiling.",
-    "facts": [
-      "An average adult needs roughly two thousand calories a day, about seven hundred thousand a year",
-      "A normal stomach holds about a litre comfortably but can stretch to around four"
-    ],
-    "visuals": "pizza tower, calendar, dinner party, wedding, buffet",
-    "ep": 30
-  },
-  {
-    "id": 45,
-    "status": "used",
-    "title": "What If You Were Allergic to Water?",
-    "ability": "water allergy",
-    "category": "body",
-    "opening": "What If You Were Allergic to Water? Then: Rain is your enemy. So is the shower.",
-    "early_wins": "You become an expert at wet wipes and umbrellas, and swimming is gone forever.",
-    "mystery_and_reveal": "An extremely rare condition makes skin break out in itchy hives when it touches water, even your own sweat or tears. So crying hurts.",
-    "climax": "Your little brother falls into a pool and nobody else sees. Jumping in means hours of burning skin.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Aquagenic urticaria, a reaction to water on the skin, is extremely rare"
-    ],
-    "ep": 31
-  },
-  {
-    "id": 17,
-    "status": "planned",
-    "title": "What If You Could Run at 100 km/h?",
-    "ability": "running speed",
-    "category": "body",
-    "hook": "You miss the bus. You're waiting at the next stop when it arrives.",
-    "rule": "Your legs are fast. Your shoes, your lungs and the air aren't ready.",
-    "beats": [
-      "Shoes melt in a week",
-      "At that speed, air pushes against you like a storm",
-      "Bugs hit your face like tiny rocks"
-    ],
-    "climax": "An ambulance is stuck in traffic and your friend Leo needs his allergy medicine across town now. Running there means destroying your knees on the road. Your knees... or Leo.",
-    "ending": "You get there in time, Leo's fine, and you limp home in borrowed slippers. Leo pays for the bus.",
-    "loop": "Ends at the bus stop again, the bus pulling away.",
-    "facts": [
-      "Usain Bolt's top speed was about 44 kilometers per hour",
-      "When you run, each foot hits the ground with several times your body weight"
-    ],
-    "visuals": "bus, speed lines, melting shoes, traffic jam, ambulance"
-  },
-  {
-    "id": 46,
-    "status": "planned",
-    "title": "What If You Could Smell Diseases?",
-    "ability": "disease smell",
-    "category": "senses",
-    "opening": "What If You Could Smell Diseases? Then: You hug your grandpa and something smells wrong.",
-    "early_wins": "You can smell a cold coming, a fever starting, someone who's stressed.",
-    "mystery_and_reveal": "A woman in Scotland noticed her husband's smell changed years before he was diagnosed with Parkinson's, and scientists later confirmed the disease really has a smell. But how do you tell someone what you smelled?",
-    "climax": "You smell it on your teacher, who seems totally fine. Say something and look crazy, or say nothing.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "A woman in Scotland could smell Parkinson's disease, and researchers have since studied the scent"
-    ]
-  },
-  {
-    "id": 18,
-    "status": "planned",
-    "title": "What If You Could Taste 100x Stronger?",
-    "ability": "taste",
-    "category": "senses",
-    "hook": "You sip a glass of milk and say, 'This cow was stressed.'",
-    "rule": "Every flavour is turned up a hundred times. Most food is too much.",
-    "beats": [
-      "You become the world's best chef overnight",
-      "Coffee tastes like drinking lightning",
-      "A single chili flake makes you cry"
-    ],
-    "climax": "At a wedding you taste a tiny trace of peanut in the cake. Your best friend Mia has a severe peanut allergy and is about to take a bite. Stay polite... or embarrass the host in front of everyone.",
-    "ending": "You knock the fork out of her hand. The host checks, and the baker did use peanut oil. Mia buys you dessert. You can taste exactly how grateful she is.",
-    "loop": "Ends with another glass of milk.",
-    "facts": [
-      "About a quarter of people are 'supertasters', who taste bitterness much more strongly",
-      "Most people have a few thousand taste buds"
-    ],
-    "visuals": "milk glass, chef kitchen, chili flake, wedding cake"
-  },
-  {
-    "id": 47,
-    "status": "planned",
-    "title": "What If You Could Never Get Sick?",
-    "ability": "immunity",
-    "category": "body",
-    "opening": "What If You Could Never Get Sick? Then: Your whole class is out with flu. You show up with soup for everyone.",
-    "early_wins": "Perfect attendance. You lick a subway pole for a dare.",
-    "mystery_and_reveal": "But a stronger immune system isn't always better. Allergies are your immune system overreacting, and an immune system that's too aggressive can start attacking your own body.",
-    "climax": "A new illness spreads through your town, and scientists want your blood to study. It means months of tests instead of the trip of your life.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Allergies are the immune system overreacting to something harmless"
-    ]
-  },
-  {
-    "id": 19,
-    "status": "planned",
-    "title": "What If Your Brain Worked 10x Harder?",
-    "ability": "brain power",
-    "category": "brain",
-    "hook": "You solve the Rubik's cube your friend handed you before he finishes saying 'try this'.",
-    "rule": "Your brain already uses a fifth of your energy. Ten times more means you overheat and starve.",
-    "beats": [
-      "Homework takes seconds",
-      "You eat constantly and still lose weight",
-      "You get headaches from overheating, so you study with ice on your head"
-    ],
-    "climax": "A blackout hits the hospital during a storm and the backup system is failing. You can figure out the fix, but thinking that hard for that long could make you pass out. The quiz scholarship exam tomorrow... or the hospital.",
-    "ending": "You fix it and wake up in the same hospital, with a nurse handing you a giant plate of food. Best meal of your life.",
-    "loop": "Ends with a Rubik's cube in your hands.",
-    "facts": [
-      "The brain is about 2% of your body weight but uses about 20% of your energy",
-      "The idea that we only use 10% of our brain is a myth"
-    ],
-    "visuals": "Rubik's cube, ice pack, food, hospital, glowing brain icon"
-  },
-  {
-    "id": 48,
-    "status": "planned",
-    "title": "What If You Never Forgot a Face?",
-    "ability": "face memory",
-    "category": "brain",
-    "opening": "What If You Never Forgot a Face? Then: You spot your kindergarten teacher in a crowd of thousands, twenty years later.",
-    "early_wins": "Strangers seem familiar because you really have seen them before, once, on a bus, in 2019.",
-    "mystery_and_reveal": "A small group of people called super-recognizers can do this, and some police forces actually hire them. But you can't forget anyone, including the bully.",
-    "climax": "A lost child's photo is on the news, and you're sure you saw that face at the train station this morning.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Super-recognizers, roughly the top 1-2% at remembering faces, are used by some police forces"
-    ]
-  },
-  {
-    "id": 20,
-    "status": "planned",
-    "title": "What If You Could Breathe Underwater?",
-    "ability": "breathing underwater",
-    "category": "body",
-    "hook": "You take a nap at the bottom of a swimming pool. The lifeguard does not take it well.",
-    "rule": "Water holds far less oxygen than air. You need to keep moving water over your gills, and on land your skin dries out.",
-    "beats": [
-      "You explore coral reefs for hours",
-      "Out of the water you need a spray bottle every ten minutes",
-      "A hot day is your worst nightmare"
-    ],
-    "climax": "A diver gets tangled in a fishing net deep underwater, running out of air. Freeing him means staying down long after your skin starts to hurt from the cold. Your comfort... or a stranger.",
-    "ending": "You free him and share a smile through his mask. Back on the beach he hands you his water bottle. You pour it on your head.",
-    "loop": "Ends at the bottom of the pool, eyes closing for a nap.",
-    "facts": [
-      "Water holds dozens of times less oxygen than the same amount of air",
-      "Fish breathe by pushing water over their gills, which is why many can't stop swimming"
-    ],
-    "visuals": "pool bottom, gills, coral, spray bottle, fishing net, beach"
-  },
-  {
-    "id": 49,
-    "status": "planned",
-    "title": "What If You Couldn't Recognize Faces?",
-    "ability": "face blindness",
-    "category": "brain",
-    "opening": "What If You Couldn't Recognize Faces? Then: Your own mom walks past you in the supermarket, and you don't know her.",
-    "early_wins": "You learn people by their shoes, their laugh, the way they walk.",
-    "mystery_and_reveal": "About one person in fifty has some face blindness, called prosopagnosia. They see faces fine, but their brain can't tell them apart.",
-    "climax": "At your graduation, everyone looks the same, and you have to find your dad in a crowd before he leaves.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Face blindness (prosopagnosia) affects roughly 2% of people to some degree"
-    ]
-  },
-  {
-    "id": 21,
-    "status": "planned",
-    "title": "What If Your Eyes Could Zoom 100x?",
-    "ability": "vision zoom",
-    "category": "senses",
-    "hook": "You read your friend's text from across the stadium. He's typing 'don't tell anyone'.",
-    "rule": "You see everything. Including what you really shouldn't.",
-    "beats": [
-      "You spot a bird's nest on a skyscraper roof",
-      "Eye strain gives you headaches after an hour",
-      "You accidentally see your surprise party planning three blocks away"
-    ],
-    "climax": "At the beach, you spot a kid being pulled out by a rip current far away, during your final round of the photo competition. Take the winning shot... or run and point the lifeguards to the kid.",
-    "ending": "You run, the lifeguards reach the kid, and someone else takes a photo of you pointing. That photo wins the competition.",
-    "loop": "Ends at the stadium, zooming in on a phone screen.",
-    "facts": [
-      "Eagles can see about four to five times sharper than humans",
-      "Rip currents can pull swimmers away from shore faster than an Olympic swimmer"
-    ],
-    "visuals": "stadium, zoom circle overlay, skyscraper nest, beach, rip current"
-  },
-  {
-    "id": 50,
-    "status": "planned",
-    "title": "What If You Had a Tail?",
-    "ability": "tail",
-    "category": "body",
-    "opening": "What If You Had a Tail? Then: Your tail wags every time your crush walks by. Everyone sees it.",
-    "early_wins": "Perfect balance, a third hand for snacks, and you can never hide being excited.",
-    "mystery_and_reveal": "Every human starts with a tail. Before you were born you had one for a few weeks, and your tailbone is what's left of it.",
-    "climax": "Your friend is about to fall off a climbing wall, and your tail can reach where your arms can't. But it'll hurt.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Human embryos have a tail for a few weeks; the tailbone is its remnant"
-    ]
-  },
-  {
-    "id": 22,
-    "status": "planned",
-    "title": "What If You Felt Every Emotion 10x Stronger?",
-    "ability": "emotions",
-    "category": "brain",
-    "hook": "A dog food advert comes on and you're sobbing on a crowded bus.",
-    "rule": "Every feeling hits ten times harder, the good ones and the bad ones.",
-    "beats": [
-      "A joke makes you laugh until you can't breathe",
-      "A single bad grade feels like the end of the world",
-      "Love songs are now dangerous"
-    ],
-    "climax": "Your best friend Leo is moving away tomorrow. Saying goodbye will hurt ten times more than for anyone else. Skip the goodbye... or go anyway.",
-    "ending": "You go, you both cry, and it hurts like nothing ever has. But the hug feels ten times better too.",
-    "loop": "Ends on the bus, a dog food advert starting.",
-    "facts": [
-      "Emotional tears have a different chemical makeup from tears caused by onions",
-      "Strong emotions trigger adrenaline, which speeds up your heart and breathing"
-    ],
-    "visuals": "bus, tears, laughter, report card, airport goodbye"
-  },
-  {
-    "id": 51,
-    "status": "planned",
-    "title": "What If Your Arms Could Think for Themselves?",
-    "ability": "octopus arms",
-    "category": "body",
-    "opening": "What If Your Arms Could Think for Themselves? Then: Your left hand finishes your homework while you're still asleep.",
-    "early_wins": "Each arm has its own opinions: one wants pizza, one wants salad.",
-    "mystery_and_reveal": "Octopuses actually work like this. About two-thirds of their brain cells are in their arms, so each arm can make its own decisions. Now your arms argue with you.",
-    "climax": "At the climbing gym, your friend falls, and your arms disagree about whether to catch him.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "About two-thirds of an octopus's neurons are in its arms"
-    ]
-  },
-  {
-    "id": 23,
-    "status": "planned",
-    "title": "What If You Could Hold Your Breath for an Hour?",
-    "ability": "breath holding",
-    "category": "body",
-    "hook": "You win the swimming pool breath-holding contest. The second-place kid gave up forty minutes ago.",
-    "rule": "Your lungs last an hour, but the rest of you still gets cold, scared and tired underwater.",
-    "beats": [
-      "You watch a whole movie underwater",
-      "Lifeguards hate you",
-      "Your record is longer than any human's, and nobody believes you"
-    ],
-    "climax": "Your friend's car keys and phone fall to the bottom of a deep, dark quarry lake, and so does his little sister's beloved teddy bear. You can only search for one before you're too cold. The keys and phone... or the bear.",
-    "ending": "You come up with the bear. She hugs it soaking wet. Your friend sighs and orders new keys.",
-    "loop": "Ends at the pool contest starting again.",
-    "facts": [
-      "The record for holding your breath is over 24 minutes, after breathing pure oxygen first",
-      "Cold water triggers the 'diving reflex', which slows your heart to save oxygen"
-    ],
-    "visuals": "swimming pool, stopwatch, quarry lake, teddy bear"
-  },
-  {
-    "id": 52,
-    "status": "planned",
-    "title": "What If You Never Got Tired Running?",
-    "ability": "endurance",
-    "category": "body",
-    "opening": "What If You Never Got Tired Running? Then: You go for a jog after breakfast and come home for dinner.",
-    "early_wins": "You win every marathon. You run to school, to the next town, to the beach.",
-    "mystery_and_reveal": "Humans already are the best long-distance runners on Earth, because we sweat so well. Our ancestors could chase animals until they collapsed from heat. But never feeling tired means never knowing when your joints are breaking down.",
-    "climax": "A wildfire blocks the only road out of town, and someone has to run to the next village for help.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Humans are exceptional endurance runners, partly because we cool down by sweating"
-    ]
-  },
-  {
-    "id": 24,
-    "status": "planned",
-    "title": "What If You Could See Ultraviolet?",
-    "ability": "UV vision",
-    "category": "senses",
-    "hook": "You look at a plain yellow flower and see glowing landing strips painted on it for bees.",
-    "rule": "You see a hidden layer of the world, but UV light is also what damages eyes.",
-    "beats": [
-      "You spot exactly where your friend missed with sunscreen",
-      "Fake money looks obviously fake to you",
-      "Sunny days are dazzling, so you need special glasses"
-    ],
-    "climax": "Your little brother Sam's favourite cat goes missing at night. Searching with a UV torch means staring at UV light that could hurt your eyes. Protect your eyes... or find the cat.",
-    "ending": "You spot the cat's glowing trail, find her stuck under a shed, and Sam names his next kitten after you.",
-    "loop": "Ends looking at a yellow flower in the garden.",
-    "facts": [
-      "Many flowers have ultraviolet patterns that guide bees to nectar",
-      "Some people whose eye lens has been removed in surgery can see a little ultraviolet light"
-    ],
-    "visuals": "flower with glowing UV pattern, sunscreen patches, UV torch, cat"
-  },
-  {
-    "id": 53,
-    "status": "planned",
-    "title": "What If You Could Jump 10x Higher?",
-    "ability": "jumping",
-    "category": "body",
-    "opening": "What If You Could Jump 10x Higher? Then: You jump for a basketball and land on the school roof.",
-    "early_wins": "Shortcuts over buildings, fruit from the top of the tree, the end of every elevator.",
-    "mystery_and_reveal": "A flea can jump many times its own body length. But what goes up comes down: landing from ten times higher hits your knees with enormous force.",
-    "climax": "A kitten is stuck on a high ledge. Getting it means a landing your knees might not survive.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Fleas can jump many times their own body length"
-    ]
-  },
-  {
-    "id": 25,
-    "status": "planned",
-    "title": "What If Your Hair Grew 100x Faster?",
-    "ability": "hair growth",
-    "category": "body",
-    "hook": "You get a fresh haircut in the morning. By lunch you have a ponytail.",
-    "rule": "Hair growth uses protein. Growing this fast, your body is always running low.",
-    "beats": [
-      "Barbers know you by name, and you go three times a day",
-      "You sell your hair for wigs and make a fortune",
-      "Your eyebrows need trimming before every exam"
-    ],
-    "climax": "A kids' cancer charity collects hair for wigs, and you could donate enough for dozens of kids. But it's the day of your big photo shoot as a model. The shoot... or the kids.",
-    "ending": "You donate, and by evening it's grown back anyway. A little girl sends you a photo in her new wig. Best photo shoot you've ever had.",
-    "loop": "Ends in the barber's chair, morning, fresh haircut.",
-    "facts": [
-      "Hair normally grows about a centimetre a month",
-      "Hair is made of keratin, a protein, so growing it uses up protein from your diet"
-    ],
-    "visuals": "barber chair, clock, ponytail, wigs, photo shoot"
-  },
-  {
-    "id": 54,
-    "status": "planned",
-    "title": "What If Your Skin Showed Your Feelings?",
-    "ability": "color-changing skin",
-    "category": "body",
-    "opening": "What If Your Skin Showed Your Feelings? Then: Your crush says hi and you turn bright pink. Not your cheeks. All of you.",
-    "early_wins": "No more lying about being fine. Poker is impossible.",
-    "mystery_and_reveal": "Octopuses and cuttlefish change color in a split second using cells called chromatophores. Humans have a small version: blushing. Now everyone can read you.",
-    "climax": "Your best friend asks if you like her new song. Your skin answers before you can.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Octopuses and cuttlefish change skin color using cells called chromatophores"
-    ]
-  },
-  {
-    "id": 26,
-    "status": "planned",
-    "title": "What If Your Balance Was Perfect?",
-    "ability": "balance",
-    "category": "senses",
-    "hook": "You walk across a rope between two buildings, eating a sandwich, on your first try.",
-    "rule": "Your inner ear is perfect, but it disagrees with your eyes, so cars and boats make you sick.",
-    "beats": [
-      "You stand on a moving bus without holding anything",
-      "You become a skateboard legend in a week",
-      "Car rides make you throw up because your eyes and ears disagree"
-    ],
-    "climax": "A cat is stuck on a thin, swaying branch over a river. You're the only one who can reach it, but it means missing the bus to your tightrope competition. The competition... or the cat.",
-    "ending": "You save the cat, and the owner drives you to the competition. You throw up in the car, then win.",
-    "loop": "Ends on the rope between buildings again.",
-    "facts": [
-      "Your sense of balance comes from fluid-filled tubes in your inner ear",
-      "Motion sickness happens when your eyes and inner ear send your brain different signals"
-    ],
-    "visuals": "rope between buildings, bus, skateboard, tree over river"
-  },
-  {
-    "id": 55,
-    "status": "planned",
-    "title": "What If You Could See Germs?",
-    "ability": "microscopic vision",
-    "category": "senses",
-    "opening": "What If You Could See Germs? Then: You look at your phone screen and put it down forever.",
-    "early_wins": "You see dust mites in your pillow, bacteria on your hands, mold before it shows.",
-    "mystery_and_reveal": "You carry roughly as many bacterial cells as human cells, tens of trillions, and most of them help you. But try eating anything once you've seen it.",
-    "climax": "Your grandma's kitchen has a contamination nobody can see, right before the family dinner.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "The human body hosts tens of trillions of bacteria, roughly as many as its own cells"
-    ]
-  },
-  {
-    "id": 27,
-    "status": "planned",
-    "title": "What If You Had 360-Degree Vision?",
-    "ability": "360 vision",
-    "category": "senses",
-    "hook": "Your teacher writes on the board and says, 'Who's texting?' You answer, without turning around.",
-    "rule": "Eyes on the sides of your head see everything, but they lose depth. You can't judge distance.",
-    "beats": [
-      "Nobody can ever sneak up on you",
-      "You can't catch a ball because you can't tell how far away it is",
-      "Pouring water into a glass is a disaster"
-    ],
-    "climax": "In a crowded mall, you see a little kid wander toward the escalator behind you while you're on stage collecting a prize. Accept the prize... or jump off stage.",
-    "ending": "You jump off, scoop the kid up before the escalator, and get the prize later from the mall manager, who doubles it.",
-    "loop": "Ends back in class, teacher asking 'who's texting?'",
-    "facts": [
-      "Rabbits and horses can see almost all the way around themselves",
-      "Judging depth needs two eyes looking at the same thing from slightly different angles"
-    ],
-    "visuals": "classroom, vision cone overlay, ball, mall stage, escalator"
-  },
-  {
-    "id": 56,
-    "status": "planned",
-    "title": "What If You Never Needed to Drink Water?",
-    "ability": "water",
-    "category": "body",
-    "opening": "What If You Never Needed to Drink Water? Then: You cross a desert with a sandwich and no bottle.",
-    "early_wins": "No thirst, no bathroom breaks, no water bills.",
-    "mystery_and_reveal": "Your body is about sixty percent water, and you'd normally survive only a few days without drinking. Thirst is the alarm that keeps you alive, and you've lost it.",
-    "climax": "On a long hike, your friends' water runs out. You have the only full bottles, and they're heavy.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "The human body is roughly 60% water",
-      "Most people can survive only a few days without water"
-    ]
-  },
-  {
-    "id": 28,
-    "status": "planned",
-    "title": "What If You Could Sense Electricity Like a Shark?",
-    "ability": "electroreception",
-    "category": "senses",
-    "hook": "You find your friend hiding in the dark during hide and seek because you can feel his heartbeat's electricity.",
-    "rule": "You feel every electric field, so cities feel like constant static.",
-    "beats": [
-      "You know which wires are live without a tester",
-      "Phones buzzing in pockets feel like bees",
-      "Thunderstorms give you a headache days in advance"
-    ],
-    "climax": "After a storm, a power line falls near a playground. You can feel exactly where the dangerous ground is, but getting close will feel like screaming in your head. Stay away... or guide the kids out safely.",
-    "ending": "You walk the kids out along the only safe path and the power company says you saved lives. That night, for the first time, the city feels quiet.",
-    "loop": "Ends at hide and seek in the dark.",
-    "facts": [
-      "Sharks can detect the tiny electric fields made by the muscles of their prey",
-      "Your own heart produces electrical signals, which is what an ECG measures"
-    ],
-    "visuals": "dark room, glowing electric field lines, wires, storm, playground"
-  },
-  {
-    "id": 57,
-    "status": "planned",
-    "title": "What If Half Your Brain Could Sleep at a Time?",
-    "ability": "half-brain sleep",
-    "category": "brain",
-    "opening": "What If Half Your Brain Could Sleep at a Time? Then: You sleep with one eye open. Literally.",
-    "early_wins": "You can rest while gaming, watch a movie while half asleep, and never lose a full night.",
-    "mystery_and_reveal": "Dolphins really do this. They sleep one half of the brain at a time, so they can keep swimming and breathing. But half-asleep you says the weirdest things.",
-    "climax": "Your little brother is scared of a storm. Sleeping fully means missing it if he needs you.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Dolphins sleep with one half of the brain at a time"
-    ]
-  },
-  {
-    "id": 29,
-    "status": "planned",
-    "title": "What If Your Metabolism Was 10x Faster?",
-    "ability": "metabolism",
-    "category": "body",
-    "hook": "You eat a whole birthday cake for breakfast and you're hungry again by nine.",
-    "rule": "Burning energy ten times faster means you're always hot, always hungry, and you crash if you skip a meal.",
-    "beats": [
-      "You never get cold",
-      "Food costs more than rent",
-      "At night your body slows down so much you can barely wake up"
-    ],
-    "climax": "You're on a mountain hike when a storm traps your group overnight with very little food. You need far more than anyone else. Eat your share... or give it to the kid who's shivering.",
-    "ending": "You give it, and you stay warm all night, so the kid sleeps leaning on you like a heater. Your fast metabolism finally has a point.",
-    "loop": "Ends at breakfast with a whole cake.",
-    "facts": [
-      "A hummingbird's heart can beat more than a thousand times a minute",
-      "Hummingbirds go into a deep energy-saving sleep called torpor at night"
-    ],
-    "visuals": "cake, fridge, mountain, storm, campfire"
-  },
-  {
-    "id": 58,
-    "status": "planned",
-    "title": "What If You Could Regrow Body Parts?",
-    "ability": "regeneration",
-    "category": "body",
-    "opening": "What If You Could Regrow Body Parts? Then: You lose a tooth, and a new one is there by lunch.",
-    "early_wins": "Broken bones, lost fingertips, bad knees: all replaceable.",
-    "mystery_and_reveal": "The axolotl, a Mexican salamander, can regrow whole legs, parts of its heart, even parts of its brain. Scientists study it to learn how. But regrowing takes huge amounts of energy.",
-    "climax": "Your friend loses a finger in an accident. Scientists say studying you could help him, if you give up a year of your life to tests.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Axolotls can regrow limbs and parts of organs"
-    ]
-  },
-  {
-    "id": 30,
-    "status": "planned",
-    "title": "What If You Could Taste With Your Hands?",
-    "ability": "taste through skin",
-    "category": "senses",
-    "hook": "You shake hands with a stranger and immediately know he had garlic bread for lunch.",
-    "rule": "Everything you touch, you taste. There's no off switch.",
-    "beats": [
-      "Holding the bus rail is the worst thing you've ever tasted",
-      "You can taste whether fruit is ripe just by touching it",
-      "Gloves are your best friend"
-    ],
-    "climax": "In a chemistry lab, you touch a bottle labelled water and taste something sharp and bitter: it's not water, and a classmate is about to drink from an identical bottle. Keep quiet and avoid looking weird... or knock it out of their hand.",
-    "ending": "You knock it away, the teacher tests it, and it's a cleaning chemical someone mislabeled. From then on, everyone lets you check their drinks.",
-    "loop": "Ends shaking hands with a stranger.",
-    "facts": [
-      "Catfish have taste buds all over their bodies",
-      "Octopuses taste with the suckers on their arms"
-    ],
-    "visuals": "handshake, taste icons popping, bus rail, fruit, lab bottles"
-  },
-  {
-    "id": 59,
-    "status": "planned",
-    "title": "What If Your Bones Were Made of Steel?",
-    "ability": "steel bones",
-    "category": "body",
-    "opening": "What If Your Bones Were Made of Steel? Then: You walk into a door frame and the door frame loses.",
-    "early_wins": "Nothing breaks: falls, crashes, football tackles.",
-    "mystery_and_reveal": "Steel is about four times denser than bone, so you're suddenly much heavier. Chairs break, floors creak, and you can never, ever swim again.",
-    "climax": "Your friend falls into a lake and you're the closest one. You'd sink like an anchor.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Steel is several times denser than bone"
-    ]
-  },
-  {
-    "id": 60,
-    "status": "planned",
-    "title": "What If You Could Feel Which Way Is North?",
-    "ability": "magnetic sense",
-    "category": "senses",
-    "opening": "What If You Could Feel Which Way Is North? Then: You've never been lost in your life. Not once.",
-    "early_wins": "You navigate forests, cities and cave tours with your eyes closed.",
-    "mystery_and_reveal": "Birds use Earth's magnetic field to migrate thousands of kilometers, and a 2019 study found human brainwaves react to magnetic changes too, even though we don't notice. Now magnets and phones make you dizzy.",
-    "climax": "Your class gets lost in a forest at night with dead phones, and you're the only compass.",
-    "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
-    "facts": [
-      "Many migrating birds can sense Earth's magnetic field"
-    ]
-  },
-  {
-    "id": 1,
-    "status": "planned",
-    "title": "What If You Couldn't Feel Pain?",
-    "ability": "pain (switched off)",
-    "category": "body",
-    "hook": "You lean on the stove to grab the salt. The whole kitchen smells like burning... and you only notice when your friend screams.",
-    "rule": "Pain is your body's alarm system. Without it, nothing tells you when you're getting hurt.",
-    "beats": [
-      "Football tackle, you get straight up and keep playing... with a broken wrist you won't discover for a week",
-      "You win every dare: ice bath, hot sauce, cactus hug",
-      "Your friends start checking YOU for injuries because you can't"
-    ],
-    "climax": "A pan of boiling oil tips toward your little brother Sam. You can grab it bare-handed without flinching, but your hands will be badly burned and you won't feel how bad. The trophy-winning pitching arm... or Sam.",
-    "ending": "You grab it, Sam is safe, and at the hospital the doctor asks how much it hurts. 'I don't know,' you say, which is the scariest answer there is.",
-    "loop": "Last line lands you back in the kitchen, leaning toward the stove again.",
-    "facts": [
-      "People born unable to feel pain (congenital insensitivity to pain) exist, and they often injure themselves without noticing",
-      "Your hand pulls away from a hot surface by a spinal reflex, before your brain even registers the pain"
-    ],
-    "visuals": "kitchen, smoke wisps, football field, cast on arm, ice bath, hospital",
-    "note": "A popular channel already made 'What if you couldn't feel pain?' with a twist where the pain goes to whoever loves you most. Ours must use a completely different twist (the science angle: pain is an alarm), never theirs."
-  }
+ {
+  "id": 5,
+  "status": "used",
+  "title": "What If You Were 10x Stronger?",
+  "ability": "strength",
+  "category": "body",
+  "hook": "You open a pickle jar and the lid goes through the ceiling.",
+  "rule": "Only your muscles got stronger. Your bones and tendons didn't. Pull too hard, and you break yourself.",
+  "beats": [
+   "Moving day: you carry the sofa, the fridge, and your cousin",
+   "Handshakes become dangerous, so you practice holding eggs",
+   "You lift a weight and feel your own tendon start to give"
+  ],
+  "climax": "A car rolls back onto your friend Leo's leg in a parking lot. Lifting it could snap your arm. Your arm... or Leo.",
+  "ending": "You lift it, Leo slides out, and you both end up with matching casts. He signs yours: 'Strongest idiot I know.'",
+  "loop": "Ends in the kitchen with a new pickle jar.",
+  "facts": [
+   "Your nervous system holds your muscles back from their maximum force, partly to protect your tendons and bones",
+   "There are real reports of people lifting cars in emergencies, a burst of adrenaline-fueled strength"
+  ],
+  "visuals": "kitchen ceiling hole, moving truck, eggs, gym, parking lot",
+  "ep": 2
+ },
+ {
+  "id": 31,
+  "status": "used",
+  "title": "What If You Never Blinked Again?",
+  "ability": "blinking",
+  "category": "senses",
+  "opening": "What If You Never Blinked Again? Then: You win every staring contest before it starts.",
+  "early_wins": "You start seeing things nobody else notices: a card trick's secret move, a bird landing.",
+  "mystery_and_reveal": "You blink about fifteen times a minute, so your eyes are shut for roughly a tenth of your waking day, and your brain hides those gaps so the world never goes dark. Except now your eyes dry out and sting all day.",
+  "climax": "Your little brother's school play: you can sit there with burning eyes and see every second of it, or look away and rest.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Most people blink around 15 to 20 times a minute",
+   "The brain hides blinks so the world doesn't seem to flicker"
+  ],
+  "ep": 3
+ },
+ {
+  "id": 2,
+  "status": "used",
+  "title": "What If You Could Smell 10,000x Better?",
+  "ability": "smell",
+  "category": "senses",
+  "hook": "Your friend swears he didn't eat your fries. You lean in, sniff once... and you can smell ketchup on his breath, his lie, and the dog he petted three hours ago.",
+  "rule": "You can't turn it off. Every smell, all the time, at full volume.",
+  "beats": [
+   "You smell rain coming twenty minutes before it hits",
+   "You find your lost phone by smelling your own hand cream on it",
+   "Garbage day becomes a horror movie; the school bus is a war crime"
+  ],
+  "climax": "On the night of your big interview you smell rotten eggs drifting from your neighbor's house: a gas leak, and they're asleep. Make the interview... or bang on their door.",
+  "ending": "You wake them up, the gas company finds the leak, and the next day the neighbor brings fries to say thank you. Your friend eats them.",
+  "loop": "Ends on the friend eating your fries again, which opens the video.",
+  "facts": [
+   "A dog's nose is estimated to be 10,000 to 100,000 times more sensitive than ours",
+   "Natural gas has no smell; companies add a rotten-egg smell so people notice leaks"
+  ],
+  "visuals": "diner, smell trails drawn as colored wisps, rain cloud, garbage truck, night street, gas wisps",
+  "ep": 4
+ },
+ {
+  "id": 32,
+  "status": "used",
+  "title": "What If Your Heart Beat Only Six Times a Minute?",
+  "ability": "heart rate",
+  "category": "body",
+  "opening": "What If Your Heart Beat Only Six Times a Minute? Then: Your doctor checks your pulse, frowns, and checks again.",
+  "early_wins": "You can hold your breath forever, but standing up too fast makes you black out.",
+  "mystery_and_reveal": "A blue whale's heart can drop to about two beats a minute on a dive, but its blood is built for it. Yours isn't, so your brain keeps running short of blood.",
+  "climax": "Your friend collapses at a party and needs CPR. Rushing in could make you faint too.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "A blue whale's heart can slow to around 2 beats per minute during a dive",
+   "Standing up quickly can make you dizzy because blood briefly drains from the brain"
+  ],
+  "ep": 5
+ },
+ {
+  "id": 3,
+  "status": "used",
+  "title": "What If You Grew 10x Taller?",
+  "ability": "height",
+  "category": "body",
+  "hook": "You step over a bus to get to school. Not onto it. Over it.",
+  "rule": "Ten times taller means about a thousand times heavier, but your bones only get a hundred times stronger. Every step is a fight against your own weight.",
+  "beats": [
+   "You change a streetlight bulb for the whole street",
+   "Your legs ache constantly, every step like carrying ten people",
+   "Clothes need a tailor and a crane; lunch needs a truck"
+  ],
+  "climax": "A kid's kite tangles a little girl on a balcony ledge, high up. Reaching her means kneeling on your knee in a way your bones may not survive. Protect your legs... or reach.",
+  "ending": "You reach, she's safe, and your knee holds. Barely. She ties the kite to your finger like a balloon.",
+  "loop": "Ends with you stepping carefully over the bus on the way home.",
+  "facts": [
+   "Scale an animal up 10x and its weight grows about 1,000x while bone strength only grows about 100x (the square-cube law)",
+   "The tallest man ever measured, at about 2.72 meters, needed leg braces to walk"
+  ],
+  "visuals": "tiny city, bus at ankle height, streetlight, crane, balcony",
+  "ep": 6
+ },
+ {
+  "id": 33,
+  "status": "used",
+  "title": "What If You Felt Everyone Else's Pain?",
+  "ability": "mirror pain",
+  "category": "brain",
+  "opening": "What If You Felt Everyone Else's Pain? Then: Your friend stubs his toe, and you're the one hopping around the kitchen.",
+  "early_wins": "You always know who's hurting, even when they're hiding it, and nobody can lie to you about being fine.",
+  "mystery_and_reveal": "A small number of people really feel touches they only see happening to others. It's called mirror-touch synesthesia. Now crowds, sports and hospitals are unbearable.",
+  "climax": "Your mom needs someone with her during a painful procedure. Going means feeling all of it.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Mirror-touch synesthesia is real: some people feel a touch when they see someone else being touched"
+  ],
+  "ep": 7
+ },
+ {
+  "id": 4,
+  "status": "used",
+  "title": "What If You Could Never Forget Anything?",
+  "ability": "memory",
+  "category": "brain",
+  "hook": "Your teacher asks what she wore on the first day of school three years ago. You tell her. And the color of her socks.",
+  "rule": "You remember everything. Including everything you'd love to forget.",
+  "beats": [
+   "Every test is easy, you remember every word of every page",
+   "You remember every embarrassing moment in full HD, forever",
+   "Arguments are impossible to win against you, and nobody wants to argue with you anymore"
+  ],
+  "climax": "At the national quiz final, your best friend Mia is having a panic attack backstage. Win the trophy you've trained for... or walk off stage to sit with her.",
+  "ending": "You sit with her, she calms down, and years later she still thanks you. You remember exactly what she said. That one, you'd never want to forget.",
+  "loop": "Ends back in class with the teacher asking another impossible question.",
+  "facts": [
+   "A rare condition called hyperthymesia lets a few people recall almost every day of their lives",
+   "Forgetting is useful: the brain actively prunes memories so the important ones stand out"
+  ],
+  "visuals": "classroom, floating memory 'photos', quiz show stage, backstage",
+  "ep": 8
+ },
+ {
+  "id": 34,
+  "status": "used",
+  "title": "What If You Could See Sounds as Colors?",
+  "ability": "synesthesia",
+  "category": "senses",
+  "opening": "What If You Could See Sounds as Colors? Then: Your alarm goes off and your whole room turns orange.",
+  "early_wins": "Music becomes a light show. You can 'see' who's calling by the color of their ringtone.",
+  "mystery_and_reveal": "Some people really do see colors when they hear sounds. It's a form of synesthesia, and several famous musicians have described it. But loud places become blinding.",
+  "climax": "At a fireworks festival your little brother gets lost in the crowd. The noise is a wall of color, but his voice is a color you'd know anywhere.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Chromesthesia, seeing colors when hearing sounds, is a real form of synesthesia"
+  ],
+  "ep": 9
+ },
+ {
+  "id": 6,
+  "status": "used",
+  "title": "What If You Never Needed Sleep Again?",
+  "ability": "sleep (none needed)",
+  "category": "brain",
+  "hook": "It's three in the morning and you've already finished your homework, learned guitar, and reorganised the fridge.",
+  "rule": "You never get tired, but everyone you love still does. Your extra eight hours are spent alone.",
+  "beats": [
+   "You get a whole extra day every week",
+   "The record for staying awake is about eleven days, and you passed it a month ago",
+   "Three a.m. gets lonely: no one to text, empty streets"
+  ],
+  "climax": "At 3 a.m. you smell smoke from the apartment below. Finish the competition entry due at 6... or wake up the whole building.",
+  "ending": "You bang on every door, everyone gets out, and the firefighter says the building was lucky someone was awake. For once, being the only one awake was the point.",
+  "loop": "Ends at 3 a.m. again, you wide awake, everyone asleep.",
+  "facts": [
+   "The record for staying awake, set in 1964, is about 11 days",
+   "Scientists found the brain clears out waste while we sleep"
+  ],
+  "visuals": "night bedroom, clock, guitar, empty street, apartment hallway, smoke",
+  "ep": 10
+ },
+ {
+  "id": 35,
+  "status": "used",
+  "title": "What If You Could See Heat?",
+  "ability": "infrared vision",
+  "category": "senses",
+  "opening": "What If You Could See Heat? Then: You can tell which seat on the bus someone just got up from.",
+  "early_wins": "You see who's nervous (warm face), which coffee is still hot, and footprints glowing on the floor.",
+  "mystery_and_reveal": "Pit vipers really sense heat through little pits on their faces, which is how they hunt in total darkness. But for you, every lamp and car engine glares like the sun.",
+  "climax": "In a smoke-filled building, everyone is blind except you, and you can see a small warm shape behind a door.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Pit vipers detect infrared heat with pit organs on their faces"
+  ],
+  "ep": 11
+ },
+ {
+  "id": 7,
+  "status": "used",
+  "title": "What If You Shrank to the Size of an Ant?",
+  "ability": "size (tiny)",
+  "category": "body",
+  "hook": "You fall off the kitchen table... and float down to the floor like a leaf, completely fine.",
+  "rule": "Small bodies lose heat fast. You're always freezing, and always hungry.",
+  "beats": [
+   "Falls can't hurt you; you jump off the bookshelf for fun",
+   "A raindrop hits you like a bucket of water",
+   "You need to eat constantly just to stay warm"
+  ],
+  "climax": "Your dog is choking on a tiny piece of plastic stuck where no hand can reach. You can climb in and pull it out, but it's dark, wet and terrifying. Stay safe... or save the dog.",
+  "ending": "You pull it free and the dog sneezes you across the room onto a pillow. Best ride of your life.",
+  "loop": "Ends falling off the table again, floating down.",
+  "facts": [
+   "Insects can survive falls from almost any height because air resistance slows small bodies so much",
+   "Small animals lose body heat much faster, which is why shrews have to eat almost constantly"
+  ],
+  "visuals": "giant kitchen, floating fall, raindrop splash, dog's huge face",
+  "ep": 12
+ },
+ {
+  "id": 36,
+  "status": "used",
+  "title": "What If You Remembered Being a Baby?",
+  "ability": "infant memory",
+  "category": "brain",
+  "opening": "What If You Remembered Being a Baby? Then: You remember your own first birthday party. The cake. Who cried. Who didn't come.",
+  "early_wins": "At family dinners you correct everyone's stories, and you remember things your parents hoped you'd forget.",
+  "mystery_and_reveal": "Almost nobody remembers anything before about age three. Scientists call it infantile amnesia, and part of it is that the baby brain is still building the system that stores memories.",
+  "climax": "Your dad has always felt guilty about something from when you were one. You remember what really happened, and it wasn't his fault.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Most adults remember almost nothing from before about age 3 or 4"
+  ],
+  "ep": 13
+ },
+ {
+  "id": 8,
+  "status": "used",
+  "title": "What If You Aged 10x Slower?",
+  "ability": "aging",
+  "category": "body",
+  "hook": "You're forty years old and the cinema still won't sell you a ticket to a scary movie.",
+  "rule": "You age slowly. Everyone you love doesn't.",
+  "beats": [
+   "Your childhood dog grows old while you're still a kid",
+   "Your little sister becomes your older sister",
+   "You'd have centuries to learn everything, but no one to share them with"
+  ],
+  "climax": "Your grandma's last wish is to see you graduate, but at your speed that's decades away. Keep the rule of your life... or do a crash course, cramming years of learning into months, for her.",
+  "ending": "You graduate in record time. She's in the front row, cheering louder than anyone, and the photo stays on your wall for the next three hundred years.",
+  "loop": "Ends at the cinema ticket desk again.",
+  "facts": [
+   "Greenland sharks can live for centuries, possibly over 400 years",
+   "Different animals age at very different speeds: a mouse lives about 2 years, a bowhead whale over 200"
+  ],
+  "visuals": "cinema desk, dog aging, sister growing, graduation stage, grandma",
+  "ep": 14
+ },
+ {
+  "id": 37,
+  "status": "used",
+  "title": "What If You Could Control Every Dream?",
+  "ability": "lucid dreaming",
+  "category": "brain",
+  "opening": "What If You Could Control Every Dream? Then: Every night, you fly. Every single night.",
+  "early_wins": "You practise piano in your dreams and wake up better at it. But real life starts feeling dull.",
+  "mystery_and_reveal": "Lucid dreaming is real: about half of people have had at least one dream where they knew they were dreaming. But your dreams get so good you stop wanting to wake up.",
+  "climax": "Your best friend needs you awake at 3 a.m. for an emergency, in the middle of the best dream you've ever had.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "About half of people report having had at least one lucid dream"
+  ],
+  "ep": 15
+ },
+ {
+  "id": 9,
+  "status": "used",
+  "title": "What If You Could Hear 100x Better?",
+  "ability": "hearing",
+  "category": "senses",
+  "hook": "In a silent exam hall, you can hear every heartbeat. The kid next to you is panicking, and his heart is racing.",
+  "rule": "Quiet sounds get loud, and loud sounds get unbearable.",
+  "beats": [
+   "You hear whispers three classrooms away",
+   "You hear your microwave ding from across town",
+   "A fire truck siren feels like being punched in the ears"
+  ],
+  "climax": "After a building collapses on TV, rescuers ask for total silence. You can hear faint tapping under the rubble, but standing that close to the sirens and machines could permanently damage your hearing. Your hearing... or a stranger.",
+  "ending": "You find the tapping, they're rescued, and the first thing they say is 'thank you'. You hear it perfectly.",
+  "loop": "Ends back in the silent exam hall with heartbeats.",
+  "facts": [
+   "Humans hear roughly 20 to 20,000 hertz; dogs hear far higher pitches",
+   "Sounds around 120 decibels start to cause pain"
+  ],
+  "visuals": "exam hall, heartbeat icons, sound waves, siren, rubble",
+  "ep": 16
+ },
+ {
+  "id": 38,
+  "status": "used",
+  "title": "What If You Weighed 10x Less?",
+  "ability": "body weight",
+  "category": "body",
+  "opening": "What If You Weighed 10x Less? Then: You jump to catch a frisbee and come down three seconds later.",
+  "early_wins": "You can stand on a branch, bounce over fences, carry friends on your back.",
+  "mystery_and_reveal": "On the Moon you'd weigh about a sixth of what you weigh here. Ten times lighter than that, and a strong gust of wind becomes the most dangerous thing in your life.",
+  "climax": "On a windy cliff walk, your little brother slips toward the edge. Grabbing him means letting go of the railing you're holding onto.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "On the Moon you weigh about one-sixth of your Earth weight"
+  ],
+  "ep": 17
+ },
+ {
+  "id": 10,
+  "status": "used",
+  "title": "What If Your Body Healed 100x Faster?",
+  "ability": "healing",
+  "category": "body",
+  "hook": "You get a paper cut, and it closes before the blood even reaches your fingertip.",
+  "rule": "Healing takes energy. Healing 100x faster means you're hungry all the time.",
+  "beats": [
+   "Scraped knees heal before you stand up",
+   "You eat six meals before lunch",
+   "You break a finger and it heals before anyone can straighten it, so it's crooked forever"
+  ],
+  "climax": "Your friend Mia needs blood after an accident and you're a match. Giving blood will leave you weak and starving before the big race. The race... or Mia.",
+  "ending": "You give it, she recovers, and she brings you the biggest sandwich in the world. You finish it in four bites.",
+  "loop": "Ends with another paper cut.",
+  "facts": [
+   "Healing burns extra energy and protein, which is why recovering patients need more food",
+   "A broken bone that heals in the wrong position stays that way unless it's broken and reset"
+  ],
+  "visuals": "paper cut, plates of food, finger splint, hospital, sandwich",
+  "ep": 18
+ },
+ {
+  "id": 39,
+  "status": "used",
+  "title": "What If You Never Felt Hungry Again?",
+  "ability": "hunger",
+  "category": "body",
+  "opening": "What If You Never Felt Hungry Again? Then: You forget lunch. Then dinner. Then breakfast.",
+  "early_wins": "You save so much time and money, and you never get grumpy.",
+  "mystery_and_reveal": "Hunger is a signal: a hormone called ghrelin, made mostly in your stomach, tells your brain it's time to eat. Without that alarm, your body runs out of fuel and nothing warns you.",
+  "climax": "On the day of your big final, you faint, and your friend Mia has to choose between finishing her own exam and helping you.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Ghrelin, a hormone mostly made in the stomach, is often called the hunger hormone"
+  ],
+  "ep": 19
+ },
+ {
+  "id": 11,
+  "status": "used",
+  "title": "What If You Never Felt Fear?",
+  "ability": "fear (switched off)",
+  "category": "brain",
+  "hook": "You pet a shark. On purpose. And you smile while doing it.",
+  "rule": "Fear is what keeps you alive. Without it, you have no brakes.",
+  "beats": [
+   "Roller coasters are boring; public speaking is easy",
+   "You walk up to a growling dog to say hi, and get bitten",
+   "Your friends stop letting you drive"
+  ],
+  "climax": "Your little brother Sam is stuck on a roof during a storm. You'd climb without a second thought, but no fear also means no caution. Rush in... or slow down and do it right.",
+  "ending": "For the first time, you choose to be careful. You use the ladder, tie the rope and bring Sam down safe. Turns out bravery isn't having no fear; it's choosing how to act.",
+  "loop": "Ends at the aquarium, a shark swimming past.",
+  "facts": [
+   "Fear is driven largely by a small brain region called the amygdala",
+   "A real patient with a damaged amygdala walked up to snakes and spiders without fear"
+  ],
+  "visuals": "aquarium, roller coaster, stage, dog, storm, roof, ladder",
+  "ep": 20
+ },
+ {
+  "id": 40,
+  "status": "used",
+  "title": "What If Your Body Glowed in the Dark?",
+  "ability": "bioluminescence",
+  "category": "body",
+  "opening": "What If Your Body Glowed in the Dark? Then: Lights off, and you're the night light.",
+  "early_wins": "You never need a torch, and your sleepovers are legendary.",
+  "mystery_and_reveal": "Here's the weird part: your body already glows. Scientists in Japan photographed it, about a thousand times too faint for your eyes to see. Turn that up, and you can never hide in the dark.",
+  "climax": "During hide and seek at night, a little kid gets lost in the woods. You're the only one he can follow.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "The human body emits visible light about 1,000 times too weak for our eyes to see (measured in a 2009 study in Japan)"
+  ],
+  "ep": 21
+ },
+ {
+  "id": 12,
+  "status": "used",
+  "title": "What If You Could See in the Dark?",
+  "ability": "night vision",
+  "category": "senses",
+  "hook": "The power goes out at a sleepover. Everyone screams. You calmly walk over and hand everyone a snack.",
+  "rule": "Eyes built for darkness are crushed by bright light. Sunlight is blinding.",
+  "beats": [
+   "You read comics under the blanket with no torch",
+   "Daylight hurts, so you wear sunglasses even indoors",
+   "In photos your eyes glow like a cat's"
+  ],
+  "climax": "A stadium loses power during a match, and thousands panic in the dark. Guiding people out means facing the emergency floodlights when they come back on. Your eyes... or the crowd.",
+  "ending": "You guide a whole section out safely, then the lights snap on and everything goes white. When your eyes recover, the first thing you see is a crowd clapping.",
+  "loop": "Ends at the sleepover when the lights go out again.",
+  "facts": [
+   "Cats can see in about one-sixth of the light humans need",
+   "Your eyes take around 20 to 30 minutes to fully adjust to darkness"
+  ],
+  "visuals": "dark bedroom drawn in blue tones, glowing eyes, stadium, floodlights",
+  "ep": 22
+ },
+ {
+  "id": 41,
+  "status": "used",
+  "title": "What If Your Skin Couldn't Be Cut?",
+  "ability": "unbreakable skin",
+  "category": "body",
+  "opening": "What If Your Skin Couldn't Be Cut? Then: You trip onto broken glass and stand up without a scratch.",
+  "early_wins": "Bike crashes, kitchen knives, cactus hugs: nothing gets through.",
+  "mystery_and_reveal": "But doctors can't get through either. No injections, no stitches, no surgery. Skin is your body's largest organ and its main shield, and yours now shields you from help too.",
+  "climax": "Your appendix is about to burst, and the only way in is... there isn't one. Or is there?",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Skin is the body's largest organ"
+  ],
+  "ep": 23
+ },
+ {
+  "id": 13,
+  "status": "used",
+  "title": "What If Your Memory Reset Every Day?",
+  "ability": "memory (resets daily)",
+  "category": "brain",
+  "hook": "You wake up and there's a note on your hand in your own handwriting: 'Read this first. Don't panic.'",
+  "rule": "Every morning, yesterday is gone. But skills stay, even when the memories don't.",
+  "beats": [
+   "Your room is covered in sticky notes you wrote to yourself",
+   "You play piano perfectly but can't remember learning",
+   "Every day, you meet your best friend for the first time"
+  ],
+  "climax": "Today is Mom's birthday. You find a half-finished gift you've been building in secret for weeks, with no memory of it. Finish it from your notes... or give up and buy something.",
+  "ending": "You follow your own notes, finish it, and Mom cries. You won't remember tonight, so you write one more note: 'She loved it.'",
+  "loop": "Ends with you writing on your hand, the note from the opening.",
+  "facts": [
+   "People who can't form new memories can still learn new skills, like drawing or puzzles, without remembering practising",
+   "Memories are formed with help from a brain region called the hippocampus"
+  ],
+  "visuals": "hand note, sticky notes wall, piano, gift box, birthday cake",
+  "ep": 24
+ },
+ {
+  "id": 42,
+  "status": "used",
+  "title": "What If You Had No Fingerprints?",
+  "ability": "fingerprints",
+  "category": "body",
+  "opening": "What If You Had No Fingerprints? Then: Your phone refuses to recognize you. So does the airport.",
+  "early_wins": "Mystery novels hate you. Every border crossing takes three hours.",
+  "mystery_and_reveal": "A tiny number of families really are born without fingerprints. Doctors nicknamed it 'immigration delay disease'. Fingerprints also help your fingers grip.",
+  "climax": "Your friend is wrongly blamed for something based on fingerprints at the scene, and you're the only one who can prove how fingerprints actually work.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "A very rare condition called adermatoglyphia means people are born without fingerprints"
+  ],
+  "ep": 25
+ },
+ {
+  "id": 14,
+  "status": "used",
+  "title": "What If Your Voice Was 100x Louder?",
+  "ability": "voice volume",
+  "category": "body",
+  "hook": "You sneeze in the library. Every window in the building shatters.",
+  "rule": "You can't turn it down. Whispering is your new full volume.",
+  "beats": [
+   "You call your friend from across the city without a phone",
+   "Singing in the shower sets off car alarms",
+   "Nobody invites you to the movies anymore"
+  ],
+  "climax": "On a ski trip you spot a group of hikers walking toward an avalanche zone, too far away to reach. Shouting could save them, but it could also shake loose the snow above you. Stay quiet... or shout.",
+  "ending": "You aim the shout carefully, they turn around, and the snow holds. They wave. You wave back, quietly.",
+  "loop": "Ends in the library, feeling a sneeze coming.",
+  "facts": [
+   "Sound can shatter glass when it hits the glass's exact resonant frequency loudly enough",
+   "A jet engine up close is about 140 decibels, enough to damage hearing instantly"
+  ],
+  "visuals": "library, shattering glass, sound rings, mountain, avalanche",
+  "ep": 26
+ },
+ {
+  "id": 43,
+  "status": "used",
+  "title": "What If You Could Hear Your Eyes Move?",
+  "ability": "inner-ear sound",
+  "category": "senses",
+  "opening": "What If You Could Hear Your Eyes Move? Then: You look left. Something in your head goes 'shhk'.",
+  "early_wins": "You hear your own heartbeat, your footsteps echo inside your skull, and chewing sounds like an avalanche.",
+  "mystery_and_reveal": "This is real: a tiny hole in the bone of the inner ear can let people hear their own eyeballs moving. Now silence doesn't exist for you.",
+  "climax": "In a silent exam hall you can hear a classmate's quiet, panicked breathing. Say something, or stay focused on your own test.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Superior canal dehiscence, a thin spot in the inner-ear bone, can make people hear their own eye movements and heartbeat"
+  ],
+  "ep": 27
+ },
+ {
+  "id": 15,
+  "status": "used",
+  "title": "What If You Could Never Feel Cold?",
+  "ability": "cold (can't feel it)",
+  "category": "senses",
+  "hook": "Everyone's shivering at the frozen lake. You're swimming in shorts, eating ice cream.",
+  "rule": "You can't feel cold, but your body still freezes. Nothing warns you.",
+  "beats": [
+   "Snowball fights are your sport now",
+   "You save a fortune on jackets",
+   "Your fingers turn white and you don't notice until a friend grabs your hand"
+  ],
+  "climax": "A dog falls through the ice. You're the only one who doesn't hesitate, but cold water can make you lose control of your arms within minutes. Stay on shore... or go in, knowing your clock is running.",
+  "ending": "You go in, grab the dog and get out with seconds to spare. Then everyone wraps you in every blanket they own, and the dog won't leave your side.",
+  "loop": "Ends back in the frozen lake with ice cream.",
+  "facts": [
+   "In icy water there's a '1-10-1' rule: about 1 minute to control your breathing, 10 minutes of useful movement, and up to an hour before you pass out",
+   "Frostbite can start without pain once the area goes numb"
+  ],
+  "visuals": "frozen lake, ice cream, snowball fight, cracked ice, blankets",
+  "ep": 28
+ },
+ {
+  "id": 44,
+  "status": "used",
+  "title": "What If You Had Perfect Pitch?",
+  "ability": "perfect pitch",
+  "category": "senses",
+  "opening": "What If You Had Perfect Pitch? Then: The microwave beeps and you say, 'That's a B flat.'",
+  "early_wins": "You can sing any note, tune any guitar, and name every car horn.",
+  "mystery_and_reveal": "Only about one person in ten thousand has perfect pitch. But it means every slightly out-of-tune song is physically painful to listen to.",
+  "climax": "Your best friend asks you to judge her first live performance, and she's a little off key. Honest, or kind?",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Perfect pitch is estimated to occur in about 1 in 10,000 people"
+  ],
+  "ep": 29
+ },
+ {
+  "id": 16,
+  "status": "used",
+  "title": "What If You Only Ate Once a Year?",
+  "ability": "metabolism (one meal a year)",
+  "category": "body",
+  "hook": "It's your one meal day. You start with forty pizzas. That's the appetizer.",
+  "rule": "A whole year of energy has to fit in one day. That's around seven hundred thousand calories.",
+  "beats": [
+   "You save hours every day, no breakfast, no lunch",
+   "Every dinner party is awkward because you just sit there",
+   "Your meal day costs as much as a car"
+  ],
+  "climax": "Your best friend's wedding lands on your one meal day. Eat your year's food... or give the toast you promised.",
+  "ending": "You give the toast, people cry, and the chef sends a whole buffet to your table afterwards. Everyone watches you eat it like a sport.",
+  "loop": "Ends with the next meal day starting, pizza boxes stacked to the ceiling.",
+  "facts": [
+   "An average adult needs roughly two thousand calories a day, about seven hundred thousand a year",
+   "A normal stomach holds about a litre comfortably but can stretch to around four"
+  ],
+  "visuals": "pizza tower, calendar, dinner party, wedding, buffet",
+  "ep": 30
+ },
+ {
+  "id": 45,
+  "status": "used",
+  "title": "What If You Were Allergic to Water?",
+  "ability": "water allergy",
+  "category": "body",
+  "opening": "What If You Were Allergic to Water? Then: Rain is your enemy. So is the shower.",
+  "early_wins": "You become an expert at wet wipes and umbrellas, and swimming is gone forever.",
+  "mystery_and_reveal": "An extremely rare condition makes skin break out in itchy hives when it touches water, even your own sweat or tears. So crying hurts.",
+  "climax": "Your little brother falls into a pool and nobody else sees. Jumping in means hours of burning skin.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Aquagenic urticaria, a reaction to water on the skin, is extremely rare"
+  ],
+  "ep": 31
+ },
+ {
+  "id": 17,
+  "status": "planned",
+  "title": "What If You Could Run at 100 km/h?",
+  "ability": "running speed",
+  "category": "body",
+  "hook": "You miss the bus. You're waiting at the next stop when it arrives.",
+  "rule": "Your legs are fast. Your shoes, your lungs and the air aren't ready.",
+  "beats": [
+   "Shoes melt in a week",
+   "At that speed, air pushes against you like a storm",
+   "Bugs hit your face like tiny rocks"
+  ],
+  "climax": "An ambulance is stuck in traffic and your friend Leo needs his allergy medicine across town now. Running there means destroying your knees on the road. Your knees... or Leo.",
+  "ending": "You get there in time, Leo's fine, and you limp home in borrowed slippers. Leo pays for the bus.",
+  "loop": "Ends at the bus stop again, the bus pulling away.",
+  "facts": [
+   "Usain Bolt's top speed was about 44 kilometers per hour",
+   "When you run, each foot hits the ground with several times your body weight"
+  ],
+  "visuals": "bus, speed lines, melting shoes, traffic jam, ambulance"
+ },
+ {
+  "id": 46,
+  "status": "planned",
+  "title": "What If You Could Smell Diseases?",
+  "ability": "disease smell",
+  "category": "senses",
+  "opening": "What If You Could Smell Diseases? Then: You hug your grandpa and something smells wrong.",
+  "early_wins": "You can smell a cold coming, a fever starting, someone who's stressed.",
+  "mystery_and_reveal": "A woman in Scotland noticed her husband's smell changed years before he was diagnosed with Parkinson's, and scientists later confirmed the disease really has a smell. But how do you tell someone what you smelled?",
+  "climax": "You smell it on your teacher, who seems totally fine. Say something and look crazy, or say nothing.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "A woman in Scotland could smell Parkinson's disease, and researchers have since studied the scent"
+  ]
+ },
+ {
+  "id": 18,
+  "status": "planned",
+  "title": "What If You Could Taste 100x Stronger?",
+  "ability": "taste",
+  "category": "senses",
+  "hook": "You sip a glass of milk and say, 'This cow was stressed.'",
+  "rule": "Every flavour is turned up a hundred times. Most food is too much.",
+  "beats": [
+   "You become the world's best chef overnight",
+   "Coffee tastes like drinking lightning",
+   "A single chili flake makes you cry"
+  ],
+  "climax": "At a wedding you taste a tiny trace of peanut in the cake. Your best friend Mia has a severe peanut allergy and is about to take a bite. Stay polite... or embarrass the host in front of everyone.",
+  "ending": "You knock the fork out of her hand. The host checks, and the baker did use peanut oil. Mia buys you dessert. You can taste exactly how grateful she is.",
+  "loop": "Ends with another glass of milk.",
+  "facts": [
+   "About a quarter of people are 'supertasters', who taste bitterness much more strongly",
+   "Most people have a few thousand taste buds"
+  ],
+  "visuals": "milk glass, chef kitchen, chili flake, wedding cake"
+ },
+ {
+  "id": 47,
+  "status": "planned",
+  "title": "What If You Could Never Get Sick?",
+  "ability": "immunity",
+  "category": "body",
+  "opening": "What If You Could Never Get Sick? Then: Your whole class is out with flu. You show up with soup for everyone.",
+  "early_wins": "Perfect attendance. You lick a subway pole for a dare.",
+  "mystery_and_reveal": "But a stronger immune system isn't always better. Allergies are your immune system overreacting, and an immune system that's too aggressive can start attacking your own body.",
+  "climax": "A new illness spreads through your town, and scientists want your blood to study. It means months of tests instead of the trip of your life.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Allergies are the immune system overreacting to something harmless"
+  ]
+ },
+ {
+  "id": 19,
+  "status": "planned",
+  "title": "What If Your Brain Worked 10x Harder?",
+  "ability": "brain power",
+  "category": "brain",
+  "hook": "You solve the Rubik's cube your friend handed you before he finishes saying 'try this'.",
+  "rule": "Your brain already uses a fifth of your energy. Ten times more means you overheat and starve.",
+  "beats": [
+   "Homework takes seconds",
+   "You eat constantly and still lose weight",
+   "You get headaches from overheating, so you study with ice on your head"
+  ],
+  "climax": "A blackout hits the hospital during a storm and the backup system is failing. You can figure out the fix, but thinking that hard for that long could make you pass out. The quiz scholarship exam tomorrow... or the hospital.",
+  "ending": "You fix it and wake up in the same hospital, with a nurse handing you a giant plate of food. Best meal of your life.",
+  "loop": "Ends with a Rubik's cube in your hands.",
+  "facts": [
+   "The brain is about 2% of your body weight but uses about 20% of your energy",
+   "The idea that we only use 10% of our brain is a myth"
+  ],
+  "visuals": "Rubik's cube, ice pack, food, hospital, glowing brain icon"
+ },
+ {
+  "id": 48,
+  "status": "planned",
+  "title": "What If You Never Forgot a Face?",
+  "ability": "face memory",
+  "category": "brain",
+  "opening": "What If You Never Forgot a Face? Then: You spot your kindergarten teacher in a crowd of thousands, twenty years later.",
+  "early_wins": "Strangers seem familiar because you really have seen them before, once, on a bus, in 2019.",
+  "mystery_and_reveal": "A small group of people called super-recognizers can do this, and some police forces actually hire them. But you can't forget anyone, including the bully.",
+  "climax": "A lost child's photo is on the news, and you're sure you saw that face at the train station this morning.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Super-recognizers, roughly the top 1-2% at remembering faces, are used by some police forces"
+  ]
+ },
+ {
+  "id": 20,
+  "status": "planned",
+  "title": "What If You Could Breathe Underwater?",
+  "ability": "breathing underwater",
+  "category": "body",
+  "hook": "You take a nap at the bottom of a swimming pool. The lifeguard does not take it well.",
+  "rule": "Water holds far less oxygen than air. You need to keep moving water over your gills, and on land your skin dries out.",
+  "beats": [
+   "You explore coral reefs for hours",
+   "Out of the water you need a spray bottle every ten minutes",
+   "A hot day is your worst nightmare"
+  ],
+  "climax": "A diver gets tangled in a fishing net deep underwater, running out of air. Freeing him means staying down long after your skin starts to hurt from the cold. Your comfort... or a stranger.",
+  "ending": "You free him and share a smile through his mask. Back on the beach he hands you his water bottle. You pour it on your head.",
+  "loop": "Ends at the bottom of the pool, eyes closing for a nap.",
+  "facts": [
+   "Water holds dozens of times less oxygen than the same amount of air",
+   "Fish breathe by pushing water over their gills, which is why many can't stop swimming"
+  ],
+  "visuals": "pool bottom, gills, coral, spray bottle, fishing net, beach"
+ },
+ {
+  "id": 49,
+  "status": "planned",
+  "title": "What If You Couldn't Recognize Faces?",
+  "ability": "face blindness",
+  "category": "brain",
+  "opening": "What If You Couldn't Recognize Faces? Then: Your own mom walks past you in the supermarket, and you don't know her.",
+  "early_wins": "You learn people by their shoes, their laugh, the way they walk.",
+  "mystery_and_reveal": "About one person in fifty has some face blindness, called prosopagnosia. They see faces fine, but their brain can't tell them apart.",
+  "climax": "At your graduation, everyone looks the same, and you have to find your dad in a crowd before he leaves.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Face blindness (prosopagnosia) affects roughly 2% of people to some degree"
+  ]
+ },
+ {
+  "id": 21,
+  "status": "planned",
+  "title": "What If Your Eyes Could Zoom 100x?",
+  "ability": "vision zoom",
+  "category": "senses",
+  "hook": "You read your friend's text from across the stadium. He's typing 'don't tell anyone'.",
+  "rule": "You see everything. Including what you really shouldn't.",
+  "beats": [
+   "You spot a bird's nest on a skyscraper roof",
+   "Eye strain gives you headaches after an hour",
+   "You accidentally see your surprise party planning three blocks away"
+  ],
+  "climax": "At the beach, you spot a kid being pulled out by a rip current far away, during your final round of the photo competition. Take the winning shot... or run and point the lifeguards to the kid.",
+  "ending": "You run, the lifeguards reach the kid, and someone else takes a photo of you pointing. That photo wins the competition.",
+  "loop": "Ends at the stadium, zooming in on a phone screen.",
+  "facts": [
+   "Eagles can see about four to five times sharper than humans",
+   "Rip currents can pull swimmers away from shore faster than an Olympic swimmer"
+  ],
+  "visuals": "stadium, zoom circle overlay, skyscraper nest, beach, rip current"
+ },
+ {
+  "id": 50,
+  "status": "planned",
+  "title": "What If You Had a Tail?",
+  "ability": "tail",
+  "category": "body",
+  "opening": "What If You Had a Tail? Then: Your tail wags every time your crush walks by. Everyone sees it.",
+  "early_wins": "Perfect balance, a third hand for snacks, and you can never hide being excited.",
+  "mystery_and_reveal": "Every human starts with a tail. Before you were born you had one for a few weeks, and your tailbone is what's left of it.",
+  "climax": "Your friend is about to fall off a climbing wall, and your tail can reach where your arms can't. But it'll hurt.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Human embryos have a tail for a few weeks; the tailbone is its remnant"
+  ]
+ },
+ {
+  "id": 22,
+  "status": "planned",
+  "title": "What If You Felt Every Emotion 10x Stronger?",
+  "ability": "emotions",
+  "category": "brain",
+  "hook": "A dog food advert comes on and you're sobbing on a crowded bus.",
+  "rule": "Every feeling hits ten times harder, the good ones and the bad ones.",
+  "beats": [
+   "A joke makes you laugh until you can't breathe",
+   "A single bad grade feels like the end of the world",
+   "Love songs are now dangerous"
+  ],
+  "climax": "Your best friend Leo is moving away tomorrow. Saying goodbye will hurt ten times more than for anyone else. Skip the goodbye... or go anyway.",
+  "ending": "You go, you both cry, and it hurts like nothing ever has. But the hug feels ten times better too.",
+  "loop": "Ends on the bus, a dog food advert starting.",
+  "facts": [
+   "Emotional tears have a different chemical makeup from tears caused by onions",
+   "Strong emotions trigger adrenaline, which speeds up your heart and breathing"
+  ],
+  "visuals": "bus, tears, laughter, report card, airport goodbye"
+ },
+ {
+  "id": 51,
+  "status": "planned",
+  "title": "What If Your Arms Could Think for Themselves?",
+  "ability": "octopus arms",
+  "category": "body",
+  "opening": "What If Your Arms Could Think for Themselves? Then: Your left hand finishes your homework while you're still asleep.",
+  "early_wins": "Each arm has its own opinions: one wants pizza, one wants salad.",
+  "mystery_and_reveal": "Octopuses actually work like this. About two-thirds of their brain cells are in their arms, so each arm can make its own decisions. Now your arms argue with you.",
+  "climax": "At the climbing gym, your friend falls, and your arms disagree about whether to catch him.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "About two-thirds of an octopus's neurons are in its arms"
+  ]
+ },
+ {
+  "id": 23,
+  "status": "planned",
+  "title": "What If You Could Hold Your Breath for an Hour?",
+  "ability": "breath holding",
+  "category": "body",
+  "hook": "You win the swimming pool breath-holding contest. The second-place kid gave up forty minutes ago.",
+  "rule": "Your lungs last an hour, but the rest of you still gets cold, scared and tired underwater.",
+  "beats": [
+   "You watch a whole movie underwater",
+   "Lifeguards hate you",
+   "Your record is longer than any human's, and nobody believes you"
+  ],
+  "climax": "Your friend's car keys and phone fall to the bottom of a deep, dark quarry lake, and so does his little sister's beloved teddy bear. You can only search for one before you're too cold. The keys and phone... or the bear.",
+  "ending": "You come up with the bear. She hugs it soaking wet. Your friend sighs and orders new keys.",
+  "loop": "Ends at the pool contest starting again.",
+  "facts": [
+   "The record for holding your breath is over 24 minutes, after breathing pure oxygen first",
+   "Cold water triggers the 'diving reflex', which slows your heart to save oxygen"
+  ],
+  "visuals": "swimming pool, stopwatch, quarry lake, teddy bear"
+ },
+ {
+  "id": 52,
+  "status": "planned",
+  "title": "What If You Never Got Tired Running?",
+  "ability": "endurance",
+  "category": "body",
+  "opening": "What If You Never Got Tired Running? Then: You go for a jog after breakfast and come home for dinner.",
+  "early_wins": "You win every marathon. You run to school, to the next town, to the beach.",
+  "mystery_and_reveal": "Humans already are the best long-distance runners on Earth, because we sweat so well. Our ancestors could chase animals until they collapsed from heat. But never feeling tired means never knowing when your joints are breaking down.",
+  "climax": "A wildfire blocks the only road out of town, and someone has to run to the next village for help.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Humans are exceptional endurance runners, partly because we cool down by sweating"
+  ]
+ },
+ {
+  "id": 24,
+  "status": "planned",
+  "title": "What If You Could See Ultraviolet?",
+  "ability": "UV vision",
+  "category": "senses",
+  "hook": "You look at a plain yellow flower and see glowing landing strips painted on it for bees.",
+  "rule": "You see a hidden layer of the world, but UV light is also what damages eyes.",
+  "beats": [
+   "You spot exactly where your friend missed with sunscreen",
+   "Fake money looks obviously fake to you",
+   "Sunny days are dazzling, so you need special glasses"
+  ],
+  "climax": "Your little brother Sam's favourite cat goes missing at night. Searching with a UV torch means staring at UV light that could hurt your eyes. Protect your eyes... or find the cat.",
+  "ending": "You spot the cat's glowing trail, find her stuck under a shed, and Sam names his next kitten after you.",
+  "loop": "Ends looking at a yellow flower in the garden.",
+  "facts": [
+   "Many flowers have ultraviolet patterns that guide bees to nectar",
+   "Some people whose eye lens has been removed in surgery can see a little ultraviolet light"
+  ],
+  "visuals": "flower with glowing UV pattern, sunscreen patches, UV torch, cat"
+ },
+ {
+  "id": 53,
+  "status": "planned",
+  "title": "What If You Could Jump 10x Higher?",
+  "ability": "jumping",
+  "category": "body",
+  "opening": "What If You Could Jump 10x Higher? Then: You jump for a basketball and land on the school roof.",
+  "early_wins": "Shortcuts over buildings, fruit from the top of the tree, the end of every elevator.",
+  "mystery_and_reveal": "A flea can jump many times its own body length. But what goes up comes down: landing from ten times higher hits your knees with enormous force.",
+  "climax": "A kitten is stuck on a high ledge. Getting it means a landing your knees might not survive.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Fleas can jump many times their own body length"
+  ]
+ },
+ {
+  "id": 25,
+  "status": "planned",
+  "title": "What If Your Hair Grew 100x Faster?",
+  "ability": "hair growth",
+  "category": "body",
+  "hook": "You get a fresh haircut in the morning. By lunch you have a ponytail.",
+  "rule": "Hair growth uses protein. Growing this fast, your body is always running low.",
+  "beats": [
+   "Barbers know you by name, and you go three times a day",
+   "You sell your hair for wigs and make a fortune",
+   "Your eyebrows need trimming before every exam"
+  ],
+  "climax": "A kids' cancer charity collects hair for wigs, and you could donate enough for dozens of kids. But it's the day of your big photo shoot as a model. The shoot... or the kids.",
+  "ending": "You donate, and by evening it's grown back anyway. A little girl sends you a photo in her new wig. Best photo shoot you've ever had.",
+  "loop": "Ends in the barber's chair, morning, fresh haircut.",
+  "facts": [
+   "Hair normally grows about a centimetre a month",
+   "Hair is made of keratin, a protein, so growing it uses up protein from your diet"
+  ],
+  "visuals": "barber chair, clock, ponytail, wigs, photo shoot"
+ },
+ {
+  "id": 54,
+  "status": "planned",
+  "title": "What If Your Skin Showed Your Feelings?",
+  "ability": "color-changing skin",
+  "category": "body",
+  "opening": "What If Your Skin Showed Your Feelings? Then: Your crush says hi and you turn bright pink. Not your cheeks. All of you.",
+  "early_wins": "No more lying about being fine. Poker is impossible.",
+  "mystery_and_reveal": "Octopuses and cuttlefish change color in a split second using cells called chromatophores. Humans have a small version: blushing. Now everyone can read you.",
+  "climax": "Your best friend asks if you like her new song. Your skin answers before you can.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Octopuses and cuttlefish change skin color using cells called chromatophores"
+  ]
+ },
+ {
+  "id": 26,
+  "status": "planned",
+  "title": "What If Your Balance Was Perfect?",
+  "ability": "balance",
+  "category": "senses",
+  "hook": "You walk across a rope between two buildings, eating a sandwich, on your first try.",
+  "rule": "Your inner ear is perfect, but it disagrees with your eyes, so cars and boats make you sick.",
+  "beats": [
+   "You stand on a moving bus without holding anything",
+   "You become a skateboard legend in a week",
+   "Car rides make you throw up because your eyes and ears disagree"
+  ],
+  "climax": "A cat is stuck on a thin, swaying branch over a river. You're the only one who can reach it, but it means missing the bus to your tightrope competition. The competition... or the cat.",
+  "ending": "You save the cat, and the owner drives you to the competition. You throw up in the car, then win.",
+  "loop": "Ends on the rope between buildings again.",
+  "facts": [
+   "Your sense of balance comes from fluid-filled tubes in your inner ear",
+   "Motion sickness happens when your eyes and inner ear send your brain different signals"
+  ],
+  "visuals": "rope between buildings, bus, skateboard, tree over river"
+ },
+ {
+  "id": 55,
+  "status": "planned",
+  "title": "What If You Could See Germs?",
+  "ability": "microscopic vision",
+  "category": "senses",
+  "opening": "What If You Could See Germs? Then: You look at your phone screen and put it down forever.",
+  "early_wins": "You see dust mites in your pillow, bacteria on your hands, mold before it shows.",
+  "mystery_and_reveal": "You carry roughly as many bacterial cells as human cells, tens of trillions, and most of them help you. But try eating anything once you've seen it.",
+  "climax": "Your grandma's kitchen has a contamination nobody can see, right before the family dinner.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "The human body hosts tens of trillions of bacteria, roughly as many as its own cells"
+  ]
+ },
+ {
+  "id": 27,
+  "status": "planned",
+  "title": "What If You Had 360-Degree Vision?",
+  "ability": "360 vision",
+  "category": "senses",
+  "hook": "Your teacher writes on the board and says, 'Who's texting?' You answer, without turning around.",
+  "rule": "Eyes on the sides of your head see everything, but they lose depth. You can't judge distance.",
+  "beats": [
+   "Nobody can ever sneak up on you",
+   "You can't catch a ball because you can't tell how far away it is",
+   "Pouring water into a glass is a disaster"
+  ],
+  "climax": "In a crowded mall, you see a little kid wander toward the escalator behind you while you're on stage collecting a prize. Accept the prize... or jump off stage.",
+  "ending": "You jump off, scoop the kid up before the escalator, and get the prize later from the mall manager, who doubles it.",
+  "loop": "Ends back in class, teacher asking 'who's texting?'",
+  "facts": [
+   "Rabbits and horses can see almost all the way around themselves",
+   "Judging depth needs two eyes looking at the same thing from slightly different angles"
+  ],
+  "visuals": "classroom, vision cone overlay, ball, mall stage, escalator"
+ },
+ {
+  "id": 56,
+  "status": "planned",
+  "title": "What If You Never Needed to Drink Water?",
+  "ability": "water",
+  "category": "body",
+  "opening": "What If You Never Needed to Drink Water? Then: You cross a desert with a sandwich and no bottle.",
+  "early_wins": "No thirst, no bathroom breaks, no water bills.",
+  "mystery_and_reveal": "Your body is about sixty percent water, and you'd normally survive only a few days without drinking. Thirst is the alarm that keeps you alive, and you've lost it.",
+  "climax": "On a long hike, your friends' water runs out. You have the only full bottles, and they're heavy.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "The human body is roughly 60% water",
+   "Most people can survive only a few days without water"
+  ]
+ },
+ {
+  "id": 28,
+  "status": "planned",
+  "title": "What If You Could Sense Electricity Like a Shark?",
+  "ability": "electroreception",
+  "category": "senses",
+  "hook": "You find your friend hiding in the dark during hide and seek because you can feel his heartbeat's electricity.",
+  "rule": "You feel every electric field, so cities feel like constant static.",
+  "beats": [
+   "You know which wires are live without a tester",
+   "Phones buzzing in pockets feel like bees",
+   "Thunderstorms give you a headache days in advance"
+  ],
+  "climax": "After a storm, a power line falls near a playground. You can feel exactly where the dangerous ground is, but getting close will feel like screaming in your head. Stay away... or guide the kids out safely.",
+  "ending": "You walk the kids out along the only safe path and the power company says you saved lives. That night, for the first time, the city feels quiet.",
+  "loop": "Ends at hide and seek in the dark.",
+  "facts": [
+   "Sharks can detect the tiny electric fields made by the muscles of their prey",
+   "Your own heart produces electrical signals, which is what an ECG measures"
+  ],
+  "visuals": "dark room, glowing electric field lines, wires, storm, playground"
+ },
+ {
+  "id": 57,
+  "status": "planned",
+  "title": "What If Half Your Brain Could Sleep at a Time?",
+  "ability": "half-brain sleep",
+  "category": "brain",
+  "opening": "What If Half Your Brain Could Sleep at a Time? Then: You sleep with one eye open. Literally.",
+  "early_wins": "You can rest while gaming, watch a movie while half asleep, and never lose a full night.",
+  "mystery_and_reveal": "Dolphins really do this. They sleep one half of the brain at a time, so they can keep swimming and breathing. But half-asleep you says the weirdest things.",
+  "climax": "Your little brother is scared of a storm. Sleeping fully means missing it if he needs you.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Dolphins sleep with one half of the brain at a time"
+  ]
+ },
+ {
+  "id": 29,
+  "status": "planned",
+  "title": "What If Your Metabolism Was 10x Faster?",
+  "ability": "metabolism",
+  "category": "body",
+  "hook": "You eat a whole birthday cake for breakfast and you're hungry again by nine.",
+  "rule": "Burning energy ten times faster means you're always hot, always hungry, and you crash if you skip a meal.",
+  "beats": [
+   "You never get cold",
+   "Food costs more than rent",
+   "At night your body slows down so much you can barely wake up"
+  ],
+  "climax": "You're on a mountain hike when a storm traps your group overnight with very little food. You need far more than anyone else. Eat your share... or give it to the kid who's shivering.",
+  "ending": "You give it, and you stay warm all night, so the kid sleeps leaning on you like a heater. Your fast metabolism finally has a point.",
+  "loop": "Ends at breakfast with a whole cake.",
+  "facts": [
+   "A hummingbird's heart can beat more than a thousand times a minute",
+   "Hummingbirds go into a deep energy-saving sleep called torpor at night"
+  ],
+  "visuals": "cake, fridge, mountain, storm, campfire"
+ },
+ {
+  "id": 58,
+  "status": "planned",
+  "title": "What If You Could Regrow Body Parts?",
+  "ability": "regeneration",
+  "category": "body",
+  "opening": "What If You Could Regrow Body Parts? Then: You lose a tooth, and a new one is there by lunch.",
+  "early_wins": "Broken bones, lost fingertips, bad knees: all replaceable.",
+  "mystery_and_reveal": "The axolotl, a Mexican salamander, can regrow whole legs, parts of its heart, even parts of its brain. Scientists study it to learn how. But regrowing takes huge amounts of energy.",
+  "climax": "Your friend loses a finger in an accident. Scientists say studying you could help him, if you give up a year of your life to tests.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Axolotls can regrow limbs and parts of organs"
+  ]
+ },
+ {
+  "id": 30,
+  "status": "planned",
+  "title": "What If You Could Taste With Your Hands?",
+  "ability": "taste through skin",
+  "category": "senses",
+  "hook": "You shake hands with a stranger and immediately know he had garlic bread for lunch.",
+  "rule": "Everything you touch, you taste. There's no off switch.",
+  "beats": [
+   "Holding the bus rail is the worst thing you've ever tasted",
+   "You can taste whether fruit is ripe just by touching it",
+   "Gloves are your best friend"
+  ],
+  "climax": "In a chemistry lab, you touch a bottle labelled water and taste something sharp and bitter: it's not water, and a classmate is about to drink from an identical bottle. Keep quiet and avoid looking weird... or knock it out of their hand.",
+  "ending": "You knock it away, the teacher tests it, and it's a cleaning chemical someone mislabeled. From then on, everyone lets you check their drinks.",
+  "loop": "Ends shaking hands with a stranger.",
+  "facts": [
+   "Catfish have taste buds all over their bodies",
+   "Octopuses taste with the suckers on their arms"
+  ],
+  "visuals": "handshake, taste icons popping, bus rail, fruit, lab bottles"
+ },
+ {
+  "id": 59,
+  "status": "planned",
+  "title": "What If Your Bones Were Made of Steel?",
+  "ability": "steel bones",
+  "category": "body",
+  "opening": "What If Your Bones Were Made of Steel? Then: You walk into a door frame and the door frame loses.",
+  "early_wins": "Nothing breaks: falls, crashes, football tackles.",
+  "mystery_and_reveal": "Steel is about four times denser than bone, so you're suddenly much heavier. Chairs break, floors creak, and you can never, ever swim again.",
+  "climax": "Your friend falls into a lake and you're the closest one. You'd sink like an anchor.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Steel is several times denser than bone"
+  ]
+ },
+ {
+  "id": 60,
+  "status": "planned",
+  "title": "What If You Could Feel Which Way Is North?",
+  "ability": "magnetic sense",
+  "category": "senses",
+  "opening": "What If You Could Feel Which Way Is North? Then: You've never been lost in your life. Not once.",
+  "early_wins": "You navigate forests, cities and cave tours with your eyes closed.",
+  "mystery_and_reveal": "Birds use Earth's magnetic field to migrate thousands of kilometers, and a 2019 study found human brainwaves react to magnetic changes too, even though we don't notice. Now magnets and phones make you dizzy.",
+  "climax": "Your class gets lost in a forest at night with dead phones, and you're the only compass.",
+  "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
+  "facts": [
+   "Many migrating birds can sense Earth's magnetic field"
+  ]
+ },
+ {
+  "id": 1,
+  "status": "planned",
+  "title": "What If You Couldn't Feel Pain?",
+  "ability": "pain (switched off)",
+  "category": "body",
+  "hook": "You lean on the stove to grab the salt. The whole kitchen smells like burning... and you only notice when your friend screams.",
+  "rule": "Pain is your body's alarm system. Without it, nothing tells you when you're getting hurt.",
+  "beats": [
+   "Football tackle, you get straight up and keep playing... with a broken wrist you won't discover for a week",
+   "You win every dare: ice bath, hot sauce, cactus hug",
+   "Your friends start checking YOU for injuries because you can't"
+  ],
+  "climax": "A pan of boiling oil tips toward your little brother Sam. You can grab it bare-handed without flinching, but your hands will be badly burned and you won't feel how bad. The trophy-winning pitching arm... or Sam.",
+  "ending": "You grab it, Sam is safe, and at the hospital the doctor asks how much it hurts. 'I don't know,' you say, which is the scariest answer there is.",
+  "loop": "Last line lands you back in the kitchen, leaning toward the stove again.",
+  "facts": [
+   "People born unable to feel pain (congenital insensitivity to pain) exist, and they often injure themselves without noticing",
+   "Your hand pulls away from a hot surface by a spinal reflex, before your brain even registers the pain"
+  ],
+  "visuals": "kitchen, smoke wisps, football field, cast on arm, ice bath, hospital",
+  "note": "A popular channel already made 'What if you couldn't feel pain?' with a twist where the pain goes to whoever loves you most. Ours must use a completely different twist (the science angle: pain is an alarm), never theirs."
+ },
+ {
+  "id": 61,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Hear Every Thought?",
+  "lane": "MIND",
+  "premise": "You hear every mind around you: a classroom sounds like a stadium, and you learn what people really think of you.",
+  "science": "Your brain already filters out most of what you hear (the cocktail party effect); without a filter, a crowd becomes noise you can't escape.",
+  "twist": "Out of thousands of voices, one thought is about you, and it isn't who you'd expect."
+ },
+ {
+  "id": 62,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could See 10 Seconds Into the Future?",
+  "lane": "MIND",
+  "premise": "You see everything ten seconds before it happens: every catch, every exam answer read off the teacher's face, every accident dodged.",
+  "science": "Your brain already predicts the world: what you see is a guess, built about a tenth of a second late.",
+  "twist": "You see something in ten seconds you can't stop, unless you change what you were about to do."
+ },
+ {
+  "id": 63,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Learn Anything in 10 Seconds?",
+  "lane": "MIND",
+  "premise": "Piano, Japanese, surgery, flying a plane: ten seconds each.",
+  "science": "Real learning physically rewires connections between brain cells; practice makes signals faster.",
+  "twist": "Knowing everything is easy; the hard part is that nobody needs to teach you anything anymore."
+ },
+ {
+  "id": 64,
+  "v": 2,
+  "status": "planned",
+  "title": "What If Your Brain Ran 1,000x Faster?",
+  "lane": "MIND",
+  "premise": "Thoughts run a thousand times faster: a one-minute conversation feels like seventeen hours.",
+  "science": "Your brain uses about a fifth of your body's energy while being about two percent of your weight.",
+  "twist": "The world becomes a frozen statue museum; one boring class lasts weeks."
+ },
+ {
+  "id": 65,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Delete Any Memory?",
+  "lane": "MIND",
+  "premise": "Erase embarrassment, heartbreak, a scary movie, with a tap.",
+  "science": "Memories are rebuilt every time you recall them; that's why they change.",
+  "twist": "You find a note in your own handwriting telling you not to delete one specific memory."
+ },
+ {
+  "id": 66,
+  "v": 2,
+  "status": "planned",
+  "title": "What If Everyone Could Hear Your Thoughts?",
+  "lane": "MIND",
+  "premise": "Your inner voice is on speaker for the whole world.",
+  "science": "Most people have an inner voice, but not everyone; some think mostly in pictures.",
+  "twist": "The reveal: everyone else's thoughts are just as weird as yours."
+ },
+ {
+  "id": 67,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Were 1,000x Stronger?",
+  "lane": "BODY",
+  "premise": "Strength times a thousand: you throw a car like a pillow and jump over buildings.",
+  "science": "Square-cube law and Newton's third law: pushing a truck pushes you back; your bones, the floor and your shoes become the limit.",
+  "twist": "You can't hug anyone, ever."
+ },
+ {
+  "id": 68,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Turn Invisible?",
+  "lane": "BODY",
+  "premise": "Total invisibility: walk into any concert, any vault, any locker room.",
+  "science": "To see, your retina has to absorb light; a perfectly invisible eye lets light pass straight through, so you'd be blind.",
+  "twist": "The moment you vanish, the world goes dark."
+ },
+ {
+  "id": 69,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Run at the Speed of Sound?",
+  "lane": "BODY",
+  "premise": "1,235 km/h on foot: London to Paris in fifteen minutes.",
+  "science": "Air resistance grows with the square of speed; a sonic boom; friction heats the air in front of you.",
+  "twist": "Every step you take breaks every window on the street."
+ },
+ {
+  "id": 70,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Fly?",
+  "lane": "BODY",
+  "premise": "You can fly like a bird.",
+  "science": "A human would need chest muscles about as big as your whole body to flap; birds have hollow bones and air sacs.",
+  "twist": "The only way it works changes your body completely."
+ },
+ {
+  "id": 71,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Teleport Anywhere?",
+  "lane": "BODY",
+  "premise": "Blink and you're in Tokyo, on Everest, on the Moon.",
+  "science": "Earth spins at up to 1,670 km/h and orbits the Sun at about 30 km a second; teleport across the planet and you keep your old speed.",
+  "twist": "You arrive in Tokyo moving at the speed of an airliner."
+ },
+ {
+  "id": 72,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Grew 1 Meter Every Day?",
+  "lane": "BODY",
+  "premise": "You grow a meter a day: day ten, you're taller than a house.",
+  "science": "Square-cube law: double your height and your weight goes up eight times; your heart has to pump blood higher every day.",
+  "twist": "Day forty: you're the tallest thing in the city and you can't lie down."
+ },
+ {
+  "id": 73,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Never Needed to Breathe?",
+  "lane": "BODY",
+  "premise": "No air needed: live underwater, walk on Mars, survive any smoke.",
+  "science": "Your cells still need oxygen; your body would need another source of energy.",
+  "twist": "The deep ocean is yours, and something down there notices you."
+ },
+ {
+  "id": 74,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Shrink to the Size of an Atom?",
+  "lane": "BODY",
+  "premise": "You shrink past cells, past viruses, to the size of an atom.",
+  "science": "Atoms are mostly empty space; at that size, light waves are bigger than you.",
+  "twist": "At the bottom, you can't see anything at all, because you're smaller than light."
+ },
+ {
+  "id": 75,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Freeze Time?",
+  "lane": "TIME",
+  "premise": "Snap your fingers and everything stops, except you.",
+  "science": "If time froze, light would freeze too: no light would reach your eyes, and air would be like stone.",
+  "twist": "Frozen time would be pitch black and you couldn't move."
+ },
+ {
+  "id": 76,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Rewind 10 Seconds?",
+  "lane": "TIME",
+  "premise": "Any mistake undone: the dropped phone, the awkward sentence, the missed goal.",
+  "science": "Your brain remembers things in rough chunks, not frame by frame.",
+  "twist": "You've already rewound this moment more times than you can remember."
+ },
+ {
+  "id": 77,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Lived Your Life Backwards?",
+  "lane": "TIME",
+  "premise": "You're born old and wise and grow younger every year.",
+  "science": "Your memories are tied to what's happened; living backwards you'd forget everything as you go.",
+  "twist": "At the end, a baby, and nobody remembers who you were."
+ },
+ {
+  "id": 78,
+  "v": 2,
+  "status": "planned",
+  "title": "What If One Second Lasted a Year?",
+  "lane": "TIME",
+  "premise": "Your sense of time slows down: every second feels like a year.",
+  "science": "Under adrenaline, people often remember time slowing down; the brain records more detail.",
+  "twist": "A one-minute song lasts sixty years."
+ },
+ {
+  "id": 79,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Stopped Aging Today?",
+  "lane": "TIME",
+  "premise": "You never age a day past today.",
+  "science": "Cells copy themselves with tiny errors; telomeres shorten every time a cell divides.",
+  "twist": "Year two hundred: you're the only one left who remembers the old world."
+ },
+ {
+  "id": 80,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Relived the Same Day Forever?",
+  "lane": "TIME",
+  "premise": "A time loop: you wake up to the same morning, forever.",
+  "science": "With unlimited practice, you could master any skill: experts often need thousands of hours.",
+  "twist": "Day 10,000: you finally find out why the loop started."
+ },
+ {
+  "id": 81,
+  "v": 2,
+  "status": "planned",
+  "title": "What If the Moon Disappeared?",
+  "lane": "WORLD",
+  "premise": "Tonight the Moon vanishes.",
+  "science": "Tides would shrink to about a third; the Moon steadies Earth's tilt, so over very long times seasons could swing wildly.",
+  "twist": "The night sky is darker than anyone alive has ever seen it."
+ },
+ {
+  "id": 82,
+  "v": 2,
+  "status": "planned",
+  "title": "What If Gravity Switched Off for 5 Seconds?",
+  "lane": "WORLD",
+  "premise": "Five seconds of zero gravity, everywhere.",
+  "science": "Earth spins at up to 1,670 km/h, so everything not attached keeps moving in a straight line; the atmosphere starts drifting away.",
+  "twist": "When gravity comes back, everything falls at once."
+ },
+ {
+  "id": 83,
+  "v": 2,
+  "status": "planned",
+  "title": "What If the Sun Went Out?",
+  "lane": "WORLD",
+  "premise": "The Sun switches off.",
+  "science": "Sunlight takes about eight minutes and twenty seconds to reach Earth; you wouldn't know for eight minutes.",
+  "twist": "Earth flies off in a straight line, and the oceans freeze from the top down."
+ },
+ {
+  "id": 84,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Fell Into a Black Hole?",
+  "lane": "WORLD",
+  "premise": "You fall into a black hole.",
+  "science": "Spaghettification: the pull on your feet is much stronger than on your head; time slows near it.",
+  "twist": "To everyone watching, you never fall in at all."
+ },
+ {
+  "id": 85,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Jumped Into a Hole Through Earth?",
+  "lane": "WORLD",
+  "premise": "A tunnel straight through the planet; you jump.",
+  "science": "With no air, the fall would take about 42 minutes, and you'd pop out the other side and fall back again.",
+  "twist": "You'd oscillate forever, unless something stops you."
+ },
+ {
+  "id": 86,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Visited Every Planet in One Day?",
+  "lane": "WORLD",
+  "premise": "A tour of the solar system: you step onto every planet for one minute.",
+  "science": "Venus' surface is hot enough to melt lead; on Jupiter there's no surface to stand on.",
+  "twist": "The best planet turns out to be the one you came from."
+ },
+ {
+  "id": 87,
+  "v": 2,
+  "status": "planned",
+  "title": "What If It Rained Every Day for a Year?",
+  "lane": "WORLD",
+  "premise": "A year of nonstop rain everywhere.",
+  "science": "Earth's water cycle is closed: the water has to come from somewhere.",
+  "twist": "The weirdest place on Earth becomes the desert."
+ },
+ {
+  "id": 88,
+  "v": 2,
+  "status": "planned",
+  "title": "What If Earth Had Rings Like Saturn?",
+  "lane": "WORLD",
+  "premise": "Earth has rings.",
+  "science": "Rings would cast huge shadows on parts of the planet, changing the seasons there.",
+  "twist": "From the equator, the rings are an invisible thin line."
+ },
+ {
+  "id": 89,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Lived on Mars for a Year?",
+  "lane": "WORLD",
+  "premise": "A year living on Mars.",
+  "science": "Mars gravity is about 38% of Earth's; a year there is 687 Earth days; no magnetic field.",
+  "twist": "Coming home is the hardest part: your body forgot Earth."
+ },
+ {
+  "id": 90,
+  "v": 2,
+  "status": "planned",
+  "title": "What If the Ocean Disappeared?",
+  "lane": "WORLD",
+  "premise": "Every ocean drains in one night.",
+  "science": "The ocean makes most of the oxygen we breathe and holds most of Earth's heat.",
+  "twist": "The deepest point on Earth becomes a canyon you could walk into."
+ },
+ {
+  "id": 91,
+  "v": 2,
+  "status": "planned",
+  "title": "What If Earth Was the Size of the Moon?",
+  "lane": "WORLD",
+  "premise": "Earth shrinks to the Moon's size.",
+  "science": "Lower gravity: you could jump much higher, but the atmosphere would slowly leak away.",
+  "twist": "The best day of your life slowly runs out of air."
+ },
+ {
+  "id": 92,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Could Talk to Animals?",
+  "lane": "MIND",
+  "premise": "Every animal speaks to you: your dog, the pigeons, the spiders in your room.",
+  "science": "Many animals communicate in sounds we can't hear (elephants with infrasound, mice in ultrasound).",
+  "twist": "The animals have been waiting a very long time to tell humans something."
+ },
+ {
+  "id": 93,
+  "v": 2,
+  "status": "planned",
+  "title": "What If Your Shadow Could Move on Its Own?",
+  "lane": "MIND",
+  "premise": "Your shadow stops copying you.",
+  "science": "Shadows are just where your body blocks light; they move at the speed of light across far walls.",
+  "twist": "Your shadow is faster than light, and it's been trying to warn you."
+ },
+ {
+  "id": 94,
+  "v": 2,
+  "status": "planned",
+  "title": "What If You Swapped Bodies With Your Dog?",
+  "lane": "BODY",
+  "premise": "For one day you're your dog.",
+  "science": "Dogs see fewer colors, hear higher pitches and smell thousands of times better than people.",
+  "twist": "Your dog, in your body, does a better job at your life than you do."
+ },
+ {
+  "id": 95,
+  "v": 2,
+  "status": "used",
+  "ep": 32,
+  "title": "What If Earth Stopped Spinning?",
+  "lane": "WORLD",
+  "premise": "Earth stops spinning all at once.",
+  "science": "Equator spins at about 1,670 km/h; the air and oceans keep moving; without spin, oceans drain to the poles.",
+  "twist": "The North Pole is the safest place, and the world map gets redrawn."
+ }
 ]

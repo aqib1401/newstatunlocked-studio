@@ -1,5 +1,7 @@
 # New Stat Unlocked: Visual Style Guide
 
+> **v2 (from EP 32):** the character design, colours and typography below still apply. Where this file says every frame has an EP chip, a stat card in the first 1.5 s, slow-mo chips or "gentle push-ins and pans only", ENGINE_GUIDE.md's v2 directing rules win: no EP chip, optional HUD, title cards, 18 backgrounds, ambient motion and real camera moves.
+
 This is the look of every Short on the channel. Whoever animates (Claude Code, a plugin, or you by hand) follows this file. When this file and a reference image disagree, the reference image wins.
 
 Live style board (for humans): https://claude.ai/artifact/BfjP1LExwHtzBr8ApGjrkY

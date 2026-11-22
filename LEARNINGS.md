@@ -1,0 +1,76 @@
+# LEARNINGS: what the numbers say
+
+Read this before picking an idea. The daily run refreshes the table at the bottom (tools/learn.py) and adds a line to the log when something new is learned. Keep the log short: one dated line per real insight, no restating.
+
+## The v1 baseline (EP 1–31, Nov 9–22, 2026)
+
+- **YouTube:** every video landed between 926 and 1,442 views. Topic, length (45 s vs 90 s) and posting slot made no visible difference. A flat line like this means YouTube showed each Short to its test audience and none of them earned a wider push.
+- **Facebook:** average watch time was **5–18 seconds** on 50–90 second videos. Most people left within the first 10 seconds. The opening is where we lose them.
+- **Best of v1:** "10x Stronger" (1,442 YT, 1,184 FB) and "Never Felt Fear" (1,968 FB). Both are simple, desirable powers. The weakest were the small, curious ones (glow in the dark, see in the dark, never hungry).
+- **Sameness:** every v1 episode used the same skeleton (question → wins → "but then" → science → kid in danger → spoken countdown → "Yes or no?") and the same look (purple room or lab grid, hero standing mid-frame, HUD card on top).
+- **Title bug:** YouTube titles were posted as the description's long first sentence ("What if your voice was a hundred times louder, and even your…") instead of the short title. Fixed in PIPELINE.md v2.
+
+## What a breakout channel in our style does differently (Stickadox, studied Nov 22)
+
+Same stick-figure "What if" style, about as old as us, 42 videos, 11.8K subs. Its Shorts get 10K–1.3M views; 8 of its last 20 passed 100K.
+- **Huge fantasies at absurd scale:** IQ of a million, 99.999% light speed, live 10,000 years, Earth 100x bigger, aliens with IQ 1,000. Its two flops were grounded, realistic premises (a $1 cancer cure: 1.8K; the police wanted level: 8.6K).
+- **Long Shorts:** 130–160 seconds each, not 45–90.
+- **A mind-bending twist** in the middle (the universe is a simulation; no child born in 200 years; the aliens are hiding from something worse), then a choice with civilization-sized stakes where both sides are defensible.
+- **Cinematic visuals:** the subject fills the frame (a rocket in space, a launchpad at dusk, a clock for "time dilation"). The character is often tiny or absent. Big glowing keyword titles instead of game cards.
+- Their 10-second timer is their signature. We dropped ours so we don't look like a copy.
+
+## v2 bets (from EP 32)
+
+1. Bigger premises across four lanes (MIND, BODY, TIME, WORLD).
+2. Rotating story shapes and endings; no countdown; no kid-in-danger climax.
+3. Subject-first visuals with constant motion, 11 new backgrounds, title cards, real camera moves.
+4. Longer stories when the shape can carry them (testing 100 s+).
+5. Short, clean titles.
+
+Every v2 episode records `v`, `lane`, `shape`, `ending` and `duration_s` in episodes.json so the table below can tell us which bets pay.
+
+## Log (newest first)
+
+- 2026-11-22: v2 launched. Baseline above.
+
+## Data (auto-generated, don't edit by hand)
+
+<!-- AUTO:START -->
+_Updated 2026-11-22 18:49 UTC_
+
+**By version** (YouTube views, posts at least 48 h old)
+
+| version | videos | median views | best |
+|---|---|---|---|
+| 1 | 25 | 1264 | 1442 |
+
+**Every episode with YouTube stats** (newest first)
+
+| EP | title | v | lane | shape | length | YT views | likes | comments | FB views | FB avg watch | age h |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 25 | What If You Had No Fingerprints? | 1 |  |  | 52 s | 1093 | 22 | 3 | 454 | 6.7 s | 68.3 |
+| 24 | What If Your Memory Reset Every Day? | 1 |  |  | 86 s | 1012 | 27 | 1 | 209 | 10.9 s | 72.9 |
+| 23 | What If Your Skin Couldn't Be Cut? | 1 |  |  | 48 s | 1164 | 17 | 1 | 217 | 6.1 s | 92.4 |
+| 22 | What If You Could See in the Dark? | 1 |  |  | 88 s | 1264 | 29 | 3 | 250 | 4.1 s | 96.9 |
+| 21 | What If Your Body Glowed in the Dark? | 1 |  |  | 49 s | 1015 | 8 | 1 | 491 | 8.2 s | 116.2 |
+| 20 | What If You Never Felt Fear? | 1 |  |  | 86 s | 1211 | 21 | 1 | 1968 | 9.9 s | 120.9 |
+| 19 | What If You Never Felt Hungry Again? | 1 |  |  | 49 s | 1138 | 23 | 5 | 38 | 5.1 s | 140.3 |
+| 18 | What If You Healed 1,000,000x Faster? | 1 |  |  | 89 s | 1225 | 16 | 5 | 54 | 18.2 s | 144.8 |
+| 17 | What If You Weighed 10x Less? | 1 |  |  | 48 s | 1113 | 20 | 1 | 188 | 11.7 s | 164.3 |
+| 16 | What If You Could Hear 100x Better? | 1 |  |  | 94 s | 1342 | 25 | 1 | 0 | 0.0 s | 168.9 |
+| 15 | What If You Could Control Every Dream? | 1 |  |  | 50 s | 1347 | 24 | 5 | 360 | 9.1 s | 188.3 |
+| 14 | What If You Aged 10x Slower? | 1 |  |  | 86 s | 1303 | 25 | 4 | 4 | 43.6 s | 192.6 |
+| 13 | What If You Remembered Being a Baby? | 1 |  |  | 51 s | 1394 | 25 | 3 | 213 | 10.3 s | 192.8 |
+| 12 | What If You Shrank to the Size of an Ant? | 1 |  |  | 88 s | 1348 | 21 | 4 | 220 | 10.9 s | 193.7 |
+| 11 | What If You Could See Heat? | 1 |  |  | 49 s | 1291 | 23 | 1 | 212 | 5.3 s | 193.9 |
+| 10 | What If You Never Needed Sleep Again? | 1 |  |  | 90 s | 1211 | 12 | 3 | 93 | 1.9 s | 212.3 |
+| 9 | What If You Could See Sounds as Colors? | 1 |  |  | 51 s | 1254 | 26 | 3 | 56 | 10.3 s | 216.9 |
+| 8 | What If You Could Never Forget Anything? | 1 |  |  | 89 s | 1406 | 29 | 3 | 214 | 14.2 s | 236.3 |
+| 7 | What If You Felt Everyone Else's Pain? | 1 |  |  | 49 s | 1364 | 30 | 2 | 221 | 11.6 s | 240.8 |
+| 6 | What If You Grew 10x Taller? | 1 |  |  | 90 s | 1045 | 28 | 7 | 202 | 9.2 s | 260.3 |
+| 5 | What If Your Heart Beat Only Six Times a Minute? | 1 |  |  | 50 s | 1271 | 25 | 5 | 105 | 13.9 s | 264.8 |
+| 4 | What If You Could Smell 10,000x Better? | 1 |  |  | 0 s | 926 | 20 | 3 | 792 | 14.2 s | 284.4 |
+| 3 | What If You Never Blinked Again? | 1 |  |  | 0 s | 1337 | 32 | 1 | 162 | 5.0 s | 288.9 |
+| 2 | What If You Were 10x Stronger? | 1 |  |  | 0 s | 1442 | 46 | 3 | 1184 | 13.5 s | 308.3 |
+| 1 | What If Your Reaction Time Was 10x Faster? | 1 |  |  | 0 s | 1317 | 38 | 1 | 325 | 17.8 s | 312.8 |
+<!-- AUTO:END -->

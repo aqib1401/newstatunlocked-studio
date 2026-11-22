@@ -1,14 +1,15 @@
-# DAILY PIPELINE: New Stat Unlocked
+# DAILY PIPELINE: New Stat Unlocked (v2)
 
-This file is the complete instruction for the daily scheduled run. Nobody is watching: don't ask questions, don't wait for approval. Make the most reasonable call, keep going, and report at the end.
+This file is the complete instruction for each scheduled run. Nobody is watching: don't ask questions, don't wait for approval. Make the most reasonable call, keep going, and report at the end.
 
-Two runs happen every day at different times (see the scheduled tasks). Each run does two things:
-1. **Makes one new Short** (idea → script → voice → video) and commits it to this repo.
-2. **Publishes one Short per platform**: the oldest episode not yet posted there, to the New Stat Unlocked YouTube channel and Facebook page through Zernio.
+Two runs happen every day at different times. Each run:
+1. **Learns** from the latest numbers.
+2. **Makes one new Short** (idea → script → critic → voice → video) and commits it.
+3. **Publishes one Short per platform** to the New Stat Unlocked YouTube channel and Facebook page through Zernio.
 
-There's normally a one-video buffer: today's run publishes yesterday's video and renders tomorrow's. If a render fails, the channel still posts that day.
+**You have creative freedom.** The rules below protect variety and quality; inside them, pick the idea, the story shape, the length, the look and the ending that make *this* video the one a stranger can't scroll past. If an idea in the bank is weak, invent a better one. If you think a rule is hurting the videos, follow it anyway this run and say so in the report.
 
-Paths below assume the repo is cloned at `/home/claude/newstatunlocked-studio` (call it `$R`).
+Paths assume the repo is cloned at `/home/claude/newstatunlocked-studio` (`$R`).
 
 ---
 
@@ -20,95 +21,102 @@ cd $R && git config user.name "NSU Studio Bot" && git config user.email "bot@new
 git fetch origin main && git reset --hard origin/main
 ```
 
-Read these before doing anything else: `WRITING.md` (channel rules, MODE 1, MODE 2 and MODE 5) and `engine/ENGINE_GUIDE.md` (how to build `episode.json`). Ignore WRITING.md's MODE 4: this file replaces it.
+Read, in this order: `LEARNINGS.md`, `WRITING.md`, `engine/ENGINE_GUIDE.md`. They replace anything you remember about how this channel used to work (no countdowns, no kid-in-danger climax, no purple-room-only videos).
 
-Read `episodes.json` (it replaces WRITING.md's ALREADY MADE list). It's a list of every episode:
-```json
-{"ep": 1, "title": "...", "ability": "reaction time", "status": "rendered" | "posted", "video": "videos/ep01.mp4", "rendered_at": "...", "posted": {"youtube": null, "facebook": null}}
-```
+## 1. Learn (one call per platform, cheap)
 
-## 1. Pick today's idea
+1. Zernio `accounts_list` with `platform: "youtube"`, then `"facebook"`. The target on each platform is the account whose username or display name, lowercased with spaces removed, contains `newstatunlocked`. Never touch any other account (for example `dailystickchaos`).
+2. Zernio `analytics_get_analytics` for each target account: `account_id`, `limit: 40`, `sort_by: "date"`, `from_date`: 30 days ago. Save each raw result to a file (`/tmp/yt.json`, `/tmp/fb.json`) exactly as returned.
+3. `python3 $R/tools/learn.py --youtube /tmp/yt.json --facebook /tmp/fb.json`. This writes per-episode stats into `episodes.json` and refreshes the table in `LEARNINGS.md`.
+4. Read the table. If something new and real shows up (a lane, shape or length clearly beating the others over at least 3 videos each, a v2 video breaking past 5,000 views, Facebook watch time jumping), add **one dated line** to the Log in `LEARNINGS.md`. Don't add a line when nothing changed.
+
+## 2. Pick today's idea
 
 - Next episode number = highest `ep` in `episodes.json` + 1.
-- Open `ideas.json`. Take the **first idea with `"status": "planned"`** (they're in a deliberate order that mixes body, senses and brain abilities). Mark it `"status": "used"` and add `"ep": NN`.
-- Ideas come in two formats (older ones list hook/rule/beats/climax; newer ones list opening/early_wins/mystery_and_reveal/climax). Either way, it gives you the hook, the rule (the limit that makes the ability backfire), escalation beats, the climax choice, the ending and the loop, plus real facts. Treat it as a strong first draft: keep its core, improve anything that's weak, and only state facts you're confident are true. Drop any fact you're not sure of.
-- If there are no planned ideas left, invent one following WRITING.md MODE 1, using an ability not already in `episodes.json`. Then add 10 new planned ideas to `ideas.json` in the same format, so tomorrow's run has a queue again.
+- Look at the last 6 episodes in `episodes.json` (`lane`, `shape`, `ending`, `duration_s`) so today's video is different:
+  - not the same lane as both of the last two episodes
+  - not the same shape or ending as the previous episode
+  - over any 4 v2 episodes, at least one under 60 s and at least one over 100 s
+- **Exploit vs. explore.** Once there are at least 8 v2 episodes with 48 h+ of stats, about 2 runs in 3 should lean on what the table says works (best lane, shape, length), and 1 in 3 should test something new. Before that, explore freely.
+- Choose from `ideas.json`: ideas with `"status": "planned"` and `"v": 2` first. These are seeds (premise, real-science spine, possible twist), not scripts: keep what's strong, change what isn't. v1-style planned ideas (no `"v"`) are a backlog: use one only if it passes WRITING.md's playground test as a big, extreme fantasy.
+- You may invent a new idea instead if it's clearly stronger than everything in the bank (WRITING.md section 1). Add it to `ideas.json` as used.
+- Mark the chosen idea `"status": "used"`, `"ep": NN`.
+- If fewer than 10 `"v": 2` ideas are still planned, add 10 new ones across all four lanes in the same format (title, lane, premise, science, twist), checked against every title already in `ideas.json` and `episodes.json`.
 
-## 2. Write the script (writer + one critic)
+## 3. Write the script (writer + one critic)
 
-1. **Write it.** Follow WRITING.md MODE 2, the story engine, the clarity guards and the VIRAL & RETENTION RULES. **Format: odd episode number = SHORT (130–150 words), even = LONG (220–250 words).** Tell the critic which format it is. The idea from `ideas.json` is a starting point, not a cage: keep what's strong, change what isn't.
-2. **One critic pass.** Launch exactly **one** subagent with the Agent tool, `model: "sonnet"`, and a prompt containing the full text of `CRITIC.md` plus the script (and nothing about how you wrote it). This keeps usage low: never more than one critic per episode.
-3. **If the verdict is REVISE:** fix every TOP FIX yourself in one rewrite, then do the loop check and word count again. Don't call the critic a second time; move on.
-4. **If PASS:** keep the script as is (apply any small fixes that are obviously right).
-5. Save `$R/episodes/epNN/script.md` with the final script, the HUD plan, the facts and the critic's verdict and scores (so we can learn later which scores predict views).
+1. Write it following WRITING.md (lane, shape, ending, length the story deserves). Save the draft in the WRITING.md section 5 format.
+2. **One critic pass.** Launch exactly **one** subagent with the Agent tool, `model: "sonnet"`, with a prompt containing: the full text of `CRITIC.md`, a "RECENT EPISODES" list (for each of the last 5 episodes: title, lane, shape, ending and its first sentence; read the first sentence from `episodes/epNN/episode.json` "script"), and the script. Nothing about how you wrote it.
+3. **REVISE:** fix every TOP FIX in one rewrite yourself, then re-check facts, freshness and length. Don't call the critic again.
+4. **PASS:** keep it (apply obvious small fixes).
+5. Save the final `$R/episodes/epNN/script.md` including the critic's verdict and scores.
 
-## 3. Build and render the video
+## 4. Build, voice and render
 
 ```bash
-E=$R/episodes/epNN
-mkdir -p $E
+E=$R/episodes/epNN && mkdir -p $E
 ```
 
-1. Write `$E/episode.json` following `engine/ENGINE_GUIDE.md` and `engine/example_ep01_episode.json`:
-   - `"ep": NN`, `"script"`: the exact script, `"voiceover": "voiceover.wav"`, `"tts_voice": "af_heart"`, `"tts_speed": 1.05`.
-   - Music: pick tracks from `music/library.json` by mood and set `"music"` as described in ENGINE_GUIDE.md's Music section.
-   - Use the new visual tools where the story has them: `marker` cards for time jumps and big numbers ("DAY 3", "20 LIVES SAVED"), `"camera": "closeup"` scenes on emotional beats (at least one per episode), a `countdown` card over the spoken countdown, the `choice` card with `"pick": null` when the choice is left open, and an `endcard` over the final question (see ENGINE_GUIDE.md).
-   - HUD, kept light: the stat card on the opening title question, optionally one `note` (REAL SCIENCE) at the reveal, the `choice` card at the climax, and a final `level` card on the debate question (label "WOULD YOU TAKE IT?", text "COMMENT: YES OR NO"). Use `warn`/`compare` only when they make a beat clearer. `highlights` from the HUD PLAN. A new scene every 3–6 s, `lab` for the ability/number beats, real places for the story, `slowmo` for the choice.
-   - **Visual loop:** the last scene uses the same background, characters and positions as the first scene, so when the Short replays, the cut from last frame to first frame is invisible.
-   - The first scene must have movement inside the first second (an object falling, a character reacting). No static opening frame.
-   - Build clear, funny SVG props and objects for every beat. This is what makes the video watchable.
-2. **Voice.** Read `$R/studio.json`.
-   - If `"voice": "elevenlabs"`: write `$E/voice_request.json` = `{"text": <the script with 3–6 Eleven v4 audio tags like [excited] [whispers] [deadpan], words unchanged>, "voice_id": <elevenlabs_voice_id>, "model_id": <elevenlabs_model>}`. Commit and push just that file. A GitHub workflow voices it and commits `voiceover.mp3` + `voiceover_alignment.json` into `$E`. Poll every 20 s for up to 10 minutes (`git fetch origin main` then `git show FETCH_HEAD:episodes/epNN/voiceover.mp3` or `voice_error.txt`), then `git pull --rebase origin main`. Set `"voiceover": "voiceover.mp3"`. If you get `voice_error.txt` or a timeout, fall back to Kokoro below and report the error.
-   - If `"voice": "kokoro"` (or as a fallback): set `"voiceover": "voiceover.wav"`, `"tts_voice"`/`"tts_speed"` from studio.json, and run `python3 $R/engine/nsu_voice.py $E`.
-   - Targets: SHORT 40–52 s (`tts_speed` 1.1), LONG 82–98 s (`tts_speed` 1.0). If it comes out too long, raise `tts_speed` (max 1.2) or trim a line; if too short, lower it (min 0.95).
-3. Preview: `python3 $R/engine/nsu_render.py $E --preview`, then open `$E/out/preview_sheet.jpg` and look at it. Fix faces hidden by the HUD or captions, faces in the bottom 20% or at the right edge, floating characters and unreadable props, then preview again.
-4. Render: `python3 $R/engine/nsu_render.py $E`. On an error, read it, fix `episode.json` and rerun (up to 3 attempts). "phrase not found" means an anchor isn't in the script.
-5. Check: pull 4 frames from `$E/out/epNN.mp4` with ffmpeg (around the stat card, the warning card, the choice, and the last second) and look at them. Re-render if something is clearly broken.
-6. Move the outputs:
+1. **Voice first** (so you direct to real timing). Read `$R/studio.json`.
+   - `"voice": "kokoro"`: write a minimal `$E/episode.json` with `"ep"`, `"script"`, `"voiceover": "voiceover.wav"`, `"tts_voice"` = `kokoro_voice`, `"tts_speed"` = `kokoro_speed`, `"scenes": [{"bg": "void"}]`, `"hud": []`, then `python3 $R/engine/nsu_voice.py $E`. Read `$E/voiceover_groups.json` for sentence timing.
+   - `"voice": "elevenlabs"`: write `$E/voice_request.json` = `{"text": <script with 3–6 Eleven v4 audio tags like [excited] [whispers] [deadpan], words unchanged>, "voice_id": <elevenlabs_voice_id>, "model_id": <elevenlabs_model>}`. Commit and push just that file. A GitHub workflow voices it and commits `voiceover.mp3` + `voiceover_alignment.json`. Poll every 20 s for up to 10 minutes (`git fetch origin main`, then `git show FETCH_HEAD:episodes/epNN/voiceover.mp3` or `voice_error.txt`), then `git pull --rebase origin main` and set `"voiceover": "voiceover.mp3"`. On error or timeout, fall back to Kokoro and report it.
+   - If the voiceover is far off the length you planned, adjust `tts_speed` (0.95–1.2) or trim lines.
+2. **Direct it.** Write the full `$E/episode.json` following ENGINE_GUIDE.md, especially **Motion and camera tools (v2)** and **Directing rules (v2)**. Write it with a small Python script (`$E/build.py`) when there are many props; reusable SVG strings keep it manageable. Checklist:
+   - Open on the subject in motion with a `title` card of the spoken question. Something moves in the first half second.
+   - 40%+ of scenes without the hero; a continuous motion source in every scene; no two consecutive scenes with the same background and camera; `lab` at most once.
+   - 3–6 `title` cards for key numbers and words; at most 2 game cards; no `countdown`; no timer `choice`.
+   - `shakes` / `flashes` / `transition` on the 2–4 biggest beats.
+   - Music from `music/library.json`, max 3 segments, following the story's mood; don't reuse the exact track pair from the last 2 episodes.
+   - The last scene echoes the first shot so the loop is seamless.
+   - Set `"thumbnail"` to an anchor on the most striking frame.
+3. **Preview:** `python3 $R/engine/nsu_render.py $E --preview`, open `$E/out/preview_sheet.jpg` (one still per scene) and look at it properly. Fix overlaps (title cards vs captions vs faces), faces in the bottom 20% or past x 470, empty or confusing frames, props that don't read. Ask: do any three stills look like three different places? Preview again after real changes.
+4. **Render:** `python3 $R/engine/nsu_render.py $E`. On an error, read it, fix `episode.json`, rerun (up to 3 attempts). "phrase not found" means an anchor isn't in the script.
+5. **Check:** pull 5 frames from `$E/out/epNN.mp4` with ffmpeg (0.3 s, 3 s, middle, the biggest beat, last second) and look at them. Re-render only if something is clearly broken.
+6. **Move the outputs:**
    ```bash
    mkdir -p $R/videos
    cp $E/out/epNN.mp4 $R/videos/epNN.mp4
    cp $E/out/epNN_thumb.jpg $E/thumb.jpg
    rm -rf $E/out $E/voiceover.wav $E/voiceover_groups.json $E/voiceover_chunks.json
    ```
-   If `videos/epNN.mp4` is over 40 MB, re-encode it with `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset veryfast -c:a copy out.mp4`.
-7. Write `$E/upload.md` with the MODE 5 upload pack (title, description, hashtags, tags, first comment). **The description must end with one credit line per music track used**, from `music/library.json`'s `credit_template`, e.g. `Music: "Daybreak" by Tanner Helland, CC BY 4.0, https://tannerhelland.com/music`. Include the credit lines in the YouTube and Facebook post text.
-8. Add the episode to `episodes.json` with `"format": "SHORT"|"LONG"`, `"duration_s"`, `"status": "rendered"` and `"posted": {"youtube": null, "facebook": null}`.
+   Over 40 MB? `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset veryfast -c:a copy out.mp4`.
+7. Write `$E/upload.md` (WRITING.md section 6). The description ends with one credit line per music track, from `music/library.json`'s `credit_template`.
+8. Add the episode to `episodes.json`:
+   ```json
+   {"ep": NN, "v": 2, "title": "...", "lane": "MIND|BODY|TIME|WORLD", "shape": "A epic|B timeline|C spiral|D twist|E survival|F dilemma",
+    "ending": "fact|twist|dilemma|question|punchline", "duration_s": 0.0, "status": "rendered", "video": "videos/epNN.mp4",
+    "rendered_at": "<ISO>", "critic": "<verdict + average>", "posted": {"youtube": null, "facebook": null}}
+   ```
 9. Commit and push:
    ```bash
    cd $R && git add -A && git commit -m "EP NN: <title>" && git push origin HEAD:main || (git fetch origin main && git rebase origin/main && git push origin HEAD:main)
    ```
 
-If the episode can't be rendered after 3 attempts, don't commit a broken episode. Skip to step 4 (publishing still happens) and report the failure.
+If the episode can't be rendered after 3 attempts, don't commit a broken episode. Skip to step 5 (publishing still happens) and report the failure.
 
-## 4. Publish (YouTube + Facebook)
+## 5. Publish (YouTube + Facebook)
 
-Each run publishes at most **one video per platform**. The platforms are independent: if one isn't connected or fails, still do the other.
+At most **one video per platform** per run. Platforms are independent: if one fails, still do the other.
 
-1. **Find the target accounts.** Call Zernio `accounts_list` with `platform: "youtube"`, then again with `platform: "facebook"`. On each platform the target is the account whose username or display name, lowercased with spaces removed, contains `newstatunlocked`.
-   - **If a platform has no such account, skip that platform.** Never post to any other account or page (for example `dailystickchaos`), even if it's the only one on that platform.
-2. **Pick the episode for each platform:** the lowest `ep` in `episodes.json` with `"status"` other than `"shelved"` that has a rendered video and isn't yet posted on that platform (`posted.youtube` / `posted.facebook` is null).
-3. Its public video URL is `https://raw.githubusercontent.com/aqib1401/newstatunlocked-studio/main/videos/epNN.mp4`. Check it with `curl -sI <url>` (expect 200). Right after a push it can take a minute; retry every 20 s for up to 5 minutes.
-4. **Post it** with Zernio `posts_create`, `publish_now: true`, the platform's `account_id`, and `media_urls`: the video URL.
-   - **YouTube:** `platform: "youtube"`, `title`: the title from the episode's `upload.md`, `content`: the description + a blank line + the hashtags.
-   - **Facebook:** `platform: "facebook"`, `content`: the title on the first line, a blank line, the description, then 3 hashtags at most (#whatif #newstatunlocked + one topic tag). Facebook posts vertical videos under 90 seconds as Reels.
-5. If Zernio rejects the media or the post fails, retry once with the jsDelivr link instead (it serves the file as `video/mp4`): `https://cdn.jsdelivr.net/gh/aqib1401/newstatunlocked-studio@<commit sha that added the video>/videos/epNN.mp4` (get the sha with `git log -1 --format=%H -- videos/epNN.mp4`). If that fails too, leave that platform unposted (tomorrow's run tries again) and report Zernio's exact error.
-6. **Start the conversation:** right after each successful post, add the first comment with Zernio `comments_reply_to_inbox_post` (`post_id`: the Zernio post id from step 4, `account_id`: that platform's account, no `comment_id`). Use the FIRST COMMENT line from the episode's `upload.md`. If it fails, retry once; never block the run on it. (YouTube's API can't pin comments; that stays manual.)
-7. **Record it:** in `episodes.json` set `posted.<platform>` to `{"at": "<ISO time>", "zernio_post": "<post id>", "first_comment": "<comment id or null>"}`. Set `"status": "posted"` once every connected platform has it. Commit and push (same command as above).
+1. **Pick the episode for each platform:** the lowest `ep` with `"v": 2`, `"status"` not `"shelved"`, a video in `videos/`, and nothing posted yet on that platform. If there is none, fall back to the lowest `"status": "reserve"` episode not yet posted there (old v1 videos kept for emergencies).
+2. Video URL: `https://raw.githubusercontent.com/aqib1401/newstatunlocked-studio/main/videos/epNN.mp4`. Check it with `curl -sI` (expect 200); right after a push, retry every 20 s for up to 5 minutes.
+3. Read the episode's `upload.md`. **TITLE = the TITLE line exactly** (short, Title Case). Never use the description's first sentence as the title.
+4. Post with Zernio `posts_create`, `publish_now: true`, the platform's `account_id`, `media_urls`: the video URL.
+   - **YouTube:** `platform: "youtube"`, `title`: TITLE, `content`: the description + a blank line + the hashtags.
+   - **Facebook:** `platform: "facebook"`, `content`: TITLE on the first line, a blank line, the description, then at most 3 hashtags (#whatif #newstatunlocked + one topic tag).
+5. If Zernio rejects the media or the post fails, retry once with jsDelivr: `https://cdn.jsdelivr.net/gh/aqib1401/newstatunlocked-studio@<sha>/videos/epNN.mp4` (`git log -1 --format=%H -- videos/epNN.mp4`). If that fails too, leave it for the next run and report Zernio's exact error.
+6. **First comment:** right after each successful post, Zernio `comments_reply_to_inbox_post` (`post_id`: the Zernio post id, `account_id`, no `comment_id`) with the FIRST COMMENT from `upload.md`. Retry once on failure; never block the run on it.
+7. **Record it** in `episodes.json`: `posted.<platform>` = `{"at": "<ISO>", "zernio_post": "<post id>", "first_comment": "<comment id or null>"}`. Set `"status": "posted"` once both platforms have it. Commit and push.
 
-`episodes.json` entries look like this:
-```json
-{"ep": 1, "title": "...", "ability": "...", "status": "rendered", "video": "videos/ep01.mp4", "rendered_at": "...", "posted": {"youtube": null, "facebook": null}}
-```
+## 6. Housekeeping
 
-## 5. Housekeeping
+- Delete `videos/epNN.mp4` for episodes posted on every connected platform more than 7 days ago (`git rm`), commit, push. Keep `episodes/` folders forever. Keep reserve videos until they're posted or 21 days old.
+- Engine changes: allowed only to fix a clear bug that blocks today's render, or to add a small, backward-compatible capability the story genuinely needs (a new background, prop helper or effect). Document anything you add in ENGINE_GUIDE.md in the same commit, test it with `--preview`, and mention it in the report.
 
-- Delete `videos/epNN.mp4` files for episodes posted on every connected platform more than 7 days ago (`git rm`), commit and push. Keep `episodes/` folders forever.
-- Never edit the `engine/` files during a daily run.
+## 7. Report
 
-## 6. Report
-
-Finish with a short summary sent to the user (use SendUserMessage if it's available):
-- Rendered: EP NN, "<title>" (length), or the failure reason.
-- Published: per platform (YouTube, Facebook): EP NN, "<title>" → posted / skipped / failed (why).
+Finish with a short summary (use SendUserMessage if available):
+- **Made:** EP NN "<title>": lane, shape, ending, length, critic verdict + scores. Or the failure reason.
+- **Published:** per platform: EP NN "<title>" → posted / skipped / failed (why).
+- **Numbers:** v2 median vs v1 median so far, the best v2 video, and anything new in LEARNINGS.md.
 - Anything that needs the user's attention.

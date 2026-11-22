@@ -88,7 +88,20 @@ A scene runs from its `start` anchor to the next scene's start. The first scene 
 | `day_park` | park, afternoon | 800–830 |
 | `stadium` | crowd, grass, running track | 700–880 (track) |
 | `night_city` | skyline, stars | 805–820 |
-| `lab` | dark grid "inside the game" space; use it for stat/number explainer moments | 820–845 |
+| `lab` | dark grid "inside the game" space. **Max once per video**, and prefer `void` | 820–845 |
+| `void` | dark radial glow, no floor: hero shots of objects, diagrams, big numbers | none (objects float) |
+| `space` | stars, nebula, a planet bottom-right | none |
+| `earth_orbit` | black sky with Earth's curve along the bottom | none |
+| `sky` | blue sky, sun, clouds, no ground: flying, falling | none |
+| `underwater` | teal water, light shafts, seabed | 815–830 |
+| `city_day` | daytime skyline and street | 810–820 |
+| `future_city` | neon towers at night | 810–820 |
+| `forest` | moonlit pine forest | 815–825 |
+| `desert` | dunes and a huge sun | 820–835 |
+| `snow` | snowy mountains at night | 800–815 |
+| `mars` | red rocky planet | 815–830 |
+
+You can also add any custom scenery on top of any background with `props` / `front_props` (e.g. a sea, a lighthouse, a kitchen). Use `"bg": "void"` plus props when none of these fit.
 
 Props are plain SVG in the 540×960 space. Keep them flat: solid fills, palette colours, `#141218` outlines. Examples: a table `<rect x='70' y='652' width='400' height='16' rx='6' fill='#6B4A3A'/>`, a chalkboard, a clock, a desk, a railing. Use single quotes inside SVG strings.
 
@@ -133,6 +146,17 @@ Props are plain SVG in the 540×960 space. Keep them flat: solid fills, palette 
 
 ## HUD (one card at a time; the engine trims overlaps)
 
+**v2:** the HUD is optional and light. Use **at most 2 game cards** (`stat`, `compare`, `warn`, `note`, `level`) per video, and only where they make a beat clearer. Big moments use `title` cards instead. **Never use `countdown`, and never use a `choice` card with a draining timer.** `endcard` only when the video ends on a question.
+
+```json
+{"type": "title", "at": 0.05, "until": "Not slowly", "small": "WHAT IF THE EARTH", "text": "STOPPED SPINNING?", "color": "#FFD27A", "top": 150}
+{"type": "title", "at": "seventeen hundred", "until": "You just", "small": "SPEED AT THE EQUATOR", "text": "1,670 KM/H", "color": "#C8FF4D", "size": 70, "captions": true}
+{"type": "title", "at": "slams on the brakes", "text": "STOP.", "color": "#FF6B6B", "size": 110, "sfx": "thud"}
+```
+
+- `title`: big glowing kinetic text, no box. `text` (big line), optional `small` (line above), `sub` (small line below), `color`, `size` (default 62), `top` (default 170), `sfx` (default whoosh+pop; any sound name, or "" for none).
+- While a `title` is up, captions hide, unless you set `"captions": true` (then they move down below it automatically). Use the title on the opening question (spoken words = title text) and on 3–6 key words or numbers per video ("TIME DILATION", "YEAR 2473", "6 MONTHS OF NIGHT").
+
 ```json
 {"type": "stat",    "at": "Because today", "until": "A normal person", "name": "REACTION TIME", "mult": "×10", "tag": "+900%"}
 {"type": "compare", "at": "A normal person", "until": "So what if", "label": "REACTION TIME · COMPARE", "a": ["Average human", "0.25 s", 1.0], "b": ["You", "0.025 s", 0.1]}
@@ -144,39 +168,89 @@ Props are plain SVG in the 540×960 space. Keep them flat: solid fills, palette 
 
 ```json
 {"type": "marker",    "at": "Day three", "until": "Day seven", "label": "DAY", "text": "3", "sub": "LANGUAGES LEARNED: 3"}
-{"type": "countdown", "at": "Ten seconds", "until": "Who do you save", "from": 10}
 {"type": "choice",    "at": "You look at the bus", "until": "Who do you save", "a": "Your brother", "b": "27 strangers", "pick": null}
 {"type": "endcard",   "at": "Who do you save", "text": "Your brother or 27 strangers?", "a": "BROTHER", "b": "STRANGERS"}
 ```
 
 - `marker`: big centered label/number for time jumps and big results ("DAY 30", "20 LIVES SAVED"). Optional `label` (small, above), `sub` (small, below), `color`, `size` (default 84).
-- `countdown`: huge red digits counting from `from` to 0 evenly between `at` and `until`, with ticks, heartbeats and a buzzer at zero. Put `at` on the spoken "Ten seconds" and `until` just after the last spoken number.
-- `choice` with `"pick": null`: the timer drains and the card shows "YOUR CALL" with both options pulsing (no chime). Use this when the video leaves the choice to the viewer.
+- `countdown` still exists in the engine for old episodes. **Don't use it.**
+- `choice`: only for a shape-F dilemma, and only with `"pick": null` placed right on the final question so no timer drains on screen. Prefer a `title` or `endcard` with the two options.
 - `endcard`: the closing question with optional two answer pills, plus comment and subscribe badges. Captions hide while it's up, since it shows the question itself. Put it on the final question.
 - `compare` bar lengths are 0–1. Use real proportions.
 - `note` uses a cyan "REAL SCIENCE" style label. Use it for the rule or one key fact.
-- Every Short has exactly one `stat` card, landing on the phrase that names the ability (the HUD PLAN's STAT CARD LANDS ON). The narration never says "stat"; the card is visual only. `warn` and `choice` follow the HUD plan from the script.
+- A `stat` card is optional (good for BODY and MIND lanes, where "you unlock" a stat). The narration never says "stat".
 
 ## Sound (automatic; add extras only when a moment needs one)
 
-Automatic: a whoosh on every cut, pop + ticks on the stat card, fill sweeps on compare, buzz + amber flash on warn, clock + heartbeat during choice then a chime on the pick, a boom on entering slow-mo, and a generated music bed ducked under the voice.
+Automatic: a whoosh on every cut, pop + ticks on the stat card, fill sweeps on compare, buzz + amber flash on warn, clock + heartbeat during choice then a chime on the pick, a boom on entering slow-mo (the SLOW-MO chip only shows with `"chip": true`), whoosh + pop on title cards, and a generated music bed ducked under the voice.
 
 Extra sounds go on actor or object keys (`"sfx": "thud"`) or in the top-level `sfx` list: pop, tick, whoosh, swish, buzz, clock, heartbeat, chime, boom, thud, ding, boing, click, riser, crowd, glitch, fill.
 
-## Directing rules
+## Motion and camera tools (v2)
 
-- At least one `closeup` scene per episode on the most emotional beat (shock, heartbreak, the choice).
-- A new scene every 3–6 seconds. Cut on the "..." pauses and sentence ends.
-- Something moves at least every 1.5 s: a pose change, a face change, an object, a cycle. The camera push alone isn't enough.
-- Faces change on the emotional word, not after it.
-- Use the `lab` background for the stat and number beats, real places for the story.
-- The choice scene is `slowmo: true`. The resolution scene right after is normal speed.
-- The last scene should set up the loop back to the first line.
-- Keep it readable on a phone: at most 3 characters on screen, big simple props.
+**Ambient motion (`fx`, per scene):** a list of effect names or objects. Each one moves on its own for the whole scene.
+
+```json
+"fx": ["stars", {"type": "speedlines", "dir": "right", "speed": 1.5}, {"type": "rays", "x": 270, "y": 470, "spin": 6, "opacity": 0.14}]
+```
+
+| fx | What it does | Options |
+|---|---|---|
+| `stars` | twinkling, slowly drifting star field | `n`, `speed`, `dx`, `dy` |
+| `warp` | hyperspace streaks flying out of a point | `x`, `y`, `n`, `speed`, `color` |
+| `speedlines` | streaks across the screen (speed, wind, falling) | `dir` left/right, `n`, `speed` |
+| `rain` / `snow` | weather in front of the scene | `n`, `speed`, `color` |
+| `embers` / `bubbles` / `dust` | rising sparks, rising bubbles, floating motes | `n`, `speed`, `color` |
+| `confetti` | falling confetti | `n` |
+| `rays` | rotating light rays behind everything | `x`, `y`, `spin`, `opacity`, `color` |
+| `clouds` | clouds drifting across | `speed`, `opacity`, `y0`, `h` |
+| `pulse` | expanding rings from a point (alerts, signals, "here") | `x`, `y`, `r`, `period`, `color` |
+| `glitch` | brief RGB glitch bands (reality breaking, time skips) | |
+| `alarm` | pulsing red screen edge (danger) | `period`, `color` |
+
+**Object animation (`anim`, per object):** continuous motion on top of its keys. `{"spin": deg_per_s, "bob": px, "sway": deg, "pulse": 0.1, "period": s, "drift": [vx, vy], "flicker": 0.5}`. A key with `"stop_anim": true` freezes the animation at that moment (e.g. a spinning planet that stops dead).
+
+**Camera presets (`camera`):** `push`, `pull`, `static`, `pan_left`, `pan_right`, `closeup` (`focus`, `zoom`, `focus_y`), plus:
+- `reveal`: starts zoomed in (`zoom`, default 2.3) on `focus` (an actor id) or on `cx`/`cy`, then pulls back to the full scene. Great for "and then you see…".
+- `zoom_in`: slow zoom toward `cx`/`cy` to `zoom` (default 1.3).
+- `tilt_up` / `tilt_down`: pan vertically from `from_y` to `to_y` at `zoom` (default 1.35). Use for sky, towers, rockets.
+- `drift`: handheld sway. Good under tension.
+
+**Camera keyframes (`cam`, per scene):** full control. The camera looks at point (`cx`, `cy`) at `zoom`, optionally rotated by `rot` degrees, and eases between keys.
+```json
+"cam_start": {"zoom": 1.35, "cx": 270, "cy": 560},
+"cam": [{"at": 0, "zoom": 1.0, "cx": 270, "cy": 520, "dur": 2.2, "ease": "out"},
+        {"at": "the whole city", "zoom": 0.85, "dur": 1.2}]
+```
+
+**Transitions (`transition`, per scene):** `cut` (default punch-in), `whip` (slides in with motion blur; `whip_dir` left/right), `zoom` (rushes in), `flash` (white flash), `none`.
+
+**Impacts (top level):** `"shakes": [{"at": "slams", "amp": 16, "dur": 0.5}]` (adds a boom; set `"sfx": "thud"` or `""` to change it) and `"flashes": [{"at": "All at once", "dur": 0.15, "color": "#fff"}]`.
+
+**Actors:** `"shadow": false` for anyone floating, flying or in space.
+
+**`show_ep`** (top level, default false): the EP chip is off now. Episodes must not look like parts of a series.
+
+## Directing rules (v2)
+
+The old videos all looked like one video: a stick figure standing in the middle of a purple room. Every rule here exists to break that.
+
+1. **Show the thing, not just the hero.** At least 40% of scenes have no hero on screen: the planet, the wave, the brain, the city, the number, the object. Wide shots with a tiny figure for scale count as "no hero".
+2. **Every scene moves on its own.** Each scene has at least one continuous motion source: `fx`, an object `anim`, a walking/running cycle, or a real camera move. A camera push alone doesn't count.
+3. **Never the same look twice in a row.** Consecutive scenes differ in background or camera (ideally both). No background more than 3 times per video. `lab` at most once.
+4. **Scale changes.** Mix extreme wides (the whole Earth, a skyline), mediums and close-ups. At least one `closeup` or `reveal` on the emotional or mind-blowing beat.
+5. **The first frame is the premise.** Open on the subject in motion with a `title` card of the spoken question. No hero standing still in a room.
+6. **Title cards for key numbers and words**, 3–6 per video. Captions carry the rest.
+7. **Impacts land.** Use `shakes`, `flashes` and `transition` on the big beats (a stop, a crash, a reveal), not everywhere.
+8. **Build real props.** Draw the objects the story names (cars, waves, planets, a brain, a rocket) as clear, flat SVG with `#141218` outlines. This is what makes the video watchable.
+9. **A new scene every 3–5 seconds.** Cut on sentence ends and "..." pauses.
+10. **Faces react on the word**, not after it.
+11. **Loop visually.** The last scene echoes the first shot so a replay feels seamless.
+12. Keep it readable on a phone: at most 3 characters on screen, big simple shapes, faces above y 770 and left of x 470.
 
 ## Checklist before the full render
 
-1. Run `--preview` and open `out/preview_sheet.jpg`.
+1. Run `--preview` and open `out/preview_sheet.jpg` (one still per scene). Ask: if I screenshot 3 random moments, do they look like 3 different places?
 2. Check that nobody's face is hidden by the HUD or captions, nothing important is in the bottom 20% or at the right edge, characters stand on the floor, and props make sense.
 3. Fix `episode.json`, preview again if anything changed, then run the full render.
 

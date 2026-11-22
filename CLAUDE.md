@@ -6,5 +6,6 @@ This repo produces and publishes the YouTube Shorts channel New Stat Unlocked (@
 - Channel rules, script writing and the upload pack: `WRITING.md`.
 - Render engine and how to direct a video: `engine/ENGINE_GUIDE.md`.
 - State of every episode: `episodes.json`.
+- What the numbers say and the v2 strategy: `LEARNINGS.md` (refreshed by `tools/learn.py`).
 
 Never post to any YouTube channel or Facebook page other than New Stat Unlocked.

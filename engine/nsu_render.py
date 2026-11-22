@@ -573,6 +573,8 @@ def build_plan(ep, words, dur):
             a["keys"] = resolve_keys(a.get("keys"), sc["t0"])
         for o in sc.get("objects", []):
             o["keys"] = resolve_keys(o.get("keys"), sc["t0"])
+        if sc.get("cam"):
+            sc["cam"] = resolve_keys(sc.get("cam"), sc["t0"])
     huds = []
     for h in ep.get("hud", []):
         h = dict(h)
@@ -599,7 +601,12 @@ def build_plan(ep, words, dur):
     extra_sfx = []
     for s in ep.get("sfx", []):
         extra_sfx.append({"name": s["name"], "t": R(s["at"]), "gain": s.get("gain", 1.0)})
-    return {"scenes": plan_scenes, "hud": huds, "sfx": extra_sfx, "music": music}
+    shakes = [dict(k, t=R(k["at"])) for k in ep.get("shakes", [])]
+    flashes = [dict(k, t=R(k["at"])) for k in ep.get("flashes", [])]
+    for k in shakes:
+        if k.get("sfx", "boom"):
+            extra_sfx.append({"name": k.get("sfx", "boom"), "t": k["t"], "gain": k.get("gain", 0.7)})
+    return {"scenes": plan_scenes, "hud": huds, "sfx": extra_sfx, "music": music, "shakes": shakes, "flashes": flashes}
 
 def build_audio(ep, plan, voice, dur, ep_dir):
     total = int((dur) * SR)
@@ -651,6 +658,12 @@ def build_audio(ep, plan, voice, dur, ep_dir):
             place(fx, sfx("buzzer"), h["t1"] - 0.05)
         elif h["type"] == "endcard":
             place(fx, sfx("chime"), h["t0"], 0.6)
+        elif h["type"] == "title":
+            if h.get("sfx", "riser") == "riser":
+                place(fx, sfx("whoosh"), h["t0"] - 0.12, 0.7)
+                place(fx, sfx("pop"), h["t0"], 0.5)
+            elif h.get("sfx"):
+                place(fx, sfx(h["sfx"]), h["t0"], 0.7)
     for s in plan["sfx"]:
         place(fx, sfx(s["name"]), s["t"], s["gain"])
     m = make_music(ep, plan, v, dur, ep_dir, slow_ranges)
@@ -731,21 +744,26 @@ def main():
     caps = build_captions(words, ep.get("highlights"))
     (out / "timing.json").write_text(json.dumps([{"w": w["raw"], "s": round(w["start"], 2), "e": round(w["end"], 2)} for w in words], indent=0))
     payload = {"ep": ep.get("ep", "??"), "dur": dur, "scenes": plan["scenes"], "hud": plan["hud"], "captions": caps,
-               "accent": ep.get("accent", "#C8FF4D")}
+               "accent": ep.get("accent", "#C8FF4D"), "show_ep": bool(ep.get("show_ep", False)),
+               "shakes": plan["shakes"], "flashes": plan["flashes"]}
     fonts = ensure_fonts()
     page = html_page(fonts)
 
     if args.preview:
         marks = [("start", 0.6)]
+        for i, sc in enumerate(plan["scenes"]):
+            if i > 0:
+                marks.append((f"scene{i}", min(sc["t1"] - 0.05, sc["t0"] + max(0.45, 0.5 * (sc["t1"] - sc["t0"])))))
         for h in plan["hud"]:
-            marks.append((h["type"], min(h["t1"] - 0.05, h["t0"] + 0.9)))
-            if h["type"] == "choice" and h.get("tp"):
-                marks.append(("picked", h["tp"] + 0.5))
+            if h["type"] in ("choice", "endcard", "stat"):
+                marks.append((h["type"], min(h["t1"] - 0.05, h["t0"] + 0.9)))
         marks.append(("end", dur - 0.5))
+        marks.sort(key=lambda m: m[1])
+        marks = marks[:24]
         times = [(t, f"preview_{i:02d}_{n}.png") for i, (n, t) in enumerate(marks)]
         asyncio.run(render_frames(page, payload, times, out, workers=2, ext="png"))
         imgs = [str(out / n) for _, n in times]
-        cols = min(4, len(imgs))
+        cols = min(6, len(imgs))
         sheet = out / "preview_sheet.jpg"
         flt = "".join(f"[{i}:v]scale=360:-1[v{i}];" for i in range(len(imgs)))
         rows = math.ceil(len(imgs) / cols)

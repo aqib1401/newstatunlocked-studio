@@ -1,0 +1,1129 @@
+{
+ "ep": 32,
+ "script": "What if the Earth stopped spinning? Not slowly. All at once. Right now, even sitting still, you're moving. At the equator, the ground under your feet spins at almost seventeen hundred kilometers an hour. You just can't feel it, because the air, the oceans and you are all moving with it. So when the planet slams on the brakes... nothing else does. The air keeps going. Winds faster than any hurricane ever recorded sweep across the planet in seconds. Cars, trees, even whole houses tumble east. The oceans keep going too, and giant waves roll over the coasts. But if you happened to be standing on the North Pole, you'd barely notice. Up there, the ground was hardly moving to begin with. So you'd watch the sky instead, because the sun stops moving. One side of the Earth gets six months of daylight. The other side freezes in six months of night. And slowly, something even stranger happens. Earth is a little fat around the middle, because spinning pushes the oceans outward. Without the spin, all that water drains toward the poles. Two giant oceans form at the top and bottom, and one huge continent rises around the middle of the world. A brand new map. So when the Earth stops... where do you want to be standing?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "scenes": [
+  {
+   "bg": "space",
+   "fx": [
+    "stars"
+   ],
+   "cam_start": {
+    "zoom": 1.35,
+    "cx": 270,
+    "cy": 560
+   },
+   "cam": [
+    {
+     "at": 0,
+     "zoom": 1.0,
+     "cx": 270,
+     "cy": 520,
+     "dur": 2.2,
+     "ease": "out"
+    }
+   ],
+   "objects": [
+    {
+     "id": "globe",
+     "x": 270,
+     "y": 600,
+     "scale": 1.25,
+     "svg": "<circle r='120' fill='#2F6FD6'/><path d='M-70 -62 Q-40 -92 -8 -72 Q10 -42 -20 -22 Q-52 -10 -72 -32 Z' fill='#3FAE6A'/><path d='M18 -22 Q60 -42 82 -2 Q72 40 40 52 Q18 32 24 0 Z' fill='#3FAE6A'/><path d='M-62 28 Q-32 18 -20 50 Q-30 82 -60 72 Z' fill='#3FAE6A'/><path d='M38 -94 Q70 -98 86 -72 Q60 -60 44 -70 Z' fill='#3FAE6A'/><circle r='120' fill='none' stroke='#F2C48D' stroke-width='4'/>",
+     "anim": {
+      "spin": 160
+     },
+     "keys": [
+      {
+       "at": "All at once",
+       "stop_anim": true
+      }
+     ]
+    },
+    {
+     "id": "shade",
+     "x": 270,
+     "y": 600,
+     "scale": 1.25,
+     "front": true,
+     "svg": "<path d='M0 -120 A120 120 0 0 1 0 120 A70 120 0 0 0 0 -120 Z' fill='#05040F' opacity='.28'/><circle r='128' fill='none' stroke='#7FD1FF' stroke-opacity='.35' stroke-width='8'/>"
+    }
+   ]
+  },
+  {
+   "start": "Right now",
+   "bg": "warm_interior",
+   "camera": "drift",
+   "fx": [
+    {
+     "type": "speedlines",
+     "dir": "left",
+     "speed": 0.7
+    }
+   ],
+   "props": "<rect x='90' y='690' width='250' height='70' rx='18' fill='#6B4A7A' stroke='#141218' stroke-width='3'/><rect x='90' y='650' width='40' height='110' rx='14' fill='#6B4A7A' stroke='#141218' stroke-width='3'/><rect x='300' y='650' width='40' height='110' rx='14' fill='#6B4A7A' stroke='#141218' stroke-width='3'/>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 215,
+     "y": 760,
+     "scale": 1.3,
+     "pose": "sit",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "you're moving",
+       "face": "shocked",
+       "look": -1,
+       "dur": 0.12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "At the equator",
+   "bg": "void",
+   "camera": "zoom_in",
+   "zoom": 1.15,
+   "cy": 600,
+   "objects": [
+    {
+     "id": "g",
+     "x": 270,
+     "y": 610,
+     "scale": 1.35,
+     "svg": "<circle r='120' fill='#2F6FD6'/><path d='M-70 -62 Q-40 -92 -8 -72 Q10 -42 -20 -22 Q-52 -10 -72 -32 Z' fill='#3FAE6A'/><path d='M18 -22 Q60 -42 82 -2 Q72 40 40 52 Q18 32 24 0 Z' fill='#3FAE6A'/><path d='M-62 28 Q-32 18 -20 50 Q-30 82 -60 72 Z' fill='#3FAE6A'/><path d='M38 -94 Q70 -98 86 -72 Q60 -60 44 -70 Z' fill='#3FAE6A'/><circle r='120' fill='none' stroke='#F2C48D' stroke-width='4'/><ellipse rx='122' ry='16' fill='none' stroke='#C8FF4D' stroke-width='4' stroke-dasharray='10 8'/>"
+    },
+    {
+     "id": "arc",
+     "x": 270,
+     "y": 610,
+     "scale": 1.35,
+     "front": true,
+     "svg": "<path d='M0 -165 A165 165 0 0 1 143 -82' stroke='#C8FF4D' stroke-width='7' fill='none' stroke-linecap='round'/><path d='M128 -100 L146 -78 L120 -70' stroke='#C8FF4D' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/>",
+     "anim": {
+      "spin": 140
+     }
+    },
+    {
+     "id": "sh",
+     "x": 270,
+     "y": 610,
+     "scale": 1.35,
+     "front": true,
+     "svg": "<path d='M0 -120 A120 120 0 0 1 0 120 A70 120 0 0 0 0 -120 Z' fill='#05040F' opacity='.28'/><circle r='128' fill='none' stroke='#7FD1FF' stroke-opacity='.35' stroke-width='8'/>"
+    },
+    {
+     "id": "ar",
+     "x": 270,
+     "y": 790,
+     "front": true,
+     "svg": "<path d='M-40 0 L30 0 M18 -12 L32 0 L18 12' stroke='#C8FF4D' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/>",
+     "anim": {
+      "bob": 0,
+      "drift": [
+       0,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "at": "spins at",
+       "x": 330,
+       "dur": 0.6,
+       "ease": "out"
+      }
+     ]
+    }
+   ],
+   "captions": true
+  },
+  {
+   "start": "You just can't feel it",
+   "bg": "sky",
+   "camera": "pan_right",
+   "fx": [
+    {
+     "type": "clouds",
+     "speed": 6,
+     "opacity": 0.7
+    }
+   ],
+   "objects": [
+    {
+     "id": "bird",
+     "x": 120,
+     "y": 420,
+     "svg": "<path d='M-20 0 Q-10 -12 0 0 Q10 -12 20 0' stroke='#141218' stroke-width='5' fill='none' stroke-linecap='round'/>",
+     "anim": {
+      "drift": [
+       60,
+       -6
+      ],
+      "bob": 6,
+      "period": 0.5
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 860,
+     "scale": 1.5,
+     "shadow": false,
+     "pose": "cheer",
+     "face": "happy",
+     "lift": 0,
+     "keys": [
+      {
+       "at": "and you",
+       "pose": "point",
+       "face": "smug",
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So when the planet",
+   "bg": "space",
+   "fx": [
+    "stars"
+   ],
+   "camera": "static",
+   "objects": [
+    {
+     "id": "g2",
+     "x": 270,
+     "y": 600,
+     "scale": 1.35,
+     "svg": "<circle r='120' fill='#2F6FD6'/><path d='M-70 -62 Q-40 -92 -8 -72 Q10 -42 -20 -22 Q-52 -10 -72 -32 Z' fill='#3FAE6A'/><path d='M18 -22 Q60 -42 82 -2 Q72 40 40 52 Q18 32 24 0 Z' fill='#3FAE6A'/><path d='M-62 28 Q-32 18 -20 50 Q-30 82 -60 72 Z' fill='#3FAE6A'/><path d='M38 -94 Q70 -98 86 -72 Q60 -60 44 -70 Z' fill='#3FAE6A'/><circle r='120' fill='none' stroke='#F2C48D' stroke-width='4'/>",
+     "anim": {
+      "spin": 220
+     },
+     "keys": [
+      {
+       "at": "slams on the brakes",
+       "stop_anim": true
+      }
+     ]
+    },
+    {
+     "id": "sh2",
+     "x": 270,
+     "y": 600,
+     "scale": 1.35,
+     "front": true,
+     "svg": "<path d='M0 -120 A120 120 0 0 1 0 120 A70 120 0 0 0 0 -120 Z' fill='#05040F' opacity='.28'/><circle r='128' fill='none' stroke='#7FD1FF' stroke-opacity='.35' stroke-width='8'/>"
+    }
+   ]
+  },
+  {
+   "start": "nothing else does",
+   "bg": "sky",
+   "transition": "whip",
+   "camera": "drift",
+   "fx": [
+    {
+     "type": "clouds",
+     "speed": 30,
+     "opacity": 0.8
+    },
+    {
+     "type": "speedlines",
+     "dir": "right",
+     "speed": 1.3
+    }
+   ],
+   "objects": [
+    {
+     "id": "hat",
+     "x": -60,
+     "y": 560,
+     "svg": "<path d='M-30 6 L30 6 L20 -4 L18 -26 L-18 -26 L-20 -4 Z' fill='#3A3550' stroke='#141218' stroke-width='3'/><rect x='-18' y='-10' width='36' height='6' fill='#FF6B6B'/>",
+     "scale": 1.6,
+     "anim": {
+      "drift": [
+       420,
+       -40
+      ],
+      "spin": 300
+     }
+    },
+    {
+     "id": "umb",
+     "x": -200,
+     "y": 700,
+     "svg": "<path d='M-50 0 Q0 -60 50 0 Z' fill='#FF7ACF' stroke='#141218' stroke-width='3'/><path d='M0 0 L0 50 Q0 60 -10 58' stroke='#141218' stroke-width='4' fill='none'/>",
+     "scale": 1.5,
+     "anim": {
+      "drift": [
+       460,
+       -60
+      ],
+      "spin": -200
+     }
+    }
+   ]
+  },
+  {
+   "start": "Winds faster",
+   "bg": "city_day",
+   "camera": "drift",
+   "zoom": 1.1,
+   "fx": [
+    {
+     "type": "speedlines",
+     "dir": "right",
+     "speed": 1.6,
+     "n": 30
+    },
+    {
+     "type": "dust",
+     "n": 50
+    }
+   ],
+   "objects": [
+    {
+     "id": "leaf0",
+     "x": -40,
+     "y": 520,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    },
+    {
+     "id": "leaf1",
+     "x": -110,
+     "y": 573,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    },
+    {
+     "id": "leaf2",
+     "x": -180,
+     "y": 626,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    },
+    {
+     "id": "leaf3",
+     "x": -250,
+     "y": 679,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    },
+    {
+     "id": "leaf4",
+     "x": -320,
+     "y": 732,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    },
+    {
+     "id": "leaf5",
+     "x": -390,
+     "y": 525,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    },
+    {
+     "id": "leaf6",
+     "x": -460,
+     "y": 578,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    },
+    {
+     "id": "leaf7",
+     "x": -530,
+     "y": 631,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    },
+    {
+     "id": "leaf8",
+     "x": -600,
+     "y": 684,
+     "svg": "<path d='M0 -8 Q9 0 0 8 Q-9 0 0 -8 Z' fill='#7BC86C'/>",
+     "anim": {
+      "drift": [
+       520,
+       -20
+      ],
+      "spin": 400
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "crouch",
+     "face": "shocked",
+     "flip": true,
+     "keys": [
+      {
+       "at": "sweep across",
+       "x": 600,
+       "rot": 30,
+       "lift": 60,
+       "pose": "fall",
+       "dur": 1.8,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Cars, trees",
+   "bg": "city_day",
+   "transition": "flash",
+   "camera": "static",
+   "fx": [
+    {
+     "type": "speedlines",
+     "dir": "right",
+     "speed": 1.8,
+     "n": 30
+    }
+   ],
+   "objects": [
+    {
+     "id": "car",
+     "x": -80,
+     "y": 760,
+     "svg": "<rect x='-40' y='-18' width='80' height='26' rx='8' fill='#FF6B6B' stroke='#141218' stroke-width='3'/><rect x='-22' y='-36' width='44' height='20' rx='6' fill='#FF8E8E' stroke='#141218' stroke-width='3'/><circle cx='-22' cy='9' r='9' fill='#141218'/><circle cx='22' cy='9' r='9' fill='#141218'/>",
+     "scale": 1.3,
+     "keys": [
+      {
+       "at": "Cars",
+       "x": 640,
+       "y": 560,
+       "rot": 540,
+       "dur": 1.6,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "id": "tree",
+     "x": -80,
+     "y": 700,
+     "svg": "<rect x='-7' y='-10' width='14' height='62' fill='#6B4A3A' stroke='#141218' stroke-width='2'/><circle cx='0' cy='-32' r='34' fill='#3FAE6A' stroke='#141218' stroke-width='3'/>",
+     "scale": 1.2,
+     "keys": [
+      {
+       "at": "trees",
+       "x": 640,
+       "y": 470,
+       "rot": 400,
+       "dur": 1.6,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "id": "cow",
+     "x": -90,
+     "y": 640,
+     "svg": "<ellipse rx='34' ry='20' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-4' r='7' fill='#141218'/><circle cx='14' cy='6' r='6' fill='#141218'/><circle cx='38' cy='-10' r='13' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-20 18 L-22 34 M20 18 L22 34' stroke='#141218' stroke-width='5' stroke-linecap='round'/>",
+     "scale": 1.2,
+     "keys": [
+      {
+       "at": "even whole",
+       "x": 640,
+       "y": 520,
+       "rot": 300,
+       "dur": 1.5,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "id": "house",
+     "x": -120,
+     "y": 700,
+     "svg": "<rect x='-42' y='-30' width='84' height='62' fill='#F2C94C' stroke='#141218' stroke-width='3'/><path d='M-52 -30 L0 -72 L52 -30 Z' fill='#C0504D' stroke='#141218' stroke-width='3'/><rect x='-10' y='2' width='20' height='30' fill='#6B4A3A'/><rect x='-34' y='-16' width='16' height='14' fill='#BFE3FF'/>",
+     "scale": 1.6,
+     "keys": [
+      {
+       "at": "whole houses",
+       "x": 680,
+       "y": 560,
+       "rot": 200,
+       "dur": 1.7,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The oceans keep going",
+   "bg": "dusk",
+   "camera": "pull",
+   "props": "<rect x='0' y='700' width='540' height='260' fill='#2F6FD6'/><path d='M0 700 L540 700' stroke='#DFF8FF' stroke-opacity='.6' stroke-width='3'/>",
+   "front_props": "",
+   "objects": [
+    {
+     "id": "lh",
+     "x": 400,
+     "y": 720,
+     "svg": "<path d='M-22 0 L-14 -150 L14 -150 L22 0 Z' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-16' y='-110' width='32' height='18' fill='#FF6B6B'/><rect x='-18' y='-60' width='36' height='18' fill='#FF6B6B'/><rect x='-20' y='-176' width='40' height='26' fill='#FFE7A0' stroke='#141218' stroke-width='3'/><path d='M-24 -176 L0 -196 L24 -176 Z' fill='#141218'/>",
+     "scale": 1.2
+    },
+    {
+     "id": "wave",
+     "x": -260,
+     "y": 700,
+     "svg": "<path d='M-320 80 Q-210 -150 -60 -170 Q50 -178 70 -92 Q26 -116 4 -72 Q-16 -14 90 40 L90 260 L-320 260 Z' fill='#3E8FE0' stroke='#DFF8FF' stroke-width='6'/><path d='M-280 120 Q-180 -40 -70 -60' stroke='#DFF8FF' stroke-opacity='.5' stroke-width='5' fill='none'/>",
+     "front": true,
+     "scale": 1.4,
+     "keys": [
+      {
+       "at": "giant waves",
+       "x": 560,
+       "dur": 2.6,
+       "ease": "inout"
+      }
+     ]
+    }
+   ],
+   "fx": [
+    {
+     "type": "rain",
+     "n": 40,
+     "color": "#DFF8FF"
+    }
+   ]
+  },
+  {
+   "start": "But if you happened",
+   "bg": "snow",
+   "camera": "reveal",
+   "focus": "hero",
+   "zoom": 2.2,
+   "fx": [
+    "snow"
+   ],
+   "objects": [
+    {
+     "id": "pole",
+     "x": 360,
+     "y": 812,
+     "svg": "<rect x='-9' y='-200' width='18' height='200' fill='#fff' stroke='#141218' stroke-width='3'/><path d='M-9 -190 L9 -178 L9 -166 L-9 -178 Z' fill='#E0443E'/><path d='M-9 -154 L9 -142 L9 -130 L-9 -142 Z' fill='#E0443E'/><path d='M-9 -118 L9 -106 L9 -94 L-9 -106 Z' fill='#E0443E'/><path d='M-9 -82 L9 -70 L9 -58 L-9 -70 Z' fill='#E0443E'/><path d='M-9 -46 L9 -34 L9 -22 L-9 -34 Z' fill='#E0443E'/><circle cx='0' cy='-208' r='14' fill='#F2C94C' stroke='#141218' stroke-width='3'/><rect x='12' y='-150' width='110' height='34' rx='6' fill='#6B4A3A' stroke='#141218' stroke-width='3'/><text x='67' y='-127' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='15' fill='#fff'>NORTH POLE</text>",
+     "scale": 1.1
+    },
+    {
+     "id": "mug",
+     "x": 0,
+     "y": 0,
+     "svg": "<path d='M-10 -12 L10 -12 L8 12 L-8 12 Z' fill='#E46F8E' stroke='#141218' stroke-width='2'/><path d='M-4 -18 Q0 -26 4 -18' stroke='#fff' stroke-opacity='.7' stroke-width='2' fill='none'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": 0,
+       "attach": "hero.hand",
+       "dx": 4,
+       "dy": -8
+      }
+     ]
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "barely notice",
+       "face": "smug",
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Up there",
+   "bg": "void",
+   "camera": "static",
+   "objects": [
+    {
+     "id": "g3",
+     "x": 270,
+     "y": 620,
+     "scale": 1.5,
+     "svg": "<circle r='120' fill='#2F6FD6'/><path d='M-70 -62 Q-40 -92 -8 -72 Q10 -42 -20 -22 Q-52 -10 -72 -32 Z' fill='#3FAE6A'/><path d='M18 -22 Q60 -42 82 -2 Q72 40 40 52 Q18 32 24 0 Z' fill='#3FAE6A'/><path d='M-62 28 Q-32 18 -20 50 Q-30 82 -60 72 Z' fill='#3FAE6A'/><path d='M38 -94 Q70 -98 86 -72 Q60 -60 44 -70 Z' fill='#3FAE6A'/><circle r='120' fill='none' stroke='#F2C48D' stroke-width='4'/><ellipse rx='122' ry='16' fill='none' stroke='#C8FF4D' stroke-width='4' stroke-dasharray='10 8'/>"
+    },
+    {
+     "id": "sh3",
+     "x": 270,
+     "y": 620,
+     "scale": 1.5,
+     "front": true,
+     "svg": "<path d='M0 -120 A120 120 0 0 1 0 120 A70 120 0 0 0 0 -120 Z' fill='#05040F' opacity='.28'/><circle r='128' fill='none' stroke='#7FD1FF' stroke-opacity='.35' stroke-width='8'/>"
+    },
+    {
+     "id": "dot",
+     "x": 270,
+     "y": 440,
+     "front": true,
+     "svg": "<circle r='10' fill='#C8FF4D'/>",
+     "anim": {
+      "pulse": 0.3,
+      "period": 0.8
+     }
+    }
+   ],
+   "fx": [
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 440,
+     "r": 90,
+     "period": 1.0
+    }
+   ]
+  },
+  {
+   "start": "So you'd watch the sky",
+   "bg": "dusk",
+   "camera": "tilt_up",
+   "from_y": 700,
+   "to_y": 420,
+   "zoom": 1.3,
+   "objects": [
+    {
+     "id": "sun",
+     "x": 300,
+     "y": 380,
+     "svg": "<circle r='70' fill='#FFF0C2'/><circle r='120' fill='#FFF0C2' opacity='.22'/><circle r='170' fill='#FFF0C2' opacity='.1'/>",
+     "anim": {
+      "pulse": 0.03,
+      "period": 2
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "point",
+     "face": "neutral",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": "sun stops",
+       "face": "shocked",
+       "pose": "reach_up",
+       "dur": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "One side of the Earth",
+   "bg": "desert",
+   "camera": "push",
+   "transition": "zoom",
+   "fx": [
+    {
+     "type": "rays",
+     "x": 270,
+     "y": 470,
+     "spin": 6,
+     "opacity": 0.14
+    },
+    {
+     "type": "embers",
+     "n": 18,
+     "color": "#FFF0C2"
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 280,
+     "y": 820,
+     "scale": 1.3,
+     "pose": "tired",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "six months of daylight",
+       "pose": "slump",
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The other side freezes",
+   "bg": "snow",
+   "transition": "whip",
+   "camera": "drift",
+   "fx": [
+    {
+     "type": "stars",
+     "n": 50
+    },
+    {
+     "type": "snow",
+     "n": 90,
+     "speed": 2.2
+    }
+   ],
+   "objects": [
+    {
+     "id": "moon",
+     "x": 400,
+     "y": 330,
+     "svg": "<circle r='40' fill='#E8EEFF'/><circle cx='12' cy='-8' r='8' fill='#C9D2EE'/><circle cx='-14' cy='12' r='6' fill='#C9D2EE'/>"
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 815,
+     "scale": 1.3,
+     "pose": "hug",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "freezes",
+       "pose": "crouch",
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "And slowly",
+   "bg": "space",
+   "fx": [
+    "stars"
+   ],
+   "camera": "zoom_in",
+   "zoom": 1.25,
+   "cy": 560,
+   "objects": [
+    {
+     "id": "b",
+     "x": 270,
+     "y": 600,
+     "scale": 1.3,
+     "svg": "<circle r='120' fill='#2F6FD6'/><path d='M-70 -62 Q-40 -92 -8 -72 Q10 -42 -20 -22 Q-52 -10 -72 -32 Z' fill='#3FAE6A'/><path d='M18 -22 Q60 -42 82 -2 Q72 40 40 52 Q18 32 24 0 Z' fill='#3FAE6A'/><path d='M-62 28 Q-32 18 -20 50 Q-30 82 -60 72 Z' fill='#3FAE6A'/><path d='M38 -94 Q70 -98 86 -72 Q60 -60 44 -70 Z' fill='#3FAE6A'/><circle r='120' fill='none' stroke='#F2C48D' stroke-width='4'/>",
+     "keys": [
+      {
+       "at": "fat around the middle",
+       "opacity": 0,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "b2",
+     "x": 270,
+     "y": 600,
+     "scale": 1.3,
+     "opacity": 0,
+     "svg": "<ellipse rx='136' ry='112' fill='#2F6FD6'/><path d='M-70 -62 Q-40 -92 -8 -72 Q10 -42 -20 -22 Q-52 -10 -72 -32 Z' fill='#3FAE6A'/><path d='M18 -22 Q60 -42 82 -2 Q72 40 40 52 Q18 32 24 0 Z' fill='#3FAE6A'/><path d='M-62 28 Q-32 18 -20 50 Q-30 82 -60 72 Z' fill='#3FAE6A'/><path d='M38 -94 Q70 -98 86 -72 Q60 -60 44 -70 Z' fill='#3FAE6A'/><ellipse rx='136' ry='112' fill='none' stroke='#F2C48D' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.03,
+      "period": 1.2
+     },
+     "keys": [
+      {
+       "at": "fat around the middle",
+       "opacity": 1,
+       "dur": 0.4
+      }
+     ]
+    },
+    {
+     "id": "w1",
+     "x": 120,
+     "y": 600,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M-40 0 L30 0 M18 -12 L32 0 L18 12' stroke='#7FD1FF' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/>",
+     "rot": 180,
+     "keys": [
+      {
+       "at": "pushes the oceans",
+       "opacity": 1,
+       "x": 80,
+       "dur": 0.5
+      }
+     ]
+    },
+    {
+     "id": "w2",
+     "x": 420,
+     "y": 600,
+     "opacity": 0,
+     "front": true,
+     "svg": "<path d='M-40 0 L30 0 M18 -12 L32 0 L18 12' stroke='#7FD1FF' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/>",
+     "keys": [
+      {
+       "at": "pushes the oceans",
+       "opacity": 1,
+       "x": 460,
+       "dur": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Without the spin",
+   "bg": "void",
+   "camera": "static",
+   "objects": [
+    {
+     "id": "g4",
+     "x": 270,
+     "y": 600,
+     "scale": 1.5,
+     "svg": "<circle r='120' fill='#2F6FD6'/><path d='M-70 -62 Q-40 -92 -8 -72 Q10 -42 -20 -22 Q-52 -10 -72 -32 Z' fill='#3FAE6A'/><path d='M18 -22 Q60 -42 82 -2 Q72 40 40 52 Q18 32 24 0 Z' fill='#3FAE6A'/><path d='M-62 28 Q-32 18 -20 50 Q-30 82 -60 72 Z' fill='#3FAE6A'/><path d='M38 -94 Q70 -98 86 -72 Q60 -60 44 -70 Z' fill='#3FAE6A'/><circle r='120' fill='none' stroke='#F2C48D' stroke-width='4'/>"
+    },
+    {
+     "id": "wa",
+     "x": 270,
+     "y": 600,
+     "front": true,
+     "scale": 1.3,
+     "svg": "<ellipse rx='60' ry='22' fill='#7FD1FF' opacity='.9'/>",
+     "keys": [
+      {
+       "at": "drains toward",
+       "y": 460,
+       "dur": 1.4
+      }
+     ]
+    },
+    {
+     "id": "wb",
+     "x": 270,
+     "y": 600,
+     "front": true,
+     "scale": 1.3,
+     "svg": "<ellipse rx='60' ry='22' fill='#7FD1FF' opacity='.9'/>",
+     "keys": [
+      {
+       "at": "drains toward",
+       "y": 740,
+       "dur": 1.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Two giant oceans",
+   "bg": "earth_orbit",
+   "fx": [
+    "stars"
+   ],
+   "camera": "reveal",
+   "zoom": 1.8,
+   "cy": 520,
+   "objects": [
+    {
+     "id": "nm",
+     "x": 270,
+     "y": 520,
+     "scale": 1.5,
+     "svg": "<circle r='120' fill='#C9985A'/><path d='M-120 0 A120 120 0 0 1 120 0 L96 -40 Q0 -20 -96 -40 Z' fill='#2F6FD6'/><path d='M-116 -30 A120 120 0 0 1 116 -30 Q0 -55 -116 -30 Z' fill='#2F6FD6'/><path d='M-118 26 A120 120 0 0 0 118 26 Q0 50 -118 26 Z' fill='#2F6FD6'/><path d='M-90 -6 Q-40 -20 0 -8 Q50 4 90 -10' stroke='#3FAE6A' stroke-width='16' fill='none' stroke-linecap='round'/><circle r='120' fill='none' stroke='#F2C48D' stroke-width='4'/>",
+     "anim": {
+      "spin": 6
+     }
+    },
+    {
+     "id": "nms",
+     "x": 270,
+     "y": 520,
+     "scale": 1.5,
+     "front": true,
+     "svg": "<path d='M0 -120 A120 120 0 0 1 0 120 A70 120 0 0 0 0 -120 Z' fill='#05040F' opacity='.28'/><circle r='128' fill='none' stroke='#7FD1FF' stroke-opacity='.35' stroke-width='8'/>"
+    }
+   ]
+  },
+  {
+   "start": "A brand new map",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 1.7,
+   "focus_y": 560,
+   "objects": [
+    {
+     "id": "paper",
+     "x": 0,
+     "y": 0,
+     "front": true,
+     "svg": "<rect x='-70' y='-46' width='140' height='92' rx='4' fill='#F3E6C8' stroke='#141218' stroke-width='3'/><path d='M-60 -30 L60 -30 M-60 30 L60 30' stroke='#2F6FD6' stroke-width='12'/><path d='M-60 0 Q0 -14 60 0' stroke='#C9985A' stroke-width='22' fill='none'/>",
+     "scale": 0.8,
+     "keys": [
+      {
+       "at": 0,
+       "attach": "hero.hand",
+       "dx": -10,
+       "dy": -30
+      }
+     ]
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "hold",
+     "face": "shocked",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "start": "So when the Earth stops",
+   "bg": "space",
+   "fx": [
+    "stars"
+   ],
+   "camera": "static",
+   "cam_start": {
+    "zoom": 1.0,
+    "cx": 270,
+    "cy": 520
+   },
+   "cam": [
+    {
+     "at": "where do you want",
+     "zoom": 1.35,
+     "cx": 270,
+     "cy": 560,
+     "dur": 2.0
+    }
+   ],
+   "objects": [
+    {
+     "id": "gl",
+     "x": 270,
+     "y": 600,
+     "scale": 1.25,
+     "svg": "<circle r='120' fill='#2F6FD6'/><path d='M-70 -62 Q-40 -92 -8 -72 Q10 -42 -20 -22 Q-52 -10 -72 -32 Z' fill='#3FAE6A'/><path d='M18 -22 Q60 -42 82 -2 Q72 40 40 52 Q18 32 24 0 Z' fill='#3FAE6A'/><path d='M-62 28 Q-32 18 -20 50 Q-30 82 -60 72 Z' fill='#3FAE6A'/><path d='M38 -94 Q70 -98 86 -72 Q60 -60 44 -70 Z' fill='#3FAE6A'/><circle r='120' fill='none' stroke='#F2C48D' stroke-width='4'/>",
+     "anim": {
+      "spin": 160
+     }
+    },
+    {
+     "id": "shl",
+     "x": 270,
+     "y": 600,
+     "scale": 1.25,
+     "front": true,
+     "svg": "<path d='M0 -120 A120 120 0 0 1 0 120 A70 120 0 0 0 0 -120 Z' fill='#05040F' opacity='.28'/><circle r='128' fill='none' stroke='#7FD1FF' stroke-opacity='.35' stroke-width='8'/>"
+    }
+   ]
+  }
+ ],
+ "hud": [
+  {
+   "type": "title",
+   "at": 0.05,
+   "until": "Not slowly",
+   "small": "WHAT IF THE EARTH",
+   "text": "STOPPED SPINNING?",
+   "top": 150
+  },
+  {
+   "type": "title",
+   "at": "seventeen hundred",
+   "until": "You just can't",
+   "small": "SPEED AT THE EQUATOR",
+   "text": "1,670 KM/H",
+   "color": "#C8FF4D",
+   "top": 180,
+   "size": 70,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "slams on the brakes",
+   "until": "nothing else does",
+   "text": "STOP.",
+   "color": "#FF6B6B",
+   "size": 110,
+   "top": 180,
+   "sfx": "thud"
+  },
+  {
+   "type": "title",
+   "at": "Up there",
+   "until": "So you'd watch",
+   "small": "AT THE POLE",
+   "text": "\u2248 0 KM/H",
+   "color": "#C8FF4D",
+   "top": 200,
+   "size": 70,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "six months of daylight",
+   "until": "The other side",
+   "text": "6 MONTHS OF DAY",
+   "color": "#FFD27A",
+   "size": 52,
+   "top": 200,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "six months of night",
+   "until": "And slowly",
+   "text": "6 MONTHS OF NIGHT",
+   "color": "#9FC2FF",
+   "size": 52,
+   "top": 200,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "one huge continent",
+   "until": "A brand new map",
+   "small": "THE NEW EARTH",
+   "text": "2 OCEANS. 1 CONTINENT.",
+   "color": "#7FD1FF",
+   "size": 44,
+   "top": 170,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "where do you want",
+   "small": "WHERE DO YOU WANT",
+   "text": "TO BE STANDING?",
+   "color": "#FFD27A",
+   "top": 160
+  }
+ ],
+ "shakes": [
+  {
+   "at": "All at once",
+   "amp": 14,
+   "dur": 0.5
+  },
+  {
+   "at": "slams on the brakes",
+   "amp": 18,
+   "dur": 0.6
+  }
+ ],
+ "flashes": [
+  {
+   "at": "All at once",
+   "dur": 0.15
+  }
+ ],
+ "music": [
+  {
+   "track": "music/syntheticity.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/now-or-never.mp3",
+   "at": "So when the planet"
+  },
+  {
+   "track": "music/destiny.mp3",
+   "at": "And slowly"
+  }
+ ],
+ "highlights": {
+  "seventeen hundred": "green",
+  "nothing else does": "amber",
+  "North Pole": "green",
+  "six months": "amber",
+  "new map": "green"
+ },
+ "thumbnail": "slams on the brakes",
+ "accent": "#C8FF4D"
+}
