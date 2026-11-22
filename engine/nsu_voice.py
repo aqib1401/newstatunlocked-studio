@@ -130,6 +130,95 @@ def check_audio(rec, y, sr, script, win=24.0):
     return {"recall": round(recall, 3), "last_ok": last_ok, "missing": missing, "heard": hyp,
             "ok": recall >= 0.93 and last_ok and not missing}
 
+PARA = CACHE.parent / "nsu_asr" / "sherpa-onnx-nemo-parakeet-tdt-0.6b-v2-int8"
+PARA_URL = "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v2-int8.tar.bz2"
+
+def align_words(ep_dir, script, vo_name="voiceover.wav"):
+    """Exact word timing for a voiceover made in one take (Qwen): transcribe with a timestamped
+    speech model (Parakeet, ~630 MB from GitHub), match the script's words to it, and write
+    voiceover_alignment.json in the ElevenLabs character format the renderer already reads."""
+    import soundfile as sf, difflib
+    import sherpa_onnx
+    from scipy.signal import resample_poly
+    if not (PARA / "encoder.int8.onnx").exists():
+        PARA.parent.mkdir(parents=True, exist_ok=True)
+        tb = PARA.parent / "p.tar.bz2"
+        subprocess.run(["curl", "-sSfL", "-o", str(tb), PARA_URL], check=True)
+        subprocess.run(["tar", "xjf", str(tb), "-C", str(PARA.parent)], check=True); tb.unlink()
+    rec = sherpa_onnx.OfflineRecognizer.from_transducer(
+        encoder=str(PARA / "encoder.int8.onnx"), decoder=str(PARA / "decoder.int8.onnx"), joiner=str(PARA / "joiner.int8.onnx"),
+        tokens=str(PARA / "tokens.txt"), model_type="nemo_transducer", num_threads=2)
+    y, sr = sf.read(str(ep_dir / vo_name), dtype="float32", always_2d=False)
+    y = y.mean(axis=1) if y.ndim > 1 else y
+    x = resample_poly(y.astype(np.float64), 16000, sr).astype(np.float32)
+    dur = len(x) / 16000
+    # windows of <= 25 s, cut at quiet spots
+    H = 320; e = np.array([np.sqrt(np.mean(x[i:i + H] ** 2)) for i in range(0, len(x) - H, H)]); quiet = e < e.max() * 0.03
+    hyp, start = [], 0
+    while start < len(x):
+        end = min(len(x), start + 25 * 16000)
+        if end < len(x):
+            lo, hi = (end - 6 * 16000) // H, end // H; q = np.where(quiet[lo:hi])[0]
+            if len(q): end = (lo + q[len(q) // 2]) * H
+        st = rec.create_stream(); st.accept_waveform(16000, x[start:end]); rec.decode_stream(st)
+        r = st.result; off = start / 16000; cur = None
+        for tok, t in zip(r.tokens, r.timestamps):
+            if tok.startswith(" ") or cur is None:
+                if cur: hyp.append(cur)
+                cur = {"w": tok.strip(), "s": off + t}
+            else:
+                cur["w"] += tok
+        if cur: hyp.append(cur)
+        start = end
+    for i, h in enumerate(hyp):
+        nxt = hyp[i + 1]["s"] if i + 1 < len(hyp) else dur
+        h["e"] = min(nxt, h["s"] + 0.15 + 0.075 * len(h["w"]))
+        h["n"] = re.sub(r"('s|s)$", "", re.sub(r"[^a-z0-9']", "", h["w"].lower()))[:5]
+    # match script words to heard words
+    toks = [t for t in _render_tokenize(script)]
+    ref = [re.sub(r"('s|s)$", "", t["norm"])[:5] for t in toks]
+    sm = difflib.SequenceMatcher(None, ref, [h["n"] for h in hyp], autojunk=False)
+    T = [None] * len(toks)
+    for bl in sm.get_matching_blocks():
+        for k in range(bl.size):
+            T[bl.a + k] = (hyp[bl.b + k]["s"], hyp[bl.b + k]["e"])
+    # fill gaps (numbers like "seventeen hundred" -> "1700", ASR slips) by spreading between neighbours
+    i = 0
+    while i < len(T):
+        if T[i] is None:
+            j = i
+            while j < len(T) and T[j] is None: j += 1
+            a = T[i - 1][1] if i > 0 else 0.0
+            b = T[j][0] if j < len(T) else dur
+            n = j - i; w = [len(toks[k]["norm"]) + 1.5 for k in range(i, j)]; tot = sum(w); c = a
+            for k in range(i, j):
+                d = (b - a) * w[k - i] / tot; T[k] = (c, c + d); c += d
+            i = j
+        else:
+            i += 1
+    chars, cs, ce = [], [], []
+    for t, (a, b) in zip(toks, T):
+        if chars:
+            chars.append(" "); cs.append(a); ce.append(a)
+        for ch in t["raw"].split(" ")[0]:
+            chars.append(ch); cs.append(round(a, 3)); ce.append(round(b, 3))
+    (ep_dir / "voiceover_alignment.json").write_text(json.dumps(
+        {"characters": chars, "character_start_times_seconds": cs, "character_end_times_seconds": ce}))
+    matched = sum(1 for bl in sm.get_matching_blocks() for _ in range(bl.size))
+    return matched, len(toks)
+
+def _render_tokenize(script):
+    script = re.sub(r"\[[^\]]*\]", " ", script)
+    toks = []
+    for m in re.finditer(r"\S+", script):
+        raw = m.group(0)
+        norm = re.sub(r"[^a-z0-9']", "", raw.lower().replace("’", "'"))
+        if norm:
+            toks.append({"raw": raw, "norm": norm})
+        elif toks:
+            toks[-1]["raw"] += " " + raw
+    return toks
+
 def sentences(script):
     text = re.sub(r"\[[^\]]*\]", " ", script)
     text = re.sub(r"\s+", " ", text).strip()
@@ -156,11 +245,16 @@ def main():
     ap.add_argument("--speed", type=float, default=None)
     ap.add_argument("--no-check", action="store_true", help="skip the speech check")
     ap.add_argument("--check-only", action="store_true", help="only check an existing voiceover against the script")
+    ap.add_argument("--align", action="store_true", help="write exact word timing (voiceover_alignment.json) for an existing one-take voiceover")
     a = ap.parse_args()
     ep_dir = Path(a.episode_dir)
     ep = json.loads((ep_dir / "episode.json").read_text())
     voice = a.voice or ep.get("tts_voice", "am_michael")
     speed = a.speed or float(ep.get("tts_speed", 1.1))
+    if a.align:
+        m, n = align_words(ep_dir, ep["script"], ep.get("voiceover", "voiceover.wav"))
+        print(f"aligned: {m}/{n} words matched exactly, the rest placed between neighbours -> voiceover_alignment.json")
+        sys.exit(0)
     if a.check_only:
         import soundfile as sf
         vo = ep_dir / ep.get("voiceover", "voiceover.wav")

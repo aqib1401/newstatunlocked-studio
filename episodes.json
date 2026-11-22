@@ -1203,7 +1203,7 @@
   "lane": "WORLD",
   "shape": "C spiral",
   "ending": "question",
-  "duration_s": 70.3,
+  "duration_s": 64.1,
   "status": "rendered",
   "video": "videos/ep32.mp4",
   "rendered_at": "2026-11-22T18:50:00Z",
@@ -1212,6 +1212,6 @@
    "youtube": null,
    "facebook": null
   },
-  "voice": "am_liam"
+  "voice": "qwen3_clone (Liam), one take"
  }
 ]

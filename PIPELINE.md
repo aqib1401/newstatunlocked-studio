@@ -62,8 +62,9 @@ E=$R/episodes/epNN && mkdir -p $E
      1. Write a minimal `$E/episode.json` (`"ep"`, `"script"`, `"voiceover": "voiceover.wav"`, `"scenes": [{"bg": "void"}]`, `"hud": []`) and `$E/voice_request.json` = `{"engine": "qwen3_clone", "text": <the script>, "speed": <qwen_speed>}`.
      2. Commit and push just those two files (`git add $E && git commit -m "EP NN: voice request" && git push origin HEAD:main`). The Voice workflow starts on its own.
      3. Poll every 30 s for up to 25 minutes: `git fetch origin main`, then `git show FETCH_HEAD:episodes/epNN/voiceover.wav > /dev/null 2>&1` (done) or `git show FETCH_HEAD:episodes/epNN/voice_error.txt` (failed). Typical time: 5–10 minutes. While you wait, plan the scenes.
-     4. `git pull --rebase origin main`. Read `$E/voice_check.json`: `"ok": true` means every word was heard. `voice_meta.json` says whether it was one take (`full`) or re-voiced in passages. If `voiceover_groups.json` exists, the renderer uses it for exact caption timing; otherwise it aligns captions from the audio.
-     5. **Fallback** (error, timeout, or `"ok": false`): voice it locally with Kokoro instead: set `"tts_voice"` = `kokoro_voice`, `"tts_speed"` = `kokoro_speed` in `episode.json`, delete `$E/voiceover.wav`, run `python3 $R/engine/nsu_voice.py $E`, and say so in the report.
+     4. `git pull --rebase origin main`. Read `$E/voice_check.json`: `"ok": true` means every word was heard. `voice_meta.json` says whether it was one take (`full`) or re-voiced in passages.
+     5. **Exact caption timing:** `python3 $R/engine/nsu_voice.py $E --align` (downloads a ~630 MB timestamp model from GitHub the first time, then takes ~30 s). It writes `voiceover_alignment.json`, which the renderer uses so captions and anchors land on the exact spoken word.
+     6. **Fallback** (error, timeout, or `"ok": false`): voice it locally with Kokoro instead: set `"tts_voice"` = `kokoro_voice`, `"tts_speed"` = `kokoro_speed` in `episode.json`, delete `$E/voiceover.wav`, run `python3 $R/engine/nsu_voice.py $E`, and say so in the report.
    - **`"voice": "kokoro"`:** set `"voiceover": "voiceover.wav"`, `"tts_voice"` = `kokoro_voice`, `"tts_speed"` = `kokoro_speed`, `"scenes": [{"bg": "void"}]`, `"hud": []`, then `python3 $R/engine/nsu_voice.py $E`. It prints `speech check: N/N sentences fully heard`; if a sentence is flagged, rephrase it and voice again.
    - **`"voice": "elevenlabs"`:** same as qwen3_clone, but the request is `{"engine": "elevenlabs", "text": <script with 3–6 Eleven v4 audio tags>, "voice_id": <elevenlabs_voice_id>, "model_id": <elevenlabs_model>}` and the result is `voiceover.mp3` (needs the ELEVENLABS_API_KEY repo secret).
    - Any engine: you can re-check a voiceover any time with `python3 $R/engine/nsu_voice.py $E --check-only`. Never ship a voiceover that fails the check.
@@ -85,7 +86,7 @@ E=$R/episodes/epNN && mkdir -p $E
    cp $E/out/epNN.mp4 $R/videos/epNN.mp4
    cp $E/out/epNN_thumb.jpg $E/thumb.jpg
    rm -rf $E/out $E/voiceover_chunks.json
-   # keep voiceover.wav, voice_request.json, voice_meta.json and voice_check.json: they are small and the Voice workflow skips episodes that already have a voiceover
+   # keep voiceover.wav, voiceover_alignment.json, voice_request.json, voice_meta.json and voice_check.json: small, and the Voice workflow skips episodes that already have a voiceover
    ```
    Over 40 MB? `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset veryfast -c:a copy out.mp4`.
 7. Write `$E/upload.md` (WRITING.md section 6). The description ends with one credit line per music track, from `music/library.json`'s `credit_template`.
