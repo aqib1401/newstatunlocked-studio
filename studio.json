@@ -1,9 +1,11 @@
 {
- "voice": "kokoro",
+ "voice": "qwen3_clone",
  "kokoro_voice": "am_liam",
  "kokoro_speed": 1.15,
  "elevenlabs_voice_id": "TX3LPaxmHKxFdv7VOQHJ",
  "elevenlabs_voice_name": "Liam - Energetic, Social Media Creator",
  "elevenlabs_model": "eleven_v4",
- "kokoro_voice_note": "Chosen by Aqib on Nov 22 (replaced am_michael). Sentences are voiced one at a time with real pauses (engine/nsu_voice.py)."
+ "kokoro_voice_note": "Fallback voice. Sentences voiced one at a time with set pauses (engine/nsu_voice.py).",
+ "qwen_note": "Chosen by Aqib Nov 23: Qwen3-TTS 0.6B Base cloned from voice/ref_liam.wav (Apache-2.0), voiced as ONE take of the whole script on free GitHub Actions (.github/workflows/voice.yml + tools/voice_job.py). Fallback: kokoro am_liam locally.",
+ "qwen_speed": 1.0
 }
