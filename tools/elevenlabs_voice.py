@@ -19,6 +19,8 @@ def main():
         d = req_file.parent
         if (d / "voiceover.mp3").exists():
             continue
+        if json.loads(req_file.read_text()).get("engine", "elevenlabs") != "elevenlabs":
+            continue  # other engines (qwen3_clone) are handled by tools/voice_job.py
         (d / "voice_error.txt").unlink(missing_ok=True)
         if not KEY:
             (d / "voice_error.txt").write_text("ELEVENLABS_API_KEY secret is not set in the repo settings.")

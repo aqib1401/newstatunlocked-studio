@@ -80,6 +80,47 @@ def heard(rec, audio, sr, text):
     last_ok = any(stem(w)[:4] == last for w in got[-3:]) or len(ref) < 2
     return (recall >= 0.75 and last_ok), round(recall, 2), hyp
 
+def check_audio(rec, y, sr, script, win=24.0):
+    """Check a whole voiceover against the script. Splits at pauses into <= win s windows,
+    transcribes each, and returns {"recall", "last_ok", "missing", "heard", "ok"}."""
+    from scipy.signal import resample_poly
+    import difflib
+    x = resample_poly(np.asarray(y, dtype=np.float64), 16000, sr).astype(np.float32)
+    H = 320; e = np.array([np.sqrt(np.mean(x[i:i + H] ** 2)) for i in range(0, len(x) - H, H)])
+    quiet = e < (e.max() * 0.03)
+    cuts, start = [], 0
+    while start < len(x):
+        end = min(len(x), start + int(win * 16000))
+        if end < len(x):  # back up to the longest quiet spot in the last 6 s of the window
+            lo, hi = (end - 6 * 16000) // H, end // H
+            q = np.where(quiet[lo:hi])[0]
+            if len(q):
+                end = (lo + q[len(q) // 2]) * H
+        cuts.append((start, end)); start = end
+    hyp = []
+    for a, b in cuts:
+        st = rec.create_stream(); st.accept_waveform(16000, x[a:b]); rec.decode_stream(st); hyp.append(st.result.text.strip())
+    hyp = " ".join(hyp)
+    stem = lambda w: re.sub(r"('s|s)$", "", w)[:5]
+    ref = [w for w in _words(script) if w not in NUMW]
+    got = [w for w in _words(hyp) if not any(c.isdigit() for c in w) and w not in NUMW]
+    sm = difflib.SequenceMatcher(None, [stem(w) for w in ref], [stem(w) for w in got], autojunk=False)
+    matched = set()
+    for bl in sm.get_matching_blocks():
+        matched.update(range(bl.a, bl.a + bl.size))
+    missing, run = [], []
+    for i, w in enumerate(ref):  # report runs of 2+ consecutive missing words (single misses are usually ASR noise)
+        if i in matched:
+            if len(run) >= 2: missing.append(" ".join(run))
+            run = []
+        else:
+            run.append(w)
+    if len(run) >= 2: missing.append(" ".join(run))
+    recall = len(matched) / max(1, len(ref))
+    last_ok = any(stem(w)[:4] == stem(ref[-1])[:4] for w in got[-4:]) if ref else True
+    return {"recall": round(recall, 3), "last_ok": last_ok, "missing": missing, "heard": hyp,
+            "ok": recall >= 0.93 and last_ok and not missing}
+
 def sentences(script):
     text = re.sub(r"\[[^\]]*\]", " ", script)
     text = re.sub(r"\s+", " ", text).strip()
@@ -105,11 +146,22 @@ def main():
     ap.add_argument("--voice", default=None)
     ap.add_argument("--speed", type=float, default=None)
     ap.add_argument("--no-check", action="store_true", help="skip the speech check")
+    ap.add_argument("--check-only", action="store_true", help="only check an existing voiceover against the script")
     a = ap.parse_args()
     ep_dir = Path(a.episode_dir)
     ep = json.loads((ep_dir / "episode.json").read_text())
     voice = a.voice or ep.get("tts_voice", "am_michael")
     speed = a.speed or float(ep.get("tts_speed", 1.1))
+    if a.check_only:
+        import soundfile as sf
+        vo = ep_dir / ep.get("voiceover", "voiceover.wav")
+        y, sr0 = sf.read(str(vo), dtype="float32", always_2d=False)
+        y = y.mean(axis=1) if y.ndim > 1 else y
+        r = check_audio(asr_setup(), y, sr0, ep["script"])
+        (ep_dir / "voice_check.json").write_text(json.dumps(r, indent=1))
+        print(f"speech check: {'OK' if r['ok'] else 'PROBLEM'} (recall {r['recall']:.0%}, last word {'ok' if r['last_ok'] else 'MISSING'})"
+              + (f", missing: {r['missing']}" if r["missing"] else ""))
+        sys.exit(0 if r["ok"] else 3)
     setup()
     import soundfile as sf
     from kokoro_onnx import Kokoro

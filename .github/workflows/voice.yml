@@ -1,4 +1,7 @@
-name: ElevenLabs voice
+name: Voice
+# Voices episodes/*/voice_request.json. Free on this public repo.
+#   "engine": "qwen3_clone" -> open-source Qwen3-TTS cloned from voice/ref_liam.wav (tools/voice_job.py)
+#   "engine": "elevenlabs" (or no engine) -> ElevenLabs API (tools/elevenlabs_voice.py, needs the secret)
 on:
   push:
     paths: ["episodes/**/voice_request.json"]
@@ -9,17 +12,45 @@ concurrency: { group: voice, cancel-in-progress: false }
 jobs:
   voice:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-      - name: Generate voiceovers
+      - name: What needs voicing?
+        id: todo
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json, pathlib
+          q = e = 0
+          for f in pathlib.Path("episodes").glob("*/voice_request.json"):
+              r = json.loads(f.read_text()); eng = r.get("engine", "elevenlabs")
+              if eng == "qwen3_clone" and not (f.parent / "voiceover.wav").exists(): q += 1
+              if eng == "elevenlabs" and not (f.parent / "voiceover.mp3").exists(): e += 1
+          print(f"qwen={q}"); print(f"eleven={e}")
+          EOF
+      - uses: actions/setup-python@v5
+        if: steps.todo.outputs.qwen != '0'
+        with: { python-version: "3.12" }
+      - name: Install Qwen3-TTS (CPU)
+        if: steps.todo.outputs.qwen != '0'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg sox >/dev/null || true
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q qwen-tts soundfile scipy sherpa-onnx
+      - name: Voice with Qwen3-TTS
+        if: steps.todo.outputs.qwen != '0'
+        env: { HF_HUB_DISABLE_PROGRESS_BARS: "1" }
+        run: python tools/voice_job.py
+      - name: Voice with ElevenLabs
+        if: steps.todo.outputs.eleven != '0'
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: python3 tools/elevenlabs_voice.py
       - name: Commit results
+        if: always()
         run: |
           git config user.name "nsu-voice-bot"
           git config user.email "voice-bot@users.noreply.github.com"
           git add episodes
           git diff --cached --quiet && exit 0
-          git commit -m "Voiceover from ElevenLabs"
-          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+          git commit -m "Voiceover"
+          for i in 1 2 3 4 5; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
