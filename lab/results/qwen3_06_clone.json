@@ -1,0 +1,8 @@
+{
+ "engine": "qwen3_06_clone",
+ "load_s": 27.1,
+ "gen_s": 143.0,
+ "audio_s": 19.9,
+ "realtime_factor": 7.19,
+ "ok": true
+}

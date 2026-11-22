@@ -1,0 +1,8 @@
+{
+ "engine": "qwen3_06_ryan",
+ "load_s": 897.3,
+ "gen_s": 308.6,
+ "audio_s": 48.1,
+ "realtime_factor": 6.42,
+ "ok": true
+}

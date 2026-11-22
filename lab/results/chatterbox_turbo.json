@@ -1,0 +1,8 @@
+{
+ "engine": "chatterbox_turbo",
+ "load_s": 40.9,
+ "gen_s": 78.3,
+ "audio_s": 23.2,
+ "realtime_factor": 3.38,
+ "ok": true
+}

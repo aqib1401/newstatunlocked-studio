@@ -1,0 +1,8 @@
+{
+ "engine": "qwen3_17_design",
+ "load_s": 34.8,
+ "gen_s": 110.9,
+ "audio_s": 25.2,
+ "realtime_factor": 4.4,
+ "ok": true
+}
