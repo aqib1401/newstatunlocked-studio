@@ -39,41 +39,42 @@ Every v2 episode records `v`, `lane`, `shape`, `ending` and `duration_s` in epis
 ## Data (auto-generated, don't edit by hand)
 
 <!-- AUTO:START -->
-_Updated 2026-11-22 18:49 UTC_
+_Updated 2026-11-22 22:24 UTC_
 
 **By version** (YouTube views, posts at least 48 h old)
 
 | version | videos | median views | best |
 |---|---|---|---|
-| 1 | 25 | 1264 | 1442 |
+| 1 | 25 | 1265 | 1442 |
 
 **Every episode with YouTube stats** (newest first)
 
 | EP | title | v | lane | shape | length | YT views | likes | comments | FB views | FB avg watch | age h |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 25 | What If You Had No Fingerprints? | 1 |  |  | 52 s | 1093 | 22 | 3 | 454 | 6.7 s | 68.3 |
-| 24 | What If Your Memory Reset Every Day? | 1 |  |  | 86 s | 1012 | 27 | 1 | 209 | 10.9 s | 72.9 |
-| 23 | What If Your Skin Couldn't Be Cut? | 1 |  |  | 48 s | 1164 | 17 | 1 | 217 | 6.1 s | 92.4 |
-| 22 | What If You Could See in the Dark? | 1 |  |  | 88 s | 1264 | 29 | 3 | 250 | 4.1 s | 96.9 |
-| 21 | What If Your Body Glowed in the Dark? | 1 |  |  | 49 s | 1015 | 8 | 1 | 491 | 8.2 s | 116.2 |
-| 20 | What If You Never Felt Fear? | 1 |  |  | 86 s | 1211 | 21 | 1 | 1968 | 9.9 s | 120.9 |
-| 19 | What If You Never Felt Hungry Again? | 1 |  |  | 49 s | 1138 | 23 | 5 | 38 | 5.1 s | 140.3 |
-| 18 | What If You Healed 1,000,000x Faster? | 1 |  |  | 89 s | 1225 | 16 | 5 | 54 | 18.2 s | 144.8 |
-| 17 | What If You Weighed 10x Less? | 1 |  |  | 48 s | 1113 | 20 | 1 | 188 | 11.7 s | 164.3 |
-| 16 | What If You Could Hear 100x Better? | 1 |  |  | 94 s | 1342 | 25 | 1 | 0 | 0.0 s | 168.9 |
-| 15 | What If You Could Control Every Dream? | 1 |  |  | 50 s | 1347 | 24 | 5 | 360 | 9.1 s | 188.3 |
-| 14 | What If You Aged 10x Slower? | 1 |  |  | 86 s | 1303 | 25 | 4 | 4 | 43.6 s | 192.6 |
-| 13 | What If You Remembered Being a Baby? | 1 |  |  | 51 s | 1394 | 25 | 3 | 213 | 10.3 s | 192.8 |
-| 12 | What If You Shrank to the Size of an Ant? | 1 |  |  | 88 s | 1348 | 21 | 4 | 220 | 10.9 s | 193.7 |
-| 11 | What If You Could See Heat? | 1 |  |  | 49 s | 1291 | 23 | 1 | 212 | 5.3 s | 193.9 |
-| 10 | What If You Never Needed Sleep Again? | 1 |  |  | 90 s | 1211 | 12 | 3 | 93 | 1.9 s | 212.3 |
-| 9 | What If You Could See Sounds as Colors? | 1 |  |  | 51 s | 1254 | 26 | 3 | 56 | 10.3 s | 216.9 |
-| 8 | What If You Could Never Forget Anything? | 1 |  |  | 89 s | 1406 | 29 | 3 | 214 | 14.2 s | 236.3 |
-| 7 | What If You Felt Everyone Else's Pain? | 1 |  |  | 49 s | 1364 | 30 | 2 | 221 | 11.6 s | 240.8 |
-| 6 | What If You Grew 10x Taller? | 1 |  |  | 90 s | 1045 | 28 | 7 | 202 | 9.2 s | 260.3 |
-| 5 | What If Your Heart Beat Only Six Times a Minute? | 1 |  |  | 50 s | 1271 | 25 | 5 | 105 | 13.9 s | 264.8 |
-| 4 | What If You Could Smell 10,000x Better? | 1 |  |  | 0 s | 926 | 20 | 3 | 792 | 14.2 s | 284.4 |
-| 3 | What If You Never Blinked Again? | 1 |  |  | 0 s | 1337 | 32 | 1 | 162 | 5.0 s | 288.9 |
-| 2 | What If You Were 10x Stronger? | 1 |  |  | 0 s | 1442 | 46 | 3 | 1184 | 13.5 s | 308.3 |
-| 1 | What If Your Reaction Time Was 10x Faster? | 1 |  |  | 0 s | 1317 | 38 | 1 | 325 | 17.8 s | 312.8 |
+| 26 | What If Your Voice Was 100x Louder? | 1 |  |  | 91 s | 912 | 14 | 1 | 126 | 9.3 s | 4.0 |
+| 25 | What If You Had No Fingerprints? | 1 |  |  | 52 s | 1061 | 22 | 3 | 454 | 6.7 s | 71.9 |
+| 24 | What If Your Memory Reset Every Day? | 1 |  |  | 86 s | 1012 | 27 | 1 | 209 | 10.9 s | 76.5 |
+| 23 | What If Your Skin Couldn't Be Cut? | 1 |  |  | 48 s | 1164 | 17 | 1 | 217 | 6.1 s | 96.0 |
+| 22 | What If You Could See in the Dark? | 1 |  |  | 88 s | 1265 | 29 | 3 | 250 | 4.1 s | 100.5 |
+| 21 | What If Your Body Glowed in the Dark? | 1 |  |  | 49 s | 1016 | 8 | 1 | 491 | 8.2 s | 119.8 |
+| 20 | What If You Never Felt Fear? | 1 |  |  | 86 s | 1211 | 21 | 1 | 1968 | 9.9 s | 124.5 |
+| 19 | What If You Never Felt Hungry Again? | 1 |  |  | 49 s | 1139 | 23 | 5 | 38 | 5.1 s | 143.9 |
+| 18 | What If You Healed 1,000,000x Faster? | 1 |  |  | 89 s | 1225 | 16 | 5 | 54 | 18.2 s | 148.4 |
+| 17 | What If You Weighed 10x Less? | 1 |  |  | 48 s | 1113 | 20 | 1 | 188 | 11.7 s | 167.8 |
+| 16 | What If You Could Hear 100x Better? | 1 |  |  | 94 s | 1342 | 25 | 1 | 0 | 0.0 s | 172.5 |
+| 15 | What If You Could Control Every Dream? | 1 |  |  | 50 s | 1347 | 24 | 5 | 360 | 9.1 s | 191.9 |
+| 14 | What If You Aged 10x Slower? | 1 |  |  | 86 s | 1303 | 25 | 4 | 4 | 43.6 s | 196.2 |
+| 13 | What If You Remembered Being a Baby? | 1 |  |  | 51 s | 1394 | 25 | 3 | 213 | 10.3 s | 196.4 |
+| 12 | What If You Shrank to the Size of an Ant? | 1 |  |  | 88 s | 1348 | 21 | 4 | 220 | 10.9 s | 197.3 |
+| 11 | What If You Could See Heat? | 1 |  |  | 49 s | 1291 | 23 | 1 | 212 | 5.3 s | 197.5 |
+| 10 | What If You Never Needed Sleep Again? | 1 |  |  | 90 s | 1211 | 12 | 3 | 93 | 1.9 s | 215.9 |
+| 9 | What If You Could See Sounds as Colors? | 1 |  |  | 51 s | 1254 | 26 | 3 | 56 | 10.3 s | 220.5 |
+| 8 | What If You Could Never Forget Anything? | 1 |  |  | 89 s | 1406 | 29 | 3 | 214 | 14.2 s | 239.9 |
+| 7 | What If You Felt Everyone Else's Pain? | 1 |  |  | 49 s | 1364 | 30 | 2 | 221 | 11.6 s | 244.4 |
+| 6 | What If You Grew 10x Taller? | 1 |  |  | 90 s | 1045 | 28 | 7 | 202 | 9.2 s | 263.9 |
+| 5 | What If Your Heart Beat Only Six Times a Minute? | 1 |  |  | 50 s | 1271 | 25 | 5 | 105 | 13.9 s | 268.3 |
+| 4 | What If You Could Smell 10,000x Better? | 1 |  |  | 0 s | 926 | 20 | 3 | 792 | 14.2 s | 288.0 |
+| 3 | What If You Never Blinked Again? | 1 |  |  | 0 s | 1337 | 32 | 1 | 162 | 5.0 s | 292.5 |
+| 2 | What If You Were 10x Stronger? | 1 |  |  | 0 s | 1442 | 46 | 3 | 1184 | 13.5 s | 311.9 |
+| 1 | What If Your Reaction Time Was 10x Faster? | 1 |  |  | 0 s | 1317 | 38 | 1 | 325 | 17.8 s | 316.4 |
 <!-- AUTO:END -->
