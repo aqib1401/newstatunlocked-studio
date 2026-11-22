@@ -97,7 +97,7 @@ def voice_episode(d, req, rec):
         y2 = np.concatenate(pieces)
         chk2 = V.check_audio(rec, y2, sr, text) if rec else chk
         meta.update(full_take_check=chk, mode="passages", passages_gen_s=round(time.time() - t1, 1))
-        if chk2["recall"] >= chk["recall"]:
+        if chk2["ok"] or chk2["recall"] >= chk["recall"] + 0.03:  # only give up the natural one take for a real fix
             y, chk = y2, chk2
         else:
             groups = None

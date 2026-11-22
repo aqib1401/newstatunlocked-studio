@@ -59,8 +59,17 @@ def asr_setup():
         print(f"(speech check unavailable: {e})", flush=True)
         return None
 
+CONTRACT = [("you are", "you're"), ("we are", "we're"), ("they are", "they're"), ("i am", "i'm"), ("it is", "it's"),
+            ("that is", "that's"), ("there is", "there's"), ("what is", "what's"), ("do not", "don't"), ("does not", "doesn't"),
+            ("did not", "didn't"), ("can not", "can't"), ("cannot", "can't"), ("will not", "won't"), ("would not", "wouldn't"),
+            ("is not", "isn't"), ("are not", "aren't"), ("was not", "wasn't"), ("you would", "you'd"), ("you will", "you'll"),
+            ("you have", "you've"), ("let us", "let's"), ("he is", "he's"), ("she is", "she's"), ("could not", "couldn't")]
+
 def _words(t):
-    return re.findall(r"[a-z0-9']+", t.lower().replace("’", "'"))
+    t = " " + re.sub(r"[^a-z0-9' ]+", " ", t.lower().replace("’", "'")) + " "
+    for full, short in CONTRACT:  # "you are" and "you're" count as the same words
+        t = t.replace(f" {full} ", f" {short} ")
+    return re.findall(r"[a-z0-9']+", t)
 
 def heard(rec, audio, sr, text):
     """Transcribe one sentence and compare with the script. Returns (ok, recall, transcript)."""
