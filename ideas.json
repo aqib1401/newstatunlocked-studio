@@ -572,7 +572,7 @@
   },
   {
     "id": 45,
-    "status": "planned",
+    "status": "used",
     "title": "What If You Were Allergic to Water?",
     "ability": "water allergy",
     "category": "body",
@@ -583,7 +583,8 @@
     "ending": "End on the debate question (e.g. 'Would you take it? Yes or no?') so it loops back to the opening title question.",
     "facts": [
       "Aquagenic urticaria, a reaction to water on the skin, is extremely rare"
-    ]
+    ],
+    "ep": 31
   },
   {
     "id": 17,

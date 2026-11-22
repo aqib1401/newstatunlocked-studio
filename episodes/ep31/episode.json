@@ -1,0 +1,832 @@
+{
+ "ep": 31,
+ "script": "What if you were allergic to water? Not a little itchy. Water itself. One raindrop lands on your arm, and minutes later it bursts into red, itchy bumps. So you carry an umbrella, and a doctor's note gets you out of swim class forever. But for some people, even their own sweat or tears set it off. It's real, and so rare that most doctors never see a single case. Then your family drags you to a pool party, so you sit in the shade, bone dry. That's why you're the only one who sees your little brother Sam slip into the deep end. His hand goes under. The lifeguard is looking the other way, and the music is loud. Jump in, and you're covered in burning hives for the next hour. Or scream, and hope someone hears. Five... Four... Three... Would you jump in for him? Yes or no?",
+ "voiceover": "voiceover.wav",
+ "tts_voice": "am_michael",
+ "tts_speed": 1.1,
+ "title": "What If You Were Allergic to Water?",
+ "thumbnail": "bursts into red",
+ "music": [
+  {
+   "track": "music/lost-islands.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/unknown.mp3",
+   "at": "But for some"
+  },
+  {
+   "track": "music/remember.mp3",
+   "at": "Jump in, and"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "accent": "#C8FF4D",
+ "highlights": {
+  "allergic to water": "green",
+  "itchy bumps": "green",
+  "swim class": "green",
+  "sweat or tears": "amber",
+  "deep end": "amber",
+  "burning hives": "amber"
+ },
+ "hud": [
+  {
+   "type": "stat",
+   "at": "What if",
+   "until": "One raindrop",
+   "name": "WATER TOLERANCE",
+   "mult": "×0",
+   "tag": "ALLERGIC"
+  },
+  {
+   "type": "warn",
+   "at": "even their own",
+   "until": "It's real",
+   "label": "THE CATCH",
+   "text": "Even sweat and tears can set it off."
+  },
+  {
+   "type": "note",
+   "at": "It's real",
+   "until": "Then your family",
+   "label": "REAL SCIENCE",
+   "text": "Water allergy is real, and extremely rare."
+  },
+  {
+   "type": "marker",
+   "at": "Then your family",
+   "until": "so you sit",
+   "label": "POOL",
+   "text": "PARTY",
+   "color": "#7DF9C8",
+   "size": 72
+  },
+  {
+   "type": "choice",
+   "at": "Jump in, and",
+   "until": "Five",
+   "a": "Jump in",
+   "b": "Scream for help",
+   "pick": null
+  },
+  {
+   "type": "countdown",
+   "at": "Five",
+   "until": "Would you jump",
+   "from": 5
+  },
+  {
+   "type": "endcard",
+   "at": "Would you jump",
+   "text": "Would you jump in for him?",
+   "a": "YES",
+   "b": "NO"
+  }
+ ],
+ "sfx": [],
+ "scenes": [
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": 0.35,
+       "pose": "crouch",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "swish"
+      },
+      {
+       "at": "Not a little",
+       "pose": "shrug",
+       "face": "bored",
+       "dur": 0.2
+      },
+      {
+       "at": "Water itself",
+       "pose": "point",
+       "face": "worried",
+       "dur": 0.15
+      }
+     ],
+     "look": 0.5
+    }
+   ],
+   "objects": [
+    {
+     "id": "d0",
+     "x": 350,
+     "y": 380,
+     "svg": "<path d='M0 -22 Q16 0 12 10 A12 12 0 1 1 -12 10 Q-16 0 0 -22 Z' fill='#5BC8F5' stroke='#141218' stroke-width='4'/>",
+     "scale": 2.2,
+     "keys": [
+      {
+       "at": 0.0,
+       "y": 600,
+       "dur": 0.5,
+       "ease": "in"
+      },
+      {
+       "at": "Water itself",
+       "scale": 2.8,
+       "dur": 0.15,
+       "ease": "back",
+       "sfx": "ding"
+      },
+      {
+       "at": "Water itself+0.2",
+       "scale": 2.4,
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "One raindrop lands",
+   "bg": "day_park",
+   "camera": "push",
+   "props": "",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "lands on your arm",
+       "pose": "hold",
+       "face": "neutral",
+       "dur": 0.15
+      },
+      {
+       "at": "bursts",
+       "pose": "facepalm",
+       "face": "shocked",
+       "dur": 0.12,
+       "sfx": "buzz"
+      }
+     ],
+     "look": 1
+    }
+   ],
+   "objects": [
+    {
+     "id": "cl",
+     "x": 330,
+     "y": 450,
+     "svg": "<g><ellipse cx='0' cy='0' rx='70' ry='34' fill='#C9CCD6' stroke='#141218' stroke-width='5'/><ellipse cx='-40' cy='10' rx='40' ry='26' fill='#C9CCD6' stroke='#141218' stroke-width='5'/><ellipse cx='45' cy='12' rx='38' ry='24' fill='#C9CCD6' stroke='#141218' stroke-width='5'/></g>",
+     "front": false
+    },
+    {
+     "id": "rd",
+     "x": 300,
+     "y": 480,
+     "svg": "<path d='M0 -22 Q16 0 12 10 A12 12 0 1 1 -12 10 Q-16 0 0 -22 Z' fill='#5BC8F5' stroke='#141218' stroke-width='4'/>",
+     "scale": 0.9,
+     "keys": [
+      {
+       "at": "One raindrop",
+       "y": 640,
+       "x": 240,
+       "dur": 0.6,
+       "ease": "in"
+      },
+      {
+       "at": "lands on your arm",
+       "opacity": 0,
+       "dur": 0.1,
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "hv",
+     "x": 240,
+     "y": 650,
+     "svg": "<g><circle cx='-10' cy='-6' r='7' fill='#FF5A5A' stroke='#141218' stroke-width='3'/><circle cx='8' cy='-10' r='6' fill='#FF5A5A' stroke='#141218' stroke-width='3'/><circle cx='4' cy='8' r='8' fill='#FF5A5A' stroke='#141218' stroke-width='3'/><circle cx='-12' cy='12' r='5' fill='#FF5A5A' stroke='#141218' stroke-width='3'/></g>",
+     "opacity": 0,
+     "scale": 0.4,
+     "front": true,
+     "keys": [
+      {
+       "at": "lands on your arm",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": -10
+      },
+      {
+       "at": "bursts",
+       "opacity": 1,
+       "scale": 1.6,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So you carry an umbrella",
+   "bg": "day_park",
+   "camera": "pan_right",
+   "props": "<g opacity='0.6'><path d='M60 420 l-10 30 M140 440 l-10 30 M230 410 l-10 30 M320 450 l-10 30 M410 420 l-10 30 M100 520 l-10 30 M280 540 l-10 30 M450 520 l-10 30' stroke='#5BC8F5' stroke-width='4'/></g>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 110,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "So you carry",
+       "x": 230,
+       "dur": 1.6,
+       "cycle": "walk"
+      },
+      {
+       "at": "a doctor's note",
+       "cycle": null,
+       "pose": "point",
+       "face": "smug",
+       "dur": 0.15
+      },
+      {
+       "at": "swim class forever",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.2,
+       "sfx": "ding"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "um",
+     "x": 150,
+     "y": 650,
+     "svg": "<g><path d='M-62 -110 Q0 -175 62 -110 Z' fill='#E85D75' stroke='#141218' stroke-width='5'/><rect x='-3' y='-112' width='6' height='112' fill='#141218'/></g>",
+     "keys": [
+      {
+       "at": "So you carry",
+       "attach": "hero.hand",
+       "dx": 0,
+       "dy": 0
+      }
+     ]
+    },
+    {
+     "id": "nt",
+     "x": 370,
+     "y": 560,
+     "svg": "<g><rect x='-48' y='-34' width='96' height='68' rx='6' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><text x='0' y='-6' font-size='15' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>DOCTOR'S NOTE</text><text x='0' y='18' font-size='17' font-weight='900' text-anchor='middle' fill='#E85D75' font-family='Arial'>NO SWIM</text></g>",
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "keys": [
+      {
+       "at": "a doctor's note",
+       "opacity": 1,
+       "scale": 1.3,
+       "dur": 0.25,
+       "ease": "back",
+       "sfx": "pop"
+      },
+      {
+       "at": "forever",
+       "rot": -8,
+       "dur": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But for some people",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.2,
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 220,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "own sweat",
+       "face": "worried",
+       "pose": "tired",
+       "dur": 0.15
+      },
+      {
+       "at": "tears",
+       "face": "sad",
+       "dur": 0.2
+      },
+      {
+       "at": "set it off",
+       "pose": "facepalm",
+       "dur": 0.15,
+       "sfx": "buzz"
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "sw",
+     "x": 300,
+     "y": 520,
+     "svg": "<path d='M0 -22 Q16 0 12 10 A12 12 0 1 1 -12 10 Q-16 0 0 -22 Z' fill='#5BC8F5' stroke='#141218' stroke-width='4'/>",
+     "scale": 0.6,
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "own sweat",
+       "opacity": 1,
+       "y": 560,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "tr",
+     "x": 245,
+     "y": 560,
+     "svg": "<path d='M0 -22 Q16 0 12 10 A12 12 0 1 1 -12 10 Q-16 0 0 -22 Z' fill='#5BC8F5' stroke='#141218' stroke-width='4'/>",
+     "scale": 0.45,
+     "opacity": 0,
+     "front": true,
+     "keys": [
+      {
+       "at": "tears",
+       "opacity": 1,
+       "y": 600,
+       "dur": 0.7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "It's real",
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 400,
+     "y": 840,
+     "scale": 1.0,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "so rare",
+       "pose": "point",
+       "face": "shocked",
+       "dur": 0.2
+      },
+      {
+       "at": "single case",
+       "pose": "shrug",
+       "dur": 0.2
+      }
+     ],
+     "flip": true
+    }
+   ],
+   "objects": [
+    {
+     "id": "doc",
+     "x": 230,
+     "y": 600,
+     "svg": "<g><rect x='-70' y='-90' width='140' height='180' rx='10' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><text x='0' y='-45' font-size='18' font-weight='900' text-anchor='middle' fill='#141218' font-family='Arial'>CASES SEEN</text><text x='0' y='35' font-size='80' font-weight='900' text-anchor='middle' fill='#E85D75' font-family='Arial'>0</text></g>",
+     "scale": 0.3,
+     "opacity": 0,
+     "keys": [
+      {
+       "at": "It's real",
+       "opacity": 1,
+       "scale": 1.2,
+       "dur": 0.3,
+       "ease": "back",
+       "sfx": "pop"
+      },
+      {
+       "at": "single case",
+       "scale": 1.35,
+       "dur": 0.15,
+       "ease": "back",
+       "sfx": "ding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then your family drags you",
+   "bg": "day_park",
+   "camera": "push",
+   "props": "<rect x='250' y='690' width='300' height='20' fill='#E8E2D0' stroke='#141218' stroke-width='5'/><rect x='60' y='520' width='8' height='292' fill='#141218'/><path d='M-30 530 Q64 440 160 530 Z' fill='#FFC93C' stroke='#141218' stroke-width='5'/><rect x='95' y='740' width='80' height='14' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "front_props": "<rect x='255' y='710' width='300' height='130' fill='#3FA7D6' opacity='0.92' stroke='#141218' stroke-width='5'/><path d='M265 740 Q290 730 315 740 T365 740 T415 740 T465 740 T515 740' fill='none' stroke='#BFE9FF' stroke-width='4'/><text x='470' y='790' font-size='18' font-weight='900' fill='#F4F1FF' font-family='Arial'>DEEP</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "idle",
+     "face": "bored",
+     "keys": [
+      {
+       "at": "you sit in the shade",
+       "pose": "sit",
+       "face": "bored",
+       "dur": 0.3
+      },
+      {
+       "at": "bone dry",
+       "face": "smug",
+       "dur": 0.15
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "bd",
+     "x": 330,
+     "y": 500,
+     "svg": "<text x='0' y='16' font-size='46' font-weight='900' text-anchor='middle' fill='#FFC93C' stroke='#141218' stroke-width='5' paint-order='stroke' font-family='Arial'>BONE DRY</text>",
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "keys": [
+      {
+       "at": "bone dry",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.2,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "That's why you're the only",
+   "bg": "day_park",
+   "camera": "push",
+   "props": "<rect x='250' y='690' width='300' height='20' fill='#E8E2D0' stroke='#141218' stroke-width='5'/><rect x='60' y='520' width='8' height='292' fill='#141218'/><path d='M-30 530 Q64 440 160 530 Z' fill='#FFC93C' stroke='#141218' stroke-width='5'/><rect x='95' y='740' width='80' height='14' rx='4' fill='#6B4A3A' stroke='#141218' stroke-width='4'/>",
+   "front_props": "<rect x='255' y='710' width='300' height='130' fill='#3FA7D6' opacity='0.92' stroke='#141218' stroke-width='5'/><path d='M265 740 Q290 730 315 740 T365 740 T415 740 T465 740 T515 740' fill='none' stroke='#BFE9FF' stroke-width='4'/><text x='470' y='790' font-size='18' font-weight='900' fill='#F4F1FF' font-family='Arial'>DEEP</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 140,
+     "y": 812,
+     "scale": 1.15,
+     "pose": "sit",
+     "face": "smug",
+     "keys": [
+      {
+       "at": "the only one",
+       "face": "focused",
+       "dur": 0.15
+      },
+      {
+       "at": "slip",
+       "pose": "stand",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ],
+     "look": 1
+    },
+    {
+     "id": "sam",
+     "char": "sam",
+     "x": 330,
+     "y": 692,
+     "scale": 0.95,
+     "flip": true,
+     "pose": "wave",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "slip into",
+       "pose": "fall",
+       "face": "shocked",
+       "x": 400,
+       "y": 760,
+       "dur": 0.35,
+       "arc": 30,
+       "sfx": "thud"
+      },
+      {
+       "at": "deep end",
+       "pose": "reach_up",
+       "y": 790,
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "spl",
+     "x": 400,
+     "y": 600,
+     "svg": "<text x='0' y='16' font-size='40' font-weight='900' text-anchor='middle' fill='#BFE9FF' stroke='#141218' stroke-width='5' paint-order='stroke' font-family='Arial'>SPLASH!</text>",
+     "opacity": 0,
+     "scale": 0.3,
+     "front": true,
+     "keys": [
+      {
+       "at": "slip into",
+       "opacity": 1,
+       "scale": 1,
+       "dur": 0.2,
+       "ease": "back"
+      },
+      {
+       "at": "deep end+0.5",
+       "opacity": 0,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "His hand goes under",
+   "bg": "day_park",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.3,
+   "props": "<rect x='250' y='690' width='300' height='20' fill='#E8E2D0' stroke='#141218' stroke-width='5'/>",
+   "front_props": "<rect x='255' y='710' width='300' height='130' fill='#3FA7D6' opacity='0.92' stroke='#141218' stroke-width='5'/><path d='M265 740 Q290 730 315 740 T365 740 T415 740 T465 740 T515 740' fill='none' stroke='#BFE9FF' stroke-width='4'/><text x='470' y='790' font-size='18' font-weight='900' fill='#F4F1FF' font-family='Arial'>DEEP</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "stand",
+     "face": "shocked",
+     "keys": [
+      {
+       "at": "goes under",
+       "face": "worried",
+       "pose": "reach_up",
+       "dur": 0.15,
+       "sfx": "heartbeat"
+      }
+     ],
+     "look": 1
+    }
+   ],
+   "objects": [
+    {
+     "id": "hd",
+     "x": 380,
+     "y": 690,
+     "svg": "<g><rect x='-7' y='0' width='14' height='60' fill='#141218'/><circle cx='0' cy='-4' r='13' fill='#141218'/></g>",
+     "keys": [
+      {
+       "at": "goes under",
+       "y": 760,
+       "dur": 0.8,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "The lifeguard is looking",
+   "bg": "day_park",
+   "camera": "pan_left",
+   "props": "<rect x='300' y='560' width='10' height='252' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='400' y='560' width='10' height='252' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='292' y='600' width='126' height='16' fill='#E85D75' stroke='#141218' stroke-width='4'/><rect x='70' y='620' width='70' height='100' rx='8' fill='#2A2430' stroke='#141218' stroke-width='5'/><circle cx='105' cy='660' r='24' fill='#4A4458' stroke='#141218' stroke-width='4'/>",
+   "actors": [
+    {
+     "id": "lg",
+     "char": "extra",
+     "shirt": "#E85D75",
+     "x": 355,
+     "y": 600,
+     "scale": 0.95,
+     "flip": false,
+     "pose": "sit",
+     "face": "bored",
+     "look": 1,
+     "keys": [
+      {
+       "at": "other way",
+       "pose": "wave",
+       "face": "happy",
+       "dur": 0.2
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "mn",
+     "x": 110,
+     "y": 560,
+     "svg": "<text x='0' y='0' font-size='44' font-weight='900' fill='#C8FF4D' stroke='#141218' stroke-width='4' paint-order='stroke' font-family='Arial'>♪♫</text>",
+     "keys": [
+      {
+       "at": "the music",
+       "y": 520,
+       "rot": 10,
+       "dur": 0.4
+      },
+      {
+       "at": "is loud",
+       "scale": 1.5,
+       "dur": 0.15,
+       "ease": "back",
+       "sfx": "boing"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Jump in, and",
+   "bg": "day_park",
+   "camera": "push",
+   "slowmo": true,
+   "props": "<rect x='250' y='690' width='300' height='20' fill='#E8E2D0' stroke='#141218' stroke-width='5'/>",
+   "front_props": "<rect x='255' y='710' width='300' height='130' fill='#3FA7D6' opacity='0.92' stroke='#141218' stroke-width='5'/><path d='M265 740 Q290 730 315 740 T365 740 T415 740 T465 740 T515 740' fill='none' stroke='#BFE9FF' stroke-width='4'/><text x='470' y='790' font-size='18' font-weight='900' fill='#F4F1FF' font-family='Arial'>DEEP</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "crouch",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "burning hives",
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "Or scream",
+       "pose": "point",
+       "face": "determined",
+       "dur": 0.3
+      }
+     ],
+     "look": 1
+    }
+   ],
+   "objects": [
+    {
+     "id": "hd2",
+     "x": 400,
+     "y": 760,
+     "svg": "<g><rect x='-7' y='0' width='14' height='60' fill='#141218'/><circle cx='0' cy='-4' r='13' fill='#141218'/></g>",
+     "keys": [
+      {
+       "at": "Or scream",
+       "y": 745,
+       "dur": 0.6
+      },
+      {
+       "at": "hope someone",
+       "y": 765,
+       "dur": 0.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Five",
+   "bg": "day_park",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.5,
+   "slowmo": true,
+   "transition": "none",
+   "props": "<rect x='250' y='690' width='300' height='20' fill='#E8E2D0' stroke='#141218' stroke-width='5'/>",
+   "front_props": "<rect x='255' y='710' width='300' height='130' fill='#3FA7D6' opacity='0.92' stroke='#141218' stroke-width='5'/><path d='M265 740 Q290 730 315 740 T365 740 T415 740 T465 740 T515 740' fill='none' stroke='#BFE9FF' stroke-width='4'/><text x='470' y='790' font-size='18' font-weight='900' fill='#F4F1FF' font-family='Arial'>DEEP</text>",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 170,
+     "y": 812,
+     "scale": 1.3,
+     "pose": "crouch",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "Four",
+       "look": -0.8,
+       "face": "sad",
+       "dur": 0.3
+      },
+      {
+       "at": "Three",
+       "look": 1,
+       "face": "determined",
+       "dur": 0.3
+      }
+     ],
+     "look": 1
+    }
+   ]
+  },
+  {
+   "bg": "lab",
+   "camera": "push",
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 160,
+     "y": 840,
+     "scale": 1.4,
+     "pose": "idle",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "for him",
+       "pose": "shrug",
+       "face": "worried",
+       "dur": 0.3
+      },
+      {
+       "at": "Yes or no",
+       "pose": "idle",
+       "face": "neutral",
+       "look": 0.5,
+       "dur": 0.4
+      }
+     ],
+     "look": 0.5
+    }
+   ],
+   "objects": [
+    {
+     "id": "d0",
+     "x": 350,
+     "y": 600,
+     "svg": "<path d='M0 -22 Q16 0 12 10 A12 12 0 1 1 -12 10 Q-16 0 0 -22 Z' fill='#5BC8F5' stroke='#141218' stroke-width='4'/>",
+     "scale": 2.4,
+     "keys": [
+      {
+       "at": "for him",
+       "scale": 2.6,
+       "dur": 0.3,
+       "ease": "back"
+      },
+      {
+       "at": "Yes or no",
+       "scale": 2.2,
+       "dur": 0.4
+      }
+     ]
+    }
+   ],
+   "start": "Would you jump in"
+  }
+ ]
+}
