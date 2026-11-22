@@ -98,6 +98,7 @@ The last line should still flow back into the first when the Short loops, but th
 ### Voiceover formatting
 - ALL numbers in words ("seventeen hundred kilometers an hour"). Years are the only exception. Metric units.
 - One paragraph of plain spoken text. No quotes, speaker names, stage directions, emojis or markdown.
+- Punctuation is the pacing. Every sentence is voiced on its own with a real pause after it: about half a second after a question, a bit longer after "...", and extra air around short punches ("Not slowly."). End a sentence where you want a beat; use "..." for a dramatic pause mid-thought ("slams on the brakes... nothing else does"); use commas where it should flow.
 - Avoid acronyms and rare names TTS might mangle.
 
 ---

@@ -258,7 +258,7 @@ The old videos all looked like one video: a stick figure standing in the middle 
 
 Read `studio.json`. `"voice"` decides the narrator:
 
-**`"kokoro"` (free, runs here):** set `"voiceover": "voiceover.wav"`, `"tts_voice"` and `"tts_speed"` from studio.json, then run `python3 /home/claude/newstatunlocked-studio/engine/nsu_voice.py EPISODE_DIR`. It voices whole sentences (natural intonation) and writes `voiceover_groups.json`, which the renderer uses for exact caption sync. Too long? Raise `tts_speed` (max 1.2).
+**`"kokoro"` (free, runs here):** voices can be blended: `"am_fenrir+am_eric"` mixes two voices 50/50, `"am_fenrir:0.6+am_eric:0.4"` sets the weights. Each sentence is voiced separately and joined with a real pause (0.55 s after "?", 0.62 s after "...", 0.42 s after "!", 0.38 s after ".", at least 0.45 s after sentences of three words or fewer). Override per episode with `"pauses": {"?": 0.6, ".": 0.4}`. The channel voice is whatever `studio.json` says. Set `"voiceover": "voiceover.wav"`, `"tts_voice"` and `"tts_speed"` from studio.json, then run `python3 /home/claude/newstatunlocked-studio/engine/nsu_voice.py EPISODE_DIR`. It voices whole sentences (natural intonation) and writes `voiceover_groups.json`, which the renderer uses for exact caption sync. Too long? Raise `tts_speed` (max 1.2).
 
 **`"elevenlabs"` (paid, via GitHub Actions):** see PIPELINE.md step 3. The workflow writes `voiceover.mp3` plus `voiceover_alignment.json` (per-character timing) and the renderer uses it automatically for exact caption sync. The ElevenLabs text may contain v4 audio tags like `[excited]`; keep `"script"` in episode.json identical to the spoken words without the tags.
 

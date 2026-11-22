@@ -32,6 +32,11 @@ def setup():
             print(f"downloading {f} ...", flush=True)
             subprocess.run(["curl", "-sSfL", "-o", str(p), BASE + f], check=True)
 
+def sentences(script):
+    text = re.sub(r"\[[^\]]*\]", " ", script)
+    text = re.sub(r"\s+", " ", text).strip()
+    return [x.strip() for x in re.findall(r".+?(?:\.\.\.|[.?!])(?=\s|$)|.+$", text) if x.strip()]
+
 def groups(script):
     text = re.sub(r"\[[^\]]*\]", " ", script)
     text = re.sub(r"\s+", " ", text).strip()
@@ -60,15 +65,34 @@ def main():
     import soundfile as sf
     from kokoro_onnx import Kokoro
     k = Kokoro(str(CACHE / FILES[0]), str(CACHE / FILES[1]))
+    # "am_fenrir+am_eric" blends voices 50/50; "am_fenrir:0.6+am_eric:0.4" sets the weights.
+    vname = voice
+    if "+" in voice:
+        parts = [p.split(":") for p in voice.split("+")]
+        ws = [float(p[1]) if len(p) > 1 else 1.0 for p in parts]
+        voice = sum(k.get_voice_style(p[0]) * (w / sum(ws)) for p, w in zip(parts, ws))
     sr = 24000
-    pieces, pos, meta = [np.zeros(int(0.1 * sr), dtype=np.float32)], 0.1, []
-    for g in groups(ep["script"]):
-        s, sr = k.create(g, voice=voice, speed=speed, lang="en-us")
+    # Each sentence is voiced on its own, then joined with a real pause that fits its punctuation,
+    # so "What if the Earth stopped spinning?" ... "Not slowly." never run into each other.
+    P = {"?": 0.55, "...": 0.62, "!": 0.42, ".": 0.38, "short": 0.45}
+    P.update(ep.get("pauses") or {})
+    pieces, pos, meta = [np.zeros(int(0.12 * sr), dtype=np.float32)], 0.12, []
+    for g in sentences(ep["script"]):
+        s, sr = k.create(g, voice=voice, speed=speed, lang="en-gb" if vname.startswith("b") else "en-us")
         s = np.asarray(s, dtype=np.float32)
         nz = np.where(np.abs(s) > 0.01)[0]
         if len(nz):
-            s = s[max(0, nz[0] - int(0.02 * sr)): nz[-1] + int(0.06 * sr)]
-        gap = 0.22 if g.endswith(("?", "...")) else 0.16
+            s = s[max(0, nz[0] - int(0.02 * sr)): nz[-1] + int(0.05 * sr)]
+        if g.endswith("..."):
+            gap = P["..."]
+        elif g.endswith("?"):
+            gap = P["?"]
+        elif g.endswith("!"):
+            gap = P["!"]
+        else:
+            gap = P["."]
+        if len(g.split()) <= 3:
+            gap = max(gap, P["short"])  # punchy fragments ("Not slowly.") need air around them
         meta.append({"text": g, "start": round(pos, 3), "end": round(pos + len(s) / sr, 3)})
         pieces += [s, np.zeros(int(gap * sr), dtype=np.float32)]
         pos += len(s) / sr + int(gap * sr) / sr
@@ -79,7 +103,7 @@ def main():
     old = ep_dir / "voiceover_chunks.json"
     if old.exists():
         old.unlink()
-    print(f"voice: {voice} @ {speed}x -> {ep_dir/'voiceover.wav'} ({len(y)/sr:.1f} s, {len(meta)} groups)")
+    print(f"voice: {vname} @ {speed}x -> {ep_dir/'voiceover.wav'} ({len(y)/sr:.1f} s, {len(meta)} groups)")
 
 if __name__ == "__main__":
     main()
