@@ -1,0 +1,60 @@
+name: Voice lab
+# One-off comparison of open-source TTS engines on CPU. Free on public repos.
+# Trigger: edit lab/run.txt (or run manually). Results land in lab/results/.
+on:
+  push:
+    paths: ["lab/run.txt"]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency: { group: voice-lab, cancel-in-progress: true }
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { engine: chatterbox_turbo, py: "3.11", pkg: "chatterbox-tts" }
+          - { engine: chatterbox_turbo_liam, py: "3.11", pkg: "chatterbox-tts" }
+          - { engine: chatterbox_liam, py: "3.11", pkg: "chatterbox-tts" }
+          - { engine: qwen3_06_ryan, py: "3.12", pkg: "qwen-tts" }
+          - { engine: qwen3_17_ryan, py: "3.12", pkg: "qwen-tts" }
+          - { engine: qwen3_17_design, py: "3.12", pkg: "qwen-tts" }
+          - { engine: qwen3_06_clone, py: "3.12", pkg: "qwen-tts" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.py }}" }
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq sox libsox-dev >/dev/null || true
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install -q ${{ matrix.pkg }} soundfile huggingface_hub
+      - name: Voice
+        env: { HF_HUB_DISABLE_PROGRESS_BARS: "1" }
+        run: python lab/voice_lab.py ${{ matrix.engine }} out
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: "${{ matrix.engine }}", path: out/, if-no-files-found: warn }
+  collect:
+    needs: voice
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: arts }
+      - name: Commit results
+        run: |
+          sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true
+          mkdir -p lab/results
+          find arts -type f \( -name '*.wav' -o -name '*.json' \) -exec cp {} lab/results/ \;
+          for f in lab/results/*.wav; do [ -e "$f" ] && ffmpeg -loglevel error -y -i "$f" -b:a 96k "${f%.wav}.mp3" && rm "$f"; done
+          git config user.name "nsu-voice-bot"
+          git config user.email "voice-bot@users.noreply.github.com"
+          git add lab/results
+          git diff --cached --quiet && exit 0
+          git commit -m "Voice lab results"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
