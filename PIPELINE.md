@@ -60,7 +60,8 @@ E=$R/episodes/epNN && mkdir -p $E
 1. **Voice first** (so you direct to real timing). Read `$R/studio.json`.
    - `"voice": "kokoro"`: write a minimal `$E/episode.json` with `"ep"`, `"script"`, `"voiceover": "voiceover.wav"`, `"tts_voice"` = `kokoro_voice`, `"tts_speed"` = `kokoro_speed`, `"scenes": [{"bg": "void"}]`, `"hud": []`, then `python3 $R/engine/nsu_voice.py $E`. Read `$E/voiceover_groups.json` for sentence timing.
    - `"voice": "elevenlabs"`: write `$E/voice_request.json` = `{"text": <script with 3–6 Eleven v4 audio tags like [excited] [whispers] [deadpan], words unchanged>, "voice_id": <elevenlabs_voice_id>, "model_id": <elevenlabs_model>}`. Commit and push just that file. A GitHub workflow voices it and commits `voiceover.mp3` + `voiceover_alignment.json`. Poll every 20 s for up to 10 minutes (`git fetch origin main`, then `git show FETCH_HEAD:episodes/epNN/voiceover.mp3` or `voice_error.txt`), then `git pull --rebase origin main` and set `"voiceover": "voiceover.mp3"`. On error or timeout, fall back to Kokoro and report it.
-   - If the voiceover is far off the length you planned, adjust `tts_speed` (0.95–1.2) or trim lines.
+   - The voice tool checks itself: it prints `speech check: N/N sentences fully heard`. If any sentence is still flagged, rephrase it (simpler words, no rare names) and voice again. Never ship a voiceover with a flagged sentence.
+   - If the voiceover is far off the length you planned, trim lines first; adjust `tts_speed` only within 1.1–1.25.
 2. **Direct it.** Write the full `$E/episode.json` following ENGINE_GUIDE.md, especially **Motion and camera tools (v2)** and **Directing rules (v2)**. Write it with a small Python script (`$E/build.py`) when there are many props; reusable SVG strings keep it manageable. Checklist:
    - Open on the subject in motion with a `title` card of the spoken question. Something moves in the first half second.
    - 40%+ of scenes without the hero; a continuous motion source in every scene; no two consecutive scenes with the same background and camera; `lab` at most once.
@@ -77,7 +78,7 @@ E=$R/episodes/epNN && mkdir -p $E
    mkdir -p $R/videos
    cp $E/out/epNN.mp4 $R/videos/epNN.mp4
    cp $E/out/epNN_thumb.jpg $E/thumb.jpg
-   rm -rf $E/out $E/voiceover.wav $E/voiceover_groups.json $E/voiceover_chunks.json
+   rm -rf $E/out $E/voiceover.wav $E/voiceover_groups.json $E/voiceover_chunks.json $E/voice_check.json
    ```
    Over 40 MB? `ffmpeg -i in.mp4 -c:v libx264 -crf 24 -preset veryfast -c:a copy out.mp4`.
 7. Write `$E/upload.md` (WRITING.md section 6). The description ends with one credit line per music track, from `music/library.json`'s `credit_template`.

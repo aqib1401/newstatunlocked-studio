@@ -154,7 +154,7 @@ Props are plain SVG in the 540×960 space. Keep them flat: solid fills, palette 
 {"type": "title", "at": "slams on the brakes", "text": "STOP.", "color": "#FF6B6B", "size": 110, "sfx": "thud"}
 ```
 
-- `title`: big glowing kinetic text, no box. `text` (big line), optional `small` (line above), `sub` (small line below), `color`, `size` (default 62), `top` (default 170), `sfx` (default whoosh+pop; any sound name, or "" for none).
+- `title`: big glowing kinetic text, no box. `text` (big line), optional `small` (line above), `sub` (small line below), `color`, `size` (default 62), `top` (default 170), `sfx` (default a quiet pop; any sound name, or "" for none; `gain` to adjust).
 - While a `title` is up, captions hide, unless you set `"captions": true` (then they move down below it automatically). Use the title on the opening question (spoken words = title text) and on 3–6 key words or numbers per video ("TIME DILATION", "YEAR 2473", "6 MONTHS OF NIGHT").
 
 ```json
@@ -182,7 +182,9 @@ Props are plain SVG in the 540×960 space. Keep them flat: solid fills, palette 
 
 ## Sound (automatic; add extras only when a moment needs one)
 
-Automatic: a whoosh on every cut, pop + ticks on the stat card, fill sweeps on compare, buzz + amber flash on warn, clock + heartbeat during choice then a chime on the pick, a boom on entering slow-mo (the SLOW-MO chip only shows with `"chip": true`), whoosh + pop on title cards, and a generated music bed ducked under the voice.
+Less is more: sound effects should be felt, not noticed. Use at most 3–4 extra sounds per video, on the biggest beats only. Never put a sound on every cut.
+
+Automatic (v2, kept deliberately quiet): plain cuts are silent; `whip`, `zoom` and `flash` transitions get a soft whoosh (at most one every 4 s); title cards get a quiet pop. Older automatic sounds: pop + ticks on the stat card, fill sweeps on compare, buzz + amber flash on warn, clock + heartbeat during choice then a chime on the pick, a boom on entering slow-mo (the SLOW-MO chip only shows with `"chip": true`), whoosh + pop on title cards, and a generated music bed ducked under the voice.
 
 Extra sounds go on actor or object keys (`"sfx": "thud"`) or in the top-level `sfx` list: pop, tick, whoosh, swish, buzz, clock, heartbeat, chime, boom, thud, ding, boing, click, riser, crowd, glitch, fill.
 
@@ -225,7 +227,7 @@ Extra sounds go on actor or object keys (`"sfx": "thud"`) or in the top-level `s
 
 **Transitions (`transition`, per scene):** `cut` (default punch-in), `whip` (slides in with motion blur; `whip_dir` left/right), `zoom` (rushes in), `flash` (white flash), `none`.
 
-**Impacts (top level):** `"shakes": [{"at": "slams", "amp": 16, "dur": 0.5}]` (adds a boom; set `"sfx": "thud"` or `""` to change it) and `"flashes": [{"at": "All at once", "dur": 0.15, "color": "#fff"}]`.
+**Impacts (top level):** `"shakes": [{"at": "slams", "amp": 16, "dur": 0.5}]` (adds a soft boom; set `"sfx": "thud"` or `""` to change it, `"gain"` to adjust) and `"flashes": [{"at": "All at once", "dur": 0.15, "color": "#fff"}]`.
 
 **Actors:** `"shadow": false` for anyone floating, flying or in space.
 
@@ -258,7 +260,7 @@ The old videos all looked like one video: a stick figure standing in the middle 
 
 Read `studio.json`. `"voice"` decides the narrator:
 
-**`"kokoro"` (free, runs here):** voices can be blended: `"am_fenrir+am_eric"` mixes two voices 50/50, `"am_fenrir:0.6+am_eric:0.4"` sets the weights. Each sentence is voiced separately and joined with a real pause (0.55 s after "?", 0.62 s after "...", 0.42 s after "!", 0.38 s after ".", at least 0.45 s after sentences of three words or fewer). Override per episode with `"pauses": {"?": 0.6, ".": 0.4}`. The channel voice is whatever `studio.json` says. Set `"voiceover": "voiceover.wav"`, `"tts_voice"` and `"tts_speed"` from studio.json, then run `python3 /home/claude/newstatunlocked-studio/engine/nsu_voice.py EPISODE_DIR`. It voices whole sentences (natural intonation) and writes `voiceover_groups.json`, which the renderer uses for exact caption sync. Too long? Raise `tts_speed` (max 1.2).
+**`"kokoro"` (free, runs here):** voices can be blended: `"am_fenrir+am_eric"` mixes two voices 50/50, `"am_fenrir:0.6+am_eric:0.4"` sets the weights. Each sentence is voiced separately and joined with a real pause (heard as about 0.55 s after "?", 0.62 s after "...", 0.42 s after "!", 0.38 s after ".", at least 0.45 s after sentences of three words or fewer; the values in the code are ~0.09 s lower because each sentence keeps a little tail so word endings are never clipped). Override per episode with `"pauses": {"?": 0.5, ".": 0.32}`. After voicing, a built-in speech check (Whisper tiny, offline) transcribes every sentence, re-voices any that come out clipped or garbled, and writes `voice_check.json`. If it still flags a sentence, rephrase that sentence and voice again. The channel voice is whatever `studio.json` says. Set `"voiceover": "voiceover.wav"`, `"tts_voice"` and `"tts_speed"` from studio.json, then run `python3 /home/claude/newstatunlocked-studio/engine/nsu_voice.py EPISODE_DIR`. It voices whole sentences (natural intonation) and writes `voiceover_groups.json`, which the renderer uses for exact caption sync. Too long? Raise `tts_speed` (max 1.2).
 
 **`"elevenlabs"` (paid, via GitHub Actions):** see PIPELINE.md step 3. The workflow writes `voiceover.mp3` plus `voiceover_alignment.json` (per-character timing) and the renderer uses it automatically for exact caption sync. The ElevenLabs text may contain v4 audio tags like `[excited]`; keep `"script"` in episode.json identical to the spoken words without the tags.
 

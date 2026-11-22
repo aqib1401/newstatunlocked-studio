@@ -3,7 +3,7 @@ ALT TITLES: What If Earth Stopped Turning? | What If the Planet Hit the Brakes?
 LANE: WORLD
 SHAPE: C science spiral
 ENDING: question ("where do you want to be standing?") + visual loop
-LENGTH: 218 words, actual 70.3 s (kokoro am_liam 1.1, sentence pauses)
+LENGTH: 218 words, actual 70.3 s (kokoro am_liam 1.15, sentence pauses, speech check 24/24)
 CAST: hero only
 
 SCRIPT:

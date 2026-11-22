@@ -32,6 +32,54 @@ def setup():
             print(f"downloading {f} ...", flush=True)
             subprocess.run(["curl", "-sSfL", "-o", str(p), BASE + f], check=True)
 
+ASR = CACHE.parent / "nsu_asr" / "sherpa-onnx-whisper-tiny.en"
+ASR_URL = "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-tiny.en.tar.bz2"
+NUMW = set("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen "
+           "eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million billion "
+           "trillion percent point half quarter".split())
+
+def asr_setup():
+    """Offline speech checker (Whisper tiny.en via sherpa-onnx, ~100 MB from GitHub). Returns None if unavailable."""
+    try:
+        try:
+            import sherpa_onnx  # noqa
+        except ImportError:
+            subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--break-system-packages", "sherpa-onnx"], check=True)
+            import sherpa_onnx  # noqa
+        if not (ASR / "tiny.en-encoder.int8.onnx").exists():
+            ASR.parent.mkdir(parents=True, exist_ok=True)
+            tb = ASR.parent / "m.tar.bz2"
+            subprocess.run(["curl", "-sSfL", "-o", str(tb), ASR_URL], check=True)
+            subprocess.run(["tar", "xjf", str(tb), "-C", str(ASR.parent)], check=True)
+            tb.unlink()
+        return sherpa_onnx.OfflineRecognizer.from_whisper(
+            encoder=str(ASR / "tiny.en-encoder.int8.onnx"), decoder=str(ASR / "tiny.en-decoder.int8.onnx"),
+            tokens=str(ASR / "tiny.en-tokens.txt"), language="en", task="transcribe", num_threads=2)
+    except Exception as e:
+        print(f"(speech check unavailable: {e})", flush=True)
+        return None
+
+def _words(t):
+    return re.findall(r"[a-z0-9']+", t.lower().replace("’", "'"))
+
+def heard(rec, audio, sr, text):
+    """Transcribe one sentence and compare with the script. Returns (ok, recall, transcript)."""
+    from scipy.signal import resample_poly
+    x = resample_poly(np.asarray(audio, dtype=np.float64), 16000, sr).astype(np.float32)
+    st = rec.create_stream(); st.accept_waveform(16000, x); rec.decode_stream(st)
+    hyp = st.result.text.strip()
+    ref = [w for w in _words(text) if w not in NUMW]
+    got = [w for w in _words(hyp) if not any(c.isdigit() for c in w) and w not in NUMW]
+    if not ref:
+        return True, 1.0, hyp
+    import difflib
+    stem = lambda w: re.sub(r"('s|s)$", "", w)[:5]
+    sm = difflib.SequenceMatcher(None, [stem(w) for w in ref], [stem(w) for w in got])
+    recall = sum(b.size for b in sm.get_matching_blocks()) / len(ref)
+    last = stem(ref[-1])[:4]
+    last_ok = any(stem(w)[:4] == last for w in got[-3:]) or len(ref) < 2
+    return (recall >= 0.75 and last_ok), round(recall, 2), hyp
+
 def sentences(script):
     text = re.sub(r"\[[^\]]*\]", " ", script)
     text = re.sub(r"\s+", " ", text).strip()
@@ -56,6 +104,7 @@ def main():
     ap.add_argument("episode_dir")
     ap.add_argument("--voice", default=None)
     ap.add_argument("--speed", type=float, default=None)
+    ap.add_argument("--no-check", action="store_true", help="skip the speech check")
     a = ap.parse_args()
     ep_dir = Path(a.episode_dir)
     ep = json.loads((ep_dir / "episode.json").read_text())
@@ -74,15 +123,32 @@ def main():
     sr = 24000
     # Each sentence is voiced on its own, then joined with a real pause that fits its punctuation,
     # so "What if the Earth stopped spinning?" ... "Not slowly." never run into each other.
-    P = {"?": 0.55, "...": 0.62, "!": 0.42, ".": 0.38, "short": 0.45}
+    P = {"?": 0.46, "...": 0.53, "!": 0.33, ".": 0.29, "short": 0.36}  # plus ~0.09 s of kept tail = heard pause
     P.update(ep.get("pauses") or {})
     pieces, pos, meta = [np.zeros(int(0.12 * sr), dtype=np.float32)], 0.12, []
-    for g in sentences(ep["script"]):
-        s, sr = k.create(g, voice=voice, speed=speed, lang="en-gb" if vname.startswith("b") else "en-us")
-        s = np.asarray(s, dtype=np.float32)
-        nz = np.where(np.abs(s) > 0.01)[0]
+    lang = "en-gb" if vname.startswith("b") else "en-us"
+    def synth(text, spd, tail):
+        a, r = k.create(text, voice=voice, speed=spd, lang=lang, trim=False)
+        a = np.asarray(a, dtype=np.float32)
+        # Trim only real silence: a low threshold plus generous margins so soft word endings
+        # ("s", "t", "f") are never shaved off.
+        nz = np.where(np.abs(a) > 0.002)[0]
         if len(nz):
-            s = s[max(0, nz[0] - int(0.02 * sr)): nz[-1] + int(0.05 * sr)]
+            a = a[max(0, nz[0] - int(0.05 * r)): min(len(a), nz[-1] + int(tail * r))]
+        return a, r
+    rec = asr_setup() if not a.no_check else None
+    report, bad = [], 0
+    for g in sentences(ep["script"]):
+        s, sr = synth(g, speed, 0.14)
+        if rec is not None:
+            ok, recall, hyp = heard(rec, s, sr, g)
+            if not ok:  # re-voice once, a touch slower with more tail, keep the better take
+                s2, _ = synth(g, speed * 0.95, 0.22)
+                ok2, recall2, hyp2 = heard(rec, s2, sr, g)
+                if recall2 > recall or ok2:
+                    s, ok, recall, hyp = s2, ok2, recall2, hyp2
+            report.append({"text": g, "heard": hyp, "recall": recall, "ok": ok})
+            bad += 0 if ok else 1
         if g.endswith("..."):
             gap = P["..."]
         elif g.endswith("?"):
@@ -104,6 +170,10 @@ def main():
     if old.exists():
         old.unlink()
     print(f"voice: {vname} @ {speed}x -> {ep_dir/'voiceover.wav'} ({len(y)/sr:.1f} s, {len(meta)} groups)")
+    if report:
+        (ep_dir / "voice_check.json").write_text(json.dumps(report, indent=1))
+        print(f"speech check: {len(report) - bad}/{len(report)} sentences fully heard" + ("" if not bad else
+              f". CHECK THESE in voice_check.json: " + " | ".join(r["text"] for r in report if not r["ok"])))
 
 if __name__ == "__main__":
     main()

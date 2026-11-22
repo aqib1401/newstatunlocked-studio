@@ -31,6 +31,7 @@ Every v2 episode records `v`, `lane`, `shape`, `ending` and `duration_s` in epis
 
 ## Log (newest first)
 
+- 2026-11-23: Sound: plain scene cuts are now silent (v1 put a hissy whoosh on every cut, ~25 per video, and it was annoying). Soft whoosh only on whip/zoom/flash transitions, max one per 4 s; quiet pop on title cards. Voice speed 1.15, with an automatic speech check so no word is clipped.
 - 2026-11-22: v2 launched. Baseline above.
 - 2026-11-22: Narrator changed from Kokoro am_michael to am_liam (Aqib's pick after comparing samples). Reference: Stickadox's narrator measures male, median pitch ~140-145 Hz with a wide expressive range; Michael measured flat (median 124 Hz, 104-141 Hz). Sentences are now voiced one at a time with real pauses (0.55 s after questions, 0.6 s after "...", 0.45 s around short punches). From EP 32 on.
 

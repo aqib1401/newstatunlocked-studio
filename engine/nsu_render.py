@@ -345,9 +345,9 @@ def sfx(name):
         d = 0.42
         noise = RNG.standard_normal(n(d))
         t = np.arange(n(d)) / SR
-        sweep = bandpass(noise, 500, 5000)
-        shape = np.sin(np.pi * np.clip(t / d, 0, 1)) ** 2
-        return 0.18 * sweep * shape
+        sweep = bandpass(noise, 250, 2200)  # softer, less hissy than v1 (500-5000 Hz)
+        shape = np.sin(np.pi * np.clip(t / d, 0, 1)) ** 3
+        return 0.12 * sweep * shape
     if name == "swish":
         d = 0.22
         noise = RNG.standard_normal(n(d))
@@ -605,7 +605,7 @@ def build_plan(ep, words, dur):
     flashes = [dict(k, t=R(k["at"])) for k in ep.get("flashes", [])]
     for k in shakes:
         if k.get("sfx", "boom"):
-            extra_sfx.append({"name": k.get("sfx", "boom"), "t": k["t"], "gain": k.get("gain", 0.7)})
+            extra_sfx.append({"name": k.get("sfx", "boom"), "t": k["t"], "gain": k.get("gain", 0.45)})
     return {"scenes": plan_scenes, "hud": huds, "sfx": extra_sfx, "music": music, "shakes": shakes, "flashes": flashes}
 
 def build_audio(ep, plan, voice, dur, ep_dir):
@@ -615,9 +615,12 @@ def build_audio(ep, plan, voice, dur, ep_dir):
     v = v / peak * 0.89
     fx = np.zeros(total)
     slow_ranges = [(s["t0"], s["t1"]) for s in plan["scenes"] if s.get("slowmo")]
+    last_whoosh = -99.0
     for i, sc in enumerate(plan["scenes"]):
-        if i > 0 and sc.get("transition", "cut") != "none":
-            place(fx, sfx("whoosh"), sc["t0"] - 0.2)
+        # v2: plain cuts are silent. Only deliberate transitions get a soft whoosh, at most one every 4 s.
+        if i > 0 and sc.get("transition", "cut") in ("whip", "zoom", "flash") and sc["t0"] - last_whoosh >= 4.0:
+            place(fx, sfx("whoosh"), sc["t0"] - 0.2, 0.35)
+            last_whoosh = sc["t0"]
         if sc.get("slowmo"):
             place(fx, sfx("boom"), sc["t0"])
         for a in sc.get("actors", []) + sc.get("objects", []):
@@ -659,11 +662,9 @@ def build_audio(ep, plan, voice, dur, ep_dir):
         elif h["type"] == "endcard":
             place(fx, sfx("chime"), h["t0"], 0.6)
         elif h["type"] == "title":
-            if h.get("sfx", "riser") == "riser":
-                place(fx, sfx("whoosh"), h["t0"] - 0.12, 0.7)
-                place(fx, sfx("pop"), h["t0"], 0.5)
-            elif h.get("sfx"):
-                place(fx, sfx(h["sfx"]), h["t0"], 0.7)
+            name = h.get("sfx", "pop")  # quiet pop by default; "" for silence
+            if name:
+                place(fx, sfx(name), h["t0"], h.get("gain", 0.22 if name == "pop" else 0.5))
     for s in plan["sfx"]:
         place(fx, sfx(s["name"]), s["t"], s["gain"])
     m = make_music(ep, plan, v, dur, ep_dir, slow_ranges)
