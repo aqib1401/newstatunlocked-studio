@@ -1237,8 +1237,27 @@
    "facebook": {
     "at": "2026-11-22T22:26:00Z",
     "zernio_post": "6b036c48a4e86ff27d9d3719",
-    "first_comment": null
+    "first_comment": "122113436337534040_29251357694516548"
    }
+  },
+  "voice": "qwen3_clone (Liam), one take",
+  "length_bucket": "60-99 s"
+ },
+ {
+  "ep": 33,
+  "v": 2,
+  "title": "What If You Could Freeze Time?",
+  "lane": "TIME",
+  "shape": "A epic",
+  "ending": "twist",
+  "duration_s": 89.2,
+  "status": "rendered",
+  "video": "videos/ep33.mp4",
+  "rendered_at": "2026-11-22T23:05:00Z",
+  "critic": "REVISE 6.8 (one rewrite applied)",
+  "posted": {
+   "youtube": null,
+   "facebook": null
   },
   "voice": "qwen3_clone (Liam), one take",
   "length_bucket": "60-99 s"

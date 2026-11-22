@@ -1286,12 +1286,13 @@
  {
   "id": 75,
   "v": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Freeze Time?",
   "lane": "TIME",
   "premise": "Snap your fingers and everything stops, except you.",
   "science": "If time froze, light would freeze too: no light would reach your eyes, and air would be like stone.",
-  "twist": "Frozen time would be pitch black and you couldn't move."
+  "twist": "Frozen time would be pitch black and you couldn't move.",
+  "ep": 33
  },
  {
   "id": 76,
