@@ -11,7 +11,7 @@ concurrency: { group: voice-lab, cancel-in-progress: true }
 jobs:
   voice:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
@@ -19,7 +19,6 @@ jobs:
           - { engine: chatterbox_turbo, py: "3.11", pkg: "chatterbox-tts" }
           - { engine: chatterbox_turbo_liam, py: "3.11", pkg: "chatterbox-tts" }
           - { engine: chatterbox_liam, py: "3.11", pkg: "chatterbox-tts" }
-          - { engine: qwen3_06_ryan, py: "3.12", pkg: "qwen-tts" }
           - { engine: qwen3_17_ryan, py: "3.12", pkg: "qwen-tts" }
           - { engine: qwen3_17_design, py: "3.12", pkg: "qwen-tts" }
           - { engine: qwen3_06_clone, py: "3.12", pkg: "qwen-tts" }
@@ -35,26 +34,16 @@ jobs:
       - name: Voice
         env: { HF_HUB_DISABLE_PROGRESS_BARS: "1" }
         run: python lab/voice_lab.py ${{ matrix.engine }} out
-      - uses: actions/upload-artifact@v4
+      - name: Save this sample right away
         if: always()
-        with: { name: "${{ matrix.engine }}", path: out/, if-no-files-found: warn }
-  collect:
-    needs: voice
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with: { path: arts }
-      - name: Commit results
         run: |
           sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true
           mkdir -p lab/results
-          find arts -type f \( -name '*.wav' -o -name '*.json' \) -exec cp {} lab/results/ \;
-          for f in lab/results/*.wav; do [ -e "$f" ] && ffmpeg -loglevel error -y -i "$f" -b:a 96k "${f%.wav}.mp3" && rm "$f"; done
+          cp out/*.json lab/results/ 2>/dev/null || true
+          for f in out/*.wav; do [ -e "$f" ] && ffmpeg -loglevel error -y -i "$f" -b:a 96k "lab/results/$(basename "${f%.wav}").mp3"; done
           git config user.name "nsu-voice-bot"
           git config user.email "voice-bot@users.noreply.github.com"
           git add lab/results
           git diff --cached --quiet && exit 0
-          git commit -m "Voice lab results"
-          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+          git commit -m "Voice lab: ${{ matrix.engine }}"
+          for i in 1 2 3 4 5 6; do git pull --rebase origin main && git push origin HEAD:main && break; sleep $((RANDOM % 10 + 3)); done
