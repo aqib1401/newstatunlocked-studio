@@ -1,0 +1,11 @@
+{
+ "ep": 35,
+ "script": "What if the Sun vanished? Right now. Poof. Here's the weird part... for eight minutes, nothing happens. You're still at the beach, and the sky stays blue, because sunlight takes eight minutes and twenty seconds to reach us. Even gravity is on the same delay, so Earth keeps circling a Sun that's already gone. Then minute eight hits. The sky goes black in an instant, and the Moon vanishes too, because moonlight is just borrowed sunlight. Earth lets go and flies off in a straight line at thirty kilometers a second. But look up. Jupiter is still shining, because its last sunlight is still on the way, and it glows for over an hour. Day seven. Earth's average temperature drops below freezing, and the oceans start to ice over from the top down. But that ice works like a blanket, so deep down, by hot vents on the sea floor, life keeps going in the dark. And the sunlight on your face right now... left the Sun eight minutes ago. So it could already be gone... and you'd only find out at minute eight.",
+ "voiceover": "voiceover.wav",
+ "scenes": [
+  {
+   "bg": "void"
+  }
+ ],
+ "hud": []
+}
