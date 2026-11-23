@@ -3,7 +3,7 @@ ALT TITLES: What If the Sun Disappeared Right Now? | What If the Sun Was Already
 LANE: WORLD
 SHAPE: D (twist)
 ENDING: twist (the sunlight on your face is 8 minutes old; it could already be gone) + visual loop to the opening beach
-LENGTH: 184 words, est. ~50 s with the Qwen voice (~3.7 words/s)
+LENGTH: 184 words, actual 49.0 s voice / 49.4 s video (Qwen3-TTS clone, one take)
 CAST: hero only (tiny, at the beach)
 
 SCRIPT:

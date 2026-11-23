@@ -1335,5 +1335,22 @@
    }
   },
   "length_bucket": "100 s+"
+ },
+ {
+  "ep": 35,
+  "v": 2,
+  "title": "What If the Sun Vanished?",
+  "lane": "WORLD",
+  "shape": "D twist",
+  "ending": "twist",
+  "duration_s": 49.4,
+  "status": "rendered",
+  "video": "videos/ep35.mp4",
+  "rendered_at": "2026-11-23T22:55:00Z",
+  "critic": "REVISE 6.5 (premise 6, hook 8, momentum 6, surprise 8, clarity 7, visual 6, ending 6, freshness 5, accuracy 6, length 7); revised once",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

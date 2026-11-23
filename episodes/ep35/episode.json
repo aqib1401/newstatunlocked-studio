@@ -4,8 +4,698 @@
  "voiceover": "voiceover.wav",
  "scenes": [
   {
-   "bg": "void"
+   "bg": "void",
+   "fx": [
+    "stars",
+    {
+     "type": "rays",
+     "x": 270,
+     "y": 560,
+     "spin": 10,
+     "opacity": 0.12,
+     "color": "#FFD27A"
+    }
+   ],
+   "cam_start": {
+    "zoom": 1.25,
+    "cx": 270,
+    "cy": 560
+   },
+   "cam": [
+    {
+     "at": 0,
+     "zoom": 1.0,
+     "cx": 270,
+     "cy": 540,
+     "dur": 2.0,
+     "ease": "out"
+    }
+   ],
+   "objects": [
+    {
+     "id": "sun",
+     "x": 270,
+     "y": 560,
+     "scale": 1.0,
+     "anim": {
+      "pulse": 0.04,
+      "period": 1.6,
+      "spin": 6
+     },
+     "svg": "<circle r='209.0' fill='#FFB547' opacity='.12'/><circle r='159.5' fill='#FFD27A' opacity='.22'/><circle r='110' fill='#FFC23D' stroke='#141218' stroke-width='6'/><circle cx='-33.0' cy='-33.0' r='38.5' fill='#FFE7A0' opacity='.8'/><circle cx='38.5' cy='27.5' r='13.2' fill='#F29A2E'/><circle cx='-22.0' cy='49.5' r='9.9' fill='#F29A2E'/>",
+     "keys": [
+      {
+       "at": "Poof",
+       "scale": 0.02,
+       "opacity": 0,
+       "dur": 0.18,
+       "ease": "in",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Here's the weird part",
+   "bg": "sky",
+   "camera": "pan_right",
+   "transition": "whip",
+   "whip_dir": "right",
+   "props": "<rect x='0' y='690' width='540' height='90' fill='#2E8FC9'/><path d='M0 700 Q40 692 80 700 T160 700 T240 700 T320 700 T400 700 T480 700 T560 700' stroke='#BFE3FF' stroke-width='4' fill='none'/><path d='M0 770 Q140 750 270 765 T540 758 L540 960 L0 960 Z' fill='#F2D49B'/><path d='M0 770 Q140 750 270 765 T540 758' fill='none' stroke='#141218' stroke-width='4'/><rect x='90' y='800' width='220' height='26' rx='6' fill='#E46F8E' stroke='#141218' stroke-width='4'/><rect x='90' y='808' width='220' height='8' fill='#F4F1FF'/><path d='M420 820 L400 610' stroke='#141218' stroke-width='6'/><path d='M320 640 Q400 560 480 610 Z' fill='#FF6B6B' stroke='#141218' stroke-width='5'/>",
+   "fx": [
+    {
+     "type": "clouds",
+     "speed": 8,
+     "opacity": 0.5,
+     "y0": 100,
+     "h": 300
+    }
+   ],
+   "objects": [
+    {
+     "id": "wave",
+     "x": 270,
+     "y": 730,
+     "svg": "<path d='M-300 0 Q-260 -10 -220 0 T-140 0 T-60 0 T20 0 T100 0 T180 0 T260 0 T340 0' stroke='#F4F1FF' stroke-width='5' fill='none' opacity='.8'/>",
+     "anim": {
+      "drift": [
+       18,
+       0
+      ],
+      "bob": 3,
+      "period": 2.4
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 800,
+     "scale": 1.1,
+     "pose": "sit",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "and the sky stays blue",
+       "pose": "wave",
+       "face": "happy",
+       "dur": 0.35
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "because sunlight takes",
+   "bg": "space",
+   "camera": "static",
+   "fx": [
+    "stars"
+   ],
+   "props": "<path d='M120 560 L430 560' stroke='#FFE7A0' stroke-width='3' stroke-dasharray='6 12' opacity='.5'/>",
+   "objects": [
+    {
+     "id": "s3",
+     "x": 90,
+     "y": 560,
+     "scale": 0.55,
+     "svg": "<circle r='209.0' fill='#FFB547' opacity='.12'/><circle r='159.5' fill='#FFD27A' opacity='.22'/><circle r='110' fill='#FFC23D' stroke='#141218' stroke-width='6'/><circle cx='-33.0' cy='-33.0' r='38.5' fill='#FFE7A0' opacity='.8'/><circle cx='38.5' cy='27.5' r='13.2' fill='#F29A2E'/><circle cx='-22.0' cy='49.5' r='9.9' fill='#F29A2E'/>",
+     "anim": {
+      "pulse": 0.05,
+      "period": 1.4
+     }
+    },
+    {
+     "id": "e3",
+     "x": 455,
+     "y": 560,
+     "svg": "<circle r='34' fill='#2F6FD6' stroke='#141218' stroke-width='5'/><path d='M-20.4 -10.2 Q-6.800000000000001 -23.799999999999997 6.800000000000001 -13.600000000000001 Q3.4000000000000004 0 -10.2 3.4000000000000004 Z' fill='#3FAE6A'/><path d='M6.800000000000001 6.800000000000001 Q20.4 3.4000000000000004 18.700000000000003 17.0 Q10.2 23.799999999999997 3.4000000000000004 17.0 Z' fill='#3FAE6A'/><ellipse cx='-3.4000000000000004' cy='1.7000000000000002' rx='17.0' ry='2.72' fill='#fff' opacity='.6'/>",
+     "anim": {
+      "spin": 12
+     }
+    },
+    {
+     "id": "beam",
+     "x": 150,
+     "y": 560,
+     "svg": "<circle r='12' fill='#FFE7A0'/><circle r='26' fill='#FFE7A0' opacity='.3'/><path d='M-70 0 L-12 0' stroke='#FFE7A0' stroke-width='8' stroke-linecap='round' opacity='.6'/>",
+     "front": true,
+     "keys": [
+      {
+       "at": "because sunlight takes",
+       "x": 150,
+       "dur": 0.01
+      },
+      {
+       "at": "eight minutes",
+       "x": 415,
+       "dur": 2.6,
+       "ease": "linear"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Even gravity",
+   "bg": "void",
+   "camera": "zoom_in",
+   "zoom": 1.15,
+   "cx": 270,
+   "cy": 560,
+   "transition": "zoom",
+   "fx": [
+    "stars",
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 560,
+     "r": 200,
+     "period": 1.6,
+     "color": "#FFD27A"
+    }
+   ],
+   "props": "<ellipse cx='270' cy='560' rx='190' ry='190' fill='none' stroke='#7FD1FF' stroke-width='3' stroke-dasharray='10 12' opacity='.5'/><circle cx='270' cy='560' r='70' fill='none' stroke='#FFD27A' stroke-width='4' stroke-dasharray='8 10' opacity='.55'/><text x='270' y='570' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='26' fill='#FFD27A' opacity='.7'>GONE</text>",
+   "objects": [
+    {
+     "id": "orb",
+     "x": 270,
+     "y": 560,
+     "svg": "<g transform='translate(190 0)'><circle r='30' fill='#2F6FD6' stroke='#141218' stroke-width='5'/><path d='M-18.0 -9.0 Q-6.0 -21.0 6.0 -12.0 Q3.0 0 -9.0 3.0 Z' fill='#3FAE6A'/><path d='M6.0 6.0 Q18.0 3.0 16.5 15.0 Q9.0 21.0 3.0 15.0 Z' fill='#3FAE6A'/><ellipse cx='-3.0' cy='1.5' rx='15.0' ry='2.4' fill='#fff' opacity='.6'/></g>",
+     "anim": {
+      "spin": 55
+     }
+    }
+   ]
+  },
+  {
+   "start": "Then minute eight hits",
+   "bg": "sky",
+   "camera": "drift",
+   "transition": "cut",
+   "props": "<rect x='0' y='690' width='540' height='90' fill='#2E8FC9'/><path d='M0 700 Q40 692 80 700 T160 700 T240 700 T320 700 T400 700 T480 700 T560 700' stroke='#BFE3FF' stroke-width='4' fill='none'/><path d='M0 770 Q140 750 270 765 T540 758 L540 960 L0 960 Z' fill='#F2D49B'/><path d='M0 770 Q140 750 270 765 T540 758' fill='none' stroke='#141218' stroke-width='4'/><rect x='90' y='800' width='220' height='26' rx='6' fill='#E46F8E' stroke='#141218' stroke-width='4'/><rect x='90' y='808' width='220' height='8' fill='#F4F1FF'/><path d='M420 820 L400 610' stroke='#141218' stroke-width='6'/><path d='M320 640 Q400 560 480 610 Z' fill='#FF6B6B' stroke='#141218' stroke-width='5'/>",
+   "objects": [
+    {
+     "id": "night",
+     "x": 0,
+     "y": 0,
+     "opacity": 0,
+     "svg": "<rect x='0' y='0' width='540' height='692' fill='#05040E'/><circle cx='0' cy='10' r='1.0' fill='#fff' opacity='0.4'/><circle cx='137' cy='84' r='1.6' fill='#fff' opacity='0.55'/><circle cx='274' cy='164' r='2.2' fill='#fff' opacity='0.7'/><circle cx='411' cy='250' r='1.0' fill='#fff' opacity='0.85'/><circle cx='8' cy='342' r='1.6' fill='#fff' opacity='0.4'/><circle cx='145' cy='440' r='2.2' fill='#fff' opacity='0.55'/><circle cx='282' cy='544' r='1.0' fill='#fff' opacity='0.7'/><circle cx='419' cy='654' r='1.6' fill='#fff' opacity='0.85'/><circle cx='16' cy='110' r='2.2' fill='#fff' opacity='0.4'/><circle cx='153' cy='232' r='1.0' fill='#fff' opacity='0.55'/><circle cx='290' cy='360' r='1.6' fill='#fff' opacity='0.7'/><circle cx='427' cy='494' r='2.2' fill='#fff' opacity='0.85'/><circle cx='24' cy='634' r='1.0' fill='#fff' opacity='0.4'/><circle cx='161' cy='120' r='1.6' fill='#fff' opacity='0.55'/><circle cx='298' cy='272' r='2.2' fill='#fff' opacity='0.7'/><circle cx='435' cy='430' r='1.0' fill='#fff' opacity='0.85'/><circle cx='32' cy='594' r='1.6' fill='#fff' opacity='0.4'/><circle cx='169' cy='104' r='2.2' fill='#fff' opacity='0.55'/><circle cx='306' cy='280' r='1.0' fill='#fff' opacity='0.7'/><circle cx='443' cy='462' r='1.6' fill='#fff' opacity='0.85'/><circle cx='40' cy='650' r='2.2' fill='#fff' opacity='0.4'/><circle cx='177' cy='184' r='1.0' fill='#fff' opacity='0.55'/><circle cx='314' cy='384' r='1.6' fill='#fff' opacity='0.7'/><circle cx='451' cy='590' r='2.2' fill='#fff' opacity='0.85'/><circle cx='48' cy='142' r='1.0' fill='#fff' opacity='0.4'/><circle cx='185' cy='360' r='1.6' fill='#fff' opacity='0.55'/><circle cx='322' cy='584' r='2.2' fill='#fff' opacity='0.7'/><circle cx='459' cy='154' r='1.0' fill='#fff' opacity='0.85'/><circle cx='56' cy='390' r='1.6' fill='#fff' opacity='0.4'/><circle cx='193' cy='632' r='2.2' fill='#fff' opacity='0.55'/><circle cx='330' cy='220' r='1.0' fill='#fff' opacity='0.7'/><circle cx='467' cy='474' r='1.6' fill='#fff' opacity='0.85'/><circle cx='64' cy='74' r='2.2' fill='#fff' opacity='0.4'/><circle cx='201' cy='340' r='1.0' fill='#fff' opacity='0.55'/><circle cx='338' cy='612' r='1.6' fill='#fff' opacity='0.7'/><circle cx='475' cy='230' r='2.2' fill='#fff' opacity='0.85'/><circle cx='72' cy='514' r='1.0' fill='#fff' opacity='0.4'/><circle cx='209' cy='144' r='1.6' fill='#fff' opacity='0.55'/><circle cx='346' cy='440' r='2.2' fill='#fff' opacity='0.7'/><circle cx='483' cy='82' r='1.0' fill='#fff' opacity='0.85'/><circle cx='80' cy='390' r='1.6' fill='#fff' opacity='0.4'/><circle cx='217' cy='44' r='2.2' fill='#fff' opacity='0.55'/><circle cx='354' cy='364' r='1.0' fill='#fff' opacity='0.7'/><circle cx='491' cy='30' r='1.6' fill='#fff' opacity='0.85'/><circle cx='88' cy='362' r='2.2' fill='#fff' opacity='0.4'/><circle cx='225' cy='40' r='1.0' fill='#fff' opacity='0.55'/><circle cx='362' cy='384' r='1.6' fill='#fff' opacity='0.7'/><circle cx='499' cy='74' r='2.2' fill='#fff' opacity='0.85'/><circle cx='96' cy='430' r='1.0' fill='#fff' opacity='0.4'/><circle cx='233' cy='132' r='1.6' fill='#fff' opacity='0.55'/><circle cx='370' cy='500' r='2.2' fill='#fff' opacity='0.7'/><circle cx='507' cy='214' r='1.0' fill='#fff' opacity='0.85'/><circle cx='104' cy='594' r='1.6' fill='#fff' opacity='0.4'/><circle cx='241' cy='320' r='2.2' fill='#fff' opacity='0.55'/><circle cx='378' cy='52' r='1.0' fill='#fff' opacity='0.7'/><circle cx='515' cy='450' r='1.6' fill='#fff' opacity='0.85'/><circle cx='112' cy='194' r='2.2' fill='#fff' opacity='0.4'/><circle cx='249' cy='604' r='1.0' fill='#fff' opacity='0.55'/><circle cx='386' cy='360' r='1.6' fill='#fff' opacity='0.7'/><circle cx='523' cy='122' r='2.2' fill='#fff' opacity='0.85'/>",
+     "keys": [
+      {
+       "at": "The sky goes black",
+       "opacity": 1,
+       "dur": 0.08
+      }
+     ]
+    },
+    {
+     "id": "nsea",
+     "x": 0,
+     "y": 0,
+     "opacity": 0,
+     "front": true,
+     "svg": "<rect x='0' y='690' width='540' height='270' fill='#05040E' opacity='.55'/>",
+     "keys": [
+      {
+       "at": "The sky goes black",
+       "opacity": 1,
+       "dur": 0.08
+      }
+     ]
+    },
+    {
+     "id": "wave5",
+     "x": 270,
+     "y": 730,
+     "svg": "<path d='M-300 0 Q-260 -10 -220 0 T-140 0 T-60 0 T20 0 T100 0 T180 0 T260 0 T340 0' stroke='#F4F1FF' stroke-width='5' fill='none' opacity='.8'/>",
+     "anim": {
+      "drift": [
+       -14,
+       0
+      ],
+      "bob": 3,
+      "period": 2.4
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 210,
+     "y": 805,
+     "scale": 1.25,
+     "pose": "sit",
+     "face": "happy",
+     "look": 0.5,
+     "keys": [
+      {
+       "at": "The sky goes black",
+       "pose": "reach_up",
+       "face": "shocked",
+       "dur": 0.12
+      },
+      {
+       "at": "in an instant+0.5",
+       "pose": "stand",
+       "face": "worried",
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "and the Moon vanishes",
+   "bg": "earth_orbit",
+   "camera": "closeup",
+   "focus_y": 420,
+   "zoom": 1.2,
+   "transition": "none",
+   "fx": [
+    {
+     "type": "stars",
+     "n": 40,
+     "speed": 0.4
+    }
+   ],
+   "objects": [
+    {
+     "id": "moonlit",
+     "x": 270,
+     "y": 420,
+     "svg": "<circle r='90' fill='#E9E4F5' stroke='#141218' stroke-width='6'/><circle cx='-27.0' cy='-22.5' r='18.0' fill='#C9C2DD'/><circle cx='31.499999999999996' cy='9.0' r='12.600000000000001' fill='#C9C2DD'/><circle cx='-4.5' cy='40.5' r='10.799999999999999' fill='#C9C2DD'/>",
+     "anim": {
+      "bob": 6,
+      "period": 3
+     },
+     "keys": [
+      {
+       "at": "vanishes too+0.2",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "moondark",
+     "x": 270,
+     "y": 420,
+     "svg": "<circle r='90' fill='#2B2840' stroke='#141218' stroke-width='6'/><circle cx='-27.0' cy='-22.5' r='18.0' fill='#221F33'/><circle cx='31.499999999999996' cy='9.0' r='12.600000000000001' fill='#221F33'/><circle cx='-4.5' cy='40.5' r='10.799999999999999' fill='#221F33'/>",
+     "anim": {
+      "bob": 6,
+      "period": 3
+     }
+    }
+   ]
+  },
+  {
+   "start": "Earth lets go",
+   "bg": "space",
+   "camera": "pan_left",
+   "transition": "whip",
+   "whip_dir": "left",
+   "fx": [
+    {
+     "type": "speedlines",
+     "dir": "left",
+     "speed": 1.4
+    },
+    "stars"
+   ],
+   "objects": [
+    {
+     "id": "e7",
+     "x": 150,
+     "y": 560,
+     "scale": 1.6,
+     "svg": "<circle r='46' fill='#2F6FD6' stroke='#141218' stroke-width='5'/><path d='M-27.599999999999998 -13.799999999999999 Q-9.200000000000001 -32.199999999999996 9.200000000000001 -18.400000000000002 Q4.6000000000000005 0 -13.799999999999999 4.6000000000000005 Z' fill='#3FAE6A'/><path d='M9.200000000000001 9.200000000000001 Q27.599999999999998 4.6000000000000005 25.3 23.0 Q13.799999999999999 32.199999999999996 4.6000000000000005 23.0 Z' fill='#3FAE6A'/><ellipse cx='-4.6000000000000005' cy='2.3000000000000003' rx='23.0' ry='3.68' fill='#fff' opacity='.6'/>",
+     "anim": {
+      "spin": 20
+     },
+     "keys": [
+      {
+       "at": "flies off",
+       "x": 340,
+       "dur": 4.0,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But look up",
+   "bg": "space",
+   "camera": "push",
+   "transition": "flash",
+   "fx": [
+    {
+     "type": "rays",
+     "x": 250,
+     "y": 600,
+     "spin": 5,
+     "opacity": 0.1,
+     "color": "#FFD8A8"
+    }
+   ],
+   "objects": [
+    {
+     "id": "jup",
+     "x": 250,
+     "y": 600,
+     "scale": 0.85,
+     "svg": "<defs><clipPath id='jc'><circle r='120'/></clipPath></defs><circle r='180.0' fill='#FFD8A8' opacity='.14'/><circle r='120' fill='#F0D2A8'/><g clip-path='url(#jc)'><rect x='-120' y='-84.0' width='240' height='21.599999999999998' fill='#C98B5A'/><rect x='-120' y='-42.0' width='240' height='26.4' fill='#E3B98A'/><rect x='-120' y='-6.0' width='240' height='24.0' fill='#B8714A'/><rect x='-120' y='36.0' width='240' height='19.2' fill='#E3B98A'/><rect x='-120' y='66.0' width='240' height='16.8' fill='#C98B5A'/><ellipse cx='42.0' cy='50.4' rx='26.4' ry='14.399999999999999' fill='#D9573E'/></g><circle r='120' fill='none' stroke='#141218' stroke-width='6'/>",
+     "anim": {
+      "pulse": 0.03,
+      "period": 2.0
+     },
+     "keys": [
+      {
+       "at": "glows for over an hour",
+       "opacity": 0.35,
+       "dur": 2.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Day seven",
+   "bg": "snow",
+   "camera": "push",
+   "transition": "cut",
+   "fx": [
+    {
+     "type": "snow",
+     "n": 110,
+     "speed": 1.3
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 805,
+     "scale": 1.25,
+     "pose": "tired",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "below freezing",
+       "pose": "hug",
+       "face": "shocked",
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But that ice works",
+   "bg": "underwater",
+   "camera": "tilt_down",
+   "from_y": 360,
+   "to_y": 620,
+   "zoom": 1.25,
+   "transition": "cut",
+   "props": "<rect x='0' y='0' width='540' height='150' fill='#DDF4FF' stroke='#141218' stroke-width='5'/><path d='M0 150 L40 170 L90 150 L150 176 L210 150 L280 172 L350 150 L420 170 L480 150 L540 166 L540 150 Z' fill='#DDF4FF' stroke='#141218' stroke-width='4'/><path d='M60 40 L110 90 M300 30 L340 100 M430 60 L470 90' stroke='#9FD3EE' stroke-width='5'/><rect x='0' y='150' width='540' height='200' fill='#06243A' opacity='.35'/>",
+   "fx": [
+    {
+     "type": "bubbles",
+     "n": 30,
+     "speed": 0.8
+    },
+    {
+     "type": "embers",
+     "n": 18,
+     "speed": 0.6,
+     "color": "#FF8A4C"
+    }
+   ],
+   "objects": [
+    {
+     "id": "vent",
+     "x": 290,
+     "y": 822,
+     "svg": "<path d='M-40 0 L-22 -110 L22 -110 L40 0 Z' fill='#4A3A4E' stroke='#141218' stroke-width='5'/><ellipse cx='0' cy='-110' rx='24' ry='8' fill='#FF8A4C' stroke='#141218' stroke-width='4'/>"
+    },
+    {
+     "id": "worms",
+     "x": 200,
+     "y": 822,
+     "svg": "<path d='M-30 0 Q-36 -30 -28 -50' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='-28' cy='-50' r='9' fill='#E0443E' stroke='#141218' stroke-width='3'/><path d='M-12 0 Q-18 -30 -10 -66' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='-10' cy='-66' r='9' fill='#E0443E' stroke='#141218' stroke-width='3'/><path d='M8 0 Q2 -30 10 -58' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='10' cy='-58' r='9' fill='#E0443E' stroke='#141218' stroke-width='3'/><path d='M26 0 Q20 -30 28 -44' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='28' cy='-44' r='9' fill='#E0443E' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "sway": 6,
+      "period": 2.2
+     }
+    },
+    {
+     "id": "worms2",
+     "x": 380,
+     "y": 822,
+     "svg": "<path d='M-30 0 Q-36 -30 -28 -50' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='-28' cy='-50' r='9' fill='#E0443E' stroke='#141218' stroke-width='3'/><path d='M-12 0 Q-18 -30 -10 -66' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='-10' cy='-66' r='9' fill='#E0443E' stroke='#141218' stroke-width='3'/><path d='M8 0 Q2 -30 10 -58' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='10' cy='-58' r='9' fill='#E0443E' stroke='#141218' stroke-width='3'/><path d='M26 0 Q20 -30 28 -44' stroke='#F4F1FF' stroke-width='7' fill='none' stroke-linecap='round'/><circle cx='28' cy='-44' r='9' fill='#E0443E' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "sway": 7,
+      "period": 1.8
+     }
+    },
+    {
+     "id": "fish",
+     "x": 120,
+     "y": 640,
+     "svg": "<path d='M-26 0 Q0 -18 22 0 Q0 18 -26 0 Z' fill='#5BE7FF' stroke='#141218' stroke-width='4'/><path d='M22 0 L38 -12 L38 12 Z' fill='#5BE7FF' stroke='#141218' stroke-width='4'/><circle cx='-12' cy='-3' r='3' fill='#141218'/>",
+     "anim": {
+      "drift": [
+       22,
+       0
+      ],
+      "bob": 6,
+      "period": 1.6
+     }
+    }
+   ]
+  },
+  {
+   "start": "And the sunlight on your face",
+   "bg": "sky",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 2.0,
+   "focus_y": 700,
+   "transition": "flash",
+   "props": "<rect x='0' y='690' width='540' height='90' fill='#2E8FC9'/><path d='M0 700 Q40 692 80 700 T160 700 T240 700 T320 700 T400 700 T480 700 T560 700' stroke='#BFE3FF' stroke-width='4' fill='none'/><path d='M0 770 Q140 750 270 765 T540 758 L540 960 L0 960 Z' fill='#F2D49B'/><path d='M0 770 Q140 750 270 765 T540 758' fill='none' stroke='#141218' stroke-width='4'/><rect x='90' y='800' width='220' height='26' rx='6' fill='#E46F8E' stroke='#141218' stroke-width='4'/><rect x='90' y='808' width='220' height='8' fill='#F4F1FF'/><path d='M420 820 L400 610' stroke='#141218' stroke-width='6'/><path d='M320 640 Q400 560 480 610 Z' fill='#FF6B6B' stroke='#141218' stroke-width='5'/>",
+   "fx": [
+    {
+     "type": "rays",
+     "x": 420,
+     "y": 230,
+     "spin": 8,
+     "opacity": 0.16,
+     "color": "#FFF3D0"
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 200,
+     "y": 805,
+     "scale": 1.3,
+     "pose": "sit",
+     "face": "happy",
+     "look": 0.6,
+     "keys": [
+      {
+       "at": "eight minutes ago",
+       "face": "shocked",
+       "dur": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So it could already be gone",
+   "bg": "void",
+   "transition": "zoom",
+   "fx": [
+    "stars",
+    {
+     "type": "rays",
+     "x": 270,
+     "y": 560,
+     "spin": 10,
+     "opacity": 0.12,
+     "color": "#FFD27A"
+    }
+   ],
+   "cam_start": {
+    "zoom": 1.0,
+    "cx": 270,
+    "cy": 540
+   },
+   "cam": [
+    {
+     "at": "So it could",
+     "zoom": 1.25,
+     "cx": 270,
+     "cy": 560,
+     "dur": 4.0,
+     "ease": "inout"
+    }
+   ],
+   "objects": [
+    {
+     "id": "sun2",
+     "x": 270,
+     "y": 560,
+     "scale": 1.0,
+     "anim": {
+      "pulse": 0.04,
+      "period": 1.6,
+      "spin": 6,
+      "flicker": 0.25
+     },
+     "svg": "<circle r='209.0' fill='#FFB547' opacity='.12'/><circle r='159.5' fill='#FFD27A' opacity='.22'/><circle r='110' fill='#FFC23D' stroke='#141218' stroke-width='6'/><circle cx='-33.0' cy='-33.0' r='38.5' fill='#FFE7A0' opacity='.8'/><circle cx='38.5' cy='27.5' r='13.2' fill='#F29A2E'/><circle cx='-22.0' cy='49.5' r='9.9' fill='#F29A2E'/>",
+     "keys": []
+    }
+   ]
   }
  ],
- "hud": []
+ "hud": [
+  {
+   "type": "title",
+   "at": 0.05,
+   "until": "Here's the weird part",
+   "small": "WHAT IF THE SUN",
+   "text": "VANISHED?",
+   "color": "#FFD27A",
+   "top": 150
+  },
+  {
+   "type": "title",
+   "at": "eight minutes and twenty",
+   "until": "Even gravity",
+   "small": "SUNLIGHT'S TRIP TO EARTH",
+   "text": "8 MIN 20 S",
+   "color": "#FFD27A",
+   "size": 72,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "marker",
+   "at": "Then minute eight",
+   "until": "The sky goes black",
+   "label": "MINUTE",
+   "text": "8"
+  },
+  {
+   "type": "title",
+   "at": "borrowed sunlight",
+   "until": "Earth lets go",
+   "small": "MOONLIGHT IS JUST",
+   "text": "BORROWED SUNLIGHT",
+   "color": "#C9D2EE",
+   "size": 50,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "thirty kilometers",
+   "until": "But look up",
+   "small": "EARTH FLIES OFF AT",
+   "text": "30 KM/S",
+   "color": "#7FD1FF",
+   "size": 76,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "still shining",
+   "until": "Day seven",
+   "small": "JUPITER IS",
+   "text": "STILL SHINING",
+   "sub": "FOR OVER AN HOUR",
+   "color": "#FFD8A8",
+   "size": 58,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "marker",
+   "at": "Day seven",
+   "until": "Earth's average",
+   "label": "DAY",
+   "text": "7"
+  },
+  {
+   "type": "title",
+   "at": "left the Sun",
+   "until": "So it could",
+   "small": "THE LIGHT ON YOUR FACE IS",
+   "text": "8 MINUTES OLD",
+   "color": "#FFD27A",
+   "size": 64,
+   "top": 150,
+   "captions": true
+  }
+ ],
+ "accent": "#FFD27A",
+ "show_ep": false,
+ "thumbnail": "The sky goes black+0.4",
+ "highlights": {
+  "eight minutes": "amber",
+  "black": "amber",
+  "thirty kilometers": "green",
+  "over an hour": "green",
+  "minute eight": "amber"
+ },
+ "music": [
+  {
+   "track": "music/lost-islands.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/unknown.mp3",
+   "at": "Then minute eight"
+  },
+  {
+   "track": "music/remember.mp3",
+   "at": "But that ice works"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "shakes": [
+  {
+   "at": "The sky goes black",
+   "amp": 16,
+   "dur": 0.5
+  },
+  {
+   "at": "Earth lets go",
+   "amp": 10,
+   "dur": 0.4
+  }
+ ],
+ "flashes": [
+  {
+   "at": "Poof",
+   "dur": 0.15,
+   "color": "#FFE7A0"
+  },
+  {
+   "at": "The sky goes black",
+   "dur": 0.1,
+   "color": "#fff"
+  }
+ ]
 }
