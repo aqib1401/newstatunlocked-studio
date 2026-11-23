@@ -26,6 +26,8 @@ def load_posts(path):
     data = json.loads(raw)
     if isinstance(data, list) and data and isinstance(data[0], dict) and "text" in data[0]:
         data = json.loads(data[0]["text"])
+    if isinstance(data, dict) and isinstance(data.get("result"), str):
+        data = json.loads(data["result"])  # Zernio MCP wrapper {"result": "<json>"}
     return data.get("posts", []) if isinstance(data, dict) else []
 
 
