@@ -1289,5 +1289,22 @@
   },
   "voice": "qwen3_clone (Liam), one take",
   "length_bucket": "60-99 s"
+ },
+ {
+  "ep": 34,
+  "v": 2,
+  "title": "What If You Were 1,000x Stronger?",
+  "lane": "BODY",
+  "shape": "B timeline",
+  "ending": "punchline",
+  "duration_s": 104.8,
+  "status": "rendered",
+  "video": "videos/ep34.mp4",
+  "rendered_at": "2026-11-23T18:16:13Z",
+  "critic": "REVISE 6.9 (revised once)",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

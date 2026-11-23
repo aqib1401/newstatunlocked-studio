@@ -1206,12 +1206,13 @@
  {
   "id": 67,
   "v": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Were 1,000x Stronger?",
   "lane": "BODY",
   "premise": "Strength times a thousand: you throw a car like a pillow and jump over buildings.",
   "science": "Square-cube law and Newton's third law: pushing a truck pushes you back; your bones, the floor and your shoes become the limit.",
-  "twist": "You can't hug anyone, ever."
+  "twist": "You can't hug anyone, ever.",
+  "ep": 34
  },
  {
   "id": 68,
