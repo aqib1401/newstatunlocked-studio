@@ -1368,12 +1368,13 @@
  {
   "id": 83,
   "v": 2,
-  "status": "planned",
-  "title": "What If the Sun Went Out?",
+  "status": "used",
+  "title": "What If the Sun Vanished?",
   "lane": "WORLD",
   "premise": "The Sun switches off.",
   "science": "Sunlight takes about eight minutes and twenty seconds to reach Earth; you wouldn't know for eight minutes.",
-  "twist": "Earth flies off in a straight line, and the oceans freeze from the top down."
+  "twist": "Earth flies off in a straight line, and the oceans freeze from the top down.",
+  "ep": 35
  },
  {
   "id": 84,
