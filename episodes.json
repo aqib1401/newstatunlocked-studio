@@ -1364,13 +1364,21 @@
   "shape": "D twist",
   "ending": "twist",
   "duration_s": 49.4,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep35.mp4",
   "rendered_at": "2026-11-23T22:55:00Z",
   "critic": "REVISE 6.5 (premise 6, hook 8, momentum 6, surprise 8, clarity 7, visual 6, ending 6, freshness 5, accuracy 6, length 7); revised once",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-24T18:07:47Z",
+    "zernio_post": "6b05d259aa78e9f1fbd85ac0",
+    "first_comment": "UgzxAyIoWkCAwb6YM314AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-24T18:07:47Z",
+    "zernio_post": "6b05d25d7f94e054ffa3b744",
+    "first_comment": null
+   }
   },
   "length_bucket": "under 60 s"
  },
