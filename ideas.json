@@ -1380,12 +1380,13 @@
  {
   "id": 84,
   "v": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Fell Into a Black Hole?",
   "lane": "WORLD",
   "premise": "You fall into a black hole.",
   "science": "Spaghettification: the pull on your feet is much stronger than on your head; time slows near it.",
-  "twist": "To everyone watching, you never fall in at all."
+  "twist": "To everyone watching, you never fall in at all.",
+  "ep": 37
  },
  {
   "id": 85,
