@@ -1176,12 +1176,13 @@
  {
   "id": 64,
   "v": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If Your Brain Ran 1,000x Faster?",
   "lane": "MIND",
   "premise": "Thoughts run a thousand times faster: a one-minute conversation feels like seventeen hours.",
   "science": "Your brain uses about a fifth of your body's energy while being about two percent of your weight.",
-  "twist": "The world becomes a frozen statue museum; one boring class lasts weeks."
+  "twist": "The world becomes a frozen statue museum; one boring class lasts weeks.",
+  "ep": 36
  },
  {
   "id": 65,
