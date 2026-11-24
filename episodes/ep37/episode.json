@@ -1,0 +1,11 @@
+{
+ "ep": 37,
+ "script": "What if you fell into a black hole? You get two tries, and only one of them lets you see the inside. Attempt one: a small black hole, ten times heavier than the Sun but only sixty kilometers wide. You drift toward it feet first. Gravity at your feet is so much stronger than at your head that your body stretches, longer and thinner, like toothpaste squeezed from a tube. Scientists really call this spaghettification, and it tears you apart more than a thousand kilometers before you even reach the black hole. So, attempt two: the giant black hole at the center of our galaxy, four million times heavier than the Sun. It's so huge that the pull on your head and your feet is almost the same, so this time you stay in one piece. You cross the edge, the point of no return... and you barely feel a thing. But your friend, watching from a spaceship far away, sees something very different. To her, you slow down... and down... turning red, then dim, until you seem to freeze at the edge forever. You're actually still falling. Inside, every direction points to the center, so trying to escape is like trying to go back to yesterday. How long do you get inside? About one minute... and then the toothpaste problem from attempt one catches up with you anyway.",
+ "voiceover": "voiceover.wav",
+ "scenes": [
+  {
+   "bg": "void"
+  }
+ ],
+ "hud": []
+}
