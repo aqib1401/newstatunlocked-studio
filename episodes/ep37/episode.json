@@ -4,8 +4,1047 @@
  "voiceover": "voiceover.wav",
  "scenes": [
   {
-   "bg": "void"
+   "bg": "void",
+   "fx": [
+    "stars",
+    {
+     "type": "warp",
+     "x": 270,
+     "y": 560,
+     "n": 60,
+     "speed": 1.4,
+     "color": "#FFD27A"
+    }
+   ],
+   "cam_start": {
+    "zoom": 1.35,
+    "cx": 270,
+    "cy": 560
+   },
+   "cam": [
+    {
+     "at": 0,
+     "zoom": 1.0,
+     "cx": 270,
+     "cy": 540,
+     "dur": 2.0,
+     "ease": "out"
+    }
+   ],
+   "objects": [
+    {
+     "id": "bh1_d",
+     "x": 270,
+     "y": 600,
+     "scale": 1.0,
+     "svg": "<circle r='187.5' fill='#FFB547' opacity='.10'/><circle r='165.0' fill='#FF6B3D' opacity='.12'/><circle r='150.0' fill='none' stroke='#FF6B3D' stroke-width='24.0' stroke-dasharray='40 26' opacity='.9'/><circle r='126.0' fill='none' stroke='#FFB547' stroke-width='18.0' stroke-dasharray='60 18' opacity='.9'/><circle r='105.0' fill='none' stroke='#FFE7A0' stroke-width='12.0' stroke-dasharray='30 14' opacity='.9'/><circle r='90.0' fill='none' stroke='#FFF6D8' stroke-width='6.0' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 50
+     }
+    },
+    {
+     "id": "bh1_c",
+     "x": 270,
+     "y": 600,
+     "scale": 1.0,
+     "svg": "<circle r='84.0' fill='#FFF6D8' opacity='.9'/><circle r='75.0' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    },
+    {
+     "id": "tiny1",
+     "x": 420,
+     "y": 440,
+     "scale": 1.2,
+     "svg": "<circle cx='0' cy='-30' r='9' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 -21 L0 0 M0 -14 L-10 -4 M0 -14 L10 -4 M0 0 L-7 14 M0 0 L7 14' stroke='#5BA8FF' stroke-width='5' stroke-linecap='round'/>",
+     "anim": {
+      "spin": 25,
+      "bob": 4,
+      "period": 1.5
+     },
+     "keys": [
+      {
+       "at": "You get two tries",
+       "x": 340,
+       "y": 520,
+       "scale": 0.7,
+       "dur": 4.0,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Attempt one",
+   "bg": "earth_orbit",
+   "camera": "reveal",
+   "cx": 270,
+   "cy": 560,
+   "zoom": 2.0,
+   "transition": "whip",
+   "whip_dir": "right",
+   "fx": [
+    "stars",
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 560,
+     "r": 160,
+     "period": 1.2,
+     "color": "#FF6B3D"
+    }
+   ],
+   "objects": [
+    {
+     "id": "bh2_d",
+     "x": 270,
+     "y": 560,
+     "scale": 1.0,
+     "svg": "<circle r='100.0' fill='#FFB547' opacity='.10'/><circle r='88.0' fill='#FF6B3D' opacity='.12'/><circle r='80.0' fill='none' stroke='#FF6B3D' stroke-width='12.8' stroke-dasharray='40 26' opacity='.9'/><circle r='67.2' fill='none' stroke='#FFB547' stroke-width='9.6' stroke-dasharray='60 18' opacity='.9'/><circle r='56.0' fill='none' stroke='#FFE7A0' stroke-width='6.4' stroke-dasharray='30 14' opacity='.9'/><circle r='48.0' fill='none' stroke='#FFF6D8' stroke-width='3.2' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 90
+     }
+    },
+    {
+     "id": "bh2_c",
+     "x": 270,
+     "y": 560,
+     "scale": 1.0,
+     "svg": "<circle r='44.8' fill='#FFF6D8' opacity='.9'/><circle r='40.0' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    }
+   ]
+  },
+  {
+   "start": "You drift toward it",
+   "bg": "space",
+   "camera": "drift",
+   "transition": "cut",
+   "fx": [
+    "stars",
+    {
+     "type": "speedlines",
+     "dir": "left",
+     "n": 8,
+     "speed": 0.6
+    }
+   ],
+   "objects": [
+    {
+     "id": "bh3_d",
+     "x": 270,
+     "y": 760,
+     "scale": 1.0,
+     "svg": "<circle r='137.5' fill='#FFB547' opacity='.10'/><circle r='121.0' fill='#FF6B3D' opacity='.12'/><circle r='110.0' fill='none' stroke='#FF6B3D' stroke-width='17.6' stroke-dasharray='40 26' opacity='.9'/><circle r='92.4' fill='none' stroke='#FFB547' stroke-width='13.2' stroke-dasharray='60 18' opacity='.9'/><circle r='77.0' fill='none' stroke='#FFE7A0' stroke-width='8.8' stroke-dasharray='30 14' opacity='.9'/><circle r='66.0' fill='none' stroke='#FFF6D8' stroke-width='4.4' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 80
+     }
+    },
+    {
+     "id": "bh3_c",
+     "x": 270,
+     "y": 760,
+     "scale": 1.0,
+     "svg": "<circle r='61.6' fill='#FFF6D8' opacity='.9'/><circle r='55.0' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 270,
+     "y": 560,
+     "scale": 1.1,
+     "pose": "idle",
+     "face": "neutral",
+     "shadow": false,
+     "keys": [
+      {
+       "at": "feet first",
+       "y": 600,
+       "face": "worried",
+       "dur": 1.6,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Gravity at your feet",
+   "bg": "lab",
+   "camera": "push",
+   "transition": "cut",
+   "fx": [
+    {
+     "type": "speedlines",
+     "dir": "right",
+     "n": 5,
+     "speed": 0.4
+    }
+   ],
+   "objects": [
+    {
+     "id": "st1",
+     "x": 270,
+     "y": 700,
+     "svg": "<g stroke='#141218' stroke-width='7.0' stroke-linecap='round' fill='none'><path d='M0 -136 L0 -70' stroke='#5BA8FF' stroke-width='18.0'/><path d='M0 -70 L-18 0 M0 -70 L18 0'/><path d='M0 -120 L-30 -70 M0 -120 L30 -70'/></g><ellipse cx='0' cy='-154' rx='22' ry='22' fill='#F4F1FF' stroke='#141218' stroke-width='5'/>",
+     "anim": {
+      "bob": 3,
+      "period": 1.2
+     },
+     "keys": [
+      {
+       "at": "your body stretches",
+       "opacity": 0,
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "st2",
+     "x": 270,
+     "y": 720,
+     "opacity": 0,
+     "svg": "<g stroke='#141218' stroke-width='4.9' stroke-linecap='round' fill='none'><path d='M0 -218 L0 -112' stroke='#5BA8FF' stroke-width='12.6'/><path d='M0 -112 L-13 0 M0 -112 L13 0'/><path d='M0 -192 L-21 -112 M0 -192 L21 -112'/></g><ellipse cx='0' cy='-246' rx='15' ry='35' fill='#F4F1FF' stroke='#141218' stroke-width='5'/>",
+     "anim": {
+      "bob": 3,
+      "period": 1.2
+     },
+     "keys": [
+      {
+       "at": "your body stretches",
+       "opacity": 1,
+       "dur": 0.15
+      },
+      {
+       "at": "longer and thinner",
+       "opacity": 0,
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "st3",
+     "x": 270,
+     "y": 745,
+     "opacity": 0,
+     "svg": "<g stroke='#141218' stroke-width='3.1' stroke-linecap='round' fill='none'><path d='M0 -313 L0 -161' stroke='#5BA8FF' stroke-width='8.1'/><path d='M0 -161 L-8 0 M0 -161 L8 0'/><path d='M0 -276 L-14 -161 M0 -276 L14 -161'/></g><ellipse cx='0' cy='-354' rx='10' ry='51' fill='#F4F1FF' stroke='#141218' stroke-width='5'/>",
+     "anim": {
+      "bob": 3,
+      "period": 1.2
+     },
+     "keys": [
+      {
+       "at": "longer and thinner",
+       "opacity": 1,
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "aHead",
+     "x": 150,
+     "y": 330,
+     "svg": "<path d='M0 0 L0 40' stroke='#C8FF4D' stroke-width='8' stroke-linecap='round'/><path d='M-12.8 28.8 L0 49.6 L12.8 28.8 Z' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "bob": 3,
+      "period": 0.8
+     }
+    },
+    {
+     "id": "aFeet",
+     "x": 150,
+     "y": 600,
+     "svg": "<path d='M0 0 L0 150' stroke='#FF6B6B' stroke-width='12' stroke-linecap='round'/><path d='M-19.200000000000003 133.2 L0 164.4 L19.200000000000003 133.2 Z' fill='#FF6B6B' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "bob": 6,
+      "period": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "start": "like toothpaste",
+   "bg": "warm_interior",
+   "camera": "zoom_in",
+   "zoom": 1.25,
+   "cx": 270,
+   "cy": 600,
+   "transition": "whip",
+   "whip_dir": "left",
+   "props": "<rect x='0' y='640' width='540' height='26' fill='#C9D2EE' stroke='#141218' stroke-width='5'/><rect x='20' y='666' width='500' height='150' fill='#8E9AC4' stroke='#141218' stroke-width='5'/><rect x='150' y='380' width='240' height='200' rx='14' fill='#BFE3FF' stroke='#141218' stroke-width='6' opacity='.9'/><path d='M180 410 L230 460 M300 400 L360 470' stroke='#FFFFFF' stroke-width='8' opacity='.6' stroke-linecap='round'/>",
+   "fx": [
+    {
+     "type": "dust",
+     "n": 20,
+     "speed": 0.2,
+     "color": "#FFD27A"
+    }
+   ],
+   "objects": [
+    {
+     "id": "tube",
+     "x": 235,
+     "y": 610,
+     "rot": -8,
+     "svg": "<path d='M-150 -40 L60 -34 L60 34 L-150 40 Z' fill='#F4F1FF' stroke='#141218' stroke-width='6'/><path d='M-150 -40 L-170 -46 L-170 46 L-150 40 Z' fill='#D8D2EA' stroke='#141218' stroke-width='5'/><rect x='-110' y='-18' width='120' height='36' rx='8' fill='#5BA8FF' stroke='#141218' stroke-width='4'/><path d='M60 -22 L92 -14 L92 14 L60 22 Z' fill='#C8FF4D' stroke='#141218' stroke-width='5'/>",
+     "anim": {
+      "sway": 2,
+      "period": 0.6
+     }
+    },
+    {
+     "id": "paste",
+     "x": 327,
+     "y": 600,
+     "scale": 0.05,
+     "svg": "<path d='M0 -10 Q60 -26 120 -6 T240 -4 T330 6' stroke='#141218' stroke-width='26' fill='none' stroke-linecap='round'/><path d='M0 -10 Q60 -26 120 -6 T240 -4 T330 6' stroke='#F4F1FF' stroke-width='16' fill='none' stroke-linecap='round'/><path d='M0 -10 Q60 -26 120 -6 T240 -4 T330 6' stroke='#5BE7FF' stroke-width='5' fill='none' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "like toothpaste+0.2",
+       "scale": 0.6,
+       "dur": 1.4,
+       "ease": "out",
+       "sfx": "swish"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Scientists really call",
+   "bg": "space",
+   "camera": "static",
+   "transition": "zoom",
+   "fx": [
+    "stars",
+    {
+     "type": "rays",
+     "x": 270,
+     "y": 600,
+     "spin": 10,
+     "opacity": 0.1,
+     "color": "#FFB547"
+    }
+   ],
+   "objects": [
+    {
+     "id": "bh6_d",
+     "x": 270,
+     "y": 600,
+     "scale": 1.0,
+     "svg": "<circle r='137.5' fill='#FFB547' opacity='.10'/><circle r='121.0' fill='#FF6B3D' opacity='.12'/><circle r='110.0' fill='none' stroke='#FF6B3D' stroke-width='17.6' stroke-dasharray='40 26' opacity='.9'/><circle r='92.4' fill='none' stroke='#FFB547' stroke-width='13.2' stroke-dasharray='60 18' opacity='.9'/><circle r='77.0' fill='none' stroke='#FFE7A0' stroke-width='8.8' stroke-dasharray='30 14' opacity='.9'/><circle r='66.0' fill='none' stroke='#FFF6D8' stroke-width='4.4' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 70
+     }
+    },
+    {
+     "id": "bh6_c",
+     "x": 270,
+     "y": 600,
+     "scale": 1.0,
+     "svg": "<circle r='61.6' fill='#FFF6D8' opacity='.9'/><circle r='55.0' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    },
+    {
+     "id": "noodle",
+     "x": 270,
+     "y": 600,
+     "scale": 1.0,
+     "svg": "<path d='M0 -230 C160 -230 230 -100 200 20 C170 140 40 170 -40 120 C-110 70 -100 -20 -30 -40 C20 -54 50 -10 30 20' stroke='#141218' stroke-width='20' fill='none' stroke-linecap='round'/><path d='M0 -230 C160 -230 230 -100 200 20 C170 140 40 170 -40 120 C-110 70 -100 -20 -30 -40 C20 -54 50 -10 30 20' stroke='#5BA8FF' stroke-width='11' fill='none' stroke-linecap='round'/>",
+     "front": true,
+     "anim": {
+      "spin": 70
+     },
+     "keys": [
+      {
+       "at": "and it tears you apart",
+       "scale": 0.3,
+       "opacity": 0,
+       "dur": 1.2,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "more than a thousand kilometers",
+   "bg": "earth_orbit",
+   "camera": "pan_right",
+   "transition": "flash",
+   "fx": [
+    "stars",
+    {
+     "type": "pulse",
+     "x": 420,
+     "y": 520,
+     "r": 90,
+     "period": 0.8,
+     "color": "#FF6B6B"
+    }
+   ],
+   "objects": [
+    {
+     "id": "bh7_d",
+     "x": 90,
+     "y": 520,
+     "scale": 1.0,
+     "svg": "<circle r='68.8' fill='#FFB547' opacity='.10'/><circle r='60.5' fill='#FF6B3D' opacity='.12'/><circle r='55.0' fill='none' stroke='#FF6B3D' stroke-width='8.8' stroke-dasharray='40 26' opacity='.9'/><circle r='46.2' fill='none' stroke='#FFB547' stroke-width='6.6' stroke-dasharray='60 18' opacity='.9'/><circle r='38.5' fill='none' stroke='#FFE7A0' stroke-width='4.4' stroke-dasharray='30 14' opacity='.9'/><circle r='33.0' fill='none' stroke='#FFF6D8' stroke-width='2.2' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 100
+     }
+    },
+    {
+     "id": "bh7_c",
+     "x": 90,
+     "y": 520,
+     "scale": 1.0,
+     "svg": "<circle r='30.8' fill='#FFF6D8' opacity='.9'/><circle r='27.5' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    },
+    {
+     "id": "ruler",
+     "x": 120,
+     "y": 520,
+     "svg": "<path d='M0 0 L300 0' stroke='#F4F1FF' stroke-width='5' stroke-dasharray='14 10'/><path d='M0 -18 L0 18 M300 -18 L300 18' stroke='#F4F1FF' stroke-width='5'/><text x='150' y='-24' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='38' fill='#FFD27A' stroke='#141218' stroke-width='2'>1,000+ KM</text>"
+    },
+    {
+     "id": "pop",
+     "x": 420,
+     "y": 520,
+     "svg": "<circle r='22' fill='#FF6B6B' opacity='.35'/><circle r='9' fill='#FF6B6B'/>",
+     "anim": {
+      "pulse": 0.2,
+      "period": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "start": "So, attempt two",
+   "bg": "void",
+   "camera": "pull",
+   "transition": "zoom",
+   "fx": [
+    "stars",
+    {
+     "type": "embers",
+     "n": 30,
+     "speed": 0.8,
+     "color": "#FFD27A"
+    }
+   ],
+   "objects": [
+    {
+     "id": "bh8_d",
+     "x": 270,
+     "y": 580,
+     "scale": 1.0,
+     "svg": "<circle r='287.5' fill='#FFB547' opacity='.10'/><circle r='253.0' fill='#FF6B3D' opacity='.12'/><circle r='230.0' fill='none' stroke='#FF6B3D' stroke-width='36.8' stroke-dasharray='40 26' opacity='.9'/><circle r='193.2' fill='none' stroke='#FFB547' stroke-width='27.6' stroke-dasharray='60 18' opacity='.9'/><circle r='161.0' fill='none' stroke='#FFE7A0' stroke-width='18.4' stroke-dasharray='30 14' opacity='.9'/><circle r='138.0' fill='none' stroke='#FFF6D8' stroke-width='9.2' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 18
+     }
+    },
+    {
+     "id": "bh8_c",
+     "x": 270,
+     "y": 580,
+     "scale": 1.0,
+     "svg": "<circle r='128.8' fill='#FFF6D8' opacity='.9'/><circle r='115.0' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    }
+   ]
+  },
+  {
+   "start": "It's so huge",
+   "bg": "space",
+   "camera": "pan_left",
+   "transition": "cut",
+   "fx": [
+    "stars",
+    {
+     "type": "dust",
+     "n": 26,
+     "speed": 0.3,
+     "color": "#FFD27A"
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 690,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "neutral",
+     "shadow": false,
+     "keys": [
+      {
+       "at": "this time you stay",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.3
+      }
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "id": "aH9",
+     "x": 380,
+     "y": 400,
+     "svg": "<path d='M0 0 L0 60' stroke='#C8FF4D' stroke-width='8' stroke-linecap='round'/><path d='M-12.8 48.8 L0 69.6 L12.8 48.8 Z' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "bob": 3,
+      "period": 1.0
+     }
+    },
+    {
+     "id": "aF9",
+     "x": 380,
+     "y": 560,
+     "svg": "<path d='M0 0 L0 66' stroke='#C8FF4D' stroke-width='8' stroke-linecap='round'/><path d='M-12.8 54.8 L0 75.6 L12.8 54.8 Z' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "bob": 3,
+      "period": 1.0
+     }
+    }
+   ]
+  },
+  {
+   "start": "You cross the edge",
+   "bg": "earth_orbit",
+   "camera": "reveal",
+   "cx": 270,
+   "cy": 520,
+   "zoom": 2.4,
+   "transition": "flash",
+   "fx": [
+    "stars",
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 900,
+     "r": 300,
+     "period": 1.6,
+     "color": "#FFB547"
+    }
+   ],
+   "props": "<circle cx='270' cy='1350' r='820' fill='#FFE7A0' opacity='.25'/><circle cx='270' cy='1350' r='790' fill='#000' stroke='#FFF6D8' stroke-width='10'/>",
+   "objects": [
+    {
+     "id": "tiny10",
+     "x": 270,
+     "y": 520,
+     "scale": 1.6,
+     "svg": "<circle cx='0' cy='-30' r='9' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 -21 L0 0 M0 -14 L-10 -4 M0 -14 L10 -4 M0 0 L-7 14 M0 0 L7 14' stroke='#5BA8FF' stroke-width='5' stroke-linecap='round'/>",
+     "anim": {
+      "spin": 12,
+      "bob": 4,
+      "period": 2
+     },
+     "keys": [
+      {
+       "at": "you barely feel",
+       "y": 580,
+       "dur": 2.0,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "But your friend",
+   "bg": "cool_interior",
+   "camera": "push",
+   "transition": "whip",
+   "whip_dir": "right",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#2A2840'/><circle cx='300' cy='470' r='190' fill='#05040A' stroke='#8E9AC4' stroke-width='26'/><circle cx='300' cy='470' r='190' fill='none' stroke='#141218' stroke-width='6'/><circle cx='512' cy='470' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='300' cy='682' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='88' cy='470' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='300' cy='258' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='450' cy='620' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='150' cy='620' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='450' cy='320' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='150' cy='320' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><rect x='0' y='760' width='540' height='200' fill='#3A3756' stroke='#141218' stroke-width='5'/><rect x='40' y='120' width='80' height='14' rx='7' fill='#5BE7FF' opacity='.6'/><rect x='40' y='150' width='50' height='14' rx='7' fill='#C8FF4D' opacity='.6'/><circle cx='190' cy='360' r='2' fill='#F4F1FF' opacity='.8'/><circle cx='380' cy='330' r='2.5' fill='#F4F1FF' opacity='.8'/><circle cx='420' cy='540' r='2' fill='#F4F1FF' opacity='.8'/><circle cx='210' cy='590' r='1.5' fill='#F4F1FF' opacity='.8'/><circle cx='300' cy='300' r='1.5' fill='#F4F1FF' opacity='.8'/><circle cx='450' cy='430' r='2' fill='#F4F1FF' opacity='.8'/>",
+   "objects": [
+    {
+     "id": "bh11_d",
+     "x": 300,
+     "y": 520,
+     "scale": 1.0,
+     "svg": "<circle r='87.5' fill='#FFB547' opacity='.10'/><circle r='77.0' fill='#FF6B3D' opacity='.12'/><circle r='70.0' fill='none' stroke='#FF6B3D' stroke-width='11.2' stroke-dasharray='40 26' opacity='.9'/><circle r='58.8' fill='none' stroke='#FFB547' stroke-width='8.4' stroke-dasharray='60 18' opacity='.9'/><circle r='49.0' fill='none' stroke='#FFE7A0' stroke-width='5.6' stroke-dasharray='30 14' opacity='.9'/><circle r='42.0' fill='none' stroke='#FFF6D8' stroke-width='2.8' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 60
+     }
+    },
+    {
+     "id": "bh11_c",
+     "x": 300,
+     "y": 520,
+     "scale": 1.0,
+     "svg": "<circle r='39.2' fill='#FFF6D8' opacity='.9'/><circle r='35.0' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    },
+    {
+     "id": "tiny11",
+     "x": 300,
+     "y": 440,
+     "scale": 0.9,
+     "svg": "<circle cx='0' cy='-30' r='9' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 -21 L0 0 M0 -14 L-10 -4 M0 -14 L10 -4 M0 0 L-7 14 M0 0 L7 14' stroke='#5BA8FF' stroke-width='5' stroke-linecap='round'/>",
+     "anim": {
+      "bob": 2,
+      "period": 2
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 120,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "point",
+     "face": "shocked",
+     "flip": false
+    }
+   ]
+  },
+  {
+   "start": "To her, you slow down",
+   "bg": "cool_interior",
+   "camera": "closeup",
+   "focus_y": 470,
+   "zoom": 1.9,
+   "transition": "none",
+   "props": "<rect x='0' y='0' width='540' height='960' fill='#2A2840'/><circle cx='300' cy='470' r='190' fill='#05040A' stroke='#8E9AC4' stroke-width='26'/><circle cx='300' cy='470' r='190' fill='none' stroke='#141218' stroke-width='6'/><circle cx='512' cy='470' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='300' cy='682' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='88' cy='470' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='300' cy='258' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='450' cy='620' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='150' cy='620' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='450' cy='320' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><circle cx='150' cy='320' r='7' fill='#C9D2EE' stroke='#141218' stroke-width='3'/><rect x='0' y='760' width='540' height='200' fill='#3A3756' stroke='#141218' stroke-width='5'/><rect x='40' y='120' width='80' height='14' rx='7' fill='#5BE7FF' opacity='.6'/><rect x='40' y='150' width='50' height='14' rx='7' fill='#C8FF4D' opacity='.6'/><circle cx='190' cy='360' r='2' fill='#F4F1FF' opacity='.8'/><circle cx='380' cy='330' r='2.5' fill='#F4F1FF' opacity='.8'/><circle cx='420' cy='540' r='2' fill='#F4F1FF' opacity='.8'/><circle cx='210' cy='590' r='1.5' fill='#F4F1FF' opacity='.8'/><circle cx='300' cy='300' r='1.5' fill='#F4F1FF' opacity='.8'/><circle cx='450' cy='430' r='2' fill='#F4F1FF' opacity='.8'/>",
+   "objects": [
+    {
+     "id": "bh12_d",
+     "x": 300,
+     "y": 520,
+     "scale": 1.0,
+     "svg": "<circle r='87.5' fill='#FFB547' opacity='.10'/><circle r='77.0' fill='#FF6B3D' opacity='.12'/><circle r='70.0' fill='none' stroke='#FF6B3D' stroke-width='11.2' stroke-dasharray='40 26' opacity='.9'/><circle r='58.8' fill='none' stroke='#FFB547' stroke-width='8.4' stroke-dasharray='60 18' opacity='.9'/><circle r='49.0' fill='none' stroke='#FFE7A0' stroke-width='5.6' stroke-dasharray='30 14' opacity='.9'/><circle r='42.0' fill='none' stroke='#FFF6D8' stroke-width='2.8' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 60
+     }
+    },
+    {
+     "id": "bh12_c",
+     "x": 300,
+     "y": 520,
+     "scale": 1.0,
+     "svg": "<circle r='39.2' fill='#FFF6D8' opacity='.9'/><circle r='35.0' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    },
+    {
+     "id": "red12",
+     "x": 300,
+     "y": 452,
+     "opacity": 0,
+     "svg": "<circle r='26' fill='#FF3D3D' opacity='.55'/>",
+     "keys": [
+      {
+       "at": "turning red",
+       "opacity": 1,
+       "dur": 0.8
+      },
+      {
+       "at": "then dim",
+       "opacity": 0.3,
+       "dur": 1.0
+      }
+     ]
+    },
+    {
+     "id": "tiny12",
+     "x": 300,
+     "y": 440,
+     "scale": 0.9,
+     "svg": "<circle cx='0' cy='-30' r='9' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 -21 L0 0 M0 -14 L-10 -4 M0 -14 L10 -4 M0 0 L-7 14 M0 0 L7 14' stroke='#5BA8FF' stroke-width='5' stroke-linecap='round'/>",
+     "keys": [
+      {
+       "at": "To her, you slow down",
+       "y": 452,
+       "dur": 4.0,
+       "ease": "out"
+      },
+      {
+       "at": "then dim",
+       "opacity": 0.25,
+       "dur": 1.2
+      }
+     ]
+    }
+   ],
+   "actors": [
+    {
+     "id": "mia",
+     "char": "mia",
+     "x": 140,
+     "y": 812,
+     "scale": 1.25,
+     "pose": "think",
+     "face": "worried"
+    }
+   ]
+  },
+  {
+   "start": "You're actually still falling",
+   "bg": "void",
+   "camera": "drift",
+   "transition": "zoom",
+   "fx": [
+    {
+     "type": "warp",
+     "x": 270,
+     "y": 560,
+     "n": 90,
+     "speed": 2.4,
+     "color": "#5BE7FF"
+    },
+    "glitch"
+   ],
+   "objects": [
+    {
+     "id": "arrows",
+     "x": 270,
+     "y": 560,
+     "scale": 0.0,
+     "svg": "<g transform='rotate(0) translate(0 -260)'><path d='M0 0 L0 110' stroke='#5BE7FF' stroke-width='9' stroke-linecap='round'/><path d='M-14.4 97.4 L0 120.8 L14.4 97.4 Z' fill='#5BE7FF' stroke='#141218' stroke-width='3'/></g><g transform='rotate(45) translate(0 -260)'><path d='M0 0 L0 110' stroke='#5BE7FF' stroke-width='9' stroke-linecap='round'/><path d='M-14.4 97.4 L0 120.8 L14.4 97.4 Z' fill='#5BE7FF' stroke='#141218' stroke-width='3'/></g><g transform='rotate(90) translate(0 -260)'><path d='M0 0 L0 110' stroke='#5BE7FF' stroke-width='9' stroke-linecap='round'/><path d='M-14.4 97.4 L0 120.8 L14.4 97.4 Z' fill='#5BE7FF' stroke='#141218' stroke-width='3'/></g><g transform='rotate(135) translate(0 -260)'><path d='M0 0 L0 110' stroke='#5BE7FF' stroke-width='9' stroke-linecap='round'/><path d='M-14.4 97.4 L0 120.8 L14.4 97.4 Z' fill='#5BE7FF' stroke='#141218' stroke-width='3'/></g><g transform='rotate(180) translate(0 -260)'><path d='M0 0 L0 110' stroke='#5BE7FF' stroke-width='9' stroke-linecap='round'/><path d='M-14.4 97.4 L0 120.8 L14.4 97.4 Z' fill='#5BE7FF' stroke='#141218' stroke-width='3'/></g><g transform='rotate(225) translate(0 -260)'><path d='M0 0 L0 110' stroke='#5BE7FF' stroke-width='9' stroke-linecap='round'/><path d='M-14.4 97.4 L0 120.8 L14.4 97.4 Z' fill='#5BE7FF' stroke='#141218' stroke-width='3'/></g><g transform='rotate(270) translate(0 -260)'><path d='M0 0 L0 110' stroke='#5BE7FF' stroke-width='9' stroke-linecap='round'/><path d='M-14.4 97.4 L0 120.8 L14.4 97.4 Z' fill='#5BE7FF' stroke='#141218' stroke-width='3'/></g><g transform='rotate(315) translate(0 -260)'><path d='M0 0 L0 110' stroke='#5BE7FF' stroke-width='9' stroke-linecap='round'/><path d='M-14.4 97.4 L0 120.8 L14.4 97.4 Z' fill='#5BE7FF' stroke='#141218' stroke-width='3'/></g>",
+     "anim": {
+      "spin": -14
+     },
+     "keys": [
+      {
+       "at": "every direction",
+       "scale": 1.0,
+       "dur": 0.6,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    },
+    {
+     "id": "dot",
+     "x": 270,
+     "y": 560,
+     "svg": "<circle r='16' fill='#F4F1FF'/><circle r='34' fill='#5BE7FF' opacity='.25'/>",
+     "anim": {
+      "pulse": 0.25,
+      "period": 0.6
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 270,
+     "y": 470,
+     "scale": 0.7,
+     "pose": "fall",
+     "face": "shocked",
+     "shadow": false,
+     "keys": [
+      {
+       "at": "every direction",
+       "x": 120,
+       "y": 360,
+       "scale": 0.55,
+       "dur": 0.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "so trying to escape",
+   "bg": "dusk",
+   "camera": "tilt_up",
+   "from_y": 620,
+   "to_y": 480,
+   "zoom": 1.25,
+   "transition": "whip",
+   "whip_dir": "left",
+   "fx": [
+    {
+     "type": "clouds",
+     "speed": -60,
+     "opacity": 0.5,
+     "y0": 120,
+     "h": 300
+    }
+   ],
+   "objects": [
+    {
+     "id": "sun14",
+     "x": 120,
+     "y": 700,
+     "svg": "<circle r='80' fill='#FFB547' opacity='.2'/><circle r='52' fill='#FFC23D' stroke='#141218' stroke-width='5'/>",
+     "keys": [
+      {
+       "at": "so trying to escape",
+       "x": 400,
+       "y": 300,
+       "dur": 3.5,
+       "arc": 80
+      }
+     ]
+    },
+    {
+     "id": "clk14",
+     "x": 270,
+     "y": 560,
+     "scale": 0.0,
+     "svg": "<circle r='124' fill='#FFD27A' opacity='.15'/><circle r='110' fill='#F4F1FF' stroke='#141218' stroke-width='8'/><rect x='-3' y='-100' width='6' height='18' fill='#141218' transform='rotate(0)'/><rect x='-3' y='-100' width='6' height='10' fill='#141218' transform='rotate(30)'/><rect x='-3' y='-100' width='6' height='10' fill='#141218' transform='rotate(60)'/><rect x='-3' y='-100' width='6' height='18' fill='#141218' transform='rotate(90)'/><rect x='-3' y='-100' width='6' height='10' fill='#141218' transform='rotate(120)'/><rect x='-3' y='-100' width='6' height='10' fill='#141218' transform='rotate(150)'/><rect x='-3' y='-100' width='6' height='18' fill='#141218' transform='rotate(180)'/><rect x='-3' y='-100' width='6' height='10' fill='#141218' transform='rotate(210)'/><rect x='-3' y='-100' width='6' height='10' fill='#141218' transform='rotate(240)'/><rect x='-3' y='-100' width='6' height='18' fill='#141218' transform='rotate(270)'/><rect x='-3' y='-100' width='6' height='10' fill='#141218' transform='rotate(300)'/><rect x='-3' y='-100' width='6' height='10' fill='#141218' transform='rotate(330)'/><rect x='-5' y='-55.0' width='10' height='60.50000000000001' rx='5' fill='#141218' transform='rotate(-60)'/><circle r='10' fill='#141218'/>",
+     "keys": [
+      {
+       "at": "go back to yesterday",
+       "scale": 1.0,
+       "dur": 0.4,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "hand14",
+     "x": 270,
+     "y": 560,
+     "scale": 0.0,
+     "svg": "<rect x='-3' y='-93.5' width='6' height='104.5' rx='3' fill='#FF6B6B'/><circle r='7' fill='#FF6B6B'/>",
+     "anim": {
+      "spin": -320
+     },
+     "keys": [
+      {
+       "at": "go back to yesterday",
+       "scale": 1.0,
+       "dur": 0.4,
+       "ease": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "How long do you get inside",
+   "bg": "void",
+   "transition": "zoom",
+   "fx": [
+    "stars",
+    {
+     "type": "warp",
+     "x": 270,
+     "y": 560,
+     "n": 60,
+     "speed": 1.4,
+     "color": "#FFD27A"
+    }
+   ],
+   "cam_start": {
+    "zoom": 1.0,
+    "cx": 270,
+    "cy": 540
+   },
+   "cam": [
+    {
+     "at": "How long",
+     "zoom": 1.3,
+     "cx": 270,
+     "cy": 560,
+     "dur": 6.0,
+     "ease": "inout"
+    }
+   ],
+   "objects": [
+    {
+     "id": "bh15_d",
+     "x": 270,
+     "y": 600,
+     "scale": 1.0,
+     "svg": "<circle r='187.5' fill='#FFB547' opacity='.10'/><circle r='165.0' fill='#FF6B3D' opacity='.12'/><circle r='150.0' fill='none' stroke='#FF6B3D' stroke-width='24.0' stroke-dasharray='40 26' opacity='.9'/><circle r='126.0' fill='none' stroke='#FFB547' stroke-width='18.0' stroke-dasharray='60 18' opacity='.9'/><circle r='105.0' fill='none' stroke='#FFE7A0' stroke-width='12.0' stroke-dasharray='30 14' opacity='.9'/><circle r='90.0' fill='none' stroke='#FFF6D8' stroke-width='6.0' stroke-dasharray='18 10' opacity='.9'/>",
+     "anim": {
+      "spin": 50
+     }
+    },
+    {
+     "id": "bh15_c",
+     "x": 270,
+     "y": 600,
+     "scale": 1.0,
+     "svg": "<circle r='84.0' fill='#FFF6D8' opacity='.9'/><circle r='75.0' fill='#000' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "pulse": 0.02,
+      "period": 1.6
+     }
+    },
+    {
+     "id": "tiny15",
+     "x": 420,
+     "y": 440,
+     "scale": 1.2,
+     "svg": "<circle cx='0' cy='-30' r='9' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 -21 L0 0 M0 -14 L-10 -4 M0 -14 L10 -4 M0 0 L-7 14 M0 0 L7 14' stroke='#5BA8FF' stroke-width='5' stroke-linecap='round'/>",
+     "anim": {
+      "spin": 25,
+      "bob": 4,
+      "period": 1.5
+     }
+    }
+   ]
   }
  ],
- "hud": []
+ "hud": [
+  {
+   "type": "title",
+   "at": 0.05,
+   "until": "You get two tries",
+   "small": "WHAT IF YOU FELL INTO",
+   "text": "A BLACK HOLE?",
+   "color": "#FFD27A",
+   "size": 66,
+   "top": 150
+  },
+  {
+   "type": "title",
+   "at": "Attempt one",
+   "until": "You drift toward",
+   "small": "ATTEMPT 1 \u00b7 10 SUNS",
+   "text": "60 KM WIDE",
+   "color": "#FF8A5B",
+   "size": 72,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "Scientists really call",
+   "until": "more than a thousand",
+   "text": "SPAGHETTIFICATION",
+   "color": "#5BE7FF",
+   "size": 48,
+   "top": 160,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "So, attempt two",
+   "until": "It's so huge",
+   "small": "ATTEMPT 2 \u00b7 CENTER OF THE GALAXY",
+   "text": "4,000,000 SUNS",
+   "color": "#FFD27A",
+   "size": 62,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "note",
+   "at": "It's so huge",
+   "until": "You cross the edge",
+   "label": "REAL SCIENCE",
+   "text": "Head and feet: almost the same pull."
+  },
+  {
+   "type": "title",
+   "at": "the point of no return",
+   "until": "But your friend",
+   "small": "THE EVENT HORIZON",
+   "text": "NO RETURN",
+   "color": "#FFF6D8",
+   "size": 80,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "About one minute",
+   "until": "end:anyway",
+   "small": "TIME LEFT INSIDE",
+   "text": "ABOUT 1 MINUTE",
+   "color": "#C8FF4D",
+   "size": 64,
+   "top": 150,
+   "captions": true
+  }
+ ],
+ "accent": "#FFD27A",
+ "show_ep": false,
+ "thumbnail": "Scientists really call+0.8",
+ "highlights": {
+  "sixty kilometers": "amber",
+  "spaghettification": "green",
+  "four million": "amber",
+  "point of no return": "amber",
+  "freeze at the edge forever": "green",
+  "About one minute": "green"
+ },
+ "music": [
+  {
+   "track": "music/syntheticity.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/deeper.mp3",
+   "at": "You drift toward it"
+  },
+  {
+   "track": "music/fate.mp3",
+   "at": "So, attempt two"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "shakes": [
+  {
+   "at": "and it tears you apart",
+   "amp": 16,
+   "dur": 0.5
+  },
+  {
+   "at": "You cross the edge",
+   "amp": 10,
+   "dur": 0.4
+  }
+ ],
+ "flashes": [
+  {
+   "at": "and it tears you apart",
+   "dur": 0.15,
+   "color": "#FF6B6B"
+  },
+  {
+   "at": "the point of no return",
+   "dur": 0.12,
+   "color": "#FFF6D8"
+  }
+ ],
+ "sfx": [
+  {
+   "name": "riser",
+   "at": "You're actually still falling",
+   "gain": 0.6
+  }
+ ]
 }

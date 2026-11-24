@@ -3,7 +3,7 @@ ALT TITLES: What If You Jumped Into a Black Hole? | What If You Survived a Black
 LANE: WORLD
 SHAPE: E (survival run)
 ENDING: fact
-LENGTH: 229 words, est. 82 s
+LENGTH: 229 words, voiced 65 s
 CAST: hero + a friend in a spaceship (unnamed)
 
 SCRIPT:

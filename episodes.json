@@ -1427,5 +1427,22 @@
    }
   },
   "length_bucket": "60-99 s"
+ },
+ {
+  "ep": 37,
+  "v": 2,
+  "title": "What If You Fell Into a Black Hole?",
+  "lane": "WORLD",
+  "shape": "E survival",
+  "ending": "fact",
+  "duration_s": 65.2,
+  "status": "rendered",
+  "video": "videos/ep37.mp4",
+  "rendered_at": "2026-11-24T22:45:00Z",
+  "critic": "REVISE 6.5 (premise 6, hook 6, momentum 7, surprise 7, clarity 6, visual 7, ending 6, freshness 6, accuracy 8, length 6); revised once",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
