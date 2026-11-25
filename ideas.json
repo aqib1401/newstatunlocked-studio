@@ -1248,12 +1248,13 @@
  {
   "id": 71,
   "v": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Teleport Anywhere?",
   "lane": "BODY",
   "premise": "Blink and you're in Tokyo, on Everest, on the Moon.",
   "science": "Earth spins at up to 1,670 km/h and orbits the Sun at about 30 km a second; teleport across the planet and you keep your old speed.",
-  "twist": "You arrive in Tokyo moving at the speed of an airliner."
+  "twist": "You arrive in Tokyo moving at the speed of an airliner.",
+  "ep": 38
  },
  {
   "id": 72,
