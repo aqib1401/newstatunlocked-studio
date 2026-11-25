@@ -1502,13 +1502,21 @@
   "shape": "A epic",
   "ending": "question",
   "duration_s": 101.3,
-  "status": "rendered",
+  "status": "posted",
   "video": "videos/ep38.mp4",
   "rendered_at": "2026-11-25T18:35:00Z",
   "critic": "REVISE 6.4 (revised once)",
   "posted": {
-   "youtube": null,
-   "facebook": null
+   "youtube": {
+    "at": "2026-11-25T22:42:18Z",
+    "zernio_post": "6b0764315796d9718e7719c1",
+    "first_comment": "Ugy531LLXb3GI3T_QJV4AaABAg"
+   },
+   "facebook": {
+    "at": "2026-11-25T22:42:18Z",
+    "zernio_post": "6b076437a9e8570bce6dc38d",
+    "first_comment": null
+   }
   },
   "length_bucket": "100 s+"
  },
