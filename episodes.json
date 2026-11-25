@@ -1473,5 +1473,22 @@
    }
   },
   "length_bucket": "60-99 s"
+ },
+ {
+  "ep": 38,
+  "v": 2,
+  "title": "What If You Could Teleport Anywhere?",
+  "lane": "BODY",
+  "shape": "A epic",
+  "ending": "question",
+  "duration_s": 101.3,
+  "status": "rendered",
+  "video": "videos/ep38.mp4",
+  "rendered_at": "2026-11-25T18:35:00Z",
+  "critic": "REVISE 6.4 (revised once)",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
