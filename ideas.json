@@ -1300,12 +1300,13 @@
  {
   "id": 76,
   "v": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Rewind 10 Seconds?",
   "lane": "TIME",
   "premise": "Any mistake undone: the dropped phone, the awkward sentence, the missed goal.",
   "science": "Your brain remembers things in rough chunks, not frame by frame.",
-  "twist": "You've already rewound this moment more times than you can remember."
+  "twist": "You've already rewound this moment more times than you can remember.",
+  "ep": 39
  },
  {
   "id": 77,
