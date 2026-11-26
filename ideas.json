@@ -1146,12 +1146,13 @@
  {
   "id": 61,
   "v": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Could Hear Every Thought?",
   "lane": "MIND",
   "premise": "You hear every mind around you: a classroom sounds like a stadium, and you learn what people really think of you.",
   "science": "Your brain already filters out most of what you hear (the cocktail party effect); without a filter, a crowd becomes noise you can't escape.",
-  "twist": "Out of thousands of voices, one thought is about you, and it isn't who you'd expect."
+  "twist": "Out of thousands of voices, one thought is about you, and it isn't who you'd expect.",
+  "ep": 40
  },
  {
   "id": 62,
