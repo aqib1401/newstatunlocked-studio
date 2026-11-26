@@ -201,7 +201,7 @@ scenes = [
      "actors": [{"id": "hero", "char": "hero", "x": 90, "y": 815, "scale": 1.15, "pose": "run_a", "face": "determined",
                  "keys": [{"at": "So you follow that voice", "x": 330, "dur": 2.6, "cycle": "run", "ease": "linear"}]}]},
     # 15. A quiet kid alone at the back of class.
-    {"start": "to a quiet kid", "bg": "cool_interior", "camera": "reveal", "focus": "kid", "zoom": 2.2, "transition": "cut",
+    {"start": "to a shy kid", "bg": "cool_interior", "camera": "reveal", "focus": "kid", "zoom": 2.2, "transition": "cut",
      "props": DESK(330), "fx": ["dust"],
      "objects": [{"id": "hope", "x": 300, "y": 520, "scale": 0.2, "opacity": 0, "svg": bubble(WAVE, w=100, h=70), "front": True,
                   "anim": {"bob": 5, "period": 1.3},
