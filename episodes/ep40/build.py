@@ -87,7 +87,8 @@ def cloud_of_bubbles(prefix, centre=(270, 560), radius=200, n=10, start_at=None,
              "anim": {"bob": 6, "period": 1.2 + (i % 4) * 0.25, "sway": 4}}
         if start_at:
             o["opacity"] = 0
-            o["keys"] = [{"at": f"{start_at}+{0.12*i:.2f}", "opacity": 1, "dur": 0.15, "ease": "back"}]
+            at = round(start_at + 0.12 * i, 2) if isinstance(start_at, (int, float)) else f"{start_at}+{0.12*i:.2f}"
+            o["keys"] = [{"at": at, "opacity": 1, "dur": 0.15, "ease": "back"}]
         objs.append(o)
     return objs
 
@@ -130,7 +131,7 @@ scenes = [
     # 5. Six thousand... (no) -> Hour one: school. Teacher thinks lunch, smart girl checks answers.
     {"start": "Hour one", "bg": "cool_interior", "camera": "pan_left", "transition": "whip", "whip_dir": "left",
      "props": BOARD + DESK(330) + DESK(130), "fx": ["dust"],
-     "objects": [{"id": "t_lunch", "x": 250, "y": 330 + 120, "scale": 0.8, "opacity": 0, "svg": bubble(BURGER), "front": True, "anim": {"bob": 5, "period": 1.2},
+     "objects": [{"id": "t_lunch", "x": 110, "y": 400, "scale": 0.8, "opacity": 0, "svg": bubble(BURGER), "front": True, "anim": {"bob": 5, "period": 1.2},
                   "keys": [{"at": "thinking about lunch", "opacity": 1, "dur": 0.15, "ease": "back"}]},
                  {"id": "t_ans", "x": 400, "y": 520, "scale": 0.8, "opacity": 0, "svg": bubble(txt("A B C", 24), w=110), "front": True, "anim": {"bob": 5, "period": 1.0},
                   "keys": [{"at": "smartest girl", "opacity": 1, "dur": 0.15, "ease": "back"}]}],
@@ -138,14 +139,14 @@ scenes = [
                 {"id": "girl", "char": "extra", "shirt": "#9B7BFF", "x": 380, "y": 810, "scale": 1.0, "pose": "think", "face": "focused", "flip": True},
                 {"id": "hero", "char": "hero", "x": 250, "y": 810, "scale": 1.05, "pose": "sit", "face": "neutral",
                  "keys": [{"at": "Free answers", "pose": "cheer", "face": "happy", "dur": 0.15}]}]},
-    # 6a. By lunch the cafeteria sounds like a stadium.
-    {"start": "But by lunch", "bg": "stadium", "camera": "zoom_in", "zoom": 1.25, "cx": 270, "cy": 500, "transition": "cut",
-     "fx": [{"type": "confetti", "n": 40}, {"type": "pulse", "x": 270, "y": 480, "r": 200, "period": 0.7, "color": "#FF6B6B"}],
-     "objects": cloud_of_bubbles("b6s_", centre=(270, 520), radius=180, n=9, scale=0.45)},
     # 6. Day two: the whole city, bubbles rising off the skyline.
     {"start": "Then the power spreads", "bg": "night_city", "camera": "tilt_up", "from_y": 700, "to_y": 430, "zoom": 1.3, "transition": "zoom",
      "fx": [{"type": "bubbles", "n": 60, "speed": 1.2, "color": "#F4F1FF"}, {"type": "pulse", "x": 270, "y": 700, "r": 260, "period": 0.9, "color": "#FFD27A"}],
-     "objects": cloud_of_bubbles("b6_", centre=(270, 520), radius=190, n=8, scale=0.5)},
+     "objects": cloud_of_bubbles("b6_", centre=(270, 640), radius=150, n=8, scale=0.45)},
+    # 6a. By lunch the cafeteria sounds like a stadium.
+    {"start": "like a stadium", "bg": "stadium", "camera": "zoom_in", "zoom": 1.25, "cx": 270, "cy": 500, "transition": "cut",
+     "fx": [{"type": "confetti", "n": 40}, {"type": "pulse", "x": 270, "y": 480, "r": 200, "period": 0.7, "color": "#FF6B6B"}],
+     "objects": cloud_of_bubbles("b6s_", centre=(270, 520), radius=180, n=9, scale=0.45)},
     # 7. Normally your brain filters noise: brain + funnel.
     {"start": "Normally, your brain", "bg": "void", "camera": "zoom_in", "zoom": 1.2, "cx": 270, "cy": 560, "transition": "cut",
      "fx": [{"type": "rays", "x": 270, "y": 600, "spin": 8, "opacity": 0.12, "color": "#7FD1FF"}],
@@ -235,7 +236,7 @@ hud = [
     {"type": "marker", "at": "Day two", "until": "Normally, your brain", "label": "DAY", "text": "2", "sub": "THE CITY: 3,000,000 MINDS"},
     {"type": "title", "at": "cocktail party effect", "until": "Your power has no filter", "small": "REAL SCIENCE", "text": "COCKTAIL PARTY EFFECT", "color": "#7FD1FF", "size": 46, "top": 150, "captions": True},
     {"type": "marker", "at": "Day five", "until": "You can't sleep", "label": "DAY", "text": "5", "sub": "THE PLANET: 8,000,000,000 MINDS", "color": "#FF6B6B"},
-    {"type": "title", "at": "says your name", "until": "Because your brain", "text": "YOUR NAME", "color": "#C8FF4D", "size": 86, "top": 160, "captions": True},
+    {"type": "title", "at": "says your name", "until": "Because your brain", "text": "YOUR NAME", "color": "#C8FF4D", "size": 72, "top": 160},
     {"type": "title", "at": "fast asleep", "until": "So you follow that voice", "small": "YOUR BRAIN HEARS YOUR NAME", "text": "EVEN ASLEEP", "color": "#7FD1FF", "size": 62, "top": 150, "captions": True},
     {"type": "title", "at": "the planet goes quiet", "until": "Well", "text": "QUIET.", "color": "#F4F1FF", "size": 96, "top": 170},
 ]

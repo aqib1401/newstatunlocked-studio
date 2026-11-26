@@ -4,8 +4,2379 @@
  "voiceover": "voiceover.wav",
  "scenes": [
   {
-   "bg": "void"
+   "bg": "space",
+   "fx": [
+    "stars",
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 580,
+     "r": 230,
+     "period": 1.3,
+     "color": "#C8FF4D"
+    }
+   ],
+   "cam_start": {
+    "zoom": 1.35,
+    "cx": 270,
+    "cy": 580
+   },
+   "cam": [
+    {
+     "at": 0,
+     "zoom": 1.0,
+     "cx": 270,
+     "cy": 560,
+     "dur": 2.2,
+     "ease": "out"
+    }
+   ],
+   "objects": [
+    {
+     "id": "earth1",
+     "x": 270,
+     "y": 580,
+     "svg": "<circle r='187.5' fill='#7FD1FF' opacity='.12'/><circle r='150' fill='#3A7BD5' stroke='#141218' stroke-width='8'/><path d='M-90.0 -75.0 q45.0 -37.5 90.0 -7.5 q22.5 45.0 -15.0 67.5 q-45.0 15.0 -67.5 -15.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M15.0 7.5 q52.5 -22.5 82.5 22.5 q-7.5 60.0 -52.5 67.5 q-37.5 -30.0 -30.0 -90.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M-112.5 37.5 q30.0 -7.5 45.0 30.0 q-15.0 30.0 -45.0 15.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M-75.0 -127.5 a150 150 0 0 1 165.0 15.0' fill='none' stroke='#F4F1FF' stroke-width='6' opacity='.5' stroke-linecap='round'/>",
+     "anim": {
+      "spin": 6
+     }
+    },
+    {
+     "id": "b1_0",
+     "x": 475,
+     "y": 580,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 0.2,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_1",
+     "x": 436,
+     "y": 688,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 0.32,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_2",
+     "x": 333,
+     "y": 755,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 0.44,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_3",
+     "x": 207,
+     "y": 755,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 0.56,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_4",
+     "x": 104,
+     "y": 688,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 0.68,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_5",
+     "x": 65,
+     "y": 580,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 0.8,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_6",
+     "x": 104,
+     "y": 472,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 0.92,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_7",
+     "x": 207,
+     "y": 405,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 1.04,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_8",
+     "x": 333,
+     "y": 405,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 1.16,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "b1_9",
+     "x": 436,
+     "y": 472,
+     "scale": 0.55,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     },
+     "opacity": 0,
+     "keys": [
+      {
+       "at": 1.28,
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Eight billion minds",
+   "bg": "void",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 1.9,
+   "transition": "zoom",
+   "fx": [
+    {
+     "type": "pulse",
+     "x": 250,
+     "y": 560,
+     "r": 200,
+     "period": 0.7,
+     "color": "#FF6B6B"
+    },
+    "glitch"
+   ],
+   "objects": [
+    {
+     "id": "b2_0",
+     "x": 400,
+     "y": 560,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b2_1",
+     "x": 356,
+     "y": 655,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b2_2",
+     "x": 250,
+     "y": 695,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b2_3",
+     "x": 144,
+     "y": 655,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b2_4",
+     "x": 100,
+     "y": 560,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b2_5",
+     "x": 144,
+     "y": 465,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b2_6",
+     "x": 250,
+     "y": 425,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b2_7",
+     "x": 356,
+     "y": 465,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 800,
+     "scale": 1.3,
+     "pose": "facepalm",
+     "face": "shocked",
+     "shadow": false,
+     "keys": [
+      {
+       "at": "no off switch",
+       "face": "worried",
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Minute one",
+   "bg": "city_day",
+   "camera": "pan_right",
+   "transition": "whip",
+   "whip_dir": "right",
+   "fx": [
+    {
+     "type": "clouds",
+     "speed": 12,
+     "opacity": 0.5,
+     "y0": 90,
+     "h": 240
+    },
+    {
+     "type": "speedlines",
+     "dir": "left",
+     "n": 10,
+     "speed": 0.8
+    }
+   ],
+   "objects": [
+    {
+     "id": "bus",
+     "x": 120,
+     "y": 740,
+     "svg": "<rect x='-170' y='-70' width='340' height='130' rx='22' fill='#FFC94D' stroke='#141218' stroke-width='7'/><rect x='-150' y='-52' width='52' height='46' rx='8' fill='#BFE6FF' stroke='#141218' stroke-width='4'/><circle cx='-124' cy='-20' r='11' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-88' y='-52' width='52' height='46' rx='8' fill='#BFE6FF' stroke='#141218' stroke-width='4'/><circle cx='-62' cy='-20' r='11' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-26' y='-52' width='52' height='46' rx='8' fill='#BFE6FF' stroke='#141218' stroke-width='4'/><circle cx='0' cy='-20' r='11' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='36' y='-52' width='52' height='46' rx='8' fill='#BFE6FF' stroke='#141218' stroke-width='4'/><circle cx='62' cy='-20' r='11' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='104' y='-52' width='50' height='92' rx='6' fill='#BFE6FF' stroke='#141218' stroke-width='4'/><rect x='-170' y='14' width='340' height='10' fill='#E08A2E'/><circle cx='-100' cy='62' r='24' fill='#2B2840' stroke='#141218' stroke-width='6'/><circle cx='-100' cy='62' r='9' fill='#C9C6D8'/><circle cx='100' cy='62' r='24' fill='#2B2840' stroke='#141218' stroke-width='6'/><circle cx='100' cy='62' r='9' fill='#C9C6D8'/>",
+     "anim": {
+      "bob": 3,
+      "period": 0.35
+     },
+     "keys": [
+      {
+       "at": "Minute one",
+       "x": 330,
+       "dur": 4.5,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "id": "bb3_0",
+     "x": 10,
+     "y": 600,
+     "scale": 0.45,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 5,
+      "period": 1.0
+     },
+     "keys": [
+      {
+       "at": "Forty strangers+0.00",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "Minute one",
+       "x": 220,
+       "dur": 4.5,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "id": "bb3_1",
+     "x": 70,
+     "y": 600,
+     "scale": 0.45,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 5,
+      "period": 1.2
+     },
+     "keys": [
+      {
+       "at": "Forty strangers+0.15",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "Minute one",
+       "x": 280,
+       "dur": 4.5,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "id": "bb3_2",
+     "x": 130,
+     "y": 600,
+     "scale": 0.45,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 5,
+      "period": 1.4
+     },
+     "keys": [
+      {
+       "at": "Forty strangers+0.30",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "Minute one",
+       "x": 340,
+       "dur": 4.5,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "id": "bb3_3",
+     "x": 190,
+     "y": 600,
+     "scale": 0.45,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 5,
+      "period": 1.6
+     },
+     "keys": [
+      {
+       "at": "Forty strangers+0.45",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      },
+      {
+       "at": "Minute one",
+       "x": 400,
+       "dur": 4.5,
+       "ease": "linear"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Did I leave",
+   "bg": "void",
+   "camera": "drift",
+   "transition": "cut",
+   "props": "<rect x='0' y='300' width='540' height='520' fill='#3B3656'/><rect x='30' y='420' width='120' height='150' rx='14' fill='#BFE6FF' stroke='#141218' stroke-width='6'/><rect x='210' y='420' width='120' height='150' rx='14' fill='#BFE6FF' stroke='#141218' stroke-width='6'/><rect x='390' y='420' width='120' height='150' rx='14' fill='#BFE6FF' stroke='#141218' stroke-width='6'/><rect x='0' y='610' width='540' height='14' fill='#FFC94D' stroke='#141218' stroke-width='4'/><rect x='0' y='810' width='540' height='150' fill='#2B2840'/><rect x='40' y='660' width='100' height='120' rx='14' fill='#5A4FA0' stroke='#141218' stroke-width='5'/><rect x='220' y='660' width='100' height='120' rx='14' fill='#5A4FA0' stroke='#141218' stroke-width='5'/><rect x='400' y='660' width='100' height='120' rx='14' fill='#5A4FA0' stroke='#141218' stroke-width='5'/>",
+   "fx": [
+    "dust"
+   ],
+   "objects": [
+    {
+     "id": "t_oven",
+     "x": 110,
+     "y": 520,
+     "scale": 0.9,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "front": true,
+     "anim": {
+      "bob": 5,
+      "period": 1.1
+     },
+     "keys": [
+      {
+       "at": "Did I leave",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "t_eyes",
+     "x": 270,
+     "y": 470,
+     "scale": 0.9,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "front": true,
+     "anim": {
+      "bob": 5,
+      "period": 1.3
+     },
+     "keys": [
+      {
+       "at": "Is he staring",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "t_sand",
+     "x": 420,
+     "y": 520,
+     "scale": 0.9,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "anim": {
+      "bob": 5,
+      "period": 1.0
+     },
+     "keys": [
+      {
+       "at": "I really need",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    }
+   ],
+   "actors": [
+    {
+     "id": "p1",
+     "char": "extra",
+     "shirt": "#E46F8E",
+     "x": 90,
+     "y": 800,
+     "scale": 1.0,
+     "pose": "sit",
+     "face": "worried"
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 270,
+     "y": 800,
+     "scale": 1.05,
+     "pose": "sit",
+     "face": "shocked",
+     "look": -0.5
+    },
+    {
+     "id": "p3",
+     "char": "extra",
+     "shirt": "#FFD27A",
+     "x": 440,
+     "y": 800,
+     "scale": 1.0,
+     "pose": "sit",
+     "face": "bored",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "start": "Hour one",
+   "bg": "cool_interior",
+   "camera": "pan_left",
+   "transition": "whip",
+   "whip_dir": "left",
+   "props": "<rect x='60' y='430' width='300' height='170' rx='10' fill='#2F5D50' stroke='#141218' stroke-width='8'/><text x='210' y='500' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#F4F1FF'>TEST</text><text x='210' y='560' text-anchor='middle' font-family='Chakra Petch' font-size='26' fill='#F4F1FF' opacity='.8'>Q1 ___  Q2 ___</text><rect x='270' y='700' width='120' height='14' rx='5' fill='#8A5A44' stroke='#141218' stroke-width='4'/><rect x='280' y='712' width='10' height='100' fill='#6B4A3A'/><rect x='370' y='712' width='10' height='100' fill='#6B4A3A'/><rect x='70' y='700' width='120' height='14' rx='5' fill='#8A5A44' stroke='#141218' stroke-width='4'/><rect x='80' y='712' width='10' height='100' fill='#6B4A3A'/><rect x='170' y='712' width='10' height='100' fill='#6B4A3A'/>",
+   "fx": [
+    "dust"
+   ],
+   "objects": [
+    {
+     "id": "t_lunch",
+     "x": 110,
+     "y": 400,
+     "scale": 0.8,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "front": true,
+     "anim": {
+      "bob": 5,
+      "period": 1.2
+     },
+     "keys": [
+      {
+       "at": "thinking about lunch",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "id": "t_ans",
+     "x": 400,
+     "y": 520,
+     "scale": 0.8,
+     "opacity": 0,
+     "svg": "<ellipse rx='55.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-27.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-38.5' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='24' fill='#141218'>A B C</text>",
+     "front": true,
+     "anim": {
+      "bob": 5,
+      "period": 1.0
+     },
+     "keys": [
+      {
+       "at": "smartest girl",
+       "opacity": 1,
+       "dur": 0.15,
+       "ease": "back"
+      }
+     ]
+    }
+   ],
+   "actors": [
+    {
+     "id": "teach",
+     "char": "drlee",
+     "x": 120,
+     "y": 810,
+     "scale": 1.15,
+     "pose": "point",
+     "face": "neutral",
+     "flip": false
+    },
+    {
+     "id": "girl",
+     "char": "extra",
+     "shirt": "#9B7BFF",
+     "x": 380,
+     "y": 810,
+     "scale": 1.0,
+     "pose": "think",
+     "face": "focused",
+     "flip": true
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 250,
+     "y": 810,
+     "scale": 1.05,
+     "pose": "sit",
+     "face": "neutral",
+     "keys": [
+      {
+       "at": "Free answers",
+       "pose": "cheer",
+       "face": "happy",
+       "dur": 0.15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Then the power spreads",
+   "bg": "night_city",
+   "camera": "tilt_up",
+   "from_y": 700,
+   "to_y": 430,
+   "zoom": 1.3,
+   "transition": "zoom",
+   "fx": [
+    {
+     "type": "bubbles",
+     "n": 60,
+     "speed": 1.2,
+     "color": "#F4F1FF"
+    },
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 700,
+     "r": 260,
+     "period": 0.9,
+     "color": "#FFD27A"
+    }
+   ],
+   "objects": [
+    {
+     "id": "b6_0",
+     "x": 420,
+     "y": 640,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6_1",
+     "x": 376,
+     "y": 735,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6_2",
+     "x": 270,
+     "y": 775,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6_3",
+     "x": 164,
+     "y": 735,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6_4",
+     "x": 120,
+     "y": 640,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6_5",
+     "x": 164,
+     "y": 545,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6_6",
+     "x": 270,
+     "y": 505,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6_7",
+     "x": 376,
+     "y": 545,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    }
+   ]
+  },
+  {
+   "start": "like a stadium",
+   "bg": "stadium",
+   "camera": "zoom_in",
+   "zoom": 1.25,
+   "cx": 270,
+   "cy": 500,
+   "transition": "cut",
+   "fx": [
+    {
+     "type": "confetti",
+     "n": 40
+    },
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 480,
+     "r": 200,
+     "period": 0.7,
+     "color": "#FF6B6B"
+    }
+   ],
+   "objects": [
+    {
+     "id": "b6s_0",
+     "x": 450,
+     "y": 520,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6s_1",
+     "x": 408,
+     "y": 624,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6s_2",
+     "x": 301,
+     "y": 680,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6s_3",
+     "x": 180,
+     "y": 660,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6s_4",
+     "x": 101,
+     "y": 575,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6s_5",
+     "x": 101,
+     "y": 465,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6s_6",
+     "x": 180,
+     "y": 380,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6s_7",
+     "x": 301,
+     "y": 360,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b6s_8",
+     "x": 408,
+     "y": 416,
+     "scale": 0.45,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    }
+   ]
+  },
+  {
+   "start": "Normally, your brain",
+   "bg": "void",
+   "camera": "zoom_in",
+   "zoom": 1.2,
+   "cx": 270,
+   "cy": 560,
+   "transition": "cut",
+   "fx": [
+    {
+     "type": "rays",
+     "x": 270,
+     "y": 600,
+     "spin": 8,
+     "opacity": 0.12,
+     "color": "#7FD1FF"
+    }
+   ],
+   "objects": [
+    {
+     "id": "funnel",
+     "x": 270,
+     "y": 470,
+     "scale": 1.2,
+     "svg": "<path d='M-90 -60 L90 -60 L20 20 L20 70 L-20 70 L-20 20 Z' fill='#7FD1FF' opacity='.85' stroke='#141218' stroke-width='7' stroke-linejoin='round'/><circle cx='-60' cy='-40' r='5' fill='#141218' opacity='.6'/><circle cx='-40' cy='-40' r='5' fill='#141218' opacity='.6'/><circle cx='-20' cy='-40' r='5' fill='#141218' opacity='.6'/><circle cx='0' cy='-40' r='5' fill='#141218' opacity='.6'/><circle cx='20' cy='-40' r='5' fill='#141218' opacity='.6'/><circle cx='40' cy='-40' r='5' fill='#141218' opacity='.6'/><circle cx='60' cy='-40' r='5' fill='#141218' opacity='.6'/>",
+     "anim": {
+      "pulse": 0.03,
+      "period": 1.0
+     }
+    },
+    {
+     "id": "brain7",
+     "x": 270,
+     "y": 680,
+     "scale": 0.9,
+     "svg": "<path d='M-110 20 C-140 -40 -90 -110 -30 -100 C0 -140 70 -120 85 -80 C140 -70 150 0 110 30 C110 80 40 100 0 80 C-40 105 -110 80 -110 20 Z' fill='#FF9EC4' stroke='#141218' stroke-width='8'/><path d='M-70 -40 q30 -20 50 10 M10 -70 q25 30 0 55 M50 -20 q40 0 45 40 M-60 30 q30 -10 50 20' fill='none' stroke='#D9608F' stroke-width='7' stroke-linecap='round'/>",
+     "anim": {
+      "pulse": 0.04,
+      "period": 0.9
+     }
+    },
+    {
+     "id": "dot7_0",
+     "x": 160,
+     "y": 340,
+     "svg": "<circle r='9' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "drift": [
+       0,
+       50
+      ],
+      "flicker": 0.3
+     }
+    },
+    {
+     "id": "dot7_1",
+     "x": 200,
+     "y": 340,
+     "svg": "<circle r='9' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "drift": [
+       0,
+       50
+      ],
+      "flicker": 0.3
+     }
+    },
+    {
+     "id": "dot7_2",
+     "x": 240,
+     "y": 340,
+     "svg": "<circle r='9' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "drift": [
+       0,
+       50
+      ],
+      "flicker": 0.3
+     }
+    },
+    {
+     "id": "dot7_3",
+     "x": 280,
+     "y": 340,
+     "svg": "<circle r='9' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "drift": [
+       0,
+       50
+      ],
+      "flicker": 0.3
+     }
+    },
+    {
+     "id": "dot7_4",
+     "x": 320,
+     "y": 340,
+     "svg": "<circle r='9' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "drift": [
+       0,
+       50
+      ],
+      "flicker": 0.3
+     }
+    },
+    {
+     "id": "dot7_5",
+     "x": 360,
+     "y": 340,
+     "svg": "<circle r='9' fill='#C8FF4D' stroke='#141218' stroke-width='3'/>",
+     "anim": {
+      "drift": [
+       0,
+       50
+      ],
+      "flicker": 0.3
+     }
+    }
+   ]
+  },
+  {
+   "start": "It's why you can follow",
+   "bg": "warm_interior",
+   "camera": "closeup",
+   "focus": "hero",
+   "zoom": 1.5,
+   "transition": "cut",
+   "fx": [
+    "confetti",
+    {
+     "type": "pulse",
+     "x": 300,
+     "y": 560,
+     "r": 120,
+     "period": 1.0,
+     "color": "#C8FF4D"
+    }
+   ],
+   "actors": [
+    {
+     "id": "x1",
+     "char": "extra",
+     "shirt": "#5A5670",
+     "x": 70,
+     "y": 810,
+     "scale": 1.0,
+     "pose": "cheer",
+     "face": "happy",
+     "opacity": 0.55
+    },
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 210,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "happy",
+     "look": 0.5
+    },
+    {
+     "id": "fr",
+     "char": "mia",
+     "x": 330,
+     "y": 812,
+     "scale": 1.2,
+     "pose": "wave",
+     "face": "happy",
+     "flip": true
+    },
+    {
+     "id": "x2",
+     "char": "extra",
+     "shirt": "#5A5670",
+     "x": 450,
+     "y": 810,
+     "scale": 1.0,
+     "pose": "cheer",
+     "face": "happy",
+     "opacity": 0.55,
+     "flip": true
+    }
+   ]
+  },
+  {
+   "start": "Your power has no filter",
+   "bg": "void",
+   "camera": "drift",
+   "transition": "flash",
+   "fx": [
+    "glitch",
+    {
+     "type": "alarm",
+     "period": 0.8
+    }
+   ],
+   "objects": [
+    {
+     "id": "funnel9",
+     "x": 270,
+     "y": 470,
+     "scale": 1.2,
+     "svg": "<path d='M-90 -60 L-5 -60 L-25 -20 L5 0 L-15 20 L-20 70 L-20 20 Z' fill='#7FD1FF' opacity='.85' stroke='#141218' stroke-width='7' stroke-linejoin='round'/><path d='M10 -60 L90 -60 L20 20 L20 70 L5 40 L25 10 L0 -15 Z' fill='#7FD1FF' opacity='.85' stroke='#141218' stroke-width='7' stroke-linejoin='round'/>",
+     "anim": {
+      "sway": 6,
+      "period": 0.3
+     }
+    },
+    {
+     "id": "brain9",
+     "x": 270,
+     "y": 690,
+     "scale": 0.9,
+     "svg": "<path d='M-110 20 C-140 -40 -90 -110 -30 -100 C0 -140 70 -120 85 -80 C140 -70 150 0 110 30 C110 80 40 100 0 80 C-40 105 -110 80 -110 20 Z' fill='#FF9EC4' stroke='#141218' stroke-width='8'/><path d='M-70 -40 q30 -20 50 10 M10 -70 q25 30 0 55 M50 -20 q40 0 45 40 M-60 30 q30 -10 50 20' fill='none' stroke='#D9608F' stroke-width='7' stroke-linecap='round'/>",
+     "anim": {
+      "pulse": 0.08,
+      "period": 0.35
+     }
+    },
+    {
+     "id": "b9_0",
+     "x": 480,
+     "y": 560,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b9_1",
+     "x": 418,
+     "y": 694,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b9_2",
+     "x": 270,
+     "y": 749,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b9_3",
+     "x": 122,
+     "y": 694,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b9_4",
+     "x": 60,
+     "y": 560,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b9_5",
+     "x": 122,
+     "y": 426,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b9_6",
+     "x": 270,
+     "y": 371,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b9_7",
+     "x": 418,
+     "y": 426,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    }
+   ]
+  },
+  {
+   "start": "Day five",
+   "bg": "earth_orbit",
+   "camera": "pull",
+   "transition": "zoom",
+   "fx": [
+    "stars",
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 560,
+     "r": 260,
+     "period": 0.6,
+     "color": "#FF6B6B"
+    }
+   ],
+   "objects": [
+    {
+     "id": "earth10",
+     "x": 270,
+     "y": 560,
+     "scale": 0.85,
+     "svg": "<circle r='187.5' fill='#7FD1FF' opacity='.12'/><circle r='150' fill='#3A7BD5' stroke='#141218' stroke-width='8'/><path d='M-90.0 -75.0 q45.0 -37.5 90.0 -7.5 q22.5 45.0 -15.0 67.5 q-45.0 15.0 -67.5 -15.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M15.0 7.5 q52.5 -22.5 82.5 22.5 q-7.5 60.0 -52.5 67.5 q-37.5 -30.0 -30.0 -90.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M-112.5 37.5 q30.0 -7.5 45.0 30.0 q-15.0 30.0 -45.0 15.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M-75.0 -127.5 a150 150 0 0 1 165.0 15.0' fill='none' stroke='#F4F1FF' stroke-width='6' opacity='.5' stroke-linecap='round'/>",
+     "anim": {
+      "spin": 10
+     }
+    },
+    {
+     "id": "b10a_0",
+     "x": 445,
+     "y": 560,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_1",
+     "x": 412,
+     "y": 653,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_2",
+     "x": 324,
+     "y": 710,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_3",
+     "x": 216,
+     "y": 710,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_4",
+     "x": 128,
+     "y": 653,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_5",
+     "x": 95,
+     "y": 560,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_6",
+     "x": 128,
+     "y": 467,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_7",
+     "x": 216,
+     "y": 410,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_8",
+     "x": 324,
+     "y": 410,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10a_9",
+     "x": 412,
+     "y": 467,
+     "scale": 0.42,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_0",
+     "x": 505,
+     "y": 560,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_1",
+     "x": 474,
+     "y": 666,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_2",
+     "x": 388,
+     "y": 743,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_3",
+     "x": 270,
+     "y": 772,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_4",
+     "x": 153,
+     "y": 743,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_5",
+     "x": 66,
+     "y": 666,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_6",
+     "x": 35,
+     "y": 560,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_7",
+     "x": 66,
+     "y": 454,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_8",
+     "x": 152,
+     "y": 377,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_9",
+     "x": 270,
+     "y": 348,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_10",
+     "x": 388,
+     "y": 377,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b10b_11",
+     "x": 474,
+     "y": 454,
+     "scale": 0.36,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    }
+   ]
+  },
+  {
+   "start": "You can't sleep",
+   "bg": "warm_interior",
+   "camera": "drift",
+   "transition": "cut",
+   "props": "<rect x='80' y='700' width='360' height='60' rx='12' fill='#5A4FA0' stroke='#141218' stroke-width='6'/><rect x='70' y='640' width='26' height='170' rx='8' fill='#8A5A44' stroke='#141218' stroke-width='5'/><rect x='100' y='672' width='90' height='36' rx='14' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><rect x='300' y='420' width='150' height='170' rx='10' fill='#2B2840' stroke='#141218' stroke-width='7'/><path d='M375 420 L375 590 M300 505 L450 505' stroke='#141218' stroke-width='6'/><circle cx='410' cy='460' r='14' fill='#FFE7A0'/>",
+   "front_props": "<rect x='180' y='690' width='260' height='60' rx='14' fill='#7FD1FF' stroke='#141218' stroke-width='6'/>",
+   "fx": [
+    {
+     "type": "alarm",
+     "period": 1.0
+    }
+   ],
+   "objects": [
+    {
+     "id": "b11_0",
+     "x": 440,
+     "y": 560,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b11_1",
+     "x": 376,
+     "y": 680,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b11_2",
+     "x": 232,
+     "y": 709,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b11_3",
+     "x": 117,
+     "y": 626,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b11_4",
+     "x": 117,
+     "y": 494,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b11_5",
+     "x": 232,
+     "y": 411,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     }
+    },
+    {
+     "id": "b11_6",
+     "x": 376,
+     "y": 440,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     }
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 230,
+     "y": 700,
+     "scale": 1.0,
+     "pose": "lie",
+     "face": "worried",
+     "keys": [
+      {
+       "at": "You can't think",
+       "face": "shocked",
+       "dur": 0.12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Until one voice",
+   "bg": "void",
+   "camera": "zoom_in",
+   "zoom": 1.3,
+   "cx": 270,
+   "cy": 540,
+   "transition": "flash",
+   "fx": [
+    {
+     "type": "rays",
+     "x": 270,
+     "y": 540,
+     "spin": 10,
+     "opacity": 0.16,
+     "color": "#C8FF4D"
+    },
+    "dust"
+   ],
+   "objects": [
+    {
+     "id": "f12_0",
+     "x": 470,
+     "y": 540,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_1",
+     "x": 432,
+     "y": 646,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_2",
+     "x": 332,
+     "y": 711,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_3",
+     "x": 208,
+     "y": 711,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_4",
+     "x": 108,
+     "y": 646,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M0 16 C-30 -4 -18 -26 0 -10 C18 -26 30 -4 0 16 Z' fill='#FF6B6B' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_5",
+     "x": 70,
+     "y": 540,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='34' fill='#141218'>?</text>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_6",
+     "x": 108,
+     "y": 434,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><rect x='-22' y='-20' width='44' height='38' rx='5' fill='#C9C6D8' stroke='#141218' stroke-width='4'/><rect x='-15' y='-6' width='30' height='18' rx='3' fill='#FF8A3D' stroke='#141218' stroke-width='3'/><circle cx='-10' cy='-13' r='3' fill='#141218'/><circle cx='0' cy='-13' r='3' fill='#141218'/><circle cx='10' cy='-13' r='3' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.7,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_7",
+     "x": 208,
+     "y": 369,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><ellipse cx='-14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='-11' cy='0' r='4' fill='#141218'/><ellipse cx='14' cy='0' rx='12' ry='9' fill='#fff' stroke='#141218' stroke-width='4'/><circle cx='17' cy='0' r='4' fill='#141218'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.95,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_8",
+     "x": 332,
+     "y": 369,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.2,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "f12_9",
+     "x": 432,
+     "y": 434,
+     "scale": 0.4,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-24 -2 Q0 -30 24 -2 Z' fill='#E0A050' stroke='#141218' stroke-width='4'/><rect x='-26' y='-2' width='52' height='8' rx='3' fill='#7A4A2E' stroke='#141218' stroke-width='3'/><rect x='-24' y='7' width='48' height='9' rx='4' fill='#E0A050' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.45,
+      "sway": 4
+     },
+     "keys": [
+      {
+       "at": "the roar drops away",
+       "opacity": 0,
+       "dur": 0.6
+      }
+     ]
+    },
+    {
+     "id": "you12",
+     "x": 270,
+     "y": 540,
+     "scale": 0.2,
+     "opacity": 0,
+     "svg": "<ellipse rx='60.0' ry='40.0' fill='#C8FF4D' stroke='#141218' stroke-width='5'/><circle cx='-30.0' cy='52.0' r='8' fill='#C8FF4D' stroke='#141218' stroke-width='4'/><circle cx='-42.0' cy='68.0' r='5' fill='#C8FF4D' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='30' fill='#141218'>YOU</text>",
+     "anim": {
+      "pulse": 0.06,
+      "period": 0.9
+     },
+     "keys": [
+      {
+       "at": "says your name",
+       "opacity": 1,
+       "scale": 1.6,
+       "dur": 0.4,
+       "ease": "back",
+       "sfx": "ding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "Because your brain",
+   "bg": "lab",
+   "camera": "push",
+   "transition": "cut",
+   "fx": [
+    {
+     "type": "pulse",
+     "x": 270,
+     "y": 560,
+     "r": 200,
+     "period": 1.2,
+     "color": "#7FD1FF"
+    }
+   ],
+   "objects": [
+    {
+     "id": "brain13",
+     "x": 270,
+     "y": 580,
+     "scale": 1.15,
+     "svg": "<path d='M-110 20 C-140 -40 -90 -110 -30 -100 C0 -140 70 -120 85 -80 C140 -70 150 0 110 30 C110 80 40 100 0 80 C-40 105 -110 80 -110 20 Z' fill='#FF9EC4' stroke='#141218' stroke-width='8'/><path d='M-70 -40 q30 -20 50 10 M10 -70 q25 30 0 55 M50 -20 q40 0 45 40 M-60 30 q30 -10 50 20' fill='none' stroke='#D9608F' stroke-width='7' stroke-linecap='round'/>",
+     "anim": {
+      "bob": 6,
+      "period": 2.0
+     }
+    },
+    {
+     "id": "zzz",
+     "x": 400,
+     "y": 420,
+     "opacity": 0,
+     "svg": "<text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='40' fill='#7FD1FF'>Z z z</text>",
+     "anim": {
+      "bob": 8,
+      "period": 1.4
+     },
+     "keys": [
+      {
+       "at": "fast asleep",
+       "opacity": 1,
+       "dur": 0.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So you follow that voice",
+   "bg": "dusk",
+   "camera": "pan_right",
+   "transition": "whip",
+   "whip_dir": "right",
+   "fx": [
+    {
+     "type": "speedlines",
+     "dir": "left",
+     "n": 14,
+     "speed": 1.3
+    }
+   ],
+   "objects": [
+    {
+     "id": "guide",
+     "x": 300,
+     "y": 540,
+     "scale": 0.7,
+     "svg": "<ellipse rx='60.0' ry='40.0' fill='#C8FF4D' stroke='#141218' stroke-width='5'/><circle cx='-30.0' cy='52.0' r='8' fill='#C8FF4D' stroke='#141218' stroke-width='4'/><circle cx='-42.0' cy='68.0' r='5' fill='#C8FF4D' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='30' fill='#141218'>YOU</text>",
+     "anim": {
+      "bob": 8,
+      "period": 0.8
+     },
+     "keys": [
+      {
+       "at": "So you follow that voice",
+       "x": 440,
+       "dur": 2.6,
+       "ease": "linear"
+      }
+     ]
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 90,
+     "y": 815,
+     "scale": 1.15,
+     "pose": "run_a",
+     "face": "determined",
+     "keys": [
+      {
+       "at": "So you follow that voice",
+       "x": 330,
+       "dur": 2.6,
+       "cycle": "run",
+       "ease": "linear"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "to a shy kid",
+   "bg": "cool_interior",
+   "camera": "reveal",
+   "focus": "kid",
+   "zoom": 2.2,
+   "transition": "cut",
+   "props": "<rect x='270' y='700' width='120' height='14' rx='5' fill='#8A5A44' stroke='#141218' stroke-width='4'/><rect x='280' y='712' width='10' height='100' fill='#6B4A3A'/><rect x='370' y='712' width='10' height='100' fill='#6B4A3A'/>",
+   "fx": [
+    "dust"
+   ],
+   "objects": [
+    {
+     "id": "hope",
+     "x": 300,
+     "y": 520,
+     "scale": 0.2,
+     "opacity": 0,
+     "svg": "<ellipse rx='50.0' ry='35.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-25.0' cy='47.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-35.0' cy='63.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><text x='0' y='9' text-anchor='middle' font-family='Chakra Petch' font-weight='700' font-size='30' fill='#141218'>HI?</text>",
+     "front": true,
+     "anim": {
+      "bob": 5,
+      "period": 1.3
+     },
+     "keys": [
+      {
+       "at": "I hope they",
+       "opacity": 1,
+       "scale": 1.1,
+       "dur": 0.3,
+       "ease": "back"
+      }
+     ]
+    }
+   ],
+   "actors": [
+    {
+     "id": "kid",
+     "char": "leo",
+     "x": 330,
+     "y": 810,
+     "scale": 1.05,
+     "pose": "sit",
+     "face": "sad",
+     "look": -0.3,
+     "flip": true,
+     "keys": [
+      {
+       "at": "I hope they",
+       "face": "neutral",
+       "look": 0.4,
+       "dur": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "So tomorrow",
+   "bg": "day_park",
+   "camera": "push",
+   "transition": "cut",
+   "props": "<rect x='120' y='720' width='300' height='18' rx='6' fill='#8A5A44' stroke='#141218' stroke-width='5'/><rect x='140' y='736' width='14' height='70' fill='#6B4A3A'/><rect x='386' y='736' width='14' height='70' fill='#6B4A3A'/>",
+   "fx": [
+    {
+     "type": "clouds",
+     "speed": 8,
+     "opacity": 0.5,
+     "y0": 90,
+     "h": 220
+    },
+    {
+     "type": "embers",
+     "n": 16,
+     "speed": 0.4,
+     "color": "#FFD27A"
+    }
+   ],
+   "actors": [
+    {
+     "id": "hero",
+     "char": "hero",
+     "x": 60,
+     "y": 815,
+     "scale": 1.15,
+     "pose": "walk_a",
+     "face": "happy",
+     "keys": [
+      {
+       "at": "So tomorrow",
+       "x": 200,
+       "dur": 1.2,
+       "cycle": "walk"
+      },
+      {
+       "at": "say hi",
+       "cycle": null,
+       "pose": "wave",
+       "dur": 0.15
+      }
+     ]
+    },
+    {
+     "id": "kid",
+     "char": "leo",
+     "x": 330,
+     "y": 815,
+     "scale": 1.05,
+     "pose": "sit",
+     "face": "neutral",
+     "flip": true,
+     "keys": [
+      {
+       "at": "say hi+0.3",
+       "face": "happy",
+       "pose": "wave",
+       "dur": 0.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "start": "And for the first time",
+   "bg": "space",
+   "transition": "zoom",
+   "fx": [
+    "stars"
+   ],
+   "cam_start": {
+    "zoom": 1.0,
+    "cx": 270,
+    "cy": 560
+   },
+   "cam": [
+    {
+     "at": "except the guy",
+     "zoom": 1.3,
+     "cx": 300,
+     "cy": 520,
+     "dur": 1.6,
+     "ease": "inout"
+    }
+   ],
+   "objects": [
+    {
+     "id": "earth17",
+     "x": 270,
+     "y": 580,
+     "svg": "<circle r='187.5' fill='#7FD1FF' opacity='.12'/><circle r='150' fill='#3A7BD5' stroke='#141218' stroke-width='8'/><path d='M-90.0 -75.0 q45.0 -37.5 90.0 -7.5 q22.5 45.0 -15.0 67.5 q-45.0 15.0 -67.5 -15.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M15.0 7.5 q52.5 -22.5 82.5 22.5 q-7.5 60.0 -52.5 67.5 q-37.5 -30.0 -30.0 -90.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M-112.5 37.5 q30.0 -7.5 45.0 30.0 q-15.0 30.0 -45.0 15.0 z' fill='#6BCB77' stroke='#141218' stroke-width='5'/><path d='M-75.0 -127.5 a150 150 0 0 1 165.0 15.0' fill='none' stroke='#F4F1FF' stroke-width='6' opacity='.5' stroke-linecap='round'/>",
+     "anim": {
+      "spin": 6
+     }
+    },
+    {
+     "id": "sand17",
+     "x": 370,
+     "y": 410,
+     "scale": 0.2,
+     "opacity": 0,
+     "svg": "<ellipse rx='45.0' ry='32.0' fill='#F4F1FF' stroke='#141218' stroke-width='5'/><circle cx='-22.5' cy='44.0' r='8' fill='#F4F1FF' stroke='#141218' stroke-width='4'/><circle cx='-31.499999999999996' cy='60.0' r='5' fill='#F4F1FF' stroke='#141218' stroke-width='3'/><path d='M-26 4 L26 4 L0 -22 Z' fill='#F2C46D' stroke='#141218' stroke-width='4' stroke-linejoin='round'/><rect x='-26' y='4' width='52' height='7' fill='#6BCB77' stroke='#141218' stroke-width='3'/><rect x='-26' y='11' width='52' height='9' rx='3' fill='#F2C46D' stroke='#141218' stroke-width='4'/>",
+     "anim": {
+      "bob": 6,
+      "period": 1.0
+     },
+     "keys": [
+      {
+       "at": "except the guy",
+       "opacity": 1,
+       "scale": 0.95,
+       "dur": 0.35,
+       "ease": "back",
+       "sfx": "pop"
+      }
+     ]
+    }
+   ]
   }
  ],
- "hud": []
+ "hud": [
+  {
+   "type": "title",
+   "at": 0.05,
+   "until": "Eight billion minds",
+   "small": "WHAT IF YOU COULD",
+   "text": "HEAR EVERY THOUGHT?",
+   "color": "#C8FF4D",
+   "size": 52,
+   "top": 150
+  },
+  {
+   "type": "title",
+   "at": "Eight billion minds",
+   "until": "Minute one",
+   "small": "ALL AT ONCE",
+   "text": "8 BILLION MINDS",
+   "color": "#FF6B6B",
+   "size": 58,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "marker",
+   "at": "Minute one",
+   "until": "Did I leave",
+   "label": "MINUTE",
+   "text": "1",
+   "sub": "THE BUS: 40 MINDS"
+  },
+  {
+   "type": "marker",
+   "at": "Hour one",
+   "until": "Your teacher",
+   "label": "HOUR",
+   "text": "1",
+   "sub": "SCHOOL"
+  },
+  {
+   "type": "marker",
+   "at": "Day two",
+   "until": "Normally, your brain",
+   "label": "DAY",
+   "text": "2",
+   "sub": "THE CITY: 3,000,000 MINDS"
+  },
+  {
+   "type": "title",
+   "at": "cocktail party effect",
+   "until": "Your power has no filter",
+   "small": "REAL SCIENCE",
+   "text": "COCKTAIL PARTY EFFECT",
+   "color": "#7FD1FF",
+   "size": 46,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "marker",
+   "at": "Day five",
+   "until": "You can't sleep",
+   "label": "DAY",
+   "text": "5",
+   "sub": "THE PLANET: 8,000,000,000 MINDS",
+   "color": "#FF6B6B"
+  },
+  {
+   "type": "title",
+   "at": "says your name",
+   "until": "Because your brain",
+   "text": "YOUR NAME",
+   "color": "#C8FF4D",
+   "size": 72,
+   "top": 160
+  },
+  {
+   "type": "title",
+   "at": "fast asleep",
+   "until": "So you follow that voice",
+   "small": "YOUR BRAIN HEARS YOUR NAME",
+   "text": "EVEN ASLEEP",
+   "color": "#7FD1FF",
+   "size": 62,
+   "top": 150,
+   "captions": true
+  },
+  {
+   "type": "title",
+   "at": "the planet goes quiet",
+   "until": "Well",
+   "text": "QUIET.",
+   "color": "#F4F1FF",
+   "size": 96,
+   "top": 170
+  }
+ ],
+ "accent": "#C8FF4D",
+ "show_ep": false,
+ "thumbnail": "Day five+0.6",
+ "highlights": {
+  "every thought": "green",
+  "eight billion": "amber",
+  "cocktail party effect": "amber",
+  "your name": "green",
+  "sandwich": "amber"
+ },
+ "music": [
+  {
+   "track": "music/daybreak.mp3",
+   "at": 0
+  },
+  {
+   "track": "music/unknown.mp3",
+   "at": "Then the power spreads"
+  },
+  {
+   "track": "music/home.mp3",
+   "at": "So you follow that voice"
+  }
+ ],
+ "music_db_below_voice": 20,
+ "shakes": [
+  {
+   "at": "Your power has no filter",
+   "amp": 12,
+   "dur": 0.45
+  },
+  {
+   "at": "Day five",
+   "amp": 14,
+   "dur": 0.5
+  }
+ ],
+ "flashes": [
+  {
+   "at": "says your name",
+   "dur": 0.12,
+   "color": "#fff"
+  }
+ ]
 }

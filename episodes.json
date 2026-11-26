@@ -1565,5 +1565,22 @@
    }
   },
   "length_bucket": "under 60 s"
+ },
+ {
+  "ep": 40,
+  "v": 2,
+  "title": "What If You Could Hear Every Thought?",
+  "lane": "MIND",
+  "shape": "B timeline",
+  "ending": "punchline",
+  "duration_s": 65.1,
+  "status": "rendered",
+  "video": "videos/ep40.mp4",
+  "rendered_at": "2026-11-26T18:20:00Z",
+  "critic": "REVISE 5.9 (first draft; revised once)",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
