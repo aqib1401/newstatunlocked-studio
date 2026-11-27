@@ -1,0 +1,20 @@
+{
+ "engine": "qwen3_clone",
+ "model": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+ "ref": "voice/ref_liam.wav",
+ "mode": "full (passages were worse)",
+ "gen_s": 532.9,
+ "full_take_check": {
+  "recall": 0.979,
+  "last_ok": false,
+  "missing": [
+   "a and tonnes"
+  ],
+  "heard": "What if you grew one meter taller? Every single day. It sounds amazing for about a week. And then your own body turns against you. Day one, you wake up two meters, 60 tall, feet hanging off the bed, and your mom's size and buys you new shoes. Day two, three meters, 60. You're taller than the tallest person who ever lived. And the basketball coach cries happy tears. Day three. You crawl through your school's front door on your knees. But what stops you isn't a ceiling, it's math. When you get twice as tall, you don't get twice as heavy. You get eight times heavier because you grow taller, wider, and deeper all at once. But your bones only get four times stronger, not eight. So every day your skeleton falls further behind. Day five, six meters, 60. Toler than a giraffe as heavy as two cars. and your knees ache with every step. You sleep in the park under a circus tent, day 10, 11 meters, 19 tannies, about three elephants. You try to cross a bridge, and the warning signs say it's not built for you. Your heart can't push blood all the way up to your head anymore. So if you stand up too fast, everything goes black, and you're cooking. Your body makes heat everywhere inside, but only loses it through your skin. and your skin can't keep up. So firefighters spray you with hoses like an elephant at a water hole. Day 20, 21 meters, 120 tunnies, and the road cracks under your feet. Even lying down, your weight squeezes your lungs, just like a whale stranded on a beach. And that's the clue. There's only one place on earth that can hold you. You walk into the sea, and the moment the water lifts you, the pain stops. The biggest animal that has ever lived, the blue whale lives in the ocean for exactly this reason. Only water can carry that much weight. Day 30. You're floating next to one 31 meters long. Finally comfortable. And back on the beach, your mom is waving holding two shoes the size of row boats.",
+  "ok": false
+ },
+ "passages_gen_s": 539.5,
+ "audio_s": 99.8,
+ "total_s": 1072.4,
+ "ok": false
+}
