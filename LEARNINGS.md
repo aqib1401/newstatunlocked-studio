@@ -43,81 +43,87 @@ Every v2 episode records `v`, `lane`, `shape`, `ending` and `duration_s` in epis
 ## Data (auto-generated, don't edit by hand)
 
 <!-- AUTO:START -->
-_Updated 2026-11-26 17:48 UTC_
+_Updated 2026-11-27 17:48 UTC_
 
 **By version** (YouTube views, posts at least 48 h old)
 
 | version | videos | median views | best |
 |---|---|---|---|
-| 2 | 3 | 1261 | 1313 |
+| 2 | 5 | 1264 | 1535 |
 | 1 | 26 | 1260 | 1443 |
 
 **By lane** (YouTube views, posts at least 48 h old)
 
 | lane | videos | median views | best |
 |---|---|---|---|
-| TIME | 1 | 1313 | 1313 |
-| WORLD | 1 | 1261 | 1261 |
-| BODY | 1 | 1004 | 1004 |
+| WORLD | 2 | 1399 | 1535 |
+| TIME | 1 | 1326 | 1326 |
+| MIND | 1 | 1206 | 1206 |
+| BODY | 1 | 1008 | 1008 |
 
 **By shape** (YouTube views, posts at least 48 h old)
 
 | shape | videos | median views | best |
 |---|---|---|---|
-| A epic | 1 | 1313 | 1313 |
-| C spiral | 1 | 1261 | 1261 |
-| B timeline | 1 | 1004 | 1004 |
+| D twist | 1 | 1535 | 1535 |
+| A epic | 1 | 1326 | 1326 |
+| C spiral | 1 | 1264 | 1264 |
+| F dilemma | 1 | 1206 | 1206 |
+| B timeline | 1 | 1008 | 1008 |
 
 **By ending** (YouTube views, posts at least 48 h old)
 
 | ending | videos | median views | best |
 |---|---|---|---|
-| twist | 1 | 1313 | 1313 |
-| question | 1 | 1261 | 1261 |
-| punchline | 1 | 1004 | 1004 |
+| twist | 2 | 1430 | 1535 |
+| question | 1 | 1264 | 1264 |
+| dilemma | 1 | 1206 | 1206 |
+| punchline | 1 | 1008 | 1008 |
 
 **By length** (YouTube views, posts at least 48 h old)
 
 | length | videos | median views | best |
 |---|---|---|---|
-| 60-99 s | 2 | 1287 | 1313 |
-| 100 s+ | 1 | 1004 | 1004 |
+| under 60 s | 1 | 1535 | 1535 |
+| 60-99 s | 3 | 1264 | 1326 |
+| 100 s+ | 1 | 1008 | 1008 |
 
 **Every episode with YouTube stats** (newest first)
 
 | EP | title | v | lane | shape | length | YT views | likes | comments | FB views | FB avg watch | age h |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 38 | What If You Could Teleport Anywhere? | 2 | BODY | A epic | 101 s | 1000 | 13 | 1 | 293 | 21.1 s | 19.1 |
-| 37 | What If You Fell Into a Black Hole? | 2 | WORLD | E survival | 65 s | 1049 | 22 | 1 | 229 | 7.4 s | 23.9 |
-| 36 | What If Your Brain Ran 1,000x Faster? | 2 | MIND | F dilemma | 77 s | 1196 | 25 | 5 | 576 | 24.8 s | 43.4 |
-| 35 | What If the Sun Vanished? | 2 | WORLD | D twist | 49 s | 1524 | 24 | 3 | 439 | 16.1 s | 47.7 |
-| 34 | What If You Were 1,000x Stronger? | 2 | BODY | B timeline | 105 s | 1004 | 16 | 3 | 3067 | 14.5 s | 67.4 |
-| 33 | What If You Could Freeze Time? | 2 | TIME | A epic | 89 s | 1313 | 26 | 5 | 5341 | 14.7 s | 71.9 |
-| 32 | What If Earth Stopped Spinning? | 2 | WORLD | C spiral | 64 s | 1261 | 18 | 1 | 6034 | 17.6 s | 91.4 |
-| 26 | What If Your Voice Was 100x Louder? | 1 |  |  | 91 s | 1143 | 16 | 1 | 212 | 11.2 s | 95.4 |
-| 25 | What If You Had No Fingerprints? | 1 |  |  | 52 s | 1068 | 22 | 3 | 456 | 6.7 s | 163.3 |
-| 24 | What If Your Memory Reset Every Day? | 1 |  |  | 86 s | 1020 | 27 | 1 | 211 | 10.9 s | 167.9 |
-| 23 | What If Your Skin Couldn't Be Cut? | 1 |  |  | 48 s | 1165 | 17 | 1 | 220 | 6.2 s | 187.4 |
-| 22 | What If You Could See in the Dark? | 1 |  |  | 88 s | 1265 | 29 | 3 | 252 | 4.1 s | 191.9 |
-| 21 | What If Your Body Glowed in the Dark? | 1 |  |  | 49 s | 1018 | 8 | 1 | 494 | 8.3 s | 211.2 |
-| 20 | What If You Never Felt Fear? | 1 |  |  | 86 s | 1211 | 21 | 1 | 1969 | 9.9 s | 215.9 |
-| 19 | What If You Never Felt Hungry Again? | 1 |  |  | 49 s | 1141 | 23 | 5 | 38 | 5.1 s | 235.2 |
-| 18 | What If You Healed 1,000,000x Faster? | 1 |  |  | 89 s | 1226 | 16 | 5 | 54 | 18.2 s | 239.8 |
-| 17 | What If You Weighed 10x Less? | 1 |  |  | 48 s | 1113 | 20 | 1 | 188 | 11.7 s | 259.2 |
-| 16 | What If You Could Hear 100x Better? | 1 |  |  | 94 s | 1343 | 25 | 1 | 0 | 0.0 s | 263.9 |
-| 15 | What If You Could Control Every Dream? | 1 |  |  | 50 s | 1354 | 24 | 5 | 360 | 9.1 s | 283.2 |
-| 14 | What If You Aged 10x Slower? | 1 |  |  | 86 s | 1305 | 25 | 4 | 4 | 43.6 s | 287.6 |
-| 13 | What If You Remembered Being a Baby? | 1 |  |  | 51 s | 1394 | 25 | 3 | 213 | 10.3 s | 287.8 |
-| 12 | What If You Shrank to the Size of an Ant? | 1 |  |  | 88 s | 1349 | 21 | 4 | 220 | 10.9 s | 288.7 |
-| 11 | What If You Could See Heat? | 1 |  |  | 49 s | 1292 | 23 | 1 | 212 | 5.3 s | 288.9 |
-| 10 | What If You Never Needed Sleep Again? | 1 |  |  | 90 s | 1211 | 12 | 3 | 93 | 1.9 s | 307.3 |
-| 9 | What If You Could See Sounds as Colors? | 1 |  |  | 51 s | 1255 | 26 | 3 | 56 | 10.3 s | 311.9 |
-| 8 | What If You Could Never Forget Anything? | 1 |  |  | 89 s | 1406 | 29 | 3 | 214 | 14.2 s | 331.3 |
-| 7 | What If You Felt Everyone Else's Pain? | 1 |  |  | 49 s | 1364 | 30 | 2 | 221 | 11.6 s | 335.8 |
-| 6 | What If You Grew 10x Taller? | 1 |  |  | 90 s | 1045 | 27 | 7 | 202 | 9.2 s | 355.3 |
-| 5 | What If Your Heart Beat Only Six Times a Minute? | 1 |  |  | 50 s | 1271 | 25 | 5 | 105 | 13.9 s | 359.7 |
-| 4 | What If You Could Smell 10,000x Better? | 1 |  |  | 0 s | 926 | 20 | 3 | 793 | 14.2 s | 379.4 |
-| 3 | What If You Never Blinked Again? | 1 |  |  | 0 s | 1337 | 32 | 1 | 162 | 5.0 s | 383.9 |
-| 2 | What If You Were 10x Stronger? | 1 |  |  | 0 s | 1443 | 46 | 3 | 1185 | 13.5 s | 403.3 |
-| 1 | What If Your Reaction Time Was 10x Faster? | 1 |  |  | 0 s | 1318 | 38 | 1 | 325 | 17.8 s | 407.8 |
+| 39 | What If You Could Rewind 10 Seconds? | 2 | TIME | D twist | 53 s | 1237 | 18 | 2 | 293 | 10.4 s | 23.7 |
+| 38 | What If You Could Teleport Anywhere? | 2 | BODY | A epic | 101 s | 1210 | 18 | 1 | 294 | 21.7 s | 43.1 |
+| 37 | What If You Fell Into a Black Hole? | 2 | WORLD | E survival | 65 s | 1055 | 22 | 1 | 229 | 7.4 s | 47.9 |
+| 36 | What If Your Brain Ran 1,000x Faster? | 2 | MIND | F dilemma | 77 s | 1206 | 24 | 5 | 580 | 24.6 s | 67.4 |
+| 35 | What If the Sun Vanished? | 2 | WORLD | D twist | 49 s | 1535 | 24 | 3 | 442 | 16.0 s | 71.7 |
+| 34 | What If You Were 1,000x Stronger? | 2 | BODY | B timeline | 105 s | 1008 | 16 | 3 | 3068 | 14.5 s | 91.4 |
+| 33 | What If You Could Freeze Time? | 2 | TIME | A epic | 89 s | 1326 | 26 | 5 | 5343 | 14.7 s | 95.9 |
+| 32 | What If Earth Stopped Spinning? | 2 | WORLD | C spiral | 64 s | 1264 | 18 | 1 | 6040 | 17.6 s | 115.3 |
+| 26 | What If Your Voice Was 100x Louder? | 1 |  |  | 91 s | 1145 | 16 | 1 | 212 | 11.2 s | 119.4 |
+| 25 | What If You Had No Fingerprints? | 1 |  |  | 52 s | 1068 | 22 | 3 | 456 | 6.7 s | 187.3 |
+| 24 | What If Your Memory Reset Every Day? | 1 |  |  | 86 s | 1020 | 27 | 1 | 211 | 10.9 s | 191.9 |
+| 23 | What If Your Skin Couldn't Be Cut? | 1 |  |  | 48 s | 1166 | 17 | 1 | 220 | 6.2 s | 211.4 |
+| 22 | What If You Could See in the Dark? | 1 |  |  | 88 s | 1265 | 29 | 3 | 252 | 4.1 s | 215.9 |
+| 21 | What If Your Body Glowed in the Dark? | 1 |  |  | 49 s | 1018 | 8 | 1 | 494 | 8.3 s | 235.2 |
+| 20 | What If You Never Felt Fear? | 1 |  |  | 86 s | 1211 | 21 | 1 | 1969 | 9.9 s | 239.9 |
+| 19 | What If You Never Felt Hungry Again? | 1 |  |  | 49 s | 1141 | 23 | 5 | 38 | 5.1 s | 259.2 |
+| 18 | What If You Healed 1,000,000x Faster? | 1 |  |  | 89 s | 1226 | 16 | 5 | 54 | 18.2 s | 263.8 |
+| 17 | What If You Weighed 10x Less? | 1 |  |  | 48 s | 1113 | 20 | 1 | 188 | 11.7 s | 283.2 |
+| 16 | What If You Could Hear 100x Better? | 1 |  |  | 94 s | 1343 | 25 | 1 | 0 | 0.0 s | 287.9 |
+| 15 | What If You Could Control Every Dream? | 1 |  |  | 50 s | 1354 | 24 | 5 | 360 | 9.1 s | 307.2 |
+| 14 | What If You Aged 10x Slower? | 1 |  |  | 86 s | 1305 | 25 | 4 | 4 | 43.6 s | 311.6 |
+| 13 | What If You Remembered Being a Baby? | 1 |  |  | 51 s | 1396 | 25 | 3 | 213 | 10.3 s | 311.8 |
+| 12 | What If You Shrank to the Size of an Ant? | 1 |  |  | 88 s | 1349 | 21 | 5 | 220 | 10.9 s | 312.7 |
+| 11 | What If You Could See Heat? | 1 |  |  | 49 s | 1293 | 23 | 1 | 212 | 5.3 s | 312.9 |
+| 10 | What If You Never Needed Sleep Again? | 1 |  |  | 90 s | 1211 | 12 | 3 | 93 | 1.9 s | 331.3 |
+| 9 | What If You Could See Sounds as Colors? | 1 |  |  | 51 s | 1255 | 26 | 3 | 56 | 10.3 s | 335.9 |
+| 8 | What If You Could Never Forget Anything? | 1 |  |  | 89 s | 1406 | 29 | 3 | 214 | 14.2 s | 355.3 |
+| 7 | What If You Felt Everyone Else's Pain? | 1 |  |  | 49 s | 1364 | 30 | 3 | 221 | 11.6 s | 359.8 |
+| 6 | What If You Grew 10x Taller? | 1 |  |  | 90 s | 1045 | 27 | 7 | 202 | 9.2 s | 379.3 |
+| 5 | What If Your Heart Beat Only Six Times a Minute? | 1 |  |  | 50 s | 1273 | 25 | 5 | 105 | 13.9 s | 383.7 |
+| 4 | What If You Could Smell 10,000x Better? | 1 |  |  | 0 s | 926 | 20 | 3 | 793 | 14.2 s | 403.4 |
+| 3 | What If You Never Blinked Again? | 1 |  |  | 0 s | 1337 | 32 | 1 | 162 | 5.0 s | 407.9 |
+| 2 | What If You Were 10x Stronger? | 1 |  |  | 0 s | 1443 | 46 | 3 | 1185 | 13.5 s | 427.3 |
+| 1 | What If Your Reaction Time Was 10x Faster? | 1 |  |  | 0 s | 1318 | 38 | 1 | 325 | 17.8 s | 431.8 |
 <!-- AUTO:END -->

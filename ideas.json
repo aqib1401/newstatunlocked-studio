@@ -1394,12 +1394,13 @@
  {
   "id": 85,
   "v": 2,
-  "status": "planned",
-  "title": "What If You Jumped Into a Hole Through Earth?",
+  "status": "used",
+  "title": "What If You Jumped Through Earth?",
   "lane": "WORLD",
   "premise": "A tunnel straight through the planet; you jump.",
   "science": "With no air, the fall would take about 42 minutes, and you'd pop out the other side and fall back again.",
-  "twist": "You'd oscillate forever, unless something stops you."
+  "twist": "You'd oscillate forever, unless something stops you.",
+  "ep": 41
  },
  {
   "id": 86,
