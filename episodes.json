@@ -1611,5 +1611,22 @@
    }
   },
   "length_bucket": "60-99 s"
+ },
+ {
+  "ep": 41,
+  "v": 2,
+  "title": "What If You Jumped Through Earth?",
+  "lane": "WORLD",
+  "shape": "C spiral",
+  "ending": "fact",
+  "duration_s": 62.6,
+  "status": "rendered",
+  "video": "videos/ep41.mp4",
+  "rendered_at": "2026-11-27T18:08:13Z",
+  "critic": "REVISE 6.7 (draft 1), revised once",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]
