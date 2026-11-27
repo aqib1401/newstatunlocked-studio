@@ -1657,5 +1657,22 @@
    }
   },
   "length_bucket": "60-99 s"
+ },
+ {
+  "ep": 42,
+  "v": 2,
+  "title": "What If You Grew 1 Meter Every Day?",
+  "lane": "BODY",
+  "shape": "B timeline",
+  "ending": "punchline",
+  "duration_s": 100.2,
+  "status": "rendered",
+  "video": "videos/ep42.mp4",
+  "rendered_at": "2026-11-27T22:54:53Z",
+  "critic": "REVISE 6.7 (draft 1), revised once",
+  "posted": {
+   "youtube": null,
+   "facebook": null
+  }
  }
 ]

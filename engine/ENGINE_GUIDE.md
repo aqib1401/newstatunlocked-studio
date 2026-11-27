@@ -123,6 +123,7 @@ Props are plain SVG in the 540×960 space. Keep them flat: solid fills, palette 
 - **Poses:** idle, stand, catch, reach_up, point, wave, cheer, shrug, think, facepalm, hold, throw_back, throw, swing_ready, swing, crouch, sit, slump, lie, fall, jump, dive, run_a, run_b, walk_a, walk_b, tired, hug, carry.
 - **Faces:** neutral, happy, shocked, smug, worried, determined, bored, sad, focused.
 - `look`: −1 to 1, shifts the eyes back or forward.
+- `rot` (degrees, around the feet) also works as a starting value on the actor itself, not only in keys: `"rot": -90` with `"pose": "idle"` and `"shadow": false` lays someone flat (feet at x, head pointing left), which reads better than the `lie` pose for sleeping or floating.
 - **Key fields:** `at`, `dur` (default 0.25), `ease` (inout · out · in · linear · back), `x`, `y`, `scale`, `rot`, `opacity`, `lift` (px off the ground), `arc` (jump height for this move), `pose`, `face`, `look`, `flip`, `cycle` ("run" | "walk" | null), `sfx`.
 - Moving across the screen: set `cycle` and a new `x` with `dur` = travel time.
 - Pose changes snap faster with `dur` 0.1–0.15 for action beats and ease slower (0.3–0.6) for emotional beats.

@@ -176,7 +176,7 @@ function figure(st, chName, t, id){
 const NUM=['x','y','scale','opacity','rot','lift'];
 function poseAngles(name){return Object.assign({},P[name]||P.idle);}
 function actorState(a,t){
-  let cur={x:a.x??270,y:a.y??800,scale:a.scale??1,opacity:a.opacity??1,rot:0,lift:0,ang:poseAngles(a.pose||'idle'),face:a.face||'neutral',look:a.look||0,flip:!!a.flip,cycle:a.cycle||null,shirt:a.shirt,still:a.still,shadow:a.shadow};
+  let cur={x:a.x??270,y:a.y??800,scale:a.scale??1,opacity:a.opacity??1,rot:a.rot??0,lift:0,ang:poseAngles(a.pose||'idle'),face:a.face||'neutral',look:a.look||0,flip:!!a.flip,cycle:a.cycle||null,shirt:a.shirt,still:a.still,shadow:a.shadow};
   let from=JSON.parse(JSON.stringify(cur)), to=cur, t0=-1e9, dur=0.001, ease=EASE.inout, arc=0;
   const evalAt=(tt)=>{const p=clamp((tt-t0)/dur,0,1),e=ease(p);const o=Object.assign({},to);
     for(const k of NUM){if(from[k]!==undefined&&to[k]!==undefined)o[k]=lerp(from[k],to[k],e);}
