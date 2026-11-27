@@ -1260,12 +1260,13 @@
  {
   "id": 72,
   "v": 2,
-  "status": "planned",
+  "status": "used",
   "title": "What If You Grew 1 Meter Every Day?",
   "lane": "BODY",
   "premise": "You grow a meter a day: day ten, you're taller than a house.",
   "science": "Square-cube law: double your height and your weight goes up eight times; your heart has to pump blood higher every day.",
-  "twist": "Day forty: you're the tallest thing in the city and you can't lie down."
+  "twist": "Day forty: you're the tallest thing in the city and you can't lie down.",
+  "ep": 42
  },
  {
   "id": 73,
